@@ -1,6 +1,60 @@
 EESchema-LIBRARY Version 2.4
 #encoding utf-8
 #
+# Connector_USB_A
+#
+DEF Connector_USB_A J 0 40 Y Y 1 F N
+F0 "J" -200 450 50 H V L CNN
+F1 "Connector_USB_A" -200 350 50 H V L CNN
+F2 "" 150 -50 50 H I C CNN
+F3 "" 150 -50 50 H I C CNN
+$FPLIST
+ USB*
+$ENDFPLIST
+DRAW
+C -150 85 25 0 1 10 F
+C -25 135 15 0 1 10 F
+S -200 -300 200 300 0 1 10 f
+S -60 190 -170 210 0 1 0 F
+S -50 180 -180 230 0 1 0 N
+S -5 -300 5 -270 0 1 0 N
+S 10 50 -20 20 0 1 10 F
+S 200 -105 170 -95 0 1 0 N
+S 200 -5 170 5 0 1 0 N
+S 200 195 170 205 0 1 0 N
+P 4 0 1 10 -125 85 -100 85 -50 135 -25 135 N
+P 4 0 1 10 -100 85 -75 85 -50 35 0 35 N
+P 4 0 1 10 25 110 25 60 75 85 25 110 F
+P 2 1 1 10 -75 85 25 85 N
+X VBUS 1 300 200 100 L 50 50 1 1 W
+X D- 2 300 -100 100 L 50 50 1 1 P
+X D+ 3 300 0 100 L 50 50 1 1 P
+X GND 4 0 -400 100 U 50 50 1 1 W
+X Shield 5 -100 -400 100 U 50 50 1 1 P
+ENDDRAW
+ENDDEF
+#
+# PowerBankTemplate-rescue_R_1.8K-formula
+#
+DEF PowerBankTemplate-rescue_R_1.8K-formula R 0 0 N Y 1 F N
+F0 "R" 80 0 50 V V C CNN
+F1 "PowerBankTemplate-rescue_R_1.8K-formula" -100 0 50 V V C CNN
+F2 "footprints:R_0805_OEM" 500 0 50 V I C CNN
+F3 "https://industrial.panasonic.com/cdbs/www-data/pdf/RDM0000/AOA0000C307.pdf" 300 0 50 V I C CNN
+F4 "DK" 180 100 60 V I C CNN "MFN"
+F5 "P178KDATR-ND" 280 200 60 V I C CNN "MPN"
+F6 "https://www.digikey.com/product-detail/en/panasonic-electronic-components/ERA-6AEB1783V/P178KDATR-ND/2025864" 380 300 60 V I C CNN "Webpage"
+$FPLIST
+ R_*
+ R_*
+$ENDFPLIST
+DRAW
+S -40 -100 40 100 0 1 10 N
+X ~ 1 0 150 50 D 50 50 1 1 P
+X ~ 2 0 -150 50 U 50 50 1 1 P
+ENDDRAW
+ENDDEF
+#
 # formula_C_0.1uF
 #
 DEF formula_C_0.1uF C 0 10 N Y 1 F N
@@ -247,36 +301,6 @@ X ~TE~ 9 -800 0 200 R 40 40 0 0 I
 ENDDRAW
 ENDDEF
 #
-# formula_MMUN2133LT1G
-#
-DEF formula_MMUN2133LT1G Q 0 40 Y Y 1 F N
-F0 "Q" 200 0 50 H V L BNN
-F1 "formula_MMUN2133LT1G" 200 -100 50 H V L BNN
-F2 "SOT95P240X111-3N" 0 0 50 H I L BNN
-F3 "" 0 0 50 H I L BNN
-F4 "https://www.digikey.com/en/products/detail/on-semiconductor/MMUN2133LT1G/1482316" 0 0 50 H I C CNN "Purchasing Link"
-DRAW
-S -10 -100 20 100 0 0 0 F
-P 2 0 0 10 -100 0 0 0 N
-P 2 0 0 6 20 58 82 66 N
-P 2 0 0 10 30 65 70 70 N
-P 2 0 0 10 45 75 60 75 N
-P 2 0 0 10 60 85 45 75 N
-P 2 0 0 10 60 95 30 65 N
-P 2 0 0 6 62 102 20 58 N
-P 2 0 0 10 70 70 60 85 N
-P 2 0 0 10 75 70 60 95 N
-P 2 0 0 6 82 66 62 102 N
-P 2 0 0 6 100 -100 20 -60 N
-P 2 0 0 10 100 -100 100 -200 N
-P 2 0 0 6 100 100 71 84 N
-P 2 0 0 10 100 200 100 100 N
-X B 1 -200 0 100 R 40 40 0 0 I
-X E 2 100 300 100 D 40 40 0 0 P
-X C 3 100 -300 100 U 40 40 0 0 O
-ENDDRAW
-ENDDEF
-#
 # formula_R_1.87M
 #
 DEF formula_R_1.87M R 0 0 N Y 1 F N
@@ -297,27 +321,6 @@ X ~ 2 0 -150 50 U 50 50 1 1 P
 ENDDRAW
 ENDDEF
 #
-# formula_R_1.8K
-#
-DEF formula_R_1.8K R 0 0 N Y 1 F N
-F0 "R" 80 0 50 V V C CNN
-F1 "formula_R_1.8K" -100 0 50 V V C CNN
-F2 "footprints:R_0805_OEM" 500 0 50 V I C CNN
-F3 "https://industrial.panasonic.com/cdbs/www-data/pdf/RDM0000/AOA0000C307.pdf" 300 0 50 V I C CNN
-F4 "DK" 180 100 60 V I C CNN "MFN"
-F5 "P178KDATR-ND" 280 200 60 V I C CNN "MPN"
-F6 "https://www.digikey.com/product-detail/en/panasonic-electronic-components/ERA-6AEB1783V/P178KDATR-ND/2025864" 380 300 60 V I C CNN "Webpage"
-$FPLIST
- R_*
- R_*
-$ENDFPLIST
-DRAW
-S -40 -100 40 100 0 1 10 N
-X ~ 1 0 150 50 D 50 50 1 1 P
-X ~ 2 0 -150 50 U 50 50 1 1 P
-ENDDRAW
-ENDDEF
-#
 # formula_R_100K
 #
 DEF formula_R_100K R 0 0 N Y 1 F N
@@ -328,6 +331,27 @@ F3 "https://industrial.panasonic.com/cdbs/www-data/pdf/RDA0000/AOA0000C304.pdf" 
 F4 "DK" 0 0 60 H I C CNN "MFN"
 F5 "P100KCCT-ND" 0 0 60 H I C CNN "MPN"
 F6 "https://www.digikey.com/product-detail/en/panasonic-electronic-components/ERJ-6ENF1003V/P100KCCT-ND/119551" 480 400 60 H I C CNN "PurchasingLink"
+$FPLIST
+ R_*
+ Resistor_*
+$ENDFPLIST
+DRAW
+S -40 -100 40 100 0 1 10 N
+X ~ 1 0 150 50 D 50 50 1 1 P
+X ~ 2 0 -150 50 U 50 50 1 1 P
+ENDDRAW
+ENDDEF
+#
+# formula_R_10K
+#
+DEF formula_R_10K R 0 0 N Y 1 F N
+F0 "R" 80 0 50 V V C CNN
+F1 "formula_R_10K" -100 0 50 V V C CNN
+F2 "footprints:R_0805_OEM" -70 0 50 H I C CNN
+F3 "http://www.bourns.com/data/global/pdfs/CRS.pdf" 80 0 50 H I C CNN
+F4 "DK" 0 0 60 H I C CNN "MFN"
+F5 "CRS0805-FX-1002ELFCT-ND" 0 0 60 H I C CNN "MPN"
+F6 "https://www.digikey.com/products/en?keywords=CRS0805-FX-1002ELFCT-ND" 480 400 60 H I C CNN "PurchasingLink"
 $FPLIST
  R_*
  Resistor_*
@@ -418,6 +442,43 @@ DRAW
 S -40 -100 40 100 0 1 10 N
 X ~ 1 0 150 50 D 50 50 1 1 P
 X ~ 2 0 -150 50 U 50 50 1 1 P
+ENDDRAW
+ENDDEF
+#
+# formula_SSM3K333R
+#
+DEF formula_SSM3K333R Q 0 0 Y N 1 F N
+F0 "Q" 200 75 50 H V L CNN
+F1 "formula_SSM3K333R" 200 0 50 H V L CNN
+F2 "footprints:SOT-23F" 200 -75 50 H I L CIN
+F3 "https://drive.google.com/drive/folders/0B-V-iZf33Y4GNzhDQTJZanJRbVk" 200 75 50 H I L CNN
+F4 "DK" 500 375 60 H I C CNN "MFN"
+F5 "SSM3K333RLFCT-ND" 400 275 60 H I C CNN "MPN"
+F6 "https://www.digikey.com/product-detail/en/toshiba-semiconductor-and-storage/SSM3K333RLF/SSM3K333RLFCT-ND/3522391" 300 175 60 H I C CNN "PurchasingLink"
+$FPLIST
+ SOT?23*
+$ENDFPLIST
+DRAW
+C 65 0 111 0 1 10 N
+C 100 -70 11 0 1 0 F
+C 100 70 11 0 1 0 F
+P 2 0 1 0 30 -70 100 -70 N
+P 2 0 1 10 30 -50 30 -90 N
+P 2 0 1 0 30 0 100 0 N
+P 2 0 1 10 30 20 30 -20 N
+P 2 0 1 0 30 70 100 70 N
+P 2 0 1 10 30 90 30 50 N
+P 2 0 1 0 100 -70 100 -100 N
+P 2 0 1 0 100 -70 100 0 N
+P 2 0 1 0 100 100 100 70 N
+P 3 0 1 10 10 75 10 -75 10 -75 N
+P 4 0 1 0 40 0 80 15 80 -15 40 0 F
+P 4 0 1 0 100 -70 130 -70 130 70 100 70 N
+P 4 0 1 0 110 20 115 15 145 15 150 10 N
+P 4 0 1 0 130 15 115 -10 145 -10 130 15 N
+X G 1 -200 0 210 R 50 50 1 1 I
+X S 2 100 -200 100 U 50 50 1 1 P
+X D 3 100 200 100 D 50 50 1 1 P
 ENDDRAW
 ENDDEF
 #
