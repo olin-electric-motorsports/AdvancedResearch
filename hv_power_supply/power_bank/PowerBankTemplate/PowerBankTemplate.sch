@@ -1,7 +1,7 @@
 EESchema Schematic File Version 4
 EELAYER 30 0
 EELAYER END
-$Descr B 17000 11000
+$Descr A 11000 8500
 encoding utf-8
 Sheet 1 1
 Title "New Member Project Template"
@@ -13,973 +13,2964 @@ Comment2 ""
 Comment3 ""
 Comment4 ""
 $EndDescr
-$Comp
-L formula:MCP73871T-2CCI_ML U?
-U 1 1 5F776B17
-P 10950 5000
-F 0 "U?" H 10950 5967 50  0000 C CNN
-F 1 "MCP73871T-2CCI_ML" H 10950 5876 50  0000 C CNN
-F 2 "footprints:MCP73871T" H 11000 5850 50  0001 L BNN
-F 3 "https://ww1.microchip.com/downloads/en/DeviceDoc/MCP73871-Data-Sheet-20002090E.pdf" H 11000 5950 50  0001 L BNN
-F 4 "D" H 10950 5000 50  0001 L BNN "Field4"
-F 5 "MICROCHIP" H 10450 5850 50  0001 L BNN "Field5"
-F 6 "https://www.digikey.com/product-detail/en/microchip-technology/MCP73871T-2CCI-ML/MCP73871T-2CCI-MLCT-ND/7065594" H 10950 5000 50  0001 C CNN "Purchasing Link"
-	1    10950 5000
-	1    0    0    -1  
-$EndComp
 Wire Wire Line
-	4650 4350 4450 4350
+	6700 1350 6500 1350
 $Comp
-L formula:C_10uF C?
+L formula:C_10uF C3
 U 1 1 5F784134
-P 3250 4850
-F 0 "C?" H 3250 4800 50  0000 L CNN
-F 1 "C_10uF" V 3100 4750 50  0000 L CNN
-F 2 "footprints:C_0805_OEM" H 3288 5450 50  0001 C CNN
-F 3 "http://www.samsungsem.com/kr/support/product-search/mlcc/__icsFiles/afieldfile/2018/06/20/CL21A106KPFNNNE.pdf" H 3275 5700 50  0001 C CNN
-F 4 "DK" H 3250 4900 60  0001 C CNN "MFN"
-F 5 "1276-1052-1-ND" H 3250 5600 60  0001 C CNN "MPN"
-F 6 "https://www.digikey.com/product-detail/en/samsung-electro-mechanics/CL21A106KPFNNNE/1276-1052-1-ND/3889138" H 3675 5350 60  0001 C CNN "PurchasingLink"
-	1    3250 4850
+P 5300 1850
+F 0 "C3" H 5300 1800 50  0000 L CNN
+F 1 "C_10uF" V 5150 1750 50  0000 L CNN
+F 2 "footprints:C_0805_OEM" H 5338 2450 50  0001 C CNN
+F 3 "http://www.samsungsem.com/kr/support/product-search/mlcc/__icsFiles/afieldfile/2018/06/20/CL21A106KPFNNNE.pdf" H 5325 2700 50  0001 C CNN
+F 4 "DK" H 5300 1900 60  0001 C CNN "MFN"
+F 5 "1276-1052-1-ND" H 5300 2600 60  0001 C CNN "MPN"
+F 6 "https://www.digikey.com/product-detail/en/samsung-electro-mechanics/CL21A106KPFNNNE/1276-1052-1-ND/3889138" H 5725 2350 60  0001 C CNN "PurchasingLink"
+	1    5300 1850
 	1    0    0    -1  
 $EndComp
 $Comp
-L formula:C_0.1uF C?
+L formula:C_0.1uF C4
 U 1 1 5F784A15
-P 3600 4800
-F 0 "C?" H 3600 4700 50  0000 L CNN
-F 1 "C_0.1uF" V 3450 4650 50  0000 L CNN
-F 2 "footprints:C_0805_OEM" H 3638 4650 50  0001 C CNN
-F 3 "http://datasheets.avx.com/X7RDielectric.pdf" H 3625 4900 50  0001 C CNN
-F 4 "DK" H 3600 4800 60  0001 C CNN "MFN"
-F 5 "478-3352-1-ND" H 3600 4800 60  0001 C CNN "MPN"
-F 6 "https://www.digikey.com/products/en?keywords=478-3352-1-ND" H 4025 5300 60  0001 C CNN "PurchasingLink"
-	1    3600 4800
+P 5650 1800
+F 0 "C4" H 5650 1700 50  0000 L CNN
+F 1 "C_0.1uF" V 5500 1650 50  0000 L CNN
+F 2 "footprints:C_0805_OEM" H 5688 1650 50  0001 C CNN
+F 3 "http://datasheets.avx.com/X7RDielectric.pdf" H 5675 1900 50  0001 C CNN
+F 4 "DK" H 5650 1800 60  0001 C CNN "MFN"
+F 5 "478-3352-1-ND" H 5650 1800 60  0001 C CNN "MPN"
+F 6 "https://www.digikey.com/products/en?keywords=478-3352-1-ND" H 6075 2300 60  0001 C CNN "PurchasingLink"
+	1    5650 1800
 	1    0    0    -1  
 $EndComp
-Connection ~ 3600 4650
+Connection ~ 5650 1650
 Wire Wire Line
-	3600 4650 3250 4650
+	5650 1650 5300 1650
 $Comp
-L formula:L_6.8uH L?
+L formula:L_6.8uH L1
 U 1 1 5F782806
-P 4350 4350
-F 0 "L?" H 4200 4400 50  0000 C CNN
-F 1 "L_6.8uH" H 4350 4300 50  0000 C CNN
-F 2 "footprints:L_100uH_OEM" H 4250 4150 50  0001 C CNN
-F 3 "https://product.tdk.com/info/en/catalog/datasheets/inductor_commercial_standard_nlv32-ef_en.pdf" H 4250 4200 50  0001 C CNN
-F 4 "Digikey" H 4450 4150 50  0001 C CNN "MFN"
-F 5 "445-1539-1-ND" H 4350 4600 50  0001 C CNN "MPN"
-F 6 "https://www.digikey.com/en/products/detail/tdk-corporation/NLV32T-6R8J-EF/4741473" H 4650 4550 50  0001 C CNN "PurchasingLink"
-	1    4350 4350
+P 6400 1350
+F 0 "L1" H 6250 1400 50  0000 C CNN
+F 1 "L_6.8uH" H 6400 1300 50  0000 C CNN
+F 2 "footprints:L_100uH_OEM" H 6300 1150 50  0001 C CNN
+F 3 "https://product.tdk.com/info/en/catalog/datasheets/inductor_commercial_standard_nlv32-ef_en.pdf" H 6300 1200 50  0001 C CNN
+F 4 "Digikey" H 6500 1150 50  0001 C CNN "MFN"
+F 5 "445-1539-1-ND" H 6400 1600 50  0001 C CNN "MPN"
+F 6 "https://www.digikey.com/en/products/detail/tdk-corporation/NLV32T-6R8J-EF/4741473" H 6700 1550 50  0001 C CNN "PurchasingLink"
+	1    6400 1350
 	1    0    0    -1  
 $EndComp
-Text Label 4550 4750 2    50   ~ 0
+Text Label 6600 1750 2    50   ~ 0
 ENABLE
 $Comp
-L power:GND #PWR?
+L power:GND #PWR014
 U 1 1 5F794B0D
-P 3600 4950
-F 0 "#PWR?" H 3600 4700 50  0001 C CNN
-F 1 "GND" H 3605 4777 50  0000 C CNN
-F 2 "" H 3600 4950 50  0001 C CNN
-F 3 "" H 3600 4950 50  0001 C CNN
-	1    3600 4950
+P 5650 1950
+F 0 "#PWR014" H 5650 1700 50  0001 C CNN
+F 1 "GND" H 5655 1777 50  0000 C CNN
+F 2 "" H 5650 1950 50  0001 C CNN
+F 3 "" H 5650 1950 50  0001 C CNN
+	1    5650 1950
 	1    0    0    -1  
 $EndComp
 $Comp
-L power:GND #PWR?
+L power:GND #PWR013
 U 1 1 5F794D60
-P 3250 4950
-F 0 "#PWR?" H 3250 4700 50  0001 C CNN
-F 1 "GND" H 3255 4777 50  0000 C CNN
-F 2 "" H 3250 4950 50  0001 C CNN
-F 3 "" H 3250 4950 50  0001 C CNN
-	1    3250 4950
+P 5300 1950
+F 0 "#PWR013" H 5300 1700 50  0001 C CNN
+F 1 "GND" H 5305 1777 50  0000 C CNN
+F 2 "" H 5300 1950 50  0001 C CNN
+F 3 "" H 5300 1950 50  0001 C CNN
+	1    5300 1950
 	1    0    0    -1  
 $EndComp
 $Comp
-L formula:TPS61090RSAR U?
+L formula:TPS61090RSAR U3
 U 1 1 5F79AE6B
-P 5350 4650
-F 0 "U?" H 5350 5220 50  0000 C CNN
-F 1 "TPS61090RSAR" H 5350 5129 50  0000 C CNN
-F 2 "footprints:TPS61090RSAR" H 5100 5250 50  0001 L BNN
-F 3 "https://www.ti.com/lit/ds/symlink/tps61090.pdf?HQS=TI-null-null-digikeymode-df-pf-null-wwe&ts=1601340035977" H 5350 4650 50  0001 L BNN
-F 4 "1.48 USD" H 5200 5200 50  0001 L BNN "Field4"
-F 5 "TPS61090RSAR" H 5150 5100 50  0001 L BNN "Field5"
-F 6 "2A Switch, 96% Efficient Boost Converter 16-QFN -40 to 85" H 5800 5250 50  0001 L BNN "Field6"
-F 7 "Good" H 5150 5250 50  0001 L BNN "Field7"
-F 8 "VQFN-16 Texas Instruments" H 5050 5200 50  0001 L BNN "Field8"
-F 9 "Texas Instruments" H 5100 5200 50  0001 L BNN "Field9"
-F 10 "https://www.digikey.com/product-detail/en/texas-instruments/TPS61090RSAR/296-15259-1-ND/566899" H 5950 5250 50  0001 C CNN "Purchasing Link"
-	1    5350 4650
+P 7400 1650
+F 0 "U3" H 7400 2220 50  0000 C CNN
+F 1 "TPS61090RSAR" H 7400 2129 50  0000 C CNN
+F 2 "footprints:TPS61090RSAR" H 7150 2250 50  0001 L BNN
+F 3 "https://www.ti.com/lit/ds/symlink/tps61090.pdf?HQS=TI-null-null-digikeymode-df-pf-null-wwe&ts=1601340035977" H 7400 1650 50  0001 L BNN
+F 4 "1.48 USD" H 7250 2200 50  0001 L BNN "Field4"
+F 5 "TPS61090RSAR" H 7200 2100 50  0001 L BNN "Field5"
+F 6 "2A Switch, 96% Efficient Boost Converter 16-QFN -40 to 85" H 7850 2250 50  0001 L BNN "Field6"
+F 7 "Good" H 7200 2250 50  0001 L BNN "Field7"
+F 8 "VQFN-16 Texas Instruments" H 7100 2200 50  0001 L BNN "Field8"
+F 9 "Texas Instruments" H 7150 2200 50  0001 L BNN "Field9"
+F 10 "https://www.digikey.com/product-detail/en/texas-instruments/TPS61090RSAR/296-15259-1-ND/566899" H 8000 2250 50  0001 C CNN "Purchasing Link"
+	1    7400 1650
 	1    0    0    -1  
 $EndComp
-Connection ~ 3250 4350
+Connection ~ 5300 1350
 Wire Wire Line
-	3250 4350 3250 4300
+	5300 1350 5300 1300
 $Comp
-L power:GND #PWR?
+L power:GND #PWR022
 U 1 1 5F7A8EDA
-P 4650 5300
-F 0 "#PWR?" H 4650 5050 50  0001 C CNN
-F 1 "GND" H 4655 5127 50  0000 C CNN
-F 2 "" H 4650 5300 50  0001 C CNN
-F 3 "" H 4650 5300 50  0001 C CNN
-	1    4650 5300
+P 6700 2300
+F 0 "#PWR022" H 6700 2050 50  0001 C CNN
+F 1 "GND" H 6705 2127 50  0000 C CNN
+F 2 "" H 6700 2300 50  0001 C CNN
+F 3 "" H 6700 2300 50  0001 C CNN
+	1    6700 2300
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	4650 4450 4650 4350
-Connection ~ 4650 4350
+	6700 1450 6700 1350
+Connection ~ 6700 1350
 Wire Wire Line
-	6050 5000 6050 5100
-Connection ~ 6050 5100
+	8100 2000 8100 2100
+Connection ~ 8100 2100
 Wire Wire Line
-	6050 5100 6050 5200
+	8100 2100 8100 2200
 Wire Wire Line
-	6050 4500 6050 4400
-Connection ~ 6050 4400
+	8100 1500 8100 1400
+Connection ~ 8100 1400
 Wire Wire Line
-	6050 4400 6050 4300
+	8100 1400 8100 1300
 Wire Wire Line
-	4650 5300 4650 5200
-Connection ~ 4650 5200
+	6700 2300 6700 2200
+Connection ~ 6700 2200
 Wire Wire Line
-	3250 4350 3250 4650
-Connection ~ 3250 4650
+	5300 1350 5300 1650
+Connection ~ 5300 1650
 $Comp
-L power:+BATT #PWR?
+L power:+BATT #PWR020
 U 1 1 5F799F56
-P 4100 4900
-F 0 "#PWR?" H 4100 4750 50  0001 C CNN
-F 1 "+BATT" H 4115 5073 50  0000 C CNN
-F 2 "" H 4100 4900 50  0001 C CNN
-F 3 "" H 4100 4900 50  0001 C CNN
-	1    4100 4900
+P 6150 1900
+F 0 "#PWR020" H 6150 1750 50  0001 C CNN
+F 1 "+BATT" H 6165 2073 50  0000 C CNN
+F 2 "" H 6150 1900 50  0001 C CNN
+F 3 "" H 6150 1900 50  0001 C CNN
+	1    6150 1900
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	4650 4750 4550 4750
+	6700 1750 6600 1750
 Wire Wire Line
-	4550 4750 4550 4900
+	6600 1750 6600 1900
 Wire Wire Line
-	3600 4650 3900 4650
+	5650 1650 5950 1650
 Wire Wire Line
-	3250 4350 4250 4350
+	5300 1350 6300 1350
 $Comp
-L formula:R_1.87M R?
+L formula:R_1.87M R5
 U 1 1 5F7A4733
-P 3900 4800
-F 0 "R?" H 3950 4700 50  0000 L CNN
-F 1 "R_1.87M" V 3800 4600 50  0000 L CNN
-F 2 "footprints:R_0805_OEM" H 3830 4800 50  0001 C CNN
-F 3 "" H 3980 4800 50  0001 C CNN
-F 4 "DK" H 3900 4800 60  0001 C CNN "MFN"
-F 5 "RMCF0805FT1M82CT-ND" H 3900 4800 60  0001 C CNN "MPN"
-F 6 "" H 4380 5200 60  0001 C CNN "PurchasingLink"
-	1    3900 4800
+P 5950 1800
+F 0 "R5" H 6000 1700 50  0000 L CNN
+F 1 "R_1.87M" V 5850 1600 50  0000 L CNN
+F 2 "footprints:R_0805_OEM" H 5880 1800 50  0001 C CNN
+F 3 "" H 6030 1800 50  0001 C CNN
+F 4 "DK" H 5950 1800 60  0001 C CNN "MFN"
+F 5 "RMCF0805FT1M82CT-ND" H 5950 1800 60  0001 C CNN "MPN"
+F 6 "" H 6430 2200 60  0001 C CNN "PurchasingLink"
+	1    5950 1800
 	1    0    0    -1  
 $EndComp
-Connection ~ 3900 4650
+Connection ~ 5950 1650
 Wire Wire Line
-	3900 4650 4650 4650
+	5950 1650 6700 1650
 Wire Wire Line
-	3900 4950 3900 5050
+	5950 1950 5950 2050
 Wire Wire Line
-	4650 5000 4650 5200
+	6700 2000 6700 2200
 Wire Wire Line
-	3900 5050 4600 5050
+	5950 2050 6650 2050
 Wire Wire Line
-	4600 5050 4600 4900
+	6650 2050 6650 1900
 Wire Wire Line
-	4600 4900 4650 4900
-Connection ~ 3900 5050
+	6650 1900 6700 1900
+Connection ~ 5950 2050
 Wire Wire Line
-	3900 5050 3900 5150
+	5950 2050 5950 2150
 $Comp
-L formula:R_340K R?
+L formula:R_340K R6
 U 1 1 5F7AA0C5
-P 3900 5300
-F 0 "R?" H 3970 5346 50  0000 L CNN
-F 1 "R_340K" H 3970 5255 50  0000 L CNN
-F 2 "footprints:R_0805_OEM" H 3830 5300 50  0001 C CNN
-F 3 "" H 3980 5300 50  0001 C CNN
-F 4 "DK" H 3900 5300 60  0001 C CNN "MFN"
-F 5 "P300KDACT-ND" H 3900 5300 60  0001 C CNN "MPN"
-F 6 "" H 4380 5700 60  0001 C CNN "PurchasingLink"
-	1    3900 5300
+P 5950 2300
+F 0 "R6" H 6020 2346 50  0000 L CNN
+F 1 "R_340K" H 6020 2255 50  0000 L CNN
+F 2 "footprints:R_0805_OEM" H 5880 2300 50  0001 C CNN
+F 3 "" H 6030 2300 50  0001 C CNN
+F 4 "DK" H 5950 2300 60  0001 C CNN "MFN"
+F 5 "P300KDACT-ND" H 5950 2300 60  0001 C CNN "MPN"
+F 6 "" H 6430 2700 60  0001 C CNN "PurchasingLink"
+	1    5950 2300
 	1    0    0    -1  
 $EndComp
 $Comp
-L power:GND #PWR?
+L power:GND #PWR016
 U 1 1 5F7AAB24
-P 3900 5450
-F 0 "#PWR?" H 3900 5200 50  0001 C CNN
-F 1 "GND" H 3905 5277 50  0000 C CNN
-F 2 "" H 3900 5450 50  0001 C CNN
-F 3 "" H 3900 5450 50  0001 C CNN
-	1    3900 5450
+P 5950 2450
+F 0 "#PWR016" H 5950 2200 50  0001 C CNN
+F 1 "GND" H 5955 2277 50  0000 C CNN
+F 2 "" H 5950 2450 50  0001 C CNN
+F 3 "" H 5950 2450 50  0001 C CNN
+	1    5950 2450
 	1    0    0    -1  
 $EndComp
 $Comp
-L power:+BATT #PWR?
+L power:+BATT #PWR012
 U 1 1 5F7AC017
-P 3250 4300
-F 0 "#PWR?" H 3250 4150 50  0001 C CNN
-F 1 "+BATT" H 3265 4473 50  0000 C CNN
-F 2 "" H 3250 4300 50  0001 C CNN
-F 3 "" H 3250 4300 50  0001 C CNN
-	1    3250 4300
+P 5300 1300
+F 0 "#PWR012" H 5300 1150 50  0001 C CNN
+F 1 "+BATT" H 5315 1473 50  0000 C CNN
+F 2 "" H 5300 1300 50  0001 C CNN
+F 3 "" H 5300 1300 50  0001 C CNN
+	1    5300 1300
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	4250 4900 4100 4900
+	6300 1900 6150 1900
 $Comp
-L formula:R_200K R?
+L formula:R_200K R9
 U 1 1 5F7B25D5
-P 4400 4900
-F 0 "R?" V 4450 5050 50  0000 C CNN
-F 1 "R_200K" V 4500 4900 50  0000 C CNN
-F 2 "footprints:R_0805_OEM" H 4330 4900 50  0001 C CNN
-F 3 "" H 4480 4900 50  0001 C CNN
-F 4 "DK" H 4400 4900 60  0001 C CNN "MFN"
-F 5 "P300KDACT-ND" H 4400 4900 60  0001 C CNN "MPN"
-F 6 "" H 4880 5300 60  0001 C CNN "PurchasingLink"
-	1    4400 4900
+P 6450 1900
+F 0 "R9" V 6500 2050 50  0000 C CNN
+F 1 "R_200K" V 6550 1900 50  0000 C CNN
+F 2 "footprints:R_0805_OEM" H 6380 1900 50  0001 C CNN
+F 3 "" H 6530 1900 50  0001 C CNN
+F 4 "DK" H 6450 1900 60  0001 C CNN "MFN"
+F 5 "P300KDACT-ND" H 6450 1900 60  0001 C CNN "MPN"
+F 6 "" H 6930 2300 60  0001 C CNN "PurchasingLink"
+	1    6450 1900
 	0    1    1    0   
 $EndComp
 Wire Wire Line
-	6050 4400 6450 4400
+	8100 1400 8500 1400
 $Comp
-L formula:R_1.87M R?
+L formula:R_1.87M R11
 U 1 1 5F7B3C3D
-P 6450 4550
-F 0 "R?" H 6400 4800 50  0000 L CNN
-F 1 "R_1.87M" V 6350 4350 50  0000 L CNN
-F 2 "footprints:R_0805_OEM" H 6380 4550 50  0001 C CNN
-F 3 "" H 6530 4550 50  0001 C CNN
-F 4 "DK" H 6450 4550 60  0001 C CNN "MFN"
-F 5 "RMCF0805FT1M82CT-ND" H 6450 4550 60  0001 C CNN "MPN"
-F 6 "" H 6930 4950 60  0001 C CNN "PurchasingLink"
-	1    6450 4550
+P 8500 1550
+F 0 "R11" H 8450 1800 50  0000 L CNN
+F 1 "R_1.87M" V 8400 1350 50  0000 L CNN
+F 2 "footprints:R_0805_OEM" H 8430 1550 50  0001 C CNN
+F 3 "" H 8580 1550 50  0001 C CNN
+F 4 "DK" H 8500 1550 60  0001 C CNN "MFN"
+F 5 "RMCF0805FT1M82CT-ND" H 8500 1550 60  0001 C CNN "MPN"
+F 6 "" H 8980 1950 60  0001 C CNN "PurchasingLink"
+	1    8500 1550
 	1    0    0    -1  
 $EndComp
-Connection ~ 6450 4400
+Connection ~ 8500 1400
 Wire Wire Line
-	6450 4400 6750 4400
+	8500 1400 8800 1400
 Wire Wire Line
-	6050 4750 6450 4750
+	8100 1750 8500 1750
 Wire Wire Line
-	6450 4750 6450 4700
+	8500 1750 8500 1700
 $Comp
-L formula:C_2.2uF C?
+L formula:C_2.2uF C6
 U 1 1 5F7B48DD
-P 6750 4600
-F 0 "C?" H 6700 4900 50  0000 L CNN
-F 1 "C_2.2uF" V 6600 4450 50  0000 L CNN
-F 2 "footprints:C_0805_OEM" H 6788 5200 50  0001 C CNN
-F 3 "https://product.tdk.com/info/en/catalog/datasheets/mlcc_commercial_soft_en.pdf" H 6775 5450 50  0001 C CNN
-F 4 "https://www.digikey.com/product-detail/en/tdk-corporation/C2012X7R1H225M125AE/445-172488-1-ND/4990030" H 7175 5100 60  0001 C CNN "PurchasingLink"
-	1    6750 4600
+P 8800 1600
+F 0 "C6" H 8750 1900 50  0000 L CNN
+F 1 "C_2.2uF" V 8650 1450 50  0000 L CNN
+F 2 "footprints:C_0805_OEM" H 8838 2200 50  0001 C CNN
+F 3 "https://product.tdk.com/info/en/catalog/datasheets/mlcc_commercial_soft_en.pdf" H 8825 2450 50  0001 C CNN
+F 4 "https://www.digikey.com/product-detail/en/tdk-corporation/C2012X7R1H225M125AE/445-172488-1-ND/4990030" H 9225 2100 60  0001 C CNN "PurchasingLink"
+	1    8800 1600
 	1    0    0    -1  
 $EndComp
-Connection ~ 6750 4400
+Connection ~ 8800 1400
 Wire Wire Line
-	6750 4400 7050 4400
+	8800 1400 9100 1400
 $Comp
-L power:GND #PWR?
+L power:GND #PWR029
 U 1 1 5F7B502E
-P 6750 4700
-F 0 "#PWR?" H 6750 4450 50  0001 C CNN
-F 1 "GND" H 6755 4527 50  0000 C CNN
-F 2 "" H 6750 4700 50  0001 C CNN
-F 3 "" H 6750 4700 50  0001 C CNN
-	1    6750 4700
+P 8800 1700
+F 0 "#PWR029" H 8800 1450 50  0001 C CNN
+F 1 "GND" H 8805 1527 50  0000 C CNN
+F 2 "" H 8800 1700 50  0001 C CNN
+F 3 "" H 8800 1700 50  0001 C CNN
+	1    8800 1700
 	1    0    0    -1  
 $EndComp
 $Comp
-L formula:C_100uF C?
+L formula:C_100uF C7
 U 1 1 5F7B6B11
-P 7050 4550
-F 0 "C?" H 7100 4450 50  0000 L CNN
-F 1 "C_100uF" V 6900 4350 50  0000 L CNN
-F 2 "footprints:C_1812_OEM" H 7050 5300 50  0001 C CNN
-F 3 "https://product.tdk.com/info/en/catalog/datasheets/mlcc_commercial_general_en.pdf" H 7250 4000 50  0001 C CNN
-F 4 "C4532X5R0J107M280KA" H 7050 5000 60  0001 C CNN "MFN"
-F 5 "445-1413-1-ND" H 7000 5150 60  0001 C CNN "MPN"
-F 6 "https://www.digikey.com/product-detail/en/tdk-corporation/C4532X5R0J107M280KA/445-1413-1-ND/567567" H 7300 4150 60  0001 C CNN "PurchasingLink"
-	1    7050 4550
+P 9100 1550
+F 0 "C7" H 9150 1450 50  0000 L CNN
+F 1 "C_100uF" V 8950 1350 50  0000 L CNN
+F 2 "footprints:C_1812_OEM" H 9100 2300 50  0001 C CNN
+F 3 "https://product.tdk.com/info/en/catalog/datasheets/mlcc_commercial_general_en.pdf" H 9300 1000 50  0001 C CNN
+F 4 "C4532X5R0J107M280KA" H 9100 2000 60  0001 C CNN "MFN"
+F 5 "445-1413-1-ND" H 9050 2150 60  0001 C CNN "MPN"
+F 6 "https://www.digikey.com/product-detail/en/tdk-corporation/C4532X5R0J107M280KA/445-1413-1-ND/567567" H 9350 1150 60  0001 C CNN "PurchasingLink"
+	1    9100 1550
 	1    0    0    -1  
 $EndComp
 $Comp
-L power:GND #PWR?
+L power:GND #PWR031
 U 1 1 5F7B7B47
-P 7050 4700
-F 0 "#PWR?" H 7050 4450 50  0001 C CNN
-F 1 "GND" H 7055 4527 50  0000 C CNN
-F 2 "" H 7050 4700 50  0001 C CNN
-F 3 "" H 7050 4700 50  0001 C CNN
-	1    7050 4700
+P 9100 1700
+F 0 "#PWR031" H 9100 1450 50  0001 C CNN
+F 1 "GND" H 9105 1527 50  0000 C CNN
+F 2 "" H 9100 1700 50  0001 C CNN
+F 3 "" H 9100 1700 50  0001 C CNN
+	1    9100 1700
 	1    0    0    -1  
 $EndComp
 $Comp
-L formula:R_200K R?
+L formula:R_200K R12
 U 1 1 5F7B7F51
-P 6450 4900
-F 0 "R?" H 6520 4946 50  0000 L CNN
-F 1 "R_200K" V 6350 4750 50  0000 L CNN
-F 2 "footprints:R_0805_OEM" H 6380 4900 50  0001 C CNN
-F 3 "" H 6530 4900 50  0001 C CNN
-F 4 "DK" H 6450 4900 60  0001 C CNN "MFN"
-F 5 "P300KDACT-ND" H 6450 4900 60  0001 C CNN "MPN"
-F 6 "" H 6930 5300 60  0001 C CNN "PurchasingLink"
-	1    6450 4900
+P 8500 1900
+F 0 "R12" H 8570 1946 50  0000 L CNN
+F 1 "R_200K" V 8400 1750 50  0000 L CNN
+F 2 "footprints:R_0805_OEM" H 8430 1900 50  0001 C CNN
+F 3 "" H 8580 1900 50  0001 C CNN
+F 4 "DK" H 8500 1900 60  0001 C CNN "MFN"
+F 5 "P300KDACT-ND" H 8500 1900 60  0001 C CNN "MPN"
+F 6 "" H 8980 2300 60  0001 C CNN "PurchasingLink"
+	1    8500 1900
 	1    0    0    -1  
 $EndComp
-Connection ~ 6450 4750
+Connection ~ 8500 1750
 $Comp
-L power:GND #PWR?
+L power:GND #PWR026
 U 1 1 5F7B875D
-P 6450 5100
-F 0 "#PWR?" H 6450 4850 50  0001 C CNN
-F 1 "GND" H 6455 4927 50  0000 C CNN
-F 2 "" H 6450 5100 50  0001 C CNN
-F 3 "" H 6450 5100 50  0001 C CNN
-	1    6450 5100
+P 8500 2100
+F 0 "#PWR026" H 8500 1850 50  0001 C CNN
+F 1 "GND" H 8505 1927 50  0000 C CNN
+F 2 "" H 8500 2100 50  0001 C CNN
+F 3 "" H 8500 2100 50  0001 C CNN
+	1    8500 2100
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	6050 4900 6250 4900
+	8100 1900 8300 1900
 Wire Wire Line
-	6050 5100 6450 5100
+	8100 2100 8500 2100
 Wire Wire Line
-	6450 5050 6450 5100
-Connection ~ 6450 5100
+	8500 2050 8500 2100
+Connection ~ 8500 2100
 $Comp
-L power:+BATT #PWR?
+L power:+BATT #PWR032
 U 1 1 5F7C320C
-P 7050 5200
-F 0 "#PWR?" H 7050 5050 50  0001 C CNN
-F 1 "+BATT" H 7065 5373 50  0000 C CNN
-F 2 "" H 7050 5200 50  0001 C CNN
-F 3 "" H 7050 5200 50  0001 C CNN
-	1    7050 5200
+P 9100 2200
+F 0 "#PWR032" H 9100 2050 50  0001 C CNN
+F 1 "+BATT" H 9115 2373 50  0000 C CNN
+F 2 "" H 9100 2200 50  0001 C CNN
+F 3 "" H 9100 2200 50  0001 C CNN
+	1    9100 2200
 	1    0    0    -1  
 $EndComp
 $Comp
-L formula:R_1K R?
+L formula:R_1K R16
 U 1 1 5F7C543A
-P 7050 5350
-F 0 "R?" H 7120 5396 50  0000 L CNN
-F 1 "R_1K" H 7120 5305 50  0000 L CNN
-F 2 "footprints:R_0805_OEM" H 6980 5350 50  0001 C CNN
-F 3 "https://www.seielect.com/Catalog/SEI-rncp.pdf" H 7130 5350 50  0001 C CNN
-F 4 "DK" H 7050 5350 60  0001 C CNN "MFN"
-F 5 "RNCP0805FTD1K00CT-ND" H 7050 5350 60  0001 C CNN "MPN"
-F 6 "https://www.digikey.com/products/en?keywords=RNCP0805FTD1K00CT-ND" H 7530 5750 60  0001 C CNN "PurchasingLink"
-	1    7050 5350
+P 9100 2350
+F 0 "R16" H 9170 2396 50  0000 L CNN
+F 1 "R_1K" H 9170 2305 50  0000 L CNN
+F 2 "footprints:R_0805_OEM" H 9030 2350 50  0001 C CNN
+F 3 "https://www.seielect.com/Catalog/SEI-rncp.pdf" H 9180 2350 50  0001 C CNN
+F 4 "DK" H 9100 2350 60  0001 C CNN "MFN"
+F 5 "RNCP0805FTD1K00CT-ND" H 9100 2350 60  0001 C CNN "MPN"
+F 6 "https://www.digikey.com/products/en?keywords=RNCP0805FTD1K00CT-ND" H 9580 2750 60  0001 C CNN "PurchasingLink"
+	1    9100 2350
 	1    0    0    -1  
 $EndComp
 $Comp
-L formula:LED_0805 D?
+L formula:LED_0805 D3
 U 1 1 5F7C6A55
-P 7050 5650
-F 0 "D?" V 7089 5533 50  0000 R CNN
-F 1 "LED_0805" V 6998 5533 50  0000 R CNN
-F 2 "footprints:LED_0805_OEM" H 6950 5650 50  0001 C CNN
-F 3 "http://www.osram-os.com/Graphics/XPic9/00078860_0.pdf" H 7050 5750 50  0001 C CNN
-F 4 "DK" H 7050 5650 60  0001 C CNN "MFN"
-F 5 "475-1410-1-ND" H 7050 5650 60  0001 C CNN "MPN"
-F 6 "https://www.digikey.com/products/en?keywords=475-1410-1-ND" H 7450 6150 60  0001 C CNN "PurchasingLink"
-	1    7050 5650
+P 9100 2650
+F 0 "D3" V 9139 2533 50  0000 R CNN
+F 1 "LED_0805" V 9048 2533 50  0000 R CNN
+F 2 "footprints:LED_0805_OEM" H 9000 2650 50  0001 C CNN
+F 3 "http://www.osram-os.com/Graphics/XPic9/00078860_0.pdf" H 9100 2750 50  0001 C CNN
+F 4 "DK" H 9100 2650 60  0001 C CNN "MFN"
+F 5 "475-1410-1-ND" H 9100 2650 60  0001 C CNN "MPN"
+F 6 "https://www.digikey.com/products/en?keywords=475-1410-1-ND" H 9500 3150 60  0001 C CNN "PurchasingLink"
+	1    9100 2650
 	0    -1   -1   0   
 $EndComp
 $Comp
-L power:GND #PWR?
+L power:GND #PWR033
 U 1 1 5F7C7C03
-P 7050 6200
-F 0 "#PWR?" H 7050 5950 50  0001 C CNN
-F 1 "GND" H 7055 6027 50  0000 C CNN
-F 2 "" H 7050 6200 50  0001 C CNN
-F 3 "" H 7050 6200 50  0001 C CNN
-	1    7050 6200
+P 9100 3200
+F 0 "#PWR033" H 9100 2950 50  0001 C CNN
+F 1 "GND" H 9105 3027 50  0000 C CNN
+F 2 "" H 9100 3200 50  0001 C CNN
+F 3 "" H 9100 3200 50  0001 C CNN
+	1    9100 3200
 	1    0    0    -1  
 $EndComp
 $Comp
-L power:+5V #PWR?
+L power:+5V #PWR034
 U 1 1 5F7CA154
-P 7300 4050
-F 0 "#PWR?" H 7300 3900 50  0001 C CNN
-F 1 "+5V" H 7315 4223 50  0000 C CNN
-F 2 "" H 7300 4050 50  0001 C CNN
-F 3 "" H 7300 4050 50  0001 C CNN
-	1    7300 4050
+P 9350 1050
+F 0 "#PWR034" H 9350 900 50  0001 C CNN
+F 1 "+5V" H 9365 1223 50  0000 C CNN
+F 2 "" H 9350 1050 50  0001 C CNN
+F 3 "" H 9350 1050 50  0001 C CNN
+	1    9350 1050
 	1    0    0    -1  
 $EndComp
 $Comp
-L formula:R_1K R?
+L formula:R_1K R18
 U 1 1 5F7CA6A2
-P 7700 4500
-F 0 "R?" V 7493 4500 50  0000 C CNN
-F 1 "R_1K" V 7584 4500 50  0000 C CNN
-F 2 "footprints:R_0805_OEM" H 7630 4500 50  0001 C CNN
-F 3 "https://www.seielect.com/Catalog/SEI-rncp.pdf" H 7780 4500 50  0001 C CNN
-F 4 "DK" H 7700 4500 60  0001 C CNN "MFN"
-F 5 "RNCP0805FTD1K00CT-ND" H 7700 4500 60  0001 C CNN "MPN"
-F 6 "https://www.digikey.com/products/en?keywords=RNCP0805FTD1K00CT-ND" H 8180 4900 60  0001 C CNN "PurchasingLink"
-	1    7700 4500
+P 9750 1500
+F 0 "R18" V 9543 1500 50  0000 C CNN
+F 1 "R_1K" V 9634 1500 50  0000 C CNN
+F 2 "footprints:R_0805_OEM" H 9680 1500 50  0001 C CNN
+F 3 "https://www.seielect.com/Catalog/SEI-rncp.pdf" H 9830 1500 50  0001 C CNN
+F 4 "DK" H 9750 1500 60  0001 C CNN "MFN"
+F 5 "RNCP0805FTD1K00CT-ND" H 9750 1500 60  0001 C CNN "MPN"
+F 6 "https://www.digikey.com/products/en?keywords=RNCP0805FTD1K00CT-ND" H 10230 1900 60  0001 C CNN "PurchasingLink"
+	1    9750 1500
 	-1   0    0    1   
 $EndComp
 Wire Wire Line
-	7700 4250 7700 4350
+	9750 1250 9750 1350
 $Comp
-L formula:LED_0805 D?
+L formula:LED_0805 D4
 U 1 1 5F7CFEEE
-P 7700 4800
-F 0 "D?" H 7693 4545 50  0000 C CNN
-F 1 "LED_0805" H 7693 4636 50  0000 C CNN
-F 2 "footprints:LED_0805_OEM" H 7600 4800 50  0001 C CNN
-F 3 "http://www.osram-os.com/Graphics/XPic9/00078860_0.pdf" H 7700 4900 50  0001 C CNN
-F 4 "DK" H 7700 4800 60  0001 C CNN "MFN"
-F 5 "475-1410-1-ND" H 7700 4800 60  0001 C CNN "MPN"
-F 6 "https://www.digikey.com/products/en?keywords=475-1410-1-ND" H 8100 5300 60  0001 C CNN "PurchasingLink"
-	1    7700 4800
+P 9750 1800
+F 0 "D4" H 9743 1545 50  0000 C CNN
+F 1 "LED_0805" H 9743 1636 50  0000 C CNN
+F 2 "footprints:LED_0805_OEM" H 9650 1800 50  0001 C CNN
+F 3 "http://www.osram-os.com/Graphics/XPic9/00078860_0.pdf" H 9750 1900 50  0001 C CNN
+F 4 "DK" H 9750 1800 60  0001 C CNN "MFN"
+F 5 "475-1410-1-ND" H 9750 1800 60  0001 C CNN "MPN"
+F 6 "https://www.digikey.com/products/en?keywords=475-1410-1-ND" H 10150 2300 60  0001 C CNN "PurchasingLink"
+	1    9750 1800
 	0    -1   -1   0   
 $EndComp
 $Comp
-L power:GND #PWR?
+L power:GND #PWR036
 U 1 1 5F7D10B7
-P 7700 5050
-F 0 "#PWR?" H 7700 4800 50  0001 C CNN
-F 1 "GND" H 7705 4877 50  0000 C CNN
-F 2 "" H 7700 5050 50  0001 C CNN
-F 3 "" H 7700 5050 50  0001 C CNN
-	1    7700 5050
+P 9750 2050
+F 0 "#PWR036" H 9750 1800 50  0001 C CNN
+F 1 "GND" H 9755 1877 50  0000 C CNN
+F 2 "" H 9750 2050 50  0001 C CNN
+F 3 "" H 9750 2050 50  0001 C CNN
+	1    9750 2050
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	7300 4400 7050 4400
-Connection ~ 7050 4400
+	9350 1400 9100 1400
+Connection ~ 9100 1400
 Wire Wire Line
-	11750 4300 11750 4400
+	2200 5150 2750 5150
 Wire Wire Line
-	10150 5200 10150 5300
-Wire Wire Line
-	10150 4300 10150 4400
-Wire Wire Line
-	11750 4300 11750 4150
-Connection ~ 11750 4300
+	2750 5150 2750 4850
 $Comp
-L power:+BATT #PWR?
-U 1 1 5F7C7758
-P 11750 4150
-F 0 "#PWR?" H 11750 4000 50  0001 C CNN
-F 1 "+BATT" H 11765 4323 50  0000 C CNN
-F 2 "" H 11750 4150 50  0001 C CNN
-F 3 "" H 11750 4150 50  0001 C CNN
-	1    11750 4150
-	1    0    0    -1  
-$EndComp
-$Comp
-L power:VBUS #PWR?
-U 1 1 5F7C80CB
-P 10150 4050
-F 0 "#PWR?" H 10150 3900 50  0001 C CNN
-F 1 "VBUS" H 10165 4223 50  0000 C CNN
-F 2 "" H 10150 4050 50  0001 C CNN
-F 3 "" H 10150 4050 50  0001 C CNN
-	1    10150 4050
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	10150 4300 10150 4050
-Connection ~ 10150 4300
-Wire Wire Line
-	10150 4500 10050 4500
-Wire Wire Line
-	10050 4500 10050 4100
-Wire Wire Line
-	10050 4100 9900 4100
-$Comp
-L formula:R_100K R?
-U 1 1 5F7C9F44
-P 9900 4250
-F 0 "R?" H 9950 4100 50  0000 L CNN
-F 1 "R_100K" V 9800 4100 50  0000 L CNN
-F 2 "footprints:R_0805_OEM" H 9830 4250 50  0001 C CNN
-F 3 "https://industrial.panasonic.com/cdbs/www-data/pdf/RDA0000/AOA0000C304.pdf" H 9980 4250 50  0001 C CNN
-F 4 "DK" H 9900 4250 60  0001 C CNN "MFN"
-F 5 "P100KCCT-ND" H 9900 4250 60  0001 C CNN "MPN"
-F 6 "https://www.digikey.com/product-detail/en/panasonic-electronic-components/ERJ-6ENF1003V/P100KCCT-ND/119551" H 10380 4650 60  0001 C CNN "PurchasingLink"
-	1    9900 4250
-	1    0    0    -1  
-$EndComp
-$Comp
-L formula:R_270K R?
-U 1 1 5F7CA9E3
-P 9900 3950
-F 0 "R?" H 9950 3850 50  0000 L CNN
-F 1 "R_270K" V 9800 3850 50  0000 L CNN
-F 2 "footprints:R_0805_OEM" V 9830 3950 50  0001 C CNN
-F 3 "https://industrial.panasonic.com/cdbs/www-data/pdf/RDM0000/AOA0000C307.pdf" V 10450 4050 50  0001 C CNN
-F 4 "DK" V 10080 4050 60  0001 C CNN "MFN"
-F 5 "P270KDACT-ND" V 10180 4150 60  0001 C CNN "MPN"
-F 6 "https://www.digikey.com/product-detail/en/panasonic-electronic-components/ERA-6AEB274V/P270KDACT-ND/1466005" V 10280 4250 60  0001 C CNN "Webpage"
-	1    9900 3950
-	1    0    0    -1  
-$EndComp
-Connection ~ 9900 4100
-$Comp
-L power:VBUS #PWR?
-U 1 1 5F7CB2E0
-P 9900 3800
-F 0 "#PWR?" H 9900 3650 50  0001 C CNN
-F 1 "VBUS" H 9915 3973 50  0000 C CNN
-F 2 "" H 9900 3800 50  0001 C CNN
-F 3 "" H 9900 3800 50  0001 C CNN
-	1    9900 3800
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	11750 4500 12100 4500
-Wire Wire Line
-	12100 4500 12100 4200
-Wire Wire Line
-	11750 4600 12400 4600
-Wire Wire Line
-	12400 4600 12400 4200
-$Comp
-L formula:R_1K R?
-U 1 1 5F7CDD6D
-P 12100 3750
-F 0 "R?" H 12170 3796 50  0000 L CNN
-F 1 "R_1K" H 12170 3705 50  0000 L CNN
-F 2 "footprints:R_0805_OEM" H 12030 3750 50  0001 C CNN
-F 3 "https://www.seielect.com/Catalog/SEI-rncp.pdf" H 12180 3750 50  0001 C CNN
-F 4 "DK" H 12100 3750 60  0001 C CNN "MFN"
-F 5 "RNCP0805FTD1K00CT-ND" H 12100 3750 60  0001 C CNN "MPN"
-F 6 "https://www.digikey.com/products/en?keywords=RNCP0805FTD1K00CT-ND" H 12580 4150 60  0001 C CNN "PurchasingLink"
-	1    12100 3750
-	1    0    0    -1  
-$EndComp
-$Comp
-L formula:R_1K R?
-U 1 1 5F7CE5B8
-P 12400 3750
-F 0 "R?" H 12470 3796 50  0000 L CNN
-F 1 "R_1K" H 12470 3705 50  0000 L CNN
-F 2 "footprints:R_0805_OEM" H 12330 3750 50  0001 C CNN
-F 3 "https://www.seielect.com/Catalog/SEI-rncp.pdf" H 12480 3750 50  0001 C CNN
-F 4 "DK" H 12400 3750 60  0001 C CNN "MFN"
-F 5 "RNCP0805FTD1K00CT-ND" H 12400 3750 60  0001 C CNN "MPN"
-F 6 "https://www.digikey.com/products/en?keywords=RNCP0805FTD1K00CT-ND" H 12880 4150 60  0001 C CNN "PurchasingLink"
-	1    12400 3750
-	1    0    0    -1  
-$EndComp
-$Comp
-L formula:LED_0805_Amber D?
-U 1 1 5F7CF104
-P 12400 4050
-F 0 "D?" V 12500 4000 50  0000 R CNN
-F 1 "LED_0805_Amber" H 12850 4150 50  0000 R CNN
-F 2 "footprints:LED_0805_OEM" H 12300 4050 50  0001 C CNN
-F 3 "https://media.digikey.com/pdf/Data%20Sheets/Chicago%20Miniature%20Lamps%20PDFs/CMDA5_Series_Rev_Aug_2014.pdf" H 12400 4150 50  0001 C CNN
-F 4 "DK" H 12400 4050 60  0001 C CNN "MFN"
-F 5 "L71517CT-ND" H 12400 4050 60  0001 C CNN "MPN"
-F 6 "https://www.digikey.com/product-detail/en/visual-communications-company-vcc/CMDA5DY7D1S/L71517CT-ND/614867" H 12800 4550 60  0001 C CNN "PurchasingLink"
-	1    12400 4050
-	0    -1   -1   0   
-$EndComp
-$Comp
-L formula:LED_0805_Red D?
-U 1 1 5F7CFFA7
-P 12100 4050
-F 0 "D?" V 12200 4000 50  0000 R CNN
-F 1 "LED_0805_Red" H 12450 4150 50  0000 R CNN
-F 2 "footprints:LED_0805_OEM" H 12000 4050 50  0001 C CNN
-F 3 "http://www.osram-os.com/Graphics/XPic8/00078869_0.pdf" H 12100 4150 50  0001 C CNN
-F 4 "DK" H 12100 4050 60  0001 C CNN "MFN"
-F 5 "475-1415-1-ND" H 12100 4050 60  0001 C CNN "MPN"
-F 6 "https://www.digikey.com/product-detail/en/osram-opto-semiconductors-inc/LH-R974-LP-1/475-1415-1-ND/1802604" H 12500 4550 60  0001 C CNN "PurchasingLink"
-	1    12100 4050
-	0    -1   -1   0   
-$EndComp
-Wire Wire Line
-	12100 3600 12100 3400
-Wire Wire Line
-	12400 3600 12400 3400
-Wire Wire Line
-	11750 5400 12100 5400
-Wire Wire Line
-	12100 5400 12100 5500
-$Comp
-L formula:R_100K R?
-U 1 1 5F7D792E
-P 12100 5650
-F 0 "R?" H 12170 5696 50  0000 L CNN
-F 1 "R_100K" H 12170 5605 50  0000 L CNN
-F 2 "footprints:R_0805_OEM" H 12030 5650 50  0001 C CNN
-F 3 "https://industrial.panasonic.com/cdbs/www-data/pdf/RDA0000/AOA0000C304.pdf" H 12180 5650 50  0001 C CNN
-F 4 "DK" H 12100 5650 60  0001 C CNN "MFN"
-F 5 "P100KCCT-ND" H 12100 5650 60  0001 C CNN "MPN"
-F 6 "https://www.digikey.com/product-detail/en/panasonic-electronic-components/ERJ-6ENF1003V/P100KCCT-ND/119551" H 12580 6050 60  0001 C CNN "PurchasingLink"
-	1    12100 5650
-	1    0    0    -1  
-$EndComp
-$Comp
-L power:GND #PWR?
-U 1 1 5F7D8379
-P 12100 5800
-F 0 "#PWR?" H 12100 5550 50  0001 C CNN
-F 1 "GND" H 12105 5627 50  0000 C CNN
-F 2 "" H 12100 5800 50  0001 C CNN
-F 3 "" H 12100 5800 50  0001 C CNN
-	1    12100 5800
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	11750 5750 11850 5750
-$Comp
-L power:GND #PWR?
-U 1 1 5F7DAE57
-P 11850 5800
-F 0 "#PWR?" H 11850 5550 50  0001 C CNN
-F 1 "GND" H 11855 5627 50  0000 C CNN
-F 2 "" H 11850 5800 50  0001 C CNN
-F 3 "" H 11850 5800 50  0001 C CNN
-	1    11850 5800
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	10150 4600 10150 4800
-Connection ~ 10150 4800
-Wire Wire Line
-	10150 4800 10150 5000
-Connection ~ 10150 5000
-Wire Wire Line
-	10150 5000 10150 5100
-$Comp
-L power:VBUS #PWR?
-U 1 1 5F7DE121
-P 9850 4800
-F 0 "#PWR?" H 9850 4650 50  0001 C CNN
-F 1 "VBUS" H 9865 4973 50  0000 C CNN
-F 2 "" H 9850 4800 50  0001 C CNN
-F 3 "" H 9850 4800 50  0001 C CNN
-	1    9850 4800
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	10150 4800 9850 4800
-NoConn ~ 11750 4800
-Wire Wire Line
-	10150 5400 9800 5400
-Wire Wire Line
-	10150 5300 10150 5400
-Connection ~ 10150 5300
-Connection ~ 10150 5400
-Wire Wire Line
-	11750 5100 12000 5100
-$Comp
-L formula:C_10nF C?
-U 1 1 5F7E1D0F
-P 9800 5550
-F 0 "C?" H 9915 5596 50  0000 L CNN
-F 1 "C_10nF" H 9915 5505 50  0000 L CNN
-F 2 "footprints:C_0805_OEM" H 9600 5550 50  0001 C CNN
-F 3 "http://www.samsungsem.com/kr/support/product-search/mlcc/__icsFiles/afieldfile/2018/07/23/CL21B103KBANNNC.pdf" H 9700 5650 50  0001 C CNN
-F 4 "DK" H 9800 5750 50  0001 C CNN "MFN"
-F 5 "1276-1015-1-ND" H 9900 5850 50  0001 C CNN "MPN"
-F 6 "https://www.digikey.com/product-detail/en/samsung-electro-mechanics/CL21B103KBANNNC/1276-1015-1-ND/3889101" H 10000 5950 50  0001 C CNN "PurchasingLink"
-	1    9800 5550
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	9800 5700 9800 5850
-$Comp
-L power:GND #PWR?
-U 1 1 5F7E5F4F
-P 9800 5850
-F 0 "#PWR?" H 9800 5600 50  0001 C CNN
-F 1 "GND" H 9805 5677 50  0000 C CNN
-F 2 "" H 9800 5850 50  0001 C CNN
-F 3 "" H 9800 5850 50  0001 C CNN
-	1    9800 5850
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	9500 5400 9500 5600
-Text Label 9500 5600 2    50   ~ 0
-batteryconnection
-Wire Wire Line
-	9500 5650 9500 6050
-$Comp
-L power:GND #PWR?
-U 1 1 5F7E8E93
-P 9500 6050
-F 0 "#PWR?" H 9500 5800 50  0001 C CNN
-F 1 "GND" H 9505 5877 50  0000 C CNN
-F 2 "" H 9500 6050 50  0001 C CNN
-F 3 "" H 9500 6050 50  0001 C CNN
-	1    9500 6050
-	1    0    0    -1  
-$EndComp
-$Comp
-L power:GND #PWR?
-U 1 1 5F7EF51B
-P 9900 4400
-F 0 "#PWR?" H 9900 4150 50  0001 C CNN
-F 1 "GND" H 9905 4227 50  0000 C CNN
-F 2 "" H 9900 4400 50  0001 C CNN
-F 3 "" H 9900 4400 50  0001 C CNN
-	1    9900 4400
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	9800 5400 9500 5400
-Connection ~ 9800 5400
-$Comp
-L formula:USB_MicroB U?
-U 1 1 5F7ED398
-P 4350 1850
-F 0 "U?" H 4407 2317 50  0000 C CNN
-F 1 "USB_MicroB" H 4407 2226 50  0000 C CNN
-F 2 "Connectors_USB:USB_Micro-B_Molex-105017-0001" H 4300 2200 50  0001 C CNN
-F 3 "https://www.molex.com/pdm_docs/sd/1050170001_sd.pdf" H 4300 2200 50  0001 C CNN
-F 4 "DK" H 4600 1600 50  0001 C CNN "MFN"
-F 5 "WM1399CT-ND" H 4700 1700 50  0001 C CNN "MPN"
-F 6 "https://www.digikey.com/product-detail/en/molex-llc/1050170001/WM1399CT-ND/2350885" H 4800 1800 50  0001 C CNN "PurchasingLink"
-	1    4350 1850
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	4650 1650 5200 1650
-Wire Wire Line
-	5200 1650 5200 1350
-$Comp
-L formula:C_10uF C?
+L formula:C_10uF C2
 U 1 1 5F7F1584
-P 5200 1850
-F 0 "C?" H 5315 1946 50  0000 L CNN
-F 1 "C_10uF" H 5315 1855 50  0000 L CNN
-F 2 "footprints:C_0805_OEM" H 5238 2450 50  0001 C CNN
-F 3 "http://www.samsungsem.com/kr/support/product-search/mlcc/__icsFiles/afieldfile/2018/06/20/CL21A106KPFNNNE.pdf" H 5225 2700 50  0001 C CNN
-F 4 "DK" H 5200 1900 60  0001 C CNN "MFN"
-F 5 "1276-1052-1-ND" H 5200 2600 60  0001 C CNN "MPN"
-F 6 "https://www.digikey.com/product-detail/en/samsung-electro-mechanics/CL21A106KPFNNNE/1276-1052-1-ND/3889138" H 5625 2350 60  0001 C CNN "PurchasingLink"
-	1    5200 1850
+P 2750 5350
+F 0 "C2" H 2865 5446 50  0000 L CNN
+F 1 "C_10uF" H 2865 5355 50  0000 L CNN
+F 2 "footprints:C_0805_OEM" H 2788 5950 50  0001 C CNN
+F 3 "http://www.samsungsem.com/kr/support/product-search/mlcc/__icsFiles/afieldfile/2018/06/20/CL21A106KPFNNNE.pdf" H 2775 6200 50  0001 C CNN
+F 4 "DK" H 2750 5400 60  0001 C CNN "MFN"
+F 5 "1276-1052-1-ND" H 2750 6100 60  0001 C CNN "MPN"
+F 6 "https://www.digikey.com/product-detail/en/samsung-electro-mechanics/CL21A106KPFNNNE/1276-1052-1-ND/3889138" H 3175 5850 60  0001 C CNN "PurchasingLink"
+	1    2750 5350
 	1    0    0    -1  
 $EndComp
-Connection ~ 5200 1650
+Connection ~ 2750 5150
 $Comp
-L power:GND #PWR?
+L power:GND #PWR09
 U 1 1 5F7F1A83
-P 5200 1950
-F 0 "#PWR?" H 5200 1700 50  0001 C CNN
-F 1 "GND" H 5205 1777 50  0000 C CNN
-F 2 "" H 5200 1950 50  0001 C CNN
-F 3 "" H 5200 1950 50  0001 C CNN
-	1    5200 1950
+P 2750 5450
+F 0 "#PWR09" H 2750 5200 50  0001 C CNN
+F 1 "GND" H 2755 5277 50  0000 C CNN
+F 2 "" H 2750 5450 50  0001 C CNN
+F 3 "" H 2750 5450 50  0001 C CNN
+	1    2750 5450
+	1    0    0    -1  
+$EndComp
+NoConn ~ 2200 5350
+NoConn ~ 2200 5450
+NoConn ~ 2200 5550
+$Comp
+L formula:TP TP1
+U 1 1 5F85097E
+P 8500 2800
+F 0 "TP1" H 8578 2738 50  0000 L CNN
+F 1 "TP" H 8578 2647 50  0000 L CNN
+F 2 "footprints:tp_1.6mm" H 8400 2700 50  0001 C CNN
+F 3 "http://www.keyelco.com/product-pdf.cfm?p=1314" H 8500 2800 50  0001 C CNN
+F 4 "DK" H 8600 2900 50  0001 C CNN "MFN"
+F 5 "36-5006-ND" H 8700 3000 50  0001 C CNN "MPN"
+F 6 "https://www.digikey.com/product-detail/en/keystone-electronics/5006/36-5006-ND/255330" H 8800 3100 50  0001 C CNN "PurchasingLink"
+	1    8500 2800
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	9750 1950 9750 2050
+Wire Wire Line
+	9350 1050 9350 1250
+Wire Wire Line
+	9750 1250 9350 1250
+Connection ~ 9350 1250
+Wire Wire Line
+	9350 1250 9350 1400
+$Comp
+L formula:SSM3K333R Q1
+U 1 1 5F85122D
+P 9000 3000
+F 0 "Q1" H 9206 3046 50  0000 L CNN
+F 1 "SSM3K333R" H 9206 2955 50  0000 L CNN
+F 2 "footprints:SOT-23F" H 9200 2925 50  0001 L CIN
+F 3 "https://drive.google.com/drive/folders/0B-V-iZf33Y4GNzhDQTJZanJRbVk" H 9200 3075 50  0001 L CNN
+F 4 "DK" H 9500 3375 60  0001 C CNN "MFN"
+F 5 "SSM3K333RLFCT-ND" H 9400 3275 60  0001 C CNN "MPN"
+F 6 "https://www.digikey.com/product-detail/en/toshiba-semiconductor-and-storage/SSM3K333RLF/SSM3K333RLFCT-ND/3522391" H 9300 3175 60  0001 C CNN "PurchasingLink"
+	1    9000 3000
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	8300 1900 8300 3000
+Wire Wire Line
+	8300 3000 8500 3000
+$Comp
+L formula:R_10K R15
+U 1 1 5F85B692
+P 8700 3150
+F 0 "R15" H 8770 3196 50  0000 L CNN
+F 1 "R_10K" H 8770 3105 50  0000 L CNN
+F 2 "footprints:R_0805_OEM" H 8630 3150 50  0001 C CNN
+F 3 "http://www.bourns.com/data/global/pdfs/CRS.pdf" H 8780 3150 50  0001 C CNN
+F 4 "DK" H 8700 3150 60  0001 C CNN "MFN"
+F 5 "CRS0805-FX-1002ELFCT-ND" H 8700 3150 60  0001 C CNN "MPN"
+F 6 "https://www.digikey.com/products/en?keywords=CRS0805-FX-1002ELFCT-ND" H 9180 3550 60  0001 C CNN "PurchasingLink"
+	1    8700 3150
+	1    0    0    -1  
+$EndComp
+Connection ~ 8700 3000
+Wire Wire Line
+	8700 3000 8800 3000
+Connection ~ 8500 3000
+Wire Wire Line
+	8500 3000 8700 3000
+$Comp
+L formula:CONN_01x02 J2
+U 1 1 5F838577
+P 1750 4100
+F 0 "J2" H 1668 4317 50  0000 C CNN
+F 1 "CONN_01x02" H 1800 4250 50  0000 C CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_1x02_P2.54mm_Vertical" H 1650 4100 50  0001 C CNN
+F 3 "https://katalog.we-online.de/em/datasheet/6130xx11121.pdf" H 1750 4200 50  0001 C CNN
+F 4 "DK" H 1850 4300 50  0001 C CNN "MFN"
+F 5 "732-5315-ND" H 1950 4400 50  0001 C CNN "MPN"
+	1    1750 4100
+	-1   0    0    -1  
+$EndComp
+$Comp
+L Connector:USB_A J3
+U 1 1 5F8090A7
+P 1900 1650
+F 0 "J3" H 1957 2117 50  0000 C CNN
+F 1 "USB_A" H 1957 2026 50  0000 C CNN
+F 2 "" H 2050 1600 50  0001 C CNN
+F 3 " ~" H 2050 1600 50  0001 C CNN
+	1    1900 1650
 	1    0    0    -1  
 $EndComp
 $Comp
-L power:GND #PWR?
+L power:GND #PWR04
 U 1 1 5F7F1D8F
-P 4350 2250
-F 0 "#PWR?" H 4350 2000 50  0001 C CNN
-F 1 "GND" H 4355 2077 50  0000 C CNN
-F 2 "" H 4350 2250 50  0001 C CNN
-F 3 "" H 4350 2250 50  0001 C CNN
-	1    4350 2250
-	1    0    0    -1  
-$EndComp
-NoConn ~ 4650 1850
-NoConn ~ 4650 1950
-NoConn ~ 4650 2050
-NoConn ~ 4250 2250
-Wire Wire Line
-	11750 5300 12550 5300
-Wire Wire Line
-	12550 5300 12550 5450
-$Comp
-L PowerBankTemplate-rescue:R_1.8K-formula R?
-U 1 1 5F8054EC
-P 12550 5600
-F 0 "R?" H 12620 5646 50  0000 L CNN
-F 1 "R_1.8K" H 12620 5555 50  0000 L CNN
-F 2 "footprints:R_0805_OEM" V 13050 5600 50  0001 C CNN
-F 3 "https://industrial.panasonic.com/cdbs/www-data/pdf/RDM0000/AOA0000C307.pdf" V 12850 5600 50  0001 C CNN
-F 4 "DK" V 12730 5700 60  0001 C CNN "MFN"
-F 5 "P178KDATR-ND" V 12830 5800 60  0001 C CNN "MPN"
-F 6 "https://www.digikey.com/product-detail/en/panasonic-electronic-components/ERA-6AEB1783V/P178KDATR-ND/2025864" V 12930 5900 60  0001 C CNN "Webpage"
-	1    12550 5600
+P 2100 5800
+F 0 "#PWR04" H 2100 5550 50  0001 C CNN
+F 1 "GND" H 2105 5627 50  0000 C CNN
+F 2 "" H 2100 5800 50  0001 C CNN
+F 3 "" H 2100 5800 50  0001 C CNN
+	1    2100 5800
 	1    0    0    -1  
 $EndComp
 $Comp
-L power:GND #PWR?
-U 1 1 5F805C8C
-P 12550 5750
-F 0 "#PWR?" H 12550 5500 50  0001 C CNN
-F 1 "GND" H 12555 5577 50  0000 C CNN
-F 2 "" H 12550 5750 50  0001 C CNN
-F 3 "" H 12550 5750 50  0001 C CNN
-	1    12550 5750
+L formula:USB_MicroB U1
+U 1 1 5F7ED398
+P 1900 5350
+F 0 "U1" H 1957 5817 50  0000 C CNN
+F 1 "USB_MicroB" H 1957 5726 50  0000 C CNN
+F 2 "Connectors_USB:USB_Micro-B_Molex-105017-0001" H 1850 5700 50  0001 C CNN
+F 3 "https://www.molex.com/pdm_docs/sd/1050170001_sd.pdf" H 1850 5700 50  0001 C CNN
+F 4 "DK" H 2150 5100 50  0001 C CNN "MFN"
+F 5 "WM1399CT-ND" H 2250 5200 50  0001 C CNN "MPN"
+F 6 "https://www.digikey.com/product-detail/en/molex-llc/1050170001/WM1399CT-ND/2350885" H 2350 5300 50  0001 C CNN "PurchasingLink"
+	1    1900 5350
 	1    0    0    -1  
 $EndComp
-Text Label 12000 5100 0    50   ~ 0
+Text Label 2550 4100 0    50   ~ 0
+Battery+
+$Comp
+L formula:CONN_01x02 J1
+U 1 1 5F8A0296
+P 1750 3050
+F 0 "J1" H 1668 3267 50  0000 C CNN
+F 1 "CONN_01x02" H 1668 3176 50  0000 C CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_1x02_P2.54mm_Vertical" H 1650 3050 50  0001 C CNN
+F 3 "https://katalog.we-online.de/em/datasheet/6130xx11121.pdf" H 1750 3150 50  0001 C CNN
+F 4 "DK" H 1850 3250 50  0001 C CNN "MFN"
+F 5 "732-5315-ND" H 1950 3350 50  0001 C CNN "MPN"
+	1    1750 3050
+	-1   0    0    -1  
+$EndComp
+Wire Wire Line
+	2100 4200 1950 4200
+Wire Wire Line
+	2100 4300 2100 4200
+$Comp
+L power:GND #PWR03
+U 1 1 5F881A78
+P 2100 4300
+F 0 "#PWR03" H 2100 4050 50  0001 C CNN
+F 1 "GND" H 2105 4127 50  0000 C CNN
+F 2 "" H 2100 4300 50  0001 C CNN
+F 3 "" H 2100 4300 50  0001 C CNN
+	1    2100 4300
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR02
+U 1 1 5F8A45C0
+P 2100 3250
+F 0 "#PWR02" H 2100 3000 50  0001 C CNN
+F 1 "GND" H 2105 3077 50  0000 C CNN
+F 2 "" H 2100 3250 50  0001 C CNN
+F 3 "" H 2100 3250 50  0001 C CNN
+	1    2100 3250
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2100 3250 2100 3150
+Wire Wire Line
+	2100 3150 1950 3150
+Text Label 1950 3050 0    50   ~ 0
 16KThermistor
 $Comp
-L power:+5V #PWR?
-U 1 1 5F8194B1
-P 5200 1350
-F 0 "#PWR?" H 5200 1200 50  0001 C CNN
-F 1 "+5V" H 5215 1523 50  0000 C CNN
-F 2 "" H 5200 1350 50  0001 C CNN
-F 3 "" H 5200 1350 50  0001 C CNN
-	1    5200 1350
+L formula:1.5A_Fuse F1
+U 1 1 5F8AD6A0
+P 2250 4100
+F 0 "F1" H 2250 4325 50  0000 C CNN
+F 1 "1.5A_Fuse" H 2250 4234 50  0000 C CNN
+F 2 "footprints:Fuse_1206" H 2250 3800 50  0001 C CNN
+F 3 "https://www.littelfuse.com/~/media/electronics/datasheets/fuses/littelfuse_fuse_466_datasheet.pdf.pdf" H 2200 4100 50  0001 C CNN
+F 4 "F1462CT-ND" H 2350 4350 50  0001 C CNN "MPN"
+F 5 "https://www.digikey.com/product-detail/en/littelfuse-inc/046601.5NR/F1462CT-ND/521360" H 2450 4450 50  0001 C CNN "PurchasingLink"
+F 6 "046601.5NR" H 2550 4550 50  0001 C CNN "MFN"
+	1    2250 4100
 	1    0    0    -1  
 $EndComp
 $Comp
-L power:+5V #PWR?
-U 1 1 5F819564
-P 12400 3400
-F 0 "#PWR?" H 12400 3250 50  0001 C CNN
-F 1 "+5V" H 12415 3573 50  0000 C CNN
-F 2 "" H 12400 3400 50  0001 C CNN
-F 3 "" H 12400 3400 50  0001 C CNN
-	1    12400 3400
+L formula:R_49.9K R2
+U 1 1 5F8E4DD4
+P 2700 2050
+F 0 "R2" H 2770 2096 50  0000 L CNN
+F 1 "R_49.9K" H 2770 2005 50  0000 L CNN
+F 2 "footprints:R_0805_OEM" H 1600 2350 50  0001 L CNN
+F 3 "https://industrial.panasonic.com/cdbs/www-data/pdf/RDM0000/AOA0000C307.pdf" H 1600 2450 50  0001 L CNN
+F 4 "https://www.digikey.com/product-detail/en/panasonic-electronic-components/ERA-6AEB4992V/P49-9KDACT-ND/3075162" H 1600 2550 60  0001 L CNN "PurchasingLink"
+	1    2700 2050
 	1    0    0    -1  
 $EndComp
 $Comp
-L power:+5V #PWR?
-U 1 1 5F81A879
-P 12100 3400
-F 0 "#PWR?" H 12100 3250 50  0001 C CNN
-F 1 "+5V" H 12115 3573 50  0000 C CNN
-F 2 "" H 12100 3400 50  0001 C CNN
-F 3 "" H 12100 3400 50  0001 C CNN
-	1    12100 3400
+L formula:R_49.9K R1
+U 1 1 5F8E6A58
+P 2700 1350
+F 0 "R1" H 2770 1396 50  0000 L CNN
+F 1 "R_75k" H 2770 1305 50  0000 L CNN
+F 2 "footprints:R_0805_OEM" H 1600 1650 50  0001 L CNN
+F 3 "" H 1600 1750 50  0001 L CNN
+F 4 "" H 1600 1850 60  0001 L CNN "PurchasingLink"
+	1    2700 1350
 	1    0    0    -1  
 $EndComp
 $Comp
-L power:VBUS #PWR?
-U 1 1 5F82606D
-P 9500 5400
-F 0 "#PWR?" H 9500 5250 50  0001 C CNN
-F 1 "VBUS" H 9515 5573 50  0000 C CNN
-F 2 "" H 9500 5400 50  0001 C CNN
-F 3 "" H 9500 5400 50  0001 C CNN
-	1    9500 5400
-	1    0    0    -1  
-$EndComp
-Connection ~ 9500 5400
-Wire Wire Line
-	11750 5550 11750 5650
-Connection ~ 11750 5650
-Connection ~ 11750 5750
-Wire Wire Line
-	11850 5750 11850 5800
-Wire Wire Line
-	11750 5650 11750 5750
-$Comp
-L formula:TP TP?
-U 1 1 5F85097E
-P 6450 5800
-F 0 "TP?" H 6528 5738 50  0000 L CNN
-F 1 "TP" H 6528 5647 50  0000 L CNN
-F 2 "footprints:tp_1.6mm" H 6350 5700 50  0001 C CNN
-F 3 "http://www.keyelco.com/product-pdf.cfm?p=1314" H 6450 5800 50  0001 C CNN
-F 4 "DK" H 6550 5900 50  0001 C CNN "MFN"
-F 5 "36-5006-ND" H 6650 6000 50  0001 C CNN "MPN"
-F 6 "https://www.digikey.com/product-detail/en/keystone-electronics/5006/36-5006-ND/255330" H 6750 6100 50  0001 C CNN "PurchasingLink"
-	1    6450 5800
+L formula:R_49.9K R3
+U 1 1 5F8E96BF
+P 3150 1350
+F 0 "R3" H 3220 1396 50  0000 L CNN
+F 1 "R_43k" H 3220 1305 50  0000 L CNN
+F 2 "footprints:R_0805_OEM" H 2050 1650 50  0001 L CNN
+F 3 "" H 2050 1750 50  0001 L CNN
+F 4 "" H 2050 1850 60  0001 L CNN "PurchasingLink"
+	1    3150 1350
 	1    0    0    -1  
 $EndComp
 $Comp
-L Connector:USB_A J?
-U 1 1 5F8090A7
-P 6500 1750
-F 0 "J?" H 6557 2217 50  0000 C CNN
-F 1 "USB_A" H 6557 2126 50  0000 C CNN
-F 2 "" H 6650 1700 50  0001 C CNN
-F 3 " ~" H 6650 1700 50  0001 C CNN
-	1    6500 1750
+L formula:R_49.9K R4
+U 1 1 5F8E9988
+P 3150 2050
+F 0 "R4" H 3220 2096 50  0000 L CNN
+F 1 "R_49.9K" H 3220 2005 50  0000 L CNN
+F 2 "footprints:R_0805_OEM" H 2050 2350 50  0001 L CNN
+F 3 "https://industrial.panasonic.com/cdbs/www-data/pdf/RDM0000/AOA0000C307.pdf" H 2050 2450 50  0001 L CNN
+F 4 "https://www.digikey.com/product-detail/en/panasonic-electronic-components/ERA-6AEB4992V/P49-9KDACT-ND/3075162" H 2050 2550 60  0001 L CNN "PurchasingLink"
+	1    3150 2050
 	1    0    0    -1  
 $EndComp
-Wire Notes Line
-	4000 1000 3700 1000
-Wire Notes Line
-	3700 1000 3700 2650
-Wire Notes Line
-	3700 2650 7250 2650
-Wire Notes Line
-	7250 2650 7250 1000
-Text Notes 4000 1050 0    79   ~ 0
-Input/Output
-Wire Notes Line
-	4800 1000 7250 1000
-Wire Wire Line
-	7700 4950 7700 5050
-Wire Wire Line
-	7300 4050 7300 4250
-Wire Wire Line
-	7700 4250 7300 4250
-Connection ~ 7300 4250
-Wire Wire Line
-	7300 4250 7300 4400
 $Comp
-L formula:SSM3K333R Q?
-U 1 1 5F85122D
-P 6950 6000
-F 0 "Q?" H 7156 6046 50  0000 L CNN
-F 1 "SSM3K333R" H 7156 5955 50  0000 L CNN
-F 2 "footprints:SOT-23F" H 7150 5925 50  0001 L CIN
-F 3 "https://drive.google.com/drive/folders/0B-V-iZf33Y4GNzhDQTJZanJRbVk" H 7150 6075 50  0001 L CNN
-F 4 "DK" H 7450 6375 60  0001 C CNN "MFN"
-F 5 "SSM3K333RLFCT-ND" H 7350 6275 60  0001 C CNN "MPN"
-F 6 "https://www.digikey.com/product-detail/en/toshiba-semiconductor-and-storage/SSM3K333RLF/SSM3K333RLFCT-ND/3522391" H 7250 6175 60  0001 C CNN "PurchasingLink"
-	1    6950 6000
+L power:+5V #PWR06
+U 1 1 5F8F28B3
+P 2700 1150
+F 0 "#PWR06" H 2700 1000 50  0001 C CNN
+F 1 "+5V" H 2715 1323 50  0000 C CNN
+F 2 "" H 2700 1150 50  0001 C CNN
+F 3 "" H 2700 1150 50  0001 C CNN
+	1    2700 1150
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+5V #PWR010
+U 1 1 5F8F3317
+P 3150 1150
+F 0 "#PWR010" H 3150 1000 50  0001 C CNN
+F 1 "+5V" H 3165 1323 50  0000 C CNN
+F 2 "" H 3150 1150 50  0001 C CNN
+F 3 "" H 3150 1150 50  0001 C CNN
+	1    3150 1150
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR07
+U 1 1 5F8F3633
+P 2700 2250
+F 0 "#PWR07" H 2700 2000 50  0001 C CNN
+F 1 "GND" H 2705 2077 50  0000 C CNN
+F 2 "" H 2700 2250 50  0001 C CNN
+F 3 "" H 2700 2250 50  0001 C CNN
+	1    2700 2250
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR011
+U 1 1 5F8F39CC
+P 3150 2250
+F 0 "#PWR011" H 3150 2000 50  0001 C CNN
+F 1 "GND" H 3155 2077 50  0000 C CNN
+F 2 "" H 3150 2250 50  0001 C CNN
+F 3 "" H 3150 2250 50  0001 C CNN
+	1    3150 2250
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	6250 4900 6250 6000
+	2700 1200 2700 1150
 Wire Wire Line
-	6250 6000 6450 6000
+	2700 1500 2700 1650
+Wire Wire Line
+	2700 2200 2700 2250
+Wire Wire Line
+	2200 1650 2700 1650
+Connection ~ 2700 1650
+Wire Wire Line
+	2700 1650 2700 1900
+Wire Wire Line
+	3150 1150 3150 1200
+Wire Wire Line
+	3150 1500 3150 1750
+Wire Wire Line
+	3150 2200 3150 2250
+Wire Wire Line
+	2200 1750 3150 1750
+Connection ~ 3150 1750
+Wire Wire Line
+	3150 1750 3150 1900
 $Comp
-L formula:R_10K R?
-U 1 1 5F85B692
-P 6650 6150
-F 0 "R?" H 6720 6196 50  0000 L CNN
-F 1 "R_10K" H 6720 6105 50  0000 L CNN
-F 2 "footprints:R_0805_OEM" H 6580 6150 50  0001 C CNN
-F 3 "http://www.bourns.com/data/global/pdfs/CRS.pdf" H 6730 6150 50  0001 C CNN
-F 4 "DK" H 6650 6150 60  0001 C CNN "MFN"
-F 5 "CRS0805-FX-1002ELFCT-ND" H 6650 6150 60  0001 C CNN "MPN"
-F 6 "https://www.digikey.com/products/en?keywords=CRS0805-FX-1002ELFCT-ND" H 7130 6550 60  0001 C CNN "PurchasingLink"
-	1    6650 6150
+L power:GND #PWR01
+U 1 1 5F92CB04
+P 2050 2150
+F 0 "#PWR01" H 2050 1900 50  0001 C CNN
+F 1 "GND" H 2055 1977 50  0000 C CNN
+F 2 "" H 2050 2150 50  0001 C CNN
+F 3 "" H 2050 2150 50  0001 C CNN
+	1    2050 2150
 	1    0    0    -1  
 $EndComp
-Connection ~ 6650 6000
 Wire Wire Line
-	6650 6000 6750 6000
+	1800 2050 1900 2050
+Wire Wire Line
+	2050 2050 2050 2100
+Connection ~ 1900 2050
+Wire Wire Line
+	1900 2050 2050 2050
+Wire Wire Line
+	2100 5800 2100 5750
+Wire Wire Line
+	2100 5750 1900 5750
+Connection ~ 1900 5750
+Wire Wire Line
+	1900 5750 1800 5750
 $Comp
-L power:GND #PWR?
+L power:+5V #PWR05
+U 1 1 5F9359B1
+P 2350 1350
+F 0 "#PWR05" H 2350 1200 50  0001 C CNN
+F 1 "+5V" H 2365 1523 50  0000 C CNN
+F 2 "" H 2350 1350 50  0001 C CNN
+F 3 "" H 2350 1350 50  0001 C CNN
+	1    2350 1350
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2350 1350 2350 1450
+Wire Wire Line
+	2350 1450 2200 1450
+$Comp
+L formula:C_10uF C1
+U 1 1 5F93A07E
+P 2350 2000
+F 0 "C1" H 2465 2096 50  0000 L CNN
+F 1 "C_10uF" H 2465 2005 50  0000 L CNN
+F 2 "footprints:C_0805_OEM" H 2388 2600 50  0001 C CNN
+F 3 "http://www.samsungsem.com/kr/support/product-search/mlcc/__icsFiles/afieldfile/2018/06/20/CL21A106KPFNNNE.pdf" H 2375 2850 50  0001 C CNN
+F 4 "DK" H 2350 2050 60  0001 C CNN "MFN"
+F 5 "1276-1052-1-ND" H 2350 2750 60  0001 C CNN "MPN"
+F 6 "https://www.digikey.com/product-detail/en/samsung-electro-mechanics/CL21A106KPFNNNE/1276-1052-1-ND/3889138" H 2775 2500 60  0001 C CNN "PurchasingLink"
+	1    2350 2000
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2350 2100 2050 2100
+Connection ~ 2050 2100
+Wire Wire Line
+	2050 2100 2050 2150
+Wire Wire Line
+	2350 1800 2350 1450
+Connection ~ 2350 1450
+$Comp
+L power:VBUS #PWR08
+U 1 1 5F94EAD0
+P 2750 4850
+F 0 "#PWR08" H 2750 4700 50  0001 C CNN
+F 1 "VBUS" H 2765 5023 50  0000 C CNN
+F 2 "" H 2750 4850 50  0001 C CNN
+F 3 "" H 2750 4850 50  0001 C CNN
+	1    2750 4850
+	1    0    0    -1  
+$EndComp
+Text Notes 2150 1100 2    79   ~ 0
+Output USB\n (to charge phone)
+Text Notes 2000 2800 2    79   ~ 0
+Thermistor
+Text Notes 1950 3800 2    79   ~ 0
+Battery
+Text Notes 1800 4850 2    79   ~ 0
+Input USB\n(to charge bat)
+Text Notes 3300 6500 0    98   Italic 0
+Power Flow
+Text Notes 2250 6950 0    79   ~ 0
+Micro USB
+Text Notes 3350 7550 0    79   ~ 0
+Battery
+Text Notes 3400 6950 0    79   ~ 0
+MCP
+Text Notes 4200 6950 0    79   ~ 0
+TI-Boost
+Text Notes 5300 6950 0    79   ~ 0
+USB-A
+$Comp
+L Graphic:SYM_Arrow_Large #SYM4
+U 1 1 5FB6D2ED
+P 3900 6900
+F 0 "#SYM4" H 3900 6990 50  0001 C CNN
+F 1 "SYM_Arrow_Large" H 3900 6820 50  0001 C CNN
+F 2 "" H 3900 6900 50  0001 C CNN
+F 3 "~" H 3900 6900 50  0001 C CNN
+	1    3900 6900
+	1    0    0    -1  
+$EndComp
+$Comp
+L Graphic:SYM_Arrow_Large #SYM2
+U 1 1 5FB756D8
+P 3450 7200
+F 0 "#SYM2" H 3450 7290 50  0001 C CNN
+F 1 "SYM_Arrow_Large" H 3450 7120 50  0001 C CNN
+F 2 "" H 3450 7200 50  0001 C CNN
+F 3 "~" H 3450 7200 50  0001 C CNN
+	1    3450 7200
+	0    1    1    0   
+$EndComp
+$Comp
+L Graphic:SYM_Arrow_Large #SYM3
+U 1 1 5FB7585F
+P 3600 7200
+F 0 "#SYM3" H 3600 7290 50  0001 C CNN
+F 1 "SYM_Arrow_Large" H 3600 7120 50  0001 C CNN
+F 2 "" H 3600 7200 50  0001 C CNN
+F 3 "~" H 3600 7200 50  0001 C CNN
+	1    3600 7200
+	0    -1   -1   0   
+$EndComp
+$Comp
+L Graphic:SYM_Arrow_Large #SYM1
+U 1 1 5FB760B2
+P 3100 6900
+F 0 "#SYM1" H 3100 6990 50  0001 C CNN
+F 1 "SYM_Arrow_Large" H 3100 6820 50  0001 C CNN
+F 2 "" H 3100 6900 50  0001 C CNN
+F 3 "~" H 3100 6900 50  0001 C CNN
+	1    3100 6900
+	1    0    0    -1  
+$EndComp
+$Comp
+L Graphic:SYM_Arrow_Large #SYM5
+U 1 1 5FB788AC
+P 5000 6900
+F 0 "#SYM5" H 5000 6990 50  0001 C CNN
+F 1 "SYM_Arrow_Large" H 5000 6820 50  0001 C CNN
+F 2 "" H 5000 6900 50  0001 C CNN
+F 3 "~" H 5000 6900 50  0001 C CNN
+	1    5000 6900
+	1    0    0    -1  
+$EndComp
+Text Notes 2950 6850 0    39   Italic 0
+Vbus
+Text Notes 3750 6850 0    39   Italic 0
++Batt
+Text Notes 3650 7200 0    39   Italic 0
+Battery+
+Text Notes 4850 6850 0    39   Italic 0
++5V
+Text Notes 9650 2000 1    50   ~ 0
+Power LED
+$Bitmap
+Pos 7850 4750
+Scale 1.000000
+Data
+89 50 4E 47 0D 0A 1A 0A 00 00 00 0D 49 48 44 52 00 00 01 DD 00 00 01 8C 08 02 00 00 00 10 8D EF 
+6B 00 00 00 03 73 42 49 54 08 08 08 DB E1 4F E0 00 00 20 00 49 44 41 54 78 9C EC 9D 65 5C 14 5D 
+17 C0 CF CE 2E 0B 4B 23 E5 03 08 C8 D2 A1 D2 A5 22 76 61 17 EA 63 60 07 26 D8 DD DD 81 62 3E B6 
+82 88 12 02 22 61 80 94 09 4A 2A 21 DD 12 BB CB CE CC FB 81 5A 60 81 A5 64 F5 9D FF 8F 0F 3A F7 
+CE D9 73 EE B9 73 E6 CE 4D 12 8E E3 40 40 40 40 40 C0 37 20 DD AD 00 01 01 01 01 41 03 88 B8 4C 
+40 40 40 C0 5F 10 71 99 80 80 80 80 BF 20 E2 32 01 01 01 01 7F 41 C4 65 02 02 02 02 FE 82 88 CB 
+04 04 04 04 FC 05 11 97 09 08 08 08 F8 0B 22 2E 13 10 10 10 F0 17 44 5C 26 20 20 20 E0 2F 88 B8 
+4C 40 40 40 C0 5F 10 71 99 80 80 80 80 BF 20 E2 32 01 01 01 01 7F 41 C4 65 02 02 02 02 FE 82 88 
+CB 04 04 04 04 FC 05 11 97 09 08 08 08 F8 0B 4A 8B A9 18 8B C1 64 63 CD 6F D0 4C 22 53 04 05 A9 
+48 5D 6E 26 93 8D E2 40 22 53 69 82 4D 05 D7 26 D7 DD 4C 42 10 01 AA 20 A5 E9 AB A1 26 27 89 44 
+A6 D2 04 C9 CD A9 D6 50 5A 63 C5 A8 82 DC 24 77 18 8C CD 64 B2 50 20 0B 36 AB 58 B7 C2 CC 4F FA 
+FC 29 21 B3 84 85 D0 A4 14 34 F4 F5 E8 D2 82 75 69 2D 97 18 00 09 A1 08 0A 51 1B 94 59 0B 1E E5 
+51 1A CA AA 64 B1 71 BC 61 45 01 00 A8 4D 68 F2 A3 2D 99 D0 0A 58 65 4E FC A7 2F 29 39 A5 28 55 
+5C 46 49 AB 8F AE 92 68 A3 2A D0 AA 3A 35 09 BC 59 07 1C B9 48 24 12 82 90 29 02 54 72 D3 5A C7 
+63 21 B4 D1 41 1D 28 28 02 7E 87 D4 D2 BE F8 CC E0 2D 03 17 3C CC C1 9A CD 40 56 99 77 CF 7F 9B 
+19 15 00 00 4D 71 9D 3E EA 70 14 0B 80 24 39 EA 64 C0 C5 F1 52 8D 84 BD DE 3A 74 CE DD AC C6 C2 
+C8 82 E2 F2 6A 46 83 67 AE 5E 3F DD 50 B2 BA CE B1 3E 1C 1E 3F D9 25 11 05 EA F0 13 D1 97 27 D2 
+B8 AA 16 B4 69 F0 82 07 CD AA 46 D1 5F E5 E5 B1 4A 9B DB 5B 87 9D 74 6F C3 F6 A7 19 0D EF 24 51 
+4D 1D AF AC EB DF 5A C5 46 53 6F CE 1E B3 37 AC 9C 6A 7B 28 FC FA 74 F1 56 72 FF 56 B0 FC 88 6B 
+7B 76 5F F6 8D 2B AC AA BB 26 D0 43 6F F4 92 5D DB E7 9B 4A 23 AD 96 18 00 59 65 FE ED 80 1D A6 
+D4 BA 0B E8 F7 CB 33 C6 1C A8 F1 E8 F1 A0 0B E3 38 3C CA A3 B4 3E A1 CE 03 17 B9 15 E0 48 4F FB 
+6B 81 07 6D EA CB 97 11 E0 6C BD C4 A3 00 47 FE 99 79 3D 78 BF B5 20 4F 26 B4 40 69 AC DB E9 83 
+67 DD DF A6 95 D5 AB 44 95 31 18 39 77 9D F3 02 5B A5 5A 9B 98 81 CE FD 97 3E CA C7 91 9E 33 AE 
+07 EF E3 50 87 19 E0 34 60 B1 7B 21 8E FC 33 EB E6 8B FD FD 81 27 EB 36 56 6C B7 59 D4 38 17 99 
+2A 2A A5 A0 DD 7F CA 6A E7 85 03 14 AA EB 1F F3 05 4F 85 60 F2 96 57 07 75 A4 A0 08 FE 08 3A CD 
+89 EC 6F 9E 4F 3F B0 00 00 00 2F 0E 71 F3 FE D9 7C FD 6A 00 CA 2C CD FC 1A 7C 7B C7 9C 85 2E 5F 
+98 9D A5 4C 4B 54 7C 0E F5 0B 8F 8C 88 68 F0 F7 2E 2A 31 BF 55 85 99 F1 FF ED 38 1F 5E FE 3B 94 
+6C 2B AC AF 57 96 2D 3C FC 94 F3 41 05 80 AA C2 58 CF 43 0B 96 B9 C6 B2 DA 23 93 1D EF F9 A4 DE 
+A3 EE CF 78 F5 68 3B 69 BF 09 58 D1 EB C3 73 ED 37 DC 7C CD 19 94 01 80 95 FF F9 E9 F1 45 53 96 
+5C FE 50 D6 35 2A 73 03 65 95 E5 FF 88 7A 72 6C C1 BF BB 03 0B BA A4 C4 BA C2 D7 04 7C 46 8B FD 
+18 14 F5 31 6B B6 AA 97 E3 00 00 78 69 E4 ED F3 01 A9 28 90 D5 46 AF 9E D9 4F 18 00 00 10 09 3D 
+95 9A 36 C1 7B F7 67 09 EC DA 1B 2B 22 3C 3C 92 ED 57 6A 70 FB D4 27 89 1A D9 AF 18 AD 46 06 1C 
+C7 30 36 A3 E0 5B 80 9B F7 E7 42 EC 57 CC D5 0B FE B3 2F D8 B5 B1 11 5A 27 AD 21 88 8C 91 3C F7 
+57 0E 2B 39 3E 85 D1 B6 DF 00 00 60 66 04 9E 71 DE E6 12 5E C8 97 A7 6E 55 BE BA 7E 23 EA 17 0E 
+24 31 FD 69 6B D7 CE B0 D6 90 42 73 3E F9 9C DD 7F 31 34 07 2D 8D BA 7C D6 67 9A CB 04 71 F5 B1 
+8E 5B 35 2A 6A 9C 19 71 F7 BC 7F 2A 0A 64 B5 31 8E 33 0D EB 9C A9 CC 51 1D 98 31 6E 5E F1 F5 1E 
+8D 7C FC 24 79 D6 8A 3A 8F 52 DA 28 AD 53 4C 90 E2 76 23 96 F3 6C E7 BA CB 9F 4B 71 00 8A 9C D9 
+CC 25 0B C7 59 AA 4B E1 05 09 AF 1F 5F BA F4 F0 43 21 3B E7 D5 91 55 07 D5 9F EE 1D 2C C9 7B 1B 
+84 47 EB BE 55 E7 26 89 19 CD 5C 39 B2 37 82 A1 55 8C A2 1F E1 5E 4F C3 33 18 C0 4A 79 74 EC C6 
+74 9B F5 FA 3C 17 02 8F 3F 5A 19 D4 CE 82 22 F8 83 68 B1 D6 90 95 AC ED 1D AC AB FF 8D A6 A1 7E 
+17 02 52 01 10 79 93 E9 F3 E7 34 8A 7A E5 6F 1E FB A4 A2 00 64 05 B5 5E 45 29 3F 2A 59 5F 9E B8 
+7D 5A BC D9 90 CA 45 2A 4D 7D E8 9C 85 B6 75 5F 73 98 BD 4A C9 80 AD A1 0C BC 3C E3 47 0E 0A E2 
+6D EC B6 6D 24 AD 55 CA 13 12 7E A2 00 64 FA C2 87 4F D7 19 D4 9A 8F 20 64 A4 B9 A2 C0 8A C2 5C 
+B6 6C 77 09 4C FA D5 6C F3 A7 FC 6B 80 67 74 2E 4A A2 D1 6D C6 5B 29 FD F6 8E 67 34 37 29 A5 10 
+07 20 49 0C 5E B9 7B CE 10 41 00 00 65 15 F5 63 15 B1 43 36 05 FD C2 4B 63 C2 3E 32 27 0C EA D5 
+7F C6 82 FE 35 37 A4 A1 FE 17 FC 53 01 10 79 D3 A9 0E 73 B9 BD C2 CA DF BA F9 A6 55 7B 54 B9 28 
+E5 7B 25 EB B3 87 FB C7 45 9B 8C 6A 3C 4A E6 4D 1A CF 5F 40 BC 99 C0 C5 CD CC F7 57 CE F8 E7 62 
+00 24 C9 81 5B FF 73 9D A7 5E 9D 47 4D 4D CB D4 C6 42 69 DE AC 63 11 65 EC 74 8F 33 77 E6 0E 5C 
+A1 C9 73 88 E4 CD 3A 66 4D 5C 06 21 FA 90 B9 0E 83 6B 94 5B 3E CF 74 C5 A8 0D 01 45 38 3B 29 32 
+2A 17 D3 57 E0 F5 75 C0 DB 8F A2 A9 ED 2C 28 82 3F 89 CE E9 C7 28 0E 7C FC 22 07 03 A0 68 4D D9 
+BF DC 46 82 04 80 A6 3C 73 7B 53 C1 CB BD 58 71 71 29 06 00 24 F1 DE EA FF 74 79 48 63 25 C5 A7 
+54 01 80 10 5D 9B 8E 15 67 65 E4 96 E3 54 2A 95 4A A1 70 19 AE A9 01 CF 8F 7A 1E 94 F4 0B 23 89 
+68 4F 9B 6C CC AD C6 63 85 6F AF ED DC BE 73 FB F6 C3 1E DF D8 5C D2 BB 1A B2 A4 9C B4 10 00 E0 
+25 A1 57 8E 3D FD 94 57 FD 29 8B C8 8D D9 7A E3 F6 CD DB B7 6E 9E 9A A7 27 D0 46 91 C5 2F 3D 02 
+72 30 00 8A F6 94 3D 2B 06 4A 90 00 D0 EF DE 0F DF F2 E4 D1 F6 D0 5E 13 58 9F 9E BF 48 65 03 00 
+59 7D FA BA D9 EA 0D BC 43 D3 73 58 35 4E 11 01 00 D6 17 FF 80 EF 68 57 E9 DE 10 44 46 5F 47 91 
+0C 00 80 97 FF 6A FE 55 DE 5E BA C0 D7 04 FC 47 5B 3E 35 9B 03 CB 79 FE 38 A4 08 07 10 D0 1F 69 
+67 32 2C 69 D0 61 3F CF 02 2C DB DF 2D D0 C9 D6 AE C9 27 15 5E FE E1 DE FE ED 41 08 00 00 CA 2A 
+CD FC F4 FA F5 37 16 90 24 2D 96 2E 1B 22 DA E6 DF E6 94 56 07 49 D4 68 E6 9A 89 5A 5C 6C C3 4A 
+12 12 B2 50 00 40 DF 1F 1F 62 EC 54 C0 02 44 58 D1 7C DA FA 3D 1B C6 69 70 1D 5F AC 11 48 91 35 
+9C E2 B4 77 A3 5D D2 C6 67 EE 6D D6 B1 EB 91 B0 9D 32 52 21 D0 2D 13 2D 8A BA B2 6E DC 8D 9D BD 
+74 0D 4D 4C CC 2C 07 0E 1E 66 6D 2D D5 0E 17 63 39 3E EE A1 45 38 80 80 DE 28 3B 93 E1 DA 36 87 
+FC 9F E6 63 D9 7E 6E 2F 37 0E 1A DB 35 1F C9 ED 33 01 2B FE F6 2D 03 05 00 44 CE D4 52 A7 49 36 
+9A A1 85 A1 E8 BD 8C 52 9C 9D F2 35 8E 09 5C FB D5 3A 9B D2 F7 9E 81 89 6C 00 00 01 B9 7F E4 3A 
+E3 F9 6A 48 67 FB 9A 80 1F E9 04 47 A2 69 9E 4F C2 CA 00 40 D0 68 CC 58 35 8A 98 E2 F8 21 F2 CF 
+1E 66 63 45 C1 6E BE 99 63 66 36 F9 8E AB 48 08 B8 9B D0 48 8B 7F 86 6E D8 65 AF CD AD D7 A3 35 
+B8 48 03 52 8F 8A FE 8E 5C E3 72 55 42 7C 0A 1B 00 80 91 97 55 DD CB 8C 55 FC 0C BB E1 3C 3B 9B 
+ED 76 6E 52 2F AE CF 2D A9 A7 DD 21 EF F9 3A 2A A2 00 95 49 5C 75 40 7A 58 39 EC DE 3B 16 25 D1 
+E8 5C A7 80 74 3D 92 C3 B6 9C 5D 9F BB F2 54 68 16 0B 80 FD 2B FD 53 68 FA A7 50 8F 6B C7 85 14 
+CD 67 AC DF B1 61 A2 A6 70 5B A4 A1 69 4F 3D 6A 3C 3A 7A 5C 6F 8A B8 C2 B8 21 F2 5E 0F B2 B1 A2 
+60 77 EF CC D1 B3 79 FE 32 EF 7A 13 B0 82 82 52 1C 00 00 91 96 97 E3 E2 3D 8A 9C 9C 34 02 A5 28 
+30 8B 0A 8A 31 90 EE 0A C5 01 2F 8D 70 5D BF DA 83 04 28 AB AC 30 35 36 26 3E 9F 05 00 A4 1E 36 
+63 06 48 74 C1 CF 75 AE AF 09 F8 92 8E 87 11 76 C2 63 CF 0F 4C 00 A0 99 8C 19 AD 44 06 10 B6 1A 
+37 42 C9 FD 66 1A 5A 1E FE D8 23 65 FA 0A F5 46 CF 0B 22 24 21 2D 46 05 00 1C 63 33 2B 7E 95 55 
+B2 71 76 56 C0 D6 29 F6 DF CF 5E DD 6C D3 D6 69 3E 75 D2 38 AF 49 89 0B 71 CD 8C 15 A7 A4 16 60 
+00 20 AC 36 6C A6 FD 50 5D A9 E2 88 3B 97 1E BE 2F 44 73 FC 4F 5E 78 3D E9 A0 0D 30 0A 32 F3 CA 
+D9 75 83 7B 24 9A B4 A2 AC 98 AA 8E 58 CB 4A 88 E8 0C 9B A9 D3 36 BD 3B 1B 71 E3 65 D7 02 86 07 
+BB 3F F4 7C 1E F2 EE 43 62 6E 25 06 00 38 E3 67 F8 0D E7 F9 D9 D8 C3 F3 93 15 79 6E 2C B2 E3 3D 
+9E BD 67 01 00 CD 74 CC 28 25 32 80 B0 E5 84 11 4A 6E 37 D3 D0 F2 77 EE 4F 52 EC 97 37 F6 68 0B 
+90 80 D4 4A 86 FA F4 F6 98 50 3F CD 93 FB 34 7B 0C 6B D0 93 D0 8A 32 3C E5 68 0A 33 35 CC 3B B5 
+E1 25 41 B5 C9 3B B7 8D AF E9 17 6E 4B 21 F0 42 27 FA 9A 80 3F E9 70 5C 66 C6 3C 7E 16 CF 06 00 
+44 02 FD F6 DF B1 43 24 00 C0 F2 45 A8 00 95 C0 FA EC E1 FE 79 D1 C6 7E 0D C2 26 49 7A DC C9 E0 
+23 75 23 75 AC 82 0F 0F 77 AE DC F5 3C E3 D7 97 6B BB 5D 86 F9 6E 35 6B D3 98 45 23 69 AD 80 C8 
+FF 7B F3 D3 F8 CC F4 5C F8 47 5D 41 04 00 60 AC 4D 8F FC 21 1B 5E 94 62 B9 E1 AF 01 6C 98 E1 C7 
+A6 3A DC AF 9F 43 4A B5 D9 1F 79 63 7A 57 B4 7A BA 02 51 FA A0 B9 9B 07 CD DD 0C CC FC 84 E8 B7 
+A1 CF 1F DC BC FF 36 8B 85 E6 04 5C B8 F5 D1 AE 6E C8 AE 35 98 EF DD EB 3D 7A EB C8 61 12 00 A0 
+F9 C2 D5 1E FD E4 F1 F8 D3 C2 0D 5C C7 73 B9 42 26 93 49 00 38 E0 8D 3B 5A 31 B4 BA 27 9E 4C 69 
+10 43 DA 68 02 22 23 2D 41 02 00 40 73 B3 B2 50 68 F2 89 C4 C8 CA 2A 40 01 00 04 A5 A4 25 11 00 
+32 52 AB 4E A3 28 8E B2 AB BB 9F 29 E4 76 3C 11 14 09 25 55 39 1A 02 08 59 80 4A 13 97 51 D0 30 
+1D 6D 3F 7B 94 66 DD D4 A2 B6 16 02 2F 74 8E AF 09 F8 94 8E C6 E5 F2 37 EE BE A9 28 00 00 96 1D 
+7E F7 52 78 C3 54 34 E5 A9 5B 98 63 3F 9B 16 BE AC A8 D2 FD 66 2C 9F 78 F7 C5 D9 AF 6C 34 3D EA 
+5D 1A 98 69 74 50 A5 16 61 97 97 96 94 95 FD 22 B3 30 10 41 00 00 91 50 57 93 43 A0 14 C5 7E 15 
+77 E5 EF 76 25 EC 6F 0F 76 9C F0 49 C8 CA 23 D9 EC BE E3 64 4A 05 10 94 D1 B4 1A A7 69 35 C2 90 
+3A 7A E6 95 14 14 4D FF 1A 5B 02 46 B2 3C 49 2B 7F F3 D8 BB D6 A3 61 77 5D C3 1A A6 A2 29 CF 1E 
+86 AD 34 6C C9 A3 9C 90 44 44 68 24 00 C0 2B 19 95 0D E5 54 54 B2 70 00 20 09 D1 68 E4 F6 9B 80 
+48 EA 68 2B 92 C3 7E A0 78 C1 BB D0 F7 CC 41 16 0D 5F D0 A5 E1 AF A3 2B 00 00 28 6A 3A BA 82 00 
+A8 88 A8 70 B5 3A 95 0D D5 61 57 D6 AA 23 2C D4 E6 10 49 92 1A BE C7 EB E0 E0 66 DB 06 BC 16 02 
+2F 74 AE AF 09 F8 95 0E 76 15 16 07 B9 07 E4 60 00 80 50 04 85 1A 20 48 21 01 00 96 E5 FF 28 B0 
+B5 80 57 F1 33 AB B0 BA 25 21 20 D0 B5 63 C9 05 F7 16 9A 99 0E 1C 3D 61 C6 36 B7 F4 9A E1 F9 CA 
+B4 F4 3C 0C 00 C8 D2 F2 00 20 A0 33 65 CB E1 23 87 8E D4 FE 1D 5C 68 D6 C2 70 20 9F 40 12 29 4F 
+0E 79 13 F5 25 21 FA F1 C3 A0 22 8E 36 59 6D B4 01 12 59 80 D7 17 70 ED D4 9A A6 1E A5 56 7B 34 
+DB CF ED 25 CF AF 30 72 CF 9E D2 24 00 C0 CB 3F BD 7B CF B1 22 87 F9 ED 6B 0A 0B 00 00 91 91 93 
+45 3A 60 02 B5 CF 88 21 CA 64 00 40 53 DD 8F 5C 6C B0 80 04 2B 7A 7B FA A4 77 1E 06 00 54 FD E1 
+C3 D4 C8 00 64 79 F9 1A 75 3E 37 54 27 3E 2E B9 5A 1D 69 39 B9 4E EF 3D E7 B5 10 78 A1 53 7D 4D 
+C0 B7 74 C8 85 58 8E 4F F5 44 0C 92 CC B8 D3 2F 4F 8E E0 58 13 82 65 DF 5D 38 74 6B 68 19 5E 18 
+EC E6 9B 3D C6 BE 67 7D BD AB 4C 78 7E E5 FC D7 EA FF 63 AC 5F D9 71 2F BD 02 73 30 00 A0 68 58 
+58 2B 35 90 9F 1A 7C F5 7C 56 A3 96 04 A5 F7 E0 B9 A3 B5 B9 4A E3 00 51 1C F0 EF B8 3E 22 8D AE 
+4A 5A F5 EF 23 18 12 C9 64 45 5D 58 77 50 72 FD 68 E5 A2 30 D7 A3 2F 4A 70 00 8A EA A0 21 00 80 
+C8 1B 8F 99 6A DC E6 72 C8 7D B6 DB F1 C6 D7 2A 44 C2 76 E3 79 47 93 DF FD 0D 49 56 18 36 C6 EC 
+CC BB D7 65 58 96 E7 26 07 C1 9F 4B C7 9B 2A 8B B0 B2 BF BC B8 71 F6 61 06 06 00 82 7A 66 C6 BC 
+AD D7 A9 9B 5A 43 92 B1 3B 1B 78 7C 54 03 8F DE 77 18 B6 2D B8 0C 2F 0C 7E EC 9D 3D 7A 56 4F 5E 
+22 09 59 DE C4 58 95 12 9D C4 46 BF DF 76 5E 2A B4 6A C1 70 7D 79 4A 69 CA EB 3B C7 6F 25 A3 00 
+40 E9 6D 64 2C 87 00 40 BB 4D 10 34 72 58 3E D8 73 43 40 3E 5E 1E 73 C6 61 7A EA 82 85 13 AC 34 
+64 B0 DC B8 D0 87 97 6F FA 25 B1 00 80 D2 6B 82 E3 2C 75 32 00 90 E5 4D 4D 54 29 51 49 6C F4 C7 
+ED 75 2B 84 D6 CC 1F AE 2F 2F 50 9A F2 EA F6 C9 1A 75 D4 0C 8D BB 20 2E F3 5A 08 BC C8 EA 3C 5F 
+13 F0 31 1D 89 CB 68 9A E7 93 F0 32 00 40 7A 0E 9F 30 B0 61 65 40 7A 8E 9E 6C 7B FC D5 B3 42 BC 
+2C DC C3 E3 FB B4 65 F4 DA 14 BC EC C3 C3 93 1F 9A 4A 13 52 9F B5 D1 41 AF 81 3E EC F8 A7 A7 8E 
+36 CE 47 1D 22 67 3F 5A BB B6 5D DD 9C 34 01 0B 91 09 4D E3 32 59 65 9A E3 CC 07 0B AF 27 B1 8A 
+62 6E 38 CF BA 51 27 53 6D DA C6 C5 7D 5B 31 B7 05 98 B9 09 31 31 31 55 24 69 7A 71 77 AC 07 24 
+F7 9A B6 69 B9 F7 AC A3 EF 4A B0 A2 0F F7 F7 2C BD DF 20 55 50 63 F6 FA 99 BC 4D 11 43 D3 9E 56 
+4F AD 41 FE 19 3E 7E 50 63 8F 8E 9C 32 E8 44 88 57 21 5E 16 EE EE F1 7D C6 32 3A 2F 22 A9 7D E7 
+AF 9F E0 EB E8 96 CE 66 67 BD 72 D9 FC CA A5 81 DE 3D 47 2E FB B7 7A 41 5C FB 4D 40 14 27 ED 3B 
+95 92 BF C2 E5 7D 09 5E 1A FB E4 E4 DA 27 27 39 93 29 72 FD 9D 4F 6F 19 52 B3 D8 8F DA D7 61 ED 
+44 EF D5 8F D2 D9 EC AC D7 2E 1B 5F 37 52 67 D4 F2 59 BC AF CF E3 1D 5E 0B 81 17 3A CD D7 04 FC 
+4C 07 1A 07 EC F8 27 9E EF 59 00 40 56 19 35 C9 A2 C9 E7 BE E4 E0 69 23 FF 41 00 80 F5 E9 B1 DB 
+17 AE CB 2D 48 08 99 42 A5 89 49 2B EA 0E 98 B6 ED FA 7F 3B 6C DA B0 54 B6 9D 88 5B 6D BE 72 DC 
+C1 5C BE AE 33 90 24 F8 8F D5 E2 53 37 76 DA FE D1 FB BD 08 E9 2D BC 7C 6B DF 6C 73 45 E1 06 23 
+FB 54 19 FD 31 CE 57 6E 6C B1 E6 AD 05 C5 4E 78 FC E4 03 13 00 C8 CA A3 27 9A 37 F5 E8 90 69 23 
+14 AA 3D EA F1 F8 33 8F 0B 68 10 D9 51 FB 6E 9C 5B 36 50 B5 E1 D6 6E 24 9A 82 E5 FC A3 B7 0E DB 
+D5 35 BB DB 6F 02 22 DD 7F C3 4D B7 73 2B 46 EA F6 E0 FC 54 21 09 CA F7 9B E0 74 C5 FD F2 12 C3 
+FA 79 F1 88 EC 88 7D B7 CE 2C B7 51 69 AC 8E A2 C5 FC E3 D7 0F 8F E3 E9 2B A0 CD F0 5C 08 BC D0 
+39 BE 26 E0 6B 5A DC 4F EE EF 85 59 90 F8 E9 63 4A 21 5B 48 56 BD 5F 5F 35 89 BF A6 81 81 55 E4 
+24 C6 7E 4B CF 2F 63 91 84 A5 95 34 74 75 94 C4 F8 C4 36 AC 22 27 31 2E 3E 2D EF 17 03 A5 88 C8 
+F4 D2 D2 D7 52 14 E5 AA 5A 47 4C 40 CB 32 BE 7D 49 CE 2A AA 24 89 F6 50 D4 D0 D7 EC 29 DC 5C C0 
+C3 2A 72 92 E2 BE D5 AA A3 AC A5 AF A5 C0 5D 9D 4E 85 E7 42 E0 55 18 7F FA 9A A0 C3 FC 9F C6 65 
+02 02 02 02 BE E5 4F FE 78 27 20 20 20 F8 1B 21 E2 32 01 01 01 01 7F 41 C4 65 02 02 02 02 FE 82 
+88 CB 04 04 04 04 FC 05 11 97 09 08 08 08 F8 0B 22 2E 13 10 10 10 F0 17 2D AD 33 5A BF 66 6D 44 
+44 C4 6F 53 85 80 A0 9A 92 E2 62 21 21 21 41 21 EE 9B B5 FE 89 30 19 0C 06 83 21 21 29 D9 DD 8A 
+74 26 79 B9 B9 B2 B2 B2 6D DD A4 94 CF D9 B6 7D FB 88 51 23 BB 5B 8B 16 E3 72 79 79 F9 D6 ED DB 
+0C 0C 0C 7E 9B 36 04 04 00 B0 75 CB 96 E1 C3 47 D8 0C B2 E9 6E 45 3A 8D 90 E0 E0 80 80 80 7D FB 
+F7 77 B7 22 9D C9 90 41 B6 FF DD B9 4D A5 FE 3D 7B 8A 9E 3F 7B B6 BC 82 2F 0E BC 6F 29 2E 97 95 
+95 89 8B 8B 2B 2A 29 B5 90 87 80 A0 D3 A1 D1 68 D2 D2 D2 7F 53 C5 EB 21 2D 4D A3 D1 FE 26 8B 00 
+80 44 22 29 28 2A 0A 0A FE 3D 87 BC B2 51 14 43 3B FD 48 C6 F6 40 F4 2F 13 10 10 10 F0 17 44 5C 
+26 20 20 20 E0 2F 88 B8 4C 40 40 40 C0 5F 10 47 1B 10 10 10 74 27 5F E3 E2 D2 D3 D2 3B 28 64 F8 
+C8 11 9D A2 0C 9F 40 C4 65 02 02 82 EE E4 EE 9D 3B F7 EE DC ED A0 90 A4 1F DF 3B 45 19 3E 81 88 
+CB 04 04 04 DD C9 BC F9 0E 23 46 76 FF 94 61 BE 82 88 CB 04 04 04 DD 09 5D 9D 4E 57 A7 B7 9E EF 
+FF 09 62 DC 8F 80 80 80 80 BF E8 B2 F6 32 23 E7 CB 9B 57 31 C9 B9 E5 20 A6 A8 67 65 63 41 AF 3D 
+AC 09 2B 4D 79 FF 25 B3 92 24 D1 DB C8 40 B1 76 4A 7A D9 8F E8 8F 3F 2B 49 E2 AA C6 06 4A 1C D3 
+D4 D9 B9 5F 23 12 0B 31 92 A8 4A BF BE BD 84 EB AF 63 A5 DF DF 7F CE AC AC 39 69 85 44 42 48 64 
+41 51 69 C5 DE 6A 3D 1B 1F CB 83 96 24 BF 0B 8D 88 4D 2F 64 90 84 65 94 75 2D 07 98 AA 8A 23 75 
+52 52 DE 7F A9 93 C2 01 22 A6 DA AF AF 52 93 F3 ED 5A B0 0B 2B 48 88 8C CF AD 02 A4 07 DD 4C 57 
+BE AE 50 B1 92 E4 E8 2F D9 4C 40 A4 D4 4D F5 6A 2E 33 73 3E BF 79 15 93 9C 53 2D 60 90 B9 7A DD 
+29 56 15 E9 1F 3E A4 95 41 63 63 6B 24 A5 BC FF 92 C9 E0 AA AB 61 5F 45 2E BA 32 B3 3F 86 BC 8A 
+4E CE 2D 07 9A 8C B2 81 F5 20 53 65 11 00 00 2C EF 6B 78 7C 21 B7 B9 F3 24 C1 9E 56 A6 EA D5 FF 
+66 E7 C6 45 26 16 62 24 51 E5 7E FD AA 75 C1 72 E3 DE 25 34 73 9F BC 9E 09 1D E1 F4 48 23 FD FA 
+34 53 96 9D 41 47 CC 64 E7 C6 45 26 15 A2 24 51 95 BE 35 56 B6 66 A6 46 ED 42 6A 2C 2F FE 5D 42 
+81 A0 92 95 91 4A 57 98 14 1A 12 9D 92 5B 8E D3 64 94 FB 58 DB 98 D5 9A 14 17 DE BC 6A C6 EA 92 
+08 70 73 1C 6F 45 51 99 97 F8 ED 47 21 2E DE 4B 4B 43 41 E4 B7 37 D6 38 9E 44 12 09 21 91 C9 54 
+21 09 F9 DE F4 5E 12 8D C2 13 5A 92 1C 11 1A 1E 97 56 C8 40 44 A4 95 75 2D 06 98 D5 3F CD 7F 17 
+5D 11 97 D1 DC 90 33 1B B7 5E 7E 95 C1 A8 BD 42 96 D0 9F B6 F3 F4 CE 71 74 41 00 76 C2 1D E7 F9 
+57 BF 23 E6 DB 03 EF 39 28 54 97 2A 2B F1 C1 C6 B9 AE 49 24 A3 CD 2F 1E 2E A9 AF E8 E5 C1 C7 16 
+2E 7E 94 83 81 C8 80 BD BE 37 67 2B D4 B9 80 1D 7F D7 69 EE F5 EF 68 A3 1F A6 CA 9B CD D9 7F 7A 
+C3 D0 9A 63 2C 7F 7D BE B3 67 C3 61 CF AF BF EA EB 24 59 52 7F FA AE 93 3B C7 F7 16 84 3A 4D 1A 
+4B 01 A0 18 6E F0 71 5B A6 D6 F8 B4 B4 96 EC A2 E6 7A EF 98 77 EB 07 2A 66 B5 F3 E9 F5 79 AA D5 
+B7 96 06 1F 5A B0 E8 7E 06 2E 37 FA E4 53 73 3D 00 34 37 F4 B4 F3 F6 CB A1 3F 1B 08 D8 7D 62 D7 
+78 35 41 00 76 9A C7 B6 B9 67 BE 80 FE 7A 1F 77 C7 C6 67 1A B3 13 EE 6C 9C 73 ED 07 17 5D FB 39 
+F9 B9 2D 6D 74 36 35 E3 EB 9D 35 CB 0E 3E 4F 65 D4 67 93 B5 58 7E FA F4 1A 4B E9 CA 90 53 F3 9C 
+03 59 4D E4 00 20 3D ED 13 C2 0F 00 00 40 79 C8 31 87 65 0F 73 30 10 E9 BF D7 EF DA BF 8A 08 40 
+65 E8 C9 05 4E 2F 9A B9 EF DA EB DD C2 5C 3D 02 40 E9 B7 E1 F9 83 E5 3C 9D 9D DD 66 3A 68 66 79 
+F0 89 F9 4B DC 72 30 10 19 B0 DB FF C6 2C 45 04 5A 35 F3 60 F5 D2 70 2C CF 67 9F C3 AA A7 05 1A 
+2B BE F9 39 75 AA 49 CC 6F B7 D6 AC D8 DF D0 24 CB E5 27 CE AD B6 94 AE 7C 75 62 FE 86 66 54 9B 
+71 3D 78 9F 8D 20 57 C7 41 6B 45 51 F6 E9 D6 76 E7 63 3E F1 A5 28 00 90 44 54 86 39 1E 39 BA C8 
+58 E2 77 C6 3B 6E 4F 22 89 A6 34 68 D9 E1 13 2B CC A5 AA 35 29 FD 72 7B F7 A6 23 4F BE 95 36 78 
+9A A7 EE 3A BD 7D 82 DA DF B3 E2 B0 96 CE 8F CB E5 91 C7 17 2E BD 18 57 49 12 55 1B 38 C2 46 53 
+A4 E8 CB CB E7 E1 19 5F EE 6D 5A 26 AE E0 B9 C9 A4 0D 2D A7 A2 40 F7 80 5C 0C 00 A0 FC 9D BB 67 
+B2 FD B2 C6 C1 8A 24 A1 66 AC 23 4F 01 00 BC AA 34 2D EE 6B 56 4E C4 D5 8D FB F4 FD CF 8C 95 46 
+D0 E4 3B 6B E6 6D 0F 29 C0 C9 12 9A 36 C3 AC 34 24 98 A9 EF FC 83 BE 14 7C B9 BB 71 75 0F E5 47 
+4E 86 82 9C 52 74 E5 38 0B 82 AC DE E8 AC 61 1E EC B2 5A BB 79 D2 CB E5 0F 7F 86 9D 3F EA 3D FA 
+EC 38 39 04 98 1F AE 1C 7B 9C 81 92 7A 0C 5B BF 71 AC 3C 02 E5 51 C7 E7 AF B8 10 57 49 12 EB 3D 
+70 C4 40 2D 91 E2 2F 81 7E 61 19 5F EE 6D 58 21 AE F0 78 B3 29 4F 05 43 92 50 33 D1 69 A8 AB 86 
+A2 48 23 5D D1 94 FF 76 1E 7C 9E CA 10 52 34 1F 39 B4 8F 3C 29 37 C6 CF 37 32 2B FC DC FA 63 7D 
+9F 1F B4 96 D7 B2 B0 28 AF 02 00 BC 20 3E 32 B1 10 A3 CA EB 1A A9 89 03 00 49 BA B6 8F AF E8 85 
+87 7F 4D C1 47 3C F6 4C 99 B9 5C 9D 0C 14 79 6D 73 CB B2 EA FB 12 22 12 0B 31 AA BC 9E 51 6F 71 
+00 40 A4 E9 52 00 CC 1A FD E8 26 3A 72 9C 6E A2 A8 37 D1 AF 93 E8 A8 99 45 01 8F 5F D4 56 2F 8F 
+27 29 33 56 A8 93 A1 55 33 01 80 9D F3 EA D4 EA 6D CF 72 B0 CE 7F 78 D0 E4 9B BB F6 3F 4F 65 08 
+29 5A 8C 1C D2 57 1E 72 62 02 7C 22 B3 C2 CE 6D 38 DC C7 FB 48 7F 39 6D 0B 8B 72 16 00 E0 F9 09 
+35 26 19 F7 16 07 00 92 8C 9A 14 09 80 BB E3 80 DC 62 51 54 86 9F 5C BD E7 D9 77 36 45 4A CD 40 
+09 4B FB FA 23 D5 FF C8 DA 1E 9A 3E 87 6C 45 9B D7 B3 8B A8 79 12 71 76 59 4E 72 FC F7 A2 8C A0 
+93 AB 77 F6 F6 3E 35 56 1A 41 53 6E AF 76 D8 1E 5C 88 93 25 34 07 0D B1 D2 90 60 A6 46 FA BF FC 
+52 F0 E5 FE 46 C7 1E 2A 8F D7 19 FE 75 91 19 6F 9E 59 33 EC DF BC 7E DD 42 06 2E B0 7F 5C 9B AE 
+43 57 E9 DD 77 CA D9 CF E5 D5 97 D0 E2 D7 3B 87 D3 55 E9 AA FD 56 3D 2B C1 71 66 E4 1E 5B 4D 15 
+55 ED 69 57 7F A2 B5 77 31 63 0E 0D A1 D3 55 D4 A7 BA FC A8 93 84 66 DD 9E AF AB 4A EF 6D 6C 69 
+42 A7 AB D0 87 1F 88 61 D6 A5 31 23 F6 0D A2 D3 55 34 EC AF 64 D4 C9 28 7B B7 67 98 9A 2A 5D D5 
+64 63 20 03 47 F3 3C 97 19 A9 AB A8 6A 0D 5C E7 95 56 55 AB 5B C6 D3 95 96 1A 2A AA EA A6 CE 81 
+15 78 BD 26 33 6E 64 D7 49 69 BF 5D 38 9A F3 6C 8D 99 1A 5D 85 6E BB 39 B8 04 67 A7 5C B3 EF AB 
+AA AA 6E F0 EF AD EF 6C 1C C7 D9 3F AE CE D4 56 A5 AB 1A 4C 3F F3 A9 4E C0 9B 1D 43 B4 54 54 D5 
+FB AE F4 2A C1 F1 AA AF A7 C7 A8 D3 55 D4 C7 9F 49 60 37 F9 7D 66 C4 9E 21 6A AA 74 75 FB 9B AD 
+EB FA CB 7D 81 16 5D 85 3E 74 5F 54 4D 89 31 63 4F 8E 56 A7 AB F4 B6 70 0E 64 70 64 73 73 D0 A4 
+AB F4 36 6F 70 B1 BA E0 E7 F4 51 51 D5 30 32 33 57 53 A5 AB 0D 39 14 CD 6C 90 FE EB D1 22 8D DA 
+72 E6 D0 AF DA 23 B3 78 28 CB 56 59 BA 78 F1 73 1F DF D6 72 75 CC 4C 34 EB EE 1C 3D BA 8A 9A A9 
+A9 89 A6 8A AA E6 90 83 31 0D AD E4 6E E6 AF 0F 77 9D 27 98 D3 55 E9 2A AA 74 15 55 AD E1 47 79 
+B4 C8 D7 C7 67 D9 92 25 AD 66 FB F5 68 A1 AE 8A AA A6 ED FE 3A 93 E2 8E 8F D1 52 51 55 37 D9 F0 
+B2 92 23 DB C3 05 3A 2A AA EA 26 CE 9C 17 5B 77 1C B7 A2 60 BC DA D2 BF B7 2A 5D FF DF FF D2 D8 
+38 5E 95 EC 32 55 57 45 55 73 E0 EE 77 8D 6E E5 86 B6 BA 06 83 C1 68 3D 5F EB 34 79 12 D1 C2 57 
+DB 06 6B AA A8 AA 1B 38 FA 54 E0 68 DE 93 95 86 BD E9 2A EA 83 D7 3E 4B AF 7F 9A 3D 57 59 A8 D1 
+55 7A 5B 3A BF E8 0C 1D 70 1C C7 9D D7 AF 7F F4 E0 61 67 49 EB 08 9D FC CA C7 72 82 02 DF 57 02 
+49 7A 88 C3 3C FD 9A 3E 52 44 C2 72 F9 81 B3 66 2C 55 93 7E 5A E2 00 DC 3E A8 B8 80 A6 7A 3E 09 
+2F 07 8A CE F4 5D E3 22 D7 1C 8E FC FE EC 51 D8 6A 43 9B C6 FD AE F5 08 08 8B 08 92 00 48 14 0A 
+19 A0 24 D8 3B A4 10 07 11 EB A5 1B 47 F5 AA B5 91 AC 38 7A C3 71 D2 18 44 CB A4 9F 46 1B 3B 3C 
+79 B0 0B 10 B9 D1 CE CE CF DE 3A FB A7 B9 1D BE 3C 34 3F FD C2 BB 32 10 35 5B B9 7D 86 2A 19 00 
+CB 09 0A A8 16 30 7F BE 41 9D 00 8B 15 87 4E 99 B3 54 4D 0C 35 C5 01 D8 6D 53 A9 79 04 64 64 A5 
+10 C8 4E F7 39 7B 4E 67 D9 A4 21 26 AA 12 DA F3 2F 3C 1E 54 C0 26 49 AA 0A B4 7A 37 FA E3 99 47 
+78 39 50 B4 67 EC B1 8B 58 75 34 F2 BB D7 A3 30 47 A3 16 0A BE BB E8 90 99 E8 8F DA EA B5 C7 2E 
+72 F5 91 A8 94 67 EE 6F 57 19 0E 6A C5 4A 34 FF ED E3 C7 1F 0A 45 FA CD 1E 4E 7E F0 28 BA D3 4F 
+92 17 90 95 95 42 20 3B CD E7 FC 19 ED A5 53 86 1A AB 8A 6B 2D 38 EF 66 5B C8 26 49 A8 B4 BA 6B 
+5B BB 1C 47 D1 9C BE EB B4 61 2E AA 3A 4C 91 0C 00 F2 0A 72 54 00 54 58 E4 F7 F7 31 37 00 91 EA 
+DB 97 2E 70 2B 85 C1 28 2B 63 41 49 90 57 68 21 0E 22 FD 17 6D 1A AD 54 FF 34 8F 71 3E 4E 1A 43 
+D6 36 EE AB D1 AD BA 76 09 9D 1C 97 AB 7E 24 A7 57 01 90 7B 69 68 71 44 3E 44 CE 78 D4 E8 C6 39 
+3F 5E 98 69 FB 5F ED 17 2F AB 38 13 6D A0 0C 3B FE 89 E7 07 16 08 18 8C 1E 3F 68 5C 4F D3 33 91 
+6F B2 9E BB BF D8 60 33 8E 73 07 5B F4 87 F7 A1 4D 5F 05 01 70 76 45 41 4A 54 D8 57 36 50 7A 0D 
+1E 6E 2C C8 FA F6 2D 99 01 40 51 ED 63 D8 A3 BA 82 55 E4 65 14 54 62 38 28 F6 D1 05 A8 CC 2F 62 
+28 4A D5 EE EE CB FE 70 6E BA ED 75 8E 6F 6F 01 F3 8D 4F 0E 8C 16 69 BB 5D 88 C2 C4 AD AB BD DE 
+ED 0C FE 7A 6D D9 96 2A 26 46 EB B7 78 DB 5C 0D 0A 00 40 55 6A 72 3A 1B 80 AC AC A9 D9 40 80 C9 
+C8 C6 05 D3 22 EC 0F E7 27 0F BE C9 A9 AB C5 06 F7 C3 0D 75 05 41 8B 79 0B CD 7C F6 87 FF 0C B9 
+B0 2E E4 02 45 4C 49 C7 C4 D2 76 F4 94 59 E3 8C E5 5B DF 92 91 FD ED C9 D3 0F 2C 10 E8 33 6A BC 
+AD 9D BC D9 B9 C8 D7 D9 CF 1F BD DC 68 33 96 A7 AD 83 D9 1F CF 4E 19 76 AD 81 7E 4E 9E 87 46 89 
+34 7F 47 FB E9 88 99 EC 78 0F CF 8F 4C 10 E8 33 CA 6E F0 38 79 D3 B3 51 AF B3 FC 1E 05 3A 0D B2 
+6B C5 4A B2 AC C1 F8 F5 CB 56 2D B2 88 76 7C F8 08 3A 3D 2E 0B 5A CE 75 30 F7 39 18 F6 33 F4 DC 
+FA D0 73 14 31 25 1D 63 2B DB 51 D3 66 DA 99 F0 60 52 BB 1C 47 96 EB 33 C4 AE 4F CD 7F 98 09 F7 
+EF 86 96 81 80 D6 90 61 1A DD 31 81 16 67 95 64 A7 A7 31 71 66 69 46 E4 9D AB 6F 18 00 64 45 35 
+35 1A 2B 25 BE FA 69 EE 5B F7 34 E7 A7 17 54 E0 38 28 F5 D5 06 A8 28 28 92 56 94 EA 06 75 BB 92 
+CE 2E 7E 06 93 89 03 90 A8 54 81 D6 3A 15 19 05 19 A9 05 CD 25 32 63 DC BC E2 D9 20 68 32 DA 8E 
+4E FD 47 6A AC D5 D1 37 81 45 21 6E DE 99 63 67 D5 8F FE 01 96 1B E3 F5 38 A6 F6 7F 64 51 25 F3 
+29 2B 76 6E 19 28 0A CC F2 0A 06 0E 40 12 A4 D1 AA D5 A8 0C D8 36 6C BD 5F ED 60 0A A2 38 EB 76 
+E0 6E AB 1A 0D F1 CA FC 8C D4 7C 8E 1F A7 AA 95 35 19 BF E2 D1 2E B2 F2 B4 6D 8E 3E 31 FB C3 4B 
+59 20 A8 3B 7F C7 42 5D C1 86 02 04 5A 2F 98 96 C0 2B 1B 95 1A 95 5E DE 74 A4 9D AA B5 C0 E5 81 
+DC E5 33 D7 3C 82 3F 67 55 FC CA F8 1C F4 E8 73 90 FB AD 47 AB 5C 5D 57 9A 88 B7 F8 03 CC F7 EE 
+CF 12 D8 40 35 19 33 86 4E ED 29 69 67 79 F4 F5 CB A2 60 77 AF CC D1 1C C3 AE 2D E9 D7 B8 2C E9 
+E5 4D C7 02 3B 89 F6 9B C9 8C 79 FC 2C 81 0D 54 E3 B1 76 74 EA 3F 52 76 56 C7 5E 07 16 05 BB F9 
+64 8E 99 D9 A2 95 E4 5E 53 76 1C 07 00 A8 8C EE 54 4B EA A0 6A 39 B8 DE 97 73 39 7B DD 3D F8 4B 
+56 C5 AF 8C CF C1 0F 3F 07 BB DD 72 5B 73 F9 F2 2A 13 B1 96 EE EC A0 E3 00 98 C9 6E EB 17 1E 0B 
+FB 25 A8 B3 68 DB E2 3E DD B2 A7 32 3B FA E4 64 9B 93 F5 FF 27 CB 0D 5E 36 B7 1F 15 7F 53 5E 89 
+03 90 04 85 84 6A 9E 66 FF ED C3 D6 06 D4 3D CD 4A B3 13 5E EF FD FD DA 76 29 9D 1C 97 49 12 92 
+62 08 E4 63 85 F9 F9 6C E8 55 E7 DC B2 C4 C8 78 9A AE A1 12 C7 D7 11 C5 70 F5 DD 53 93 64 AA 0B 
+9A FD ED CA 82 E5 77 EB 17 52 96 BF 75 F3 49 47 01 E9 29 59 16 74 EB 26 09 2A 44 E4 28 F0 AB 3C 
+DC ED 69 F2 8C A5 F5 A3 7F 64 B5 F1 CE 73 FB 94 45 BA DD F4 FE 5A 26 4C 1F B1 6A DF 8E 49 1A 82 
+00 40 96 96 96 44 20 1B 2F CC CD 41 41 85 0C 80 88 C8 29 AB A8 30 01 2D CB C9 28 A8 1F EB AE D6 
+C4 78 ED 83 13 13 A4 EA C3 25 89 26 DD 78 CC A3 0D 76 A9 CF 9C 33 E4 FC 3B 8F 22 01 AB 39 0B 8C 
+68 F5 02 24 C4 EB 04 28 71 08 88 8A A7 E9 34 10 D0 22 14 E3 35 6E C7 C7 F5 E0 D0 55 48 9A 6B 63 
+54 54 DB 6E DD 05 BB 75 8C BC 84 E8 B7 AF 43 02 3C 1F 3D 8F 2D 8A B8 B0 FF F6 08 B7 E5 8D 47 4F 
+39 29 7F F3 D8 3B 0D 05 44 5E B2 2C E4 D6 0D 80 0A 61 79 0A FC 2A 7F E7 EE 99 62 BF 4C BD F5 49 
+15 14 A3 75 8F 8E 4E E8 D1 62 59 76 26 ED 33 B3 FC 8D BB 6F 1A 0A 48 4F C9 5F 41 B7 6F 90 A0 5C 
+58 9E 02 65 E5 E1 8F 9F A4 4C 5F CE 83 95 5D 8A A8 F6 58 A7 F3 63 9D 98 F9 F1 51 6F 5F 85 BE F0 
+78 E4 17 5B 14 79 6E FF ED 51 6E 4D C6 BD 39 E8 A0 E3 CA 63 6F AE 5A 78 30 30 9B A2 3E ED F0 E5 
+0D 16 2D BF BB BB 0C 12 4D 46 51 4E 94 8C 90 28 82 A2 3D 14 75 FA 4F 5F E2 30 BC 17 19 D8 D2 D2 
+52 D5 4F 73 6E F5 D3 4C 12 91 53 56 55 61 E2 DC 9E E6 BF 84 4E 8E CB 54 8D BE BA E2 A4 EF 45 A9 
+61 AF BE B3 0D B5 AA A5 63 B9 CF 4F 2C D8 10 88 AA 4C 3D EE B1 7F 64 4D 7F 17 89 2A DE B3 97 72 
+ED 3C B9 02 11 CE AA 53 FC D2 A3 7A 22 C6 CF 17 E7 77 BF A8 BF CE FA FC 1E F8 12 74 00 00 20 00 
+49 44 41 54 C4 FD 93 C3 26 C3 DA B0 86 C8 F4 19 6B BF 40 71 D6 14 4B D9 69 F3 AF C7 BB 6F 71 00 
+11 F7 23 23 E4 10 0A DD C8 40 1A F9 96 93 F1 26 28 8E 69 D6 4F 10 04 87 EE F5 1B 0A 80 65 DF 98 
+33 60 77 78 C3 16 1C 89 2A D1 B3 97 B2 7C 8B 91 91 07 BB EA 3E 17 11 01 01 32 00 80 00 E7 41 0E 
+54 8D 7E BA E2 A4 94 A2 D4 B7 AF BF B3 FB D5 0A C8 7B 7E 74 B1 73 20 AA 32 ED E8 93 83 C3 79 89 
+5F 24 AA F8 3F AD E9 5A 12 74 6C C5 99 E0 2C F2 E0 43 77 D7 99 CA 6A 5A 8F D7 B4 1E 3F 49 6B F1 
+A0 F5 01 65 F1 9F BF B1 A0 85 BE F5 E2 C0 9A 29 0A 99 2F CE EE E5 2C F8 4F 8F 1F 7F 5A B0 C1 B0 
+D5 56 14 89 2A D1 AA 7E 9D 44 FB CD 2C 0E AA 99 E7 F3 33 F0 EC 9E C0 FA EB AC CF 8F DD 3F 2F DC 
+D8 AF DB CE DF 28 0D 3E B2 E2 5C 50 26 32 E4 D0 6D 27 53 19 2D EB 71 5A D6 E3 A6 68 2E EB EF 14 
+50 96 F0 25 AE 45 93 3A E2 B8 CA B8 1B CB E6 1D 08 2D 10 35 5C 72 F2 D2 06 1B B9 6E EB 5A A6 F4 
+5B F9 E0 CE DC 26 B5 87 A2 66 64 20 8D 7C CD C9 78 13 1C C7 34 ED 27 08 42 C3 76 FB 0F 03 C0 B2 
+6F CC B2 DD 15 DE 65 DF 63 DD 49 67 FB 40 DC 76 C6 78 55 0A 54 7D 71 75 DE FF E4 6B 31 1B AB CC 
+78 7D 79 E3 F1 97 A5 38 46 EA A5 A3 D7 E2 A7 58 0D 58 8E 8F 7B 68 11 0E C2 1A 43 66 CC 9C 31 B3 
+FA CF 7E AC 91 0C 02 68 CA 33 B7 F0 8A 26 77 48 58 AD 3B BC 54 5F 08 D8 E9 1E 7B F6 7A E7 62 00 
+34 AB A9 13 E8 14 60 27 DE DC 7A C8 2F A3 7A 0E 17 30 33 23 9E BC E2 32 05 F8 B7 D8 25 66 3B D3 
+4E 95 02 55 9F AF 38 ED 7D FA B5 98 8D 55 FE 7C 7D 69 D3 B1 6A 01 BA BA BC 14 0C 8F D0 24 D1 EC 
+CF DF 92 63 EE 5F 78 90 54 DD 98 C0 F2 3F C6 24 33 00 10 31 C9 96 A6 E1 63 39 CF 1F 87 14 E1 20 
+AC 31 74 FA CC DA 92 B7 B7 33 94 45 00 4D F1 7A 14 D6 B4 E0 BB 93 F6 9A 89 E5 F8 D4 5A 39 63 46 
+9D 99 E3 0C 6B AA 57 77 5A 29 24 89 66 7D FE 9A F2 FE DE C5 87 89 D5 75 16 2B 78 1F 93 54 6D 52 
+0B 13 8A 3B E2 38 AC 20 70 F7 8A C3 A1 F9 20 6B B3 D8 71 B0 48 6A 74 54 64 64 F4 C7 D4 52 BE 38 
+B5 A3 06 9A F5 F4 71 74 0A B0 13 6E 6D 3D E0 9F 5E FF 34 3F 0D 6D E7 D3 CC FF 74 7A F7 BE B0 E5 
+DA C3 2B 62 97 9C 8D FC 7C 6B CD E8 DB 4E 14 12 9B 8D 01 00 22 65 B9 66 F3 D4 5E 64 80 D6 4A 12 
+4D 7B E6 11 56 06 A4 1E 83 1D 8F 1C B2 93 A8 BD CC FE 28 19 3F F9 62 62 E6 73 F7 40 E7 81 4D B6 
+F4 A3 F5 5B BA 6B 61 E0 AC 73 B1 39 DE 87 8E 8D B5 3A 34 42 DA 68 F9 DE 45 61 8B 5C 3E C5 DD 5A 
+3A F4 B9 86 9E 9A 14 9A 93 F8 F5 47 21 0B 00 10 89 5E 2A 32 64 80 9A AA 57 15 B1 7F 88 EE 21 4E 
+69 24 DA D0 83 6F CF 8E 6D D0 3A 69 D5 AE D6 0B 66 CD 91 95 71 8B CF 44 7D FE 6F DD A8 5B 1B EA 
+05 58 AD DA 32 4D 89 5C 37 1F 83 1D 77 C6 AE EF 79 8E 4E 68 AA 89 B3 EF 4D FB 5A 5D 0F DA E8 1D 
+69 A8 EB 90 23 6F 4E DB 71 E8 4A ED 63 EF 30 D0 6D 6B 50 61 D0 CE 09 36 F7 F4 D5 C4 59 59 DF E2 
+7E 94 B0 81 AA 3D 79 AA 45 F3 13 3D D1 B4 A7 4F C2 CA 80 D4 C3 76 D5 B1 FD 1C 05 FF 49 2A 7E DA 
+85 84 AC E7 6E 2F 37 B4 3A FA 57 15 B9 6F 50 9F 83 0D F5 1B 76 38 F4 AC 5D E7 2F F8 6B A7 99 68 
+9A E7 93 F0 32 20 F5 18 BC E2 F8 C1 B1 9C D5 EB DB 14 97 84 4C FF 47 81 4E 36 AD 8D FE 75 15 54 
+83 59 0E 03 1E 6E 0B 2E 08 DA 6D 67 73 DF 40 4D 82 95 F5 2D F6 47 09 1B A8 3A 93 26 B7 64 52 FB 
+1D C7 7C 7F F9 88 DB 8F 2A 00 C8 0B 3E E6 10 5C 7D 11 91 9F E1 1A 7A D0 86 7F E6 04 0B 1A 2D DB 
+B7 38 7C E1 C5 CF B1 FF AD 18 EA AB AE A7 26 85 E6 26 7D FD 5E FB 34 AB 76 B7 7E 9D 4F 17 7C B3 
+48 98 3A FE E7 76 7E FD 24 0B 75 39 11 04 10 9A B4 8A F1 D8 15 67 1F BA 2C D4 E1 C5 D1 EC 78 8F 
+A7 EF 59 80 C8 0F 99 34 44 82 E3 3A 45 7F F2 84 3E 54 C0 0B 43 DC BC B9 DD 47 EB B7 7C F7 7C 5D 
+2A 60 99 4F 0F 9E 7A 5B 02 20 61 BE F6 D6 ED 7D FF 5A 2A 8B B0 F3 12 62 DE BD FB F8 A3 B0 8A 2A 
+A3 35 70 E6 B6 2B 5E 37 1C 34 39 5E 48 68 15 A3 21 95 95 2C 2E 6F 8F 8E D9 05 00 E2 A6 AB AF BB 
+5F 5C 5B 2F 40 D5 68 AC E3 A9 87 97 1D 1A 0A C0 AA 98 0D B5 61 71 1C 39 C6 8B AE 64 E5 19 27 5C 
+B6 8D D3 ED 41 66 E4 7C 8D 0A 7B F7 E9 47 09 4A 53 B4 58 78 F2 FC 1A A3 E6 55 65 27 3C 7E F2 81 
+09 88 FC D0 89 0D 0B 5E 6F D2 04 03 2A E0 85 C1 8F BD B3 5B B5 91 C7 B2 EC 0C DA 65 26 3B FE 89 
+E7 7B 16 20 F2 43 27 0D 6E 58 BD 26 4E AC B6 D2 CD 37 BB DB DA 8A 64 E5 19 C7 AE 6C B3 D3 EB 41 
+66 E4 7C 8B 0C 7B F7 F1 47 09 4A 53 B4 5C 70 DC 65 8D 51 B3 87 83 77 C4 71 AC 58 BF 17 3F 3A 6D 
+82 66 17 22 6E BE FE C6 9D 03 B3 2D 95 45 D8 79 89 31 EF 22 3E 7E 2F AC A2 4A 6B 0D 9C B1 ED 9A 
+E7 F5 05 DD AD 5D E7 43 C2 F1 66 67 FB CC B6 9F B9 7C E5 0A 2B 6B EB DF A9 50 E7 C3 C8 4F 89 4F 
+CE 29 27 89 C8 28 AB D1 9B 6C A0 F1 17 C3 2A 49 4B 4C FC 59 C4 40 44 E4 7B 6B D1 E5 84 FF 98 9D 
+04 96 2D 59 32 61 C2 44 5E 8F 8B FF 13 CC 7C EE EB FB D4 D3 F3 82 8B 0B 6F D9 59 25 69 49 49 19 
+85 0C 44 44 4E 8D 5F 4D 02 D0 D1 D0 FC F0 E5 F3 6F 3E 77 95 99 9F 5C FD 34 4B 2B D3 3B FD 69 DE 
+E0 E4 64 66 66 3E 65 DA D4 4E 95 DA 1E FE 0F F6 F9 14 92 51 EB 2B A3 D6 DD 5A 74 03 54 09 65 3D 
+13 E5 EE D6 A2 CB F9 0B CD A4 4A 28 EB 1A FF 5D 26 75 16 82 32 F4 3E 32 7F FF A6 A0 FC F9 26 26 
+20 20 20 F8 FF 85 88 CB 04 04 04 04 FC 05 11 97 09 08 08 08 F8 0B 22 2E 13 10 10 10 F0 17 44 5C 
+26 20 20 20 E0 2F 5A 99 8F 51 5A 5A 9A 99 99 F9 7B 54 21 20 A8 86 51 C9 28 2A 2C FC 9B 2A 5E 51 
+61 21 A3 B2 F2 6F B2 08 00 70 1C CF CA CA A2 52 BB 6D DD 7A A7 C3 66 F3 CB 5C EE 56 E6 2F 63 18 
+96 9E 96 F6 3B 15 22 20 28 2C 2A A4 D1 84 69 42 CD 2E A5 F8 E3 A8 64 30 2A 2B 2B 7B 48 FD 55 DB 
+51 66 65 65 F5 EC D9 93 44 EA 9A E3 68 BA 03 25 E5 5E 93 27 4F F9 03 E6 2F AF 5C E5 F8 C7 AF 2B 
+21 F8 D3 68 DB BA 92 3F 81 36 AE 2B F9 33 D0 D1 D0 0C 0C 09 FE CD EB 4A BA 94 0D 4E 9D 7B 5A 63 
+FB 21 FA 97 09 08 08 08 F8 0B 22 2E 13 10 10 10 F0 17 AD F4 63 64 A4 A7 47 47 45 FD 1E 55 08 08 
+AA 29 2E 2A 4A 4E 4E FE 9B 2A 5E 72 72 72 51 51 D1 DF 64 11 00 60 18 16 13 1D 43 A5 B6 7E 66 E4 
+9F 02 83 C1 2F BB EC B7 32 EE 27 2A 2A 5A 58 D0 EC 69 4F 04 04 5D 41 72 4A 72 8F 1E D2 52 92 DD 
+B4 DD 66 17 50 54 5C 5C 58 58 48 57 FB AB B6 69 79 FF FE 7D DF 7E FD 90 BF 68 DC 4F 50 48 68 FC 
+84 09 7F C0 B8 DF 9C 79 73 89 71 3F 82 DF 0C 31 EE F7 47 A0 A3 A1 79 E7 FE 3D 62 DC AF 2B 20 FA 
+97 09 08 08 08 F8 0B 22 2E 13 10 10 10 F0 17 ED DB 7F 19 2D 49 7A 17 1A 16 9B 51 82 D2 64 55 0D 
+AC 06 18 F6 AA 3D D0 19 CB 8B 7F 97 58 A5 6C AC AF D8 49 5F 37 15 E9 1F 3F 64 8B EA 1A D3 25 7F 
+DF 2B 04 CB 7E 7D CF 1F B7 B5 53 C8 8C CB A1 D1 4D F4 7A 36 5A D1 84 15 25 46 7D 2D 94 B2 32 D7 
+F8 5D 0A 95 24 47 7F C9 A5 D1 8D F5 9B AA 92 14 1D 57 20 A9 6D AA 21 DD 09 E5 C3 FE 11 70 2B 42 
+6A E2 14 93 DF 58 D8 5D 01 33 F3 53 74 2A 49 D5 C8 40 81 B3 16 56 A4 7F F8 98 4E 55 33 D3 95 A7 
+60 F9 DF 22 12 AB 7A 19 19 34 A9 A6 EC 9C B8 88 C4 A2 26 27 96 90 10 69 0D 0B 1D D9 EE 2B 16 E6 
+CF 4F 31 A9 24 15 E3 46 26 65 7C FC 90 26 40 37 D3 95 A7 60 79 DF 22 12 AB 94 1B 65 00 00 60 E7 
+C4 46 24 71 31 89 2C AD 61 AE DD 7D A7 AC 02 E3 E7 E7 98 54 92 AA B1 7E 23 93 3E 7C 48 17 A0 5B 
+EA C9 B7 10 4C D8 39 71 91 89 85 DC BC A4 69 A9 23 DB B5 6A FF 1E F0 E6 99 35 C3 FE CD EB D7 8D 
+AF B2 33 9E 6F 1B D3 AF B7 9A 9E A1 F5 10 DB 41 56 06 EA 74 BA C9 F4 C3 C1 79 28 8E E3 38 5E F1 
+CC 51 4F C3 FE 4A 06 DA 82 DC 26 30 92 BD 0F 2E DA E7 57 C9 25 A9 EA EB C9 F1 1A 96 DB 5E 31 DA 
+22 AF 63 A0 19 6E 8B FB 4F BB 10 CF CC 7F BC AC 0F DD 62 BD 7F 59 63 9D 62 4F 8E 52 EF 3B EF EE 
+6F 54 29 DF 63 49 5F 4D 93 F5 01 4D 55 39 3E 4A 4B 6F DE BD EC 36 95 77 F3 54 46 1D 1A 69 BB 29 
+A0 B0 93 C4 B5 93 A5 8B 17 3F F7 F1 6D FF FD EC 34 D7 29 EA DA 33 AE FE 6C 60 06 3B E1 8C 9D 96 
+C6 9C 7B 85 38 8E 57 78 2D D7 D7 9E D6 28 03 8E E3 38 5E 78 77 BE 86 2A 5D A5 C9 9F F6 12 CF 8A 
+F6 6B E4 EB E3 B3 6C C9 92 F6 DF 8F B3 D3 2E 4D D5 52 9F 71 BD 89 49 E3 E9 9A F3 EF 16 E2 38 5E 
+F1 6C 45 5F F5 E9 D7 B8 3C 79 85 F7 E6 68 72 B1 48 45 67 99 47 07 4C C2 71 6D 75 0D 06 A3 FD 0F 
+26 3B ED F2 74 BA C6 AC 26 5E 3A 37 56 5D 67 CE 5D 1C 6F 29 98 14 DE 9D A3 C3 C5 22 55 FD 25 4F 
+DA AD 0F 8E E3 CE EB D7 3F 7A F0 B0 23 12 3A 8B 36 B7 97 8B 9F 1F DE 7E AF C0 62 AF D7 51 7B 1D 
+51 04 80 95 1D 7A 62 D9 AA 4B 1B 8F 1A FA 1F 1E 26 DE AE 57 03 56 F2 FA CE CD 50 51 9D 66 27 86 
+FC 56 4A 5E 9E 3E 13 6B BD FB A8 26 55 5C 61 E2 30 E9 C0 20 EF 57 A5 C3 46 72 58 C6 FA E8 E9 93 
+20 6E B3 6C D4 EF D3 09 91 1E 3A 69 A8 74 40 B0 4F 68 E9 D0 51 9C AA 7C 7A EA 9D 28 3E 68 D9 C8 
+26 67 BB B7 13 21 43 87 45 9A E3 8E 5C 7A DF 7F 93 F1 DF B3 0A BA 29 82 E6 8E AE D7 AA 7A 71 F9 
+C6 90 9A 7C 2E 6A 0C BB BE 2A E2 A5 EF 8E 2E 74 7C 50 39 7C 8C 09 7F 8F 6F 09 9A AF 74 B9 59 A5 
+2C C3 C5 A4 49 17 23 47 57 D5 FF 1F 2F 0D 3F 3E 7F D5 43 C6 F0 D1 66 FC 6E D2 0A D7 1B DC 4D 9A 
+7C F1 DD 68 0E 2F 41 E9 BB A3 F3 D7 DC AF 1C 36 C6 F4 37 EA D7 85 B4 F5 79 66 25 BF FF 52 2A 61 
+3D 65 B2 8E 68 F5 AD D4 9E 03 D7 AC 9B 44 87 A4 8F 89 AC FA 6C 38 BB 38 39 3A E8 45 48 64 72 51 
+ED 4E 20 68 46 B4 9F 6F 44 1A B3 36 4B 69 D2 5B DF C0 2F 79 18 33 2D F2 D5 B7 22 1C CB 8B F5 7B 
+1E 95 5E 23 A3 32 33 36 EC 65 50 44 62 51 93 33 3B D9 C5 C9 51 21 01 2F 42 63 7E 94 54 4B C6 F2 
+BE 04 FA 86 7E 2B AE F9 A8 A9 48 09 F7 F5 8D 48 AD F9 19 AC 20 2E D8 F7 4D 52 19 9A 1D E3 1F F8 
+31 17 45 8B 53 A2 82 03 5F 46 24 15 35 B3 41 09 9A FC F0 92 AF F0 38 FB FE E2 00 20 3A 70 D2 48 
+85 92 10 EF A0 62 8E 1C CC 68 4F DF 34 D9 61 93 86 FC D6 59 5C A2 03 27 8F 50 28 09 7D 16 DC 40 
+95 28 4F BF 54 D9 A1 93 3B 51 15 44 76 E4 0C DB B2 47 57 BC F3 F8 E9 A0 FA 4E 07 67 57 94 96 96 
+57 71 B3 91 2A 2C 2E 2E 2E 51 F3 27 9C E7 B5 6B CB FD 4C 8D C5 C7 F7 DB 29 F0 77 DF 0E 8E 56 96 
+96 94 B3 9A 33 A9 D6 22 71 91 3C EF 1D 5B 1F 64 6A 2C 3A B9 6F 2C DF 9B D4 82 97 C4 EA 2C 92 10 
+CE 7B B6 63 DB BD 4C 8D 25 27 F7 D8 29 FC 76 2D BB 84 B6 B6 97 29 4A 74 15 A1 A2 90 1B E7 FD 95 
+17 0E D1 90 20 03 00 08 0D D8 E1 1F CE 91 07 CF 0F DD 3B E9 CC AB 2C AA 30 BB A8 10 54 A7 1E B8 
+79 60 8C 22 99 15 71 69 ED 46 C6 B6 B0 1B 33 05 11 00 60 67 7A 1D 59 75 5F F7 72 88 73 99 E7 CD 
+A0 74 B4 8A E4 E7 72 81 B9 DA CA 44 B1 24 E4 E8 CA 4D 57 A2 4A 68 62 02 95 B8 CA 20 FD B2 5A BF 
+60 25 91 AE EB 9C CE 05 65 0B 48 4B E0 25 05 78 AF 51 EB 4E 1E 9A A3 8F 7E B8 B6 EE A8 D0 9E 97 
+57 A7 4A 03 54 86 B9 AC 5D EE 2E 30 EB BF 80 7D D6 82 80 65 79 EE 5D 79 51 E9 74 88 11 E3 AA D3 
+AE 5F 63 07 E7 7A 79 65 0A 0A B3 8B 8A 49 6A D3 8F DE D8 33 BA 71 C5 64 7F 7B FA F4 93 BC CD 66 
+9D EA 72 11 34 9B 34 46 ED EE 1D 9F C0 02 BB C9 35 6D AB F2 37 4F FD B2 7A 8D 9B 62 21 DC F6 C2 
+6E 0A 9A 7A 77 D5 B2 5B 09 8D 5E 12 88 E4 88 5D F7 9C 2C 1A 5C 13 32 9D 68 A7 76 EF B6 F7 CB 82 
+B1 93 6A 55 79 FB C4 2F 4B D9 6E B2 55 A7 A8 52 8B B0 F9 B0 FE 94 D5 EE 3E D9 13 E7 F2 F9 63 DB 
+01 58 D1 57 D7 3B E5 AF 0D BC E7 40 6B C1 C6 B2 C8 D3 6B F6 87 92 06 ED 39 B3 D6 44 F4 F7 29 D7 
+3E 58 51 57 37 AC CD 5F 1D 7C 77 BE 62 4B 26 45 9D 5C 73 30 04 6C F6 9D 5E 6D FA 07 98 74 7D FD 
+BA FC B5 41 B7 17 B4 68 52 E4 C9 F5 FB 43 48 83 F6 9E 5C CB FF 26 F1 4A 5B E3 32 22 3F 69 CB E6 
+B7 4B F6 9D 5D 32 EA 92 A4 AA 9E A1 A1 89 99 95 ED C8 61 16 AA A2 F5 25 C7 FE 11 C7 74 BE FE C6 
+C1 48 AA F2 D3 99 05 F6 67 5D 1E CC 1D B1 4E B7 39 89 52 76 FB AE 14 A5 DA 1C 10 5D E7 71 69 3C 
+0D 8A 7D D7 6D 76 4D 35 D8 F6 E4 F8 3C 03 5A 76 C8 B1 A5 8E 57 B1 EA D2 2E 7E B1 67 D5 C9 F7 BD 
+1D EF B9 2D 35 97 C5 73 DF 9E 5D B1 FC E0 CA C3 6A 3E BB 06 DA 18 1C B8 14 16 5D 31 75 B8 30 2B 
+2E 3C BA 8C 4A A9 7A 1F 91 C2 B6 D6 41 0A DF BC FE 22 6C F5 AF B9 30 84 00 5E F4 FA 65 F1 F6 DB 
+6F E6 F6 11 FF F5 FE CC BC 59 2E 67 EF CF 1C BE 4E B7 41 01 A0 19 AF 5E 27 D3 0C 1C 75 6A 47 D7 
+28 FA 13 C6 EB 5F BB E8 FD 22 7F E2 74 39 04 00 4A 43 3C 03 8B B4 67 4F EE D7 39 5F 80 24 11 75 
+EB 11 23 E8 58 E3 AB 7A 4D C7 2E 28 7A 13 C7 EB 5F BD E8 13 90 3F 61 86 1C 02 00 25 21 4F 03 8B 
+B4 FF 9D DC B7 93 3F 46 69 FD 8C 75 31 AF 57 6F 4B E6 4E F9 93 B7 3F 43 93 BD 0E 6F 88 E3 2C 9B 
+B2 F8 4C 0C 78 36 09 CB F6 D9 BE CE 35 41 C1 FE D2 E1 69 6A FC 71 3C 31 9A E2 7D 60 43 1C 47 FF 
+12 5E 96 90 89 41 0F 5E EF C7 B2 BD 77 38 5D 4A 50 98 75 E9 E0 0C BE 31 C9 EB E0 26 4E 2F B5 DD 
+A4 5D 6B 2F 27 28 CE BC 78 64 46 6F FE 30 A9 53 68 BB 29 82 1A D3 CF FA 0E 98 E3 F3 D4 27 28 2C 
+22 3A E0 7A 90 87 EB F1 1E 46 FF EE 3B BB 75 B8 62 F5 A9 E1 14 E5 F1 2B E7 1A 49 91 01 44 F5 C6 
+0D D1 3A 77 29 35 1D 85 66 E3 72 43 CA 5E 7B BD 28 D4 76 58 3F DB 40 0C 00 7A DA AC 75 1A E7 33 
+EF 25 00 40 49 C8 93 80 7C 8D 79 57 97 98 CB 92 01 40 CE 6A C5 16 7B BF A9 F7 DD 5F 6D 3A 66 3B 
+50 EB F8 A3 F0 4F AC E1 A6 69 E1 11 B9 7D C6 8E F8 E9 13 15 99 8F E9 08 87 BD 89 21 9B EE B2 AE 
+8E EB 14 15 BB C5 B3 FA 48 22 00 12 7D 46 DB AA 5F BA 96 91 C1 86 86 71 99 9D 10 FF 1D EF 65 A3 
+5A 3F E9 81 AC 36 7E 82 C9 F9 23 BE 7E D9 53 FF 55 40 B0 FC 17 9E C1 95 46 AB 27 68 74 52 15 40 
+64 CC 66 AE 36 E3 2D 2F 99 3E 6E 9C C9 F9 63 DE FE D9 D3 66 2B 20 58 C1 0B CF 90 0A 43 C7 49 9D 
+A5 4A 3D 22 BD 7B CB 57 BD FC 96 C8 02 B3 3F 78 6B 5D BC AA BC 20 3F 9F D3 00 66 05 8B E7 21 0C 
+66 C2 F5 F5 3B 9E 96 1A 3B DF DB 62 DB 19 33 5D 3A 05 BC AA AC 20 3F 9F F3 55 C3 28 AF E2 DD A4 
+F8 1B CE 5B 9F 96 9A 38 DD DE 3A 88 CF 4C E2 F4 12 A3 A2 2D 26 DD 5C B7 ED 59 A9 F1 FA 4B DB 6C 
+F8 C6 A4 4E A1 7D 0F B5 A0 82 E9 C4 A5 A6 13 97 02 B0 8B 13 DF 3C 76 39 72 FC E6 A6 5D 3A FD 2E 
+4D 95 03 00 20 C9 C8 F7 AC 91 4B A2 52 05 81 5D C5 B5 D7 8B 1B 68 76 6A 46 A5 A0 32 5D B9 56 2F 
+01 4D 2D 55 F2 4B 00 40 73 52 33 2B 68 6A DA F5 2F 45 AA 96 B6 9A 40 79 66 7A 01 79 98 ED 00 B5 
+73 21 61 C9 AC DE D1 11 C9 BD 2D 77 DA 7E 0B D8 1D 15 59 36 55 E4 55 14 66 B2 B6 BF 18 00 13 00 
+48 B2 F2 F2 B5 37 D3 84 84 00 63 37 E9 BC AE 2C 2A 2A 07 31 29 29 8E 95 A5 88 C2 98 09 FD 4F EC 
+F4 79 9E 39 D3 41 21 DF CF EB 0D 6E B9 DD 4E A9 FA 05 54 7C 7F 81 C5 D6 57 2C 00 12 09 41 A8 22 
+72 74 B3 09 2B 36 AE 1A A9 2A D8 62 12 27 58 F1 27 9F A7 EF F3 1B B7 97 69 1A 43 A6 59 2B 35 D6 
+0E 51 18 33 D1 FA D4 76 6F FF 9F F6 F3 14 F3 FD 9F BE C5 AD B6 8F AD 56 05 CB B8 3E 73 E8 C1 88 
+2A 00 12 09 21 0B 49 2A F5 19 B3 7A F7 96 71 6A B5 3F 87 26 BB CC 1C 73 22 77 F2 55 EF FD 03 84 
+A1 E8 FE 3C AB 1D A1 AC 86 D2 05 2C 76 85 DE 98 23 87 00 20 92 92 62 50 54 50 C0 1F E3 B0 ED 85 
+A2 3D FD C8 35 07 8E AE 18 34 F1 EC 44 BB B3 8D 72 A1 A9 4F 0E 9C F0 CB 42 6B 6F D9 B3 DA 46 1C 
+A0 E4 ED D1 B5 47 22 84 C7 9E 38 BA 58 97 8F 86 C6 28 5A D3 8F 5F 9B D7 D0 A4 C9 A3 CE 35 CA 85 
+A6 3E 39 74 D4 BF C6 24 01 AD 69 7B 57 0F 94 00 28 79 7B 7C F5 91 48 91 B1 C7 4E 2C D6 E5 A3 11 
+5D 8A D6 8C 63 57 1A 7A E9 FC 84 D1 E7 1B E5 42 53 3D 0F 1C 0B C8 44 6B 6F D9 E7 68 23 0E 50 12 
+76 74 CD B1 08 91 31 27 4F 2C D4 E3 23 2F 75 0A 6D 8C CB AC 88 93 33 37 45 58 1F BF B9 D6 B0 FA 
+1D 47 91 D4 B0 71 38 20 F0 FD 9D C3 F3 A8 58 56 75 5C 06 04 69 6E C9 3C 56 BF 1B 07 AB 8A C5 25 
+03 95 4A 21 A1 55 AC FA 0E 57 1C AD 09 5A 14 01 01 12 CA 62 71 C4 D2 2A 06 13 03 01 2A 15 28 1A 
+36 FD 15 AF 47 84 FD 50 8B 89 93 31 59 A9 6B 29 61 C0 72 8D 88 89 46 DE 95 F7 5D 3C A0 47 AD D3 
+49 48 E3 57 6A E3 C8 43 22 91 00 1A 2D F8 47 64 86 4D 1C 72 64 8D AF 6F FA EC 11 81 CF 22 85 6C 
+8F 8C AC 9D C6 8A E3 38 89 EE 70 FF C1 72 2D 32 CE FE 95 FD F1 D9 A9 1D EB 16 14 09 BA 1F B0 95 
+6C 21 A9 81 02 05 51 8F 5C 5C E3 1A F7 2F 4B 8D 55 E3 12 97 01 91 1E 3E 69 F0 E1 35 BE BE E9 33 
+47 BE F4 8A 10 1A 74 BC 4E 15 C0 31 A4 CF DA 67 57 E6 28 21 C0 2C 49 0E 38 B6 6A EB 0E E5 BE 37 
+17 A8 90 01 00 D8 F1 4F BC B2 8C 2C C4 03 1E BC 74 1A 30 56 4A 6A D2 85 77 A3 AB 00 20 EB F6 FC 
+89 41 B6 8F 5D E7 28 20 00 14 9A 38 52 5F 0A 7F D3 76 E7 2D 80 33 72 7F 24 C4 FF A8 76 80 80 68 
+71 15 06 68 E6 93 ED EB 6F A6 6B 2C BE B6 97 DF C7 FA B8 82 57 E6 FD 88 8F FF 51 13 97 45 8A D9 
+18 A0 99 9E 5B 9C FE 4B D3 58 74 73 0F BF 8F F5 71 05 AF CC FB CE 61 52 51 15 00 FA F3 C9 D6 0D 
+37 D2 34 96 DC D8 FD 47 7A A9 15 DA 18 97 29 CA 3D 45 72 63 DC EE 04 CF EE 3B BC 2E 24 60 45 19 
+99 BF 48 72 3D 7B 52 00 AA 9A BF 97 4A A5 E2 39 C5 C5 38 C8 02 00 56 12 9F 90 89 42 3F 00 A8 8E 
+84 38 E0 00 40 96 D7 D7 93 67 FB 87 BF 2B 99 3C 54 02 00 A0 34 32 3A 01 85 DE 00 64 05 5D 2D 19 
+56 F0 9B B0 92 09 C3 24 AA 7F F5 D5 9B 58 54 7E 94 96 14 00 55 DF D6 5A FA 41 F0 55 FF 24 B2 E1 
+2E 3D 21 59 49 0B F5 43 9E B7 6F A2 F9 7A B3 6D DA B2 16 40 48 5A 46 1C BE E6 17 60 C0 39 37 47 
+6C D0 A4 E1 B2 0B FD 9E BD 61 07 7D 90 1A E1 3A 48 82 F3 16 84 2A 24 26 2E 41 01 10 97 18 BC F4 
+18 F5 A7 DD 12 57 CF E5 36 73 45 9A 4F 52 E2 10 4D A6 3B DC 7C EB C0 BB 82 E2 36 13 47 C8 2C F6 
+F5 7A 5B 15 F4 A1 C7 F0 4B B6 0D 26 26 22 54 11 31 09 71 32 80 B8 D1 C4 91 86 47 8F A5 67 A3 A0 
+42 06 00 E6 7B 0F EF 02 CB 8D 07 55 2E FE EB F6 EC E7 E8 39 8A 54 61 71 2A 00 A0 25 54 32 20 82 
+C2 D5 77 D5 81 16 14 96 82 B4 AC EC FF 43 60 A6 68 2D BE EA BB 98 E3 02 23 F6 D2 FA 1D 7E EC 81 
+BB 4F AF 35 69 DF B4 CF EE 86 A2 BD C8 35 60 11 C7 05 66 EC 45 A7 5D CF AB 06 EC 3D B5 DA F4 4F 
+35 69 E1 35 FF 85 1C 17 98 5F 2E 3A EF 78 5E 35 70 CF 89 B5 A6 62 DD A6 56 17 D2 C6 B8 8C F4 9C 
+B0 66 B1 C7 DC D3 6B 27 FE 1C 37 79 A4 29 5D 9A 52 9E FE C1 FF A1 DB 2B D1 51 27 ED B5 5A 8C CB 
+54 DD BE DA 14 BF FB 47 2E 6B 2E 31 17 49 0B B8 74 FE 1D 4A AA 9E 48 80 D0 44 45 28 68 E2 AB 87 
+BE BD 06 0F 36 9B E3 60 FA E4 E0 CE E5 B2 BF 96 D9 C8 66 07 BB 1C F1 2D C4 E4 00 00 84 AC FF 9D 
+6F EC 7D 64 BB A3 4C E9 D2 61 6A 58 92 EF C5 A3 BE 55 A6 9B 67 9A 0A 02 80 A0 A1 AD 25 6D 89 87 
+9F 40 FF FD 46 42 40 56 B1 30 FD E7 D4 B5 20 C4 D0 D9 F6 9F B6 BC 4B 05 74 74 D4 49 7E C9 C9 4C 
+D0 E2 2C 18 9A D9 C4 31 4A 6E EE FB 8B B2 94 C6 6C 33 A7 35 7F BF 88 C9 40 63 9A D7 87 CF 55 73 
+2D 9A 4F 52 EA C8 37 17 CD 74 D2 58 A5 47 EE 07 8B B2 94 C6 6E 33 6B A0 0A 5E 9A FC E6 C5 F3 6F 
+24 60 97 A5 85 DE FE A4 3D E3 7C BF EA 6F 9A 8A B7 EE 7E 55 83 0F 0C D4 55 CE D0 76 75 73 4F 9A 
+B9 4A B3 25 B7 63 A5 C9 29 39 42 1A BA EA 7F 70 E7 72 7B 61 46 9D 58 73 3A 82 D4 6F E1 28 A9 C4 
+40 FF 44 8E 14 44 4C CD DC 42 5D E2 CF 6B 99 31 23 4F AC 3F 19 41 32 5C 38 52 2A E9 E5 F3 24 8E 
+14 92 18 DD C2 52 E3 0F 8C D4 8C C8 93 6B 4E 45 82 E1 82 51 3D 92 5E F8 35 30 49 9C 3E CC 4A BD 
+DB 14 EB 3C DA DC BF 4C 33 5C 75 F5 81 F2 A5 73 77 FC EE 1E F3 2C 64 80 88 B4 AA C1 C0 E5 97 1D 
+E7 0F EE D9 72 9D 25 AB CD DE B3 3F 75 CF 19 97 D5 F6 67 25 35 06 CE DC B6 46 78 D5 E5 1A 99 D6 
+93 A7 EA 6C BE BF 6B D5 D7 BC C7 3E 4E 73 4F 5D C5 8F 1C BE B1 77 C1 15 54 52 DB D6 7E BA 91 4B 
+50 B5 AA 5A 0B 2F 5E 15 3A 7C E2 C6 C1 C5 AE BF 28 D2 74 93 B1 FB 6E AC 99 5A 33 EC 45 33 1D 64 
+21 E6 E6 AD 6A 66 2E 85 00 50 F5 2D 8D 7B 5C CF 90 B7 B1 55 26 37 A7 0F 37 10 F9 81 03 74 0F DF 
+8F FC C4 1C 6D C9 19 3D A9 06 93 C7 6B 5D 3B F1 4D 67 DD C4 3E 2D 46 2B 44 4C 8C C6 48 FF C5 ED 
+ED 54 9F D4 A1 BE 30 6A 9F 49 E3 B4 AE 9D FC AA B3 76 B2 41 43 55 B0 EC B0 7B 57 93 A8 00 18 A3 
+20 2D 5B D0 9A CA 66 02 08 02 94 04 7B BC 14 1A 71 C1 8C 46 A6 8C 1D 67 78 FA CA A3 F7 4B B6 9A 
+B6 A0 43 45 54 C4 17 01 13 27 CB BF B2 1D D2 0A CC 94 C4 34 16 CE 8A 76 75 8E 76 6D 98 42 D1 5A 
+FE D8 6B 5D 9F 3F 30 2E A7 24 A4 B1 70 56 94 EB C6 A8 C6 26 69 AE 74 F7 71 EA D3 3D 6A 75 84 1A 
+2F 45 5D 71 6E BC 9F 35 45 6B C5 37 3F 7E D9 13 AE 43 B4 B0 16 90 FB 3A EC BF 1B 34 FD D6 2C 83 
+C1 3B C2 78 5A 5E 5A 78 77 BE F6 88 E3 1F AB EA AF 54 F8 AC E9 67 EC E4 C7 68 29 A9 2B 40 D3 AF 
+4E D5 99 EA F2 83 5D F3 FF 92 A8 03 A3 F4 87 1D FA C0 C4 D1 DC 87 8B 0D 34 2C 47 CE 98 35 63 C6 
+AC 19 13 06 EB D3 2D D7 FB 95 56 E7 62 A7 B9 4E D1 99 76 29 95 CD 29 AA C4 77 9D 89 C9 EA 67 45 
+5D A2 27 6F 74 74 1D 36 FF D1 E1 75 D8 FC 48 07 D7 61 F3 21 FC B3 0E FB CF 7B FF 77 2D 88 D2 84 
+45 76 F0 FC FE CB E2 D6 F3 36 A5 3C E2 75 0C 5B CF A8 0F 97 13 1C 5A 48 EA 02 C4 F5 CD 0D C4 32 
+53 D3 51 2C D3 DB E3 5D CF C9 6B D7 2D 98 BF 60 C1 FC 05 2B 36 2E 1B 84 05 B8 F9 E7 36 37 41 06 
+CB F4 7A F0 4A 6E 86 C3 F0 BF 67 4F 7A 02 82 3F 8E BF 68 2A 76 27 21 3A C0 71 95 F1 D4 AB B7 BE 
+0E 73 D4 E1 A1 74 70 76 55 45 45 05 05 AA CA 33 3F 7B 9D DD F5 4C 64 BA CB D8 9E 08 14 35 9F D4 
+65 E0 55 CC CA 8A 0A 04 F0 AA C2 38 F7 BB 21 15 06 4B 0C C8 29 4F 9F 7C 52 1F BF 67 D2 30 F5 9A 
+0E 1D 6B A1 D7 77 97 B8 79 A6 4D 58 A4 CA A5 8B A7 32 EA C6 CD B4 E1 9B 4E B5 DC 5B 43 40 40 D0 
+A5 10 71 B9 09 48 4F BB 5D C7 D1 E0 92 02 0C 5A DF 0E 08 4D B8 3C B9 EF 65 00 12 59 48 42 41 CB 
+62 E2 A9 2B AB AD C4 5A 4D EA 12 D8 EF 8F 8D E8 77 0C 00 10 01 51 59 35 D3 F1 07 0F CE 52 FC 76 
+DA 2B 51 6F F2 E9 DE F5 21 98 66 36 71 CC 3F B3 DC DC E2 E6 3B 19 34 99 70 81 E6 55 AA AD 38 31 
+DA 56 A2 71 02 01 01 C1 6F 84 88 CB 5C 40 E4 CC 26 4D E3 21 9F 94 FD B5 04 FB 36 27 75 05 88 92 
+C3 C3 04 6E F3 ED 9C 7D 62 1B 5D A1 1A 6E 7E 11 B7 B9 FA DF BD 16 3E 8A E3 9C 7E 44 56 B6 99 A1 
+DC 45 2A 12 10 10 F0 0A D1 BF 4C 40 40 40 C0 5F B4 D4 5E 2E 2B 2B FB F4 F1 63 55 55 33 5B 62 12 
+10 74 0D F9 79 F9 B1 B1 B1 42 B4 16 66 8A FF 61 C4 C5 C6 E6 E7 E5 85 04 87 74 B7 22 9D 09 86 61 
+AF 42 5F 09 08 FC 9E A1 EC DF 41 76 76 76 69 49 49 77 6B 01 D0 72 5C 2E 2C 2C F4 F3 7D FE 2E FC 
+DD 6F D3 86 80 00 00 D2 52 53 19 0C C6 E7 4F 9F BA 5B 91 4E 23 3F 3F 2F 37 37 F7 C6 B5 6B DD AD 
+48 67 82 61 D8 AD 9B 37 91 26 BB 1B FC B9 24 25 26 E9 EA F0 B8 C3 5A D7 D2 52 5C 56 56 56 5E BE 
+72 85 95 B5 F5 6F D3 86 80 00 00 96 2D 59 32 61 C2 C4 11 A3 46 76 B7 22 9D C6 73 5F DF A7 9E 9E 
+17 5C 5C BA 5B 91 CE 44 47 43 F3 F2 D5 2B 82 82 7F CF 9E 41 1B 9C 9C D4 35 7E D7 A1 9D 2D F2 F7 
+BC EB 08 08 08 08 FE 0E 88 B8 4C 40 40 40 C0 5F 10 71 99 80 80 80 80 BF 20 E2 32 01 01 01 01 7F 
+D1 BE 75 25 68 49 D2 BB D0 B0 D8 8C 12 94 26 AB 6A 60 35 C0 B0 97 48 4D 80 C7 F2 E2 DF 25 56 29 
+1B EB 2B 76 D2 68 40 45 FA C7 0F D9 A2 BA C6 74 C9 DF F7 0A C1 B2 5F DF F3 C7 6D ED 14 32 E3 72 
+68 74 13 BD 9E 8D 56 25 63 45 89 51 5F 0B A5 AC CC 7F E7 10 01 56 92 1C 13 97 2F AE 69 AA 29 8D 
+40 79 DA FB 4F 19 A4 5E 86 FD 94 38 E7 92 31 7F 7E 89 4E 25 AB 5B E8 C8 61 3F 02 FE 8B 92 9A 34 
+C9 E4 37 96 1A 1F C1 CC FC 14 9D 4A 52 35 32 50 E0 AC 85 15 E9 1F 3E A6 53 D5 CC 74 E5 29 58 FE 
+B7 88 C4 AA 5E 46 06 4D AA 29 3B 27 2E 22 B1 A8 C9 F6 21 24 44 5A C3 42 A7 2D 7B 79 77 32 CC 9F 
+9F 62 52 49 2A C6 8D 4C CA F8 F8 21 4D 80 6E A6 2B 4F C1 F2 BE 45 24 56 29 37 CA 00 00 C0 CE 89 
+8D 48 E2 62 12 59 5A C3 5C 5B 8E 6F 2B 08 56 9A F2 3E 36 57 54 D3 4C EB EF 3A 22 8A 37 5A D8 D3 
+88 FB 7E 72 EC 8C E7 DB C6 F4 EB AD A6 67 68 3D C4 76 90 95 81 3A 9D 6E 32 FD 70 70 1E 8A E3 38 
+8E 57 3C 73 D4 D3 B0 BF 92 81 B6 65 F3 24 46 B2 F7 C1 45 FB FC 2A B9 24 55 7D 3D 39 5E C3 72 DB 
+AB DF B8 6D 15 9A E1 B6 B8 FF B4 0B F1 CC FC C7 CB FA D0 2D D6 FB 97 35 D6 29 F6 E4 28 F5 BE F3 
+EE FE 3E 95 70 1C C7 19 6F B7 F7 D7 32 5C E7 5F 89 E3 78 55 EC B1 51 5A 2A 1A 23 F7 84 FD E2 C8 
+81 66 5C B5 57 D7 5C E2 5E 81 E3 38 23 EA E0 98 41 1B 5E 14 B6 C9 0F FC 42 47 F7 93 63 A7 B9 4E 
+51 D7 9E 71 F5 67 03 EB D9 09 67 EC B4 34 E6 DC 2B C4 71 BC C2 6B B9 BE F6 B4 46 19 70 1C C7 F1 
+C2 BB F3 35 54 E9 2A 4D FE B4 97 78 56 B4 5F A3 0E EF 27 C7 4E BB 34 55 4B 7D C6 F5 26 26 8D A7 
+6B CE BF 5B 88 E3 78 C5 B3 15 7D D5 A7 5F E3 F2 E4 15 DE 9B A3 C9 C5 22 15 9D 65 1E 1D 30 A9 CB 
+F7 93 63 46 EE B1 D5 32 70 F4 E9 90 8E 6D 83 7F F6 93 6B 73 7B B9 F8 F9 E1 ED F7 0A 2C F6 7A 1D 
+B5 D7 11 45 00 58 D9 A1 27 96 AD BA B4 F1 A8 A1 FF E1 61 ED DB 63 1B 2B 79 7D E7 66 A8 A8 0E 7F 
+9C 27 57 F2 F2 F4 99 58 EB DD 47 35 A9 E2 0A 13 87 49 07 06 79 BF 2A 1D 36 92 C3 32 D6 47 4F 9F 
+04 71 9B 65 A3 BA 4F C7 6A AA 12 FF DB 71 7A E8 E3 AD 96 5C 4E 67 17 34 5C B0 40 6B CC 31 97 F7 
+FD 37 1B FF 3D F3 98 3A 0D 41 73 47 D7 6B 55 BD B8 34 C4 A4 26 9F 8B 1A C3 AE AF 8A 78 E9 BB A3 
+0B 1D 1F 54 0E 1F 63 C2 DF E5 28 68 BE D2 E5 66 95 B2 0C 17 93 26 5D 8C 1C CD B1 25 38 5E 1A 7E 
+7C FE AA 87 8C E1 A3 CD F8 DB A4 FF 63 DA FA 85 C0 4A 7E FF A5 54 C2 7A CA 64 1D D1 EA 5B A9 3D 
+07 AE 59 37 89 0E 49 1F 13 39 CE EB C3 D9 C5 C9 D1 41 2F 42 22 93 8B 6A 57 0B A2 19 D1 7E BE 11 
+69 CC DA 2C A5 49 6F 7D 03 BF E4 61 CC B4 C8 57 DF 8A 70 2C 2F D6 EF 79 54 7A 8D 8C CA CC D8 B0 
+97 41 11 89 45 4D 8E 46 65 17 27 47 85 04 BC 08 8D F9 51 52 2D 19 CB FB 12 E8 1B FA AD B8 E6 3B 
+AD 22 25 DC D7 37 22 B5 E6 67 B0 82 B8 60 DF 37 49 65 68 76 8C 7F E0 C7 5C 14 2D 4E 89 0A 0E 7C 
+19 91 54 D4 CC 22 46 34 F9 E1 25 5F E1 71 F6 FD C5 01 40 74 E0 A4 91 0A 25 21 DE 41 9C 9B 7E 32 
+A3 3D 7D D3 64 87 4D 1A D2 DD 3B 61 8A 6A EB 2B A7 DE D9 7E 32 BC 8C 5B 2A 22 3B 62 FA E0 B2 47 
+97 BD F3 78 3D F3 F6 FF 09 9C 5D 51 5A 5A 5E C5 AD 68 A8 C2 E2 E2 E2 12 35 7F C2 79 5E BB B6 DC 
+CF D4 58 7C 7C 3F BF 9F 22 87 A3 95 A5 25 E5 5C 4F 38 A6 0A D7 5B 24 2E 92 E7 BD 63 EB 83 4C 8D 
+45 27 F7 FD 91 67 FD FD 7F D0 D6 F6 32 45 89 AE 22 54 14 72 E3 BC BF F2 C2 21 1A 12 64 00 00 A1 
+01 3B FC C3 39 F2 E0 F9 A1 7B 27 9D 79 95 45 15 66 17 15 82 EA D4 03 37 0F 8C 51 24 B3 22 2E AD 
+DD C8 D8 16 76 63 A6 20 02 00 EC 4C AF 23 AB EE EB 5E 0E 71 2E F3 BC 19 94 8E 56 91 FC 5C 2E 30 
+57 5B 99 28 96 84 1C 5D B9 E9 4A 54 09 4D 4C A0 12 57 19 A4 5F 56 5B D5 B0 92 48 D7 75 4E E7 82 
+B2 05 A4 25 F0 92 02 BC D7 A8 75 27 0F CD D1 47 3F 5C 5B 77 54 68 CF CB AB 53 A5 01 2A C3 5C D6 
+2E 77 17 98 F5 5F C0 3E 6B 41 C0 B2 3C F7 AE BC A8 74 3A C4 88 71 D5 69 D7 AF B1 83 73 BD BC 32 
+05 85 D9 45 C5 24 B5 E9 47 6F EC 19 DD B8 62 B2 BF 3D 7D FA 49 DE 66 73 CD 0E 9F 82 66 93 C6 A8 
+DD BD E3 13 58 60 37 B9 A6 6D 55 FE E6 A9 5F 56 AF 71 53 2C 84 DB 5E D8 4D 41 53 EF AE 5A 76 2B 
+A1 F1 B9 AB 92 23 76 DD 73 6A 72 14 55 23 28 DA 0B F6 D8 B8 38 5C DF 75 62 A8 DB 0E 2E 6D 66 61 
+8B E1 D6 14 47 0F 9F AC 09 73 15 89 E7 AF 21 AC E8 AB EB 9D F2 D7 06 DE 73 A0 B5 50 34 65 91 A7 
+D7 EC 0F 25 0D DA 73 66 AD 09 97 6F 12 FE 82 15 75 75 C3 DA FC D5 C1 77 E7 B7 E4 ED B2 A8 93 6B 
+0E 86 80 CD BE D3 AB 4D F9 DE A4 FF 63 DA 1A 97 11 F9 49 5B 36 BF 5D B2 EF EC 92 51 97 24 55 F5 
+0C 0D 4D CC 0D 1C E9 96 00 00 20 00 49 44 41 54 AC 6C 47 0E B3 50 15 AD AF 0C EC 1F 71 4C E7 EB 
+6F 1C 8C A4 2A 3F 9D 59 60 7F D6 E5 C1 DC 11 EB 9A 5D DD 28 65 B7 EF 4A 51 AA CD 01 D1 75 1E 97 
+C6 D3 A0 D8 77 DD 66 D7 54 83 6D 4F 8E CF 33 A0 65 87 1C 5B EA 78 15 AB AE 40 C5 2F F6 AC 3A F9 
+BE B7 E3 3D B7 A5 E6 B2 78 EE DB B3 2B 96 1F 5C 79 58 CD 67 D7 40 1B 83 03 97 C2 A2 2B A6 0E 17 
+66 C5 85 47 97 51 29 55 EF 23 52 D8 D6 3A 48 E1 9B D7 5F 84 AD FE 35 17 86 10 C0 8B 5E BF 2C DE 
+7E FB CD DC 3E E2 BF DE 9F 99 37 CB E5 EC FD 99 C3 D7 E9 36 28 00 34 E3 D5 EB 64 9A 81 A3 4E ED 
+40 1F 45 7F C2 78 FD 6B 17 BD 5F E4 4F 9C 2E 87 00 40 69 88 67 60 91 F6 EC C9 FD 3A E7 0B 90 24 
+A2 6E 3D 62 04 1D 6B 7C 55 4F 96 97 9B 05 8D 1C 77 CF 0B 99 73 7D FB A9 A1 8F B7 59 35 E9 44 A2 
+19 1A E9 61 3E A1 6F 4B E6 4E 95 EA 14 6D FF 28 D0 64 AF C3 1B E2 38 DD 54 16 9F 89 01 CF 25 81 
+65 FB 6C 5F E7 9A A0 60 7F E9 F0 34 35 FE D8 76 11 4D F1 3E B0 21 4E A8 FE 02 5E 96 90 89 41 0F 
+5E EF C7 B2 BD 77 38 5D 4A 50 98 75 E9 E0 0C 3E 31 89 80 3B 6D F7 8E A0 C6 F4 B3 BE 03 E6 F8 3C 
+F5 09 0A 8B 88 0E B8 1E E4 E1 7A BC 87 D1 BF FB CE 6E 1D AE 58 BD CD 2F 45 79 FC CA B9 46 52 64 
+00 51 BD 71 43 B4 CE 5D 4A 4D 47 81 C7 55 E7 65 AF BD 5E 14 6A 3B AC 9F 6D 20 06 00 3D 6D D6 3A 
+8D F3 99 F7 12 00 A0 24 E4 49 40 BE C6 BC AB 4B CC 65 C9 00 20 67 B5 62 8B BD DF D4 FB EE AF 36 
+1D B3 1D A8 75 FC 51 F8 27 D6 70 D3 B4 F0 88 DC 3E 63 47 FC F4 89 8A CC C7 74 84 C3 DE C4 90 4D 
+77 59 57 C7 75 8A 8A DD E2 59 7D 24 11 00 89 3E A3 6D D5 2F 5D CB C8 60 43 C3 B8 CC 4E 88 FF 8E 
+F7 B2 51 AD 9F 7F 41 56 1B 3F C1 E4 FC 11 5F BF EC A9 FF 2A 20 58 FE 0B CF E0 4A A3 D5 13 34 3A 
+A9 56 23 32 66 33 57 9B B5 FB 76 92 88 C9 AA 3D 73 43 66 DF DC 71 6A C8 E3 1D E6 8D 93 45 7A F7 
+96 AF 0A FC 9A C4 02 D3 FF BF 7D EE F1 AA F2 82 FC 7C 4E BB 99 15 2C 9E 87 30 98 09 D7 D7 EF 78 
+5A 6A EC 7C 6F 8B 2D DF 4C 07 C0 AB CA 0A F2 F3 39 5F 35 8C F2 2A DE 4D 8A BF E1 BC F5 69 A9 89 
+D3 ED AD 83 F8 C6 24 02 EE B4 2F BE 08 2A 98 4E 5C 6A 3A 71 29 00 BB 38 F1 CD 63 97 23 C7 6F 6E 
+DA A5 D3 EF D2 54 39 00 00 92 8C 7C CF 1A B9 24 2A 55 10 D8 55 5C 7B BD B8 81 66 A7 66 54 0A 2A 
+D3 95 6B F5 12 D0 D4 52 25 BF 04 00 34 27 35 B3 82 A6 A6 DD BB 4E 63 AA 96 B6 9A 40 79 66 7A 01 
+79 98 ED 00 B5 73 21 61 C9 AC DE D1 11 C9 BD 2D 77 DA 7E 0B D8 1D 15 59 36 55 E4 55 14 66 B2 B6 
+BF 18 00 13 00 48 B2 F2 F2 B5 37 D3 84 84 00 63 37 E9 BC AE 2C 2A 2A 07 31 29 29 8E 0D E3 11 85 
+31 13 FA 9F D8 E9 F3 3C 73 A6 83 42 BE 9F D7 1B DC 72 BB 9D 52 F5 0B A8 F8 FE 02 8B AD AF 58 00 
+24 12 82 50 45 E4 E8 66 13 56 6C 5C 35 52 55 B0 C5 24 4E B0 E2 4F 3E 4F DF E7 37 6E 2F D3 34 86 
+4C B3 56 E2 A9 C4 44 4C 57 EE 99 17 F2 EF F5 5D 27 87 3E 5C D0 28 0D 91 90 14 83 A2 82 82 FF CB 
+1E 66 8A F6 F4 23 D7 1C 38 3A AA D0 C4 B3 13 ED CE 36 CA 85 A6 3E 39 70 C2 2F 0B AD BD 65 CF 6A 
+1B 71 80 92 B7 47 D7 1E 89 10 1E 7B E2 E8 62 5D 3E 1A 1A A3 68 4D 3F 7E 6D 5E 43 93 26 8F 3A D7 
+28 17 9A FA E4 D0 51 FF 1A 93 04 B4 A6 ED 5D 3D 50 02 A0 E4 ED F1 D5 47 22 45 C6 1E 3B B1 58 57 
+08 08 F8 9C 36 C6 65 56 C4 C9 99 9B 22 AC 8F DF 5C 6B 58 DD 12 A1 48 6A D8 38 1C 10 F8 FE CE E1 
+79 54 2C AB 3A 2E 03 82 34 39 09 A3 06 0C AF 7B BD B3 AA 58 5C 32 50 A9 14 12 5A C5 AA EF 70 C5 
+D1 9A A8 42 11 10 20 A1 2C 16 47 2C AD 62 30 31 10 A0 52 81 A2 61 D3 5F F1 7A 44 D8 0F B5 98 38 
+19 93 95 BA 96 12 06 2C D7 88 98 68 E4 5D 79 DF C5 03 7A D4 D6 63 52 93 9D AF 1A B7 35 48 24 12 
+00 42 6A A0 3D 22 33 6C E2 90 23 6B 7C 7D D3 67 8F 08 7C 16 29 64 7B 64 64 ED 34 56 1C C7 49 74 
+87 FB 0F 96 6B 91 71 F6 AF EC 8F CF 4E ED 58 B7 A0 48 D0 FD 80 AD 64 0B 49 0D 14 28 88 7A E4 E2 
+1A D7 B8 7F 59 6A AC 1A AF 71 19 40 C4 6C D5 EE B9 21 73 AF 6F 3F DD 67 42 13 73 48 40 22 11 6D 
+A3 E6 C1 19 B9 3F 12 E2 7F 54 3B 40 40 B4 B8 0A 03 34 F3 C9 F6 F5 37 D3 35 16 5F DB CB EF 63 7D 
+5C C1 2B F3 7E C4 C7 FF A8 89 CB 22 C5 6C 0C D0 4C CF 2D 4E FF A5 69 2C BA B9 87 18 EB FB 23 68 
+63 5C A6 28 F7 14 C9 8D 71 BB 13 3C BB EF F0 BA 49 F6 58 51 46 E6 2F 92 5C CF 9E 14 80 AA E6 EF 
+A5 52 A9 78 4E 71 31 0E B2 00 80 95 C4 27 64 A2 D0 0F 00 AA 23 21 0E 38 00 90 E5 F5 F5 E4 D9 FE 
+E1 EF 4A 26 0F 95 00 00 28 8D 8C 4E 40 A1 37 00 59 41 57 4B 86 15 FC 26 AC 64 C2 30 89 EA 5F 7D 
+F5 26 16 95 1F A5 25 05 40 D5 B7 B5 96 7E 10 7C D5 3F 89 6C B8 4B 4F 48 56 D2 42 FD 90 E7 ED 9B 
+68 BE DE 6C 9B B6 AC 05 10 92 96 11 87 AF F9 05 18 70 4E 37 12 1B 34 69 B8 EC 42 BF 67 6F D8 41 
+1F A4 46 B8 0E 6A 70 CA 12 42 15 12 13 97 A0 00 88 4B 0C 5E 7A 8C FA D3 6E 89 AB E7 72 9B B9 22 
+CD 27 29 71 88 26 D3 1D 6E BE E5 76 CE 48 9B 10 31 5D BD 67 4E C8 BF 37 0E DC 11 47 C1 A8 FE 3A 
+5A 58 50 02 D2 B2 C4 47 6B F3 50 B4 16 5F F5 5D CC 71 81 11 7B 69 FD 0E 3F F6 C0 DD A7 D7 9A B4 
+6F DA 67 77 43 D1 5E E4 1A B0 88 E3 02 33 F6 A2 D3 AE E7 55 03 F6 9E 5A 6D FA 67 9A F4 FF 47 1B 
+E3 32 D2 73 C2 9A C5 1E 73 4F AF 9D F8 73 DC E4 91 A6 74 69 4A 79 FA 07 FF 87 6E AF 44 47 9D B4 
+D7 6A 31 2E 53 75 FB 6A 53 FC EE 1F B9 AC B9 C4 5C 24 2D E0 D2 F9 77 28 A9 7A 4E 03 42 13 15 A1 
+A0 89 AF 1E FA F6 1A 3C D8 6C 8E 83 E9 93 83 3B 97 CB FE 5A 66 23 9B 1D EC 72 C4 B7 10 93 03 00 
+10 B2 FE 77 BE B1 F7 91 ED 8E 32 A5 4B 87 A9 61 49 BE 17 8F FA 56 99 6E 9E 69 2A 08 00 82 86 B6 
+96 B4 25 1E 7E 02 FD F7 1B 09 01 59 C5 C2 F4 9F 53 D7 82 10 43 67 DB 7F DA 12 94 04 74 74 D4 49 
+7E C9 C9 4C D0 E2 2C 18 9A D9 C4 31 4A 6E EE FB 8B B2 94 C6 6C 33 6F 61 B7 76 11 93 81 C6 34 AF 
+0F 9F AB E6 36 99 4C 51 9F A4 D4 05 5F C6 22 66 8E 7B E6 86 FE EB 9A 80 71 74 A8 62 25 29 29 39 
+82 9A 7A EA FF 7F 9D CB ED 85 19 75 62 CD E9 08 52 BF 85 A3 A4 12 03 FD 13 39 52 10 31 35 73 0B 
+75 89 3F EF 15 C7 8C 3C B1 FE 64 04 C9 70 E1 48 A9 A4 97 CF 93 38 52 48 62 74 0B 4B 0D FE 8E D4 
+EC DC D8 40 3F 72 FD C3 48 12 53 B7 B0 54 E7 6F 9D 3B 83 36 F7 2F D3 0C 57 5D 7D A0 7C E9 DC 1D 
+BF BB C7 3C 0B 19 20 22 AD 6A 30 70 F9 65 C7 F9 83 5B 39 EA 99 AC 36 7B CF FE D4 3D 67 5C 56 DB 
+9F 95 D4 18 38 73 DB 1A E1 55 97 6B 64 5A 4F 9E AA B3 F9 FE AE 55 5F F3 1E FB 38 CD 3D 75 15 3F 
+72 F8 C6 DE 05 57 50 49 6D 5B FB E9 46 2E 41 D5 AA 6A 2D BC 78 55 E8 F0 89 1B 07 17 BB FE A2 48 
+D3 4D C6 EE BB B1 66 6A CD 08 1C CD 74 90 85 98 9B B7 AA 99 B9 14 02 40 D5 B7 34 EE 71 3D 43 DE 
+C6 56 99 CB A1 CF CD 83 C8 0F 1C A0 7B F8 7E E4 27 E6 68 4B CE E8 49 35 98 3C 5E EB DA 89 6F 3A 
+EB 26 B6 7C 52 34 22 26 46 63 A4 FF E2 F6 76 AA 4F EA 92 1E 4B 11 F3 D5 BB E6 86 CE 73 FD 5E 7F 
+A9 22 2A F2 0B D5 D8 B9 4B 0F 7B FD CB 60 A6 24 A6 B1 70 56 B4 AB 73 B4 6B C3 14 8A D6 F2 C7 5E 
+EB FA FC 81 71 39 25 21 8D 85 B3 A2 5C 37 46 35 36 49 73 A5 BB 8F 53 9F EE 51 8B 37 F0 8A 77 2E 
+2B 39 CF E5 A0 E8 AE F2 7C DA FC E4 AE BF 87 16 D6 02 72 5F 87 FD 77 83 A6 DF 9A 65 30 78 47 18 
+4F CB 4B 0B EF CE D7 1E 71 FC 63 55 FD 95 0A 9F 35 FD 8C 9D FC 18 2D 25 FD 2E 4A 7D D6 58 98 38 
+7A 15 FD B6 1F EC 34 3A BA 0E 9B FF E8 F0 3A 6C 7E A4 8B D7 61 77 03 FC B3 0E FB CF 7B FF 77 2D 
+88 D2 84 45 76 F0 FC FE CB E2 D6 F3 36 A5 3C E2 75 0C 5B CF A8 0F 97 13 CF 5A 48 EA 12 B0 4C EF 
+87 A1 B2 D3 17 0C EB EE 65 89 04 04 04 6D 85 88 CB 8D 11 1D E0 B8 CA 38 FA EA AD AF BC 1D 37 8B 
+B3 AB 2A 2A 2A 2A 2A 4A F2 92 5E 5F DF B2 EB 99 C8 F4 25 63 6B 7A 74 5A 48 EA 72 2A A3 AE FD 97 
+3A 72 FD A2 BE 44 DF 32 01 C1 1F 07 B1 EA A7 09 48 4F BB 5D C7 D1 E0 92 02 0C E4 5B 8D A2 68 C2 
+E5 C9 7D 2F 03 90 C8 42 12 0A 5A 16 13 4F 5D 59 5D DB 9F DB 42 52 97 83 E6 55 A8 2D 3F 39 D6 46 
+A2 F5 AC 04 04 04 FC 06 11 97 B9 80 C8 99 4D 9A C6 43 3E 29 FB 6B 09 F6 6D 4E FA 1D 90 95 07 CD 
+54 EE BE 9F 27 20 20 E8 08 44 3F 06 01 01 01 01 7F 41 C4 65 02 02 02 02 FE 82 84 E3 CD 6E 7C 62 
+6E 62 8A 61 98 20 95 18 3A 22 F8 AD 14 15 15 D1 68 34 21 A1 BF 67 1F 07 06 83 51 59 59 29 25 F5 
+57 ED EB 97 9D 9D 2D 2F 2F 4F 22 35 B7 E9 C2 9F 47 49 49 C9 A4 29 53 76 EF DD D3 DD 8A B4 D8 BF 
+AC AA AA 3A 7B CE BF C6 26 26 BF 4D 1B 02 02 00 D8 BA 69 F3 88 11 23 06 DA 0E EA 6E 45 3A 8D 90 
+A0 A0 00 7F FF 7D 07 0F 76 B7 22 9D C9 E0 81 36 77 1E DC A7 FE 45 ED B6 03 FB F6 69 69 69 75 B7 
+16 00 2D C7 65 01 01 01 69 69 69 05 05 85 DF A6 0D 01 01 00 08 D1 84 A4 7A F4 F8 9B 2A 9E 54 8F 
+1E 42 34 DA DF 64 11 00 90 48 A4 7F FE C7 DE 79 87 35 91 BC 71 7C 92 6C 12 3A 84 7E 20 A0 14 29 
+0A 82 02 0A F6 72 2A D8 2B B6 53 F1 14 1B 88 0A D8 C0 8A 58 40 40 C1 02 87 8A F8 B3 57 50 A4 0A 
+D2 A4 37 3D 0B 5D BA 48 4D 42 4D D9 CD EF 0F 40 03 02 82 87 12 71 3E 0F CF 3D E7 EE EC EC F7 9D 
+99 BC 3B 3B 33 3B EF 1F 7F 90 C9 3C B4 E3 DE 7F 44 40 40 80 47 1E 33 70 7C 19 02 81 40 78 0B E8 
+97 21 10 08 84 B7 80 7E 19 02 81 40 78 0B E8 97 21 10 08 84 B7 F8 BE EF FD 50 5A 5E 52 4C C2 DB 
+52 1A CA 2F 35 54 DB 78 A2 9E 82 60 9B 83 C7 AA B2 93 72 59 8A 63 46 CA F7 D3 6C 40 53 C9 AB CC 
+0A 21 AD 31 2A 62 3F EF 11 82 55 C4 DD 0E E3 4C 5F 33 F1 F3 6E 16 58 43 61 4A 54 62 56 69 4D 0B 
+59 46 C3 68 EA 78 0D 89 B6 82 6B 29 7D 9D 5E 58 FF 55 A0 26 1C 5E 42 6D 9C 66 5F B6 E4 E7 BE 3D 
+FD 43 C6 9B 4A A1 E1 06 EA 92 9D 32 60 17 86 FF 2F 99 B2 68 A9 FE 4F 2C 8C 5F 11 46 F9 EB B4 22 
+DC D0 D1 DA 72 DC AD B0 A9 24 F3 55 09 49 D9 50 4B 06 C1 AA B3 92 73 59 0A A3 B5 BF 6A A6 EC 4F 
+EF 92 73 EB FA B7 42 FB 03 46 D9 EB F4 22 9C D2 98 4E 26 95 BE CA 2C 26 AA 18 6A C9 20 58 55 56 
+72 2E 4B B1 53 02 00 00 60 7F 7A 9B 9C D7 85 49 04 09 B5 B1 1A D2 3C DB 92 30 7A 41 C6 DB 4A A1 
+E1 86 EA BF 61 60 87 BE FB 65 B4 2C F4 C8 E6 7D 37 DF B3 C4 FE 90 15 23 36 57 97 7E 6A 12 D3 B7 
+38 73 DE 76 B2 24 1E 00 46 D2 85 4D BB AB 77 BD B8 F1 77 4F D1 D2 3B C1 28 08 72 3F 95 31 DA C3 
+7E E6 57 2B 56 D9 C5 0F 0F AF BF A7 7D F5 85 E3 84 9F 35 ED 8B 95 3D 3E BC FF 89 EE 15 B3 56 03 
+B0 9A 14 9F 83 07 2F 84 15 30 45 E5 E4 C4 00 B5 AC CC 91 34 7C E9 A1 73 C7 96 AA F2 01 B4 E2 A9 
+E3 5A E7 8C AF B7 38 22 FF 79 26 F3 9F 85 3D 6C A1 DF 03 EC EC 5B B6 EB 1E 68 9F 8B F7 30 ED 94 
+01 22 2B 5E E9 6B 77 5A FC A1 D3 0C CA EF D7 56 7B 0D 5A 19 E4 B8 CE 15 D9 1F 71 B3 43 7C BF 32 
+FF 43 E6 9E 94 23 49 7E 2B 28 8C 24 CF 4D B6 D5 BB 22 6E 6F E8 1C 56 A9 3E F2 CC FA 03 31 5F 87 
+38 E3 9F E5 96 EE 35 FF FB 2A B4 1F 40 2B 9F 1D 37 77 21 EC 8B BE D9 21 BE 5F D9 E3 C3 6B CF 8B 
+3B 26 5E 5D 49 61 24 9D DF B2 AB DA 3A EA 96 79 E7 5F 5E FD 0B 67 73 87 E8 2E 4C 9A 79 36 ED E2 
+77 B6 D1 9F 00 3B E7 A6 9D F9 FD 91 EE 49 1E 26 3C AB F1 87 D1 67 BF 4C 0D 39 7D F0 76 CD 38 C7 
+40 97 95 9A 42 78 00 98 15 31 6E 5B 77 78 EF 75 D1 0B 3B FD E7 F7 C5 11 C0 68 71 37 FD 62 84 34 
+7B 1D D9 F7 87 42 8B 3C E7 F1 76 FC 51 97 E1 08 00 00 30 DF FF B3 CD C2 25 5F D3 E2 C2 45 CB 3F 
+95 05 F1 00 A3 BE B9 65 6F 75 D4 7E BB F0 90 47 07 C7 F1 01 00 00 71 9C 7D C8 85 E5 92 DC CB EB 
+71 38 22 FF 8F 68 4C 7C 7A 1B 36 0D 9F EF EC 9D 31 61 DF 98 C1 F3 D5 C5 CF 87 3C D6 CA E7 2A 4B 
+A1 8B 8E 18 65 C9 F9 D4 39 EC 2F 4D 91 43 4F 72 D9 68 75 B7 79 E6 1C 7D DE 5E 0F 46 1E 6B E9 E5 
+C7 52 EC FC 8A 05 00 A0 2C BE 94 62 CA 15 AA 81 43 4F 74 35 DF 71 AF 65 A6 A9 21 6F 9B F4 1B D3 
+D7 5E 17 33 3F E3 0D 5D 74 FC D2 25 9A 42 AD 97 92 64 27 ED DC BD 58 05 E4 BD CA E5 7A 22 73 D8 
+D4 FC B4 17 CF A3 53 F2 EB DA FB 92 68 69 5A 68 70 72 31 A3 3D 09 3D 2F 3E 38 E2 4D 15 C6 28 4E 
+89 CD AA E3 60 55 6F 43 43 52 4B DA F2 68 2E 7F 9B 10 F9 22 39 B7 EE AB 90 D5 6C 6A 7E 6A 74 F8 
+F3 98 F4 42 5A 6B CE 58 D5 9B 88 E0 98 2C 6A DB 7B 5A 53 41 62 70 70 72 51 DB 6D B0 9A 77 51 C1 
+2F F3 1A D0 8A F4 B0 88 57 95 28 4A 2D 48 8D 8A 88 4C CE AB EB 66 17 4F 34 FF 9E 77 B0 C0 FC 95 
+13 44 00 00 00 AB 7C E2 71 31 4D 60 9E A3 A7 DD 2C E5 D6 A1 1A BC D8 C8 35 27 ED 17 8A 17 3D BA 
+F1 A2 7D 8F 66 1C 59 48 58 54 44 84 EB 4F 58 84 FF C7 EC 08 85 97 9A BD 62 6A C3 FD CB CF AA 7E 
+CB 20 D7 FD 05 87 DD 44 A7 37 B2 BA 2A 43 92 80 C8 97 7A 14 A8 0A 3C 72 E0 4E B9 9A 85 AB 13 AF 
+C7 60 E5 A0 CD 74 5A 63 97 91 E7 49 02 5C 8D 53 B0 EA D9 21 FB BB E5 6A 9B DC 8F C3 18 AC 3C 4B 
+5F BD 07 32 44 45 89 AF 2E FA DA 85 30 C5 8D D3 D5 44 09 00 00 C0 37 F1 50 58 22 57 1A 4E 75 8C 
+E3 62 8F D8 8F 24 01 76 5D 2D 18 BA EC 84 DF 89 39 F2 04 66 B2 F7 AE BD 2D 0E 09 D7 56 91 F1 00 
+00 76 79 A0 F3 8E 3B 5A FF 44 DB 35 04 F8 BD 28 41 59 B8 50 AF 8B 0C 6B 63 7D 79 5A B4 8B E5 BE 
+CB A9 34 7E 61 62 33 47 69 CA C8 86 F6 A6 86 D1 52 7C 76 DB 9E 7F 51 41 94 10 E5 D0 6A 38 0A 26 
+BB DD 4F AD 1D 89 66 5E DD ED C2 77 2C F2 CA 32 09 00 9A 13 BC 76 6D 7B 48 5C 7D 3D FC F8 78 32 
+C0 3E 06 38 5A 5E 1A 72 2E 7A 74 CB 15 DB 23 F5 73 A7 55 06 06 96 93 05 D8 75 54 9C B2 99 CB B5 
+63 A6 9D 1B 26 3B EB C9 93 D7 32 93 F7 6B B6 96 0B 2D 3A 34 BE 51 76 E1 B2 69 1D 3B 56 22 D3 1C 
+9E C4 1D 93 90 E4 07 68 1F B6 CF 47 8B 6E 58 5B FA E5 74 7A 20 E0 28 33 83 EE D9 F6 3E 17 20 30 
+F6 CF 09 88 F5 C3 A0 8A 45 EB E0 CF EA 7B 61 A6 5D B1 69 1D C7 E0 EF A1 0C 1B 52 CE ED 74 8A C1 
+4D 39 E6 B1 4B 5F E8 E7 89 FB 3E 98 A9 57 F6 74 3D 8E C1 4D 43 AA FB CE 93 D1 60 F2 F1 73 D6 06 
+3C 6F D2 6F 4C 5F FD 32 5E 66 F1 81 FD F1 9B 8F 7B 6E 36 F1 16 1B 3A 42 4F 4F DF D0 78 EA EC 3F 
+C7 0D 15 FA D2 18 D8 85 EF 18 76 BE 2F 37 8C A6 34 BF F6 F8 7B A5 A7 D7 DD 75 B3 BA 0F C9 45 99 
+77 FC 72 5D D1 E4 13 42 BB 1F 7B 2F E0 07 D4 E0 DD FB 7D 8A B4 1D FC 5D D7 6B F3 57 44 9F D9 62 
+75 05 6B 6D 40 D4 E7 C7 76 B8 67 0C B3 BA FD 60 CB 58 29 4E 65 BC E7 F6 6D 27 2D 4F 2B 07 1D 99 
+34 59 FB 84 77 42 5A D3 B2 99 02 CC 77 89 69 0D 24 84 95 91 5C C0 1E AF 89 AF 7D 19 F7 46 C0 F8 
+AF B1 02 20 1A 70 EA E2 22 A9 07 6F BC 5C A7 23 52 9F E1 B1 7E B5 97 E7 9D 55 33 77 6B 75 28 00 
+B4 34 36 2E 9F 5F DB 4A B3 F5 9B 1F 66 51 7E 61 0B 41 45 53 AB F3 EB 1E 5E 54 4A F2 CB BF 38 D5 
+AF 9F 3D BA C7 DD CA 71 FC 2A 13 4D C6 74 DA BD 19 27 A4 66 3C D3 44 A5 D3 1B 00 4E 70 C4 B7 CA 
+BC 13 FC BA 63 B4 B0 C0 D8 78 DA BA A5 83 6A BB 85 7E 06 CD 0F 3C BD E7 1D 77 CD 35 64 97 63 A0 
+D7 45 86 55 04 1D DC ED 93 23 B7 D2 FB F4 72 65 DE D8 0E 17 2D 78 76 62 CF 3B AE F1 2B 4E 43 4E 
+39 06 C4 7B 7B 3D 56 F1 EC 90 AD 77 8E DC 6A EF 93 2B 78 C4 24 48 D7 F4 BD 76 C8 6A 66 9E C1 13 
+D7 06 3D 09 7A 91 90 9C 16 EE FB E2 B1 8F AB F8 E8 BF 8E 7B DA CF 94 6F 0D 72 8A 28 2E B0 5C 37 
+9A 42 00 40 68 C4 FC E9 EA E7 BD 8B 4A 50 D0 CB 50 89 0D 71 81 CF 6B 35 36 D8 AC D1 16 06 00 C8 
+4E DE 65 3B 3F 68 7D 24 00 00 D0 A2 FD C3 AB D5 D6 5F D9 3C 56 8A 00 00 90 36 DE 7E 60 65 E8 B2 
+3B 0F 63 F7 9D 99 3A 49 DD F5 7E E2 6B E6 4C 83 E2 C4 E4 4A 9D B9 B3 CA 82 52 53 AA 31 4D 81 84 
+97 E9 04 83 23 E3 5B 5D 26 A2 34 CF 62 B5 8E 18 1E 00 51 1D D3 A9 AA DE 57 4B 4B D9 A0 A3 5F 66 
+E7 64 7F E0 28 4C 1E DA FE 29 26 A3 85 09 F0 7C FC DF 18 C9 65 7F 78 EA 7A 3C A4 C3 F0 B2 D4 D2 
+4B 33 C6 C8 74 74 E7 78 89 B1 AB AC C6 F6 AE 18 7A 44 70 D8 30 19 56 64 56 2E 13 18 F2 C4 37 A3 
+BC 09 87 D5 58 53 5D CD 5D 40 8C 26 66 AF A7 30 18 39 BE 36 87 9E D0 C7 D8 DD 3E 30 95 67 96 03 
+70 58 0D 35 D5 D5 DC AD AA A5 91 D5 7B 93 B2 AF D9 D9 3F A1 EB DB DE B0 9F C2 33 26 41 BA E6 FB 
+9E 9A 64 39 83 45 5B 0C 16 6D 01 80 4D CD 7D F9 C8 CB D9 D5 6F DF 11 4D 5D EF 65 D2 00 00 80 93 
+94 91 6D CB 17 47 22 91 01 9B D5 E5 A8 57 57 A0 15 45 A5 CD 64 45 15 C5 76 5D C4 E1 EA 43 09 91 
+00 00 F4 53 51 79 13 BF B2 C6 B0 CF 8A 49 EA 1A CA C4 C6 F2 92 1A C2 9F 53 27 2A 9F 8F 4E C8 67 
+0E 4B 4B CE 1F 66 74 78 6A 56 F8 D1 D4 94 86 65 82 B1 A9 98 FE AE 09 C2 00 30 00 00 38 29 19 99 
+F6 8B F9 F9 F8 00 C6 FE 6A F0 BA B9 AE AE 11 08 53 28 6D 3E 96 40 11 17 C5 A1 B4 BA 3A 0C F4 F4 
+BA 4B 34 B0 8F F4 5B FB CD 05 47 18 F5 55 D0 D3 8C EA 4E 45 81 E3 57 5B 6B 36 FE 1B 97 76 04 2F 
+26 26 0C EA 6A 6A 78 63 9E 94 57 41 34 CC 9C AF 76 58 8F 91 EB B9 68 9E 67 C7 44 68 51 80 D3 99 
+F0 F2 D6 86 80 A8 AF 38 6E 35 59 04 00 40 8B 77 D9 E5 9C 2C 30 D7 CD C5 E2 AB 77 A5 01 04 51 37 
+73 BD BA BE A3 49 4B 4C CE 77 4A 85 16 F9 9F 72 09 FB D8 6A 13 51 7D B9 A3 F5 24 51 00 68 F1 AE 
+D6 CE 29 82 73 CF B8 59 68 C1 19 63 9E A7 8F 7E 99 99 EC BE 6A 5F F2 78 57 BF 5D 7A AD 3D 11 44 
+4C 6D F2 86 13 C4 0F 49 1B 42 52 DF 32 5B FD 32 C0 E3 BB DB FA 0F FB B2 AB 28 93 F5 F5 CA 1D 00 
+48 24 04 87 B2 98 5F 06 61 39 68 9B 23 43 88 44 1C CA 64 72 F9 52 56 0B 03 03 44 12 09 20 6A 93 
+27 C8 FB 26 27 14 2A A7 BF 93 D4 B7 D4 32 12 D5 66 FA 24 A7 A7 E1 93 1A 47 59 4C 14 6F 6F C7 38 
+7C 67 D7 D9 D9 B3 E1 70 38 00 F0 9F 37 2E 24 28 E9 8C 90 C0 42 33 33 1A 80 5C 87 A5 26 4D 2F 9C 
+FE F6 AA 9D 7F E4 F4 F2 3E 2C BA E0 D4 A6 DC FF C7 BB 73 D8 40 BC F8 DC BE FA 65 1C 0E D7 F6 1F 
+C8 7F 84 D3 5C F5 21 3B BB B0 CD 87 09 D6 B1 00 00 68 A9 FF 41 1B BF 12 35 8B AB 8E BC 3E D7 D7 
+25 9C E6 AA 42 2E 9B A8 6C 0C A0 E5 01 07 6C AF 17 AB 6D F2 3B 06 E7 FA 7E 09 FA E8 97 11 45 59 
+C1 CA F4 07 37 A3 D6 8C 9A F9 79 91 3D 56 57 5A 5E 8F 93 96 95 45 00 60 75 7F 2D 89 44 E2 7C A2 
+52 39 40 0A 00 80 D1 B2 73 CA 51 A0 0B 00 68 F5 84 1C C0 01 00 10 64 46 8E 90 61 87 25 26 D1 96 
+CC 10 05 00 00 7A 4A 5A 0E 0A 86 01 40 90 D3 52 97 64 46 BD 4C A0 2D FC 53 B4 F5 AE B1 2F DF A2 
+32 26 EA 14 00 48 23 A7 8E 97 B8 1B 75 25 2C 8F A0 77 64 04 9F 94 D8 38 D5 53 01 37 FC D0 EA 11 
+6B 26 F7 E5 5B 00 3E 09 49 11 F0 BE BA 06 03 AD CB 8D C8 E3 16 CC 1A F2 E0 A1 EF CD EC 19 5B D5 
+3F 77 9C D0 E2 C7 D7 EE A5 E7 4D 5A 2D 8B 00 5A EF 33 27 28 6F F4 8B DD D8 FB F4 DD 82 D6 D4 D2 
+81 84 94 14 74 CC FF 19 44 63 E3 D5 B0 0E 75 D2 F2 F6 B2 CD A1 50 F6 A4 A3 E7 76 E9 7F DF B2 CF 
+81 06 D1 D8 E4 13 BE 89 EB 00 E3 ED 25 DB 23 21 AC 89 8E 67 AD 0D 7E 4D 93 7E 3F FA E8 97 F1 B2 
+0B 77 5A 3C 5E 77 6E D7 A2 B2 F9 4B 66 1B A8 48 20 8D 25 99 61 F7 1E C4 0A 99 B8 AF 54 EF D1 2F 
+93 B4 46 69 20 A1 77 9C FF 19 BE 79 AC 60 71 B8 F7 85 24 14 27 D0 9A 29 BF 90 20 82 E6 C6 DE 0B 
+56 98 36 CD 70 ED 06 03 FF 93 87 B7 49 D5 6F 9D 2C 55 11 E5 E5 1C 5C 8B 49 03 00 00 DF F8 BF CC 
+C7 3C 73 3E 68 25 49 DF F2 A7 32 96 17 7C C9 25 98 65 B0 7F 95 01 19 00 40 D6 9B 6A C4 BF F9 71 
+28 71 82 D3 68 3E 40 50 1A 67 F0 C7 D9 AB 2F F0 7A 76 53 FF E8 4B F7 80 A8 A9 A9 8A 0B CD CF 67 
+00 F5 D6 82 E1 33 DC B2 6F C1 0B 2B F7 8D 1B EA AC B6 2D 9D A4 25 8D 95 27 3F BD 78 FA 7C 2C C1 
+E8 B0 F5 6C 0A 00 34 00 00 87 96 13 F3 3C A4 63 48 55 1C 59 5E 6F D2 88 FF F0 31 15 5A F9 26 32 
+84 40 FC FC 6F BC 88 CA 38 23 15 11 00 00 46 CF 2F F8 C4 A7 A6 A5 0A 07 97 FB 1D 46 AA DB CE 73 
+C9 38 DD 8D 26 94 DC 88 B0 5C AE 33 78 61 E5 B1 E3 54 45 7F BD CE 26 23 C5 CD C6 3D 19 A7 B7 71 
+36 25 2F 32 24 8F EB 0C 4E 58 65 9C 91 1A 6F 7B 6A 76 E5 DB 88 50 C2 17 2F 85 13 56 1D 67 A4 CA 
+DB 9A FB 83 3E 8F 2F F3 EB ED B8 72 57 D1 FB FC CD D0 5B 67 02 6A 5B 80 A0 C4 50 ED 49 DB FE B1 
+32 9F 26 DB 73 9B 25 28 AF 39 E6 54 74 CC C3 CB 7A A5 A7 98 DA A4 55 0E 3B 05 76 FC D3 96 E7 F8 
+25 CB 34 F7 DF 39 B2 E3 7D D5 A3 20 DB 75 67 AF 70 9C 4F 5F 73 FC FB 32 2A A6 31 75 A5 D9 68 AF 
+17 AD 52 D5 37 5E BA C2 77 DA ED DA 49 0B 9F 7A 44 42 45 7F EE F1 6B 3B 97 A9 B5 5A C0 6F 30 65 
+9C F0 83 67 43 0D C7 52 F0 00 90 46 1A 8D 11 F7 2D 95 99 3C 55 91 D0 17 E3 F0 32 93 26 6A 9D BE 
+93 F2 9A 61 6A D4 DA 3D C6 4B 9B 38 F9 7A 48 1C 39 75 D3 61 B5 4F EB 88 0A 51 4A 67 C1 31 77 FB 
+35 AA 08 00 28 00 00 B0 DF DD B0 DB 76 A3 63 4E 38 C9 25 3E 71 A7 67 7C F7 E0 24 A7 29 F1 92 35 
+F7 E2 43 44 CB F2 49 C0 4E 2D 04 80 A6 D4 E4 37 44 7D 5B A3 9F 15 5B FB 77 82 51 90 5B CC E4 30 
+D3 7C EC D2 7C 3A 9E 41 D4 B7 3D 0A DC AD F3 0B FA E5 82 9C 62 26 87 99 EA B3 37 B5 B3 49 C3 2D 
+1F 06 D9 EA 0C 8C AC DE C1 69 4A F2 B2 4C E2 3A 80 68 ED 08 78 D2 FD E2 AE C1 03 A7 7B 56 AF 58 
+F9 32 2E AE 87 04 83 10 B4 E4 7F AB B5 A7 1D 4A 68 E9 7C A2 A9 32 27 3D 31 EE 65 D2 AB C2 3A D6 
+40 08 FB 0C 2D 78 B7 BE BE F5 D3 BA 01 15 F1 63 D9 62 61 11 12 14 3C D0 2A FA 93 E0 A0 A0 AD 9B 
+37 0F B4 8A 7E 46 43 55 AD A5 E5 AB 1F CA AF 8C 9D 8D CD FD BB F7 06 5A 05 87 C3 E1 FC 7A CF FF 
+1F 0B 7E C8 C2 4D F3 40 C8 9D C8 CE 1F 8C F0 4B A9 E9 8D 1D 6F 6C A8 A3 24 36 90 2B 3F B1 F2 C0 
+BB B1 D2 2B 36 CC 14 1B 40 11 10 08 E4 87 02 FD 72 67 84 26 5A ED 18 93 76 E5 7F 9D 17 4E F0 04 
+CD A9 D7 FC 8A 67 DA 6E D4 81 63 CB 10 C8 E0 05 7E F5 F3 15 78 D9 79 47 5C D1 28 5A 0D 06 64 78 
+EC B1 85 56 35 2B 6F 77 33 9D 2A 3A D0 42 20 10 C8 0F 04 FA E5 2E C0 4B 1B 2E 5E 3E D0 22 BA 82 
+A0 38 79 85 E2 40 8B 80 40 20 3F 18 1E EB 10 42 20 10 C8 6F 4F 4F FD E5 AA AA AA C7 0F 1F A5 A6 
+A4 FC 34 35 10 08 00 20 3F 2F FF 59 60 60 76 76 D6 40 0B E9 37 F2 72 F3 F2 F3 F2 3C CE 9E 1D 68 
+21 FD 09 8A A2 17 3C CF 23 48 9F 96 A2 F2 34 EF DF BD 53 50 E0 89 17 D2 6F 8C 63 70 38 1C 0C 83 
+FB 30 40 7E 32 9C 41 D6 F0 38 1C 0E 87 03 06 93 45 AD 70 38 18 86 0D 9E 77 6E 0E 07 70 38 3C 51 
+47 3D F9 65 29 29 A9 C5 4B 97 18 8F EF DB EE 0D 10 C8 7F 24 3B 3B 6B EE BC 79 B3 4C 66 0F B4 90 
+7E 23 24 38 18 C5 D0 9D BB 77 0D B4 90 FE C4 FB D2 25 CB 1D 3B C8 64 1E DA D9 E9 3F 52 5E 5E 26 
+27 27 37 D0 2A 00 80 E3 CB 10 08 04 C2 6B 40 BF 0C 81 40 20 BC 05 F4 CB 10 08 04 C2 5B 40 BF 0C 
+81 40 20 BC 45 9F BF 2B 69 2A C9 7C 55 D4 16 0A 15 87 C3 E3 10 7E 8A BC 8A DA 10 11 5E 5A 2C D3 
+54 92 99 F9 49 48 6B B4 AA 18 A8 CA 4A CE 65 29 8E D1 96 EB 30 39 81 55 67 25 E7 B2 14 46 6B CB 
+7F D7 9C C5 7F BC 1C 32 B0 60 F4 82 8C B7 95 42 C3 0D D5 7F A1 70 4A 8C B2 D7 E9 45 38 A5 4E 2D 
+B9 A9 F4 55 66 31 51 C5 50 4B 06 C1 BA 6E EA 00 00 F6 A7 B7 C9 79 75 5F 85 0C C2 11 24 D4 C6 6A 
+FC 87 AD 68 7F 30 BF 64 35 F5 17 7D F5 CB EC 92 87 07 CD CF BE E9 B8 77 04 49 6A F4 0A 87 B3 07 
+E7 28 F2 C6 D7 83 EC E2 C7 0E E6 F7 47 5D 79 EE 34 01 4B 3A BF A5 2D 48 30 EB 43 90 9B 73 C6 E8 
+B3 F6 B3 C8 80 91 E4 B9 A9 35 1C F2 77 45 6F F8 8F 97 43 06 16 76 CE 4D 3B F3 FB 23 DD 93 3C 4C 
+FA 10 6E 66 60 41 2B 9F 1D 37 77 21 EC 8B BE D9 21 8E 54 D9 E3 C3 6B CF 8B 3B 26 5E 5D 49 61 7C 
+69 EA 9D 1A 65 FD 0B 67 73 87 E8 AF A3 03 F1 CF 3C 9B 76 71 21 CF 16 C1 AF 58 4D FD C6 77 79 52 
+D2 A4 23 2F 3C E7 0B 01 00 00 87 45 2F 4D BE 7E 74 DF 15 FB FD CA DA D7 D7 F5 6D BB E3 1F 0F 79 
+AC A5 97 1F 4B 51 12 0F 30 5A DC 0D DF 58 61 4D AC F5 B0 95 CF 55 96 C2 F7 3E 87 FF E3 E5 10 48 
+FF F3 A5 A9 77 86 B2 F8 52 8A 29 57 C0 0A 0E 3D D1 D5 7C C7 BD 96 99 A6 86 F0 7D 8F 47 F9 BE 1E 
+2E 9E 24 24 22 D2 B6 79 8E 88 A8 A9 8D 6D 4A D8 5F B7 22 E3 A9 EB 14 C5 CA D2 9F 67 11 F5 8C 65 
+AB 33 DF D7 4B 69 8F 51 A5 20 00 A0 F4 E2 D7 AF 72 6B 30 8A B2 AE 8E B2 28 F7 2D 31 7A C9 BF AF 
+73 AA 51 8A AA EE 28 25 D1 2F 4E 9D 4D CD 7F 95 59 40 C5 49 AA E8 6A 0F 6D BB 02 AD 48 8F 78 4B 
+D0 9D 32 92 54 94 91 F9 81 2E A0 A4 37 5A 95 C2 95 59 73 F9 DB 8C EC 2A 82 C2 A8 51 5F 8E 71 D0 
+66 3A 8D C1 C4 18 C5 29 31 D9 54 0E D6 F2 26 3C 58 5E 6F FA 68 62 13 9D CE 64 61 5C F7 2B C8 7C 
+55 40 05 12 AA DC F7 CB 88 7C 83 1F 35 75 24 A9 30 E3 D5 87 7A 01 25 5D 3D B5 D6 FB 71 D8 ED 97 
+77 9F A6 5D 54 C5 BB 57 EF 2A 38 B2 23 47 AB 63 EF 23 5E 61 23 66 8C 96 E7 B1 67 17 64 50 D0 DE 
+D4 BB 38 45 12 10 F9 B2 FF 20 3B FF D6 4E FB BB E5 6A 16 7E C7 61 AC 3F 9E A5 5F 46 1E 70 24 52 
+7B 3E CC D4 CB BB 0E 57 E8 29 95 BC 2E 05 1C A1 D9 97 42 0E 48 F9 3B 58 9D 7C FA 01 13 A3 20 8D 
+B5 E8 10 D3 BD EE A7 D7 68 09 00 00 E8 99 57 F6 D8 B9 3F 2F C3 53 84 39 B4 3A 9C CA 12 47 6F C7 
+05 8A 08 46 4B F5 B6 D9 E3 F1 A2 82 28 21 0A 68 35 D8 90 D9 76 EE 27 D6 E9 08 01 66 DA 15 DB 23 
+F5 73 A7 55 06 06 96 93 05 D8 75 54 9C B2 99 CB B5 63 A6 72 78 80 55 45 B9 EC B0 BB 92 46 E7 13 
+46 5A 38 43 A7 8C A8 C7 DA E5 5C D9 B3 AB DA 3A EA 82 94 BF 6F 74 31 CA C2 87 78 5F 64 58 19 8F 
+44 AF D8 B4 0E 44 F0 E3 31 5A 8A B7 9D 8D 67 D4 27 A2 84 08 87 56 C3 19 62 62 EB 7A 7A 9D B6 10 
+60 A6 5E D9 73 B0 7E CE 8C CA 67 4F CA 48 02 28 95 8A 53 5E E1 7C C5 C9 54 0E CF 4C 6B BF 9C D2 
+6D 1A 00 B0 EA 38 37 CB 3D FF 24 53 F9 44 88 4D 4C A9 19 53 C5 63 23 25 9C D2 2F C9 FF 7E 6F 65 
+90 1F 4F 7B 53 FF 7A 1C 83 9B 86 54 F7 9D 27 A3 C1 E4 E3 E7 AC 0D 84 7E 9E 38 48 1F F9 EF 0F 4C 
+94 F6 E6 AE 77 40 21 32 D2 C8 A0 75 AF 76 0E ED 5D E5 18 8F B8 94 94 94 E0 03 06 6F CE 59 1D 89 
+93 DE F4 BF F8 CC E4 94 F4 F8 C7 BB 14 12 1D 77 B9 27 37 03 D0 9C 70 D6 F6 64 82 B8 F9 FF A2 D3 
+53 92 52 9E BB 4E 6F 7C 7C F8 44 60 35 46 0D 73 DC E9 9A 21 B7 ED 56 4C 46 72 42 7A 9C 9F B9 C4 
+CB E3 56 2E B1 0D AD 59 D7 C5 45 52 CD 6E BC CC 4C 49 4A B8 BF 7D 78 E9 03 CF 3B 59 6C 00 A8 61 
+A7 F7 5C 2E D6 39 F0 28 E5 75 DA AB 18 F7 F1 55 FF 96 74 EA 36 50 E6 3A F9 5A E8 20 64 23 DB 07 
+4F 1D 67 73 6F 93 49 0D 3F 6E E5 96 29 BF F5 46 5C 7A 42 4A 7A F4 0D 73 F1 38 27 EB D3 5F EE F7 
+A2 6E F9 F5 A4 CC A4 B4 84 3B 56 6A A5 F7 CF DF FD 6A 5B E6 EE D2 50 C3 4F ED F5 2A D0 B0 7D 98 
+90 99 99 1E EF 63 5A F3 32 A3 F1 3F 17 36 E4 77 06 2D 78 76 62 CF 1E 5B DB CF 7F FB 5C C3 CB BB 
+EA 20 77 03 56 F1 EC 90 AD 77 8E DC 6A 97 93 2B 94 79 63 2E 08 D2 35 DF E5 97 59 49 67 4C 27 4C 
+9E 30 61 F2 84 09 13 F5 75 C7 CE 3D 14 05 26 EC 3E BC 4E A5 ED 05 1D 19 3A 7D DE 18 51 3C E0 17 
+C0 27 3E 7C FA 61 C8 FC ED 2B 54 09 B4 9A 9A 3A B6 FC DC F5 A6 F2 45 81 01 69 0C 46 DA D3 90 52 
+B9 C5 BB 2D 8D A4 10 00 F8 14 E7 EC 3B EB 71 6A 83 1E 7F 43 8C 7F 58 F5 F0 35 07 B6 8E 95 24 00 
+80 48 19 59 ED 37 53 2A 7F F6 20 B6 2D 6B A5 79 16 AB 75 C4 F0 00 2F AA 63 3A 55 15 F7 B1 B4 94 
+0D 1A 62 03 23 6A 35 CC EC D6 8C 14 01 00 91 9D BC DB 66 7E AF 5F D0 E8 51 8F 9F 57 AB AD 72 D8 
+6A 28 45 00 00 91 32 B6 DC B7 52 A9 FC E9 83 B8 C6 B6 FB CD DD BA 5A 5B 0C 0F F0 22 3A 73 A7 AA 
+E0 3E 96 95 A2 9D B3 E8 3A 0D 3D E6 71 58 ED 88 75 07 FE D6 13 C5 03 82 F4 78 CB FD 66 CA 70 00 
+03 F2 5F E0 B0 1A 6A AA B9 A9 A1 36 B2 7A BD 9D 03 23 FB 9A 9D FD 13 BA FE 2E 77 FB 29 70 6A 84 
+C7 F9 AE A7 26 61 88 F1 8A 25 23 48 00 E0 70 78 A2 A0 84 E2 08 43 63 5D B9 2F 6F E7 38 49 69 19 
+04 00 00 30 6A 51 71 2D BB C0 77 95 A1 2F F7 E5 24 C5 B2 96 06 AC B4 06 3F 54 55 B5 7D E2 01 2F 
+33 7A E6 6C 00 D0 9C A7 65 CD FC 2A EA C3 3E EB 50 A1 3A A3 00 00 20 00 49 44 41 54 22 A9 6B A8 
+12 1B CB 4A DA B2 96 92 91 69 3F C5 CF C7 07 30 36 0A D0 8A C2 D2 66 B2 A2 B2 12 F2 F9 92 E1 43 
+09 2F 7A 65 09 5A 51 5C DE 2C A0 A2 FE A5 F7 40 1A AE A1 42 6C 2C 2F A9 41 5B EF 27 2D FD F9 7E 
+FC 7C 00 65 7F E5 96 BB 4E C3 2E 2D 28 6E 16 52 57 53 68 F7 C5 24 75 75 D8 45 81 FC 27 10 75 33 
+D7 AB 1D D6 63 E4 7A 2E 31 39 DF 31 11 5A E4 EF E4 16 FA B1 B5 9D 22 1A 66 C7 AC 27 8B 00 00 68 
+F1 AE D6 CE 29 82 73 CF B8 59 68 F1 FD 44 CD 90 EF E2 BB 5C 05 5E DE 78 ED E6 E5 3D 04 CD 20 B4 
+79 23 02 9E 00 10 FD DD FE EE 0B 29 B8 2F 67 71 7C 62 C2 C4 20 04 70 9A 59 2C AC BD CB 8E D2 3F 
+55 A0 22 52 08 91 88 43 99 4C 2E EF C7 6A 61 A0 80 D8 3E 6F 81 C3 77 7E D2 73 00 89 8C E0 50 16 
+93 05 40 DB B3 01 43 7B BD 71 17 91 88 E0 D8 1D EF C7 60 A0 00 21 91 70 DD DC EF EB F7 C6 AE D2 
+E0 88 44 A4 35 AB 76 D8 2C 26 00 30 FC 13 E4 07 C3 69 A9 2C CC C9 2E 6C 1D 6E 23 0A 51 59 18 00 
+9C D2 80 03 B6 D7 8B D5 36 F9 1D 83 73 7D BF 04 3F B4 92 F0 22 5A 1A 43 40 EE EB F7 44 59 79 79 
+39 79 79 39 79 F1 CA 50 4F 77 DF D8 72 4C 40 5D 6B 18 27 3B 2D 95 D6 96 94 91 EE B1 7A CA 7C E7 
+34 49 4D 75 49 E6 AB 97 89 ED C7 B1 BA D8 F8 37 98 8C 9A 46 F7 77 21 C8 8C 1C 21 C3 FE 37 29 89 
+DE 76 80 9E 92 9E D3 95 F7 C4 01 0E E8 E4 AF 09 72 5A 1A 92 CC D7 F1 09 5F EE 17 F7 F2 0D 26 33 
+5C 9D F2 DF 4A 86 A0 A8 3D 42 B2 E5 6D EA AB E6 76 51 89 29 59 AC 1E 2F 81 40 FA 01 44 DD E2 4A 
+70 64 44 78 64 44 78 64 44 90 CB 02 09 3C E3 ED 3F B6 47 42 58 13 1D CE 5A 1B 88 0C B4 3C 48 AF 
+F8 B1 AF D6 24 DD D5 E6 13 1E 1E 75 DC 78 B0 DE 72 FE 28 D1 9A 24 3F D7 73 91 C4 35 0B FF 40 10 
+BE E5 EB 26 DE 3E 74 72 C7 19 74 EB 74 F9 C6 CC 7B AE 77 AB B5 B7 2C 1F 23 A2 46 59 3F FA 99 CB 
+E1 6D 92 F4 6D 33 87 61 79 A1 17 9C 43 98 06 7B FF D2 07 A0 5B AF 46 1E BB D6 DC D0 FF 94 C3 36 
+A9 FA 2D 93 A4 2A A2 2E BA 84 D4 60 D2 9D 12 E1 05 04 85 10 34 27 E6 7E B0 C2 D4 69 23 BE 5C 3B 
+7E ED DA 31 81 AE 0E DB 25 E9 5B 67 0C C3 F2 83 2F 9C 09 62 E9 EF 5F A3 4F EE FE 7E BD 82 6C BC 
+6E AD CE D3 73 07 76 88 DB 98 1B 89 7D 8C F2 71 09 F8 84 C1 81 0C 9E 81 5D F9 36 22 94 F0 A5 42 
+70 C2 AA E3 8C 54 07 A1 DB 62 A4 B8 D9 B8 27 E3 F4 36 CE A6 E4 45 86 E4 71 9D C1 09 AB 8C 33 52 
+E3 6D 93 7F 9B 6A EA C4 0F F6 14 84 A1 AB CE F9 21 67 CE F8 5E B2 79 58 CB E4 97 51 37 DE 7C 7E 
+9F E5 38 41 00 80 E2 4A B7 6B 38 E7 93 3E 4E 1B BC E9 04 09 8D 29 9B 2F 1C DE A2 49 02 40 63 E3 
+05 5F 3E 97 33 7E A7 FE BE DC 80 48 28 1B CC 3B F6 BF 9D 4B D5 90 1E FC 32 20 A8 FC E5 79 99 73 
+CA D9 EF C8 DF 57 50 8A FA F4 95 CB C7 5C 8A EA 9C 88 7F FC 92 E5 1A FB 6E 3B 5A BD AF 7E 7C 5F 
+FD F3 61 44 E3 6F AF 6B 7C A7 5C AE 9F D8 78 A5 1E 91 50 31 98 E3 74 DD 7A 59 CF F7 EB 15 88 86 
+85 C7 05 E6 31 E7 DB F6 EB 2E E0 65 C7 2C 58 BF 82 EE EA 3F 88 62 3B FC DA 70 9A 92 BC 2C 93 B8 
+0E 20 5A 3B 02 9E EC D6 1A 30 41 3F 0C 46 41 4E 31 93 C3 4C F5 D9 9B EA D3 F1 0C 32 DC F2 61 90 
+AD CE C0 C8 EA 1D BF 4F 35 75 86 D3 3D AB 57 AC 7C 19 17 D7 43 02 48 F7 A0 D4 C2 B7 D9 65 34 76 
+FB BF 59 AF 9C 4D 54 C7 1F 7A D9 32 90 A2 7E 11 B6 58 58 84 04 05 0F B4 8A FE 24 38 28 68 EB E6 
+CD 03 AD A2 9F D1 50 55 6B 69 19 54 ED D9 CE C6 E6 FE DD 7B 03 AD 82 C3 E1 70 E0 24 C0 0F 82 F3 
+29 60 DF 82 39 36 0F 4A D8 00 00 80 55 45 DF 0C 2A 10 D2 35 D0 82 5F BE 42 20 90 6F 00 47 3C 7F 
+10 04 D5 E5 DB 96 3C B5 39 6C 3A E5 96 9A 0C A8 CA CD AE 95 59 70 62 8F 89 D8 40 EB 82 40 20 3C 
+0F F4 CB 3F 0A BC EC EC E3 4F 75 97 C7 C4 BD 2A A1 03 11 05 DD C9 93 B4 A5 61 67 19 02 81 7C 1B 
+E8 97 7F 24 7C B2 3A 33 97 F2 F4 C4 0A 04 02 E1 3D E0 F8 32 04 02 81 F0 16 3D F5 97 D9 2C 56 5D 
+5D DD A7 4F 9F 7E 9A 1A 08 04 00 D0 D2 D2 42 A5 52 07 53 C3 A3 52 A9 2D 2D 2D 83 C9 22 00 00 87 
+C3 A9 FC F4 89 44 1E 3C A3 73 CD CD CD 2C 16 4F 7C FD 85 E3 70 BA FD 64 79 EC 18 7D 36 8A 92 88 
+C4 9F 29 08 02 A1 D1 68 7C 7C 7C E4 41 F4 83 67 30 18 2D 8C 16 51 91 1E F6 2E F8 F5 A8 AA AA 92 
+94 92 C2 7D 3B E1 2F 43 7D 7D FD 92 A5 4B 8F 1E 77 1C 68 21 3D F6 97 D5 86 0F DF 66 B9 DD 78 FC 
+F8 9F A6 06 02 01 00 6C DD BC 79 E1 C2 45 B3 4C 66 0F B4 90 7E 23 24 38 F8 49 40 C0 45 2F AF 81 
+16 D2 9F 68 AA 0D 8F 8E 8B 1D 4C 8F CF 3D B6 B6 DA 3A 3C 31 1F 04 C7 97 21 10 08 84 B7 80 7E 19 
+02 81 40 78 0B E8 97 21 10 08 84 B7 80 7E 19 02 81 40 78 0B E8 97 21 10 08 84 B7 F8 EE EF FD B0 
+86 C2 E4 E8 C4 F7 65 D5 2D 64 59 CD 71 53 27 A8 4B FC A2 9F 0E 0E 1A 43 20 BD 04 A3 17 64 BC AD 
+14 1A 6E A8 FE 0B 85 B9 63 94 BD 4E 2F C2 29 8D D1 96 E3 5E FE D0 54 FA 2A B3 98 A8 62 A8 25 83 
+60 55 59 C9 B9 2C C5 4E 09 00 00 80 FD E9 6D 72 5E DD 57 91 22 70 04 09 B5 B1 1A D2 3C 5B 04 BF 
+64 35 F5 17 DF E3 83 B0 9A E4 2B 0E F6 17 C3 0A 58 A2 72 7F 88 01 5A 59 99 13 59 7D F1 21 CF A3 
+4B 55 FB 7B C9 0C E3 43 90 9B 73 C6 E8 B3 F6 B3 BE 33 67 46 41 B0 EB A9 CC D1 9E FB 67 77 91 C1 
+4F 34 E4 DB 42 FF AB A5 90 DE C2 CE B9 69 67 7E 7F A4 7B 92 87 09 FF B7 53 F3 06 68 E5 B3 E3 E6 
+2E 84 7D D1 37 3B C4 F7 2B 7B 7C 78 ED 79 71 C7 C4 AB 2B 29 8C A4 F3 5B 76 55 5B 47 DD 32 97 EF 
+E4 C6 EA 5F 38 9B 3B 44 33 BF CA 93 7F E6 D9 B4 8B 0B 79 B6 08 7E C5 6A EA 37 FA EE 97 99 EF 2E 
+6F DD E8 9A AF B5 F1 82 D7 B6 99 2A 82 78 80 51 FF BD 73 60 BB E3 81 2D C2 F2 01 F6 46 82 FD A9 
+0E A3 C5 DD F0 8D 15 D6 EC 43 2C F6 AF 32 B8 E5 1B 2B A4 D5 55 06 3F D3 90 DE 08 FD 6F 96 42 7E 
+73 C8 63 2D BD FC 58 8A 92 5F F7 2D 29 8B 2F A5 98 72 7D C5 C6 A1 27 BA 9A EF B8 D7 32 D3 D4 10 
+F6 01 78 94 BE BE 21 60 55 01 67 BD D2 04 E6 1E BF 60 33 5B 45 10 0F 00 00 78 31 ED 55 27 0F CE 
+17 2F F2 BF 11 49 6D 4F C7 A6 E6 A7 45 85 47 44 67 14 D2 D8 ED C7 D0 8A F4 B0 88 57 95 28 4A 2D 
+48 8D 8A 88 4C CE AB 63 73 E5 8C D2 8A 5F 25 44 3E 8F 4E CA AA 6A 69 3D C2 28 4E 89 C9 A6 72 B0 
+AA 37 E1 C1 29 25 6D CF 7B 46 55 76 4A 74 78 D8 F3 A8 B4 82 CF 97 A3 15 19 61 CF 5F 57 A2 28 35 
+3F ED C5 F3 A8 CF 19 33 8A 53 A3 B3 A9 1C AC FA 4D 58 68 4A 49 5F 0D 41 4B D3 42 83 93 8B 19 ED 
+57 D0 F3 E2 83 23 DE 54 61 00 A0 E5 69 61 91 AF 2B 9B 2B DF 25 44 27 E5 D5 B1 D1 B2 F4 B0 88 D7 
+95 CD 55 EF E3 A3 93 73 DB 6E 8E D2 8A 33 63 9F 47 44 A7 7F F8 76 09 74 69 29 04 D2 07 38 68 33 
+9D D6 C8 EC EA C1 4E 12 10 11 11 6D FF 13 AC 7A 76 C8 FE 6E B9 DA 26 F7 E3 30 06 2B CF D2 D7 FE 
+32 2D 26 34 BE 51 76 D1 92 69 1D C7 7C 44 A7 DB 3F 89 3F 22 29 C5 0F 00 C0 68 A9 DE 36 7B 3C 5E 
+54 10 25 44 01 AD 06 1B 32 DB CE FD C4 3A 1D 21 C0 4C BB 62 7B A4 7E EE B4 CA C0 C0 72 B2 00 BB 
+8E 8A 53 36 73 B9 76 CC 54 0E 8F 96 06 EE DF E0 F0 B0 98 20 49 41 1A AA 69 64 6D 73 B7 7F EC A6 
+10 5E FB FB 46 17 A3 2C 7C 88 F7 45 86 95 B1 81 5C C5 D3 C3 DB 0E 3D C8 42 C5 24 05 58 75 55 74 
+BC E2 5C C7 6B 67 96 2A 11 98 A9 BE B6 87 EA E7 4C AF 7C F6 B4 9C 24 80 D6 51 71 CA 2B 4E F9 1D 
+37 E1 7F F5 E4 DA 8B 12 94 85 0B F1 BA C4 D8 31 CB 40 A1 4F 86 34 27 7B EF DA DB E2 90 70 6D 15 
+19 0F 00 60 97 07 3A EF B8 A3 F5 4F F4 89 A9 58 AA CF AE A3 1F F5 14 8B 5F 97 01 8E 90 E9 C5 07 
+06 37 6D 0F 57 E8 2A 15 BF 2E 05 40 C8 E4 7C A8 83 94 FF 81 9D 27 9E 7C C0 C4 C4 90 C6 3A 74 C8 
+EC BD 1E 27 FF D2 12 E8 B6 04 F8 3B 59 AA 00 E3 66 43 FA 08 33 F5 CA 9E AE C7 31 B8 69 48 75 DF 
+79 32 1A 4C 3E 7E CE DA 40 E8 E7 89 83 F4 91 3E FA 65 66 61 7E 61 0B 41 55 53 B3 F3 0B 10 5E 44 
+5A AA F5 FF A8 61 8E 3B 5D 33 86 5A DF BA B7 6D AC 24 A7 2A E1 DC 76 CB E3 56 2E CA CF 8E 4E 24 
+00 C0 A9 8B 8B A4 1E BC F1 72 9D 8E 48 7D 86 C7 FA D5 5E 9E 77 56 CD DC AD 9A 76 D5 DD 1F 5B 74 
+3D E1 E0 78 0A BE F1 BD CF 46 33 F7 73 F7 96 4E DC 36 D7 C9 B7 AE 68 C2 69 61 DB 07 DE 0B F9 01 
+2D E8 E0 D1 07 F4 E9 EE D1 27 4C E4 49 18 ED B5 D7 E6 35 1E 5E 77 D6 CF DF 3B 0A 00 80 D5 BD 8C 
+A4 DA DF 48 FC 4B 47 A4 21 FD DC 86 D5 17 2F DC 5E F3 A7 CD BC 63 BE 75 45 E3 4F 0A D9 3E BA D4 
+69 1C AD 17 86 F4 08 87 F6 B6 72 F4 F5 D8 87 C6 A4 96 66 7E 5C E8 4D 0E ED 6D D5 98 EB D1 FE 46 
+A4 96 66 FC 9B B3 0B 8F C4 49 59 DE F4 DB 3A 4E 1A 4F FB D7 77 97 C5 F1 1D E7 D4 9F EE 37 04 DD 
+95 40 47 4B 21 90 AE 40 0B 9E 9D D8 F3 8E EF CB 01 4E 43 4E 39 06 C4 7B 7B 3D 56 F1 EC 90 AD 77 
+8E DC 6A EF 93 2B 94 E1 EC 36 2F D3 D7 17 19 46 0B 13 E0 F9 04 F8 BA 4D 40 8F F1 0F AB 1E BE E6 
+C0 D6 B1 92 04 00 10 29 23 AB FD 66 4A E5 CF 1E C4 B6 9E 46 94 E6 59 AC D6 11 C3 03 BC A8 8E E9 
+54 55 DC C7 D2 52 36 00 80 C3 C1 EA 72 62 63 32 4A E8 A8 A0 E6 3A AF C8 F8 DB 5B 54 3A 87 28 25 
+68 AC 38 76 D6 DD 6E 96 3C 09 00 80 17 D5 98 A4 3F 04 47 AB A9 6D 7B 71 43 14 E7 6F 59 A9 23 86 
+07 78 91 51 73 A6 A8 E2 2A 4A 4B D1 FF 64 C8 37 40 86 4E 9F A7 2F 8A 07 FC 02 FC 6D FF 9E 3A 7F 
+8C 28 1E F0 0B E0 13 1F 04 7C 18 32 7F AB 99 1A 81 56 53 53 C7 96 9B 67 6E 22 57 14 E4 9F DA 63 
+09 40 20 DF 82 C3 6A A8 A9 E6 A6 86 DA C8 EA 76 DB B1 CE 30 B2 AF D9 D9 3F A1 EB EF 72 B7 9F F2 
+1B AE 70 F8 B5 E8 E3 53 93 20 2E 2E 8A 43 69 B5 75 18 E0 EF B2 6A D1 8A E2 B2 66 7E 15 F5 61 9F 
+33 26 A9 6B A8 12 1B CB DA 86 77 71 52 32 32 ED A7 F8 F9 F8 00 C6 46 01 20 E9 FF 6D 63 96 7A F8 
+F2 4E 33 2F 12 45 45 CF 78 9A A9 D9 3A 33 E3 21 9D BA B2 42 CA 63 C7 36 87 FA BB 1F 7C 97 5F 54 
+5C 5C 90 53 50 46 67 4B 8C 68 1F 4F C3 49 49 77 C8 18 45 7B F4 76 DF 34 E4 5B E0 A4 A4 A4 B9 0B 
+0F 27 D9 76 7F 8C 5A 54 5C CB CE BF FA 97 E1 55 EE F4 24 A5 32 00 F4 BB 2B 01 08 E4 DB 20 EA 66 
+AE 57 3B AC C7 C8 F5 5C 62 72 BE 53 2A B4 C8 FF 94 4B D8 C7 D6 56 45 54 5F EE 68 3D 49 14 00 5A 
+BC AB B5 73 8A E0 DC 33 6E 16 5A DF DD 19 81 FC 2C FA EA 97 95 B4 47 48 60 A1 99 99 0D 40 4E 84 
+FB 44 53 B4 93 B9 77 CD FC 43 27 8D 88 44 1C CA 64 72 F9 1A 56 0B 03 05 C4 F6 11 53 1C BE B3 1B 
+E4 00 40 18 32 C7 E9 E9 D4 ED 99 71 91 D1 09 89 09 31 77 8E 86 06 BD 39 FF CC 79 06 F7 2D B0 8A 
+40 9B A5 7B 42 81 CE F4 C9 7A 06 73 FE 5C B7 9F 92 E4 B0 F5 D1 97 F3 38 7C E7 1D 07 7B 5A DB F0 
+4D 43 9C 57 2B 01 00 00 F6 65 1B 54 26 AB E3 84 1C A1 63 87 1E 87 6F FB 37 9E 40 00 88 BE ED C3 
+B3 0B 29 DC 8A F8 28 3D 95 00 04 D2 4F 70 9A AB 0A B3 B3 0B DB FC B2 20 95 8D 01 B4 3C E0 80 ED 
+F5 62 B5 4D 7E C7 E0 5C DF 2F 41 5F 2B 89 3C 6E 81 C9 90 FA 48 BF 9B 59 0C AE A3 68 F1 23 BF BB 
+69 79 2C 11 19 B2 BC A6 BA 24 F3 D5 CB 44 5A DB 29 AC 2E 36 FE 0D 26 A3 A6 D1 7D 9E 58 4D DC 3F 
+07 ED AF E5 48 E8 CE 5C 63 7D F8 FC 9D 80 33 0B 44 3F A5 26 E7 31 5B 9D 2D 07 70 00 00 58 55 E8 
+9D A0 4F 9A DB FD 6E 9E 77 DA 6B B5 7E D1 F4 61 0D 65 15 58 0F BB 47 B7 F2 25 83 3E 1A 82 00 40 
+22 91 38 F5 54 6A EB C5 18 2D 3B A7 BC 37 3D 5B BC A8 86 A6 02 C8 7D 95 45 FC 43 4E 5E 5E 4E 5E 
+5E 4E BC 32 CC C3 ED 7A 6C F9 F7 09 85 40 FA 04 A2 B1 C9 27 3C 22 3C 32 22 3C 32 22 3C D4 65 BE 
+04 EB ED 3F B6 47 42 58 13 1D CE 5A 1B 88 7C FB 7A 08 0F D0 E7 D1 7F F2 D8 AD 76 0B 23 76 BA 6D 
+D8 54 6B BD 65 D9 64 4D 69 EC 63 72 80 D7 29 CF 38 82 B1 C3 0E 13 0A 40 8C D7 AD 1F FD CC E5 F0 
+36 49 FA B6 99 C3 B0 BC D0 0B CE 21 4C 83 BD 7F E9 03 D0 5D 20 00 BC 10 7F 5D EA FD 1B 99 2C FC 
+2E 33 3D 49 76 71 F4 9D 04 9A 84 B1 BE 2A 09 E0 05 04 85 10 34 27 E6 7E B0 C2 54 03 29 29 21 CE 
+CB F8 A7 31 D3 16 0D C3 95 A7 3F F6 74 0D A3 A1 7C 2D 8C 1E 5D 19 5E 40 50 10 41 73 A3 EF 85 28 
+4C 9B AD CF BD 1E E3 9B 86 00 54 6B 94 06 12 7A C7 F9 9F E1 9B C7 0A 16 87 7B 5F 48 42 71 02 BD 
+28 21 92 EE EA 0D C6 0F 0E 3B FD 6D 5F 6F B9 40 5B AC 26 E5 DA 19 8F 48 64 F5 C2 3F BE 21 F4 B3 
+A5 D3 F4 15 E0 BA D2 1F 0D BB F2 6D 44 28 E1 4B F3 C7 09 AB 8E 33 52 1D 84 6E 8B 91 E2 66 E3 9E 
+8C D3 DB 38 9B 92 17 19 92 C7 75 06 27 AC 32 CE 48 8D B7 4D FE 6D AA A9 13 7D 9F 95 C5 4B CF 76 
+BA EE 2E 7E C8 E5 E6 81 B5 3E AD 43 05 44 49 9D 85 47 CE 3A AC 52 43 00 00 88 C6 C6 0B BE 7C 2E 
+67 FC 4E FD 7D B9 01 91 50 36 98 77 EC 7F 3B 97 AA 21 DD FB 65 40 1E B3 C3 C3 99 71 F2 D2 C5 DD 
+8F AB 5B 88 94 61 A3 67 1D F1 D9 33 53 0C 00 C0 3F 7E C9 72 8D 7D B7 1D AD DE 57 3F 0E B0 73 B6 
+A0 9F BA 61 35 FF 02 10 55 D4 9D 66 E6 E4 32 EC 90 5D 5A 56 2E 7B 8E 5A F7 6A F9 27 2C 5E AE 69 
+7F FB E8 CE F7 55 59 A1 B6 7D 32 84 A0 BC E6 98 53 D1 31 0F 2F EB 95 9E 62 6A 93 56 39 EC 14 D8 
+F1 4F 6F 4A 88 30 74 F5 D9 EB 88 9B CB 55 6F 9B 07 B5 4C 7E 69 F5 F1 16 17 0E 6C 33 12 04 A0 B9 
+07 A1 5C 96 06 EE D6 86 B3 E5 3F 16 4E 53 92 97 65 12 D7 01 44 6B 47 C0 93 DD 5A 03 26 E8 87 C1 
+28 C8 29 66 72 98 A9 3E 7B 53 7D 3A 9E 41 86 5B 3E 0C B2 E5 89 6D E0 BB E3 F7 A9 A6 4E F4 14 47 
+6A CD CA 55 3D C5 2B 69 AE CA CB CA AF 6C C6 09 CB AB 6B 2A 89 FD C2 8E 64 D0 18 32 58 80 F1 4A 
+7E 09 34 D5 86 67 BE F9 77 90 C5 2B 31 34 1C BB 74 F9 B2 81 16 F2 FD FB 16 01 C0 2F A5 AA 27 A5 
+DA 7F 52 06 8C 41 63 08 04 02 19 14 C0 C9 59 08 04 02 E1 2D A0 5F 86 40 20 10 DE 02 FA 65 08 04 
+02 E1 2D A0 5F 86 40 20 10 DE A2 A7 79 BF 92 E2 E2 33 CE CE 62 14 4A 0F 69 20 90 7E E7 ED 9B B7 
+65 A5 65 77 EF DE 19 68 21 FD 46 75 55 55 E5 A7 CA 0D EB D7 0F B4 90 FE 84 CD 66 6F DE B4 09 FF 
+D5 E7 AB BF 2E D9 59 59 E2 E2 12 03 AD 02 80 9E FD 32 45 5C 7C C6 CC 99 5A 9A 83 7F B5 20 84 A7 
+38 7F DE D3 C8 C8 78 CC 98 31 03 2D A4 DF 48 4B 4B 4D 4C 4C 5C BB 76 DD 40 0B E9 4F 5E C6 C6 AD 
+5E B3 86 88 10 07 5A 48 BF 71 F5 CA 65 29 A9 DE 6C 27 F9 C3 E9 C9 2F 0B 09 09 E9 EA EA 76 BB 7E 
+19 02 F9 31 DC BD 7B 67 E4 C8 91 53 A6 4D 1D 68 21 FD 46 0B A3 25 3F 3F 7F 30 59 04 00 C0 E3 F1 
+93 26 4F 1E 4C EB 97 83 82 9E 89 8A 8A 0E B4 0A 00 E0 F8 32 04 02 81 F0 1A D0 2F 43 20 10 08 6F 
+01 FD 32 04 02 81 F0 16 D0 2F 43 20 10 08 6F F1 DD FB 63 60 0D 85 C9 D1 89 EF CB AA 5B C8 B2 9A 
+E3 A6 4E 50 97 F8 85 36 FC C1 68 79 69 6F 2B 05 94 F5 47 C8 76 8A 70 8A D5 E5 A5 BE AB A5 68 18 
+AA 75 BD 5C 06 AB 7C 97 94 C7 19 66 38 42 F6 17 32 17 D2 01 8C 5E 90 F1 B6 52 68 B8 A1 FA 2F 14 
+4E 89 51 F6 3A BD 08 A7 34 46 5B 8E 7B 9A AD A9 F4 55 66 31 51 C5 50 4B 06 C1 AA B2 92 73 59 8A 
+9D 12 00 00 00 FB D3 DB E4 BC BA AF A2 44 E0 08 12 6A 63 35 A4 79 B6 08 7E C9 6A EA 2F BE C7 62 
+AC 26 D9 67 EB AC 89 D3 57 EF 75 BE 7A FF D1 AD 0B F6 1B E6 4D 9D B7 EF 41 1E E3 DB 97 F6 15 C6 
+87 A0 93 5B 9D 42 BF 3F 67 46 41 F0 09 8B 93 21 9D 33 60 FF 7B C5 EA 2F 73 B7 E8 C6 CE C7 DF 5F 
+DB B5 6A 8B 77 6A B7 31 A8 18 71 67 FF 5E 77 3A 92 8A F5 83 36 C8 C0 C0 CE B9 69 67 6E 71 21 F9 
+57 AA 39 B4 F2 D9 71 F3 75 27 C2 6A 3A B8 57 B4 EC F1 E1 B5 E6 67 22 EB 01 00 8C A4 F3 5B D6 39 
+85 56 7F 1D A5 A7 FE 85 B3 F9 BA 35 7F 75 FE 5B FD B7 47 3C 2F 17 C1 AF 58 4D FD 46 DF 7B 7D CC 
+77 97 B7 6E 74 CD D7 DA 78 C1 6B DB 4C 15 41 3C C0 A8 FF DE 39 B0 DD F1 C0 16 61 F9 00 7B 23 C1 
+FE 54 87 D1 E2 6E F8 C6 0A 6B F6 14 11 EA 5B 19 DC F2 8D 15 D2 EA 94 01 5E E2 CF C5 D3 25 9E 47 
+05 C6 D4 FF 69 22 FC E5 38 F3 75 40 60 AE C8 94 CD 26 32 3F 41 1B 04 D2 8F 90 C7 5A 7A F9 B1 14 
+25 BF EE 69 51 16 5F 4A 31 E5 DA FC 9C 43 4F 74 35 DF 71 AF 65 A6 A9 E1 E0 59 E2 36 C8 E8 6B 7F 
+19 AB 0A 38 EB 95 26 30 F7 F8 05 9B D9 2A 82 78 00 00 C0 8B 69 AF 3A 79 70 BE 78 91 FF 8D 48 6A 
+7B 3A 36 35 3F 2D 2A 3C 22 3A A3 90 F6 B9 EF 89 56 A4 87 45 BC AA 44 51 6A 41 6A 54 44 64 72 5E 
+1D 77 B7 14 A5 15 BF 4A 88 7C 1E 9D 94 55 D5 D2 7A 84 51 9C 12 93 4D E5 60 55 6F C2 83 53 4A DA 
+82 EB 31 AA B2 53 A2 C3 C3 9E 47 A5 15 7C BE 1C AD C8 08 7B FE BA 12 45 A9 F9 69 2F 9E 47 7D CE 
+98 51 9C 1A 9D 4D E5 60 D5 6F C2 42 53 4A 3A D8 21 34 79 D1 6C 39 7A 74 60 14 95 EB 60 4B DA D3 
+E0 62 A9 3F 97 4C 13 6B B3 A1 20 35 FA F9 F3 0E 36 B4 D3 6B 6D AD 34 57 BC 4B 78 F1 22 FE 5D 25 
+03 AD C8 08 0B 4B 2B FB 1C 91 0A A5 15 67 C6 3E 8F 88 4E FF F0 F5 4D 20 90 5E C3 41 9B E9 B4 46 
+66 57 DD 04 92 80 88 88 68 FB 9F 60 D5 B3 43 F6 77 CB D5 36 B9 1F 87 B1 FE 78 96 BE F6 97 69 31 
+A1 F1 8D B2 8B 96 4C EB 38 E6 23 3A DD FE 49 FC 11 49 29 7E 00 00 46 4B F5 B6 D9 E3 F1 A2 82 28 
+21 0A 68 35 D8 90 D9 76 EE 27 D6 E9 08 01 66 DA 15 DB 23 F5 73 A7 55 06 06 96 93 05 D8 75 54 9C 
+B2 99 CB B5 63 A6 72 78 B4 34 70 FF 06 87 87 C5 04 49 0A D2 50 4D 23 6B 9B BB FD 63 37 85 F0 DA 
+DF 37 BA 18 65 E1 43 BC 2F 32 AC 8C 0D E4 2A 9E 1E DE 76 E8 41 16 2A 26 29 C0 AA AB A2 E3 15 E7 
+3A 5E 3B B3 54 89 C0 4C F5 B5 3D 54 3F 67 7A E5 B3 A7 E5 24 01 B4 8E 8A 53 5E 71 CA EF B8 09 FF 
+AB 27 D7 5E 94 A0 2C 5C 88 D7 25 C6 8E 59 06 DC 71 A4 C8 06 4B E6 0E BB 75 23 28 A2 66 CE 92 36 
+5B 1A E3 FD C3 3E 2A CE 5D 66 24 00 30 5A 8A B7 9D 8D 67 D4 27 A2 84 08 87 56 C3 19 62 62 EB 7A 
+7A 9D B6 D0 E7 CB 9B 7A AB 0D 60 35 B1 6E 3B 6C 7C 92 A9 64 11 62 33 53 7A C6 14 4A EC 0B A9 E3 
+29 DE F2 FC A0 39 FB F6 81 9D 27 9E 7C C0 C4 C4 90 C6 3A 74 C8 EC BD 1E 27 FF D2 EA 4D AC 2A 08 
+A4 13 CC D4 2B 7B 76 55 5B 47 DD 32 97 EF C1 DB 36 A4 BA EF 3C 19 0D 26 1F 3F 67 6D 20 D4 7D 32 
+C8 00 D3 C7 07 26 B3 30 BF B0 85 A0 AA A9 D9 F9 05 08 2F 22 2D C5 8F 07 00 00 6A 98 E3 4E D7 0C 
+B9 6D B7 62 32 92 13 D2 E3 FC CC 25 5E 1E B7 72 89 6D 00 00 00 C0 A9 8B 8B A4 9A DD 78 99 99 92 
+94 70 7F FB F0 D2 07 9E 77 B2 D8 80 99 7A D5 DD 1F 5B 74 3D 21 25 29 21 29 F9 89 8D 7A 9E DF B9 
+7B 1F 50 CA 5C 27 5F 0B 1D 84 6C 64 FB E0 A9 E3 6C 51 5A E8 99 A3 0F E8 D3 DD A3 53 13 13 13 53 
+92 1F EF 1A 55 13 EC 75 E7 4D 6B 5F 15 AB 7B 19 49 5D 7E 23 31 2D 35 35 EE BE 95 5A E9 FD 0B B7 
+B3 D8 94 79 C7 7C B7 68 23 E4 71 B6 8F FC 1D 4D 3A 29 46 46 2E 9E AF CD 48 08 0C 6F 1F 91 A3 C7 
+04 44 D4 69 CC 5B AC 4B 06 D4 F0 E3 56 6E 99 F2 5B 6F C4 A5 27 A4 A4 47 DF 30 17 8F 73 B2 3E DD 
+66 03 00 00 80 5E 6B A3 3E 3F 65 EB 5D A0 69 7B 3F 25 33 ED F5 4B EF 39 35 F1 19 6D 83 DA 8C 94 
+B3 3B 8F C4 49 59 DC 8C 79 95 96 98 91 F4 60 97 62 F2 F1 1D E7 92 7B 88 35 05 F9 BD 41 0B 9E 9D 
+D8 B3 C7 D6 F6 F3 DF 3E D7 F0 F2 3E 8C A3 61 15 CF 0E D9 7A E7 C8 AD 76 39 B9 42 19 CE 5B F3 32 
+7D 7D 91 61 B4 30 01 9E 4F 80 AF DB 04 F4 18 FF B0 EA E1 6B 0E 6C 1D 2B 49 00 00 91 32 B2 DA 6F 
+A6 54 FE EC 41 6C EB 69 44 69 9E C5 6A 1D 31 3C C0 8B EA 98 4E 55 C5 7D 2C 2D 65 03 00 38 1C AC 
+2E 27 36 26 A3 84 8E 0A 6A AE F3 8A 8C BF BD 45 85 D0 29 67 82 C6 8A 63 67 DD ED 66 C9 93 00 00 
+78 51 8D 49 FA 43 70 B4 9A DA B6 76 89 28 CE DF B2 52 47 0C 0F F0 22 A3 E6 4C 51 C5 55 94 96 7E 
+23 7A 35 41 79 FE 42 03 2C 29 28 BC 02 03 00 60 D5 E1 4F 5E 34 E9 2D 5A AC 8A 00 7A D4 E3 E7 D5 
+6A AB 1C B6 1A 4A 11 00 40 A4 8C 2D F7 AD 54 2A 7F FA 20 AE F3 34 E1 B7 B5 D1 A3 1E 3F AF 1D F1 
+97 C3 06 5D 51 3C 20 48 1B EF D8 BF AC CD 30 46 E2 83 80 0F 43 E6 6F 35 53 23 D0 6A 6A EA D8 72 
+F3 CC 4D E4 8A 82 FC 53 7B 56 0D F9 7D E1 B0 1A 6A AA B9 A9 A1 36 B2 7A 1D 42 9D 91 7D CD CE FE 
+09 5D 7F 97 BB FD 94 DF 70 85 C3 AF 45 1F 9F 9A 04 71 71 51 1C 4A AB AD C3 00 7F 97 55 8B 56 14 
+97 35 F3 AB A8 0F FB 9C 31 49 5D 43 95 D8 58 D6 36 BC 8B 93 92 91 69 3F C5 CF C7 07 30 36 0A 00 
+49 FF 6F 1B B3 D4 C3 97 77 9A 79 91 28 2A 7A C6 D3 4C CD D6 99 19 0F E9 D4 27 17 52 1E 3B B6 39 
+D4 DF FD E0 BB FC A2 E2 E2 82 9C 82 32 3A 5B 62 44 7B 77 01 27 25 DD 21 63 14 FD E6 70 2D FE 8F 
+39 0B C7 BB 1E 0A 0E 29 5F B1 41 AE 3A F4 49 02 30 B6 9F 37 84 00 D0 8A E2 F2 66 01 15 F5 2F 5D 
+0A D2 70 0D 15 62 63 79 49 4D 77 AE BE 3B 6D EC B2 82 A2 66 21 0D 55 05 C2 E7 9C DA B2 C5 A8 45 
+C5 B5 EC FC AB 7F 19 5E E5 CE 88 A4 54 F6 2D D9 90 DF 15 44 DD CC F5 EA 7A AE 41 61 34 D7 73 89 
+C9 F9 4E A9 D0 22 FF 53 2E 61 1F 5B 9B 2A 51 7D B9 A3 F5 24 51 00 68 F1 AE D6 CE 29 82 73 CF B8 
+59 68 75 DF AB 82 F0 08 7D F5 CB 4A DA 23 24 B0 D0 CC CC 06 20 D7 21 58 78 53 B4 93 B9 77 CD FC 
+43 27 8D 88 44 1C CA 64 72 39 30 56 0B 03 05 C4 F6 75 C2 B8 AF B6 05 E4 00 40 18 32 C7 E9 E9 D4 
+ED 99 71 91 D1 09 89 09 31 77 8E 86 06 BD 39 FF CC 79 06 F7 2D B0 8A 40 9B A5 7B 42 81 CE F4 C9 
+7A 06 73 FE 5C B7 9F 92 E4 B0 F5 D1 97 F3 38 3C AE 53 C6 DF 7C C3 C3 4B CE 5C 38 FD F4 EE A0 A0 
+92 35 B3 5F 3C 4D 21 4F 3D 33 4B 1A 0F 00 4A 24 22 38 76 47 1B 18 0C 14 20 24 52 E7 5B 7C 4B 1B 
+0E 21 12 01 9B C1 35 1B C3 66 B1 38 80 04 00 C0 13 08 00 D1 B7 7D 78 76 21 85 3B 57 3E B8 AB 2A 
+E4 3F C1 69 AE 2A CC CE 2E 6C F3 CB 82 54 36 06 D0 F2 80 03 B6 D7 8B D5 36 F9 1D 83 73 7D BF 04 
+7D 1D 65 22 8F 5B 60 32 E4 C1 7D BF 9B 59 D3 B7 6A 7C EE D0 A2 C5 8F FC EE A6 E5 4D 5E 23 43 96 
+D7 54 97 64 BE 78 99 48 5B 38 43 14 00 00 B0 BA D8 F8 37 98 8C 89 46 F7 79 62 35 71 97 CF 06 93 
+96 1C 5A 3F 73 8D EE CC 35 D6 0D A1 BB A7 6F 4F 4D CE 63 CE 18 8D C3 E3 00 07 70 00 00 58 55 E8 
+9D A0 4F 9A 3B 42 6E 5A B6 0E 04 D4 05 3E AA C0 38 5A DF 78 8D FB 92 41 97 88 4C 5A 32 4B F2 EF 
+E0 67 71 EC E8 0C F1 99 97 A7 8A 00 00 00 41 4E 4B 43 92 F9 22 3E 81 B6 E0 CF 36 1B E2 5E BE C1 
+64 4C D5 29 DC 6D BA 37 DA 08 8A 3A 23 24 9B E3 D3 32 9B E7 1A F3 03 00 00 2D 29 E5 1D 1B E8 02 
+80 17 D5 D0 54 00 F7 5E 65 11 B7 2E 91 C1 03 00 40 73 C6 B5 23 37 2A 8C B6 EE 5B 08 63 C0 42 BE 
+1F 44 63 93 4F F8 26 AE 03 8C B7 97 6C 8F 84 B0 26 3A 9E B5 36 10 E9 F6 32 08 2F D1 E7 D1 7F F2 
+D8 AD 76 0B 23 76 BA 6D D8 54 6B BD 65 D9 64 4D 69 EC 63 72 80 D7 29 CF 38 82 B1 C3 0E 13 0A 40 
+8C D7 AD 1F FD CC E5 F0 36 49 FA B6 99 C3 B0 BC D0 0B CE 21 4C 83 BD 7F E9 03 C0 EA 26 4B BC 10 
+7F 5D EA FD 1B 99 2C FC 2E 33 3D 49 76 71 F4 9D 04 9A 84 B1 BE 2A 09 E0 05 04 85 10 34 27 E6 7E 
+B0 C2 54 03 29 29 21 CE CB F8 A7 31 D3 16 0D C3 95 A7 3F F6 74 0D A3 A1 7C 2D 8C 1E 1D 33 5E 40 
+50 10 41 73 A3 EF 85 28 4C 9B AD AF F0 75 02 7E C3 25 A6 0A F7 1F 9D A0 56 28 CC DD 3F 96 BF CD 
+C6 F1 6B D7 8E 09 74 75 D8 2E 49 DF 3A 63 18 96 1F 7C E1 4C 10 4B 7F FF 1A 7D 32 97 0D BD D3 46 
+1E BF 76 CD A8 A7 9E 7B AD C5 ED D6 8F A3 7C 8C F6 3E F3 F4 13 86 00 00 00 49 77 F5 06 E3 07 87 
+9D FE B6 AF B7 5C A0 2D 56 93 72 ED 8C 47 24 B2 7A E1 1F 7D AD 11 C8 F7 C0 AE 7C 1B 11 4A F8 D2 
+FC 71 C2 AA E3 8C 54 07 A1 DB 62 A4 B8 D9 B8 27 E3 F4 36 CE A6 E4 45 86 E4 71 9D C1 09 AB 8C 33 
+52 E3 6D 93 7F 9B 6A EA 44 DF 67 65 F1 D2 B3 9D AE BB 8B 1F 72 B9 79 60 AD 4F EB FB 39 51 52 67 
+E1 91 B3 0E AB D4 10 00 00 A2 B1 F1 82 2F 9F CB 19 BF 53 7F 5F 6E 40 24 94 0D E6 1D FB DF CE A5 
+6A 48 F7 7E 19 90 C7 EC F0 70 66 9C BC 74 71 F7 E3 EA 16 22 65 D8 E8 59 47 7C F6 CC 14 03 00 F0 
+8F 5F B2 5C 63 DF 6D 47 AB F7 D5 8F 03 EC 9C 2D E8 A7 6E 58 CD BF 00 44 15 75 A7 99 39 B9 0C 3B 
+64 97 96 95 CB 9E A3 D6 BD 5A FE 09 8B 97 6B DA DF 3E BA F3 7D 55 56 A8 6D 17 09 48 DA 8B 16 68 
+5C 73 7D AF 61 B3 58 FB F3 37 D9 88 C6 DF 5E D7 F8 4E B9 5C 3F B1 F1 4A 3D 22 A1 62 30 C7 E9 BA 
+F5 B2 4E 36 F4 4E 9B 8E C6 A6 0B E7 59 47 9C EF EC 5F 7F 91 20 3B 66 C1 3A 33 BA 5B 00 81 00 00 
+20 0C 5D 7D F6 3A E2 E6 72 D5 DB E6 41 2D 93 5F 5A 7D BC C5 85 03 DB FA F7 C3 1C 48 37 70 9A 92 
+BC 2C 93 B8 0E 20 5A 3B 02 9E EC 1E 84 21 20 18 05 39 C5 4C 0E 33 D5 67 6F AA 4F C7 33 C8 70 CB 
+87 41 B6 3A 03 23 AB 77 FC 3E D5 D4 09 1C 87 D3 6D 87 73 CD CA 55 DB 2C B7 77 BB 2F 7E 73 55 5E 
+56 7E 65 33 4E 58 5E 5D 53 49 0C 2E BB E9 12 8C 56 94 55 41 54 50 95 13 6E 9D F9 63 BF 76 9D B3 
+34 C0 F0 5A B8 A3 31 FC D6 AA 3B B6 6E DE BC 70 E1 A2 59 26 B3 07 5A 48 BF 11 12 1C FC 24 20 E0 
+A2 97 D7 40 0B E9 4F 34 D5 86 67 BE F9 77 30 ED 8B BF C7 D6 D6 D0 70 EC D2 E5 CB 06 5A C8 7F D9 
+4F 8E 5F 4A 55 6F 9C B1 F1 58 6D E8 94 BB 87 F3 29 E0 C0 DC B9 B6 F7 4B D9 00 00 80 55 45 DD 0A 
+CA 17 D2 35 D0 1A 3C 6D 19 02 81 F4 37 D0 A3 FE 58 08 AA CB B7 2E 0B B4 73 30 9D FE 3F 35 19 50 
+95 9B 5D 2B B3 E8 84 ED 1C B1 81 D6 05 81 40 78 17 E8 97 7F 30 78 D9 59 27 9E 8E 32 8B 7E F9 AA 
+94 0E 44 2C 74 27 4D D4 91 86 9D 65 08 04 D2 03 D0 2F FF 04 C8 B2 A3 66 2E 19 35 D0 2A 20 10 C8 
+2F 02 5C 64 0E 81 40 20 BC 45 4F FD E5 FA FA FA D4 94 94 86 FA 86 1E D2 40 20 FD 4E E5 A7 4F 99 
+99 99 38 5C 37 5F 57 FE 82 64 66 66 7E FA F4 29 2C 24 74 A0 85 F4 27 18 86 3D 0F 0F 27 22 C4 81 
+16 D2 6F 94 95 95 51 A9 D4 6F A7 FB F1 F4 E4 97 69 54 6A 5C 6C DC FB 77 EF 7E 9A 1A 08 04 00 50 
+5E 5E 9E 94 98 58 F8 A1 60 A0 85 F4 1B 9F 3E 55 7E FC F8 F1 F1 A3 87 03 2D A4 3F C1 30 2C C0 DF 
+9F F0 D5 C6 0A BF 2E C5 45 C5 35 35 35 03 AD 02 80 9E FD F2 10 05 85 9E D6 2F 43 20 3F 06 B8 7E 
+F9 97 40 53 6D B8 E7 85 0B 83 6C FD B2 8A 8A CA 40 AB 00 00 8E 2F 43 20 10 08 AF 01 FD 32 04 02 
+81 F0 16 D0 2F 43 20 10 08 6F 01 FD 32 04 02 81 F0 16 DF FD 5D 09 D6 50 98 1C 9D F8 BE AC BA 85 
+2C AB 39 6E EA 04 75 89 B6 AC B0 AA AC E4 5C 96 E2 18 6D 39 5E 98 0F C0 1A 0A 93 A3 92 DE 97 D6 
+B4 90 65 35 8C 26 4F D4 90 F8 F1 5F D2 60 95 EF 92 F2 38 C3 0C 47 C8 FE FC AF 76 50 5A 7E 52 74 
+E2 9B 52 1A C6 27 A9 34 CA 78 92 DE 10 C1 1F F4 E8 6D 2A C9 CC FC 24 A4 35 5A 55 0C 54 BE 4F CA 
+63 2B E9 6B CB 91 BE 7D D9 4F 81 51 FE 3A AD 08 37 74 74 C7 36 D8 54 92 F9 AA 84 A4 6C A8 25 83 
+60 D5 59 C9 B9 2C 85 D1 DA F2 9D 1B 29 FB D3 BB E4 DC BA AF 42 2A E0 F0 12 6A E3 34 A5 78 B5 1B 
+83 D1 0A 32 DE 56 0A 0F 37 1C 2E C9 AB 12 FB 0C 46 2F C8 78 5B 29 34 DC 50 FD 37 8C 7A F5 3D 9E 
+03 AB 49 BE E2 60 7F 31 AC 80 25 2A F7 87 18 A0 95 95 39 91 D5 17 1F F2 3C BA 54 95 0C 00 23 E9 
+FC 96 6F C7 E5 FD 09 60 35 C9 3E 87 0F 5C 08 2F 60 89 CA C9 89 02 6A 79 D9 71 92 FA 92 83 9E 8E 
+8B D5 7E EC 13 83 11 77 F6 EF BD 2D 0E 09 D7 56 F5 F4 23 61 7C 08 72 73 CE 18 7D D6 7E 56 7F A9 
+41 CB 42 8E 59 EC B9 FD 9E 25 26 F7 87 28 D2 54 5D FA A9 59 CC 60 A3 EB 85 DD 93 A5 F0 00 30 0A 
+82 DC 4F 65 8C F6 B0 9F D9 2F 61 84 D8 C5 8F 1D CC EF 8F BA F2 DC 69 02 16 7F CE C2 8E 6E 17 77 
+63 AD 0C 6F FC 80 D0 CA 20 C7 75 AE C8 FE 88 9B 1B B8 83 2E 95 F9 1F 32 F7 A4 1C 49 F2 5B 41 61 
+24 79 6E B2 AD DE 15 71 7B 43 E7 F0 1D F5 91 67 D6 1F 88 61 7E 95 27 FF 2C B7 74 AF F9 FC 3F 5A 
+FA 77 C2 CE B9 B9 77 ED FD 91 1E 49 67 4D 79 55 62 9F 61 E7 DC B4 33 BF 3F D2 3D C9 C3 64 D0 D8 
+D4 6B FA EE 97 99 EF 2E 6F DD E8 9A AF B5 F1 82 D7 B6 99 2A 82 78 80 51 FF BD 73 60 BB E3 81 2D 
+C2 F2 01 F6 3C B3 7D 30 F3 DD 3F 96 1B CF E4 6B 6E F2 F4 B6 9C D1 26 F3 F6 C1 6D 47 1D B6 0A CB 
+05 1C 1C 37 E0 32 31 5A DC 0D DF 58 61 CD 3E 84 33 FE 06 D4 D0 D3 0E 77 6B 8C 8E 3E 73 35 D3 14 
+C2 03 C0 AC 88 3E BB D5 CA 67 8F B3 6E B8 CB 0C 11 8C 16 77 D3 2F 46 48 B3 D7 61 3A 09 64 1B 68 
+00 00 20 00 49 44 41 54 07 35 E4 B1 56 3E 57 59 0A 5D 74 C4 28 4B CE A7 CE 61 7F 29 25 0E 3D C9 
+65 A3 D5 DD E6 99 73 F4 79 E1 FD 0F F2 7B D0 D7 0E 0E 56 15 70 D6 2B 4D 60 EE F1 0B 36 B3 55 5A 
+5F 91 F1 62 DA AB 4E 1E 9C 2F 5E E4 7F 23 F2 CB B7 32 1C 36 35 3F 35 FA 79 54 6A 5E 5D C7 00 A8 
+8C AA EC 94 E8 F0 B0 E7 51 69 05 9F CF A0 65 E9 A1 11 FF 56 36 57 BD 4B 88 49 FA 7C 41 73 C5 DB 
+C4 A8 C8 F8 F7 95 0C B4 22 23 3C 24 BD FC 73 C0 3D 94 5E 9C 11 1B F1 3C 3A BD 80 D6 75 74 55 AC 
+EA E9 D9 4B E9 FC F3 8E 5D B4 9B F9 45 E6 6A A7 43 0B C4 0B 1F DF 8A F8 2C 93 4D CD 4F 8D 0E 7F 
+1E 93 5E F8 25 23 B4 22 23 EC F9 EB 4A 94 5D 93 9B 14 19 1E 9D 51 DA 08 00 00 58 63 49 66 4C C4 
+8B 94 3C 2A FA 25 59 F8 AB 4F 28 A3 E2 6D 7C E4 8B C4 AC 4A 46 B7 85 86 D2 8B 33 E2 9E 3F 8F 49 
+FB 2C 97 51 9C 12 93 4D E5 60 55 6F C2 83 53 4A 98 DD 25 EB 0B CC BC CC 7F 69 22 13 96 2D D6 14 
+6A AD 54 92 EC 64 EB DD 8B 95 41 DE EB 5C 26 A3 38 25 36 AB 8E 83 55 BD 0D 0D 49 6D BF 1F A3 32 
+3B 35 2A 3C 2C 3C 3A 2D FF 4B 4D 54 A4 87 45 BC AA 44 51 6A 41 6A 54 44 64 72 E7 DA 6B 2E 7F 1B 
+FF 22 2A A9 F3 61 00 00 00 AC CA 77 F1 2F 22 13 3E 97 04 B3 24 25 34 38 3E 8F EB 73 D1 E6 C2 C4 
+D0 B0 CC 4F DF 08 54 FE 13 E0 B0 9B E8 F4 46 56 57 0F 45 92 80 88 88 88 68 DB 9F 40 55 E0 91 03 
+77 CA D5 2C 5C 9D E6 C1 C0 78 90 9F 46 5F FB CB B4 98 D0 F8 46 D9 45 4B A6 75 EC 6A 88 4E B7 7F 
+12 7F 44 52 8A 1F 80 66 00 00 A7 2A D6 71 E1 F9 98 72 92 00 BB AE 16 0C 5D 76 EA EA C9 B9 72 04 
+80 16 3F 3D BC ED D0 83 2C 54 4C 52 80 55 57 45 C7 2B CE 75 BC 76 66 A9 12 81 99 7A 79 D7 E1 0A 
+3D A5 92 D7 A5 80 23 34 FB 52 C8 51 CD D4 B3 96 B6 97 93 A8 64 11 62 33 53 7A FA 54 4A 5C A4 E4 
+B1 0C EF 05 FC A0 39 EB B6 83 D5 C9 A7 1F 30 31 0A D2 58 8B 0E 31 DD EB 7E 7A 8D 96 40 27 99 D1 
+61 2F 1B 65 16 2F 9D DA 51 A6 C8 F4 83 8F 13 8E 49 48 F1 03 00 30 5A 8A CF 6E DB F3 2F 2A 88 12 
+A2 1C 5A 0D 47 C1 64 B7 FB A9 B5 3A 42 80 99 EA 6B 7B 88 3A 7B 72 55 48 78 0D 99 D0 50 DD 22 BB 
+F0 A8 9D F2 D3 E3 97 FE 65 11 99 D4 06 41 C3 3D D7 AF 6C 1E 41 66 A6 FA DA 1E A8 99 36 E9 D3 F3 
+E8 26 31 C1 A6 0A AA F0 78 4B 37 8F 6D 06 A2 1D 7F BE CD 59 77 F6 EF 38 F5 E4 03 47 4C 0C 69 AC 
+43 15 4C EC CE 9D 5E 3D 82 F1 DA DF 37 BA 18 65 E1 43 BC 2F 32 AC 8C 0D 14 D0 2E 93 75 B2 AA 47 
+10 05 E5 A1 7C D4 28 DF 8B 61 4A 1B A6 AB 89 12 00 00 80 3C F1 48 70 12 00 00 D4 3D 0D F0 7B 51 
+82 B2 70 A1 5E 17 19 D6 C6 FA 72 15 81 07 B7 1F B9 97 C5 A6 48 0A 32 EB AA E8 78 85 F9 C7 AE BA 
+2D 55 22 30 D3 AE D8 1E A9 9F 3B AD 32 30 B0 9C 2C C0 AE A3 E2 94 CD 5C AE 1D 33 95 C3 03 AC 2A 
+CA 65 87 DD 95 34 3A 9F 30 D2 C2 19 3A 65 44 3D 97 5B E3 54 BD B0 37 75 8D A9 42 C8 2D 74 A6 D4 
+44 EB 73 67 B7 E9 0B 34 25 5C B2 BE 2C ED 18 E1 65 D6 3A 30 4B 8B 70 D9 66 4F DD 19 3C 43 B7 0F 
+76 FD 10 98 69 57 6C 5A C7 31 BA 0E EB DE 4A 43 CA B9 9D 4E 31 B8 29 C7 3C 76 E9 0B FD 3C 71 10 
+48 1F FB 00 CC C2 FC C2 16 82 AA A6 66 E7 77 3A BC 88 B4 D4 97 26 CE 2E 7C C7 58 78 39 3E 2D 21 
+2D F1 FE 2E CD 8F 8F 2E DE CB 62 03 40 0B 3D 73 F4 01 7D BA 7B 74 6A 62 62 62 4A F2 E3 5D A3 6A 
+82 BD EE BC 69 ED BD 71 68 EF 2A C7 78 C4 A5 A4 A4 04 1F 98 C8 78 7E D2 EE 9F 7C 8D DD 8F 92 D3 
+5E BD 8A B9 3C A7 E6 65 46 63 6B CE 2D 29 E7 AC 8E C4 49 6F FA 5F 7C 66 72 4A 7A FC E3 5D 0A 89 
+8E BB DC 93 9B BF 92 59 D4 42 50 D5 FC 6A FB 79 BC 88 54 9B 4C EA F3 63 3B DC 33 E4 B7 DC 8E 4B 
+49 49 4E 89 FB DF 3A F1 B8 93 96 A7 E3 5A 3B 77 58 5D 62 74 E3 9A 7B 89 C9 29 C9 8F 6D B4 2B 1F 
+DB 1F 88 D1 77 8F C9 48 4E 8B 70 31 21 A6 5E BD 91 D8 DA 23 C4 EA 93 A3 6B 16 F9 C5 C6 C5 25 C6 
+3C D8 A5 FC E6 DC 3E D7 C4 8E 4A 18 A9 EE 3B 8E C5 49 6F BA F5 32 2D 3D 25 25 F9 91 B5 42 92 93 
+B5 7B 4A 33 65 AE 93 AF 85 0E 42 36 B2 7D F0 D4 71 B6 68 77 C9 FA 52 35 78 99 45 07 EC 4D 84 33 
+2E 58 CC 34 1A 33 6D A9 B9 ED 49 AF 47 09 85 0D AD BE 93 32 EF F8 E5 AD 3A 08 D9 68 F7 E3 27 47 
+4D 44 68 21 67 8E DD A3 4F F3 88 4A 4E 49 78 99 91 FC D0 46 A7 E6 99 F7 DD 7F DB 6A A2 2E 2E 92 
+6A 76 E3 65 66 4A 52 C2 FD ED C3 4B 1F 78 DE C9 62 03 40 0D 3B BD E7 72 B1 CE 81 47 29 AF D3 5E 
+C5 B8 8F AF FA B7 84 CB 2F B3 F3 DF 36 2E F0 89 CF 48 CB 7C 79 DD 42 FE 95 FB 1E CF 64 06 A2 3A 
+7F EE 28 66 52 70 78 15 06 00 00 58 4D C4 B3 58 B6 E1 7C 13 D9 9F D2 F1 44 F3 03 4F EF B1 DD 63 
+FB F9 6F AF 7B 58 79 1F 46 8D B0 8A A0 83 BB 7D 72 E4 56 3A 9F 5E AE 0C B7 5D 84 FC 54 FA FA 13 
+61 B4 30 01 9E 4F E0 1B 53 47 88 D2 7C CB F5 7A 14 02 00 42 5A F3 A7 AB E3 CA 8B 4B 50 00 08 1A 
+2B 8E 9D 75 B7 9B 25 4F 02 00 E0 45 35 26 E9 0F C1 D1 6A 6A DB 7E 2B C8 D0 E9 F3 C6 88 E2 01 BF 
+00 3F 2D 3A 20 BC 56 6B DD 41 73 3D 51 3C 20 48 8F B7 DA 6B A6 DC 1A 86 89 91 F8 F0 E9 87 21 F3 
+B7 AF 50 25 D0 6A 6A EA D8 F2 73 D7 9B CA 17 05 06 A4 75 1A 44 60 B4 30 01 9E DC 83 4C 5A B4 7F 
+78 B5 DA 1A 87 CD 63 A5 08 00 20 D2 C6 DB 0F AC 54 2A 0F 7C 18 DB EA FF 09 0A 73 36 2E D3 10 02 
+80 3C 6C BC BE 3C 22 38 69 9D 85 A1 24 01 20 F2 93 C7 AB E3 EB AA AA DB C2 FC 21 6A AB F6 6F 1E 
+23 86 07 40 44 D7 7C D7 52 A5 F2 D0 A7 C9 DC 4A 5A 12 1F 05 7C 18 B2 60 DB 72 B5 36 B9 73 36 98 
+CA 15 3E 0B 48 ED 28 B7 97 C9 BE 05 59 6D C5 B9 E0 F0 3B EE 7B 56 4E 92 67 65 87 F9 9D B2 F9 6B 
+C6 14 B3 63 61 E5 5F 8D 1B 10 34 56 1E F5 74 B3 99 DD 5A 13 22 EA 93 0D 86 E0 68 B5 B5 6D A3 AA 
+88 D2 3C 8B D5 3A 62 78 80 17 D5 31 9D AA 8A FB 58 5A CA 06 0D B1 81 11 B5 1A 66 76 6B 46 8A 00 
+80 C8 4E DE 6D 33 9F FB C5 1E D1 58 E9 B0 CD 50 92 00 08 52 46 96 B6 8B E4 4B 42 9F A6 02 82 A2 
+E9 3C 03 4E 72 70 78 05 06 00 56 F3 FC 59 22 CE 78 CE CC 9F B4 A8 81 C3 6A AC A9 EE 00 AD 89 D9 
+EB D1 75 46 8E AF CD A1 27 F4 31 BB 3D 0E 4C FD 0D 97 03 40 06 98 3E 76 04 08 E2 E2 A2 38 94 56 
+5B 87 81 9E 5E 00 71 92 32 32 6D 39 E3 48 24 12 60 B3 58 18 00 42 CA 63 C7 36 87 FA BB 1F 7C 97 
+5F 54 5C 5C 90 53 50 46 67 4B 8C C0 3E 5F 23 DD 76 0D BB AC A0 B8 49 48 5D 4D 81 D0 76 8A 34 5C 
+A3 B5 C7 82 51 8B 8A 6B D9 05 BE AB 0C 7D B9 6F 47 52 2C 6B 01 80 AB 6F 4C 10 A7 88 E0 50 7A F7 
+32 D1 4F 45 E5 4D FC CA 1A C3 3E DB 4F 52 D7 50 26 36 96 97 B4 EE 5A 82 97 94 95 6D BD 3B 9E 80 
+10 70 22 62 E2 6D 09 11 84 08 00 87 83 01 40 00 00 C7 A7 A2 A1 D6 9E 03 49 45 45 09 57 5B 5A 4A 
+C7 0C DB F3 C4 68 85 C5 B5 EC 82 2B AB 8D AE 7C 2D F7 0B 3D 26 FB 62 15 5A E4 7F CA 25 EC 63 AB 
+93 25 AA 2F 77 B4 9E 24 FA 95 61 7C F2 FA 8B B6 EA 2F DA 0A 00 9B 9A 1B E7 7F E9 B4 FB 35 BB 63 
+1A BA 17 97 4B 72 A7 12 52 31 34 6C 0E 0D 70 3D F8 3E BF B8 B8 28 3F 37 BF BC 43 4D 48 7D AE 3D 
+C0 CF C7 07 30 36 0A D0 8A C2 D2 66 B2 A2 B2 D2 67 73 D5 87 0F 25 BC 68 CF 10 C7 AF 3C FC 73 A7 
+92 AC A6 AA 84 BF 55 52 02 C0 78 59 93 05 46 67 0E 86 84 96 AF 5A 87 0F 0B 4C 22 4E 71 9E 46 F9 
+4A F3 8F 01 D1 30 73 BE DA 61 3D 46 AE E7 A2 79 9E 1D 13 A1 45 01 4E 67 C2 DB 1E 5C 88 FA 8A E3 
+56 93 45 00 00 B4 78 97 5D CE C9 02 73 DD 5C 2C 60 C4 2F C8 00 D0 57 BF AC A4 3D 42 02 0B CD CC 
+6C 00 72 1D 82 85 37 45 3B 99 7B D7 CC 3F E4 BC 5A 09 00 00 F0 5D 6C 32 85 55 04 DA 2C DD 13 0A 
+74 A6 4F D6 33 98 F3 E7 BA FD 94 24 87 AD 8F B8 33 6F F3 C3 38 22 11 01 6C 06 F3 4B 37 8F CD 62 
+71 00 09 00 40 C0 13 00 A2 BF DB DF 7D 21 85 6B 13 48 1C 9F 98 70 47 99 8A A3 46 48 60 61 99 19 
+8D 40 AE C3 99 A6 A8 93 EB BD 6A 17 1C 3E 6E 44 24 E2 50 26 D7 2D 00 AB 85 81 01 22 89 D4 AE 85 
+D0 8B 5D 26 31 36 FB F3 9B 31 D6 DC D2 C2 C1 F3 F3 91 B8 2C C7 13 08 00 19 63 EB EF B6 48 8C 5B 
+2E 99 22 0C 00 A3 77 C9 BE C0 69 AE 2A CC CE 2E 6C F3 CB 82 54 36 C6 FD BA C3 4C 76 FB 6B 6F 92 
+B1 DB FF AC F5 5A 4D 40 C4 D4 A6 AC 3F 41 FC 90 BC 3E 2C F5 0D 6B F9 14 6E D9 15 4F 6D CD 6C 42 
+C1 A8 E9 93 46 EB 9B CE 5C AB 2D 96 7C 68 33 57 4D E0 BE AA 3D 0E 20 91 11 1C CA 62 B2 00 68 5B 
+B4 84 A1 18 D7 AA 05 94 8D 7E 29 09 06 83 C9 41 44 F9 01 00 78 A9 19 F3 26 9E D8 17 12 5A 3C 83 
+10 9C 26 34 D5 63 32 6F 85 98 E7 34 57 7D E0 2A D3 3A 16 00 00 2D F5 3F 68 E3 57 A2 66 71 D5 11 
+CE F5 41 06 86 BE B6 3B F2 B8 05 26 43 EA 23 FD 6E 66 71 BF 63 A3 C5 8F FC EE A6 E5 B1 44 64 BA 
+F7 F3 58 55 E8 9D A0 4F 9A DB FD 6E 9E 77 DA 6B B5 7E D1 F4 61 0D 65 15 58 57 E1 B8 09 0A DA 23 
+24 9B DF A5 BC 6A 1F 5F A5 27 25 BF 67 03 00 00 5E 44 4B 63 08 C8 7D FD 9E 28 2B 2F 2F 27 2F 2F 
+27 2F 5E 19 EA E9 EE 1B DB 79 E0 90 6F DC 3C 93 21 F5 11 D7 6E 75 92 F9 D0 F7 7E 5A 1E 53 44 96 
+2C A7 A5 2E C9 FC F7 65 02 AD 5D 5D 5D EC CB B7 A8 8C 9A 7A 5F BA 73 1C C6 BB 94 D4 B6 81 6F AC 
+36 21 E1 3D 4E 4D 47 9B 6B 05 1E 5E 54 53 43 01 E4 BD 7A 8F FC D1 AA 56 9E 52 19 7A DE F5 5A 5C 
+19 06 00 0E 8F 03 1C C0 F9 56 B2 2F 20 1A 9B 7C C2 23 C2 23 23 C2 23 23 C2 43 5D E6 77 7C BD 46 
+14 65 04 2B D3 1E DE 78 51 CD 75 11 46 2D FD 48 C7 49 C9 CA 12 00 C0 E3 DA EF 87 55 85 DD 0A FA 
+A4 B5 FD EA 1D 4F C7 FD 56 EB 16 4F 1F D6 50 F6 09 E3 60 3D BD E4 13 64 46 8E 90 61 FF 9B 94 44 
+6F 3B 40 4F 49 CF E1 BA 13 23 2B E3 55 53 DB 4D AB 5F 26 BE C7 A9 8D 1C 01 00 00 40 6C CA C2 69 
+22 FF 46 06 3C 8C F8 97 32 7D DE F8 01 5F 9F D8 11 44 63 E3 D5 B0 B6 22 8D 0C 39 BD 50 02 B4 BC 
+BD 6C 73 28 94 3D E9 C0 B9 5D FA BC F5 0C 81 FC 46 F4 79 42 83 3C 76 AB DD C2 88 9D 6E 1B 36 D5 
+5A 6F 59 36 59 53 1A FB 98 1C E0 75 CA 33 8E 60 EC B0 C3 84 D2 BA 1E A3 2B F0 FC 52 52 42 9C 97 
+F1 4F 63 A6 2D 1A 86 2B 4F 7F EC E9 1A 46 43 F9 5A 18 5F BB 03 BE F1 7F AD 1D 15 78 6E EF 2E 09 
+BB 75 46 62 1F A3 FE 71 0B F8 84 21 00 00 40 D2 5D 6D 3E E1 E1 51 C7 8D 07 EB 2D E7 8F 12 AD 49 
+F2 73 3D 17 49 5C B3 F0 8F CE 76 90 0D B7 ED 9D 1F B1 E3 AC F9 DF 75 3B B7 2E 9E AC 25 8D 7D 4C 
+09 B8 E8 EC 11 47 30 3E 64 65 42 01 C8 F8 BF CC C7 3C 73 3E 68 25 49 DF F2 A7 32 96 17 7C C9 25 
+98 65 B0 7F 95 01 19 B0 7A 5F 18 68 D9 7D FB 9D 52 7B 36 18 8B 16 87 9C 77 0D 27 CD 38 B3 5C 15 
+E1 EA 09 93 74 57 6E 18 FF E8 B0 E3 E6 03 F4 6D 0B 47 89 D6 24 5F 77 39 FB 02 59 33 5F 0E 01 78 
+01 41 21 04 CD 89 B9 1F AC 30 75 9A 5E B7 C9 7A 0D 5E 76 F1 8E CD 8F CC CF 5A 2F 29 5F B0 78 B6 
+81 8A 04 B1 A1 24 33 FC EE BD 97 42 A6 67 56 69 20 00 CF 2F 24 88 A0 B9 B1 F7 82 15 A6 19 48 49 
+0B 71 62 E3 9F 45 4F 5D A0 8C 2B 4F F5 BF E0 12 46 43 F9 18 8C 9E 66 C5 C8 63 D7 9A 1B FA 9F 72 
+D8 26 55 BF 65 92 54 45 D4 45 97 90 1A 4C FA F3 69 4E D9 43 07 9B 3F F6 98 8F 26 E7 07 79 BA BC 
+E0 37 71 5D AE DC 7A 46 68 C2 C2 19 E2 9B 7C 2F E3 24 97 59 1A F0 FA 07 02 8C 54 B7 9D E7 92 71 
+BA 1B 4D 28 B9 11 61 B9 5C 67 F0 C2 CA 63 C7 A9 8A F2 72 FF 19 AD 7A 13 11 86 FF B2 4B 3D 4E 44 
+F5 4F 63 9E D8 B5 F2 FB 61 57 BE 8D 08 25 7C F9 1D E0 84 55 C7 19 A9 0E FE 07 66 DF 27 9A F1 D2 
+B3 9D AE BB 8B 1F 72 B9 79 60 AD 4F EB 2F 99 28 A9 B3 F0 C8 59 87 55 6A 3D E6 26 32 CB CE D9 82 
+7E EA 86 D5 FC 0B 40 54 51 77 9A 99 93 CB B0 43 76 69 59 B9 EC 39 6A 9D 55 A9 6F 3E EF C1 3A 72 
+E6 D6 FE 0D E7 F1 B2 FA 0B D7 AE A4 BB 3F 46 08 00 00 C2 D0 55 E7 FC 90 33 67 7C 2F D9 3C AC 65 
+F2 CB A8 1B 6F 3E BF CF B2 8B CF 44 F0 D2 26 8E FF 3B 27 7E F0 F4 ED FD 6B 2E B7 CB D4 5E 74 CC 
+CD 61 B5 2A 02 00 40 D4 37 5E BA C2 77 DA ED DA 49 0B 9F 7A 44 42 45 7F EE F1 6B 3B 97 A9 21 A0 
+2F 7E 99 38 6A F9 72 F1 98 93 9B 2F D1 F8 95 0C E6 9D F6 DD B5 B0 D3 5A 03 C2 D0 35 1E BE C4 33 
+AE 57 BC EC 1E D4 32 05 64 D4 8D B7 78 D8 6F 1F 27 08 00 E0 1F BF 64 B9 C6 BE DB 8E 56 EF AB 1F 
+07 EE EE 36 59 EF E1 D7 DD E1 7B 5B D1 EB E2 8D D0 3B 2E FE B5 2D 40 40 62 98 F6 64 4B 2F AB 0D 
+53 64 F1 AD F7 5B A6 B9 FF CE 91 1D EF AB 1E 3D DD 73 7A 13 FD F4 8D 6D 0B 2E 02 51 05 BD A9 CB 
+4F BA 0C 3D 68 97 FE 3E 17 CC ED 5C 13 5C A6 A8 FC E5 79 99 73 CA D9 EF C8 DF 57 50 8A FA F4 95 
+CB C7 5C 8A 6A 3F 89 13 9C B6 79 BD 48 E8 61 73 77 2A 49 7E CC FC 13 D7 F6 CE 91 6E 2F 09 7E C3 
+05 B3 FF B8 EB 4B 98 35 5F 8F E7 C7 6A 19 05 B9 C5 4C 0E 33 CD C7 2E CD A7 E3 19 44 7D DB A3 C0 
+DD 3A 3C EC 97 39 4D 49 17 AD 92 B8 0E 20 23 76 64 3D DB 35 60 7A FA 03 4E 53 92 97 65 07 9B B4 
+76 04 3C D9 AD 35 60 82 7E 1A 9C EE 59 BD 62 E5 CB B8 B8 6E 4F 37 55 E6 A6 27 BC 7C 99 F8 BA B0 
+8E D5 43 2E DF 01 4A 2D 7C 93 55 46 63 B7 FF 9B F5 DA 79 96 86 B1 43 7C CB F7 64 D6 F4 29 37 23 
+21 2E 3E F1 55 3F CB 6C 7A 6A 35 42 6D E5 E5 52 B4 3F 33 1D 94 30 32 4E CC D0 32 75 7B D7 EB E2 
+DF 62 61 11 12 14 FC 23 25 FD 6C 82 83 82 B6 6E DE 3C D0 2A FA 19 0D 55 B5 96 96 EF FA 4D F2 2A 
+76 36 36 F7 EF DE 1B 68 15 1C 0E 87 F3 1F 16 66 F2 4B A9 EA 49 A9 F6 DF 13 E2 0B 9C 4F 4F F7 CD 
+F3 93 39 F6 D8 6B C5 10 04 60 95 51 B7 9F E5 0B E9 6E FF 6A D1 74 AF E0 97 56 D5 95 FE 21 32 21 
+BD 01 AB 8A BA F5 EC E3 A8 F5 8B 87 C3 45 C0 10 48 EF E0 C9 DF 0A 41 75 E9 B6 65 CF 6C 0E CE 9D 
+72 63 B8 34 A8 CA CB AE 95 5E 78 7C AF A9 D8 40 EB 82 F4 0D 34 CF 67 FD 3A 9F F4 CA A6 21 EB 7D 
+96 2B 11 BE 7D 01 04 02 01 80 47 FD 32 C0 CB 9A 38 F9 EB 2D 8F 89 7D 55 4A 07 22 8A BA 13 27 E9 
+48 F3 DA D8 24 79 A2 DD DD C7 2C 19 9E DD FA 91 07 20 28 CC DC B2 53 A0 58 44 6F F6 9F 5A 83 7F 
+AA 06 02 E9 37 78 D3 2F 03 00 00 59 76 D4 9F CB 46 0D B4 8A EE C1 8B 2A 8C F8 FA BB 0E 08 37 64 
+A5 F1 CB 94 60 D8 5E 08 A4 8F C0 DE 1E 04 02 81 F0 16 D0 2F 43 20 10 08 6F 81 E3 74 F1 C1 5D 1B 
+86 A3 C7 30 18 0C 04 E1 DD B1 0E C8 A0 A4 B1 A9 91 44 24 11 89 C4 6F 27 FD 45 60 B1 58 4C 16 4B 
+50 A0 2F 1B B7 F2 3C 34 1A 4D 54 74 50 0D E5 35 35 35 2D 5D B6 CC F1 84 D3 40 0B E9 71 7C 59 45 
+55 75 FD 06 73 C3 B1 63 7F 9A 1A 08 04 00 60 BB 7B B7 A9 E9 9C 69 33 A6 0F B4 90 7E 23 E2 F9 F3 
+90 E0 60 17 57 D7 81 16 D2 9F 18 19 18 06 85 86 90 C8 BC 36 23 FF FD 1C 39 74 68 C4 C8 91 03 AD 
+02 80 9E FD 32 81 40 10 16 16 A6 50 7E D6 0E 60 10 08 00 00 00 12 89 24 24 24 34 98 1A 9E 90 90 
+10 89 44 1A 4C 16 01 00 70 38 9C 18 85 42 1E 44 7E 99 4C 26 F3 C8 F0 00 1C 5F 86 40 20 10 DE 02 
+FA 65 08 04 02 E1 2D A0 5F 86 40 20 10 DE 02 FA 65 08 04 02 E1 2D FA 36 C8 8D 55 65 25 E7 54 A3 
+5D AC AC C3 91 65 46 E8 AB FD A6 3B 58 30 2B DE A6 E5 D5 75 DE BD 18 27 38 64 94 9E D2 F7 C4 51 
+C6 AA DE 25 E6 61 CA 06 23 65 79 62 0E 62 B0 81 D1 0B 32 DE 56 0A 0D 37 54 1F 3C 91 FB 30 FA 87 
+8C 37 95 42 C3 0D D4 25 07 8B 4D 83 B1 9A 7A 4D DF 7E F8 8C 44 CF CD 56 41 8D 5D 9C C1 CB AE BC 
+1A 77 72 72 FF 88 EA 7F 18 1F 82 DC 9C 33 46 9F B5 9F F5 03 26 8F 31 6A D8 89 0D 87 E2 3B EF DB 
+8C 0C DF F2 F0 99 ED A8 EF 70 AD 8C 38 77 F3 03 2D 87 E2 FC 56 4B B0 0A 82 5D 4F 65 8E F6 DC 3F 
+7B F0 CC 7A 0F 34 EC 9C 9B 76 E6 F7 47 BA 27 79 98 F0 FA 3E FD BD 86 9D 7D CB 76 DD 03 ED 73 F1 
+1E A6 83 C5 A6 C1 58 4D BD A6 6F 5E 83 DF E4 4C DC EB 93 1C 0E 00 80 F1 E2 C0 F4 BD FF 2E F8 E7 
+B1 9D 2E 02 00 00 78 32 8F 85 08 E2 06 A3 C5 DD F0 8D 15 D6 EC 43 98 FA BE 82 E8 EE 0C F0 5D 3B 
+84 EB C9 8E 23 90 85 FE 6B 7F 17 A3 C5 DD F2 8D 15 D2 FA 81 C2 21 10 08 AF D1 47 C7 81 F0 0B 8B 
+B4 3E BC 18 64 04 07 70 44 7E 61 11 11 52 FB 59 94 5E FC FA 55 6E 0D 46 51 D6 D5 51 16 6D CD 1A 
+AD C8 88 7C 83 1F 35 75 04 A1 20 F5 75 21 83 A2 A1 AF AB 20 08 B0 C6 D2 D7 A9 39 B5 FC 4A A3 C7 
+A8 88 11 DA 92 FD 8B D3 99 A6 C9 79 9F FA BE 92 20 37 52 4F BD C3 0E 72 28 BD F8 F5 EB 9C 1A 8C 
+A2 3C 6A D4 E7 AC CB D2 9F 67 11 F5 8C 65 AB 33 DF D7 4B 69 8F 51 A5 20 00 00 46 55 F6 EB 77 C5 
+75 2C A2 84 F2 A8 51 CA 14 04 00 46 71 4A 4C 36 95 83 B5 BC 09 0F 96 D7 9B 3E 1A FF 6F F8 1B 54 
+6B 8A A1 62 EB 0D EA 73 5F C6 17 8B 8C 99 AA 2D C9 E9 32 C3 AE 6E DD 05 38 A2 A0 B0 88 68 D7 9B 
+59 32 2A B3 FF 7D 57 5C CB 22 49 28 EB 8C 52 A1 20 AD EA D3 BA 91 F1 D9 B7 33 8A 53 A3 5B 85 87 
+85 CA 8F 9E 65 A0 D0 B7 CA 82 40 20 BF 26 FD 36 80 D9 9C 75 DB C1 EA E4 D3 0F 98 18 05 69 AC 45 
+87 98 EE 75 3F BD 46 4B 00 30 53 AF EC 39 48 9D 3D B9 32 24 BC 86 4C 68 A8 61 C8 2E 38 BA 77 D8 
+93 63 DE 6F D8 FF 6F EF CE E3 62 5A DF 00 80 3F 73 66 9A F6 8D 92 2B 59 DA 0B 85 36 15 B2 5D FB 
+D2 BD 96 EC 3B D1 5E 2A 4B 96 94 BD B4 D9 22 54 7E B6 EB 86 42 2A 7B 0B 6A 9A 94 64 2B A2 A1 6E 
+DA 27 6D B3 9C 73 7E 7F 14 A6 24 21 9A F2 7E 3F FE E0 CC 9C F7 3C CF CC 78 E6 9C F7 BC F3 BE 22 
+9C F2 2A 49 63 D7 13 61 2B FA 8B 72 99 C7 DC 37 94 8C 1A 56 74 33 BE 5A 56 B2 F6 5D 85 B4 99 9D 
+BF BF AD B1 2C 06 50 FB EC EC 7A 87 5D 97 5E 91 72 72 B4 EA 72 5C 65 82 5B E0 EE 79 FD 24 80 CB 
+3C EA BC A5 70 50 EF 37 99 6F 81 94 1A 7F 28 D6 B3 F7 8D 2D 36 9B 23 9E E1 72 0A 12 BC F2 E2 4A 
+AC D7 64 EF 30 DF 19 32 99 91 A1 F1 2C 9C 87 C5 1E 3E C8 B1 37 EB 5F 1B EC 58 DF 4B 20 8A 01 00 
+BF 20 7A 97 D3 99 7E C1 09 BB 2C 88 A6 0D 7A 1B E6 35 7F E8 D6 C3 59 57 36 D9 7A 9E 7B C6 97 57 
+90 E4 96 17 57 62 2A 53 BD 8E FB CD E8 4D E5 32 BE 14 C6 C7 EF A3 9A 87 97 C2 6E BF C1 79 94 D8 
+E0 43 1C 07 54 97 11 E4 37 D1 46 3D EA 75 A9 81 F6 9E 49 DD 56 FC EF 5E 06 23 F5 C1 BD 8B CE 2A 
+C9 DE CE FE 8C FA 35 58 C9 F2 FB 09 35 0B CF A6 A4 25 33 A2 9C FB 17 45 6E 58 97 68 18 78 3B 9D 
+99 72 6B EF 78 11 66 D8 C9 E4 FA 36 C8 4A 46 42 D9 DF C7 92 EE C7 A7 24 FD E3 A2 9A 15 E8 1E 90 
+5C 0B C0 61 FA 3B 78 25 75 5B 71 FA 6E DA 83 D4 54 C6 05 47 95 94 ED 8E FE A9 0D 4D B3 9F 14 19 
+04 25 A5 A6 A6 C6 6C 18 C6 8D F3 DD 1A 51 39 DA 3F 9E 99 9C 9C 9C CA B8 E8 AC 5F 1A 13 7C 36 8B 
+2B 3F 79 7B E8 4A 3D 9A A8 A9 6B C4 65 EF F1 2D FF A0 BF 51 83 58 4B 87 6E BA 63 C5 D3 6B E7 23 
+CE FD FB E1 CF F9 7B AF F9 00 C0 8E F5 F5 3A 57 39 2A E8 0E 23 F5 FE DD 74 C6 F9 35 7A A5 D1 87 
+FF 79 C4 6D D5 AB 2A 3F C5 2B 74 D5 00 9A E8 10 D7 0B 91 DE 13 5A F9 56 20 08 D2 D1 B5 4D 5D E6 
+24 9F BF FC AA E7 54 DB D9 EA 54 76 69 69 39 5F 79 F2 E2 89 CA 79 57 A2 D2 EA 97 86 A6 F6 9A B0 
+7C 96 96 14 80 98 AA 99 A1 32 4D CA 62 81 B5 49 57 2A D0 94 47 98 6A 63 E5 C5 C5 0D AD D0 34 67 
+AF 5F 65 20 87 01 C8 E8 2F 71 99 DE A7 E0 DA 25 06 D4 25 5F 88 7A D5 73 9A CD 2C 8D 86 A6 27 2D 
+9D D8 E3 75 74 14 B3 BE 69 5A 9F D1 53 0C 64 31 10 97 10 07 AA F6 6C AF 00 7F B7 71 CA 74 00 C0 
+64 B5 87 1B F6 A4 B0 4B CB BE AD 6F 56 A0 C1 AF 1C BA 31 9C 75 2D D0 7B 9B 97 D7 87 3F 3B CE A4 
+D7 01 00 55 7B CE D6 7D 7E 6B C6 D7 C7 24 A3 65 61 D4 93 C2 2E 2B FB E2 5C 51 08 82 20 6D D2 8F 
+41 54 E4 B1 CA F8 B9 A1 73 8D 43 05 37 D3 7B E5 D7 81 01 00 60 0A 4A DD EB 3B 5E 31 AA 08 8D 22 
+2D D7 A5 E1 B0 34 11 1A C0 C7 09 ED C4 D4 B4 3E AE A8 4D 57 53 EB 45 29 7B FB 86 60 E3 AC 32 7E 
+EE B1 79 A6 C7 3E 6B DA 10 00 28 0A DD 94 3E EC 23 A5 6A 62 52 1B 17 E9 BF E9 C9 CB 3C 16 2B 37 
+3B 37 BF 92 DF B5 DF 37 DE 32 FB D4 20 C1 7E FD C5 43 C3 67 A3 23 68 7A 8E D1 FF 5A F7 69 DA BF 
+2C A5 66 6C 5C 1B 17 B5 77 D3 D3 97 2C 56 DE CB 9C 97 05 DF 11 13 82 20 BF 95 B6 E9 5F A6 62 54 
+A0 19 BA 44 FA 5B CA 53 3E 6D A5 88 C9 49 37 3C 4E A3 0A 6E FF 42 2B 04 9F FF B1 60 11 75 B5 75 
+24 26 2E 06 58 1D 15 68 06 AE 91 7E 7F C9 09 36 21 2A 2F FD E1 D8 1F 4A 21 51 78 65 CD 0C F7 38 
+D0 1B 6D 31 C8 68 D2 9F 8B D6 CB A7 6C 5C 7D E1 4B C7 FA 34 BD 29 97 D7 78 84 DB C7 06 31 EA 57 
+0E FD 75 44 E1 65 57 AB 35 71 A0 3F 7A F8 60 C3 89 63 17 0E 90 63 6C B6 16 88 A9 85 30 10 04 F9 
+5D B5 49 3F 06 26 A3 AB DD 13 72 32 9F 8A 74 57 56 EE A1 AC DC 43 B9 4B 51 DC 3E FF D0 C4 82 6F 
+3A 31 E4 3C 66 32 1B C6 46 13 65 F7 52 9E 52 34 F4 07 60 B2 3A DA 2A F0 E2 E1 53 DA 1F F5 2D 2B 
+CB 17 C5 ED DF 1B 96 94 DF B4 69 A2 38 EE EC D5 77 3A B6 E1 A7 F6 6F 5F 6B BF F8 AF D1 7D AB F2 
+0B 89 86 E9 A5 29 18 05 48 68 A8 81 74 3A 9D 7C 5F 5E 5E FF 2F A2 22 FB 79 01 DE 6C 56 AD 3E F4 
+17 11 C5 D7 4E 5F 7D A7 6B 7B FC EC 3E EF F5 F6 8B FE 1E DD B7 2A FF 1D 41 12 64 AB C3 68 14 38 
+82 20 BF 85 B6 39 5F A6 0F 9C B7 64 E8 F9 AD DE CB 37 BD B7 9B AA 2F 5B 9A 12 BE 37 F0 96 C8 7C 
+CB 3F BE A9 79 3C FF FC 06 07 45 F7 65 A6 B2 AC B8 FD BE 37 E8 7F EE 9E A5 01 74 72 CE 52 F3 0B 
+5B BC AD 37 54 DA 58 EA CB 96 32 4E F8 04 DC A6 CD 9F DA A3 69 D3 98 B8 A2 A2 14 79 F7 DE E5 84 
+51 7F F5 A5 14 3C B8 B8 6F EF 35 36 2E 56 C7 21 01 30 09 49 29 1A 9E 9D F0 6F 8C CA C8 51 83 74 
+F5 75 68 71 67 F7 1E D1 5A 61 2C C9 BA 11 7C 90 C1 A7 34 3B 70 9D 3E B0 95 87 FE 22 4C 5C B1 9B 
+14 99 78 2F 3A 7E E4 34 55 4A 01 33 F2 80 CF 35 36 2E C6 E1 10 00 F4 D6 84 81 49 48 4A D2 F0 9C 
+F8 73 B1 2A A3 C6 1B A2 F1 18 6D 87 5F F4 F8 66 1C F5 D3 3B 49 91 56 1F 62 AA DE B1 57 87 C5 8B 
+B2 6E C5 52 3F AD 26 80 C9 A8 0D 31 55 EB D0 39 75 C6 B7 A9 35 DA 68 9C 1C B5 CF DC C0 70 9A AF 
+6F E8 A1 35 E7 CB B8 E2 4A 5A 66 D6 FB D7 D9 0D 91 04 68 76 F0 42 F3 44 06 CE B0 EA 92 B8 73 C5 
+61 B6 44 6F E3 A9 3B C2 5C A6 75 C7 00 A0 CF FC A0 50 11 DF BD C7 82 DD 22 CA B8 12 4A 5A 66 AB 
+82 3C 6C 9B 69 5A 66 9C DB 9E 95 95 BB 4E DA 4F 3D 00 B2 BD 06 8E B2 DA EE D3 77 B3 5B DA B3 1C 
+FE 24 3D 71 F3 E9 B3 B4 D7 9D F1 B6 7F 5A 72 F1 8A CB 82 6D 5E AC 2D 07 0E D9 CF 0F 92 53 B7 98 
+B7 C1 51 DC F9 C8 17 B2 FA D2 A1 5B 4B 66 AC FB EE 15 95 BB 4F DA 4C 3B 08 B2 2A 83 46 CE DA E9 
+D3 67 93 DB 83 A7 39 30 59 AF 6F 6B C2 10 1F FA F7 2C 1D 8F 33 5B 9D 9E 16 3F 8B 73 6D FD 81 91 
+96 91 35 29 C1 76 29 02 1B 68 BA 0E 51 97 5C 74 DB 2D A0 36 40 D6 24 1F 72 4C 16 D8 40 D3 B5 BB 
+14 E5 A4 DB 81 7F CC DF 19 DF A6 56 69 69 1D A9 F9 73 E6 DA D8 D9 9A 99 FF 8A 05 8D 6B AF D8 99 
+3A 97 38 DE 39 BD 44 F9 F7 FB 31 3C D2 D8 6A 6B 6B 4B CB BF C6 4D 18 DF DE 81 B4 99 D8 98 98 4B 
+51 51 07 83 83 DB 3B 90 B6 A4 A3 A1 99 91 F5 A8 33 CD 8B EF EE EA 6A 6C 6C 32 63 D6 CC F6 0E 04 
+CD 27 87 20 08 22 64 50 5D 46 10 04 11 2E C2 D2 F7 24 3A 6C ED E9 8B 5C 25 45 F4 3D 81 20 C8 EF 
+4E 58 EA 32 26 AB A2 DB A9 96 3C 47 10 04 F9 4E E8 FC 14 41 10 44 B8 B4 74 BE 5C 54 54 F4 CF D9 
+B3 49 89 49 BF 2C 1A 04 01 80 9C EC EC C8 8B 17 1F 3E 7C D8 DE 81 B4 99 57 B9 B9 39 39 39 7B 76 
+ED 6E EF 40 DA 12 8E E3 7E BE BE 54 AA B0 5C 73 FF B8 AC 47 8F 94 95 7B B6 77 14 00 2D D7 65 0C 
+C3 24 24 24 64 64 3A FF 28 6E 44 A8 D0 68 22 E2 E2 E2 9D E9 83 27 2E 2E 2E 22 42 EB 4C 19 D5 93 
+96 96 A1 D1 3A 4F 5D 16 11 11 A1 52 9B 9F 42 FD 17 6B E9 35 55 50 50 98 32 75 EA AF 19 BF 8C 20 
+1F 3D 7C 98 31 6E FC F8 4E 36 7E B9 8E 53 B7 CA 66 75 7B 07 D2 96 02 FD FD 57 58 AF EC 4C E3 97 
+73 73 5F 76 EF DE BD BD A3 00 40 FD CB 08 82 20 C2 06 D5 65 04 41 10 E1 82 EA 32 82 20 88 70 41 
+75 19 41 10 44 B8 7C DB BD 54 A2 F8 19 23 BB 04 6F 66 A6 23 8A A8 62 77 E9 B2 77 BC 5E 06 FD 95 
+7F F6 7D 00 6E 61 16 F3 65 45 D3 49 90 29 12 2A 7A 83 7B 4B 7D 7B 73 44 D1 93 94 17 64 5F E3 7E 
+DD 3B CF 8D 65 A4 05 44 65 6E FA E3 22 29 4D 63 AD AE 9D E6 B4 84 A8 7C 95 9E 55 24 A5 69 A4 A5 
+D0 59 72 EA 8C 6F 53 AB 7D 5B 29 E2 24 EF B3 B6 BF 5A DD CC 23 58 F7 99 AB 06 C7 84 94 38 DF 3E 
+B9 EC 27 CF 08 47 54 5C DF B1 78 EB BD A6 AB 7B D0 34 57 9F BB EA AE F7 ED B5 95 93 14 B0 6C 6D 
+DD C6 FB 61 73 15 30 4E EE 55 FF 5D E9 83 83 3C C6 8A B5 4D B0 88 F0 E1 67 9F 72 5B F2 6F 7F FF 
+94 A0 09 CD CE BB DD 11 F1 9F 9F 76 5D 14 31 20 F0 5E D0 C4 CE 92 53 67 7C 9B 5A ED DB CA 98 F8 
+04 DF A4 CC 9D 24 09 00 9C DB 1B 46 AF 7D 34 ED C8 45 B7 81 34 00 00 4C A4 36 FF 6F 73 5E AF 5F 
+F4 75 4D 1B E8 7C 21 6C 71 4F C1 F5 9D 68 A2 92 3F 7A C2 4B B0 93 4E 85 27 48 E9 A0 F5 41 10 04 
+69 3F DF 58 C9 68 E2 D2 32 F5 5F 5E 1C 51 1A 05 28 22 E2 D2 32 32 74 00 00 C0 6B 6A 2A 2B B9 3C 
+02 00 F0 C2 F4 5B 59 98 FE C8 7E D4 5C 66 E6 6B 8E BC B6 E1 40 15 49 20 AA DF 66 32 B3 CB C4 7B 
+0F 36 50 93 FB 34 78 1B 67 B3 1E 65 66 97 12 5D 54 07 EA F5 95 AD 8F 07 2F 48 BB F9 4C 64 A0 69 
+F7 92 8C A7 EF 15 F5 0C D4 E5 3F 8B 13 13 91 90 96 91 69 7E 0C 38 A7 F8 79 E6 13 56 39 4F A4 AB 
+AA BE BE 6A FD BE F8 DB B4 6B 59 44 BF 91 46 BD EA BB 59 2A 5F DC BD C7 92 31 18 31 40 F1 D3 6E 
+AC D4 C4 67 E5 24 51 FB 38 2E 56 D9 60 94 A1 0A FD DB 5E 1C 04 41 90 B6 D0 76 5D AA 5C 66 E8 1A 
+97 FA 7E 0C 2E F3 98 FB A6 8A F1 16 45 B1 D7 4B 45 A9 55 A5 9C EE D3 B6 AE ED 7B C9 EB 70 16 5F 
+84 53 5E 25 69 EC 7A 22 6C 45 7F 51 80 DA E7 67 36 38 ED B8 F4 8A 90 93 A3 55 97 E3 3D C7 AF 0D 
+DA B9 40 57 02 B8 CC 10 E7 AD FF 0D EA C5 CA CC 07 52 6A E2 C1 E8 ED C3 5A 79 29 83 B3 2E 6F B1 
+D9 1C F1 0C 97 53 90 E0 95 17 57 62 BD 26 7B 87 F9 CE E8 4D E5 32 42 1C D7 D5 6D BE 77 7C BE 28 
+06 00 FC 82 AB 3B 1D FE E9 77 E4 D6 EE 11 1F F7 AD 79 18 15 7E FB 0D CE A3 C4 05 1F E4 38 9A A1 
+BA 8C 20 48 BB F8 59 BD 0E 64 F9 FD 84 9A 85 67 53 D2 92 19 51 CE FD 8B 22 37 AC 4B 34 0C BC 9D 
+CE 4C B9 B5 77 BC 08 33 EC 64 32 00 70 52 03 9C 3C 93 14 57 9E 4A 78 98 96 9C 9E 12 E1 DC 8B B1 
+CD 21 90 51 BF 3C 14 C9 7E 5C 34 F8 40 62 72 3A E3 CA C6 66 8A 32 59 FE F4 7A C4 BF 11 E7 3E FC 
+39 7F F7 35 1F 00 D8 71 BE 5B 23 2A 47 FB C7 33 93 93 93 53 19 17 9D F5 4B 63 82 CF 66 71 5B 15 
+B3 FC 94 6D 47 57 EB D1 44 4D 5D 2E 5E DA 3A A1 B3 FD 64 16 41 90 8E E2 A7 0D 41 A0 F6 9A B0 7C 
+96 96 14 00 A8 9A 19 2A 07 E5 E8 2C B0 36 E9 4A 05 50 1E 61 AA 8D 5D 2F 2E 06 E0 24 47 44 BD EA 
+39 75 B3 95 06 95 5D 5A 0A D0 63 CA 92 09 27 97 5E 8D 64 AE 37 36 04 00 5A 9F D1 53 0C 65 31 00 
+89 E6 4E 95 71 56 DC 7E EF DB 9F BA 97 E9 C3 3D C7 99 F7 91 A2 6A CF F6 0A 58 64 30 56 99 0E 00 
+98 AC F6 70 C3 9E FB FE 29 2D FB A6 65 B9 11 04 41 DA D5 4F AB CB 98 82 52 F7 FA DE 5F 8C 2A 42 
+A3 48 CB 75 69 38 14 4D 84 06 40 92 40 54 E4 B1 CA F8 2F 8F 2F 30 3E 2E B8 1F BD 77 3E 80 21 00 
+50 14 15 BB 7D 39 3A 9A BE 53 D4 BF AB FB 34 ED 5F 96 52 35 31 A9 8D 8B F4 DF F4 E4 65 1E 8B 95 
+9B 9D 9B 5F C9 EF DA 0F 95 65 04 41 3A 90 9F 37 64 97 4A A3 0A 8E 96 F8 FC 09 18 95 0A 34 43 D7 
+F3 01 96 F2 82 8F 8A C9 7F 6C E1 9B 67 76 22 0A AF AC 99 E1 1E 07 7A A3 2D 06 19 4D FA 73 D1 7A 
+F9 94 8D AB 2F 08 3C FE 69 91 59 2E AF E9 40 3B 04 41 10 A1 D0 7E 3F A5 C0 64 B5 75 54 E0 DC C3 
+67 22 AB A7 2B 61 00 00 B5 E9 61 9E 27 0B 4D 57 AF B3 54 FE BE 26 89 E2 B8 B3 57 DF E9 38 C4 9E 
+B2 53 A3 02 00 94 5F B9 50 48 90 BA 24 00 00 9D 4E 27 DF 55 54 90 A0 08 00 44 45 76 76 01 0E 03 
+3F 0B 8A 42 01 12 D0 30 39 04 41 DA 51 3B FE C4 8D 3E 70 DE 52 B3 88 2D DB 97 79 BC B7 9B 36 40 
+AE 34 35 CC 37 E8 16 6D 9E E5 1F DF DD 22 26 AE A8 28 45 DE BD 77 39 61 D4 5F 7D 29 05 0F 2E EE 
+DB 7B 8D 8D 8B D5 71 48 59 23 66 A7 00 00 20 00 49 44 41 54 00 BA AE 9E 0E ED DA 19 9F A3 5A 2B 
+8D 24 59 37 0F 1D 60 F0 29 12 9F 37 20 25 49 C3 73 12 CF C5 A8 8C 1A 65 A0 D2 79 26 30 44 9A E2 
+17 3D BE 19 27 30 A5 3B 45 5A 7D 88 A9 7A C7 BE D9 8B 17 65 DD 8A A5 8A 7C FC 37 26 A3 36 C4 54 
+AD 43 E7 D4 19 DF A6 D6 68 CF 9F 1E 53 FB CC 0B 38 41 F3 F3 39 7E 78 4D 44 19 57 BC 9B 96 F9 CA 
+03 1B 6C 4C 25 01 6A BF B3 45 99 71 6E 7B 56 56 EE 3A 69 3F F5 00 C8 F6 1A 38 CA 6A BB 4F DF CD 
+6E 69 CF 72 F8 93 F4 54 E7 6D DF C6 DA B2 EF B0 DD DC FD 72 EA C3 E6 7B 38 48 38 1E FD AC 01 71 
+F3 E9 33 75 D6 9F F5 74 78 5A 7C E1 AA EB 80 1F CB 0F 11 5E 64 4D 4A B0 5D 8A C0 06 9A AE 43 D4 
+25 17 DD 76 0B A8 0D 90 35 C9 87 1C 93 05 36 D0 74 ED 2E 45 39 E9 76 E0 E9 05 3A E3 DB D4 2A 14 
+92 FC E2 55 FB FC 39 73 6D EC 6C D1 BC F8 C8 2F B6 DA DA DA D2 F2 AF 4E 36 2F FE A5 A8 A8 83 C1 
+C1 ED 1D 48 5B D2 D1 D0 CC C8 7A D4 99 E6 C5 77 77 75 35 36 36 99 31 6B 66 7B 07 82 E6 93 43 10 
+04 11 32 A8 2E 23 08 82 08 17 54 97 11 04 41 84 0B AA CB 08 82 20 C2 05 D5 65 04 41 10 E1 D2 D2 
+18 1A 2E 97 FB AE B0 F0 F5 EB D7 BF 2A 18 04 01 00 A8 A9 AE 29 2A 2A EA 4C 1F BC E2 A2 A2 9A EA 
+EA CE 94 11 00 90 24 99 97 97 47 A7 77 9E 69 17 AB AA AA 38 75 75 ED 1D 05 40 CB E3 E4 4C 8D 8C 
+29 14 8A 98 18 5A BA 03 F9 A5 8A 8B 8B 25 25 25 25 24 3E FB DD 4F 87 55 53 53 53 5D 5D AD A8 A8 
+F8 F5 A7 76 1C 2C 16 4B 45 45 85 42 69 66 8E 85 0E AA B4 B4 F4 EF E9 D3 B7 78 6D 6D EF 40 5A 3C 
+5F 56 53 57 47 E3 97 91 5F 0F 8D 5F EE 10 74 34 34 63 6F 5C EF 64 E3 97 FB F5 EF DF DE 51 00 A0 
+FE 65 04 41 10 61 83 EA 32 82 20 88 70 41 75 19 41 10 44 B8 A0 BA 8C 20 08 22 5C 50 5D 46 10 04 
+11 2E DF 3A 07 20 51 99 9B FE B8 48 4A D3 58 AB EB CF 2A E9 44 65 6E 7A 56 41 6D FD F0 3D 0A 85 
+4A 97 EA D6 47 4B 4D 41 18 47 EB E1 EC DC D4 C4 FB 8F F3 D9 A4 74 F7 BE 7A 43 87 F5 EF D6 79 C6 
+72 76 5E BF E0 33 DC F6 38 F9 99 0F F2 28 BD 0D 06 F4 10 1C FE 50 F3 F6 61 06 4B 44 CD 58 57 89 
+46 14 3F 63 E4 F0 7A 35 79 02 00 00 FF DD 63 C6 8B F2 CF 16 53 A3 50 BB 6A 98 68 77 6B BF 97 A0 
+2E FF D1 83 3C 4A 1F 83 FE 4D 52 CA C8 78 23 A2 66 DA 4F 09 88 E2 E7 29 39 BC 5E 06 FD 95 3F 4F 
+E9 49 6A CE E7 CB 76 52 B0 AE 9A A6 3A 9D 61 30 E2 B7 D6 65 7E F6 29 B7 25 FF F6 F7 4F 09 9A D0 
+DC 72 A8 6D 81 9F 7D CA 6D C9 B1 57 B8 C0 26 AA 8C D6 A4 75 FE DB E7 EA 7C E5 98 9C DC 98 BD BB 
+32 06 EF 5B 3F 5E 14 80 F3 EA AA DF 9E F4 C1 01 1E E3 7E CA 40 9E AA C7 67 36 BB F9 46 3D AD 96 
+50 52 EE 42 7B 5F 54 58 4E 2A 99 CC DF B8 DD 7D 42 EF AF 15 67 4E EE 55 FF 5D E9 83 83 3C C6 7E 
+E7 97 CD 4F 4E AD 93 FB 05 9F E1 36 87 17 45 6F 5B E2 43 5D 17 7F 6A 71 8F 4F 95 14 CF BF B8 65 
+E1 FE 2E DE C9 C7 E7 C8 73 52 F6 AF 72 2E 71 BC 73 7A 89 72 93 52 FB FE F6 9E 25 1B E3 3F 5F 13 
+5E 7C 6C 40 DA 41 CB 76 7B 09 F0 E2 AB DB 17 FA D0 36 DC 39 B1 B4 51 4A 51 9B 16 1D E8 E2 F5 24 
+7C 0E 70 52 0E AC 70 29 71 BE 7D 72 D9 67 29 DD DA BD 6C 7D 42 33 29 8D 0F 78 14 3C ED 67 47 FE 
+0B 08 E9 9C D9 14 99 09 BE 37 77 8D A2 03 90 DC AA E2 9C 1B 81 EB 76 6C 5D AF 66 10 61 AB D5 52 
+C0 04 3B E9 74 68 A2 94 2E D1 F0 8F 93 A1 89 D2 3A 3F 65 D1 55 FE CB FF D9 2E DC F6 40 E9 6F EF 
+0B 6B 66 0C 52 A0 03 54 E7 DE 3E BE 7D 4B 90 D3 B2 6A 91 7F B6 8F 69 F1 44 8C 60 27 9D 0A 4F 90 
+D2 F9 EE E5 AA 7E 6A 6A 48 C7 24 6A 62 17 1C CE EB A5 F0 F9 27 4F FE EF 43 A9 13 05 56 B3 24 2B 
+93 F7 2E 71 38 57 37 76 A2 B1 70 7F AD 8B 9A D8 86 84 35 9F D2 F4 43 29 13 F9 02 FF 81 2A 53 7C 
+96 38 9D AD FD 73 92 D1 2F 8C EF 27 6A EB AB 18 7E 45 2E 33 FE C6 8D F8 F4 D7 6C 7E FD 16 A2 38 
+EB 66 4C C2 B3 8A 86 22 52 93 9B 1C 13 C3 C8 E3 34 3C 58 FA E4 4E CC DD 17 55 9F 37 44 13 95 92 
+91 91 95 91 91 53 E8 A1 61 3A CF 71 86 36 FE 34 2D BD FA D3 E3 75 C5 D9 A9 F1 37 E2 AE C7 A7 BD 
+2C AF 3F 12 87 C5 8C 7F 5E 41 12 25 59 D7 E2 52 5F B2 52 13 9E 57 90 44 71 D6 F5 98 D4 37 0D 5F 
+AC 78 25 2B 3D E9 C6 8D 84 B4 DC 0F C1 01 E0 F9 0F E2 6E 3E 2A AA 2D 7E 72 3F 21 E5 45 D1 AB D4 
+B8 98 7B 82 F1 D4 BE 4E 8E BB 96 F1 4E F0 EC 1D 88 D2 2B BE 41 49 D4 31 5E 47 B7 CF 1D A4 50 7F 
+76 2C A9 3A D2 FE E0 81 D5 5A FF FD BB FB 68 3A 07 00 F0 B7 69 71 31 0C 16 E7 C3 4E 95 2F EE C5 
+DC CC 2A 26 38 AC D4 C4 67 E5 24 51 FC 38 2E 96 F9 86 8B 17 A6 5F BF 9E F1 0E E7 14 66 DD BD 7D 
+2B F9 79 D1 C7 1D F0 FC B4 D8 38 81 06 DE E7 DC 8D BB F9 A8 84 E0 34 97 1A F2 BB 23 F1 DA 4A 76 
+35 B7 B9 EF 6A BA 84 8C 8C EC 87 3F 92 C5 D1 9B 3D FE 29 D0 58 E1 BF 6D 72 0F E1 EE C7 21 F1 9A 
+CA CA 6A 5E F3 29 49 7F CC 48 56 A2 F8 F2 E6 8D 67 0A 34 AC FD BD A6 F4 F8 E5 51 FE 14 6D F8 C6 
+10 EC D4 43 2B 47 99 8D 9F E7 B0 69 BD FD BC 51 43 27 DA 86 3F AA 02 00 3C E3 B8 8B BD CF F5 72 
+00 00 A8 BD 1F EC 6C 63 E7 1A C2 E4 00 00 10 FF 45 79 DB 6D 8E CC FB 4A 14 44 C5 8B DC 62 4A 4F 
+4D 8D FA 6B 2E 9C 75 D9 C3 72 88 D9 D4 A5 AE 9E 9B DD 6C 66 FE 39 7C 8C E3 85 3C 1C 6A 1E 5E 0A 
+BB FD 06 E7 BD 88 0D 3E 74 E9 41 66 64 68 3C 0B E7 BD 88 3D 7C F0 D2 E3 5A 80 DA 67 67 9D 26 0C 
+1F 31 CB D6 7D BD F3 DC B1 16 E3 ED 4F 3D AE 01 00 E0 32 8F 3A AF D9 E2 3C 7B A2 95 DD 9A 65 CB 
+02 EF 27 1E 72 5C B5 27 BA F8 C3 67 81 7D D3 C7 C6 3D 3C 13 6F F4 5B 53 76 7C 74 52 E5 1F E3 E7 
+4F 6C F2 B9 16 ED B7 70 81 B9 D8 AB B8 CB E9 5C 00 2E E3 B0 B3 C3 FE A4 F7 0D 2D F1 0B AE EC 71 
+F0 38 9D C5 AB 79 18 15 7E FB 0D CE 7B 11 17 7C F0 72 56 1D 97 79 CC 7D CD AE 3D 0E 13 C6 CF 76 
+F1 5C BF 72 DA B0 51 4B F7 31 D8 04 00 70 19 C1 8E 4E FB 12 AB 3E 36 10 BD CB 69 C3 A9 C7 BC 9A 
+A6 A9 21 08 00 97 79 CC DD 21 E0 F6 E7 9D AE 8D 54 31 FD 9D 76 C6 83 C5 C6 40 47 23 A9 5F 14 D9 
+77 E3 32 43 D7 38 04 DE FC 5A 4A A9 FE 6B B6 C7 53 46 78 F8 3B 0B 7F 4A AD D5 76 FD 18 15 D7 B7 
+D9 FB 65 F4 75 38 79 DE C6 58 91 2C BE 17 64 BF 7A BB E3 6E D5 4B DE 66 C3 2D 06 EC 38 7C 3F AD 
+66 E6 58 09 EE 93 E4 B4 2A 3A 8D 97 CE C8 E5 9B EB 60 65 77 93 B2 24 CC 16 98 7C 36 11 02 59 9B 
+79 DA C3 F5 36 06 00 04 A7 2C F7 41 6A A1 9A 7D C0 AA 41 74 00 00 76 AC 9F E7 B9 CA 31 81 B7 76 
+4C EC 41 27 2A 33 0F AD 9E 17 70 E4 CC 92 C9 EB A6 78 85 96 E7 99 EF 94 72 BD 70 C8 52 1C 08 8B 
+F2 BC A1 BB A5 5D 23 0E 5B 8A 03 87 B9 C3 C1 2B A9 9B ED E9 93 D6 43 BA 61 EC CC 70 A7 E5 DB 1D 
+FD 35 2F 7B 18 01 00 C9 7E 52 64 10 9A 74 D1 94 5E 57 4B 2F 3A 75 F1 C8 BE 98 EB C5 33 E7 2A 61 
+40 94 DE 8C 4E E4 1B 7B 4C E8 2E 58 80 B9 B9 CF 5F D4 52 35 FA E9 7E 76 15 88 C9 E9 0D E8 43 49 
+7C FE BC 82 18 22 FD 85 D7 49 7E CA B6 A3 E5 79 16 3B A4 5C 2E 1E 9E 26 0E B5 57 80 AC 64 24 94 
+B9 1C 4B B2 31 90 AB 7A 78 D8 76 85 8F 7B 80 41 CC 16 B3 2F BD D0 F2 93 B7 87 0A A4 86 FC 36 F0 
+DC E8 1D EE 4F 04 EE 49 90 55 D9 05 04 74 69 ED FE 44 61 F4 66 D7 C3 D9 3D E6 1D DE 39 5B 55 38 
+7A 30 F1 DC 2B 3B D7 3D 11 F8 8F F4 ED 29 79 3A 1F C9 56 9E 7B 68 CF EC BE C2 91 52 9B 68 B3 F3 
+E5 CA 3B 17 6F 94 68 CC DD B8 DA 58 91 0A 40 53 34 B3 5B 37 A7 77 C1 E5 88 A4 6A AA F2 C8 E1 5A 
+55 69 C9 99 5C C0 59 C9 8C 22 BD C9 E3 BA E7 32 53 4B 08 A8 BA 7F F7 01 D5 68 A4 79 33 DF 72 64 
+DD FB 92 7A A5 A5 15 35 3C 6E 59 F6 9D 6B 8C 02 1C 00 80 AA 6D E5 1D E4 E3 36 BE 07 1D 00 30 19 
+ED E1 06 3D 29 EC B2 B2 96 7A 6B EB 92 2F 44 BD EA 39 CD 66 96 06 95 5D 5A 5A CE 57 9E B4 74 62 
+8F D7 D1 51 F5 67 ED 40 EB 33 7A 8A 81 2C 06 E2 12 E2 D4 5E 13 A7 18 91 8C 98 EB 85 04 00 51 7A 
+23 3A 99 62 36 69 AC 62 A3 97 89 AC AA AA 01 51 49 A9 66 6E EF 61 92 92 12 14 B2 AE A6 EA 9B FA 
+8E 69 9A B3 D7 AF 32 90 C3 00 64 F4 97 B8 4C EF 53 70 ED 12 E3 5B F6 47 7E 0F 24 AF AA B4 44 50 
+69 45 35 AF D5 9F 34 CE F3 30 37 8F 4B 95 86 CE FE 1E 23 84 66 20 4A 33 29 D5 7C 4B 4A E1 2E 1B 
+2F 57 1A 38 05 6E B4 10 9A 94 DA 44 5B 7D C5 E0 85 AC 82 5A 09 35 AD 4F 5F C3 74 4D 6D 35 91 EA 
+82 37 A5 38 B5 EF C8 61 AA FB E3 EF BF E4 F6 4D 63 BC EC 6B BA 65 E4 B3 EB 5B 99 A9 55 33 25 13 
+99 84 A1 F3 D0 66 CE 2C 29 12 C6 D6 87 3F DD 2E E7 E4 FC CF 76 F6 D6 F5 DE FD 06 1D 9A AE 28 A5 
+66 6C 52 77 ED E2 DE 2D 4F 5E B2 58 AC DC EC 97 05 95 FC 2E FD 5B BA D6 21 D8 AF 59 65 FC DC 63 
+F3 4C 8F 09 6E A6 F7 CA AF 03 43 00 A0 28 74 53 FA 10 37 D6 7D C2 34 53 DF 4D B1 71 05 73 17 61 
+D7 AE A4 88 8C D8 33 4A BE 49 70 B2 B2 D2 C0 79 5F 59 07 D0 F4 74 95 28 2D AB 20 B1 3F E4 64 A9 
+AD 7A D5 1A 88 A9 69 69 7C 38 3E 5D 4D AD 17 A5 EC ED 1B 00 E3 6F 69 02 F9 0D D0 B4 AC F6 1E 6F 
+34 1E 23 67 DF F4 09 FB 9B 3C 0B CF 8B DC E5 73 ED BF FA 3B 22 22 5A B3 BC 1D 87 CB 02 B0 EF ED 
+75 DC 93 2A 39 D9 D7 6F A5 AE 10 0D 39 A5 69 CD F6 3D DA 68 3C 46 CE 01 CB 89 07 9A 3C 0B CF 8B 
+DA E1 7B BD FE B4 0C 68 5A B3 B7 D9 5B C8 00 B0 EF FB 38 F9 32 24 27 F9 FB 2D EF 27 DC 37 30 BF 
+5D 9B 9D FA 8B 88 D0 28 7C 2E 57 E0 FE 18 8F C3 C1 81 46 A7 53 80 A6 61 31 54 39 94 71 FF B5 EA 
+83 27 0A 86 76 BA A6 B2 03 B8 21 8C 07 69 58 4A B5 FE CA 61 5D BE FE 45 27 AA 31 DD D2 64 4F E2 
+83 B4 A7 BC E9 5D CB 2F BB CF 70 BD 06 FA A3 2C 06 1B 4E 1E BB 60 80 3C 63 A3 F5 C5 96 F7 C7 A8 
+54 A0 19 B8 46 FA FD 25 27 D0 51 4C 11 95 FF F0 95 40 FD 54 47 31 C5 31 53 86 ED 58 17 1B C7 1A 
+43 8D 49 93 1A 19 64 21 D3 A4 35 BA C6 40 3D 79 3C 91 C1 60 CF 19 27 DB E8 11 3C 9F C1 CC 03 B5 
+F1 FA B2 00 3C 00 00 E2 D3 2C AA 5C DE 17 6F D1 11 7C FE C7 AF 15 A2 AE B6 8E C4 C4 3F FC D7 69 
+D4 00 EF B3 3D 11 A4 29 B2 B6 F8 F5 F3 E7 AF 1B EA B2 64 05 9F 00 BC 20 6A 83 EB 09 96 C6 8A 70 
+2F 61 BF D7 D7 2C B2 B6 F8 95 40 4A E5 3C 00 3C 3F D2 C3 3D 8C A5 61 1D B6 75 4A 47 4C E9 2B DA 
+AA 2E 53 7B E8 6A 2B 70 6F DF BB CF 9E F6 A7 2C 00 00 51 9E 74 37 8B 50 9A A8 25 8F 01 D0 FB 8F 
+34 EF FA CF 9D 63 D7 5E 50 07 79 F6 13 53 94 1B A2 BE 2B EA 64 38 5E D2 6F BE 85 62 6B 5E 54 FC 
+BF B7 FF 71 28 5D 15 15 A9 44 71 DC 99 98 42 5D BB D8 33 36 EA 54 00 80 F2 CB 91 85 04 A9 4B 02 
+00 50 30 0A 90 D0 50 C9 3E FD 03 93 D5 D1 56 81 88 87 4F 69 36 33 94 30 00 80 DA F4 E3 DE FF 2B 
+34 59 ED 3E AD E7 E7 07 93 1B 61 39 4A C6 F1 56 D4 79 EC 91 FC E8 55 E6 92 9F 3D 41 72 98 D5 D4 
+5E 97 CE 1C 0A 61 9A BB 1A 7E EA 84 C1 0B 63 FD C2 D2 69 86 EB 2C B5 68 00 3C 3A 9D 4E BE AB A8 
+20 41 11 00 08 F6 F3 EC 02 1C 06 02 00 00 46 11 08 13 00 38 8F 99 CC 6A 4B 0B 49 00 20 CA EE A5 
+3C A5 68 2C 19 00 00 74 3A 9D 7C 57 5E 4E 82 02 00 10 15 D9 CF 3F 36 D0 28 4F 04 11 44 D3 5E 11 
+72 7D 85 C0 06 CE E3 43 AE 9E B1 BC 61 DE 01 8E 46 4D CF 31 3A 06 9A F6 F2 E3 D7 96 0B 6C E0 64 
+1D 72 DB 1C CB 1B EE E5 E7 6C F4 A5 1B 39 1D DA 77 D5 65 7E D1 E3 9B 71 D4 4F BB 52 A4 D5 87 98 
+9A 2F 5C 68 70 65 EF 46 5B 85 CA D5 63 FA 12 2F 63 0E F8 5E E5 19 AE 9F 6F 28 0A 00 20 3A 68 A4 
+A9 B8 F5 C5 38 91 A1 DB 07 8B 01 B5 F7 10 A3 3F 02 8E DF C6 06 B9 8D FC A3 F9 B2 2C 70 08 BC AE 
+F8 D9 F5 FF 85 3F 14 33 DC 38 55 93 86 D5 28 2A 4A 91 49 F7 AF C4 8F FC 4B 95 92 CF 8C DC E7 7B 
+9D 8D 8B D6 71 08 00 4C 42 52 92 86 E7 C4 9F 8B 55 19 35 DE B0 8B A4 14 0D CF 4E F8 37 46 65 E4 
+A8 41 73 96 9A 5F D8 E2 6D BD A1 D2 C6 52 5F B6 94 71 C2 27 E0 36 6D FE D4 1E CD A7 2F 35 D4 72 
+4C 97 15 A1 47 29 0A 33 ED 8C 9A BB B3 26 6E E4 E0 B5 34 65 D5 C1 15 0B 8A 1D 1C 16 8E 1D D8 93 
+CE 7E 91 7C E9 B0 FF 91 9B 75 43 36 6C 9E AB 4A 05 00 BA AE BE 36 2D EE EC 9E 23 9A D6 26 92 AC 
+EB 87 0F A4 E0 94 FA FB 9B 98 B8 94 24 0D CF 49 3C 17 A3 32 6A 94 2E 00 E0 F9 E7 37 38 28 BA 2F 
+33 95 65 C5 ED F7 BD 41 FF 73 F7 2C 0D 00 52 57 5F 87 16 77 76 EF 11 AD 15 C6 92 AC 1B C1 07 19 
+7C 4A 7D 30 98 84 40 6A 86 2A 9D ED 1A EE 97 68 F6 33 AC DE 31 CB 56 8B 38 A9 7E 6B FC 19 94 41 
+CB C7 CB BF B8 15 FB 42 E0 11 8A B4 DA 10 53 8D 0E 98 72 5D AA BF 53 40 2A 0C 5A 36 A1 CB 8B 1B 
+71 8D 52 92 51 FB D3 4C BD DD 02 6B 3B DF 53 97 C9 9A 94 60 BB 14 C1 46 74 1D A2 2E B9 E8 2E 0B 
+0E 13 DB E5 73 62 C7 F2 63 EF 69 5D D5 8C 26 6D 3F E1 38 F3 43 BF A9 B8 D1 88 21 D2 11 D1 7D 8C 
+4D EA CF 9F 4D 0D BA 84 BE 55 B2 18 D9 AB F9 8E 58 C1 43 60 74 69 C5 BE FA 93 36 6D 73 59 A4 46 
+05 90 1E E7 BE D3 BA D2 E7 7F B6 7F ED 07 99 5E 03 47 CE DE B9 BB EF A6 B5 69 4F 5F F0 27 0F 10 
+1F FA F7 2C 1D 8F 33 5B 9D 9E 16 3F 8B 73 31 9F 3E 4B 7B DD 19 6F FB A7 25 17 AF B8 CC 0F 0A 15 
+F1 DD 7B 2C D8 2D A2 8C 2B A1 A4 65 B6 2A C8 C3 76 88 24 40 B3 E3 CC C4 8D A7 8D FF E3 9F 50 EA 
+B8 A9 83 9A 2F 7A 98 AC E9 BA FF 85 AA F8 FA 1D D9 BB F2 1F 2F 12 00 80 26 AF 35 62 81 BF BB FD 
+54 8D FA 5D A8 AA F3 BD B6 E7 79 05 05 3B CE D9 27 A7 31 7C EE 46 27 09 87 23 0D CD 9B 4F 9F A9 
+B3 FE AC A7 C3 D3 E2 0B E7 B5 01 44 06 CE B0 EA 92 B8 73 C5 61 B6 44 6F E3 A9 3B C2 5C A6 75 C7 
+00 A0 EF 82 6D 5E AC 2D 07 0E D9 CF 0F 92 53 B7 98 B7 C1 51 DC F9 53 03 02 A9 0D E8 44 F7 A1 7F 
+95 2F 7D 86 DB 2D A0 9F 86 93 9B CD E2 92 5C 66 C8 5A 66 48 E3 47 68 9A 76 E7 AF BA EA B5 4F 58 
+3F 82 93 9B C3 E2 92 5C E6 51 37 66 93 47 68 5A B6 CF E2 5C DB 25 A8 36 46 7E D9 BC D9 73 EE 26 
+25 B5 F0 84 CE 8B 93 BE 63 8C EE 44 BF 27 BC AF 3D 91 5F F5 EE 45 66 EA 7D E6 93 D7 25 75 DF 75 
+A4 9A CB B6 FA EA 56 C7 DF E2 DF B5 77 E7 B4 6A E5 CA D8 AB 31 ED 1D 45 5B 8A B9 7A 75 B5 B5 75 
+7B 47 D1 C6 B4 D5 35 EA EA BE EF 53 2F A4 DC D6 AC F9 F7 9F 73 ED 1D 05 49 92 24 3A D5 6A 06 51 
+7C E7 74 F4 7F FA 8B FF D6 FC EA CB 43 95 EC A6 36 A0 9B DA AF 88 0A 41 90 DF 04 AA CB 8D E1 2F 
+42 16 2F 0A 79 50 54 D3 73 71 C8 AC DE DF 34 DA 0D 41 10 A4 4D A0 BA DC 18 55 65 EC 2A 27 09 96 
+CC A0 F1 7F EA FE 92 3B 22 A2 C3 D6 9E BE C8 55 6A D5 A8 14 04 41 7E 0B A8 2E 37 21 DA DB 7C 66 
+EF 5F B8 02 38 26 AB A2 2B FB F5 A7 21 08 F2 FB 40 A7 69 08 82 20 C2 85 42 92 5F FC 79 C2 30 33 
+73 59 59 59 59 D9 0E 38 C2 11 E9 C8 B2 9F 67 2B 28 28 74 E9 DA EA D9 6B 84 5E 59 69 59 49 69 89 
+A6 A6 66 7B 07 D2 96 18 29 0C 43 23 23 0C A3 7C FD A9 1D C4 CB 97 2F A7 4E B3 DC B0 D1 A3 BD 03 
+69 B1 1F 43 41 41 61 D2 E4 C9 FD FA F7 FF 65 D1 20 08 00 04 F8 F9 0D 1D 3A D4 D0 B8 F3 CC 10 92 
+CA 48 B9 77 F7 AE 9D 83 63 7B 07 D2 96 16 2F 58 B0 DA D6 46 44 A4 F3 AC 9D 76 24 F8 D0 1F 7F FC 
+D1 DE 51 00 B4 5C 97 25 25 25 75 FB E9 9A 9A 99 FE B2 68 10 04 00 4E 84 77 D1 D4 D2 EA 4C 1F 3C 
+36 BB E2 D9 B3 67 9D 29 23 00 C0 30 CC 64 C8 10 51 D1 CE F3 7B D3 8B 17 CE 4B 4B 0B C5 EF BA 51 
+FF 32 82 20 88 70 41 75 19 41 10 44 B8 A0 BA 8C 20 08 22 5C 50 5D 46 10 04 11 2E DF FC BB 92 6A 
+56 7A E6 5B 8A CA A0 81 3D 05 27 C0 E4 E4 67 A5 E5 51 D5 87 E8 74 6B 6D A1 27 D8 B9 E9 59 05 75 
+F5 83 F4 28 14 8C 2E D5 AD 8F B6 9A A2 30 DD 43 A8 79 F3 30 23 AF 61 D9 53 0A 05 A3 D0 C4 E4 95 
+D5 35 7B 4A A3 5F 67 0B 3B 4E 41 66 5A 1E A5 CF E0 01 3D 04 3F 4F 35 6F 32 1E BE A1 AB 1A EB 2A 
+D1 88 92 67 8C 1C 9E CA E0 01 CA 4D 3F 70 FC 77 4F 18 39 E5 9F AD 7E 43 C1 BA 6A 0C D1 69 C7 5F 
+65 72 F2 33 1F E4 51 7A 1B 34 49 E9 ED C3 0C 96 88 9A B1 AE 12 8D 28 7E C6 C8 E1 F5 6A F2 04 00 
+00 FE BB C7 8C 17 CD A4 44 ED AA 61 A2 DD EA FF B0 BF 1C 51 99 9B FE B8 48 4A D3 58 AB 73 2D 11 
+D5 2A DF 5A 97 F9 79 FF 7A 2C D9 F7 A2 EF B2 13 FF 6E 1A F2 71 4A 78 A2 24 6E C7 A2 DD 32 BB 33 
+82 FF 6E ED 42 A0 FC EC 53 6B 17 1E 7F 2D B0 BE 09 50 65 34 27 AF F5 DB 35 57 FB 2B 6D 70 5E 5D 
+F5 DB 93 3E 38 C0 63 9C 28 00 27 F7 AA FF AE F4 C1 41 1E 63 DB 7A 75 1C 3E EB FC 96 85 81 59 FC 
+46 1B E9 8A 83 AD B6 F8 7B 4C EE D5 5E 3F 94 FC 79 F9 76 1E 78 D1 55 EF 45 7B 69 EB 6F 9E 6A B4 
+42 51 7E E4 E6 25 FB E4 3D 53 C2 67 CB 73 52 F6 AD 70 2D 71 BE 79 66 69 D3 B5 2E DE DF F2 5D BC 
+21 E1 F3 A5 65 C4 C7 F9 3D 08 9E DA 6E CB DC E2 45 D1 DB 96 F8 50 D7 C5 9F 6A B4 8E 54 FE C5 2D 
+0B F7 77 F1 4E 3E 3E 47 9E 93 B2 7F 95 73 89 E3 9D D3 4B 94 9B A6 74 7B CF 92 8D F1 CD A4 34 36 
+20 ED A0 F0 AE DC CB CF 3E E5 B6 E4 DF FE FE 29 9F D6 93 FB 7D 7C 5F 79 E1 E5 9C D8 1C 38 E6 82 
+87 E9 8F AD 0B 4E 91 1E EF 7F 73 C7 28 51 00 82 57 5D 92 7D 3D D0 C3 DB 6B 83 BA C1 39 7B AD 96 
+C2 22 D8 49 27 43 13 A5 75 88 86 7F 9C 0A 4F 90 D2 F9 59 6B 77 D0 87 79 DD 0A 9C 56 3F 74 86 FB 
+FE 0D E3 7F 5B D6 1F 5F BF A1 AF 5E F8 C2 2F CC 1C FD 93 FD EC 7C 7F 13 A2 26 F6 21 C7 79 2A CD 
+9C 88 C9 4F DF CF 9C C4 FF F4 F2 92 95 29 3E CB ED FF A9 1D 3B C9 50 98 AE E5 3E 27 6A 62 17 1C 
+CE EB A5 D0 4C 4A 7F 1F 4A 9D 28 B0 06 19 59 99 BC 77 89 C3 B9 BA B1 13 8D 85 3B A5 DF D8 77 D5 
+65 29 ED FE 4A B9 A7 36 F9 8F 8E 14 38 67 6E 8C 5F F1 F2 61 46 6E 05 45 41 6D E0 80 3E B2 5F 3C 
+0A 4D 54 4A 46 56 1C 00 40 56 CE 74 BE C3 F4 88 D8 03 69 E9 D5 A0 F5 61 C6 08 4E F1 F3 CC 27 AC 
+72 9E 48 57 55 7D 7D 55 79 1A 00 87 95 9A F0 BC 82 24 EA B2 AE C7 28 F7 D3 20 32 9E 95 93 44 ED 
+E3 B8 58 65 83 51 86 2A 74 00 C0 D9 AC 47 99 D9 A5 44 17 D5 81 7A 7D 1B 0E 8D 17 A4 DD 7C 26 32 
+D0 B4 7B 49 C6 D3 F7 72 5D 49 D6 1B 42 6D 98 99 FA 87 E0 6B 5F 27 27 64 8B 0D 1C 3D 50 E9 B3 62 
+8B 89 4A CB 7C F8 C5 A3 8C EC 44 67 77 E6 F5 B9 A7 EE 24 55 2C B4 AA 7B 70 E3 99 C8 20 B3 EE 25 
+19 4F DF 2B 0E 30 50 97 A7 01 00 5E C9 CA CC CC 2E 25 E4 55 F5 F5 55 05 F2 C6 D9 AC AC 27 2F 8A 
+B9 92 3D 75 F5 B5 15 05 4E 75 9B 8D B6 F0 C1 CD C7 D4 81 23 FA D3 F3 D2 33 5E 55 4A F4 1E 34 B8 
+BE 75 0E 2B 35 F1 B3 7C 91 6F 47 F2 6B 2A 2B B9 BC E6 16 EB A5 4B C8 7C 7A 55 F9 2F 4E B9 6C 38 
+5B A0 61 7D 7C BB B0 AF 22 47 E2 B5 95 6C 0E F7 EB 29 BD 3C ED E4 F1 4F 81 C6 CA F0 6D 1D 72 AD 
+BF DF C3 77 D5 65 9A F6 32 2F 8B E0 A5 A1 9E 7E 63 22 36 7F 76 CE 4C B0 99 87 D7 B8 07 DD 2E 14 
+E9 2A 0B EC 52 A2 E7 78 37 FF 1D 8B F4 BE 7A 6A 4D 54 BC C8 2D A2 28 0F D1 A8 BF 6A C1 59 97 B7 
+D8 6C 8E 78 86 CB 29 48 F0 CA 8B 2B B1 5E 93 BD C3 7C 67 C8 64 46 86 C6 B3 70 1E 16 7B F8 20 67 
+C9 7C FC C4 ED 37 38 8F 12 17 7C 90 E3 68 66 A8 82 3F 3F B3 C1 69 C7 A5 57 84 9C 1C AD BA 1C EF 
+39 7E 6D D0 CE 05 BA 12 C0 65 86 38 6F FD 6F 50 2F 56 66 3E 90 92 66 63 65 AE 5F 57 F2 BE 19 6C 
+55 DF 61 C8 BE E9 63 E3 51 E1 14 33 66 E0 57 53 A7 D0 E9 34 00 12 00 B8 CC A3 CE 5B 0A 07 F5 7E 
+93 F9 16 48 A9 F1 87 62 BD 0D F3 CE AE 77 D8 75 E9 15 59 7F 70 95 09 6E 81 BB E7 F5 93 00 FC ED 
+95 F5 4B 37 9E 67 51 15 E4 69 55 25 6C D1 01 4B FC 8E B8 8D 50 C0 A0 F6 4B D1 A6 1D 73 F5 7C 3F 
+79 54 D1 95 2B 05 A2 12 FC F2 0A 8A AA 95 4F 98 D7 C4 1E 35 0F A3 C2 1B E5 8B EA F2 F7 E1 A6 1D 
+5B 53 DF 8F 21 DE 42 69 AA 4A 0D 74 DA 9E 40 19 E1 15 E4 6C F8 63 57 86 BF 00 97 79 CC BD F9 7E 
+0C 41 55 4C 7F A7 9D F1 60 B1 2D D0 D1 48 E8 53 FA 8D 7D 5F 3F 06 45 74 B0 FD D6 C5 F1 0B 43 37 
+05 8C B9 B0 D1 AC D1 04 1A 15 D7 BC 9D F6 A6 F7 71 3C 7D CE C6 44 81 2C BE 1F 68 6B B7 CD DE 47 
+35 7A EB B0 CF 3E 07 64 DD A3 93 1B DD 6F 51 00 80 A8 2B CF 4D 4B 7D A7 6E E7 67 3B 88 0E 00 C0 
+8E F3 DD 1A 51 39 DA 3F 7E C7 04 65 3A C1 CE 0C B6 9E 1F 14 7C 76 F1 D4 B5 93 B7 87 96 E7 0D DD 
+2D ED 1A 71 D8 52 1C 88 E1 9C 3C 8B 1D 52 2E 17 0F 4F 13 07 4E EA 4E 27 CF 24 45 BB 53 E1 AB 87 
+74 C3 D8 8F 42 9D 57 6E 73 08 D4 BA BC DE 18 00 48 F6 E3 A2 C1 27 12 CF 9B D1 EB AA DE 9D 2E 8A 
+DE 17 73 BD 78 E6 5C 25 0C 88 D2 9B D1 89 7C 63 8F 09 DD BF 76 F6 80 B3 1F 9F 0B 8E 7A 4D 1B 30 
+DD 58 0E 00 80 64 3F 29 32 08 4D BA 68 4A AF AB 15 C7 98 3B 1C BC 92 BA D9 9E 3E 69 3D A4 1B C6 
+CE 0C 77 5A BE DD D1 5F F3 B2 87 7E E6 71 FF 48 E2 AF 13 F7 37 99 CB 63 D5 4F 43 96 5B F9 07 9E 
+9B 31 CC A6 E7 83 80 16 A2 2D 4F BA 55 B1 E9 E4 DD 45 7A 32 EF D3 83 16 CF 0B DE 77 76 EE 58 17 
+DD 29 DB 8E 96 7F CA 17 69 01 FE F2 CA 6E F7 27 82 17 EA 55 CF 0B 08 90 6F ED FE 44 E1 D5 4D 2E 
+21 D9 3D E6 1C DE 3D 4B 55 38 A6 5D C4 73 A3 77 B8 3F 11 B8 D8 22 AB B2 0B 08 68 F5 34 22 44 61 
+F4 66 D7 C3 D9 3D E6 1D DE 39 5B 48 52 42 9A F7 BD 17 32 14 49 43 07 AF 45 AA 6F 4E 6F 0E B8 5F 
+29 F8 40 65 42 E4 B5 12 CD F9 1B 56 9B 28 50 01 68 8A A6 F6 EB AD 7A 17 44 47 24 36 D7 0A 59 57 
+59 52 AF B4 B4 A2 96 CF 2D CB 8E BF 96 5C 80 03 00 50 B5 67 7B 05 F8 BB 8D 53 A6 03 00 26 AB 3D 
+DC B0 27 85 5D 5A D6 DC 65 DA 07 9C E4 88 A8 57 3D A7 AE B6 D2 A0 B2 4B 4B CB F9 3D A6 2C 99 D0 
+23 EF 6A 64 C3 22 60 B4 3E A3 A7 18 CA 62 20 2E 21 D5 6B E2 14 23 92 11 73 BD 90 00 20 4A 6F 44 
+27 53 CC 26 8D 6D F6 66 3B 8F B1 7B A2 C5 D0 A1 16 43 87 0E 37 35 32 30 98 EC 79 0B CC 5D 37 2F 
+A8 5F 8A 1B 68 7D 46 4F 31 90 C5 40 5C 42 BC 2E F9 42 D4 AB 9E D3 6C 66 35 1C 5C 79 D2 D2 89 3D 
+5E 47 47 31 39 00 24 49 94 67 27 26 A4 BF A9 C4 25 75 16 05 DF BA 77 66 95 1A F5 6B D1 F6 9E B2 
+72 9E 9E 1C 06 98 AC DE C4 91 EA 94 FF DE BE E5 37 13 1F F2 25 24 AF BA B4 A4 11 76 0D B7 D5 DD 
+F2 9C EC D0 35 9B 2F 55 1A B8 04 6D 18 29 34 C3 01 48 5E 55 E3 94 4A 2B AA 79 AD 4F E9 79 98 9B 
+C7 A5 4A 43 67 7F 8F 11 42 93 12 D2 BC 1F F8 D6 94 34 B2 F3 5A 1C BF 20 D4 D3 7F CC B9 65 1F 36 
+E2 85 AC FC 5A 71 35 AD BE 1F 1B A6 6B 69 AB 8B 54 E7 BF 69 A6 05 8A B8 91 4D 70 C0 C4 0F 27 7E 
+75 2F 4E AE 9E ED BD D6 BB DF E0 43 7F 77 93 52 35 31 A9 8D 8B F4 DF F4 E4 65 1E 8B 95 9B 9D 9B 
+5F C9 EF DA AF A5 B2 4C 54 E4 B1 CA F8 2F 8F 2F 30 3E 2E B8 99 DE 3B 1F C0 10 00 28 8A 8A DD 1A 
+A2 C2 BA 4F 98 66 EA BB 29 36 AE 60 EE 22 EC DA 95 14 91 11 7B 46 35 7F 22 45 ED 39 D4 EA EF 7E 
+74 00 0A 60 22 52 0A BD 74 4D CC F4 7B 7C 3C 53 A5 28 74 53 AA 6F 92 60 BF 66 95 F1 73 8F CD 33 
+3D D6 E8 E0 BD F2 EB E8 33 97 AD B1 62 6E 39 EA 64 15 4C 97 57 1B 64 36 6A A2 D5 22 2B B3 1E 5F 
+8D 56 49 E9 C3 6B 28 2E 26 06 04 5F 70 E8 0A F2 55 34 6D AB 3D C7 1B 8D C7 C8 D9 F7 D7 94 7D 4D 
+9E 85 E7 45 EE F0 8B FB 0F FF B0 8B 97 A3 85 0C 00 FB 9E 8F F3 1E 86 C4 64 3F 9F 95 BA 42 74 6B 
+8C A6 65 B5 F7 F8 E2 C6 29 4D 9F B0 BF C9 B3 F0 BC C8 5D 3E D7 1A 52 12 D1 9A E5 ED 38 5C 16 80 
+7D 6F AF E3 9E 54 C9 C9 BE 7E 2B 75 D1 48 1E A1 F7 43 57 33 92 C6 0E 5B 17 C5 2F 0A DD 14 A8 67 
+F9 B1 41 11 11 0A CE E5 0A 14 11 5E 1D 07 87 D6 4C 3A 25 A6 FE F7 5F 26 BE 09 0F 1E 3C E5 FD AD 
+50 7E 65 CD 0C F7 38 D0 1B 6D 31 C8 68 D2 9F 8B D6 CB A7 6C 5C 7D A1 E5 FD 31 2A 15 68 86 AE E7 
+03 2C E5 05 A7 1E 14 FB 58 71 A9 1F EF EA 61 8A 63 A6 0C DB B1 2E 36 8E 35 86 1A 93 26 35 32 C8 
+E2 0B 93 99 62 3D CC 17 AD B0 FA F2 4C A7 1F 9B C4 A8 54 A0 19 B8 46 FA FD 25 27 70 70 8A A8 BC 
+34 50 65 27 6D BF 3C D2 36 23 E9 56 FC FD E4 FB 09 67 B7 C6 5D CD DA 7F D9 ED 2B D1 52 B0 A6 E7 
+34 68 0C 46 DB 23 EB 8A 5E 67 3F 7F 5D 7F 29 22 22 55 C1 23 00 2F 88 DC B4 26 FC 8D C6 CA E3 DE 
+C2 7E AF AF 59 64 6D F1 EB E7 CF 1B 46 A0 8A 48 56 F0 09 C0 0B A2 36 B8 9E 60 69 AC 08 F7 42 F7 
+FA 3A 84 1F EC 65 92 34 72 F4 5A 18 BF 20 6C C7 29 19 1C 06 03 00 55 59 47 4B 81 7B FB 6E 32 DB 
+72 8C 2C 00 00 51 9E 78 2F 8B 50 9A A0 DD 8A D6 F0 FF DE 16 70 28 5D 14 14 A9 44 71 DC D9 AB EF 
+74 1C 62 4F D9 A9 51 01 00 CA AF 5C 28 24 48 5D 12 00 80 82 51 80 FC 50 A5 30 CA 87 7F 60 B2 DA 
+3A 2A 70 EE E1 33 91 D5 D3 95 30 00 80 DA F4 30 CF 93 85 A6 AB D7 59 2A 7F 76 2C B9 11 96 A3 64 
+1C 6F 45 9D C7 1E C9 8F 5E 65 2E F9 63 AF 03 60 B2 3A DA 2A 10 F1 F0 29 CD 66 C6 87 83 1F F7 FE 
+5F A1 C9 6A D7 A1 EF C2 02 62 E8 D3 37 2F 1E 3B 7F E0 D8 F9 8E 55 71 2E A3 6D 99 8C 5C F1 71 DF 
+10 AD C0 81 28 02 C9 23 3F 8A A6 B5 F2 58 CC 4A 81 0D 75 8F 0F AF D9 1C C7 1F BE 35 D0 D9 B0 63 
+4E 3C 4E D3 5E 11 72 7D 85 C0 06 CE E3 43 AE 9E B1 BC 61 DE 01 8E 46 1D 33 A5 DF CF 0F F7 FE 4B 
+1A DB 7B 2D 4A 58 10 92 4D D4 9F 11 8B 9A 2D 5A 3C 38 DA 67 8B 8D 42 A5 CD D8 BE C4 8B B8 03 7B 
+62 B9 46 6B 17 18 36 B7 33 5E 9C 75 F3 1A 26 02 00 40 D4 16 3F BD 71 32 34 53 CC C8 63 AA 16 0D 
+AB 56 54 94 22 EF DE BB 9C 30 EA AF BE 94 82 07 17 F7 ED BD C6 C6 C5 EA 38 24 00 26 21 29 45 C3 
+B3 13 FE 8D 51 19 39 CA B0 8B 94 24 0D CF 49 3C 17 A3 32 6A D4 C0 79 4B CD 22 B6 6C 5F E6 F1 DE 
+6E DA 00 B9 D2 D4 30 DF A0 5B B4 79 96 CD 4F A8 2A 35 D4 72 4C 97 15 A1 47 29 0A 33 ED 8C 7E FC 
+1E 1A 7D E0 9C A5 E6 17 B6 78 5B 6F A8 B4 B1 D4 97 2D 65 9C F0 09 B8 4D 9B 3F B5 07 5D AA B2 9C 
+F9 EF C9 0C 1E E6 6C 35 48 81 CF 8A 3F 7B 9F DD D5 CC 50 5D 6A A0 C2 37 44 FB 01 26 2E 90 AF 81 
+8A 10 5D 64 77 0A 1C A6 9F 53 20 83 32 70 F9 04 F9 9C 9B D7 72 04 1E C1 A4 55 4D 86 A8 CB 76 BC 
+93 4D 4E AA DF 1A 7F 06 65 D0 F2 F1 F2 2F 6E C5 BE 10 78 84 22 AD 36 C4 54 43 B8 2B 35 BF E8 F1 
+CD 38 EA A7 2A 45 91 56 1F 62 AA 2E DC 31 B7 85 36 B8 2B 2B 69 E2 E8 B9 28 61 71 C8 AB 86 16 B5 
+97 1F 08 15 F3 F1 0D DF B5 EC 68 15 AD AB AA D1 14 AF FF 39 CD D0 68 EE 40 64 4D CA 41 FB 94 FA 
+BF 63 74 69 C5 BE 7A 93 37 7A BB 2E 52 A5 02 C8 8C 73 DB B3 B2 72 D7 49 FB A9 07 40 B6 D7 C0 51 
+56 DB 7D FA 6E 76 4B 7B 96 C3 9F A4 27 6E 3E 7D 96 F6 BA 33 DE F6 4F 4B 2E 5E 71 32 9F 3E 53 67 
+FD 59 4F 87 A7 C5 17 AE BA CE 0B 38 41 F3 F3 39 7E 78 4D 44 19 57 BC 9B 96 F9 CA 03 1B 6C 4C 25 
+01 6A 9B 39 BA B8 F1 B4 F1 7F FC 13 4A 1D 37 75 50 5B 94 37 6A 9F F9 41 A1 22 BE 7B 8F 05 BB 45 
+94 71 25 94 B4 CC 56 05 79 D8 0E 91 04 30 70 08 DA C3 D9 79 E8 A0 CB C5 92 3A 11 F9 BE 83 C7 79 
+86 B8 8F 95 03 90 FB 96 68 3F 46 DD 28 DF 01 6D 10 38 F2 09 27 37 87 C5 25 B9 69 21 6E 69 21 8D 
+1F A1 69 D9 5C B8 E2 A2 D7 01 EB 72 6E 36 8B 4B 72 99 21 6B 99 4D 53 D2 B4 3B 7F D5 55 AF 7D C2 
+6A 1D B2 26 25 D8 2E 45 60 03 4D D7 21 EA 92 8B 6E BB 05 F4 AB B4 B4 8E D4 FC 39 73 6D EC 6C CD 
+CC 7F E1 2A A4 BF 14 37 63 E7 A4 79 49 13 23 A2 9C 75 D0 A0 21 61 B2 DA DA DA D2 F2 AF 71 13 C6 
+B7 77 20 6D 26 36 26 E6 52 54 D4 C1 E0 E0 F6 0E A4 2D E9 68 68 66 64 3D EA 4C F3 E2 BB BB BA 1A 
+1B 9B CC 98 35 B3 BD 03 F9 8D E7 93 23 8A EF 9C 8E FE 4F FF AF BF 35 51 51 46 10 44 98 FC 96 35 
+09 7F 11 B2 78 51 C8 83 A2 9A 9E 8B 43 66 F5 46 D3 C3 21 08 22 54 7E CB BA 4C 55 19 BB CA 49 82 
+25 33 68 FC 9F BA 9D FF 16 02 82 20 1D CC 6F 59 97 41 B4 B7 F9 CC DE 9D B5 DB 1C 41 90 0E EE F7 
+ED 5F 46 10 04 11 4E 2D 9D 2F B3 D9 EC 7B 77 EF 16 17 17 FF B2 68 10 04 00 FE 2B F8 8F C1 60 D4 
+71 EA DA 3B 90 36 93 F9 F0 E1 7F 05 05 51 91 91 ED 1D 48 5B 22 08 E2 F2 A5 4B 22 22 22 ED 1D 48 
+9B 61 B1 58 EA EA 1A ED 1D 05 40 CB 75 B9 AA AA EA 61 46 46 7E 7E FE 2F 8B 06 41 00 A0 A4 A4 F8 
+71 56 56 59 59 69 7B 07 D2 66 FE 2B 28 28 2E 2E B9 73 FB 76 7B 07 D2 96 08 82 48 8C 4F C0 A8 9D 
+E7 9A BB F0 BF C2 4A 36 BB BD A3 00 68 B9 2E 2B 2B 2B AF B6 FB 72 0A E7 00 00 11 6B 49 44 41 54 
+ED C4 E3 97 11 21 D5 59 C7 2F FB 07 06 B6 77 20 6D 29 F6 6A CC 9E BD BE 9D 6C FC 72 9F BE 7D DB 
+3B 0A 00 D4 BF 8C 20 08 22 6C 50 5D 46 10 04 11 2E A8 2E 23 08 82 08 17 54 97 11 04 41 84 CB 37 
+FF AE A4 9A 95 9E F9 96 A2 32 68 60 4F C1 B9 31 39 F9 59 69 79 54 F5 21 3A DD 5A 5D E8 09 76 EE 
+83 C7 25 32 5A C6 9A 5D BF 35 86 1F 50 F3 26 23 83 55 55 BF EC 09 85 82 61 34 31 39 65 75 4D 65 
+99 F6 FB 31 76 CD 9B 87 19 79 9F 22 A2 D0 C4 E4 95 D5 35 7B 4A A3 9F 87 7F 3F 4E 41 66 5A 1E A5 
+CF E0 01 3D 04 EF 49 D5 BC C9 78 F8 86 AE 6A AC AB 44 23 4A 9E 31 72 78 2A 83 07 28 37 BD 69 C5 
+7F F7 84 91 53 FE D9 BA 38 14 AC AB C6 10 9D 66 97 1A FB 35 38 F9 99 0F F2 28 BD 0D 9A A4 F4 F6 
+61 06 4B 44 CD 58 57 89 46 14 3F 63 E4 F0 7A 35 79 02 00 00 FF DD 63 C6 8B 66 52 A2 76 D5 30 D1 
+6E FD 7F D8 36 57 97 FF E8 41 1E A5 8F 41 FF 26 29 65 64 BC 11 51 33 ED A7 04 44 F1 F3 94 1C 5E 
+2F 83 FE CD BD 4B A9 39 9F 2F 2A 47 C1 BA 6A 9A EA 28 FE DC B0 7F 0D F2 CB E6 CD 9E 73 37 29 A9 
+F1 36 DE 63 DF 09 5A BD 35 C6 7B DD 7F 2F B0 15 7F 7B 6C 8E BA A6 F5 F9 9A 16 5A 6B AA EE 9E A7 
+B9 BA 91 73 DC 37 EC D2 FA B6 5F 46 EF 5C B1 2D AE F6 B3 07 78 4F 03 27 A9 AB F5 EE D3 E8 8F 86 
+D1 CC 4D 97 F3 78 3F 23 90 AF E3 3D F5 9F A6 D6 A7 49 48 3A 86 7F 7B B6 5B 44 24 49 D6 E5 46 EF 
+58 B5 2D B6 AE 9D 0E BF 6A E5 CA D8 AB 31 DF BF 3F 9F 15 32 43 5D 7B F6 B1 7C BC D1 D6 EC A0 29 
+5A 1A 0B CF 94 91 24 59 73 C5 A6 BF F6 AC 26 4F 20 49 92 24 CB 4E 2F D1 68 FA 76 A8 F5 EE A3 A6 
+6D 1D F5 2D 9F EE 26 62 AE 5E 5D 6D 6D FD FD FB 93 7C D6 E1 99 5A EA B3 43 3F 4B 69 9A 9A E6 92 
+D3 65 24 49 D6 5C B6 D5 57 B7 3A FE B6 99 94 CE 2C D4 6C 26 A3 DE 3A AB 2F FE 40 4A 24 A9 AD AE 
+51 57 F7 FD 9F 11 3E EB 88 95 9A C6 BC CF DE A5 FD 93 D5 75 16 9E 26 49 92 AC B9 6C DF 4F 63 CE 
+D1 E6 52 3A BD 50 A7 99 8C FA F4 B7 8E FC EE 78 48 92 74 5B B3 E6 DF 7F CE FD 48 0B 6D E5 FB 7E 
+87 CD CB 39 B1 39 70 CC 05 0F 53 E1 5C EA 9C 60 27 9D 0A 4F 90 D2 F9 C2 0C A6 F4 E1 5E 37 F6 4D 
+93 02 00 20 79 EF DF 32 C2 B7 78 1C DB B0 51 4D 2F 74 51 AF 76 3A 49 A5 0F F3 BA 15 38 4D 1A 00 
+00 B8 EF DF 30 FE B7 65 FD F1 F5 1B FA EA 85 2F 6C 97 88 08 76 D2 C9 D0 44 69 9D 96 56 53 EC D8 
+44 4D EC 43 8E F3 54 9A 59 7E 54 7E FA 7E E6 24 FE A7 4F 0E 59 99 E2 B3 DC FE 9F DA B1 93 0C 85 
+7B 3C 98 A8 89 5D 70 38 AF 97 42 33 29 FD 7D 28 75 22 EF D3 BF C9 CA E4 BD 4B 1C CE D5 8D 9D 68 
+2C EC 29 D9 86 84 35 9F D2 F4 43 29 13 05 DE 25 A8 4C F1 59 E2 74 B6 F6 CF 49 46 BF 30 BE 9F E8 
+BB AE 62 A4 B4 FB F7 CA 3B B5 C9 3F B9 EA 8B 4F E1 57 BC 4C BB 73 FD 66 7C FA 6B 76 2B 96 71 C6 
+0B D3 AF DD C8 2C C2 F1 8A 97 69 B7 6F DC 61 BC 28 E7 7F 7A E4 FA F5 8C 77 38 A7 30 EB EE ED 5B 
+C9 CF 8B 38 9F 76 7A 9B 16 17 C3 60 7D DC 50 F9 E2 5E CC CD AC 62 82 C3 4A 4D 7C 56 4E 12 C5 8F 
+E3 62 99 6F B8 CD 1C 8E 4A 97 92 95 91 91 95 91 91 95 ED DA B3 DF 04 57 B7 BF 54 6A 98 B7 92 2A 
+3E C5 CE 8C BF 7E 23 E1 C1 87 D8 89 E2 AC 9B 31 09 CF 2A 1A EA 54 4D 6E 72 4C 0C 23 AF E1 C0 44 
+E9 93 3B 31 77 5F 34 BC 14 78 25 2B 3D E9 C6 8D 84 B4 DC 4F 79 E3 F9 0F E2 6E 3E 2A AA 2D 7E 72 
+3F 21 E5 53 6A 82 30 51 69 99 86 90 14 94 FB 4F 74 76 9F AE 52 93 7A 27 A9 E2 0B FB 36 77 14 00 
+00 9C CD 7A 78 FF D6 8D F8 94 67 C5 8D 7F 2B 87 B3 59 19 89 37 6E C6 3F 78 25 10 56 E1 83 6B 37 
+1F 16 E1 78 45 2E F3 CE CD 5B 1F 5F 74 0E 2B 35 E1 79 05 49 14 67 5D 8F 49 6D F6 F5 EB F8 48 7E 
+4D 65 65 35 AF B9 2F 1E BA 84 8C CC 87 F7 42 46 A2 F8 8A E7 86 B3 05 1A 2B F7 6E 17 F6 B5 FE 48 
+BC B6 92 5D CD FD 52 4A 1F 32 92 91 2C 8E DE EC F1 4F 81 C6 0A FF 6D C2 BE D6 1F 89 B7 F0 2E 49 
+7F CC 48 56 A2 F8 F2 E6 8D 67 0A 34 AC FD BD A6 F4 F8 E5 51 FE 14 DF 75 BE 4C D3 5E E6 65 11 BC 
+34 D4 D3 6F 4C C4 E6 CF CE 99 09 36 F3 F0 1A F7 A0 DB 85 22 5D 65 81 5D 4A F4 1C EF E6 BF 63 91 
+5E 4B A7 D6 5C 66 A8 EB E6 F7 93 46 17 45 5F 2E A0 4B E0 E5 15 14 D5 D9 BB C2 B7 4D E8 81 71 99 
+C7 DC 37 94 8C 1A 56 74 33 BE 5A 56 B2 F6 5D 85 B4 99 9D BF BF AD B1 2C 06 5C C6 61 E7 B5 75 1B 
+EF 87 CD 15 C5 00 80 5F 70 65 8F C3 59 DD 23 F1 6E 55 51 E1 B7 DF E0 3C 4A 5C F0 41 8E A3 99 A1 
+CA D7 96 7C A5 D0 E9 22 0D AB 9A 12 EC D4 10 17 D7 FD B7 0B 45 BA CA 92 EC 52 52 65 82 8B FF AE 
+85 FD F1 8C E3 2E 3E 62 5E B7 8E CD EC 0A 50 7B 3F D8 D9 E6 BC C8 BC 13 D7 B7 99 8B 02 F1 5F 94 
+B7 DD A1 9E 81 F1 E6 EA B5 CF CE AE 77 D8 75 E9 15 29 27 47 AB 2E C7 55 26 B8 05 EE 9E D7 4F 02 
+B8 CC A3 CE 5B 0A 07 F5 7E 93 F9 16 48 A9 F1 87 62 BD 87 7D 65 DD 2A 0A 9D 4E AB 8F E8 F3 7D 0D 
+F3 9A 3F 0A FE F6 CA FA A5 1B CF B3 A8 0A F2 B4 AA 12 B6 E8 80 25 7E 47 DC 46 28 60 50 FB FC CC 
+06 A7 1D 97 5E 11 F5 3B F4 1C BF 36 68 E7 02 5D 09 E0 A6 1D 73 F5 7C 3F 79 54 D1 95 2B 05 A2 12 
+FC F2 0A 8A AA 95 4F 98 D7 44 F1 CC C8 D0 78 16 CE C3 62 0F 1F E4 D8 9B 19 7D F5 F5 EB 80 B8 69 
+C7 D6 B8 96 38 DF 3C B3 54 BC 85 D2 54 95 1A E8 B4 3D 81 32 C2 2B C8 D9 50 38 AF 0C 05 70 99 C7 
+DC 9D 4B 1C EF 9C 5E A2 DC 52 4A 4C 7F A7 9D F1 60 B1 2D D0 D1 A8 03 A4 14 BA C6 A5 C4 F9 F6 C9 
+65 2D A6 94 EA BF 66 7B 3C 65 84 B7 BF B3 F0 A7 D4 5A DF D7 8F 41 11 1D 6C BF 75 71 FC C2 D0 4D 
+01 63 2E 6C 34 6B 34 57 66 C5 35 6F A7 BD E9 7D 1C 4F 9F B3 31 51 20 8B EF 07 DA DA 6D B3 F7 51 
+8D DE 3A AC C5 17 8D 28 BF 7B AB C2 E3 64 F2 02 3D 99 AA 07 81 4B E7 1D 3C 70 66 FE 9F 6B 74 01 
+80 AC 64 24 94 B9 1C 4B B2 31 90 AB 7A 78 D8 76 85 8F 7B 80 41 CC 16 B3 2F 96 36 F9 29 DB 8E 96 
+E7 59 EC 90 72 B9 78 78 DA 57 17 EE C3 D9 8F CF 06 5F 7E 45 EB 3F C3 44 0E 2A 6E 78 39 F8 A7 F7 
+B5 3F 13 B1 CA 44 91 2C BA B7 CF D6 66 A7 DD 6E D5 AB 9E C3 2D 06 EC 38 7C 3F AD 66 E6 58 09 EE 
+93 E4 B4 2A 3A 8D 97 CE C8 E5 9B EB 60 65 77 93 B2 24 CC 16 98 48 70 98 3B 1C BC 92 BA D9 9E 3E 
+69 3D A4 1B C6 CE 0C 77 5A BE DD D1 5F F3 B2 87 11 00 90 EC 27 45 06 A1 49 17 4D E9 75 B5 E2 5F 
+89 09 67 3F 3E 17 1C F5 9A 36 60 BA B1 1C 34 DD 17 FB D2 51 F4 33 8F FB 47 12 7F 9D B8 BF C9 5C 
+1E AB 7E 1A B2 DC CA 3F F0 DC 8C 61 36 3D 1F 04 38 79 26 29 DA 9D 0A 5F 3D A4 1B C6 7E 14 EA BC 
+72 9B 43 A0 D6 E5 F5 C6 00 40 96 27 DD AA D8 74 F2 EE 22 3D 99 F7 E9 41 8B E7 05 EF 3B 3B 77 AC 
+CB E4 ED A1 E5 79 43 77 4B BB 46 1C B6 FC F1 85 0F DB 0B FE F2 CA 6E F7 27 82 17 EA 55 CF 0B 08 
+90 FF E2 0E 4D 10 85 57 37 B9 84 64 F7 98 73 78 F7 2C 55 E1 98 76 11 CF 8D DE E1 FE 44 EC D3 06 
+B2 2A BB 80 80 2E AD DD 9F 28 8C DE EC 7A 38 BB C7 BC C3 3B 67 0B 4D 4A 57 76 AE 13 7C 97 BE 3D 
+25 4F E7 23 D9 CA 73 0F ED 99 DD 57 38 52 6A 13 DF 7B 21 43 91 34 74 F0 5A A4 FA E6 F4 E6 80 FB 
+95 82 0F 54 26 44 5E 2B D1 9C BF 61 B5 89 02 15 80 A6 68 6A BF DE AA 77 41 74 44 E2 D7 5A A4 F5 
+9A BA 6A 8E 9E 1C 06 98 8C FE A4 11 EA 94 C2 B7 6F F1 86 47 34 67 AF 5F 65 20 87 01 C8 E8 2F 71 
+99 DE A7 E0 DA 25 C6 77 86 0D 00 00 BC E4 3D 93 87 0E B5 18 3A D4 C2 DC CC 44 DF 70 DA E6 DB 30 
+CC 75 D3 22 35 2A 3B 3E F2 7A 89 C6 FC 8D D6 26 8A 54 00 5A 37 33 DB 0D 73 7A 17 5C 39 9F 58 A7 
+3C 72 B8 56 55 5A 72 26 17 70 56 32 A3 48 6F F2 B8 EE B9 CC D4 12 02 AA EE DF 7D 40 35 1A 69 2E 
+55 97 7C 21 EA 55 CF 69 36 B3 34 A8 EC D2 D2 72 BE F2 A4 A5 13 7B BC 8E 8E 62 D6 77 77 D0 FA 8C 
+9E 62 20 8B 81 B8 44 73 95 8E C7 D8 3D D1 62 E8 50 8B A1 43 87 9B 1A 19 18 4C F6 BC 05 E6 AE 9B 
+17 A8 53 9B EE DB D2 51 48 92 28 CF 4E 4C 48 7F 53 89 4B EA 2C 0A BE 75 EF CC 2A 35 2A 27 39 22 
+EA 55 CF A9 AB AD 1A 76 E8 31 65 C9 84 1E 79 57 23 99 0D 2F 6D EF 29 2B E7 E9 C9 61 80 C9 EA 4D 
+1C A9 4E F9 EF ED DB 56 74 3B 75 08 24 AF BA B4 A4 11 76 0D B7 D5 EB 88 73 B2 43 D7 6C BE 54 69 
+E0 12 B4 61 64 33 BD D0 ED 83 E4 55 35 4E A9 B4 A2 9A D7 FA 94 9E 87 B9 79 5C AA 34 74 F6 F7 18 
+21 CC 29 D5 7C 4B 4A E1 2E 1B 2F 57 1A 38 05 6E B4 10 9A 94 DA C4 0F 7C C5 48 1A D9 79 2D 8E 5F 
+10 EA E9 3F E6 DC B2 0F 1B F1 42 56 7E AD B8 9A D6 A7 EF 2E BA 96 B6 BA 48 75 FE 9B AF 35 47 51 
+EC A6 F4 61 27 71 31 31 C0 F1 0F 15 42 4C 4D EB E3 B2 AD 74 35 B5 5E 94 B2 B7 5F 6D AD 25 D4 9E 
+E6 56 33 FA D1 01 80 42 A5 4B 76 55 E9 67 62 3A B0 87 38 00 FE 26 AF A0 46 5C 55 BB 51 EC AA 22 
+D5 05 6F 4A A9 7F 8E 1C A6 BA 3F FE FE 4B 6E DF 34 C6 CB BE A6 5B 46 3E BB BE 95 99 5A 35 53 32 
+91 49 18 3A 0F 95 26 D8 AF 59 65 FC DC 63 F3 4C 8F 09 1E 8A DE 2B BF 0E 0C 01 80 A2 F0 29 BB E6 
+22 1A 6A F5 77 3F 3A 00 05 30 11 29 85 5E BA 26 66 FA 3D 3E 16 F0 4F FB B6 70 14 FA CC 65 6B AC 
+98 5B 8E 3A 59 05 D3 E5 D5 06 99 8D 9A 68 B5 C8 CA AC 47 45 1E AB 8C FF F2 F8 02 E3 E3 8D 76 E8 
+9D 0F F5 61 29 2A 35 7A D1 09 3E FE 7D AF A9 F0 A1 69 5B ED 39 BE 54 A0 07 15 CF D9 F7 D7 94 7D 
+8D 9F 84 E7 45 6D F7 BD 5E 50 9F 34 4D 6B F6 36 7B 0B 19 00 60 DF F3 71 DE C3 90 98 EC E7 B3 52 
+57 88 6E 8D D1 B4 AC F6 1E 5F DC 38 A5 E9 13 F6 37 79 16 9E 17 B9 CB E7 DA 7F F5 39 89 68 CD F2 
+76 1C 2E 0B C0 BE B7 D7 71 4F AA E4 64 5F BF 95 BA 62 20 34 68 5A B3 7D 8F 36 7E 97 0E 58 4E 3C 
+D0 E4 59 78 5E D4 8E CF DF 26 F6 7D 1F 27 5F 86 E4 24 7F BF E5 FD 84 E8 5D 6A 13 3F 74 EA 2F 69 
+EC B0 75 51 FC A2 D0 4D 81 7A 96 1F 1B 14 11 A1 E0 5C AE C0 7F 6F 5E 1D 07 07 91 AF 77 52 52 30 
+4A 93 2D 0D 1D FE 04 9F FF B1 EB 9F A8 AB AD 23 31 F1 8F 9F 2C E2 D3 B2 B1 5C 5E 2B EF 51 61 3D 
+CD 17 58 5B 35 B3 50 49 B3 B1 13 20 42 A7 03 4D C3 62 A8 72 28 E3 FE 6B D5 07 4F 14 0C ED 74 4D 
+65 07 70 43 18 0F D2 B0 94 6A FD 95 C3 BA 60 50 4A A5 02 CD C0 35 D2 EF 2F 39 81 34 28 A2 F2 D2 
+0D 7F A5 B6 30 B2 02 EB 61 BE 68 45 73 11 35 DD 17 FB F2 51 A8 B2 93 B6 5F 1E 69 9B 91 74 2B FE 
+7E F2 FD 84 B3 5B E3 AE 66 ED BF EC 46 A5 02 CD D0 F5 7C 80 A5 BC E0 AB 2B F6 E1 72 9E 82 35 3D 
+CD 68 F5 C9 4A 67 40 D6 16 BF 7A FE FC 75 43 0D 93 2C E7 01 00 FE 36 72 D3 9A F0 37 1A 2B 8F 7B 
+0B FB BD BE 66 91 B5 C5 AF 05 72 AA E0 13 80 17 44 6D 70 3D C1 D2 58 11 EE 25 EC F7 FA 9A D5 CC 
+DB 84 E7 47 7A B8 87 B1 34 AC C3 B6 76 C8 77 E9 2B 7E B0 4B 46 D2 C8 D1 6B 61 FC 82 B0 1D A7 64 
+70 18 0C 00 54 65 1D 2D 05 EE ED BB C9 6C CB 31 B2 00 00 44 79 E2 BD 2C 42 69 82 F6 F7 1F 84 F3 
+98 C9 AC B6 B4 90 04 00 A2 EC 5E CA 53 8A C6 92 01 00 00 74 3A 9D 7C 57 51 41 82 22 00 10 EC E7 
+D9 05 38 0C 04 00 00 8C 42 01 F2 9B 2B 0C B5 87 AE 96 02 F7 CE DD FB 6C CB 3F 3F C4 7E F7 31 AE 
+34 41 4B 1E 80 DE 7F A4 79 D7 7F EE 1C BB F6 82 3A C8 B3 9F 98 A2 DC 10 F5 5D 51 27 C3 F1 92 7E 
+F3 2D 14 31 C0 64 75 B4 55 20 E2 E1 53 9A CD 0C 25 0C 00 A0 36 FD B8 F7 FF 0A 4D 56 BB 4F EB F9 
+FD A9 37 F1 E5 A3 B8 0E 7D 17 16 10 43 9F BE 79 F1 D8 F9 03 C7 CE 77 AC 8A 73 19 6D CB 64 E4 8A 
+8F D3 51 81 73 0F 9F 89 AC 9E FE 61 87 30 CF 93 85 A6 AB D7 59 2A 7F F9 38 14 EC 7B 5E BF 0E 88 
+A6 BD FC F8 B5 E5 82 5B EA 1E 1F 5D B3 39 8E 3F 7C 6B A0 B3 61 C7 5C 63 8C A6 BD 22 E4 FA 0A 81 
+0D 9C C7 87 5C 3D 63 79 C3 BC 03 1C 8D 3A 6A 4A 4D DE 26 4E D6 21 B7 CD B1 BC E1 5E 7E CE 46 D2 
+5F DC AD 03 FB E1 AE 72 49 63 7B AF 45 09 0B 42 B2 89 FA 33 62 51 B3 45 8B 07 47 FB 6C B1 51 A8 
+B4 19 DB 97 78 11 77 60 4F 2C D7 68 ED 02 C3 EF 3F 04 9E 7F 7E 83 83 A2 FB 32 53 59 56 DC 7E DF 
+1B F4 3F 77 CF D2 00 00 BA AE BE 36 2D EE EC 9E 23 9A D6 26 92 AC EB 87 0F A4 E0 14 09 00 00 C0 
+C4 A5 24 69 78 4E E2 B9 18 95 51 A3 0C 54 5A 7D 8D 23 66 BE 60 89 41 F4 9E 4D F6 0A 95 AB FE 54 
+25 5E C4 1C F2 89 E1 19 AD 9F 6B 24 0A 00 A2 83 46 9A 8A 5B 5F 8C 13 19 BA 7D B0 18 50 7B 0F 31 
+FA 23 E0 F8 6D 6C 90 DB C8 3F 30 00 A0 0F 9C B3 D4 FC C2 16 6F EB 0D 95 36 96 FA B2 A5 8C 13 3E 
+01 B7 69 F3 A7 F6 68 D3 9B 11 5F 3C 0A 5D AA B2 9C F9 EF C9 0C 1E E6 6C 35 48 81 CF 8A 3F 7B 9F 
+DD D5 CC 50 5D 6A A0 C2 52 B3 88 2D DB 97 79 BC B7 9B 36 40 AE 34 35 CC 37 E8 16 6D 9E E5 1F 2D 
+1D 05 93 90 94 A2 E1 D9 09 FF C6 A8 8C 1C 65 D8 FA D7 AF E3 E3 30 FD 9C 02 19 94 81 CB 27 C8 E7 
+DC BC 96 23 F0 08 26 AD 6A 32 44 5D B6 E3 9D 99 71 52 FD D6 F8 33 28 83 96 8F 97 7F 71 2B F6 85 
+C0 23 14 69 B5 21 A6 1A 1D B0 52 D7 A5 FA 3B 05 A4 C2 A0 65 13 BA BC B8 11 D7 28 25 19 B5 3F CD 
+D4 DB 2D B0 B6 D3 06 55 43 D2 C4 D1 73 51 C2 E2 90 57 0D 2D 6A 2F 3F 10 2A E6 E3 1B BE 6B D9 D1 
+2A 5A 57 55 A3 29 5E FF 73 9A A1 F1 03 07 12 19 38 C3 AA 4B E2 CE 15 87 D9 12 BD 8D A7 EE 08 73 
+99 D6 1D 03 00 AA EA 7C AF ED 79 5E 41 C1 8E 73 F6 C9 69 0C 9F BB D1 49 C2 E1 48 FD 1E E2 E6 D3 
+67 EA AC 3F EB E9 F0 B4 F8 C2 55 D7 01 AD 3E 12 4D 6B F9 A1 63 62 BB FD C2 76 AE 0C 79 4F EB AA 
+66 38 79 5B 98 D3 CC 86 D8 C5 8D 46 0C 91 8E 88 EE 63 6C 22 8F 01 D0 FB 9B 1A 74 09 7D AB 64 31 
+B2 E1 A7 1F D4 3E F3 83 42 45 7C F7 1E 0B 76 8B 28 E3 4A 28 69 99 AD 0A F2 B0 1D 22 09 50 FB FD 
+A9 7F E6 CB 47 31 70 08 DA C3 D9 79 E8 A0 CB C5 92 3A 11 F9 BE 83 C7 79 86 B8 8F 95 03 90 9B 17 
+70 82 E6 E7 73 FC F0 9A 88 32 AE 78 37 2D F3 95 07 36 D8 98 B6 1C 96 B8 F9 F4 59 DA EB CE 78 DB 
+3F 2D B9 78 C5 65 40 27 BA CF FD 15 9C DC 1C 16 97 E4 A6 85 B8 A5 85 34 7E 84 A6 65 73 E1 8A 8B 
+5E 07 AC CB B9 D9 2C 2E C9 65 86 AC 65 36 4D 49 D3 EE FC 55 57 BD F6 09 EB 47 34 BC 4B CC A3 6E 
+CC 26 8F D0 B4 6C 9F C5 B9 B6 4B 50 6D 8B 42 92 5F BC 5C 9D 3F 67 AE 8D 5D 3B CF 8B 5F 7B C5 CE 
+F4 EB A3 32 91 4E A5 B3 CE 8B 7F 30 38 B8 BD 03 69 4B 3A 1A 9A 19 59 8F 3A D9 BC F8 C6 C6 26 33 
+66 CD 6C EF 40 D0 7C 72 08 82 20 42 06 D5 65 04 41 10 E1 22 EC 5D 87 A2 C3 D6 9E BE C8 55 6A C7 
+09 16 11 04 41 7E 2D 61 AF CB 98 AC 8A AE 6C 7B 07 81 20 08 F2 0B A1 F3 50 04 41 10 E1 82 EA 32 
+82 20 88 70 69 A9 1F 43 4C 4C 74 C5 D2 65 2D 3C 01 41 7E 06 1E 8F 77 E7 D6 6D EC B3 9F 88 77 5C 
+04 41 E0 38 DE 4F EB 07 7E F5 2A 7C 78 3C DE 60 3D FD F6 8E A2 8D 99 9A 99 B5 77 08 00 2D 8F 5F 
+E6 70 38 04 D1 79 D7 AC 40 84 15 9F CF C7 30 AC 93 D5 65 82 20 68 34 61 BF 9D F3 4D B8 5C 2E 9D 
+DE D9 26 E7 A6 D3 E9 D4 96 A6 B2 F9 45 5A AA CB 08 82 20 C8 AF D7 79 4E 49 10 04 41 3A 07 54 97 
+11 04 41 84 0B AA CB 08 82 20 C2 05 D5 65 04 41 10 E1 82 EA 32 82 20 88 70 41 75 19 41 10 44 B8 
+A0 BA 8C 20 08 22 5C 50 5D 46 10 04 11 2E A8 2E 23 08 82 08 17 54 97 11 04 41 84 0B AA CB 08 82 
+20 C2 05 D5 65 04 41 10 E1 82 EA 32 82 20 88 70 41 75 19 41 10 44 B8 A0 BA 8C 20 08 22 5C 50 5D 
+46 10 04 11 2E FF 07 4B 0D 6D B5 B8 C1 3E 22 00 00 00 00 49 45 4E 44 AE 42 60 82 
+EndData
+$EndBitmap
+Wire Wire Line
+	7600 3900 7800 3900
+Wire Wire Line
+	7800 3650 7800 3900
+Wire Wire Line
+	7050 3550 7050 3800
+Wire Wire Line
+	5950 3800 6250 3800
+Wire Wire Line
+	5950 3900 7000 3900
+$Comp
+L formula:R_1K R14
+U 1 1 5F89B4BC
+P 6750 4900
+F 0 "R14" H 6820 4946 50  0000 L CNN
+F 1 "R_1K" H 6820 4855 50  0000 L CNN
+F 2 "footprints:R_0805_OEM" H 6680 4900 50  0001 C CNN
+F 3 "https://www.seielect.com/Catalog/SEI-rncp.pdf" H 6830 4900 50  0001 C CNN
+F 4 "DK" H 6750 4900 60  0001 C CNN "MFN"
+F 5 "RNCP0805FTD1K00CT-ND" H 6750 4900 60  0001 C CNN "MPN"
+F 6 "https://www.digikey.com/products/en?keywords=RNCP0805FTD1K00CT-ND" H 7230 5300 60  0001 C CNN "PurchasingLink"
+	1    6750 4900
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:VBUS #PWR035
+U 1 1 5F896DF2
+P 7800 3650
+F 0 "#PWR035" H 7800 3500 50  0001 C CNN
+F 1 "VBUS" H 7815 3823 50  0000 C CNN
+F 2 "" H 7800 3650 50  0001 C CNN
+F 3 "" H 7800 3650 50  0001 C CNN
+	1    7800 3650
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:VBUS #PWR030
+U 1 1 5F896970
+P 7050 3550
+F 0 "#PWR030" H 7050 3400 50  0001 C CNN
+F 1 "VBUS" H 7065 3723 50  0000 C CNN
+F 2 "" H 7050 3550 50  0001 C CNN
+F 3 "" H 7050 3550 50  0001 C CNN
+	1    7050 3550
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4350 4550 4350 4600
+Connection ~ 4350 4550
+Wire Wire Line
+	3800 4550 3800 4450
+Wire Wire Line
+	4350 4550 3800 4550
+Wire Wire Line
+	4350 4500 4350 4550
+Text Label 3800 4450 2    50   ~ 0
+Battery+
+Wire Wire Line
+	8700 3300 8700 3450
+$Comp
+L power:GND #PWR028
 U 1 1 5F85BCCC
-P 6650 6450
-F 0 "#PWR?" H 6650 6200 50  0001 C CNN
-F 1 "GND" H 6655 6277 50  0000 C CNN
-F 2 "" H 6650 6450 50  0001 C CNN
-F 3 "" H 6650 6450 50  0001 C CNN
-	1    6650 6450
+P 8700 3450
+F 0 "#PWR028" H 8700 3200 50  0001 C CNN
+F 1 "GND" H 8705 3277 50  0000 C CNN
+F 2 "" H 8700 3450 50  0001 C CNN
+F 3 "" H 8700 3450 50  0001 C CNN
+	1    8700 3450
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	6650 6300 6650 6450
-Connection ~ 6450 6000
+	5950 4950 5950 5050
 Wire Wire Line
-	6450 6000 6650 6000
-Text Notes 6950 5800 1    50   ~ 0
-Charging LED
+	6050 5050 6050 5100
+Connection ~ 5950 5050
+Connection ~ 5950 4950
+Wire Wire Line
+	5950 4850 5950 4950
+Text Label 6200 4400 0    50   ~ 0
+16KThermistor
+$Comp
+L power:GND #PWR027
+U 1 1 5F805C8C
+P 6750 5050
+F 0 "#PWR027" H 6750 4800 50  0001 C CNN
+F 1 "GND" H 6755 4877 50  0000 C CNN
+F 2 "" H 6750 5050 50  0001 C CNN
+F 3 "" H 6750 5050 50  0001 C CNN
+	1    6750 5050
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	6750 4600 6750 4750
+Wire Wire Line
+	5950 4600 6750 4600
+$Comp
+L power:GND #PWR019
+U 1 1 5F7EF51B
+P 4100 3700
+F 0 "#PWR019" H 4100 3450 50  0001 C CNN
+F 1 "GND" H 4105 3527 50  0000 C CNN
+F 2 "" H 4100 3700 50  0001 C CNN
+F 3 "" H 4100 3700 50  0001 C CNN
+	1    4100 3700
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR015
+U 1 1 5F7E5F4F
+P 4000 5150
+F 0 "#PWR015" H 4000 4900 50  0001 C CNN
+F 1 "GND" H 4005 4977 50  0000 C CNN
+F 2 "" H 4000 5150 50  0001 C CNN
+F 3 "" H 4000 5150 50  0001 C CNN
+	1    4000 5150
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4000 5000 4000 5150
+$Comp
+L formula:C_10nF C5
+U 1 1 5F7E1D0F
+P 4000 4850
+F 0 "C5" H 4115 4896 50  0000 L CNN
+F 1 "C_10nF" H 4115 4805 50  0000 L CNN
+F 2 "footprints:C_0805_OEM" H 3800 4850 50  0001 C CNN
+F 3 "http://www.samsungsem.com/kr/support/product-search/mlcc/__icsFiles/afieldfile/2018/07/23/CL21B103KBANNNC.pdf" H 3900 4950 50  0001 C CNN
+F 4 "DK" H 4000 5050 50  0001 C CNN "MFN"
+F 5 "1276-1015-1-ND" H 4100 5150 50  0001 C CNN "MPN"
+F 6 "https://www.digikey.com/product-detail/en/samsung-electro-mechanics/CL21B103KBANNNC/1276-1015-1-ND/3889101" H 4200 5250 50  0001 C CNN "PurchasingLink"
+	1    4000 4850
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5950 4400 6200 4400
+Connection ~ 4350 4700
+Connection ~ 4350 4600
+Wire Wire Line
+	4350 4600 4350 4700
+Wire Wire Line
+	4350 4700 4000 4700
+NoConn ~ 5950 4100
+$Comp
+L power:VBUS #PWR017
+U 1 1 5F7DE121
+P 3850 4100
+F 0 "#PWR017" H 3850 3950 50  0001 C CNN
+F 1 "VBUS" H 3865 4273 50  0000 C CNN
+F 2 "" H 3850 4100 50  0001 C CNN
+F 3 "" H 3850 4100 50  0001 C CNN
+	1    3850 4100
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4350 4300 4350 4400
+Connection ~ 4350 4300
+Wire Wire Line
+	4350 4100 4350 4300
+Connection ~ 4350 4100
+Wire Wire Line
+	4350 3900 4350 4100
+$Comp
+L power:GND #PWR024
+U 1 1 5F7DAE57
+P 6050 5100
+F 0 "#PWR024" H 6050 4850 50  0001 C CNN
+F 1 "GND" H 6055 4927 50  0000 C CNN
+F 2 "" H 6050 5100 50  0001 C CNN
+F 3 "" H 6050 5100 50  0001 C CNN
+	1    6050 5100
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5950 5050 6050 5050
+$Comp
+L power:GND #PWR025
+U 1 1 5F7D8379
+P 6300 5100
+F 0 "#PWR025" H 6300 4850 50  0001 C CNN
+F 1 "GND" H 6305 4927 50  0000 C CNN
+F 2 "" H 6300 5100 50  0001 C CNN
+F 3 "" H 6300 5100 50  0001 C CNN
+	1    6300 5100
+	1    0    0    -1  
+$EndComp
+$Comp
+L formula:R_100K R10
+U 1 1 5F7D792E
+P 6300 4950
+F 0 "R10" H 6370 4996 50  0000 L CNN
+F 1 "R_100K" H 6370 4905 50  0000 L CNN
+F 2 "footprints:R_0805_OEM" H 6230 4950 50  0001 C CNN
+F 3 "https://industrial.panasonic.com/cdbs/www-data/pdf/RDA0000/AOA0000C304.pdf" H 6380 4950 50  0001 C CNN
+F 4 "DK" H 6300 4950 60  0001 C CNN "MFN"
+F 5 "P100KCCT-ND" H 6300 4950 60  0001 C CNN "MPN"
+F 6 "https://www.digikey.com/product-detail/en/panasonic-electronic-components/ERJ-6ENF1003V/P100KCCT-ND/119551" H 6780 5350 60  0001 C CNN "PurchasingLink"
+	1    6300 4950
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	6300 4700 6300 4800
+Wire Wire Line
+	5950 4700 6300 4700
+Wire Wire Line
+	6850 3800 7050 3800
+$Comp
+L formula:LED_0805_Red D1
+U 1 1 5F7CFFA7
+P 6400 3800
+F 0 "D1" H 6400 3950 50  0000 R CNN
+F 1 "LED_0805_Red" H 6450 3850 50  0000 R CNN
+F 2 "footprints:LED_0805_OEM" H 6300 3800 50  0001 C CNN
+F 3 "http://www.osram-os.com/Graphics/XPic8/00078869_0.pdf" H 6400 3900 50  0001 C CNN
+F 4 "DK" H 6400 3800 60  0001 C CNN "MFN"
+F 5 "475-1415-1-ND" H 6400 3800 60  0001 C CNN "MPN"
+F 6 "https://www.digikey.com/product-detail/en/osram-opto-semiconductors-inc/LH-R974-LP-1/475-1415-1-ND/1802604" H 6800 4300 60  0001 C CNN "PurchasingLink"
+	1    6400 3800
+	1    0    0    -1  
+$EndComp
+$Comp
+L formula:LED_0805_Amber D2
+U 1 1 5F7CF104
+P 7150 3900
+F 0 "D2" H 7150 3800 50  0000 R CNN
+F 1 "LED_0805_Amber" H 6950 3850 50  0000 R CNN
+F 2 "footprints:LED_0805_OEM" H 7050 3900 50  0001 C CNN
+F 3 "https://media.digikey.com/pdf/Data%20Sheets/Chicago%20Miniature%20Lamps%20PDFs/CMDA5_Series_Rev_Aug_2014.pdf" H 7150 4000 50  0001 C CNN
+F 4 "DK" H 7150 3900 60  0001 C CNN "MFN"
+F 5 "L71517CT-ND" H 7150 3900 60  0001 C CNN "MPN"
+F 6 "https://www.digikey.com/product-detail/en/visual-communications-company-vcc/CMDA5DY7D1S/L71517CT-ND/614867" H 7550 4400 60  0001 C CNN "PurchasingLink"
+	1    7150 3900
+	1    0    0    -1  
+$EndComp
+$Comp
+L formula:R_1K R17
+U 1 1 5F7CE5B8
+P 7450 3900
+F 0 "R17" V 7350 3800 50  0000 L CNN
+F 1 "R_1K" V 7550 3800 50  0000 L CNN
+F 2 "footprints:R_0805_OEM" H 7380 3900 50  0001 C CNN
+F 3 "https://www.seielect.com/Catalog/SEI-rncp.pdf" H 7530 3900 50  0001 C CNN
+F 4 "DK" H 7450 3900 60  0001 C CNN "MFN"
+F 5 "RNCP0805FTD1K00CT-ND" H 7450 3900 60  0001 C CNN "MPN"
+F 6 "https://www.digikey.com/products/en?keywords=RNCP0805FTD1K00CT-ND" H 7930 4300 60  0001 C CNN "PurchasingLink"
+	1    7450 3900
+	0    1    1    0   
+$EndComp
+$Comp
+L formula:R_1K R13
+U 1 1 5F7CDD6D
+P 6700 3800
+F 0 "R13" V 6450 3700 50  0000 L CNN
+F 1 "R_1K" V 6550 3700 50  0000 L CNN
+F 2 "footprints:R_0805_OEM" H 6630 3800 50  0001 C CNN
+F 3 "https://www.seielect.com/Catalog/SEI-rncp.pdf" H 6780 3800 50  0001 C CNN
+F 4 "DK" H 6700 3800 60  0001 C CNN "MFN"
+F 5 "RNCP0805FTD1K00CT-ND" H 6700 3800 60  0001 C CNN "MPN"
+F 6 "https://www.digikey.com/products/en?keywords=RNCP0805FTD1K00CT-ND" H 7180 4200 60  0001 C CNN "PurchasingLink"
+	1    6700 3800
+	0    1    1    0   
+$EndComp
+$Comp
+L power:VBUS #PWR018
+U 1 1 5F7CB2E0
+P 4100 3100
+F 0 "#PWR018" H 4100 2950 50  0001 C CNN
+F 1 "VBUS" H 4115 3273 50  0000 C CNN
+F 2 "" H 4100 3100 50  0001 C CNN
+F 3 "" H 4100 3100 50  0001 C CNN
+	1    4100 3100
+	1    0    0    -1  
+$EndComp
+Connection ~ 4100 3400
+$Comp
+L formula:R_270K R7
+U 1 1 5F7CA9E3
+P 4100 3250
+F 0 "R7" H 4150 3150 50  0000 L CNN
+F 1 "R_270K" V 4000 3150 50  0000 L CNN
+F 2 "footprints:R_0805_OEM" V 4030 3250 50  0001 C CNN
+F 3 "https://industrial.panasonic.com/cdbs/www-data/pdf/RDM0000/AOA0000C307.pdf" V 4650 3350 50  0001 C CNN
+F 4 "DK" V 4280 3350 60  0001 C CNN "MFN"
+F 5 "P270KDACT-ND" V 4380 3450 60  0001 C CNN "MPN"
+F 6 "https://www.digikey.com/product-detail/en/panasonic-electronic-components/ERA-6AEB274V/P270KDACT-ND/1466005" V 4480 3550 60  0001 C CNN "Webpage"
+	1    4100 3250
+	1    0    0    -1  
+$EndComp
+$Comp
+L formula:R_100K R8
+U 1 1 5F7C9F44
+P 4100 3550
+F 0 "R8" H 4150 3400 50  0000 L CNN
+F 1 "R_100K" V 4000 3400 50  0000 L CNN
+F 2 "footprints:R_0805_OEM" H 4030 3550 50  0001 C CNN
+F 3 "https://industrial.panasonic.com/cdbs/www-data/pdf/RDA0000/AOA0000C304.pdf" H 4180 3550 50  0001 C CNN
+F 4 "DK" H 4100 3550 60  0001 C CNN "MFN"
+F 5 "P100KCCT-ND" H 4100 3550 60  0001 C CNN "MPN"
+F 6 "https://www.digikey.com/product-detail/en/panasonic-electronic-components/ERJ-6ENF1003V/P100KCCT-ND/119551" H 4580 3950 60  0001 C CNN "PurchasingLink"
+	1    4100 3550
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4250 3400 4100 3400
+Wire Wire Line
+	4250 3800 4250 3400
+Wire Wire Line
+	4350 3800 4250 3800
+Connection ~ 4350 3600
+Wire Wire Line
+	4350 3600 4350 3350
+$Comp
+L power:VBUS #PWR021
+U 1 1 5F7C80CB
+P 4350 3350
+F 0 "#PWR021" H 4350 3200 50  0001 C CNN
+F 1 "VBUS" H 4365 3523 50  0000 C CNN
+F 2 "" H 4350 3350 50  0001 C CNN
+F 3 "" H 4350 3350 50  0001 C CNN
+	1    4350 3350
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+BATT #PWR023
+U 1 1 5F7C7758
+P 5950 3450
+F 0 "#PWR023" H 5950 3300 50  0001 C CNN
+F 1 "+BATT" H 5965 3623 50  0000 C CNN
+F 2 "" H 5950 3450 50  0001 C CNN
+F 3 "" H 5950 3450 50  0001 C CNN
+	1    5950 3450
+	1    0    0    -1  
+$EndComp
+Connection ~ 5950 3600
+Wire Wire Line
+	5950 3600 5950 3450
+Wire Wire Line
+	4350 3600 4350 3700
+Wire Wire Line
+	5950 3600 5950 3700
+$Comp
+L formula:MCP73871T-2CCI_ML U2
+U 1 1 5F776B17
+P 5150 4300
+F 0 "U2" H 5150 5267 50  0000 C CNN
+F 1 "MCP73871T-2CCI_ML" H 5150 5176 50  0000 C CNN
+F 2 "footprints:MCP73871T" H 5200 5150 50  0001 L BNN
+F 3 "https://ww1.microchip.com/downloads/en/DeviceDoc/MCP73871-Data-Sheet-20002090E.pdf" H 5200 5250 50  0001 L BNN
+F 4 "D" H 5150 4300 50  0001 L BNN "Field4"
+F 5 "MICROCHIP" H 4650 5150 50  0001 L BNN "Field5"
+F 6 "https://www.digikey.com/product-detail/en/microchip-technology/MCP73871T-2CCI-ML/MCP73871T-2CCI-MLCT-ND/7065594" H 5150 4300 50  0001 C CNN "Purchasing Link"
+	1    5150 4300
+	1    0    0    -1  
+$EndComp
+Text Notes 8950 2850 1    50   ~ 0
+Low Battery Indicator
+Wire Wire Line
+	3850 4100 4350 4100
+Text Notes 7200 950  2    79   ~ 0
+Boost Converter
+Text Notes 5950 2900 2    79   ~ 0
+Battery + Load Manager
+Text Notes 6250 6050 0    157  Italic 0
+Power Bank Project
 $EndSCHEMATC
