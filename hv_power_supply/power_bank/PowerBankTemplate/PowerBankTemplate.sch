@@ -4,11 +4,11 @@ EELAYER END
 $Descr A 11000 8500
 encoding utf-8
 Sheet 1 1
-Title "New Member Project Template"
-Date ""
-Rev ""
+Title "Power Bank Project"
+Date "2020-10-10"
+Rev "1"
 Comp "Olin Electric Motorsports"
-Comment1 "insert_name"
+Comment1 ""
 Comment2 ""
 Comment3 ""
 Comment4 ""
@@ -60,8 +60,6 @@ F 6 "https://www.digikey.com/en/products/detail/tdk-corporation/NLV32T-6R8J-EF/4
 	1    6400 1350
 	1    0    0    -1  
 $EndComp
-Text Label 6600 1750 2    50   ~ 0
-ENABLE
 $Comp
 L power:GND #PWR014
 U 1 1 5F794B0D
@@ -153,12 +151,12 @@ Wire Wire Line
 Wire Wire Line
 	5650 1650 5950 1650
 Wire Wire Line
-	5300 1350 6300 1350
+	5300 1350 5600 1350
 $Comp
 L formula:R_1.87M R5
 U 1 1 5F7A4733
 P 5950 1800
-F 0 "R5" H 6000 1700 50  0000 L CNN
+F 0 "R5" H 5950 1650 50  0000 L CNN
 F 1 "R_1.87M" V 5850 1600 50  0000 L CNN
 F 2 "footprints:R_0805_OEM" H 5880 1800 50  0001 C CNN
 F 3 "" H 6030 1800 50  0001 C CNN
@@ -289,7 +287,7 @@ $Comp
 L formula:C_100uF C7
 U 1 1 5F7B6B11
 P 9100 1550
-F 0 "C7" H 9150 1450 50  0000 L CNN
+F 0 "C7" H 9050 1800 50  0000 L CNN
 F 1 "C_100uF" V 8950 1350 50  0000 L CNN
 F 2 "footprints:C_1812_OEM" H 9100 2300 50  0001 C CNN
 F 3 "https://product.tdk.com/info/en/catalog/datasheets/mlcc_commercial_general_en.pdf" H 9300 1000 50  0001 C CNN
@@ -314,7 +312,7 @@ $Comp
 L formula:R_200K R12
 U 1 1 5F7B7F51
 P 8500 1900
-F 0 "R12" H 8570 1946 50  0000 L CNN
+F 0 "R12" H 8550 1750 50  0000 L CNN
 F 1 "R_200K" V 8400 1750 50  0000 L CNN
 F 2 "footprints:R_0805_OEM" H 8430 1900 50  0001 C CNN
 F 3 "" H 8580 1900 50  0001 C CNN
@@ -339,7 +337,7 @@ $EndComp
 Wire Wire Line
 	8100 1900 8300 1900
 Wire Wire Line
-	8100 2100 8500 2100
+	8100 2100 8200 2100
 Wire Wire Line
 	8500 2050 8500 2100
 Connection ~ 8500 2100
@@ -449,7 +447,7 @@ Wire Wire Line
 	9350 1400 9100 1400
 Connection ~ 9100 1400
 Wire Wire Line
-	2200 5150 2750 5150
+	2200 5150 2450 5150
 Wire Wire Line
 	2750 5150 2750 4850
 $Comp
@@ -810,8 +808,8 @@ $Comp
 L formula:C_10uF C1
 U 1 1 5F93A07E
 P 2350 2000
-F 0 "C1" H 2465 2096 50  0000 L CNN
-F 1 "C_10uF" H 2465 2005 50  0000 L CNN
+F 0 "C1" H 2400 2150 50  0000 L CNN
+F 1 "C_10uF" H 2350 1950 50  0000 L CNN
 F 2 "footprints:C_0805_OEM" H 2388 2600 50  0001 C CNN
 F 3 "http://www.samsungsem.com/kr/support/product-search/mlcc/__icsFiles/afieldfile/2018/06/20/CL21A106KPFNNNE.pdf" H 2375 2850 50  0001 C CNN
 F 4 "DK" H 2350 2050 60  0001 C CNN "MFN"
@@ -925,7 +923,7 @@ Text Notes 4850 6850 0    39   Italic 0
 Text Notes 9650 2000 1    50   ~ 0
 Power LED
 $Bitmap
-Pos 7850 4750
+Pos 7800 4850
 Scale 1.000000
 Data
 89 50 4E 47 0D 0A 1A 0A 00 00 00 0D 49 48 44 52 00 00 01 DD 00 00 01 8C 08 02 00 00 00 10 8D EF 
@@ -2662,7 +2660,7 @@ Connection ~ 4350 4550
 Wire Wire Line
 	3800 4550 3800 4450
 Wire Wire Line
-	4350 4550 3800 4550
+	4350 4550 4000 4550
 Wire Wire Line
 	4350 4500 4350 4550
 Text Label 3800 4450 2    50   ~ 0
@@ -2816,31 +2814,17 @@ Wire Wire Line
 Wire Wire Line
 	6850 3800 7050 3800
 $Comp
-L formula:LED_0805_Red D1
-U 1 1 5F7CFFA7
-P 6400 3800
-F 0 "D1" H 6400 3950 50  0000 R CNN
-F 1 "LED_0805_Red" H 6450 3850 50  0000 R CNN
-F 2 "footprints:LED_0805_OEM" H 6300 3800 50  0001 C CNN
-F 3 "http://www.osram-os.com/Graphics/XPic8/00078869_0.pdf" H 6400 3900 50  0001 C CNN
-F 4 "DK" H 6400 3800 60  0001 C CNN "MFN"
-F 5 "475-1415-1-ND" H 6400 3800 60  0001 C CNN "MPN"
-F 6 "https://www.digikey.com/product-detail/en/osram-opto-semiconductors-inc/LH-R974-LP-1/475-1415-1-ND/1802604" H 6800 4300 60  0001 C CNN "PurchasingLink"
-	1    6400 3800
-	1    0    0    -1  
-$EndComp
-$Comp
 L formula:LED_0805_Amber D2
 U 1 1 5F7CF104
-P 7150 3900
-F 0 "D2" H 7150 3800 50  0000 R CNN
-F 1 "LED_0805_Amber" H 6950 3850 50  0000 R CNN
-F 2 "footprints:LED_0805_OEM" H 7050 3900 50  0001 C CNN
-F 3 "https://media.digikey.com/pdf/Data%20Sheets/Chicago%20Miniature%20Lamps%20PDFs/CMDA5_Series_Rev_Aug_2014.pdf" H 7150 4000 50  0001 C CNN
-F 4 "DK" H 7150 3900 60  0001 C CNN "MFN"
-F 5 "L71517CT-ND" H 7150 3900 60  0001 C CNN "MPN"
-F 6 "https://www.digikey.com/product-detail/en/visual-communications-company-vcc/CMDA5DY7D1S/L71517CT-ND/614867" H 7550 4400 60  0001 C CNN "PurchasingLink"
-	1    7150 3900
+P 6400 3800
+F 0 "D2" H 6550 3750 50  0000 R CNN
+F 1 "LED_0805_Amber" H 6600 3900 50  0000 R CNN
+F 2 "footprints:LED_0805_OEM" H 6300 3800 50  0001 C CNN
+F 3 "https://media.digikey.com/pdf/Data%20Sheets/Chicago%20Miniature%20Lamps%20PDFs/CMDA5_Series_Rev_Aug_2014.pdf" H 6400 3900 50  0001 C CNN
+F 4 "DK" H 6400 3800 60  0001 C CNN "MFN"
+F 5 "L71517CT-ND" H 6400 3800 60  0001 C CNN "MPN"
+F 6 "https://www.digikey.com/product-detail/en/visual-communications-company-vcc/CMDA5DY7D1S/L71517CT-ND/614867" H 6800 4300 60  0001 C CNN "PurchasingLink"
+	1    6400 3800
 	1    0    0    -1  
 $EndComp
 $Comp
@@ -2973,4 +2957,97 @@ Text Notes 5950 2900 2    79   ~ 0
 Battery + Load Manager
 Text Notes 6250 6050 0    157  Italic 0
 Power Bank Project
+$Comp
+L formula:TP TP4
+U 1 1 5F89A753
+P 6400 1750
+F 0 "TP4" V 6615 1642 50  0000 C CNN
+F 1 "TP" V 6524 1642 50  0000 C CNN
+F 2 "footprints:tp_1.6mm" H 6300 1650 50  0001 C CNN
+F 3 "http://www.keyelco.com/product-pdf.cfm?p=1314" H 6400 1750 50  0001 C CNN
+F 4 "DK" H 6500 1850 50  0001 C CNN "MFN"
+F 5 "36-5006-ND" H 6600 1950 50  0001 C CNN "MPN"
+F 6 "https://www.digikey.com/product-detail/en/keystone-electronics/5006/36-5006-ND/255330" H 6700 2050 50  0001 C CNN "PurchasingLink"
+	1    6400 1750
+	0    -1   -1   0   
+$EndComp
+Connection ~ 6600 1750
+$Comp
+L formula:TP TP2
+U 1 1 5F8A8B5D
+P 2450 4950
+F 0 "TP2" H 2528 4888 50  0000 L CNN
+F 1 "TP" H 2528 4797 50  0000 L CNN
+F 2 "footprints:tp_1.6mm" H 2350 4850 50  0001 C CNN
+F 3 "http://www.keyelco.com/product-pdf.cfm?p=1314" H 2450 4950 50  0001 C CNN
+F 4 "DK" H 2550 5050 50  0001 C CNN "MFN"
+F 5 "36-5006-ND" H 2650 5150 50  0001 C CNN "MPN"
+F 6 "https://www.digikey.com/product-detail/en/keystone-electronics/5006/36-5006-ND/255330" H 2750 5250 50  0001 C CNN "PurchasingLink"
+	1    2450 4950
+	1    0    0    -1  
+$EndComp
+Connection ~ 2450 5150
+Wire Wire Line
+	2450 5150 2750 5150
+$Comp
+L formula:TP TP3
+U 1 1 5F8BA2B0
+P 5600 1150
+F 0 "TP3" H 5678 1088 50  0000 L CNN
+F 1 "TP" H 5678 997 50  0000 L CNN
+F 2 "footprints:tp_1.6mm" H 5500 1050 50  0001 C CNN
+F 3 "http://www.keyelco.com/product-pdf.cfm?p=1314" H 5600 1150 50  0001 C CNN
+F 4 "DK" H 5700 1250 50  0001 C CNN "MFN"
+F 5 "36-5006-ND" H 5800 1350 50  0001 C CNN "MPN"
+F 6 "https://www.digikey.com/product-detail/en/keystone-electronics/5006/36-5006-ND/255330" H 5900 1450 50  0001 C CNN "PurchasingLink"
+	1    5600 1150
+	1    0    0    -1  
+$EndComp
+Connection ~ 5600 1350
+Wire Wire Line
+	5600 1350 6300 1350
+Wire Wire Line
+	8100 1600 8200 1600
+Wire Wire Line
+	8200 1600 8200 2100
+Connection ~ 8200 2100
+Wire Wire Line
+	8200 2100 8500 2100
+$Comp
+L formula:TP TP?
+U 1 1 5F8580BF
+P 4000 4350
+F 0 "TP?" H 4078 4288 50  0000 L CNN
+F 1 "TP" H 4078 4197 50  0000 L CNN
+F 2 "footprints:tp_1.6mm" H 3900 4250 50  0001 C CNN
+F 3 "http://www.keyelco.com/product-pdf.cfm?p=1314" H 4000 4350 50  0001 C CNN
+F 4 "DK" H 4100 4450 50  0001 C CNN "MFN"
+F 5 "36-5006-ND" H 4200 4550 50  0001 C CNN "MPN"
+F 6 "https://www.digikey.com/product-detail/en/keystone-electronics/5006/36-5006-ND/255330" H 4300 4650 50  0001 C CNN "PurchasingLink"
+	1    4000 4350
+	1    0    0    -1  
+$EndComp
+Connection ~ 4000 4550
+Wire Wire Line
+	4000 4550 3800 4550
+Text Notes 6100 3650 0    50   ~ 0
+Charging
+$Comp
+L formula:LED_0805 D?
+U 1 1 5F862D12
+P 7150 3900
+F 0 "D?" H 6900 3850 50  0000 C CNN
+F 1 "LED_0805" H 7100 3750 50  0000 C CNN
+F 2 "footprints:LED_0805_OEM" H 7050 3900 50  0001 C CNN
+F 3 "http://www.osram-os.com/Graphics/XPic9/00078860_0.pdf" H 7150 4000 50  0001 C CNN
+F 4 "DK" H 7150 3900 60  0001 C CNN "MFN"
+F 5 "475-1410-1-ND" H 7150 3900 60  0001 C CNN "MPN"
+F 6 "https://www.digikey.com/products/en?keywords=475-1410-1-ND" H 7550 4400 60  0001 C CNN "PurchasingLink"
+	1    7150 3900
+	1    0    0    -1  
+$EndComp
+Text Notes 6850 4150 0    50   ~ 0
+Done Charging
+Text Notes 3300 1750 0    31   ~ 0
+resistor values are specific to iOS -\n to charge other devices, \nchange values accordingly
 $EndSCHEMATC
