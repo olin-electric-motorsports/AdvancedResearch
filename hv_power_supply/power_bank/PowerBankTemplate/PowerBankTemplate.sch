@@ -207,17 +207,6 @@ F 3 "" H 5950 2450 50  0001 C CNN
 	1    5950 2450
 	1    0    0    -1  
 $EndComp
-$Comp
-L power:+BATT #PWR012
-U 1 1 5F7AC017
-P 5300 1300
-F 0 "#PWR012" H 5300 1150 50  0001 C CNN
-F 1 "+BATT" H 5315 1473 50  0000 C CNN
-F 2 "" H 5300 1300 50  0001 C CNN
-F 3 "" H 5300 1300 50  0001 C CNN
-	1    5300 1300
-	1    0    0    -1  
-$EndComp
 Wire Wire Line
 	6300 1900 6150 1900
 $Comp
@@ -337,10 +326,7 @@ $EndComp
 Wire Wire Line
 	8100 1900 8300 1900
 Wire Wire Line
-	8100 2100 8200 2100
-Wire Wire Line
 	8500 2050 8500 2100
-Connection ~ 8500 2100
 $Comp
 L power:+BATT #PWR032
 U 1 1 5F7C320C
@@ -915,7 +901,7 @@ $EndComp
 Text Notes 2950 6850 0    39   Italic 0
 Vbus
 Text Notes 3750 6850 0    39   Italic 0
-+Batt
+Vbatt
 Text Notes 3650 7200 0    39   Italic 0
 Battery+
 Text Notes 4850 6850 0    39   Italic 0
@@ -2915,17 +2901,6 @@ F 3 "" H 4350 3350 50  0001 C CNN
 	1    4350 3350
 	1    0    0    -1  
 $EndComp
-$Comp
-L power:+BATT #PWR023
-U 1 1 5F7C7758
-P 5950 3450
-F 0 "#PWR023" H 5950 3300 50  0001 C CNN
-F 1 "+BATT" H 5965 3623 50  0000 C CNN
-F 2 "" H 5950 3450 50  0001 C CNN
-F 3 "" H 5950 3450 50  0001 C CNN
-	1    5950 3450
-	1    0    0    -1  
-$EndComp
 Connection ~ 5950 3600
 Wire Wire Line
 	5950 3600 5950 3450
@@ -3006,18 +2981,11 @@ $EndComp
 Connection ~ 5600 1350
 Wire Wire Line
 	5600 1350 6300 1350
-Wire Wire Line
-	8100 1600 8200 1600
-Wire Wire Line
-	8200 1600 8200 2100
-Connection ~ 8200 2100
-Wire Wire Line
-	8200 2100 8500 2100
 $Comp
-L formula:TP TP?
+L formula:TP TP5
 U 1 1 5F8580BF
 P 4000 4350
-F 0 "TP?" H 4078 4288 50  0000 L CNN
+F 0 "TP5" H 4078 4288 50  0000 L CNN
 F 1 "TP" H 4078 4197 50  0000 L CNN
 F 2 "footprints:tp_1.6mm" H 3900 4250 50  0001 C CNN
 F 3 "http://www.keyelco.com/product-pdf.cfm?p=1314" H 4000 4350 50  0001 C CNN
@@ -3030,13 +2998,11 @@ $EndComp
 Connection ~ 4000 4550
 Wire Wire Line
 	4000 4550 3800 4550
-Text Notes 6100 3650 0    50   ~ 0
-Charging
 $Comp
-L formula:LED_0805 D?
+L formula:LED_0805 D1
 U 1 1 5F862D12
 P 7150 3900
-F 0 "D?" H 6900 3850 50  0000 C CNN
+F 0 "D1" H 6900 3850 50  0000 C CNN
 F 1 "LED_0805" H 7100 3750 50  0000 C CNN
 F 2 "footprints:LED_0805_OEM" H 7050 3900 50  0001 C CNN
 F 3 "http://www.osram-os.com/Graphics/XPic9/00078860_0.pdf" H 7150 4000 50  0001 C CNN
@@ -3046,8 +3012,83 @@ F 6 "https://www.digikey.com/products/en?keywords=475-1410-1-ND" H 7550 4400 60 
 	1    7150 3900
 	1    0    0    -1  
 $EndComp
-Text Notes 6850 4150 0    50   ~ 0
-Done Charging
 Text Notes 3300 1750 0    31   ~ 0
 resistor values are specific to iOS -\n to charge other devices, \nchange values accordingly
+$Comp
+L formula:GNDPWR #PWR037
+U 1 1 5F873BE1
+P 8100 2200
+F 0 "#PWR037" H 8100 2000 50  0001 C CNN
+F 1 "GNDPWR" H 8104 2046 50  0000 C CNN
+F 2 "" H 8100 2150 50  0001 C CNN
+F 3 "" H 8100 2150 50  0001 C CNN
+	1    8100 2200
+	1    0    0    -1  
+$EndComp
+Connection ~ 8100 2200
+Text Notes 7400 2600 0    50   ~ 0
+connect gndpwr to gnd\nvia gnd at fb pin\n
+$Comp
+L formula:VBATT #PWR023
+U 1 1 5F89B24E
+P 5950 3450
+F 0 "#PWR023" H 5950 3300 50  0001 C CNN
+F 1 "VBATT" H 5965 3623 50  0000 C CNN
+F 2 "" H 5950 3450 50  0001 C CNN
+F 3 "" H 5950 3450 50  0001 C CNN
+	1    5950 3450
+	1    0    0    -1  
+$EndComp
+$Comp
+L formula:VBATT #PWR012
+U 1 1 5F8A3001
+P 5300 1300
+F 0 "#PWR012" H 5300 1150 50  0001 C CNN
+F 1 "VBATT" H 5315 1473 50  0000 C CNN
+F 2 "" H 5300 1300 50  0001 C CNN
+F 3 "" H 5300 1300 50  0001 C CNN
+	1    5300 1300
+	1    0    0    -1  
+$EndComp
+$Comp
+L formula:GNDPWR #PWR0101
+U 1 1 5F8CC586
+P 8200 1550
+F 0 "#PWR0101" H 8200 1350 50  0001 C CNN
+F 1 "GNDPWR" H 8204 1396 50  0000 C CNN
+F 2 "" H 8200 1500 50  0001 C CNN
+F 3 "" H 8200 1500 50  0001 C CNN
+	1    8200 1550
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	8100 1600 8150 1600
+Wire Wire Line
+	8150 1600 8150 1550
+Wire Wire Line
+	8150 1550 8200 1550
+$Comp
+L formula:GNDPWR #PWR?
+U 1 1 5F8EA6AD
+P 7700 2700
+F 0 "#PWR?" H 7700 2500 50  0001 C CNN
+F 1 "GNDPWR" H 7704 2546 50  0000 C CNN
+F 2 "" H 7700 2650 50  0001 C CNN
+F 3 "" H 7700 2650 50  0001 C CNN
+	1    7700 2700
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR?
+U 1 1 5F8EAEBF
+P 8000 2700
+F 0 "#PWR?" H 8000 2450 50  0001 C CNN
+F 1 "GND" H 8005 2527 50  0000 C CNN
+F 2 "" H 8000 2700 50  0001 C CNN
+F 3 "" H 8000 2700 50  0001 C CNN
+	1    8000 2700
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	7700 2700 8000 2700
 $EndSCHEMATC
