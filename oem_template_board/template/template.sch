@@ -311,26 +311,10 @@ F 3 "" H 3350 9900 50  0001 C CNN
 $EndComp
 Text Notes 3450 9850 0    50   ~ 0
 Feedback Divider\n
-Text Notes 4250 9100 0    50   ~ 0
-Inductor\n
 Text Notes 3600 8600 0    50   ~ 0
 Bootstrap Capacitor\n
 Text Notes 4900 8650 0    50   ~ 0
 Output Capacitors\n
-$Comp
-L template-rescue:L_100uH-formula #PWR0109
-U 1 1 5C781579
-P 4800 9200
-F 0 "#PWR0109" H 4800 8950 50  0001 C CNN
-F 1 "GND" H 4805 9027 50  0000 C CNN
-F 2 "" H 4800 9200 50  0001 C CNN
-F 3 "" H 4800 9200 50  0001 C CNN
-F 4 "Digikey" H 4900 9000 50  0001 C CNN "MFN"
-F 5 "445-15759-1-ND" H 4800 9450 50  0001 C CNN "MPN"
-F 6 "https://www.digikey.com/product-detail/en/tdk-corporation/NLFV32T-101K-EF/445-15759-1-ND/4328055" H 5100 9400 50  0001 C CNN "Link"
-	1    4800 9200
-	1    0    0    -1  
-$EndComp
 $Comp
 L power:GND #PWR0110
 U 1 1 5C7815F8
@@ -370,8 +354,6 @@ Text Notes 6650 8700 0    50   ~ 0
 5V
 Text Notes 6400 10000 1    50   ~ 0
 5V Indicator
-Text Notes 10600 7650 0    50   ~ 0
-2
 $Comp
 L template-rescue:ATMEGA16M1-formula U2
 U 1 1 5D58A7A6
@@ -1009,4 +991,42 @@ Wire Wire Line
 Wire Wire Line
 	1700 8800 2100 8800
 Connection ~ 1700 8800
+Text Notes 4250 8750 0    50   ~ 0
+Inductor\n
+$Comp
+L power:GND #PWR?
+U 1 1 5F87F709
+P 4800 9200
+F 0 "#PWR?" H 4800 8950 50  0001 C CNN
+F 1 "GND" H 4805 9027 50  0000 C CNN
+F 2 "" H 4800 9200 50  0001 C CNN
+F 3 "" H 4800 9200 50  0001 C CNN
+	1    4800 9200
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR?
+U 1 1 5F87F995
+P 5600 9200
+F 0 "#PWR?" H 5600 8950 50  0001 C CNN
+F 1 "GND" H 5605 9027 50  0000 C CNN
+F 2 "" H 5600 9200 50  0001 C CNN
+F 3 "" H 5600 9200 50  0001 C CNN
+	1    5600 9200
+	1    0    0    -1  
+$EndComp
+$Comp
+L template-rescue:L_100uH-formula L101
+U 1 1 5F881F17
+P 4400 8900
+F 0 "L101" H 4400 9000 50  0000 C CNN
+F 1 "L_100uH" H 4400 8850 50  0000 C CNN
+F 2 "formula:L_100uH" H 4300 8700 50  0001 C CNN
+F 3 "https://product.tdk.com/info/en/catalog/datasheets/inductor_commercial_decoupling_nlfv32-ef_en.pdf" H 4300 8750 50  0001 C CNN
+F 4 "Digikey" H 4500 8700 50  0001 C CNN "MFN"
+F 5 "445-15759-1-ND" H 4400 9150 50  0001 C CNN "MPN"
+F 6 "https://www.digikey.com/product-detail/en/tdk-corporation/NLFV32T-101K-EF/445-15759-1-ND/4328055" H 4700 9100 50  0001 C CNN "Link"
+	1    4400 8900
+	1    0    0    -1  
+$EndComp
 $EndSCHEMATC
