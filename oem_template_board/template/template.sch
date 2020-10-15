@@ -174,15 +174,15 @@ $EndComp
 $Comp
 L template-rescue:F_500mA_16V-formula F101
 U 1 1 5C0BFA29
-P 1300 8800
-F 0 "F101" V 1380 8800 50  0000 C CNN
-F 1 "F_500mA_16V" V 1200 8820 50  0000 C CNN
-F 2 "footprints:Fuse_1210" V 1230 8800 50  0001 C CNN
-F 3 "https://belfuse.com/resources/CircuitProtection/datasheets/0ZCH%20Nov2016.pdf" V 1380 8800 50  0001 C CNN
-F 4 "DK" H 1300 8800 60  0001 C CNN "MFN"
-F 5 "507-1786-1-ND" H 1300 8800 60  0001 C CNN "MPN"
-F 6 "https://www.digikey.com/product-detail/en/bel-fuse-inc/0ZCH0050FF2G/507-1786-1-ND/4156209" V 1780 9200 60  0001 C CNN "PurchasingLink"
-	1    1300 8800
+P 1050 8800
+F 0 "F101" V 1130 8800 50  0000 C CNN
+F 1 "F_500mA_16V" V 950 8820 50  0000 C CNN
+F 2 "footprints:Fuse_1210" V 980 8800 50  0001 C CNN
+F 3 "https://belfuse.com/resources/CircuitProtection/datasheets/0ZCH%20Nov2016.pdf" V 1130 8800 50  0001 C CNN
+F 4 "DK" H 1050 8800 60  0001 C CNN "MFN"
+F 5 "507-1786-1-ND" H 1050 8800 60  0001 C CNN "MPN"
+F 6 "https://www.digikey.com/product-detail/en/bel-fuse-inc/0ZCH0050FF2G/507-1786-1-ND/4156209" V 1530 9200 60  0001 C CNN "PurchasingLink"
+	1    1050 8800
 	0    1    1    0   
 $EndComp
 $Comp
@@ -241,29 +241,29 @@ $EndComp
 $Comp
 L template-rescue:D_Zener_18V-formula D101
 U 1 1 5C623D49
-P 950 9100
-F 0 "D101" H 940 9290 50  0000 C CNN
-F 1 "D_Zener_18V" H 930 9200 50  0000 C CNN
-F 2 "footprints:DO-214AA" H 850 9100 50  0001 C CNN
-F 3 "http://www.mccsemi.com/up_pdf/SMBJ5338B-SMBJ5388B(SMB).pdf" H 950 9200 50  0001 C CNN
-F 4 "DK" H 1150 9400 60  0001 C CNN "MFN"
-F 5 "SMBJ5355B-TPMSCT-ND" H 1050 9300 60  0001 C CNN "MPN"
-F 6 "https://www.digikey.com/products/en?keywords=SMBJ5355B-TPMSCT-ND" H 1350 9600 60  0001 C CNN "PurchasingLink"
-	1    950  9100
+P 1300 9100
+F 0 "D101" H 1290 9290 50  0000 C CNN
+F 1 "D_Zener_18V" H 1280 9200 50  0000 C CNN
+F 2 "footprints:DO-214AA" H 1200 9100 50  0001 C CNN
+F 3 "http://www.mccsemi.com/up_pdf/SMBJ5338B-SMBJ5388B(SMB).pdf" H 1300 9200 50  0001 C CNN
+F 4 "DK" H 1500 9400 60  0001 C CNN "MFN"
+F 5 "SMBJ5355B-TPMSCT-ND" H 1400 9300 60  0001 C CNN "MPN"
+F 6 "https://www.digikey.com/products/en?keywords=SMBJ5355B-TPMSCT-ND" H 1700 9600 60  0001 C CNN "PurchasingLink"
+	1    1300 9100
 	0    1    1    0   
 $EndComp
 $Comp
 L power:GND #PWR0101
 U 1 1 5C62BB38
-P 950 9350
-F 0 "#PWR0101" H 950 9100 50  0001 C CNN
-F 1 "GND" H 955 9177 50  0000 C CNN
-F 2 "" H 950 9350 50  0001 C CNN
-F 3 "" H 950 9350 50  0001 C CNN
-	1    950  9350
+P 1300 9350
+F 0 "#PWR0101" H 1300 9100 50  0001 C CNN
+F 1 "GND" H 1305 9177 50  0000 C CNN
+F 2 "" H 1300 9350 50  0001 C CNN
+F 3 "" H 1300 9350 50  0001 C CNN
+	1    1300 9350
 	1    0    0    -1  
 $EndComp
-Text Label 950  8500 0    50   ~ 0
+Text Label 800  8500 0    50   ~ 0
 12V
 $Comp
 L template-rescue:LED_0805-formula D102
@@ -294,7 +294,7 @@ Text Notes 1950 8700 0    50   ~ 0
 Input Capacitors\n\n
 Text Notes 1600 9700 1    50   ~ 0
 12V Indicator
-Text Notes 850  9350 1    50   ~ 0
+Text Notes 1200 9350 1    50   ~ 0
 Protection\n
 Text Notes 2600 8450 0    89   ~ 0
 BUCK CONVERTER\n
@@ -324,17 +324,6 @@ F 1 "GND" H 5205 9027 50  0000 C CNN
 F 2 "" H 5200 9200 50  0001 C CNN
 F 3 "" H 5200 9200 50  0001 C CNN
 	1    5200 9200
-	1    0    0    -1  
-$EndComp
-$Comp
-L power:GND #PWR0111
-U 1 1 5C781DA3
-P 1600 9400
-F 0 "#PWR0111" H 1600 9150 50  0001 C CNN
-F 1 "GND" H 1605 9227 50  0000 C CNN
-F 2 "" H 1600 9400 50  0001 C CNN
-F 3 "" H 1600 9400 50  0001 C CNN
-	1    1600 9400
 	1    0    0    -1  
 $EndComp
 Text Notes 5950 8800 0    50   ~ 0
@@ -931,10 +920,7 @@ Wire Wire Line
 Wire Wire Line
 	6550 9300 6550 9600
 Wire Wire Line
-	950  9250 950  9350
-Wire Wire Line
-	950  8800 1150 8800
-Connection ~ 950  8800
+	1300 9250 1300 9350
 Connection ~ 2100 8800
 Wire Wire Line
 	2100 8800 2400 8800
@@ -955,9 +941,7 @@ Wire Wire Line
 Wire Wire Line
 	15300 2150 15400 2150
 Wire Wire Line
-	950  8800 950  8950
-Wire Wire Line
-	950  8500 950  8800
+	800  8500 800  8800
 $Comp
 L template-rescue:TPS560430YF-formula U101
 U 1 1 5C75D405
@@ -986,8 +970,6 @@ F 6 "https://www.digikey.com/products/en?keywords=RNCP0805FTD1K00CT-ND" H 2180 9
 	1    1700 8950
 	1    0    0    -1  
 $EndComp
-Wire Wire Line
-	1450 8800 1700 8800
 Wire Wire Line
 	1700 8800 2100 8800
 Connection ~ 1700 8800
@@ -1029,4 +1011,13 @@ F 6 "https://www.digikey.com/product-detail/en/tdk-corporation/NLFV32T-101K-EF/4
 	1    4400 8900
 	1    0    0    -1  
 $EndComp
+Wire Wire Line
+	800  8800 900  8800
+Wire Wire Line
+	1200 8800 1300 8800
+Wire Wire Line
+	1300 8950 1300 8800
+Connection ~ 1300 8800
+Wire Wire Line
+	1300 8800 1700 8800
 $EndSCHEMATC
