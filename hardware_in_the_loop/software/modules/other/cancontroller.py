@@ -37,16 +37,15 @@ class CANController:
             pass
         raise Exception("Not implemented!")
 
-    def update_ecu(self, ecu: str, values: dict):
+    def update_ecu(self, message):
         """Update an ECUs states
 
         Args:
             ecu (str): The name of the ECU
             values (dict): A dictionary of (signal: value) pairs to be updated
         """
-        values = {}
-        self.ecus[ECU].update(values)
-        raise Exception("Not Implemented!")
+        ecu, values = self._translate(message)
+        self.ecus[ecu].update(values)
 
 
     def _translate(self, message):
@@ -78,7 +77,7 @@ class CANController:
         
         while True:
             msg = can_bus.recv()  # No timeout
-            callback() # TODO
+            callback(message)
 
 
 
