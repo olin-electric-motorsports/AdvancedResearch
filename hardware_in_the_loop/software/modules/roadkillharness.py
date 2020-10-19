@@ -1,6 +1,6 @@
 from modules.ecu import ECU
-from modules.other.iocontroller import IOController
-from modules.other.cancontroller import CANController
+from modules.iocontroller import IOController
+from modules.cancontroller import CANController
 
 class RoadkillHarness:
     """Class to represent the entire tester
@@ -12,7 +12,7 @@ class RoadkillHarness:
         ecus = {}
 
         self.throttle = ECU(name="THROTTLE")
-        ecus[THROTTLE] = self.throttle
+        ecus["THROTTLE"] = self.throttle
 
         # Add more ECUs here
 
