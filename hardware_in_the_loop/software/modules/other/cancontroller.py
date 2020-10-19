@@ -10,21 +10,29 @@ class CANController:
 
     https://docs.olinelectricmotorsports.com/display/AE/CAN+Controller
     """
-    def __init__(self, ecus: dict, can_spec_path: str):
+    def __init__(self, ecus: dict, can_spec_path: str, real_can: bool=True):
         """
         Args:
-            ecus: dict of (str: ECU) pairs
+            ecus (dict): dict of (str: ECU) pairs
+            can_spec_path (str): path to the can spec file
+            real_can (bool): Whether to use real CAN hardware, or to simulate a bus (for testing)
         """
-        os.system("sudo ip link set can0 up type can bitrate 500000 restart-ms 100")  # bring can hardware online
+        # bring can hardware online
+        if real_can:
+            os.system("sudo ip link set can0 up type can bitrate 500000 restart-ms 100")  # real hardware
+        else:
+            os.system("sudo ip link add dev vcan0 type vcan")
+            os.system("sudo ip link set vcan0 up")  # virtual hardware
 
         self.ecus = ecus
         self.read_dict = {}  # Dictionary to help translate raw can to useful signals
         self.get_states(can_spec_path)
 
         # start listening
-        bus_name = "can0"  # set by `ip link set can0 up` from shell, see socketcan setup docs
-        can_bus = can.interface.Bus(bus_name, bus_type='socketcan')
-        listener = threading.Thread(target=listen, name="listener", kwargs={"can_bus": can_bus, "callback": update_ecu})
+        bus_name = "can0"  # set above, see socketcan setup docs
+        bus_type = "socketcan" if real_can else "virtual"
+        can_bus = can.interface.Bus(bus_name, bus_type=bus_type)
+        listener = threading.Thread(target=listen, name="listener", kwargs={"can_bus": can_bus, "callback": self.update_ecu})
         listener.start()
 
     def get_states(self, path: str):
@@ -41,8 +49,13 @@ class CANController:
         """Update an ECUs states
 
         Args:
-            ecu (str): The name of the ECU
-            values (dict): A dictionary of (signal: value) pairs to be updated
+            message: can.Message object. Notable attributes include
+                - timestamp
+                - arbitration_id
+                - data
+                - see https://python-can.readthedocs.io/en/master/message.html#can.Message
+
+        TODO assumes all can signals have a single sender, which isn't true (CAN_PANIC)
         """
         ecu, values = self._translate(message)
         self.ecus[ecu].update(values)
@@ -76,7 +89,7 @@ class CANController:
         callback = kwargs["callback"]
         
         while True:
-            msg = can_bus.recv()  # No timeout
+            msg = can_bus.recv()  # No timeout (wait indefinitely)
             callback(message)
 
 
