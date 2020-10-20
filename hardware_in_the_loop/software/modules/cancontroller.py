@@ -2,6 +2,7 @@ import threading
 import can
 import time
 import os
+from typing import Callable
 
 class CANController:
     """High level python object to interface with hardware.
@@ -41,9 +42,23 @@ class CANController:
         Args:
             path (str): Path the the CAN spec file
         """
-        with open(path, 'r') as f:
-            pass
-        raise Exception("Not implemented!")
+        throttle_states = {
+            "THROTTLE_255": 0,
+        }
+        self.throttle.update(throttle_states)
+
+        self.read_dict = {
+            0x00C: {
+                "THROTTLE_255": {
+                    "start_index": 0,
+                    "end_index": 8,
+                }
+            }
+        }
+
+        # with open(path, 'r') as f:
+            # pass
+        # raise Exception("Not implemented!")
 
     def update_ecu(self, message):
         """Update an ECUs states
@@ -75,18 +90,38 @@ class CANController:
             (str, dict): The ECU name as a str, and a dict of values to update
 
         """
-        raise Exception("Not Implemented!")
+        states = self.read_dict[message.arbitration_id]
+        data = self.to_bits(message.data)
+        values = {}
+
+        for state in states:
+            temp = int(data[state["start_index"]:state["end_index"]], 2)  # convert bits to int
+            # TODO do some more stuff here to handle enums and non-int values
+            values[state] = temp
+
+    def to_bits(self, data: bytearray)
+        """Convert a bytearray to a bit string
+
+        Args:
+            bytes: a bytearray
+
+        Returns:
+            str: some bits
+        """
+        out = ""
+        for byte in data:
+            out += bin(byte)
 
 
-    def listener(**kwargs):
+    def listen(can_bus: can.Bus, callback: Callable):
         """Thread that runs all the time to listen to CAN messages
         
         References:
           - https://python-can.readthedocs.io/en/master/interfaces/socketcan.html
           - https://python-can.readthedocs.io/en/master/
         """
-        can_bus = kwargs["can_bus"]
-        callback = kwargs["callback"]
+        # can_bus = kwargs.get("can_bus")
+        # callback = kwargs.get("callback")
         
         while True:
             msg = can_bus.recv()  # No timeout (wait indefinitely)
