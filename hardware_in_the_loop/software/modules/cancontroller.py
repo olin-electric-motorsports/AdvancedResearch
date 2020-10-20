@@ -2,7 +2,7 @@ import threading
 import can
 import time
 import os
-from typing import Callable
+from typing import Callable, Tuple
 
 class CANController:
     """High level python object to interface with hardware.
@@ -36,7 +36,7 @@ class CANController:
         listener = threading.Thread(target=listen, name="listener", kwargs={"can_bus": can_bus, "callback": self.update_ecu})
         listener.start()
 
-    def get_states(self, path: str):
+    def get_states(self, path: str) -> None:
         """Populate each ECUs `states` dictionary, and self.read_dict
 
         Args:
@@ -60,7 +60,7 @@ class CANController:
             # pass
         # raise Exception("Not implemented!")
 
-    def update_ecu(self, message):
+    def update_ecu(self, message) -> None:
         """Update an ECUs states
 
         Args:
@@ -76,7 +76,7 @@ class CANController:
         self.ecus[ecu].update(values)
 
 
-    def _translate(self, message):
+    def _translate(self, message) -> Tuple[str, dict]:
         """Given a raw can message, generate a dictionary of values to update
 
         Args:
@@ -99,7 +99,7 @@ class CANController:
             # TODO do some more stuff here to handle enums and non-int values
             values[state] = temp
 
-    def to_bits(self, data: bytearray)
+    def to_bits(self, data: bytearray) -> str:
         """Convert a bytearray to a bit string
 
         Args:
@@ -113,7 +113,7 @@ class CANController:
             out += bin(byte)
 
 
-    def listen(can_bus: can.Bus, callback: Callable):
+    def listen(can_bus: can.Bus, callback: Callable) -> None:
         """Thread that runs all the time to listen to CAN messages
         
         References:

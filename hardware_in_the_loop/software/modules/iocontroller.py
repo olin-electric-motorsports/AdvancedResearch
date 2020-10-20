@@ -8,7 +8,7 @@ class IOController:
     def __init__(self, pin_info_path: str):
         self.pin_info = self.read_pin_info(pin_info_path)
 
-    def set_io(self, pin: str, value):
+    def set_io(self, pin: str, value) -> None:
         """Set the value of an IO pin in the HitL system
         
         Args:
@@ -20,7 +20,7 @@ class IOController:
         request = ""  # TODO define the format of this request
         self._send_request(request)
 
-    def read_pin_info(self, path: str):
+    def read_pin_info(self, path: str) -> None:
         """Read in the pin address information, given a path to a .csv file
 
         Args:
@@ -33,7 +33,7 @@ class IOController:
         raise Exception("Not implemented!")
 
 
-    def _send_request(self, request: bytes):
+    def _send_request(self, request: bytes) -> None:
         """Send a request over serial to set a pin's value
 
         Args:

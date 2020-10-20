@@ -8,7 +8,7 @@ class ECU:
         self.name = name  # ALL_CAPS
         self.states = {}  # This is populated by the CANController
 
-    def update(self, signals: dict):
+    def update(self, signals: dict) -> None:
         """Set the state of a simulated board
 
         For now, we are not simulating ECUs, so this is only ever called
@@ -16,10 +16,5 @@ class ECU:
 
         Args:
             signals (dict): a dictionary of singal-value pairs.
-
-        Returns:
-            None
-
-        Note: 
         """
         self.states.update(signals)
