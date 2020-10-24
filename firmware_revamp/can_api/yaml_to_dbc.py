@@ -85,7 +85,7 @@ def dbcSignalGenerator(signals_dict, dbc_file):
             UNIT = UNIT_DEFAULT
 
         # Generate DBC signal
-        DBC_signal = ' SG_ {}: {}|{}{}+ ({}, {}) [{}|{}] "{}" {}\n'.format(SIGNAL_NAME, BIT_START, SIG_LEN, ENDIAN, SCALE, OFFSET, MIN, MAX, UNIT, NODE_NAME)
+        DBC_signal = ' SG_ {}: {}|{}{}+ ({},{}) [{}|{}] "{}" {}\n'.format(SIGNAL_NAME, BIT_START, SIG_LEN, ENDIAN, SCALE, OFFSET, MIN, MAX, UNIT, NODE_NAME)
 
         # Increment global variable "BIT_START" by the length of this message. Do this after we generate the DBC signal.
         BIT_START += int(SIG_LEN)
