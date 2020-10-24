@@ -1,0 +1,23 @@
+name: example
+
+on:
+  pull_request:
+    paths:
+      - "**.sch"
+      - "**.kicad_pcb"
+
+jobs:
+  example:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - uses: nerdyscout/kicad-exports@v2.1
+        with:
+          config: docs.kibot.yaml
+          dir: artifacts
+
+      - name: upload results
+        uses: actions/upload-artifact@v2
+        with:
+          name: artifacts
+          path: artifacts
