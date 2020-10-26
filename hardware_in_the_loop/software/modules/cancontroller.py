@@ -4,6 +4,7 @@ import time
 import os
 from typing import Callable, Tuple
 
+
 class CANController:
     """High level python object to interface with hardware.
 
@@ -11,7 +12,8 @@ class CANController:
 
     https://docs.olinelectricmotorsports.com/display/AE/CAN+Controller
     """
-    def __init__(self, ecus: dict, can_spec_path: str, real_can: bool=True):
+
+    def __init__(self, ecus: dict, can_spec_path: str, real_can: bool = True):
         """
         Args:
             ecus (dict): dict of (str: ECU) pairs
@@ -33,7 +35,12 @@ class CANController:
         bus_name = "can0"  # set above, see socketcan setup docs
         bus_type = "socketcan" if real_can else "virtual"
         can_bus = can.interface.Bus(bus_name, bus_type=bus_type)
-        listener = threading.Thread(target=listen, name="listener", kwargs={"can_bus": can_bus, "callback": self.update_ecu})
+
+        global kill_threads  # Global flag we can set to kill threads on teardown
+        kill_threads = False
+        listener = threading.Thread(
+            target=self.listen, name="listener", kwargs={"can_bus": can_bus, "callback": self.update_ecu}
+        )
         listener.start()
 
     def get_states(self, path: str) -> None:
@@ -57,7 +64,7 @@ class CANController:
         }
 
         # with open(path, 'r') as f:
-            # pass
+        # pass
         # raise Exception("Not implemented!")
 
     def update_ecu(self, message) -> None:
@@ -74,7 +81,6 @@ class CANController:
         """
         ecu, values = self._translate(message)
         self.ecus[ecu].update(values)
-
 
     def _translate(self, message) -> Tuple[str, dict]:
         """Given a raw can message, generate a dictionary of values to update
@@ -95,7 +101,7 @@ class CANController:
         values = {}
 
         for state in states:
-            temp = int(data[state["start_index"]:state["end_index"]], 2)  # convert bits to int
+            temp = int(data[state["start_index"] : state["end_index"]], 2)  # convert bits to int
             # TODO do some more stuff here to handle enums and non-int values
             values[state] = temp
 
@@ -112,22 +118,20 @@ class CANController:
         for byte in data:
             out += bin(byte)
 
+    def __del__(self):
+        """Destructor (called when the program ends)
+
+        End the listener thread for clean teardown
+        """
+        kill_threads = True
 
     def listen(can_bus: can.Bus, callback: Callable) -> None:
         """Thread that runs all the time to listen to CAN messages
-        
+
         References:
           - https://python-can.readthedocs.io/en/master/interfaces/socketcan.html
           - https://python-can.readthedocs.io/en/master/
         """
-        # can_bus = kwargs.get("can_bus")
-        # callback = kwargs.get("callback")
-        
-        while True:
+        while not kill_threads:
             msg = can_bus.recv()  # No timeout (wait indefinitely)
             callback(message)
-
-
-
-
-        

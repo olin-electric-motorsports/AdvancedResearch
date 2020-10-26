@@ -1,7 +1,9 @@
 import os
 
 # Quick alias to run shell commands
-def bash(s: str): os.system(s)
+def bash(s: str):
+    os.system(s)
+
 
 # Add project to PYTHONPATH
 this_file_path = os.path.abspath(__file__)
@@ -17,5 +19,4 @@ bash(f"pip install -r {project_file_path}/requirements.txt")
 bash("sudo modprobe vcan")  # for testing
 bash("sudo modprobe peak_usb")
 # bash("sudo modprobe peak_pci") not sure if necessary
-# bash("sudo modprobe can_raw") not sure if necessary 
-
+# bash("sudo modprobe can_raw") not sure if necessary
