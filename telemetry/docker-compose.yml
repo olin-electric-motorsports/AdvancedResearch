@@ -1,0 +1,39 @@
+# docker compose for redis and grafana 
+# to add to redis image: 
+  # git integration + auto repo pull   
+  # usb port support within redis container
+
+version: '3.4'
+
+services:
+  redis:
+    container_name: redistimeseries
+    image: redislabs/redistimeseries:latest
+    ports:
+      - '6379:6379'
+    # Uncomment and edit the local path in the following line to have
+    # RedisTimeSeries' data persisted to the host's filesystem.
+    # volumes:
+    #   - ./dump.rdb:/data/dump.rdb
+
+    
+
+  grafana:
+    container_name: grafana
+    image: grafana/grafana:latest
+    ports:
+      - '3001:3000'
+    depends_on: 
+      - redis
+    links: 
+      - "redis:redis_host" 
+    environment:
+      - GF_AUTH_ANONYMOUS_ORG_ROLE=Admin
+      - GF_AUTH_ANONYMOUS_ENABLED=true
+      - GF_AUTH_BASIC_ENABLED=false
+      - GF_ENABLE_GZIP=true
+      - GF_INSTALL_PLUGINS=redis-datasource
+    volumes:
+      - ./provisioning/datasources:/etc/grafana/provisioning/datasources
+      # Uncomment to preserve Grafana configuration
+      # - ./data:/var/lib/grafana
