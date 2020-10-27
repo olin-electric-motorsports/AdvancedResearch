@@ -2,11 +2,11 @@
 
 
 ## todo
-- Complete rts data source 
-- Setup grafana platform
 - add in config file / udev for hardcoded values
 - add in timeit python for code benchmarking 
 - add in pytest to run automatic code tests
+- docker integration 
+- setup RDB and grafana config files
 
 
 ## [Work in Progress] installation instructions
