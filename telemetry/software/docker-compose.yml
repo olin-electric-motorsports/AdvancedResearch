@@ -1,27 +1,28 @@
-# docker compose for redis and grafana 
-# to add to redis image: 
-  # git integration + auto repo pull   
-  # usb port support within redis container
-
+# Container ecosystem for telemetry data pipeline
 version: '3.4'
 
 services:
-  redis:
-    container_name: redistimeseries
-    # image: redislabs/redistimeseries:latest # setting prebuilt image
-    build: 
+  telemetry:
+    container_name: telemetry
+    build:
       context: .
-      dockerfile: redis_ts.dockerfile
+    volumes:
+      - .:/src
+    depends_on:
+      - redis
+    links:
+      - redis:redis_host
+
+  redis:
+    image: redislabs/redistimeseries:latest
     ports:
       - '6379:6379'
     devices:
-      - "/dev/ttyUSB0:/dev/ttyUSB0"
+      - "/dev/ttyACM0:/dev/ttyUSB0"
     # Uncomment and edit the local path in the following line to have
     # RedisTimeSeries' data persisted to the host's filesystem.
     volumes:
-      - ./dump.rdb:/data/dump.rdb
-
-    
+      - ./data/dump.rdb:/data/dump.rdb
 
   grafana:
     container_name: grafana
@@ -40,5 +41,4 @@ services:
       - GF_INSTALL_PLUGINS=redis-datasource
     volumes:
       - ./provisioning/datasources:/etc/grafana/provisioning/datasources
-      # Uncomment to preserve Grafana configuration
-      # - ./data:/var/lib/grafana
+      - ./data/grafana:/var/lib/grafana
