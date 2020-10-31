@@ -10,6 +10,10 @@ services:
       - .:/src
     depends_on:
       - redis
+    # pass in both likely USB ports
+    devices:
+      - "/dev/ttyUSB0:/dev/ttyUSB0" # need to handle just mapped USB ports
+      # - "/dev/ttyACM0:/dev/ttyACM0"
     links:
       - redis:redis_host
 
@@ -17,15 +21,15 @@ services:
     image: redislabs/redistimeseries:latest
     ports:
       - '6379:6379'
-    devices:
-      - "/dev/ttyACM0:/dev/ttyUSB0"
+    # devices:
+    #   - "/dev/ttyACM0:/dev/ttyUSB0"
     # Uncomment and edit the local path in the following line to have
     # RedisTimeSeries' data persisted to the host's filesystem.
     volumes:
       - ./data/dump.rdb:/data/dump.rdb
 
   grafana:
-    container_name: grafana
+    container_name: grafana_host
     image: grafana/grafana:latest
     ports:
       - '3001:3000'
@@ -42,3 +46,4 @@ services:
     volumes:
       - ./provisioning/datasources:/etc/grafana/provisioning/datasources
       - ./data/grafana:/var/lib/grafana
+      

@@ -8,6 +8,6 @@ setup(
     author="Aditya Ramachandran",
     author_email="aramachandran@olin.edu",
     packages=find_packages(),
-    install_requires=["redistimeseries==1.4.3", "pyserial==3.4"],
+    install_requires=["redis==3.5.3", "redistimeseries==1.4.3", "pyserial==3.4"],
     extras_require={"test": ["pytest==5.3.0"]},
 )

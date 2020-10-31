@@ -5,6 +5,7 @@ timeseries database in realtime
 
 import serial
 import time
+from redis import Redis
 from redistimeseries.client import Client
 
 
@@ -91,8 +92,11 @@ class DataSender(object):
         self.read_frequency_hz = read_frequency_hz
         self.data_channels = self.data_stream_object.return_data_channels()
 
-        # initialize redis client connection
-        self.rts = Client()
+        # initialize redis connection
+        redis_instance = Redis(host="redis_host", port="6379")
+
+        # initialize redis timeseries client connection
+        self.rts = Client(conn=redis_instance)
         for data_channel in self.data_channels:
             self.rts.create(data_channel)
 
