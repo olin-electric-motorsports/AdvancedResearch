@@ -1020,4 +1020,349 @@ Wire Wire Line
 Connection ~ 1300 8800
 Wire Wire Line
 	1300 8800 1700 8800
+$Comp
+L 74xx:74HCT4051 U?
+U 1 1 5F9F379D
+P 5950 1500
+F 0 "U?" H 6000 2181 50  0000 C CNN
+F 1 "74HCT4051" H 6000 2090 50  0000 C CNN
+F 2 "" H 5950 1100 50  0001 C CNN
+F 3 "http://www.ti.com/lit/ds/symlink/cd74hct4051.pdf" H 5950 1100 50  0001 C CNN
+	1    5950 1500
+	1    0    0    -1  
+$EndComp
+$Comp
+L 74xx:74HCT4051 U?
+U 1 1 5F9FF25D
+P 6000 2700
+F 0 "U?" H 6050 3381 50  0000 C CNN
+F 1 "74HCT4051" H 6050 3290 50  0000 C CNN
+F 2 "" H 6000 2300 50  0001 C CNN
+F 3 "http://www.ti.com/lit/ds/symlink/cd74hct4051.pdf" H 6000 2300 50  0001 C CNN
+	1    6000 2700
+	1    0    0    -1  
+$EndComp
+$Comp
+L formula:Ampseal_23_VT J?
+U 1 1 5FA3FEE8
+P 1250 6400
+F 0 "J?" H 1208 7747 60  0000 C CNN
+F 1 "Ampseal_23_VT" H 1208 7641 60  0000 C CNN
+F 2 "footprints:Ampseal_23" H 1050 7150 60  0001 C CNN
+F 3 "http://www.te.com/commerce/DocumentDelivery/DDEController?Action=showdoc&DocId=Customer+Drawing%7F776228%7FC13%7Fpdf%7FEnglish%7FENG_CD_776228_C13.pdf%7F776228-1" H 1050 7150 60  0001 C CNN
+F 4 "TE" H 1100 7700 60  0001 C CNN "MFN"
+F 5 "776228-1" H 1200 7800 60  0001 C CNN "MPN"
+F 6 "http://www.te.com/usa-en/product-776228-1.html" H 1300 7900 60  0001 C CNN "PurchasingLink"
+	1    1250 6400
+	1    0    0    -1  
+$EndComp
+$Comp
+L formula:NanoFit_RA_TH_06 J?
+U 1 1 5FA41601
+P 15250 5750
+F 0 "J?" H 15308 6225 50  0000 C CNN
+F 1 "NanoFit_RA_TH_06" H 15308 6134 50  0000 C CNN
+F 2 "footprints:NanoFit_RA_6" H 15250 5400 50  0001 C CNN
+F 3 "" H 15250 6100 50  0001 C CNN
+	1    15250 5750
+	1    0    0    -1  
+$EndComp
+Text Label 15450 5600 0    50   ~ 0
+MISO
+Text Label 15450 5700 0    50   ~ 0
+MOSI
+Text Label 15450 5800 0    50   ~ 0
+SCK
+Text Label 15450 5900 0    50   ~ 0
+SS
+$Comp
+L power:GND #PWR?
+U 1 1 5FA51D44
+P 15750 5500
+F 0 "#PWR?" H 15750 5250 50  0001 C CNN
+F 1 "GND" H 15755 5327 50  0000 C CNN
+F 2 "" H 15750 5500 50  0001 C CNN
+F 3 "" H 15750 5500 50  0001 C CNN
+	1    15750 5500
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR?
+U 1 1 5FA52B19
+P 15750 6000
+F 0 "#PWR?" H 15750 5750 50  0001 C CNN
+F 1 "GND" H 15755 5827 50  0000 C CNN
+F 2 "" H 15750 6000 50  0001 C CNN
+F 3 "" H 15750 6000 50  0001 C CNN
+	1    15750 6000
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	15450 5500 15750 5500
+Wire Wire Line
+	15750 6000 15450 6000
+Text Label 1450 5300 0    50   ~ 0
+HALL_EFFECT_+
+Text Label 1450 5400 0    50   ~ 0
+12V
+Text Label 1450 5500 0    50   ~ 0
+GND
+Text Label 1450 5600 0    50   ~ 0
+CAN_P
+Text Label 1450 5700 0    50   ~ 0
+CAN_N
+Text Label 1450 5800 0    50   ~ 0
+12V
+Text Label 1450 5900 0    50   ~ 0
+GND
+Text Label 1450 6000 0    50   ~ 0
+LINEAR_POT_+
+Text Label 1450 6100 0    50   ~ 0
+HALL_EFFECT_SENSE
+Text Label 1450 6200 0    50   ~ 0
+CAN_P
+Text Label 1450 6300 0    50   ~ 0
+CAN_N
+Text Label 1450 6400 0    50   ~ 0
+GND
+Text Notes 1650 6400 0    50   ~ 0
+(CAN CABLE SHIELD)
+Text Label 1450 6500 0    50   ~ 0
+CAN_P
+Text Label 1450 6600 0    50   ~ 0
+CAN_N
+Text Label 1450 6700 0    50   ~ 0
+12V
+Text Label 1450 6800 0    50   ~ 0
+GND
+Text Label 1450 6900 0    50   ~ 0
+12V
+Text Label 1450 7000 0    50   ~ 0
+GND
+Text Label 1450 7100 0    50   ~ 0
+CAN_P
+Text Label 1450 7200 0    50   ~ 0
+CAN_N
+Text Label 1450 7300 0    50   ~ 0
+12V
+Text Label 1450 7400 0    50   ~ 0
+GND
+Text Label 1450 7500 0    50   ~ 0
+LINEAR_POT_-
+$Comp
+L formula:MicroFit_V_2 J?
+U 1 1 5FA6FBFE
+P 4450 5700
+F 0 "J?" H 4508 5975 50  0000 C CNN
+F 1 "MicroFit_V_2" H 4508 5884 50  0000 C CNN
+F 2 "footprints:MicroFit_V_2" H 4400 5900 50  0001 C CNN
+F 3 "https://www.molex.com/pdm_docs/sd/430450225_sd.pdf" H 4400 5900 50  0001 C CNN
+F 4 "MFN" H 4550 5950 50  0001 C CNN "DK"
+F 5 "WM10660-ND" H 4650 6050 50  0001 C CNN "MPN"
+F 6 "https://www.digikey.com/product-detail/en/molex/0430450225/WM10660-ND/3310180" H 4450 5850 50  0001 C CNN "PurchasingLink"
+	1    4450 5700
+	1    0    0    -1  
+$EndComp
+Text Label 4700 5650 0    50   ~ 0
+STRAIN_GUAGE_1_+
+Text Label 4700 5750 0    50   ~ 0
+STRAIN_GAUGE_1_-
+$Comp
+L formula:MicroFit_V_2 J?
+U 1 1 5FACB8F3
+P 4450 6150
+F 0 "J?" H 4508 6425 50  0000 C CNN
+F 1 "MicroFit_V_2" H 4508 6334 50  0000 C CNN
+F 2 "footprints:MicroFit_V_2" H 4400 6350 50  0001 C CNN
+F 3 "https://www.molex.com/pdm_docs/sd/430450225_sd.pdf" H 4400 6350 50  0001 C CNN
+F 4 "MFN" H 4550 6400 50  0001 C CNN "DK"
+F 5 "WM10660-ND" H 4650 6500 50  0001 C CNN "MPN"
+F 6 "https://www.digikey.com/product-detail/en/molex/0430450225/WM10660-ND/3310180" H 4450 6300 50  0001 C CNN "PurchasingLink"
+	1    4450 6150
+	1    0    0    -1  
+$EndComp
+Text Label 4700 6100 0    50   ~ 0
+STRAIN_GUAGE_2_+
+Text Label 4700 6200 0    50   ~ 0
+STRAIN_GAUGE_2_-
+$Comp
+L formula:MicroFit_V_2 J?
+U 1 1 5FAD0BB4
+P 4450 6600
+F 0 "J?" H 4508 6875 50  0000 C CNN
+F 1 "MicroFit_V_2" H 4508 6784 50  0000 C CNN
+F 2 "footprints:MicroFit_V_2" H 4400 6800 50  0001 C CNN
+F 3 "https://www.molex.com/pdm_docs/sd/430450225_sd.pdf" H 4400 6800 50  0001 C CNN
+F 4 "MFN" H 4550 6850 50  0001 C CNN "DK"
+F 5 "WM10660-ND" H 4650 6950 50  0001 C CNN "MPN"
+F 6 "https://www.digikey.com/product-detail/en/molex/0430450225/WM10660-ND/3310180" H 4450 6750 50  0001 C CNN "PurchasingLink"
+	1    4450 6600
+	1    0    0    -1  
+$EndComp
+Text Label 4700 6550 0    50   ~ 0
+STRAIN_GUAGE_3_+
+Text Label 4700 6650 0    50   ~ 0
+STRAIN_GAUGE_3_-
+$Comp
+L formula:MicroFit_V_2 J?
+U 1 1 5FAD26EA
+P 4450 7050
+F 0 "J?" H 4508 7325 50  0000 C CNN
+F 1 "MicroFit_V_2" H 4508 7234 50  0000 C CNN
+F 2 "footprints:MicroFit_V_2" H 4400 7250 50  0001 C CNN
+F 3 "https://www.molex.com/pdm_docs/sd/430450225_sd.pdf" H 4400 7250 50  0001 C CNN
+F 4 "MFN" H 4550 7300 50  0001 C CNN "DK"
+F 5 "WM10660-ND" H 4650 7400 50  0001 C CNN "MPN"
+F 6 "https://www.digikey.com/product-detail/en/molex/0430450225/WM10660-ND/3310180" H 4450 7200 50  0001 C CNN "PurchasingLink"
+	1    4450 7050
+	1    0    0    -1  
+$EndComp
+Text Label 4700 7000 0    50   ~ 0
+STRAIN_GUAGE_4_+
+Text Label 4700 7100 0    50   ~ 0
+STRAIN_GAUGE_4_-
+$Comp
+L formula:MicroFit_V_2 J?
+U 1 1 5FAD454E
+P 4450 7500
+F 0 "J?" H 4508 7775 50  0000 C CNN
+F 1 "MicroFit_V_2" H 4508 7684 50  0000 C CNN
+F 2 "footprints:MicroFit_V_2" H 4400 7700 50  0001 C CNN
+F 3 "https://www.molex.com/pdm_docs/sd/430450225_sd.pdf" H 4400 7700 50  0001 C CNN
+F 4 "MFN" H 4550 7750 50  0001 C CNN "DK"
+F 5 "WM10660-ND" H 4650 7850 50  0001 C CNN "MPN"
+F 6 "https://www.digikey.com/product-detail/en/molex/0430450225/WM10660-ND/3310180" H 4450 7650 50  0001 C CNN "PurchasingLink"
+	1    4450 7500
+	1    0    0    -1  
+$EndComp
+Text Label 4700 7450 0    50   ~ 0
+STRAIN_GUAGE_5_+
+Text Label 4700 7550 0    50   ~ 0
+STRAIN_GAUGE_5_-
+$Comp
+L formula:MicroFit_V_2 J?
+U 1 1 5FAD62F8
+P 4450 7950
+F 0 "J?" H 4508 8225 50  0000 C CNN
+F 1 "MicroFit_V_2" H 4508 8134 50  0000 C CNN
+F 2 "footprints:MicroFit_V_2" H 4400 8150 50  0001 C CNN
+F 3 "https://www.molex.com/pdm_docs/sd/430450225_sd.pdf" H 4400 8150 50  0001 C CNN
+F 4 "MFN" H 4550 8200 50  0001 C CNN "DK"
+F 5 "WM10660-ND" H 4650 8300 50  0001 C CNN "MPN"
+F 6 "https://www.digikey.com/product-detail/en/molex/0430450225/WM10660-ND/3310180" H 4450 8100 50  0001 C CNN "PurchasingLink"
+	1    4450 7950
+	1    0    0    -1  
+$EndComp
+Text Label 4700 7900 0    50   ~ 0
+STRAIN_GUAGE_6_+
+Text Label 4700 8000 0    50   ~ 0
+STRAIN_GAUGE_6_-
+$Comp
+L formula:MicroFit_V_2 J?
+U 1 1 5FADB6BC
+P 5700 5700
+F 0 "J?" H 5758 5975 50  0000 C CNN
+F 1 "MicroFit_V_2" H 5758 5884 50  0000 C CNN
+F 2 "footprints:MicroFit_V_2" H 5650 5900 50  0001 C CNN
+F 3 "https://www.molex.com/pdm_docs/sd/430450225_sd.pdf" H 5650 5900 50  0001 C CNN
+F 4 "MFN" H 5800 5950 50  0001 C CNN "DK"
+F 5 "WM10660-ND" H 5900 6050 50  0001 C CNN "MPN"
+F 6 "https://www.digikey.com/product-detail/en/molex/0430450225/WM10660-ND/3310180" H 5700 5850 50  0001 C CNN "PurchasingLink"
+	1    5700 5700
+	1    0    0    -1  
+$EndComp
+Text Label 5950 5650 0    50   ~ 0
+STRAIN_GUAGE_7_+
+Text Label 5950 5750 0    50   ~ 0
+STRAIN_GAUGE_7_-
+$Comp
+L formula:MicroFit_V_2 J?
+U 1 1 5FADB6C7
+P 5700 6150
+F 0 "J?" H 5758 6425 50  0000 C CNN
+F 1 "MicroFit_V_2" H 5758 6334 50  0000 C CNN
+F 2 "footprints:MicroFit_V_2" H 5650 6350 50  0001 C CNN
+F 3 "https://www.molex.com/pdm_docs/sd/430450225_sd.pdf" H 5650 6350 50  0001 C CNN
+F 4 "MFN" H 5800 6400 50  0001 C CNN "DK"
+F 5 "WM10660-ND" H 5900 6500 50  0001 C CNN "MPN"
+F 6 "https://www.digikey.com/product-detail/en/molex/0430450225/WM10660-ND/3310180" H 5700 6300 50  0001 C CNN "PurchasingLink"
+	1    5700 6150
+	1    0    0    -1  
+$EndComp
+Text Label 5950 6100 0    50   ~ 0
+STRAIN_GUAGE_8_+
+Text Label 5950 6200 0    50   ~ 0
+STRAIN_GAUGE_8_-
+$Comp
+L formula:MicroFit_V_2 J?
+U 1 1 5FADB6D2
+P 5650 7050
+F 0 "J?" H 5708 7325 50  0000 C CNN
+F 1 "MicroFit_V_2" H 5708 7234 50  0000 C CNN
+F 2 "footprints:MicroFit_V_2" H 5600 7250 50  0001 C CNN
+F 3 "https://www.molex.com/pdm_docs/sd/430450225_sd.pdf" H 5600 7250 50  0001 C CNN
+F 4 "MFN" H 5750 7300 50  0001 C CNN "DK"
+F 5 "WM10660-ND" H 5850 7400 50  0001 C CNN "MPN"
+F 6 "https://www.digikey.com/product-detail/en/molex/0430450225/WM10660-ND/3310180" H 5650 7200 50  0001 C CNN "PurchasingLink"
+	1    5650 7050
+	1    0    0    -1  
+$EndComp
+Text Label 5900 7000 0    50   ~ 0
+STRAIN_GUAGE_10_+
+Text Label 5900 7100 0    50   ~ 0
+STRAIN_GAUGE_10_-
+$Comp
+L formula:MicroFit_V_2 J?
+U 1 1 5FADB6DD
+P 5650 7500
+F 0 "J?" H 5708 7775 50  0000 C CNN
+F 1 "MicroFit_V_2" H 5708 7684 50  0000 C CNN
+F 2 "footprints:MicroFit_V_2" H 5600 7700 50  0001 C CNN
+F 3 "https://www.molex.com/pdm_docs/sd/430450225_sd.pdf" H 5600 7700 50  0001 C CNN
+F 4 "MFN" H 5750 7750 50  0001 C CNN "DK"
+F 5 "WM10660-ND" H 5850 7850 50  0001 C CNN "MPN"
+F 6 "https://www.digikey.com/product-detail/en/molex/0430450225/WM10660-ND/3310180" H 5650 7650 50  0001 C CNN "PurchasingLink"
+	1    5650 7500
+	1    0    0    -1  
+$EndComp
+Text Label 5900 7450 0    50   ~ 0
+STRAIN_GUAGE_11_+
+Text Label 5900 7550 0    50   ~ 0
+STRAIN_GAUGE_11_-
+$Comp
+L formula:MicroFit_V_2 J?
+U 1 1 5FADB6E8
+P 5650 7950
+F 0 "J?" H 5708 8225 50  0000 C CNN
+F 1 "MicroFit_V_2" H 5708 8134 50  0000 C CNN
+F 2 "footprints:MicroFit_V_2" H 5600 8150 50  0001 C CNN
+F 3 "https://www.molex.com/pdm_docs/sd/430450225_sd.pdf" H 5600 8150 50  0001 C CNN
+F 4 "MFN" H 5750 8200 50  0001 C CNN "DK"
+F 5 "WM10660-ND" H 5850 8300 50  0001 C CNN "MPN"
+F 6 "https://www.digikey.com/product-detail/en/molex/0430450225/WM10660-ND/3310180" H 5650 8100 50  0001 C CNN "PurchasingLink"
+	1    5650 7950
+	1    0    0    -1  
+$EndComp
+Text Label 5900 7900 0    50   ~ 0
+STRAIN_GUAGE_12_+
+Text Label 5900 8000 0    50   ~ 0
+STRAIN_GAUGE_12_-
+$Comp
+L formula:MicroFit_V_2 J?
+U 1 1 5FADB6F3
+P 5650 6600
+F 0 "J?" H 5708 6875 50  0000 C CNN
+F 1 "MicroFit_V_2" H 5708 6784 50  0000 C CNN
+F 2 "footprints:MicroFit_V_2" H 5600 6800 50  0001 C CNN
+F 3 "https://www.molex.com/pdm_docs/sd/430450225_sd.pdf" H 5600 6800 50  0001 C CNN
+F 4 "MFN" H 5750 6850 50  0001 C CNN "DK"
+F 5 "WM10660-ND" H 5850 6950 50  0001 C CNN "MPN"
+F 6 "https://www.digikey.com/product-detail/en/molex/0430450225/WM10660-ND/3310180" H 5650 6750 50  0001 C CNN "PurchasingLink"
+	1    5650 6600
+	1    0    0    -1  
+$EndComp
+Text Label 5900 6550 0    50   ~ 0
+STRAIN_GUAGE_9_+
+Text Label 5900 6650 0    50   ~ 0
+STRAIN_GAUGE_9_-
 $EndSCHEMATC
