@@ -1365,4 +1365,6 @@ Text Label 5900 6550 0    50   ~ 0
 STRAIN_GUAGE_9_+
 Text Label 5900 6650 0    50   ~ 0
 STRAIN_GAUGE_9_-
+Text Notes 15050 5200 0    50   ~ 0
+*needs to be vertical (vt)
 $EndSCHEMATC
