@@ -1,0 +1,4 @@
+(sym_lib_table
+  (lib (name template-rescue)(type Legacy)(uri ${KIPRJMOD}/template-rescue.lib)(options "")(descr ""))
+  (lib (name agnostic_testing_board-rescue)(type Legacy)(uri ${KIPRJMOD}/agnostic_testing_board-rescue.lib)(options "")(descr ""))
+)
