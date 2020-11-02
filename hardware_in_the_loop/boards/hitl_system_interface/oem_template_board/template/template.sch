@@ -363,10 +363,10 @@ Text Label 3650 2200 0    50   ~ 0
 CAN_RX
 Text Label 3650 3000 0    50   ~ 0
 MISO
-Text Label 3650 3100 0    50   ~ 0
+Text Label 3650 1100 0    50   ~ 0
 MOSI
 Text Label 3650 3200 0    50   ~ 0
-SCK
+RXD
 Text Label 4300 3700 0    50   ~ 0
 RESET
 $Comp
@@ -1032,8 +1032,8 @@ $Comp
 L formula:LED_0805 D1
 U 1 1 5F9FF68D
 P 4100 1500
-F 0 "D1" H 4100 1050 50  0000 C CNN
-F 1 "LED_0805" H 4050 1100 50  0000 C CNN
+F 0 "D1" H 4100 1450 50  0000 C CNN
+F 1 "LED_0805" H 4100 1500 50  0000 C CNN
 F 2 "footprints:LED_0805_OEM" H 4000 1500 50  0001 C CNN
 F 3 "http://www.osram-os.com/Graphics/XPic9/00078860_0.pdf" H 4100 1600 50  0001 C CNN
 F 4 "DK" H 4100 1500 60  0001 C CNN "MFN"
@@ -1046,8 +1046,8 @@ $Comp
 L formula:R_200 R4
 U 1 1 5FA08DE6
 P 3800 1500
-F 0 "R4" V 3350 1500 50  0000 C CNN
-F 1 "R_200" V 3400 1500 50  0000 C CNN
+F 0 "R4" V 3750 1500 50  0000 C CNN
+F 1 "R_200" V 3800 1500 50  0000 C CNN
 F 2 "footprints:R_0805_OEM" H 3730 1500 50  0001 C CNN
 F 3 "https://www.seielect.com/Catalog/SEI-RMCF_RMCP.pdf" H 3880 1500 50  0001 C CNN
 F 4 "DK" H 3800 1500 60  0001 C CNN "MFN"
@@ -1071,8 +1071,8 @@ $Comp
 L formula:LED_0805 D2
 U 1 1 5FA12380
 P 4100 1600
-F 0 "D2" H 4100 1200 50  0000 C CNN
-F 1 "LED_0805" H 4050 1250 50  0000 C CNN
+F 0 "D2" H 4100 1550 50  0000 C CNN
+F 1 "LED_0805" H 4100 1600 50  0000 C CNN
 F 2 "footprints:LED_0805_OEM" H 4000 1600 50  0001 C CNN
 F 3 "http://www.osram-os.com/Graphics/XPic9/00078860_0.pdf" H 4100 1700 50  0001 C CNN
 F 4 "DK" H 4100 1600 60  0001 C CNN "MFN"
@@ -1085,8 +1085,8 @@ $Comp
 L formula:R_200 R5
 U 1 1 5FA12389
 P 3800 1600
-F 0 "R5" V 3400 1600 50  0000 C CNN
-F 1 "R_200" V 3450 1600 50  0000 C CNN
+F 0 "R5" V 3750 1600 50  0000 C CNN
+F 1 "R_200" V 3800 1600 50  0000 C CNN
 F 2 "footprints:R_0805_OEM" H 3730 1600 50  0001 C CNN
 F 3 "https://www.seielect.com/Catalog/SEI-RMCF_RMCP.pdf" H 3880 1600 50  0001 C CNN
 F 4 "DK" H 3800 1600 60  0001 C CNN "MFN"
@@ -1107,54 +1107,174 @@ F 3 "" H 4250 1600 50  0001 C CNN
 	0    -1   -1   0   
 $EndComp
 $Comp
-L formula:LED_0805 D3
-U 1 1 5FA147E9
-P 4100 1700
-F 0 "D3" H 4100 1350 50  0000 C CNN
-F 1 "LED_0805" H 4050 1400 50  0000 C CNN
-F 2 "footprints:LED_0805_OEM" H 4000 1700 50  0001 C CNN
-F 3 "http://www.osram-os.com/Graphics/XPic9/00078860_0.pdf" H 4100 1800 50  0001 C CNN
-F 4 "DK" H 4100 1700 60  0001 C CNN "MFN"
-F 5 "475-1410-1-ND" H 4100 1700 60  0001 C CNN "MPN"
-F 6 "https://www.digikey.com/products/en?keywords=475-1410-1-ND" H 4500 2200 60  0001 C CNN "PurchasingLink"
-	1    4100 1700
-	-1   0    0    1   
-$EndComp
-$Comp
 L formula:R_200 R6
 U 1 1 5FA147F2
-P 3800 1700
-F 0 "R6" V 3450 1700 50  0000 C CNN
-F 1 "R_200" V 3500 1700 50  0000 C CNN
-F 2 "footprints:R_0805_OEM" H 3730 1700 50  0001 C CNN
-F 3 "https://www.seielect.com/Catalog/SEI-RMCF_RMCP.pdf" H 3880 1700 50  0001 C CNN
-F 4 "DK" H 3800 1700 60  0001 C CNN "MFN"
-F 5 "RMCF0805JT200RCT-ND" H 3800 1700 60  0001 C CNN "MPN"
-F 6 "https://www.digikey.com/products/en?keywords=RMCF0805JT200RCT-ND" H 4280 2100 60  0001 C CNN "PurchasingLink"
-	1    3800 1700
+P 3800 1400
+F 0 "R6" V 3750 1400 50  0000 C CNN
+F 1 "R_200" V 3800 1400 50  0000 C CNN
+F 2 "footprints:R_0805_OEM" H 3730 1400 50  0001 C CNN
+F 3 "https://www.seielect.com/Catalog/SEI-RMCF_RMCP.pdf" H 3880 1400 50  0001 C CNN
+F 4 "DK" H 3800 1400 60  0001 C CNN "MFN"
+F 5 "RMCF0805JT200RCT-ND" H 3800 1400 60  0001 C CNN "MPN"
+F 6 "https://www.digikey.com/products/en?keywords=RMCF0805JT200RCT-ND" H 4280 1800 60  0001 C CNN "PurchasingLink"
+	1    3800 1400
 	0    1    1    0   
 $EndComp
 $Comp
 L power:GND #PWR021
 U 1 1 5FA147F8
-P 4250 1700
-F 0 "#PWR021" H 4250 1450 50  0001 C CNN
-F 1 "GND" V 4255 1572 50  0000 R CNN
-F 2 "" H 4250 1700 50  0001 C CNN
-F 3 "" H 4250 1700 50  0001 C CNN
-	1    4250 1700
+P 4250 1400
+F 0 "#PWR021" H 4250 1150 50  0001 C CNN
+F 1 "GND" V 4255 1272 50  0000 R CNN
+F 2 "" H 4250 1400 50  0001 C CNN
+F 3 "" H 4250 1400 50  0001 C CNN
+	1    4250 1400
 	0    -1   -1   0   
 $EndComp
 NoConn ~ 3650 1000
 NoConn ~ 3650 1100
 NoConn ~ 3650 1200
 NoConn ~ 3650 1300
-NoConn ~ 3650 1400
-NoConn ~ 3650 1900
 NoConn ~ 3650 2300
 NoConn ~ 3650 2400
 NoConn ~ 3650 2500
 NoConn ~ 3650 2600
 NoConn ~ 3650 3400
 NoConn ~ 3650 3500
+$Comp
+L formula:LED_0805 D3
+U 1 1 5FA147E9
+P 4100 1400
+F 0 "D3" H 4100 1350 50  0000 C CNN
+F 1 "LED_0805" H 4100 1400 50  0000 C CNN
+F 2 "footprints:LED_0805_OEM" H 4000 1400 50  0001 C CNN
+F 3 "http://www.osram-os.com/Graphics/XPic9/00078860_0.pdf" H 4100 1500 50  0001 C CNN
+F 4 "DK" H 4100 1400 60  0001 C CNN "MFN"
+F 5 "475-1410-1-ND" H 4100 1400 60  0001 C CNN "MPN"
+F 6 "https://www.digikey.com/products/en?keywords=475-1410-1-ND" H 4500 1900 60  0001 C CNN "PurchasingLink"
+	1    4100 1400
+	-1   0    0    1   
+$EndComp
+Text Label 3650 3100 0    50   ~ 0
+TXD
+Text Label 3650 1700 0    50   ~ 0
+SCK
+NoConn ~ 3650 1900
+Text Label 9000 1800 0    50   ~ 0
+TXD
+Text Label 9000 1700 0    50   ~ 0
+RXD
+Text Notes 9200 1700 0    50   ~ 0
+From the perspective of the Atmega
+Text Notes 9200 1800 0    50   ~ 0
+From the perspective of the Atmega
+NoConn ~ 9000 1900
+NoConn ~ 9000 2000
+Text Label 8000 3400 3    50   ~ 0
+GND
+Text Label 8200 3400 3    50   ~ 0
+GND
+Text Label 8300 3400 3    50   ~ 0
+GND
+Text Label 8400 3400 3    50   ~ 0
+GND
+Text Label 7400 3100 2    50   ~ 0
+GND
+NoConn ~ 9000 2700
+NoConn ~ 9000 2800
+NoConn ~ 9000 2900
+NoConn ~ 9000 3000
+NoConn ~ 9000 3100
+NoConn ~ 9000 2400
+NoConn ~ 9000 2300
+NoConn ~ 9000 2200
+NoConn ~ 9000 2100
+$Comp
+L formula:C_100nF C16
+U 1 1 5FA17A78
+P 7250 1700
+F 0 "C16" V 6998 1700 50  0000 C CNN
+F 1 "C_100nF" V 7089 1700 50  0000 C CNN
+F 2 "footprints:C_0603_1608Metric" H 7288 1550 50  0001 C CNN
+F 3 "http://www.samsungsem.com/kr/support/product-search/mlcc/CL10A475KQ8NNNC.jsp" H 7275 1800 50  0001 C CNN
+F 4 "DK" H 7250 1700 60  0001 C CNN "MFN"
+F 5 "1276-6717-1-ND" H 7250 1700 60  0001 C CNN "MPN"
+F 6 "https://www.digikey.com/product-detail/en/samsung-electro-mechanics/CL10B104KA8WPNC/1276-6717-1-ND/5961576" H 7675 2200 60  0001 C CNN "PurchasingLink"
+	1    7250 1700
+	0    1    1    0   
+$EndComp
+$Comp
+L power:GND #PWR?
+U 1 1 5FA19E14
+P 7100 1700
+F 0 "#PWR?" H 7100 1450 50  0001 C CNN
+F 1 "GND" V 7105 1572 50  0000 R CNN
+F 2 "" H 7100 1700 50  0001 C CNN
+F 3 "" H 7100 1700 50  0001 C CNN
+	1    7100 1700
+	0    1    1    0   
+$EndComp
+$Comp
+L formula:USB_MicroB U?
+U 1 1 5FA24431
+P 5350 1950
+F 0 "U?" H 5407 2417 50  0000 C CNN
+F 1 "USB_MicroB" H 5407 2326 50  0000 C CNN
+F 2 "Connectors_USB:USB_Micro-B_Molex-105017-0001" H 5300 2300 50  0001 C CNN
+F 3 "https://www.molex.com/pdm_docs/sd/1050170001_sd.pdf" H 5300 2300 50  0001 C CNN
+F 4 "DK" H 5600 1700 50  0001 C CNN "MFN"
+F 5 "WM1399CT-ND" H 5700 1800 50  0001 C CNN "MPN"
+F 6 "https://www.digikey.com/product-detail/en/molex-llc/1050170001/WM1399CT-ND/2350885" H 5800 1900 50  0001 C CNN "PurchasingLink"
+	1    5350 1950
+	1    0    0    -1  
+$EndComp
+Text Label 5350 2350 3    50   ~ 0
+GND
+Text Label 5250 2350 3    50   ~ 0
+GND
+NoConn ~ 5650 2150
+$Comp
+L formula:FT232RL U?
+U 1 1 5F9FAF59
+P 8200 2400
+F 0 "U?" H 8200 3750 50  0000 C CNN
+F 1 "FT232RL" H 8200 3650 50  0000 C CNN
+F 2 "Package_SO:SSOP-28_5.3x10.2mm_P0.65mm" H 9300 1500 50  0001 C CNN
+F 3 "https://www.ftdichip.com/Support/Documents/DataSheets/ICs/DS_FT232R.pdf" H 8200 2400 50  0001 C CNN
+F 4 "https://www.digikey.com/product-detail/en/ftdi-future-technology-devices-international-ltd/FT232RL-REEL/768-1007-1-ND/1836402" H 8200 2400 50  0001 C CNN "Purchasing Link"
+F 5 "768-1007-1-ND" H 8200 2400 50  0001 C CNN "Part Number (DK)"
+	1    8200 2400
+	1    0    0    -1  
+$EndComp
+Text Label 8300 1400 1    50   ~ 0
+VCC
+Text Label 7400 2000 2    50   ~ 0
+USBDM
+Text Label 7400 2100 2    50   ~ 0
+USBDP
+Text Label 8100 1400 1    50   ~ 0
+VCCIO
+Text Label 5650 1950 0    50   ~ 0
+USBDM
+Text Label 5650 2050 0    50   ~ 0
+USBDP
+NoConn ~ 7400 2400
+NoConn ~ 7400 2600
+NoConn ~ 7400 2800
+$Comp
+L formula:200mA_Fuse F1
+U 1 1 5FA32B43
+P 5950 1750
+F 0 "F1" H 5950 1975 50  0000 C CNN
+F 1 "200mA_Fuse" H 5950 1884 50  0000 C CNN
+F 2 "footprints:Fuse_1812" H 5900 1750 50  0001 C CNN
+F 3 "https://www.belfuse.com/resources/CircuitProtection/datasheets/0ZCG%20Nov2016.pdf" H 5900 1750 50  0001 C CNN
+F 4 "507-1767-1-ND " H 6050 2000 50  0001 C CNN "MPN"
+F 5 "https://www.digikey.com/product-detail/en/bel-fuse-inc/0ZCG0110AF2C/507-1767-1-ND/4156157" H 6150 2100 50  0001 C CNN "PurchasingLink"
+F 6 "DK" H 6250 2200 50  0001 C CNN "MFN"
+	1    5950 1750
+	1    0    0    -1  
+$EndComp
+Text Label 6250 1750 0    50   ~ 0
+VCC
 $EndSCHEMATC
