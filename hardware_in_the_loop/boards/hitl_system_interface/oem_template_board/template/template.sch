@@ -361,8 +361,6 @@ Text Label 3650 2100 0    50   ~ 0
 CAN_TX
 Text Label 3650 2200 0    50   ~ 0
 CAN_RX
-Text Label 3650 3000 0    50   ~ 0
-MISO
 Text Label 3650 1100 0    50   ~ 0
 MOSI
 Text Label 3650 3200 0    50   ~ 0
@@ -1131,8 +1129,6 @@ F 3 "" H 4250 1400 50  0001 C CNN
 	1    4250 1400
 	0    -1   -1   0   
 $EndComp
-NoConn ~ 3650 1000
-NoConn ~ 3650 1100
 NoConn ~ 3650 1200
 NoConn ~ 3650 1300
 NoConn ~ 3650 2300
@@ -1170,16 +1166,6 @@ Text Notes 9200 1800 0    50   ~ 0
 From the perspective of the Atmega
 NoConn ~ 9000 1900
 NoConn ~ 9000 2000
-Text Label 8000 3400 3    50   ~ 0
-GND
-Text Label 8200 3400 3    50   ~ 0
-GND
-Text Label 8300 3400 3    50   ~ 0
-GND
-Text Label 8400 3400 3    50   ~ 0
-GND
-Text Label 7400 3100 2    50   ~ 0
-GND
 NoConn ~ 9000 2700
 NoConn ~ 9000 2800
 NoConn ~ 9000 2900
@@ -1204,10 +1190,10 @@ F 6 "https://www.digikey.com/product-detail/en/samsung-electro-mechanics/CL10B10
 	0    1    1    0   
 $EndComp
 $Comp
-L power:GND #PWR?
+L power:GND #PWR028
 U 1 1 5FA19E14
 P 7100 1700
-F 0 "#PWR?" H 7100 1450 50  0001 C CNN
+F 0 "#PWR028" H 7100 1450 50  0001 C CNN
 F 1 "GND" V 7105 1572 50  0000 R CNN
 F 2 "" H 7100 1700 50  0001 C CNN
 F 3 "" H 7100 1700 50  0001 C CNN
@@ -1215,10 +1201,10 @@ F 3 "" H 7100 1700 50  0001 C CNN
 	0    1    1    0   
 $EndComp
 $Comp
-L formula:USB_MicroB U?
+L formula:USB_MicroB U3
 U 1 1 5FA24431
 P 5350 1950
-F 0 "U?" H 5407 2417 50  0000 C CNN
+F 0 "U3" H 5407 2417 50  0000 C CNN
 F 1 "USB_MicroB" H 5407 2326 50  0000 C CNN
 F 2 "Connectors_USB:USB_Micro-B_Molex-105017-0001" H 5300 2300 50  0001 C CNN
 F 3 "https://www.molex.com/pdm_docs/sd/1050170001_sd.pdf" H 5300 2300 50  0001 C CNN
@@ -1228,17 +1214,13 @@ F 6 "https://www.digikey.com/product-detail/en/molex-llc/1050170001/WM1399CT-ND/
 	1    5350 1950
 	1    0    0    -1  
 $EndComp
-Text Label 5350 2350 3    50   ~ 0
-GND
-Text Label 5250 2350 3    50   ~ 0
-GND
 NoConn ~ 5650 2150
 $Comp
-L formula:FT232RL U?
+L formula:FT232RL U4
 U 1 1 5F9FAF59
 P 8200 2400
-F 0 "U?" H 8200 3750 50  0000 C CNN
-F 1 "FT232RL" H 8200 3650 50  0000 C CNN
+F 0 "U4" H 8550 3450 50  0000 C CNN
+F 1 "FT232RL" H 8550 3350 50  0000 C CNN
 F 2 "Package_SO:SSOP-28_5.3x10.2mm_P0.65mm" H 9300 1500 50  0001 C CNN
 F 3 "https://www.ftdichip.com/Support/Documents/DataSheets/ICs/DS_FT232R.pdf" H 8200 2400 50  0001 C CNN
 F 4 "https://www.digikey.com/product-detail/en/ftdi-future-technology-devices-international-ltd/FT232RL-REEL/768-1007-1-ND/1836402" H 8200 2400 50  0001 C CNN "Purchasing Link"
@@ -1246,18 +1228,14 @@ F 5 "768-1007-1-ND" H 8200 2400 50  0001 C CNN "Part Number (DK)"
 	1    8200 2400
 	1    0    0    -1  
 $EndComp
-Text Label 8300 1400 1    50   ~ 0
-VCC
 Text Label 7400 2000 2    50   ~ 0
-USBDM
+USBDP
 Text Label 7400 2100 2    50   ~ 0
-USBDP
-Text Label 8100 1400 1    50   ~ 0
-VCCIO
-Text Label 5650 1950 0    50   ~ 0
 USBDM
-Text Label 5650 2050 0    50   ~ 0
+Text Label 5650 1950 0    50   ~ 0
 USBDP
+Text Label 5650 2050 0    50   ~ 0
+USBDM
 NoConn ~ 7400 2400
 NoConn ~ 7400 2600
 NoConn ~ 7400 2800
@@ -1275,6 +1253,157 @@ F 6 "DK" H 6250 2200 50  0001 C CNN "MFN"
 	1    5950 1750
 	1    0    0    -1  
 $EndComp
-Text Label 6250 1750 0    50   ~ 0
-VCC
+Text Label 3650 1000 0    50   ~ 0
+MISO
+NoConn ~ 3650 3000
+Text Notes 5700 1500 0    50   ~ 0
+We want to use a \n100mA fuse here, \nbut we haven't \nsourced one yet\n
+$Comp
+L power:GND #PWR025
+U 1 1 5FA26E89
+P 5350 2350
+F 0 "#PWR025" H 5350 2100 50  0001 C CNN
+F 1 "GND" V 5350 2150 50  0000 C CNN
+F 2 "" H 5350 2350 50  0001 C CNN
+F 3 "" H 5350 2350 50  0001 C CNN
+	1    5350 2350
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR024
+U 1 1 5FA2D38B
+P 5250 2350
+F 0 "#PWR024" H 5250 2100 50  0001 C CNN
+F 1 "GND" V 5250 2150 50  0000 C CNN
+F 2 "" H 5250 2350 50  0001 C CNN
+F 3 "" H 5250 2350 50  0001 C CNN
+	1    5250 2350
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:VCC #PWR027
+U 1 1 5FA2F0E9
+P 6250 1750
+F 0 "#PWR027" H 6250 1600 50  0001 C CNN
+F 1 "VCC" V 6265 1878 50  0000 L CNN
+F 2 "" H 6250 1750 50  0001 C CNN
+F 3 "" H 6250 1750 50  0001 C CNN
+	1    6250 1750
+	0    1    1    0   
+$EndComp
+$Comp
+L power:VCC #PWR033
+U 1 1 5FA315C6
+P 8300 1400
+F 0 "#PWR033" H 8300 1250 50  0001 C CNN
+F 1 "VCC" H 8315 1573 50  0000 C CNN
+F 2 "" H 8300 1400 50  0001 C CNN
+F 3 "" H 8300 1400 50  0001 C CNN
+	1    8300 1400
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:VCC #PWR031
+U 1 1 5FA321E6
+P 8100 1400
+F 0 "#PWR031" H 8100 1250 50  0001 C CNN
+F 1 "VCC" H 8115 1573 50  0000 C CNN
+F 2 "" H 8100 1400 50  0001 C CNN
+F 3 "" H 8100 1400 50  0001 C CNN
+	1    8100 1400
+	1    0    0    -1  
+$EndComp
+Text Notes 8150 1200 1    50   ~ 0
+(1.8-5.25V)
+$Comp
+L power:GND #PWR030
+U 1 1 5FA36AB2
+P 8000 3400
+F 0 "#PWR030" H 8000 3150 50  0001 C CNN
+F 1 "GND" V 8000 3200 50  0000 C CNN
+F 2 "" H 8000 3400 50  0001 C CNN
+F 3 "" H 8000 3400 50  0001 C CNN
+	1    8000 3400
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR032
+U 1 1 5FA373FB
+P 8200 3400
+F 0 "#PWR032" H 8200 3150 50  0001 C CNN
+F 1 "GND" V 8200 3200 50  0000 C CNN
+F 2 "" H 8200 3400 50  0001 C CNN
+F 3 "" H 8200 3400 50  0001 C CNN
+	1    8200 3400
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR034
+U 1 1 5FA37A7B
+P 8300 3400
+F 0 "#PWR034" H 8300 3150 50  0001 C CNN
+F 1 "GND" V 8300 3200 50  0000 C CNN
+F 2 "" H 8300 3400 50  0001 C CNN
+F 3 "" H 8300 3400 50  0001 C CNN
+	1    8300 3400
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR035
+U 1 1 5FA38001
+P 8400 3400
+F 0 "#PWR035" H 8400 3150 50  0001 C CNN
+F 1 "GND" V 8400 3200 50  0000 C CNN
+F 2 "" H 8400 3400 50  0001 C CNN
+F 3 "" H 8400 3400 50  0001 C CNN
+	1    8400 3400
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR029
+U 1 1 5FA39AB7
+P 7400 3100
+F 0 "#PWR029" H 7400 2850 50  0001 C CNN
+F 1 "GND" V 7405 2972 50  0000 R CNN
+F 2 "" H 7400 3100 50  0001 C CNN
+F 3 "" H 7400 3100 50  0001 C CNN
+	1    7400 3100
+	0    1    1    0   
+$EndComp
+$Comp
+L formula:NanoFit_RA_SMT_08 J2
+U 1 1 5FA3D7DF
+P 5250 3200
+F 0 "J2" H 5308 3575 50  0000 C CNN
+F 1 "NanoFit_RA_SMT_08" H 5308 3484 50  0000 C CNN
+F 2 "footprints:NanoFit_RA_8" H 4950 2550 50  0001 C CNN
+F 3 "" H 5250 3450 50  0001 C CNN
+	1    5250 3200
+	1    0    0    -1  
+$EndComp
+Text Label 5450 3050 0    50   ~ 0
+MISO
+Text Label 5450 3150 0    50   ~ 0
+MOSI
+Text Label 5450 3250 0    50   ~ 0
+SCK
+Text Label 5450 3350 0    50   ~ 0
+SS_Accumulator
+Text Label 5450 3450 0    50   ~ 0
+SS_Cockpit
+Text Label 5450 3550 0    50   ~ 0
+SS_LVBox
+Text Label 5450 3650 0    50   ~ 0
+SS_Sensing
+$Comp
+L power:GND #PWR026
+U 1 1 5FA45E26
+P 5450 3750
+F 0 "#PWR026" H 5450 3500 50  0001 C CNN
+F 1 "GND" V 5455 3622 50  0000 R CNN
+F 2 "" H 5450 3750 50  0001 C CNN
+F 3 "" H 5450 3750 50  0001 C CNN
+	1    5450 3750
+	0    -1   -1   0   
+$EndComp
 $EndSCHEMATC
