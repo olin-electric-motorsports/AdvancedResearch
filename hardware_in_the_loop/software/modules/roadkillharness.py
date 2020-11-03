@@ -1,6 +1,14 @@
+# Base python imports
+import os
+
+# Project imports
 from modules.ecu import ECU
 from modules.iocontroller import IOController
 from modules.cancontroller import CANController
+
+# Constant definitions
+root_path = os.path.abspath(os.path.join(os.path.dirname(__file__), os.pardir)) # to software
+artifacts_path = os.path.join(root_path, "artifacts")
 
 
 class RoadkillHarness:
@@ -17,9 +25,8 @@ class RoadkillHarness:
 
         # Add more ECUs here
 
-        # TODO move these paths to a config file somewhere
         self.io = IOController(
-            pin_info_path="path/to/pin/info",
+            pin_info_path=os.path.join(artifacts_path, "pin_info.csv"),
             serial_path="/dev/serialdevice",  # TODO make this static with udev rule
         )
-        self.can = CANController(ecus=ecus, can_spec_path="path/to/can/spec")
+        # self.can = CANController(ecus=ecus, can_spec_path="path/to/can/spec")

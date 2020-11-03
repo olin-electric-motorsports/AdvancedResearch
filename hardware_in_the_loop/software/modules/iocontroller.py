@@ -1,5 +1,5 @@
+# Extended python imports
 import serial
-
 
 class IOController:
     """High level python object to interface with hardware.
@@ -21,8 +21,29 @@ class IOController:
 
             value (int or float): The value to set the pin to (e.x. 2.5)
                 - 0 or 1 for digital, volts for analog
+
+        Message format:
+            2 bytes. 
+            Byte 1: Address (int, 0-255)
+            Byte 2: Value
+
+            Value format
+                Digital: 0 or 1 (easy enough)
+                Analog: <5 bit>.<3 bit> floating point value (0 to 16.875 V)
+                    For example 5V is 00101000 or 0x40
+                    For example, 2.5V is 00010100 or 0x20
+                    To convert from int, multiply by 8 (or bitshift left 3 times)
         """
-        request = ""  # TODO define the format of this request
+        address = bytes(self.pin_info[pin]["address"])
+        data: bytes = b""
+        if self.pin_info[pin]["type"] == "DIGITAL":
+            data = bytes([value])
+        elif self.pin_info[pin]["type"] == "ANALOG":
+            data = bytes([int(value * 8)])
+        else:
+            raise Exception(f"Unsupported signal type: {self.pin_info[pin]["type"]}")
+
+        request = address + data
         self._send_request(request)
 
     def read_pin_info(self, path: str) -> dict:
@@ -52,11 +73,11 @@ class IOController:
 
                 # add data to dictionary
                 sig_dict = {}
-                sig_dict["address"] = add
+                sig_dict["address"] = int(add)
                 sig_dict["simulator"] = sim
                 sig_dict["type"] = sig_type
-                sig_dict["min"] = int(sig_min)
-                sig_dict["max"] = int(sig_max)
+                sig_dict["min"] = float(sig_min)
+                sig_dict["max"] = float(sig_max)
                 out[sig] = sig_dict
 
                 # read new line
