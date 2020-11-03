@@ -13,11 +13,11 @@ from redistimeseries.client import Client
 # 2-3 data stream children - serial stream, logfile stream, custom pass_data() methods
 class DataStream(object):
     def __init__(self, data_channels):
-        self.start_stream = True
+        # self.start_stream = True
         self.data_channels = data_channels
 
-    def close_stream(self):
-        self.start_stream = False
+    # def close_stream(self):
+    #     self.start_stream = False
 
     def return_data_channels(self):
         return self.data_channels
@@ -86,7 +86,7 @@ class LogFile(DataStream):
         pass
 
 
-class DataSender(object):
+class RedisDataSender(object):
     def __init__(self, data_stream_object, read_frequency_hz=5):
         self.data_stream_object = data_stream_object
         self.read_frequency_hz = read_frequency_hz
@@ -102,20 +102,15 @@ class DataSender(object):
 
     def grab_serial_data(self):
         while True:
-            # grab data tup from line
+            # grab data tuple from line
             tup = self.data_stream_object.read_line()
-            i = 0
-            for data_channel in self.data_channels:
+            
+            # walk through all the data channels  
+            for (index, data_channel) in enumerate(self.data_channels):
                 # pass float into database under correct name
-                self.send_to_redis_timeseries(tup.i, data_channel)
-                i += 1
+                self.send_to_redis_timeseries(tup[index], data_channel)
+                
             time.sleep(1 / self.read_frequency_hz)  # should operate
 
     def send_to_redis_timeseries(self, flt, data_channel):
         self.rts.add(data_channel, "*", flt)
-
-
-if __name__ == "__main__":
-    my_data_stream = ArduinoSerialIn()
-    my_data_parser = DataSender(my_data_stream)
-    my_data_parser.grab_serial_data()

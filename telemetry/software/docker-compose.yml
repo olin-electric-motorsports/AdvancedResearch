@@ -21,12 +21,6 @@ services:
     image: redislabs/redistimeseries:latest
     ports:
       - '6379:6379'
-    # devices:
-    #   - "/dev/ttyACM0:/dev/ttyUSB0"
-    # Uncomment and edit the local path in the following line to have
-    # RedisTimeSeries' data persisted to the host's filesystem.
-    volumes:
-      - ./data/dump.rdb:/data/dump.rdb
 
   grafana:
     container_name: grafana_host
@@ -45,5 +39,3 @@ services:
       - GF_INSTALL_PLUGINS=redis-datasource
     volumes:
       - ./provisioning/datasources:/etc/grafana/provisioning/datasources
-      - ./data/grafana:/var/lib/grafana
-      
