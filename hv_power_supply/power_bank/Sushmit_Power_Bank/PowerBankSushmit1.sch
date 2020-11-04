@@ -27,7 +27,7 @@ F 3 " ~" H 2050 2100 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L AdvancedResearch:formula_R_1K R1
+L formula:formula_R_1K R1
 U 1 1 5F8DBFCA
 P 3050 1650
 F 0 "R1" H 3120 1696 50  0000 L CNN
@@ -41,7 +41,7 @@ F 6 "https://www.digikey.com/products/en?keywords=RNCP0805FTD1K00CT-ND" H 3530 2
 	1    0    0    -1  
 $EndComp
 $Comp
-L AdvancedResearch:formula_R_1K R3
+L formula:formula_R_1K R3
 U 1 1 5F8DE663
 P 3800 1650
 F 0 "R3" H 3870 1696 50  0000 L CNN
@@ -55,7 +55,7 @@ F 6 "https://www.digikey.com/products/en?keywords=RNCP0805FTD1K00CT-ND" H 4280 2
 	1    0    0    -1  
 $EndComp
 $Comp
-L AdvancedResearch:formula_R_1K R4
+L formula:formula_R_1K R4
 U 1 1 5F8DED9A
 P 3800 2800
 F 0 "R4" H 3870 2846 50  0000 L CNN
@@ -69,7 +69,7 @@ F 6 "https://www.digikey.com/products/en?keywords=RNCP0805FTD1K00CT-ND" H 4280 3
 	1    0    0    -1  
 $EndComp
 $Comp
-L AdvancedResearch:formula_R_1K R2
+L formula:formula_R_1K R2
 U 1 1 5F8DF8D7
 P 3050 2800
 F 0 "R2" H 3120 2846 50  0000 L CNN
@@ -132,7 +132,7 @@ $EndComp
 Wire Wire Line
 	2200 1950 2500 1950
 $Comp
-L AdvancedResarch:C_10uF-formula C1
+L formula:C_10uF-formula C1
 U 1 1 5F8E35C6
 P 2500 2600
 F 0 "C1" H 2615 2696 50  0000 L CNN
@@ -202,7 +202,7 @@ Output USB \n(To charge phone) \n
 Text Notes 1450 3350 0    50   ~ 0
 Thermistor\n
 $Comp
-L AdvancedResarch:CONN_01x02-formula J1
+L formula:CONN_01x02-formula J1
 U 1 1 5F8F0921
 P 1775 3525
 F 0 "J1" H 1693 3200 50  0000 C CNN
@@ -234,7 +234,7 @@ Text Label 1975 3525 0    50   ~ 0
 Text Notes 3000 3350 0    50   ~ 0
 Battery\n
 $Comp
-L AdvancedResarch:CONN_01x02-formula J2
+L formula:CONN_01x02-formula J2
 U 1 1 5F8FB661
 P 3075 3525
 F 0 "J2" H 2993 3200 50  0000 C CNN
@@ -247,7 +247,7 @@ F 5 "732-5315-ND" H 3275 3825 50  0001 C CNN "MPN"
 	-1   0    0    -1  
 $EndComp
 $Comp
-L AdvancedResarch:1.5A_Fuse-formula F1
+L formula:1.5A_Fuse-formula F1
 U 1 1 5F8FC8AA
 P 3675 3525
 F 0 "F1" H 3675 3750 50  0000 C CNN
@@ -282,7 +282,7 @@ Wire Wire Line
 Text Notes 1450 4450 0    50   ~ 0
 Input USB\n(To charge bat)\n
 $Comp
-L AdvancedResarch:USB_MicroB-formula U1
+L formula:USB_MicroB-formula U1
 U 1 1 5F904C79
 P 1950 5050
 F 0 "U1" H 2007 5517 50  0000 C CNN
@@ -307,7 +307,7 @@ F 3 "" H 2450 5650 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L AdvancedResarch:C_10uF-formula C2
+L formula:C_10uF-formula C2
 U 1 1 5F907617
 P 3300 5150
 F 0 "C2" H 3415 5246 50  0000 L CNN
@@ -321,7 +321,7 @@ F 6 "https://www.digikey.com/product-detail/en/samsung-electro-mechanics/CL21A10
 	1    0    0    -1  
 $EndComp
 $Comp
-L AdvancedResarch:TP-formula TP2
+L formula:TP-formula TP2
 U 1 1 5F908C0C
 P 2800 4650
 F 0 "TP2" H 2878 4588 50  0000 L CNN
@@ -383,7 +383,7 @@ F 3 "" H 3300 5250 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L AdvancedResarch:TP-formula TP1
+L formula:TP-formula TP1
 U 1 1 5F99B72A
 P 9250 2975
 F 0 "TP1" H 9175 3025 50  0000 L CNN
@@ -415,7 +415,7 @@ $EndComp
 Wire Wire Line
 	7000 1425 7000 1525
 $Comp
-L AdvancedResarch:TP-formula TP4
+L formula:TP-formula TP4
 U 1 1 5F9CCC74
 P 6600 1825
 F 0 "TP4" V 6750 1775 50  0000 C CNN
@@ -538,7 +538,7 @@ F 3 "" H 7000 2425 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L AdvancedResearch:formula_R_1K R9
+L formula:formula_R_1K R9
 U 1 1 5F9ED429
 P 6700 1975
 F 0 "R9" V 6850 1975 50  0000 C CNN
@@ -552,7 +552,7 @@ F 6 "https://www.digikey.com/products/en?keywords=RNCP0805FTD1K00CT-ND" H 7180 2
 	0    1    1    0   
 $EndComp
 $Comp
-L AdvancedResearch:formula_R_1K R6
+L formula:formula_R_1K R6
 U 1 1 5F9D46E3
 P 6200 2325
 F 0 "R6" H 6270 2371 50  0000 L CNN
@@ -566,7 +566,7 @@ F 6 "https://www.digikey.com/products/en?keywords=RNCP0805FTD1K00CT-ND" H 6680 2
 	1    0    0    -1  
 $EndComp
 $Comp
-L AdvancedResearch:formula_R_1K R5
+L formula:formula_R_1K R5
 U 1 1 5F9D32FD
 P 6200 1875
 F 0 "R5" V 6350 1825 50  0000 L CNN
@@ -580,7 +580,7 @@ F 6 "https://www.digikey.com/products/en?keywords=RNCP0805FTD1K00CT-ND" H 6680 2
 	-1   0    0    1   
 $EndComp
 $Comp
-L AdvancedResarch:C_10uF-formula C4
+L formula:C_10uF-formula C4
 U 1 1 5F9D1F1C
 P 5800 1925
 F 0 "C4" H 5750 2250 50  0000 L CNN
@@ -594,7 +594,7 @@ F 6 "https://www.digikey.com/product-detail/en/samsung-electro-mechanics/CL21A10
 	1    0    0    -1  
 $EndComp
 $Comp
-L AdvancedResarch:C_10uF-formula C3
+L formula:C_10uF-formula C3
 U 1 1 5F9CFEE1
 P 5350 1925
 F 0 "C3" H 5125 2025 50  0000 L CNN
@@ -608,7 +608,7 @@ F 6 "https://www.digikey.com/product-detail/en/samsung-electro-mechanics/CL21A10
 	1    0    0    -1  
 $EndComp
 $Comp
-L AdvancedResarch:VBATT-formula #PWR0119
+L formula:VBATT-formula #PWR0119
 U 1 1 5F9CDDDA
 P 5350 1375
 F 0 "#PWR0119" H 5350 1225 50  0001 C CNN
@@ -619,7 +619,7 @@ F 3 "" H 5350 1375 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L AdvancedResarch:TP-formula TP3
+L formula:TP-formula TP3
 U 1 1 5F9CBEC6
 P 5850 1225
 F 0 "TP3" H 5928 1163 50  0000 L CNN
@@ -633,7 +633,7 @@ F 6 "https://www.digikey.com/product-detail/en/keystone-electronics/5006/36-5006
 	1    0    0    -1  
 $EndComp
 $Comp
-L AdvancedResarch:L_6.8uH-formula L1
+L formula:L_6.8uH-formula L1
 U 1 1 5F9C9CAD
 P 6600 1425
 F 0 "L1" H 6600 1610 50  0000 C CNN
@@ -659,7 +659,7 @@ F 3 "" H 8350 2625 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L AdvancedResarch:GNDPWR-formula #PWR0121
+L formula:GNDPWR-formula #PWR0121
 U 1 1 5F9C1E1E
 P 8000 2625
 F 0 "#PWR0121" H 8000 2425 50  0001 C CNN
@@ -670,7 +670,7 @@ F 3 "" H 8000 2575 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L AdvancedResarch:GNDPWR-formula #PWR0122
+L formula:GNDPWR-formula #PWR0122
 U 1 1 5F9BE2AC
 P 8400 1675
 F 0 "#PWR0122" H 8400 1475 50  0001 C CNN
@@ -681,7 +681,7 @@ F 3 "" H 8400 1625 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L AdvancedResarch:GNDPWR-formula #PWR0123
+L formula:GNDPWR-formula #PWR0123
 U 1 1 5F9BD705
 P 8400 2275
 F 0 "#PWR0123" H 8400 2075 50  0001 C CNN
@@ -705,7 +705,7 @@ F 3 "" H 10350 1825 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L AdvancedResarch:LED_0805-formula D4
+L formula:LED_0805-formula D4
 U 1 1 5F9B7FA3
 P 10350 1675
 F 0 "D4" V 10389 1558 50  0000 R CNN
@@ -719,7 +719,7 @@ F 6 "https://www.digikey.com/products/en?keywords=475-1410-1-ND" H 10750 2175 60
 	0    -1   -1   0   
 $EndComp
 $Comp
-L AdvancedResarch:LED_0805-formula D3
+L formula:LED_0805-formula D3
 U 1 1 5F9B3FDB
 P 10100 2575
 F 0 "D3" V 10139 2458 50  0000 R CNN
@@ -791,7 +791,7 @@ Wire Wire Line
 Wire Wire Line
 	8400 1375 8400 1425
 $Comp
-L AdvancedResarch:C_10uF-formula C7
+L formula:C_10uF-formula C7
 U 1 1 5F98B3BA
 P 9900 1625
 F 0 "C7" H 9850 2000 50  0000 L CNN
@@ -805,7 +805,7 @@ F 6 "https://www.digikey.com/product-detail/en/samsung-electro-mechanics/CL21A10
 	1    0    0    -1  
 $EndComp
 $Comp
-L AdvancedResarch:C_10uF-formula C6
+L formula:C_10uF-formula C6
 U 1 1 5F989D80
 P 9450 1625
 F 0 "C6" H 9400 2000 50  0000 L CNN
@@ -819,7 +819,7 @@ F 6 "https://www.digikey.com/product-detail/en/samsung-electro-mechanics/CL21A10
 	1    0    0    -1  
 $EndComp
 $Comp
-L AdvancedResearch:formula_R_1K R16
+L formula:formula_R_1K R16
 U 1 1 5F987A2C
 P 10100 2275
 F 0 "R16" H 10170 2321 50  0000 L CNN
@@ -833,7 +833,7 @@ F 6 "https://www.digikey.com/products/en?keywords=RNCP0805FTD1K00CT-ND" H 10580 
 	1    0    0    -1  
 $EndComp
 $Comp
-L AdvancedResearch:formula_R_1K R18
+L formula:formula_R_1K R18
 U 1 1 5F98700B
 P 10350 1375
 F 0 "R18" H 10420 1421 50  0000 L CNN
@@ -847,7 +847,7 @@ F 6 "https://www.digikey.com/products/en?keywords=RNCP0805FTD1K00CT-ND" H 10830 
 	1    0    0    -1  
 $EndComp
 $Comp
-L AdvancedResearch:formula_R_1K R12
+L formula:formula_R_1K R12
 U 1 1 5F9868B2
 P 9000 2025
 F 0 "R12" H 9070 2071 50  0000 L CNN
@@ -861,7 +861,7 @@ F 6 "https://www.digikey.com/products/en?keywords=RNCP0805FTD1K00CT-ND" H 9480 2
 	1    0    0    -1  
 $EndComp
 $Comp
-L AdvancedResearch:formula_R_1K R11
+L formula:formula_R_1K R11
 U 1 1 5F985E27
 P 9000 1575
 F 0 "R11" H 8925 1900 50  0000 L CNN
@@ -2590,7 +2590,7 @@ EndData
 $EndBitmap
 NoConn ~ 7950 4800
 $Comp
-L AdvancedResarch:C_10nF-formula C5
+L formula:C_10nF-formula C5
 U 1 1 5F8DA1C5
 P 5850 5550
 F 0 "C5" H 5965 5596 50  0000 L CNN
@@ -2608,7 +2608,7 @@ Wire Notes Line
 Wire Notes Line
 	1100 6100 6025 6100
 $Comp
-L AdvancedResearch:formula_R_1K R15
+L formula:formula_R_1K R15
 U 1 1 5F988D3D
 P 9650 3325
 F 0 "R15" H 9575 3625 50  0000 L CNN
@@ -2622,7 +2622,7 @@ F 6 "https://www.digikey.com/products/en?keywords=RNCP0805FTD1K00CT-ND" H 10130 
 	1    0    0    -1  
 $EndComp
 $Comp
-L AdvancedResarch:SSM3K333R-formula Q1
+L formula:SSM3K333R-formula Q1
 U 1 1 5F9AF6F7
 P 10000 3175
 F 0 "Q1" H 10206 3221 50  0000 L CNN
@@ -2669,7 +2669,7 @@ F 3 "" H 5650 3600 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L AdvancedResearch:formula_R_1K R7
+L formula:formula_R_1K R7
 U 1 1 5F9273DC
 P 5650 3750
 F 0 "R7" H 5720 3796 50  0000 L CNN
@@ -2687,7 +2687,7 @@ Text Label 8200 5100 0    50   ~ 0
 Text Label 5350 5250 0    50   ~ 0
 Battery+
 $Comp
-L AdvancedResarch:MCP73871T-2CCI_ML-formula U2
+L formula:MCP73871T-2CCI_ML-formula U2
 U 1 1 5F910070
 P 7150 5000
 F 0 "U2" H 7150 5967 50  0000 C CNN
@@ -2701,7 +2701,7 @@ F 6 "https://www.digikey.com/product-detail/en/microchip-technology/MCP73871T-2C
 	1    0    0    -1  
 $EndComp
 $Comp
-L AdvancedResarch:VBATT-formula #PWR0131
+L formula:VBATT-formula #PWR0131
 U 1 1 5F91560A
 P 8100 4150
 F 0 "#PWR0131" H 8100 4000 50  0001 C CNN
@@ -2712,7 +2712,7 @@ F 3 "" H 8100 4150 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L AdvancedResarch:LED_0805_Amber-formula D2
+L formula:LED_0805_Amber-formula D2
 U 1 1 5F917D3C
 P 8600 4500
 F 0 "D2" H 8600 4350 50  0000 C CNN
@@ -2726,7 +2726,7 @@ F 6 "https://www.digikey.com/product-detail/en/visual-communications-company-vcc
 	1    0    0    -1  
 $EndComp
 $Comp
-L AdvancedResearch:formula_R_1K R13
+L formula:formula_R_1K R13
 U 1 1 5F919491
 P 8900 4500
 F 0 "R13" V 8693 4500 50  0000 C CNN
@@ -2751,7 +2751,7 @@ F 3 "" H 9400 4250 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L AdvancedResarch:LED_0805-formula D1
+L formula:LED_0805-formula D1
 U 1 1 5F91B1B0
 P 9550 4600
 F 0 "D1" H 9550 4450 50  0000 C CNN
@@ -2765,7 +2765,7 @@ F 6 "https://www.digikey.com/products/en?keywords=475-1410-1-ND" H 9950 5100 60 
 	1    0    0    -1  
 $EndComp
 $Comp
-L AdvancedResearch:formula_R_1K R17
+L formula:formula_R_1K R17
 U 1 1 5F91EA7B
 P 9850 4600
 F 0 "R17" V 9643 4600 50  0000 C CNN
@@ -2790,7 +2790,7 @@ F 3 "" H 10150 4250 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L AdvancedResearch:formula_R_1K R10
+L formula:formula_R_1K R10
 U 1 1 5F9213A6
 P 8400 5700
 F 0 "R10" H 8470 5746 50  0000 L CNN
@@ -2804,7 +2804,7 @@ F 6 "https://www.digikey.com/products/en?keywords=RNCP0805FTD1K00CT-ND" H 8880 6
 	1    0    0    -1  
 $EndComp
 $Comp
-L AdvancedResearch:formula_R_1K R14
+L formula:formula_R_1K R14
 U 1 1 5F922E1F
 P 9100 5700
 F 0 "R14" H 9170 5746 50  0000 L CNN
@@ -2872,7 +2872,7 @@ Wire Wire Line
 	6350 5400 5850 5400
 Connection ~ 6350 5400
 $Comp
-L AdvancedResarch:TP-formula TP5
+L formula:TP-formula TP5
 U 1 1 5F95154A
 P 5800 5050
 F 0 "TP5" H 5878 4988 50  0000 L CNN
@@ -2990,7 +2990,7 @@ F 3 "" H 5650 4350 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L AdvancedResearch:formula_R_1K R8
+L formula:formula_R_1K R8
 U 1 1 5F923688
 P 5650 4200
 F 0 "R8" H 5475 4250 50  0000 L CNN
@@ -3037,7 +3037,7 @@ Wire Wire Line
 Wire Wire Line
 	8400 1825 9000 1825
 $Comp
-L AdvancedResarch:TPS61090RSAR-formula U3
+L formula:TPS61090RSAR-formula U3
 U 1 1 5F983A4C
 P 7700 1725
 F 0 "U3" H 7700 2295 50  0000 C CNN
