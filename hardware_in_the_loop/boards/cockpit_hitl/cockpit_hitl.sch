@@ -47,7 +47,7 @@ F 3 "" H 2200 8950 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L template-rescue:C_2.2uF-formula C102
+L cockpit_hitl-rescue:C_2.2uF-formula-template-rescue C102
 U 1 1 5BEE2647
 P 2500 8800
 F 0 "C102" H 2550 8650 50  0000 L CNN
@@ -61,7 +61,7 @@ F 6 "https://www.digikey.com/product-detail/en/yageo/CC0603KRX5R6BB225/311-1451-
 	1    0    0    -1  
 $EndComp
 $Comp
-L template-rescue:C_0.1uF-formula C101
+L cockpit_hitl-rescue:C_0.1uF-formula-template-rescue C101
 U 1 1 5BEE2923
 P 2200 8800
 F 0 "C101" H 2250 8650 50  0000 L CNN
@@ -75,7 +75,7 @@ F 6 "https://www.digikey.com/products/en?keywords=478-3352-1-ND" H 2625 9300 60 
 	1    0    0    -1  
 $EndComp
 $Comp
-L template-rescue:R_100K-formula R103
+L cockpit_hitl-rescue:R_100K-formula-template-rescue R103
 U 1 1 5BEE2A52
 P 4100 9450
 F 0 "R103" V 4200 9400 50  0000 L CNN
@@ -89,7 +89,7 @@ F 6 "https://www.digikey.com/product-detail/en/panasonic-electronic-components/E
 	0    1    1    0   
 $EndComp
 $Comp
-L template-rescue:C_0.1uF-formula C103
+L cockpit_hitl-rescue:C_0.1uF-formula-template-rescue C103
 U 1 1 5BEE239B
 P 4100 8600
 F 0 "C103" V 4040 8740 50  0000 C CNN
@@ -116,7 +116,7 @@ $EndComp
 Text Label 14200 4700 0    50   ~ 0
 12V
 $Comp
-L template-rescue:C_22uF-formula COUT101
+L cockpit_hitl-rescue:C_22uF-formula-template-rescue COUT101
 U 1 1 5C061BB4
 P 4900 8900
 F 0 "COUT101" H 4790 9150 50  0000 L CNN
@@ -130,7 +130,7 @@ F 6 "https://www.digikey.com/product-detail/en/tdk-corporation/C3216JB1C226M160A
 	1    0    0    -1  
 $EndComp
 $Comp
-L template-rescue:C_47uF-formula COUT103
+L cockpit_hitl-rescue:C_47uF-formula-template-rescue COUT103
 U 1 1 5C062E7A
 P 5700 8900
 F 0 "COUT103" H 5600 9150 50  0000 L CNN
@@ -144,7 +144,7 @@ F 6 "https://www.digikey.com/product-detail/en/samsung-electro-mechanics/CL21A47
 	1    0    0    -1  
 $EndComp
 $Comp
-L template-rescue:C_33uF-formula COUT102
+L cockpit_hitl-rescue:C_33uF-formula-template-rescue COUT102
 U 1 1 5C08921B
 P 5300 8900
 F 0 "COUT102" H 5200 9150 50  0000 L CNN
@@ -158,7 +158,7 @@ F 6 "https://www.digikey.com/product-detail/en/tdk-corporation/C4532X7R1C336M250
 	1    0    0    -1  
 $EndComp
 $Comp
-L template-rescue:R_25K-formula R102
+L cockpit_hitl-rescue:R_25K-formula-template-rescue R102
 U 1 1 5C0B315C
 P 3600 9450
 F 0 "R102" V 3700 9400 50  0000 L CNN
@@ -172,7 +172,7 @@ F 6 "https://www.digikey.com/product-detail/en/te-connectivity-passive-product/C
 	0    1    1    0   
 $EndComp
 $Comp
-L template-rescue:F_500mA_16V-formula F101
+L cockpit_hitl-rescue:F_500mA_16V-formula-template-rescue F101
 U 1 1 5C0BFA29
 P 1150 8650
 F 0 "F101" V 1230 8650 50  0000 C CNN
@@ -186,7 +186,7 @@ F 6 "https://www.digikey.com/product-detail/en/bel-fuse-inc/0ZCH0050FF2G/507-178
 	0    1    1    0   
 $EndComp
 $Comp
-L template-rescue:R_0_2512-formula R104
+L cockpit_hitl-rescue:R_0_2512-formula-template-rescue R104
 U 1 1 5C0C29A9
 P 6250 8750
 F 0 "R104" V 6050 8750 50  0000 C CNN
@@ -200,7 +200,7 @@ F 6 "https://www.digikey.com/products/en?keywords=A121322CT-ND" H 6730 9150 60  
 	0    -1   -1   0   
 $EndComp
 $Comp
-L template-rescue:LED_0805-formula D103
+L cockpit_hitl-rescue:LED_0805-formula-template-rescue D103
 U 1 1 5C0C344A
 P 6650 9600
 F 0 "D103" V 6850 9580 50  0000 R CNN
@@ -214,7 +214,7 @@ F 6 "https://www.digikey.com/products/en?keywords=475-1410-1-ND" H 7050 10100 60
 	0    -1   -1   0   
 $EndComp
 $Comp
-L template-rescue:R_200-formula R105
+L cockpit_hitl-rescue:R_200-formula-template-rescue R105
 U 1 1 5C0C44F9
 P 6650 9000
 F 0 "R105" H 6720 9046 50  0000 L CNN
@@ -239,7 +239,7 @@ F 3 "" H 6650 9950 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L template-rescue:D_Zener_18V-formula D101
+L cockpit_hitl-rescue:D_Zener_18V-formula-template-rescue D101
 U 1 1 5C623D49
 P 1400 8950
 F 0 "D101" H 1390 9140 50  0000 C CNN
@@ -266,7 +266,7 @@ $EndComp
 Text Label 900  8350 0    50   ~ 0
 12V
 $Comp
-L template-rescue:LED_0805-formula D102
+L cockpit_hitl-rescue:LED_0805-formula-template-rescue D102
 U 1 1 5C754D7D
 P 1800 9200
 F 0 "D102" V 1838 9083 50  0000 R CNN
@@ -344,7 +344,7 @@ Text Notes 6750 8550 0    50   ~ 0
 Text Notes 6500 9850 1    50   ~ 0
 5V Indicator
 $Comp
-L template-rescue:ATMEGA16M1-formula U2
+L cockpit_hitl-rescue:ATMEGA16M1-formula-template-rescue U2
 U 1 1 5D58A7A6
 P 2700 3200
 F 0 "U2" H 3600 5060 50  0000 C CNN
@@ -370,7 +370,7 @@ SCK
 Text Label 4450 4200 0    50   ~ 0
 RESET
 $Comp
-L template-rescue:R_100-formula R1
+L cockpit_hitl-rescue:R_100-formula-template-rescue R1
 U 1 1 5D58E16F
 P 1300 1650
 F 0 "R1" V 1200 1600 50  0000 L CNN
@@ -384,7 +384,7 @@ F 6 "https://www.digikey.com/products/en?keywords=RNCP0805FTD100RCT-ND" H 1780 2
 	1    0    0    -1  
 $EndComp
 $Comp
-L template-rescue:C_100pF-formula C3
+L cockpit_hitl-rescue:C_100pF-formula-template-rescue C3
 U 1 1 5D58E505
 P 1300 1950
 F 0 "C3" V 1350 1800 50  0000 L CNN
@@ -420,7 +420,7 @@ F 3 "" H 1300 2100 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L template-rescue:Crystal_SMD-formula Y1
+L cockpit_hitl-rescue:Crystal_SMD-formula-template-rescue Y1
 U 1 1 5D5EB332
 P 4250 4600
 F 0 "Y1" H 3960 4670 50  0000 L CNN
@@ -434,7 +434,7 @@ F 6 "https://www.digikey.com/product-detail/en/txc-corporation/7M-16.000MAAJ-T/8
 	1    0    0    -1  
 $EndComp
 $Comp
-L template-rescue:C_30pF-formula C4
+L cockpit_hitl-rescue:C_30pF-formula-template-rescue C4
 U 1 1 5D5EB5B2
 P 4050 4850
 F 0 "C4" H 3940 4930 50  0000 L CNN
@@ -448,7 +448,7 @@ F 6 "https://www.digikey.com/product-detail/en/samsung-electro-mechanics-america
 	1    0    0    -1  
 $EndComp
 $Comp
-L template-rescue:C_30pF-formula C5
+L cockpit_hitl-rescue:C_30pF-formula-template-rescue C5
 U 1 1 5D5EB694
 P 4450 4850
 F 0 "C5" H 4470 4930 50  0000 L CNN
@@ -462,7 +462,7 @@ F 6 "https://www.digikey.com/product-detail/en/samsung-electro-mechanics-america
 	1    0    0    -1  
 $EndComp
 $Comp
-L template-rescue:R_10K-formula R3
+L cockpit_hitl-rescue:R_10K-formula-template-rescue R3
 U 1 1 5D5EB7F3
 P 4300 4000
 F 0 "R3" V 4220 4000 50  0000 C CNN
@@ -542,7 +542,7 @@ F 3 "" H 1450 4550 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L template-rescue:MCP2561-E_SN-formula U1
+L cockpit_hitl-rescue:MCP2561-E_SN-formula-template-rescue U1
 U 1 1 5D5FAEDE
 P 14850 2000
 F 0 "U1" H 15210 2350 50  0000 C CNN
@@ -556,7 +556,7 @@ F 6 "https://www.digikey.com/products/en?keywords=mcp2561-e%2Fsn" H 14850 2750 6
 	1    0    0    -1  
 $EndComp
 $Comp
-L template-rescue:C_0.1uF-formula C1
+L cockpit_hitl-rescue:C_0.1uF-formula-template-rescue C1
 U 1 1 5D5FB603
 P 14700 1400
 F 0 "C1" V 14650 1510 50  0000 C CNN
@@ -570,7 +570,7 @@ F 6 "https://www.digikey.com/products/en?keywords=478-3352-1-ND" H 15125 1900 60
 	0    1    1    0   
 $EndComp
 $Comp
-L template-rescue:R_200-formula R2
+L cockpit_hitl-rescue:R_200-formula-template-rescue R2
 U 1 1 5D5FB79E
 P 15650 2000
 F 0 "R2" V 15740 1950 50  0000 L CNN
@@ -715,7 +715,7 @@ $EndComp
 Text Label 15300 4550 2    50   ~ 0
 GND
 $Comp
-L template-rescue:CONN_02X03-formula J1
+L cockpit_hitl-rescue:CONN_02X03-formula-template-rescue J1
 U 1 1 5D628C9D
 P 14850 3400
 F 0 "J1" H 14850 3610 50  0000 C CNN
@@ -775,7 +775,7 @@ Wire Wire Line
 	1600 1800 1300 1800
 Connection ~ 1300 1800
 $Comp
-L template-rescue:C_0.1uF-formula C2
+L cockpit_hitl-rescue:C_0.1uF-formula-template-rescue C2
 U 1 1 5D58E34B
 P 950 1650
 F 0 "C2" V 1000 1510 50  0000 L CNN
@@ -943,7 +943,7 @@ Wire Wire Line
 Wire Wire Line
 	900  8350 900  8650
 $Comp
-L template-rescue:TPS560430YF-formula U101
+L cockpit_hitl-rescue:TPS560430YF-formula-template-rescue U101
 U 1 1 5C75D405
 P 3200 8800
 F 0 "U101" H 3225 9265 50  0000 C CNN
@@ -998,7 +998,7 @@ F 3 "" H 5700 9050 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L template-rescue:L_100uH-formula L101
+L cockpit_hitl-rescue:L_100uH-formula-template-rescue L101
 U 1 1 5F881F17
 P 4500 8750
 F 0 "L101" H 4500 8850 50  0000 C CNN
@@ -1200,7 +1200,7 @@ NoConn ~ 9000 4150
 NoConn ~ 9000 4550
 Text Label 5300 2500 0    50   ~ 0
 STEERING_POT_SENSE
-Text Label 3850 1700 0    50   ~ 0
+Text Label 6950 1300 0    50   ~ 0
 RTD_LSD
 Text Notes 5650 1550 3    50   ~ 0
 Debugging LEDs
@@ -1440,23 +1440,10 @@ $EndComp
 Connection ~ 5600 4350
 Wire Wire Line
 	5600 4350 6050 4350
-Wire Wire Line
-	3850 1700 3800 1700
 Text Notes 5500 2750 0    50   ~ 0
 R and C are placeholders 
 Text Notes 6100 3750 0    50   ~ 0
 R and C are placeholders 
-$Comp
-L power:VCC #PWR?
-U 1 1 5FB6AAAB
-P 6950 1300
-F 0 "#PWR?" H 6950 1150 50  0001 C CNN
-F 1 "VCC" H 6965 1473 50  0000 C CNN
-F 2 "" H 6950 1300 50  0001 C CNN
-F 3 "" H 6950 1300 50  0001 C CNN
-	1    6950 1300
-	1    0    0    -1  
-$EndComp
 Text Notes 6050 4600 0    50   ~ 0
 R and C are placeholders 
 Text Notes 12600 2300 1    50   ~ 0
@@ -1526,16 +1513,11 @@ Wire Notes Line
 Wire Notes Line
 	13650 4250 13650 5100
 Wire Wire Line
-	6950 1800 6950 1950
-$Comp
-L power:GND #PWR?
-U 1 1 5FDA4807
-P 6950 1950
-F 0 "#PWR?" H 6950 1700 50  0001 C CNN
-F 1 "GND" H 6955 1777 50  0000 C CNN
-F 2 "" H 6950 1950 50  0001 C CNN
-F 3 "" H 6950 1950 50  0001 C CNN
-	1    6950 1950
-	1    0    0    -1  
-$EndComp
+	4150 1300 6950 1300
+Wire Wire Line
+	3800 1700 4150 1700
+Wire Wire Line
+	4150 1300 4150 1700
+Text Notes 6550 1400 0    50   ~ 0
+add pull-up resistor
 $EndSCHEMATC
