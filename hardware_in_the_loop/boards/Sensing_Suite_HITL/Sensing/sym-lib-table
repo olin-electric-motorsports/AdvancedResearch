@@ -1,0 +1,4 @@
+(sym_lib_table
+  (lib (name template-rescue)(type Legacy)(uri ${KIPRJMOD}/template-rescue.lib)(options "")(descr ""))
+  (lib (name temp_Arnav)(type Legacy)(uri ${LOCAL_DIR}/AdvancedResearch/hardware_in_the_loop/boards/Sensing_Suite_HITL/Sensing/temp_Arnav.lib)(options "")(descr ""))
+)
