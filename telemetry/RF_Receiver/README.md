@@ -1,6 +1,6 @@
 # RF Receiver
 
-Bock Diagram
-![BlockDiagramRF](RF_BlockDiagram3.png)
+Block Diagram
+![BlockDiagramRF](RF_BlockDiagram3)
 
 
