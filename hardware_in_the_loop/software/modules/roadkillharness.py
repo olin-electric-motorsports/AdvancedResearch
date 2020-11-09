@@ -7,7 +7,7 @@ from modules.iocontroller import IOController
 from modules.cancontroller import CANController
 
 # Constant definitions
-root_path = os.path.abspath(os.path.join(os.path.dirname(__file__), os.pardir)) # to software
+root_path = os.path.abspath(os.path.join(os.path.dirname(__file__), os.pardir))  # to software
 artifacts_path = os.path.join(root_path, "artifacts")
 
 

@@ -1,6 +1,7 @@
 # Extended python imports
 import serial
 
+
 class IOController:
     """High level python object to interface with hardware.
 
@@ -23,7 +24,7 @@ class IOController:
                 - 0 or 1 for digital, volts for analog
 
         Message format:
-            2 bytes. 
+            2 bytes.
             Byte 1: Address (int, 0-255)
             Byte 2: Value
 
@@ -37,11 +38,11 @@ class IOController:
         address = bytes(self.pin_info[pin]["address"])
         data: bytes = b""
         if self.pin_info[pin]["type"] == "DIGITAL":
-            data = bytes([value])
+            data = bytes([value])  # If value isn't dumped in a list first, it just makes a bunch of '0x00' bytes
         elif self.pin_info[pin]["type"] == "ANALOG":
             data = bytes([int(value * 8)])
         else:
-            raise Exception(f"Unsupported signal type: {self.pin_info[pin]["type"]}")
+            raise Exception(f"Unsupported signal type: {self.pin_info[pin]['type']}")
 
         request = address + data
         self._send_request(request)
