@@ -4,7 +4,7 @@ class ECU:
     https://docs.olinelectricmotorsports.com/display/AE/ECUs
     """
 
-    def __init__(self, name: str, io: IOControler):
+    def __init__(self, name: str, io):
         self.name = name  # ALL_CAPS
         self.io = io  # Link to IOController for hardware state lookups
         self.states = {}  # This is populated by the CANController

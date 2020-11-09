@@ -21,7 +21,7 @@ class RoadkillHarness:
         # Create IOController
         self.io = IOController(
             pin_info_path=os.path.join(artifacts_path, "pin_info.csv"),
-            serial_path="/dev/serialdevice",  # TODO make this static with udev rule
+            serial_path="/dev/cu.usbmodem142101",  # TODO make this static with udev rule
         )
 
         # Create all ECUs

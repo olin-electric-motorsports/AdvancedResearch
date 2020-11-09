@@ -14,12 +14,14 @@ class IOController:
         self.pin_info = self.read_pin_info(path=pin_info_path)
         try:
             self.serial = serial.Serial(port=serial_path, baudrate=115200, timeout=5)
-        except serial.serialutil.SerialException as e:
+        except Exception as e:
             # Couldn't open the specified port; initialize w/o hardware for testing
+            print("Could not connect to HitL System Interface!")
+            print(e)
             self.serial = None
 
 
-    def set_io(self, pin: str, value) -> None:
+    def set_state(self, pin: str, value) -> None:
         """Set the value of an IO pin in the HitL system
 
         Args:
@@ -30,26 +32,29 @@ class IOController:
 
         Message format:
             2 bytes.
-            Byte 1: Address (int, 0-255)
+            Byte 1: 
+                Bit 0: 1 (indicates a set request)
+                Bits 1-7: Address (int)
+
             Byte 2: Value
 
             Value format
                 Digital: 0 or 1 (easy enough)
-                Analog: <5 bit>.<3 bit> floating point value (0 to 16.875 V)
+                Analog: <5 bit>.<3 bit> floating point value (0 to 31.875 V)
                     For example 5V is 00101000 or 0x40
                     For example, 2.5V is 00010100 or 0x20
                     To convert from int, multiply by 8 (or bitshift left 3 times)
         """
-        address = bytes(self.pin_info[pin]["address"])
+        address = self.pin_info[pin]["address"] + 128  # set the leftmost bit to 1 to designate message as setter
         data: bytes = b""
         if self.pin_info[pin]["type"] == "DIGITAL":
-            data = bytes([value])  # If value isn't dumped in a list first, it just makes a bunch of '0x00' bytes
+            data = value  # If value isn't dumped in a list first, it just makes a bunch of '0x00' bytes
         elif self.pin_info[pin]["type"] == "ANALOG":
-            data = bytes([int(value * 8)])
+            data = int(value * 8)
         else:
             raise Exception(f"Unsupported signal type: {self.pin_info[pin]['type']}")
 
-        request = address + data
+        request = bytes([address, data])
         self._send_request(request)
 
     def get_state(self, pin: str):
@@ -59,7 +64,9 @@ class IOController:
             pin (str): The name of the state we want to get (e.x. "THROTTLE_POT_1", not 11)
 
         Message format:
-            1 byte: address of the signal we want
+            1 byte: 
+                Bit 0: 0 (indicates a get request)
+                Bits 1-7: address of the signal we want
 
         Note: If the HitL system interface sees a 1 byte message, it knows to get.
         If it sees a 2 byte message, it knows to set.
@@ -67,15 +74,16 @@ class IOController:
         Returns:
             int or float: The value of the requested state
         """
-        # Create and send request
-        request = bytes(self.pin_info[pin]["address"])
-        self._send_request(request)
-
         # Flush the serial buffer, in case anything has come in
         self.serial.flush()
 
+        # Create and send request
+        request = bytes([self.pin_info[pin]["address"]])
+        self._send_request(request)
+
         # Wait for response. We want this to block (which it does)
         response = self.serial.read(size=1)  # Read 1 byte
+        print(response)
 
         out = 0  # Type float or int
         if self.pin_info[pin]["type"] == "DIGITAL":
@@ -132,6 +140,7 @@ class IOController:
         Args:
             request (bytes): The bytes to send
         """
+        print(request)
         self.serial.write(request)
 
     def __del__(self) -> None:
