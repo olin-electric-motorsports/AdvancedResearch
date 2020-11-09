@@ -20,7 +20,6 @@ class IOController:
             print(e)
             self.serial = None
 
-
     def set_state(self, pin: str, value) -> None:
         """Set the value of an IO pin in the HitL system
 
@@ -32,7 +31,7 @@ class IOController:
 
         Message format:
             2 bytes.
-            Byte 1: 
+            Byte 1:
                 Bit 0: 1 (indicates a set request)
                 Bits 1-7: Address (int)
 
@@ -64,7 +63,7 @@ class IOController:
             pin (str): The name of the state we want to get (e.x. "THROTTLE_POT_1", not 11)
 
         Message format:
-            1 byte: 
+            1 byte:
                 Bit 0: 0 (indicates a get request)
                 Bits 1-7: address of the signal we want
 
@@ -148,4 +147,5 @@ class IOController:
 
         Close the serial port for a clean teardown
         """
-        if self.serial: self.serial.close()
+        if self.serial:
+            self.serial.close()

@@ -17,6 +17,7 @@ def io():
     time.sleep(2)  # Was seeing weird errors without this
     return out
 
+
 def test_udev(io):
     # Create an IOController to make sure it can connect to hardware!
     assert io.serial
@@ -31,8 +32,9 @@ def test_read_io_file(io):
     assert digital["min"] == 0
     assert digital["simulator"] == "EXAMPLE1"
 
+
 def test_get_set(io):
     # Assumes plugged into arduino running `firmware/arduino/hitl_interface_mock.ino`
     io.set_state("ARDUINO_STATE", 1)
     time.sleep(1)
-    assert (0.99 < io.get_state("ARDUINO_STATE") < 1.01)
+    assert 0.99 < io.get_state("ARDUINO_STATE") < 1.01
