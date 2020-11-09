@@ -1,2 +1,2 @@
 Address,Simulator,Name,Type,Min,Max,Notes
-0,ARDUINO,ARDUINO_STATE,ANALOG,0,5,None
+2,ARDUINO,ARDUINO_STATE,ANALOG,0,5,None

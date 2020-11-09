@@ -23,6 +23,7 @@ void loop() {
     }
    
     else { //this is a get request; address doesn't matter for now, return state
+      delay(20);
       Serial.write(state);
 
       // blink once on get requests
@@ -30,5 +31,7 @@ void loop() {
       delay(1000);                       // wait for a second
       digitalWrite(LED_BUILTIN, LOW);    // turn the LED off by making the voltage LOW
     }
+
+    Serial.flush();
   }
 }
