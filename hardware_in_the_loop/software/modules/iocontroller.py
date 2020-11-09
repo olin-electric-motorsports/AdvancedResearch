@@ -12,7 +12,7 @@ class IOController:
 
     def __init__(self, pin_info_path: str, serial_path: str):
         self.pin_info = self.read_pin_info(path=pin_info_path)
-        self.serial = serial.Serial(port=serial_path, baudrate=115200)
+        self.serial = serial.Serial(port=serial_path, baudrate=115200, timeout=5)
 
     def set_io(self, pin: str, value) -> None:
         """Set the value of an IO pin in the HitL system
@@ -46,6 +46,41 @@ class IOController:
 
         request = address + data
         self._send_request(request)
+
+    def get_state(self, pin: str):
+        """Request a hardware state from the HitL system.
+
+        Args:
+            pin (str): The name of the state we want to get (e.x. "THROTTLE_POT_1", not 11)
+
+        Message format:
+            1 byte: address of the signal we want
+
+        Note: If the HitL system interface sees a 1 byte message, it knows to get.
+        If it sees a 2 byte message, it knows to set.
+
+        Returns:
+            int or float: The value of the requested state
+        """
+        # Create and send request
+        request = bytes(self.pin_info[pin]["address"])
+        self._send_request(request)
+
+        # Flush the serial buffer, in case anything has come in
+        self.serial.flush()
+
+        # Wait for response. We want this to block (which it does)
+        response = self.serial.read(size=1)  # Read 1 byte
+
+        out = 0  # Type float or int
+        if self.pin_info[pin]["type"] == "DIGITAL":
+            out = int.from_bytes(response, "big")
+        elif self.pin_info[pin]["type"] == "ANALOG":
+            out = int.from_bytes(response, "big") / 8  # See set_io docstring message format
+        else:
+            raise Exception(f"Unsupported signal type: {self.pin_info[pin]['type']}")
+
+        return out
 
     def read_pin_info(self, path: str) -> dict:
         """Read in the pin address information, given a path to a .csv file
