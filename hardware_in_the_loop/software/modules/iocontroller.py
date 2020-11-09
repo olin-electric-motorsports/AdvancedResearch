@@ -12,7 +12,12 @@ class IOController:
 
     def __init__(self, pin_info_path: str, serial_path: str):
         self.pin_info = self.read_pin_info(path=pin_info_path)
-        self.serial = serial.Serial(port=serial_path, baudrate=115200, timeout=5)
+        try:
+            self.serial = serial.Serial(port=serial_path, baudrate=115200, timeout=5)
+        except serial.serialutil.SerialException as e:
+            # Couldn't open the specified port; initialize w/o hardware for testing
+            self.serial = None
+
 
     def set_io(self, pin: str, value) -> None:
         """Set the value of an IO pin in the HitL system
@@ -134,4 +139,4 @@ class IOController:
 
         Close the serial port for a clean teardown
         """
-        self.serial.close()
+        if self.serial: self.serial.close()

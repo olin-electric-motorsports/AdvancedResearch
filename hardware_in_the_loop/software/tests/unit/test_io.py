@@ -11,6 +11,10 @@ def io():
         serial_path="/dev/serialdevice",  # TODO make this static with udev rule
     )
 
+def test_udev(io):
+    # Create an IOController to make sure it can connect to hardware!
+    assert io.serial
+
 
 def test_read_io_file(io):
     analog = io.pin_info["EXAMPLE_ANALOG_SIGNAL"]
