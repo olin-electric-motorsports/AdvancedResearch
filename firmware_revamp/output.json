@@ -1,0 +1,346 @@
+{
+    "GLOBAL": {
+        "id": "0x00",
+        "len": "8"
+    },
+    "PANIC": {
+        "id": "0x01",
+        "len": "1"
+    },
+    "BRAKE_LIGHT": {
+        "id": "0x0B",
+        "len": "5"
+    },
+    "THROTTLE": {
+        "id": "0x0C",
+        "len": "5"
+    },
+    "AIR_CONTROL_CRITICAL": {
+        "id": "0x0D",
+        "len": "5"
+    },
+    "AIR_CONTROL_SENSE": {
+        "id": "0x0E",
+        "len": "8"
+    },
+    "DASHBOARD": {
+        "id": "0x0F",
+        "len": "4"
+    },
+    "BMS_CORE": {
+        "id": "0x10",
+        "len": "8"
+    },
+    "STEERING_WHEEL": {
+        "id": "0x12",
+        "len": "1"
+    },
+    "MOTORCONTROLLER": {
+        "id": "0x15",
+        "len": "8"
+    },
+    "WHEEL_SPEED_FL": {
+        "id": "0x16",
+        "len": "2"
+    },
+    "WHEEL_SPEED_FR": {
+        "id": "0x17",
+        "len": "2"
+    },
+    "WHEEL_SPEED_BL": {
+        "id": "0x18",
+        "len": "2"
+    },
+    "WHEEL_SPEED_BR": {
+        "id": "0x19",
+        "len": "2"
+    },
+    "SUS_TRAVEL_FL": {
+        "id": "0x1A",
+        "len": "3"
+    },
+    "SUS_TRAVEL_FR": {
+        "id": "0x1B",
+        "len": "3"
+    },
+    "SUS_TRAVEL_BL": {
+        "id": "0x1C",
+        "len": "3"
+    },
+    "SUS_TRAVEL_BR": {
+        "id": "0x1D",
+        "len": "3"
+    },
+    "SUS_STRAIN_FL_1": {
+        "id": "0x1E",
+        "len": "8"
+    },
+    "SUS_STRAIN_FL_2": {
+        "id": "0x1F",
+        "len": "8"
+    },
+    "SUS_STRAIN_FL_3": {
+        "id": "0x20",
+        "len": "8"
+    },
+    "SUS_STRAIN_FR_1": {
+        "id": "0x21",
+        "len": "8"
+    },
+    "SUS_STRAIN_FR_2": {
+        "id": "0x22",
+        "len": "8"
+    },
+    "SUS_STRAIN_FR_3": {
+        "id": "0x23",
+        "len": "8"
+    },
+    "SUS_STRAIN_BL_1": {
+        "id": "0x24",
+        "len": "8"
+    },
+    "SUS_STRAIN_BL_2": {
+        "id": "0x25",
+        "len": "8"
+    },
+    "SUS_STRAIN_BL_3": {
+        "id": "0x26",
+        "len": "8"
+    },
+    "SUS_STRAIN_BR_1": {
+        "id": "0x27",
+        "len": "8"
+    },
+    "SUS_STRAIN_BR_2": {
+        "id": "0x28",
+        "len": "8"
+    },
+    "SUS_STRAIN_BR_3": {
+        "id": "0x29",
+        "len": "8"
+    },
+    "TIRE_TEMP_FL_1": {
+        "id": "0x2A",
+        "len": "8"
+    },
+    "TIRE_TEMP_FL_2": {
+        "id": "0x2B",
+        "len": "8"
+    },
+    "TIRE_TEMP_FL_3": {
+        "id": "0x2C",
+        "len": "8"
+    },
+    "TIRE_TEMP_FL_4": {
+        "id": "0x2D",
+        "len": "8"
+    },
+    "TIRE_TEMP_FR_1": {
+        "id": "0x2E",
+        "len": "8"
+    },
+    "TIRE_TEMP_FR_2": {
+        "id": "0x2F",
+        "len": "8"
+    },
+    "TIRE_TEMP_FR_3": {
+        "id": "0x30",
+        "len": "8"
+    },
+    "TIRE_TEMP_FR_4": {
+        "id": "0x31",
+        "len": "8"
+    },
+    "TIRE_TEMP_BL_1": {
+        "id": "0x32",
+        "len": "8"
+    },
+    "TIRE_TEMP_BL_2": {
+        "id": "0x33",
+        "len": "8"
+    },
+    "TIRE_TEMP_BL_3": {
+        "id": "0x34",
+        "len": "8"
+    },
+    "TIRE_TEMP_BL_4": {
+        "id": "0x35",
+        "len": "8"
+    },
+    "TIRE_TEMP_BR_1": {
+        "id": "0x36",
+        "len": "8"
+    },
+    "TIRE_TEMP_BR_2": {
+        "id": "0x37",
+        "len": "8"
+    },
+    "TIRE_TEMP_BR_3": {
+        "id": "0x38",
+        "len": "8"
+    },
+    "TIRE_TEMP_BR_4": {
+        "id": "0x39",
+        "len": "8"
+    },
+    "BMS_VOLT_1_1": {
+        "id": "0x40",
+        "len": "8"
+    },
+    "BMS_VOLT_1_2": {
+        "id": "0x41",
+        "len": "8"
+    },
+    "BMS_VOLT_1_3": {
+        "id": "0x42",
+        "len": "8"
+    },
+    "BMS_VOLT_1_4": {
+        "id": "0x43",
+        "len": "8"
+    },
+    "BMS_VOLT_2_1": {
+        "id": "0x44",
+        "len": "8"
+    },
+    "BMS_VOLT_2_2": {
+        "id": "0x45",
+        "len": "8"
+    },
+    "BMS_VOLT_2_3": {
+        "id": "0x46",
+        "len": "8"
+    },
+    "BMS_VOLT_2_4": {
+        "id": "0x47",
+        "len": "8"
+    },
+    "BMS_VOLT_3_1": {
+        "id": "0x48",
+        "len": "8"
+    },
+    "BMS_VOLT_3_2": {
+        "id": "0x49",
+        "len": "8"
+    },
+    "BMS_VOLT_3_3": {
+        "id": "0x4A",
+        "len": "8"
+    },
+    "BMS_VOLT_3_4": {
+        "id": "0x4B",
+        "len": "8"
+    },
+    "BMS_VOLT_4_1": {
+        "id": "0x4C",
+        "len": "8"
+    },
+    "BMS_VOLT_4_2": {
+        "id": "0x4D",
+        "len": "8"
+    },
+    "BMS_VOLT_4_3": {
+        "id": "0x4E",
+        "len": "8"
+    },
+    "BMS_VOLT_4_4": {
+        "id": "0x4F",
+        "len": "8"
+    },
+    "BMS_VOLT_5_1": {
+        "id": "0x50",
+        "len": "8"
+    },
+    "BMS_VOLT_5_2": {
+        "id": "0x51",
+        "len": "8"
+    },
+    "BMS_VOLT_5_3": {
+        "id": "0x52",
+        "len": "8"
+    },
+    "BMS_VOLT_5_4": {
+        "id": "0x53",
+        "len": "8"
+    },
+    "BMS_VOLT_6_1": {
+        "id": "0x54",
+        "len": "8"
+    },
+    "BMS_VOLT_6_2": {
+        "id": "0x55",
+        "len": "8"
+    },
+    "BMS_VOLT_6_3": {
+        "id": "0x56",
+        "len": "8"
+    },
+    "BMS_VOLT_6_4": {
+        "id": "0x57",
+        "len": "8"
+    },
+    "BMS_TEMP_1": {
+        "id": "0x58",
+        "len": "8"
+    },
+    "BMS_TEMP_2": {
+        "id": "0x59",
+        "len": "8"
+    },
+    "BMS_TEMP_3": {
+        "id": "0x5A",
+        "len": "4"
+    },
+    "BMS_TEMP_4": {
+        "id": "0x5B",
+        "len": "8"
+    },
+    "BMS_TEMP_5": {
+        "id": "0x5C",
+        "len": "8"
+    },
+    "BMS_TEMP_6": {
+        "id": "0x5D",
+        "len": "8"
+    },
+    "BMS_TEMP_7": {
+        "id": "0x5E",
+        "len": "8"
+    },
+    "BMS_TEMP_8": {
+        "id": "0x5F",
+        "len": "8"
+    },
+    "BMS_TEMP_9": {
+        "id": "0x60",
+        "len": "8"
+    },
+    "BMS_TEMP_10": {
+        "id": "0x61",
+        "len": "8"
+    },
+    "BMS_TEMP_11": {
+        "id": "0x62",
+        "len": "8"
+    },
+    "BMS_TEMP_12": {
+        "id": "0x63",
+        "len": "8"
+    },
+    "MC_POSITION": {
+        "id": "0xA5",
+        "len": "8"
+    },
+    "MC_CURRENT": {
+        "id": "0xA6",
+        "len": "8"
+    },
+    "MC_VOLTAGE": {
+        "id": "0xA7",
+        "len": "8"
+    },
+    "MC_COMMAND": {
+        "id": "0xC0",
+        "len": "8"
+    }
+}

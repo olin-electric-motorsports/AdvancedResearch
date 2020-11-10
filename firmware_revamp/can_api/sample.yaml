@@ -2,18 +2,18 @@ Messages-TX:
   BrakeLightStatus:
     ID: 11
     Data Bytes: 5
-
+    freq:
     Signals:
         ErrorCode:
           # Only necessary information in this section is "length", other variables have default values in python script
 
           # length in bits
-          length: 8 
+          length: 8
           offset: 0
-                            
+
         BrakeAnalogVoltageMSB:
           # Shows all variables
-          length: 8 
+          length: 8
           scale: 10
           offset: 0
           min: 0
