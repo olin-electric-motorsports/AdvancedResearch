@@ -36,5 +36,11 @@ def test_read_io_file(io):
 def test_get_set(io):
     # Assumes plugged into arduino running `firmware/arduino/hitl_interface_mock.ino`
     io.set_state("ARDUINO_STATE", 1)
-    time.sleep(1)
+    time.sleep(2)
     assert 0.99 < io.get_state("ARDUINO_STATE") < 1.01
+
+    time.sleep(2)
+
+    io.set_state("ARDUINO_STATE", 2)
+    time.sleep(2)
+    assert 1.99 < io.get_state("ARDUINO_STATE") < 2.01
