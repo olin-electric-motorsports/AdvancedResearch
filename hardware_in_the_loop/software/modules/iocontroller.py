@@ -82,7 +82,7 @@ class IOController:
 
         # Wait for response. We want this to block (which it does)
         response = self.serial.read(size=1)  # Read 1 byte
-        print(response)
+        print(f"Recieved {response}")
 
         out = 0  # Type float or int
         if self.pin_info[pin]["type"] == "DIGITAL":
@@ -139,7 +139,7 @@ class IOController:
         Args:
             request (bytes): The bytes to send
         """
-        print(request)
+        print(f"Sent {request}")
         self.serial.write(request)
 
     def __del__(self) -> None:
