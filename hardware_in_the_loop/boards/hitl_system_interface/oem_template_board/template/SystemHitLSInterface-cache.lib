@@ -1,6 +1,218 @@
 EESchema-LIBRARY Version 2.4
 #encoding utf-8
 #
+# formula_200mA_Fuse
+#
+DEF formula_200mA_Fuse F 0 40 Y Y 1 F N
+F0 "F" 0 150 50 H V C CNN
+F1 "formula_200mA_Fuse" 0 -150 50 H V C CNN
+F2 "footprints:Fuse_1812" -50 0 50 H I C CNN
+F3 "" -50 0 50 H I C CNN
+F4 "507-1767-1-ND " 100 250 50 H I C CNN "MPN"
+F5 "https://www.digikey.com/product-detail/en/bel-fuse-inc/0ZCG0110AF2C/507-1767-1-ND/4156157" 200 350 50 H I C CNN "PurchasingLink"
+F6 "DK" 300 450 50 H I C CNN "MFN"
+DRAW
+A -50 0 50 -1799 -1 0 1 0 N -100 0 0 0
+A 49 0 49 1800 889 0 1 0 N 0 0 50 50
+A 50 1 49 900 -11 0 1 0 N 50 50 100 0
+X 1 1 -300 0 200 R 50 50 1 1 I
+X 2 2 300 0 200 L 50 50 1 1 I
+ENDDRAW
+ENDDEF
+#
+# formula_C_100nF
+#
+DEF formula_C_100nF C 0 10 N Y 1 F N
+F0 "C" 25 100 50 H V L CNN
+F1 "formula_C_100nF" 25 -100 50 H V L CNN
+F2 "footprints:C_0603_1608Metric" 38 -150 50 H I C CNN
+F3 "http://www.samsungsem.com/kr/support/product-search/mlcc/CL10A475KQ8NNNC.jsp" 25 100 50 H I C CNN
+F4 "DK" 0 0 60 H I C CNN "MFN"
+F5 "1276-6717-1-ND" 0 0 60 H I C CNN "MPN"
+F6 "https://www.digikey.com/product-detail/en/samsung-electro-mechanics/CL10B104KA8WPNC/1276-6717-1-ND/5961576" 425 500 60 H I C CNN "PurchasingLink"
+$FPLIST
+ C?
+ C_????_*
+ C_????
+ SMD*_c
+ Capacitor*
+$ENDFPLIST
+DRAW
+P 2 0 1 20 -80 -30 80 -30 N
+P 2 0 1 20 -80 30 80 30 N
+X ~ 1 0 150 110 D 50 50 1 1 P
+X ~ 2 0 -150 110 U 50 50 1 1 P
+ENDDRAW
+ENDDEF
+#
+# formula_C_4.7uF
+#
+DEF formula_C_4.7uF C 0 10 N Y 1 F N
+F0 "C" 25 100 50 H V L CNN
+F1 "formula_C_4.7uF" 25 -100 50 H V L CNN
+F2 "footprints:C_0603_1608Metric" 38 -150 50 H I C CNN
+F3 "http://www.samsungsem.com/kr/support/product-search/mlcc/CL10A475KQ8NNNC.jsp" 25 100 50 H I C CNN
+F4 "DK" 0 0 60 H I C CNN "MFN"
+F5 "1276-1045-1-ND" 0 0 60 H I C CNN "MPN"
+F6 "https://www.digikey.com/product-detail/en/samsung-electro-mechanics/CL10A475KQ8NNNC/1276-1045-1-ND/3889131" 425 500 60 H I C CNN "PurchasingLink"
+$FPLIST
+ C?
+ C_????_*
+ C_????
+ SMD*_c
+ Capacitor*
+$ENDFPLIST
+DRAW
+P 2 0 1 20 -80 -30 80 -30 N
+P 2 0 1 20 -80 30 80 30 N
+X ~ 1 0 150 110 D 50 50 1 1 P
+X ~ 2 0 -150 110 U 50 50 1 1 P
+ENDDRAW
+ENDDEF
+#
+# formula_FT232RL
+#
+DEF formula_FT232RL U 0 20 Y Y 1 F N
+F0 "U" -650 900 50 H V L CNN
+F1 "formula_FT232RL" 400 900 50 H V L CNN
+F2 "Package_SO:SSOP-28_5.3x10.2mm_P0.65mm" 1100 -900 50 H I C CNN
+F3 "" 0 0 50 H I C CNN
+F4 "https://www.digikey.com/product-detail/en/ftdi-future-technology-devices-international-ltd/FT232RL-REEL/768-1007-1-ND/1836402" 0 0 50 H I C CNN "Purchasing Link"
+F5 "768-1007-1-ND" 0 0 50 H I C CNN "Part Number (DK)"
+$FPLIST
+ SSOP*5.3x10.2mm*P0.65mm*
+$ENDFPLIST
+DRAW
+S -650 850 650 -850 0 1 10 f
+X TXD 1 800 700 150 L 50 50 1 1 O
+X DCD 10 800 100 150 L 50 50 1 1 I L
+X CTS 11 800 400 150 L 50 50 1 1 I L
+X CBUS4 12 800 -700 150 L 50 50 1 1 B
+X CBUS2 13 800 -500 150 L 50 50 1 1 B
+X CBUS3 14 800 -600 150 L 50 50 1 1 B
+X USBD+ 15 -800 400 150 R 50 50 1 1 B
+X USBD- 16 -800 300 150 R 50 50 1 1 B
+X 3V3OUT 17 -800 700 150 R 50 50 1 1 w
+X GND 18 100 -1000 150 U 50 50 1 1 W
+X ~RESET~ 19 -800 0 150 R 50 50 1 1 I
+X DTR 2 800 300 150 L 50 50 1 1 O V
+X VCC 20 100 1000 150 D 50 50 1 1 W
+X GND 21 200 -1000 150 U 50 50 1 1 W
+X CBUS1 22 800 -400 150 L 50 50 1 1 B
+X CBUS0 23 800 -300 150 L 50 50 1 1 B
+X AGND 25 -200 -1000 150 U 50 50 1 1 W
+X TEST 26 -800 -700 150 R 50 50 1 1 I
+X OSCI 27 -800 -200 150 R 50 50 1 1 I
+X OSCO 28 -800 -400 150 R 50 50 1 1 O
+X RTS 3 800 500 150 L 50 50 1 1 O V
+X VCCIO 4 -100 1000 150 D 50 50 1 1 W
+X RXD 5 800 600 150 L 50 50 1 1 I
+X RI 6 800 0 150 L 50 50 1 1 I L
+X GND 7 0 -1000 150 U 50 50 1 1 W
+X DCR 9 800 200 150 L 50 50 1 1 I L
+ENDDRAW
+ENDDEF
+#
+# formula_LED_0805
+#
+DEF formula_LED_0805 D 0 40 N N 1 F N
+F0 "D" 0 -100 50 H V C CNN
+F1 "formula_LED_0805" 0 100 50 H V C CNN
+F2 "footprints:LED_0805_OEM" -100 0 50 H I C CNN
+F3 "http://www.osram-os.com/Graphics/XPic9/00078860_0.pdf" 0 100 50 H I C CNN
+F4 "DK" 0 0 60 H I C CNN "MFN"
+F5 "475-1410-1-ND" 0 0 60 H I C CNN "MPN"
+F6 "https://www.digikey.com/products/en?keywords=475-1410-1-ND" 400 500 60 H I C CNN "PurchasingLink"
+$FPLIST
+ LED*
+$ENDFPLIST
+DRAW
+P 2 0 1 8 -50 -50 -50 50 N
+P 2 0 1 0 -50 0 50 0 N
+P 4 0 1 8 50 -50 50 50 -50 0 50 -50 N
+P 5 0 1 0 -120 -30 -180 -90 -150 -90 -180 -90 -180 -60 N
+P 5 0 1 0 -70 -30 -130 -90 -100 -90 -130 -90 -130 -60 N
+X K 1 -150 0 100 R 50 50 1 1 P
+X A 2 150 0 100 L 50 50 1 1 P
+ENDDRAW
+ENDDEF
+#
+# formula_NanoFit_RA_SMT_08
+#
+DEF formula_NanoFit_RA_SMT_08 J 0 40 Y Y 1 F N
+F0 "J" 0 350 50 H V C CNN
+F1 "formula_NanoFit_RA_SMT_08" 0 250 50 H V C CNN
+F2 "footprints:NanoFit_RA_8" -300 -650 50 H I C CNN
+F3 "" 0 250 50 H I C CNN
+DRAW
+S -100 200 100 -600 0 1 0 f
+X 1 1 200 150 100 L 50 50 1 1 B
+X 2 2 200 50 100 L 50 50 1 1 B
+X 3 3 200 -50 100 L 50 50 1 1 B
+X 4 4 200 -150 100 L 50 50 1 1 B
+X 5 5 200 -250 100 L 50 50 1 1 B
+X 6 6 200 -350 100 L 50 50 1 1 B
+X 7 7 200 -450 100 L 50 50 1 1 B
+X 8 8 200 -550 100 L 50 50 1 1 B
+ENDDRAW
+ENDDEF
+#
+# formula_R_200
+#
+DEF formula_R_200 R 0 0 N Y 1 F N
+F0 "R" 80 0 50 V V C CNN
+F1 "formula_R_200" -100 0 50 V V C CNN
+F2 "footprints:R_0805_OEM" -70 0 50 H I C CNN
+F3 "https://www.seielect.com/Catalog/SEI-RMCF_RMCP.pdf" 80 0 50 H I C CNN
+F4 "DK" 0 0 60 H I C CNN "MFN"
+F5 "RMCF0805JT200RCT-ND" 0 0 60 H I C CNN "MPN"
+F6 "https://www.digikey.com/products/en?keywords=RMCF0805JT200RCT-ND" 480 400 60 H I C CNN "PurchasingLink"
+$FPLIST
+ R_*
+ Resistor_*
+$ENDFPLIST
+DRAW
+S -40 -100 40 100 0 1 10 N
+X ~ 1 0 150 50 D 50 50 1 1 P
+X ~ 2 0 -150 50 U 50 50 1 1 P
+ENDDRAW
+ENDDEF
+#
+# formula_USB_MicroB
+#
+DEF formula_USB_MicroB U 0 40 Y Y 1 F N
+F0 "U" 150 -350 50 H V C CNN
+F1 "formula_USB_MicroB" 0 350 50 H V C CNN
+F2 "Connectors_USB:USB_Micro-B_Molex-105017-0001" -50 350 50 H I C CNN
+F3 "https://www.molex.com/pdm_docs/sd/1050170001_sd.pdf" -50 350 50 H I C CNN
+F4 "DK" 250 -250 50 H I C CNN "MFN"
+F5 "WM1399CT-ND" 350 -150 50 H I C CNN "MPN"
+F6 "https://www.digikey.com/product-detail/en/molex-llc/1050170001/WM1399CT-ND/2350885" 450 -50 50 H I C CNN "PurchasingLink"
+DRAW
+C -150 85 25 1 1 10 F
+C -25 135 15 1 1 10 F
+S -200 -300 200 300 1 1 10 f
+S -5 -300 5 -270 1 1 0 N
+S 10 50 -20 20 1 1 10 F
+S 200 -205 170 -195 1 1 0 N
+S 200 -105 170 -95 1 1 0 N
+S 200 -5 170 5 1 1 0 N
+S 200 195 170 205 1 1 0 N
+P 2 1 1 10 -75 85 25 85 N
+P 4 1 1 10 -125 85 -100 85 -50 135 -25 135 N
+P 4 1 1 10 -100 85 -75 85 -50 35 0 35 N
+P 4 1 1 10 25 110 25 60 75 85 25 110 F
+P 5 1 1 0 -170 220 -70 220 -80 190 -160 190 -170 220 F
+P 9 1 1 0 -185 230 -185 220 -175 190 -175 180 -65 180 -65 190 -55 220 -55 230 -185 230 N
+X VBUS 1 300 200 100 L 50 50 1 1 w
+X D- 2 300 -100 100 L 50 50 1 1 P
+X D+ 3 300 0 100 L 50 50 1 1 P
+X ID 4 300 -200 100 L 50 50 1 1 P
+X GND 5 0 -400 100 U 50 50 1 1 w
+X Shield 6 -100 -400 100 U 50 50 1 1 P
+ENDDRAW
+ENDDEF
+#
 # power_GND
 #
 DEF power_GND #PWR 0 0 Y Y 1 F P
