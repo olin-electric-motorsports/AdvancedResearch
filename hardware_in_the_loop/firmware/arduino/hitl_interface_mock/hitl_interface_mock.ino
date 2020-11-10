@@ -7,7 +7,7 @@ void setup() {
 
   // blink once on startup
   digitalWrite(LED_BUILTIN, HIGH);   // turn the LED on (HIGH is the voltage level)
-  delay(1000);                       // wait for a second
+  delay(200);                       // wait for a second
   digitalWrite(LED_BUILTIN, LOW);    // turn the LED off by making the voltage LOW
 }
 
@@ -25,13 +25,6 @@ void loop() {
     else { //this is a get request; address doesn't matter for now, return state
       delay(20);
       Serial.write(state);
-
-      // blink once on get requests
-      digitalWrite(LED_BUILTIN, HIGH);   // turn the LED on (HIGH is the voltage level)
-      delay(1000);                       // wait for a second
-      digitalWrite(LED_BUILTIN, LOW);    // turn the LED off by making the voltage LOW
     }
-
-    Serial.flush();
   }
 }
