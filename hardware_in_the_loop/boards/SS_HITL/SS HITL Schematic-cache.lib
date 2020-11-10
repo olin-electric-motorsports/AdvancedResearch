@@ -1,6 +1,233 @@
 EESchema-LIBRARY Version 2.4
 #encoding utf-8
 #
+# formula_MM_F_VT_04
+#
+DEF formula_MM_F_VT_04 J 0 40 Y Y 1 F N
+F0 "J" -100 1200 60 H V C CNN
+F1 "formula_MM_F_VT_04" 50 -250 60 H V C CNN
+F2 "footprints:micromatch_female_vert_4" -200 1100 60 H I C CNN
+F3 "http://www.te.com/commerce/DocumentDelivery/DDEController?Action=showdoc&DocId=Customer+Drawing%7F338068%7FF1%7Fpdf%7FEnglish%7FENG_CD_338068_F1.pdf%7F338068-4" -100 1200 60 H I C CNN
+F4 "TE" 100 1400 60 H I C CNN "MFN"
+F5 "338068-4" 200 1500 60 H I C CNN "MPN"
+F6 "http://www.te.com/global-en/product-338068-4.html" 0 1300 60 H I C CNN "PurchasingLink"
+DRAW
+S 150 -150 -150 250 0 1 0 f
+X 1 1 250 200 100 L 50 50 1 1 B
+X 2 2 250 100 100 L 50 50 1 1 B
+X 3 3 250 0 100 L 50 50 1 1 B
+X 4 4 250 -100 100 L 50 50 1 1 B
+ENDDRAW
+ENDDEF
+#
+# formula_MM_F_VT_06
+#
+DEF formula_MM_F_VT_06 J 0 40 Y Y 1 F N
+F0 "J" 0 350 60 H V C CNN
+F1 "formula_MM_F_VT_06" 100 -400 60 H V C CNN
+F2 "footprints:micromatch_female_vert_6" -100 250 60 H I C CNN
+F3 "http://www.te.com/commerce/DocumentDelivery/DDEController?Action=showdoc&DocId=Customer+Drawing%7F338068%7FF1%7Fpdf%7FEnglish%7FENG_CD_338068_F1.pdf%7F338068-6" -100 1200 60 H I C CNN
+F4 "TE" 100 1400 60 H I C CNN "MFN"
+F5 "338068-6" 200 1500 60 H I C CNN "MPN"
+F6 "http://www.te.com/global-en/product-338068-6.html" 0 1300 60 H I C CNN "PurchasingLink"
+DRAW
+S 150 -300 -150 300 0 1 0 f
+X 1 1 250 250 100 L 50 50 1 1 B
+X 2 2 250 150 100 L 50 50 1 1 B
+X 3 3 250 50 100 L 50 50 1 1 B
+X 4 4 250 -50 100 L 50 50 1 1 B
+X 5 5 250 -150 100 L 50 50 1 1 B
+X 6 6 250 -250 100 L 50 50 1 1 B
+ENDDRAW
+ENDDEF
+#
+# formula_MM_F_VT_20
+#
+DEF formula_MM_F_VT_20 J 0 40 Y Y 1 F N
+F0 "J" -100 1200 60 H V C CNN
+F1 "formula_MM_F_VT_20" 0 -950 60 H V C CNN
+F2 "footprints:micromatch_female_vert_20" -200 1100 60 H I C CNN
+F3 "http://www.te.com/commerce/DocumentDelivery/DDEController?Action=showdoc&DocId=Customer+Drawing%7F338068%7FF1%7Fpdf%7FEnglish%7FENG_CD_338068_F1.pdf%7F2-338068-0" -100 1200 60 H I C CNN
+F4 "TE" 100 1400 60 H I C CNN "MFN"
+F5 "2-338068-0" 200 1500 60 H I C CNN "MPN"
+F6 "http://www.te.com/global-en/product-2-338068-0.html" 0 1300 60 H I C CNN "PurchasingLink"
+DRAW
+S 50 -850 -250 1150 0 1 0 f
+X 1 1 150 1100 100 L 50 50 1 1 B
+X 10 10 150 200 100 L 50 50 1 1 B
+X 11 11 150 100 100 L 50 50 1 1 B
+X 12 12 150 0 100 L 50 50 1 1 B
+X 13 13 150 -100 100 L 50 50 1 1 B
+X 14 14 150 -200 100 L 50 50 1 1 B
+X 15 15 150 -300 100 L 50 50 1 1 B
+X 16 16 150 -400 100 L 50 50 1 1 B
+X 17 17 150 -500 100 L 50 50 1 1 B
+X 18 18 150 -600 100 L 50 50 1 1 B
+X 19 19 150 -700 100 L 50 50 1 1 B
+X 2 2 150 1000 100 L 50 50 1 1 B
+X 20 20 150 -800 100 L 50 50 1 1 B
+X 3 3 150 900 100 L 50 50 1 1 B
+X 4 4 150 800 100 L 50 50 1 1 B
+X 5 5 150 700 100 L 50 50 1 1 B
+X 6 6 150 600 100 L 50 50 1 1 B
+X 7 7 150 500 100 L 50 50 1 1 B
+X 8 8 150 400 100 L 50 50 1 1 B
+X 9 9 150 300 100 L 50 50 1 1 B
+ENDDRAW
+ENDDEF
+#
+# formula_MM_M_VT_04
+#
+DEF formula_MM_M_VT_04 J 0 40 Y Y 1 F N
+F0 "J" 0 150 60 H V C CNN
+F1 "formula_MM_M_VT_04" 0 -350 60 H V C CNN
+F2 "" -100 50 60 H I C CNN
+F3 "http://www.te.com/commerce/DocumentDelivery/DDEController?Action=showdoc&DocId=Customer+Drawing%7F338068%7FF1%7Fpdf%7FEnglish%7FENG_CD_338068_F1.pdf%7F1-215464-4" -100 1200 60 H I C CNN
+F4 "TE" 100 1400 60 H I C CNN "MFN"
+F5 "215464-4" 200 1500 60 H I C CNN "MPN"
+F6 "http://www.te.com/global-en/product-215464-4.html" 0 1300 60 H I C CNN "PurchasingLink"
+DRAW
+S -150 100 150 -300 0 1 0 f
+X 1 1 250 50 100 L 50 50 1 1 B
+X 2 2 250 -50 100 L 50 50 1 1 B
+X 3 3 250 -150 100 L 50 50 1 1 B
+X 4 4 250 -250 100 L 50 50 1 1 B
+ENDDRAW
+ENDDEF
+#
+# formula_MM_M_VT_06
+#
+DEF formula_MM_M_VT_06 J 0 40 Y Y 1 F N
+F0 "J" 0 350 60 H V C CNN
+F1 "formula_MM_M_VT_06" 0 -350 60 H V C CNN
+F2 "" -100 250 60 H I C CNN
+F3 "http://www.te.com/commerce/DocumentDelivery/DDEController?Action=showdoc&DocId=Customer+Drawing%7F338068%7FF1%7Fpdf%7FEnglish%7FENG_CD_338068_F1.pdf%7F1-215464-6" -100 1200 60 H I C CNN
+F4 "TE" 100 1400 60 H I C CNN "MFN"
+F5 "215464-6" 200 1500 60 H I C CNN "MPN"
+F6 "http://www.te.com/global-en/product-215464-6.html" 0 1300 60 H I C CNN "PurchasingLink"
+DRAW
+S -150 300 150 -300 0 1 0 f
+X 1 1 250 250 100 L 50 50 1 1 B
+X 2 2 250 150 100 L 50 50 1 1 B
+X 3 3 250 50 100 L 50 50 1 1 B
+X 4 4 250 -50 100 L 50 50 1 1 B
+X 5 5 250 -150 100 L 50 50 1 1 B
+X 6 6 250 -250 100 L 50 50 1 1 B
+ENDDRAW
+ENDDEF
+#
+# formula_MM_M_VT_20
+#
+DEF formula_MM_M_VT_20 J 0 40 Y Y 1 F N
+F0 "J" -100 1200 60 H V C CNN
+F1 "formula_MM_M_VT_20" -50 -900 60 H V C CNN
+F2 "footprints:micromatch_female_ra_20" -200 1100 60 H I C CNN
+F3 "" -100 1200 60 H I C CNN
+F4 "TE" 100 1400 60 H I C CNN "MFN"
+F5 "2-215464-0" 200 1500 60 H I C CNN "MPN"
+F6 "http://www.te.com/global-en/product-2-215464-0.html" 0 1300 60 H I C CNN "PurchasingLink"
+DRAW
+S -250 1150 50 -850 0 1 0 f
+X 1 1 150 1100 100 L 50 50 1 1 B
+X 10 10 150 200 100 L 50 50 1 1 B
+X 11 11 150 100 100 L 50 50 1 1 B
+X 12 12 150 0 100 L 50 50 1 1 B
+X 13 13 150 -100 100 L 50 50 1 1 B
+X 14 14 150 -200 100 L 50 50 1 1 B
+X 15 15 150 -300 100 L 50 50 1 1 B
+X 16 16 150 -400 100 L 50 50 1 1 B
+X 17 17 150 -500 100 L 50 50 1 1 B
+X 18 18 150 -600 100 L 50 50 1 1 B
+X 19 19 150 -700 100 L 50 50 1 1 B
+X 2 2 150 1000 100 L 50 50 1 1 B
+X 20 20 150 -800 100 L 50 50 1 1 B
+X 3 3 150 900 100 L 50 50 1 1 B
+X 4 4 150 800 100 L 50 50 1 1 B
+X 5 5 150 700 100 L 50 50 1 1 B
+X 6 6 150 600 100 L 50 50 1 1 B
+X 7 7 150 500 100 L 50 50 1 1 B
+X 8 8 150 400 100 L 50 50 1 1 B
+X 9 9 150 300 100 L 50 50 1 1 B
+ENDDRAW
+ENDDEF
+#
+# formula_MicroFit_VT_12
+#
+DEF formula_MicroFit_VT_12 J 0 40 Y Y 1 F N
+F0 "J" 50 950 100 H V C CNN
+F1 "formula_MicroFit_VT_12" 0 750 100 H V C CNN
+F2 "footprints:MicroFit_VT_12" 0 -750 100 H I C CNN
+F3 "" 50 -50 100 H I C CNN
+DRAW
+S -100 600 100 -600 0 1 0 f
+X ~ 1 200 550 100 L 50 50 1 1 I
+X ~ 10 200 -350 100 L 50 50 1 1 I
+X ~ 11 200 -450 100 L 50 50 1 1 I
+X ~ 12 200 -550 100 L 50 50 1 1 I
+X ~ 2 200 450 100 L 50 50 1 1 I
+X ~ 3 200 350 100 L 50 50 1 1 I
+X ~ 4 200 250 100 L 50 50 1 1 I
+X ~ 5 200 150 100 L 50 50 1 1 I
+X ~ 6 200 50 100 L 50 50 1 1 I
+X ~ 7 200 -50 100 L 50 50 1 1 I
+X ~ 8 200 -150 100 L 50 50 1 1 I
+X ~ 9 200 -250 100 L 50 50 1 1 I
+ENDDRAW
+ENDDEF
+#
+# formula_MicroFit_V_2
+#
+DEF formula_MicroFit_V_2 J 0 40 Y Y 1 F N
+F0 "J" -100 50 50 H V C CNN
+F1 "formula_MicroFit_V_2" 0 -150 50 H V C CNN
+F2 "footprints:MicroFit_V_2" -50 200 50 H I C CNN
+F3 "https://www.molex.com/pdm_docs/sd/430450225_sd.pdf" -50 200 50 H I C CNN
+F4 "MFN" 100 250 50 H I C CNN "DK"
+F5 "WM10660-ND" 200 350 50 H I C CNN "MPN"
+F6 "https://www.digikey.com/product-detail/en/molex/0430450225/WM10660-ND/3310180" 0 150 50 H I C CNN "PurchasingLink"
+DRAW
+S 150 -100 -150 100 1 1 0 f
+X 1 1 250 50 100 L 50 50 1 1 B
+X 2 2 250 -50 100 L 50 50 1 1 B
+ENDDRAW
+ENDDEF
+#
+# formula_NanoFit_RA_TH_04
+#
+DEF formula_NanoFit_RA_TH_04 J 0 40 Y Y 1 F N
+F0 "J" 0 350 50 H V C CNN
+F1 "formula_NanoFit_RA_TH_04" 0 250 50 H V C CNN
+F2 "footprints:NanoFit_RA_4" 0 -250 50 H I C CNN
+F3 "" 0 250 50 H I C CNN
+DRAW
+S -100 200 100 -200 0 1 0 f
+X 1 1 200 150 100 L 50 50 1 1 B
+X 2 2 200 50 100 L 50 50 1 1 B
+X 3 3 200 -50 100 L 50 50 1 1 B
+X 4 4 200 -150 100 L 50 50 1 1 B
+ENDDRAW
+ENDDEF
+#
+# formula_UF_5_VT
+#
+DEF formula_UF_5_VT J 0 40 Y N 1 F N
+F0 "J" 0 300 60 H V C CNN
+F1 "formula_UF_5_VT" 0 -350 60 H V C CNN
+F2 "" -100 250 60 H I C CNN
+F3 "http://www.literature.molex.com/SQLImages/kelmscott/Molex/PDF_Images/987651-1008.pdf" 0 350 60 H I C CNN
+F4 "DK" 0 0 60 H I C CNN "MFN"
+F5 "WM11667-ND" 0 0 60 H I C CNN "MPN"
+F6 "https://www.digikey.com/product-detail/en/molex-llc/1722861105/WM11667-ND/5360132" 500 850 60 H I C CNN "PurchasingLink"
+DRAW
+S 150 250 -150 -250 0 1 0 f
+X 1 1 350 200 200 L 50 50 1 1 P
+X 2 2 350 100 200 L 50 50 1 1 P
+X 3 3 350 0 200 L 50 50 1 1 P
+X 4 4 350 -100 200 L 50 50 1 1 P
+X ~ 5 350 -200 200 L 50 50 1 1 I
+ENDDRAW
+ENDDEF
+#
 # power_GND
 #
 DEF power_GND #PWR 0 0 Y Y 1 F P
@@ -35,9 +262,8 @@ F1 "power_VCC" 0 150 50 H V C CNN
 F2 "" 0 0 50 H I C CNN
 F3 "" 0 0 50 H I C CNN
 DRAW
-P 2 0 1 0 -30 50 0 100 N
-P 2 0 1 0 0 0 0 100 N
-P 2 0 1 0 0 100 30 50 N
+C 0 75 25 0 1 0 N
+P 2 0 1 0 0 0 0 50 N
 X VCC 1 0 0 0 U 50 50 1 1 W N
 ENDDRAW
 ENDDEF
@@ -226,32 +452,6 @@ X 4 4 0 150 75 D 50 50 1 1 P
 ENDDRAW
 ENDDEF
 #
-# template-rescue_MCP2561-E_SN-formula
-#
-DEF template-rescue_MCP2561-E_SN-formula U 0 40 Y Y 1 F N
-F0 "U" -400 350 50 H V L CNN
-F1 "template-rescue_MCP2561-E_SN-formula" 100 350 50 H V L CNN
-F2 "footprints:SOIC-8_3.9x4.9mm_Pitch1.27mm_OEM" 0 -500 50 H I C CIN
-F3 "http://www.microchip.com/mymicrochip/filehandler.aspx?ddocname=en561044" -400 350 50 H I C CNN
-F4 "DK" 0 0 60 H I C CNN "MFN"
-F5 "MCP2561-E/SN-ND" 0 0 60 H I C CNN "MPN"
-F6 "https://www.digikey.com/products/en?keywords=mcp2561-e%2Fsn" 0 750 60 H I C CNN "PurchasingLink"
-$FPLIST
- SOIC*Pitch1.27mm*
-$ENDFPLIST
-DRAW
-S -400 300 400 -300 0 1 10 f
-X TXD 1 -500 200 100 R 50 50 1 1 I
-X VSS 2 0 -400 100 U 50 50 1 1 W
-X VDD 3 0 400 100 D 50 50 1 1 W
-X RXD 4 -500 100 100 R 50 50 1 1 O
-X SPLIT 5 500 0 100 L 50 50 1 1 P
-X CANL 6 500 -100 100 L 50 50 1 1 B
-X CANH 7 500 100 100 L 50 50 1 1 B
-X STBY 8 -500 -200 100 R 50 50 1 1 I
-ENDDRAW
-ENDDEF
-#
 # template-rescue_R_100-formula
 #
 DEF template-rescue_R_100-formula R 0 0 N Y 1 F N
@@ -283,27 +483,6 @@ F3 "http://www.bourns.com/data/global/pdfs/CRS.pdf" 80 0 50 H I C CNN
 F4 "DK" 0 0 60 H I C CNN "MFN"
 F5 "CRS0805-FX-1002ELFCT-ND" 0 0 60 H I C CNN "MPN"
 F6 "https://www.digikey.com/products/en?keywords=CRS0805-FX-1002ELFCT-ND" 480 400 60 H I C CNN "PurchasingLink"
-$FPLIST
- R_*
- Resistor_*
-$ENDFPLIST
-DRAW
-S -40 -100 40 100 0 1 10 N
-X ~ 1 0 150 50 D 50 50 1 1 P
-X ~ 2 0 -150 50 U 50 50 1 1 P
-ENDDRAW
-ENDDEF
-#
-# template-rescue_R_200-formula
-#
-DEF template-rescue_R_200-formula R 0 0 N Y 1 F N
-F0 "R" 80 0 50 V V C CNN
-F1 "template-rescue_R_200-formula" -100 0 50 V V C CNN
-F2 "footprints:R_0805_OEM" -70 0 50 H I C CNN
-F3 "https://www.seielect.com/Catalog/SEI-RMCF_RMCP.pdf" 80 0 50 H I C CNN
-F4 "DK" 0 0 60 H I C CNN "MFN"
-F5 "RMCF0805JT200RCT-ND" 0 0 60 H I C CNN "MPN"
-F6 "https://www.digikey.com/products/en?keywords=RMCF0805JT200RCT-ND" 480 400 60 H I C CNN "PurchasingLink"
 $FPLIST
  R_*
  Resistor_*
