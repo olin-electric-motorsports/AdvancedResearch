@@ -569,20 +569,6 @@ F 6 "https://www.digikey.com/products/en?keywords=478-3352-1-ND" H 15075 1950 60
 	1    14650 1450
 	0    1    1    0   
 $EndComp
-$Comp
-L template-rescue:R_200-formula R2
-U 1 1 5D5FB79E
-P 15600 2050
-F 0 "R2" V 15690 2000 50  0000 L CNN
-F 1 "R_200" V 15510 1930 50  0000 L CNN
-F 2 "footprints:R_0805_OEM" H 15530 2050 50  0001 C CNN
-F 3 "https://www.seielect.com/Catalog/SEI-RMCF_RMCP.pdf" H 15680 2050 50  0001 C CNN
-F 4 "DK" H 15600 2050 60  0001 C CNN "MFN"
-F 5 "RMCF0805JT200RCT-ND" H 15600 2050 60  0001 C CNN "MPN"
-F 6 "https://www.digikey.com/products/en?keywords=RMCF0805JT200RCT-ND" H 16080 2450 60  0001 C CNN "PurchasingLink"
-	1    15600 2050
-	1    0    0    -1  
-$EndComp
 NoConn ~ 15300 2050
 $Comp
 L power:VCC #PWR01
@@ -849,17 +835,7 @@ Wire Wire Line
 Wire Wire Line
 	15400 1950 15400 1900
 Wire Wire Line
-	15400 1900 15600 1900
-Connection ~ 15600 1900
-Wire Wire Line
-	15600 1900 15750 1900
-Wire Wire Line
 	15400 2150 15400 2200
-Wire Wire Line
-	15400 2200 15600 2200
-Connection ~ 15600 2200
-Wire Wire Line
-	15600 2200 15750 2200
 Wire Wire Line
 	14250 8450 14250 8600
 Wire Wire Line
@@ -1020,4 +996,28 @@ Wire Wire Line
 Connection ~ 1300 8800
 Wire Wire Line
 	1300 8800 1700 8800
+$Comp
+L formula:R_120_DNP R2
+U 1 1 5FA5AB4A
+P 15600 2050
+F 0 "R2" H 15670 2096 50  0000 L CNN
+F 1 "R_120_DNP" H 15670 2005 50  0000 L CNN
+F 2 "footprints:R_0805_OEM" H 14400 2200 50  0001 L CNN
+F 3 "https://www.mouser.com/datasheet/2/315/AOA0000C304-1149620.pdf" H 14400 2500 50  0001 L CNN
+F 4 "DK" H 15600 2050 60  0001 C CNN "MFN"
+F 5 "667-ERJ-6ENF1200V" H 14400 2300 60  0001 L CNN "MPN"
+F 6 "https://www.mouser.com/ProductDetail/Panasonic-Industrial-Devices/ERJ-6ENF1200V?qs=sGAEpiMZZMvdGkrng054t8AJgcdMkx7x%252bFQnctTMUmU%3d" H 14400 2400 60  0001 L CNN "PurchasingLink"
+	1    15600 2050
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	15400 1900 15600 1900
+Wire Wire Line
+	15400 2200 15600 2200
+Connection ~ 15600 1900
+Wire Wire Line
+	15600 1900 15750 1900
+Connection ~ 15600 2200
+Wire Wire Line
+	15600 2200 15750 2200
 $EndSCHEMATC
