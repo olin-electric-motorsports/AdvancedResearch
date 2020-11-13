@@ -1,0 +1,3 @@
+(sym_lib_table
+  (lib (name buck_converter-rescue)(type Legacy)(uri ${KIPRJMOD}/buck_converter-rescue.lib)(options "")(descr ""))
+)
