@@ -24,20 +24,6 @@ F 3 "" H 15700 5900 50  0001 C CNN
 	1    15700 5900
 	1    0    0    -1  
 $EndComp
-$Comp
-L template-rescue:ATMEGA16M1-formula U2
-U 1 1 5D58A7A6
-P 2700 2800
-F 0 "U2" H 3600 4660 50  0000 C CNN
-F 1 "ATMEGA16M1" H 2000 4650 50  0000 C CNN
-F 2 "footprints:TQFP-32_7x7mm_Pitch0.8mm" H 2700 2800 50  0001 C CIN
-F 3 "http://ww1.microchip.com/downloads/en/DeviceDoc/Atmel-8209-8-bit%20AVR%20ATmega16M1-32M1-64M1_Datasheet.pdf" H 1750 4630 50  0001 C CNN
-F 4 "DK" H 2700 2800 60  0001 C CNN "MFN"
-F 5 "ATMEGA16M1-AU-ND" H 2700 2800 60  0001 C CNN "MPN"
-F 6 "https://www.digikey.com/product-detail/en/atmel/ATMEGA16M1-AU/ATMEGA16M1-AU-ND/2271208" H 2150 5030 60  0001 C CNN "PurchasingLink"
-	1    2700 2800
-	1    0    0    -1  
-$EndComp
 Text Label 3800 2200 0    50   ~ 0
 CAN_TX
 Text Label 3800 2300 0    50   ~ 0
@@ -973,10 +959,176 @@ NoConn ~ 3800 2400
 NoConn ~ 3800 2100
 NoConn ~ 3800 2000
 NoConn ~ 3800 1700
-NoConn ~ 3800 1600
-NoConn ~ 3800 1500
-NoConn ~ 3800 1400
-NoConn ~ 3800 1300
 Text Notes 12400 2650 0    50   ~ 0
 PLACE NEAR USB AND FTDI
+$Comp
+L formula:LED_0805 D?
+U 1 1 5FB56B11
+P 15250 8050
+F 0 "D?" H 15243 7795 50  0000 C CNN
+F 1 "LED_0805" H 15243 7886 50  0000 C CNN
+F 2 "footprints:LED_0805_OEM" H 15150 8050 50  0001 C CNN
+F 3 "http://www.osram-os.com/Graphics/XPic9/00078860_0.pdf" H 15250 8150 50  0001 C CNN
+F 4 "DK" H 15250 8050 60  0001 C CNN "MFN"
+F 5 "475-1410-1-ND" H 15250 8050 60  0001 C CNN "MPN"
+F 6 "https://www.digikey.com/products/en?keywords=475-1410-1-ND" H 15650 8550 60  0001 C CNN "PurchasingLink"
+	1    15250 8050
+	-1   0    0    1   
+$EndComp
+$Comp
+L formula:LED_0805 D?
+U 1 1 5FB5B594
+P 15250 8400
+F 0 "D?" H 15243 8145 50  0000 C CNN
+F 1 "LED_0805" H 15243 8236 50  0000 C CNN
+F 2 "footprints:LED_0805_OEM" H 15150 8400 50  0001 C CNN
+F 3 "http://www.osram-os.com/Graphics/XPic9/00078860_0.pdf" H 15250 8500 50  0001 C CNN
+F 4 "DK" H 15250 8400 60  0001 C CNN "MFN"
+F 5 "475-1410-1-ND" H 15250 8400 60  0001 C CNN "MPN"
+F 6 "https://www.digikey.com/products/en?keywords=475-1410-1-ND" H 15650 8900 60  0001 C CNN "PurchasingLink"
+	1    15250 8400
+	-1   0    0    1   
+$EndComp
+$Comp
+L formula:LED_0805 D?
+U 1 1 5FB5C14B
+P 15250 8750
+F 0 "D?" H 15243 8495 50  0000 C CNN
+F 1 "LED_0805" H 15243 8586 50  0000 C CNN
+F 2 "footprints:LED_0805_OEM" H 15150 8750 50  0001 C CNN
+F 3 "http://www.osram-os.com/Graphics/XPic9/00078860_0.pdf" H 15250 8850 50  0001 C CNN
+F 4 "DK" H 15250 8750 60  0001 C CNN "MFN"
+F 5 "475-1410-1-ND" H 15250 8750 60  0001 C CNN "MPN"
+F 6 "https://www.digikey.com/products/en?keywords=475-1410-1-ND" H 15650 9250 60  0001 C CNN "PurchasingLink"
+	1    15250 8750
+	-1   0    0    1   
+$EndComp
+$Comp
+L formula:LED_0805 D?
+U 1 1 5FB5D408
+P 15250 9100
+F 0 "D?" H 15243 8845 50  0000 C CNN
+F 1 "LED_0805" H 15243 8936 50  0000 C CNN
+F 2 "footprints:LED_0805_OEM" H 15150 9100 50  0001 C CNN
+F 3 "http://www.osram-os.com/Graphics/XPic9/00078860_0.pdf" H 15250 9200 50  0001 C CNN
+F 4 "DK" H 15250 9100 60  0001 C CNN "MFN"
+F 5 "475-1410-1-ND" H 15250 9100 60  0001 C CNN "MPN"
+F 6 "https://www.digikey.com/products/en?keywords=475-1410-1-ND" H 15650 9600 60  0001 C CNN "PurchasingLink"
+	1    15250 9100
+	-1   0    0    1   
+$EndComp
+Text Label 14800 8050 2    50   ~ 0
+DBG1
+Text Label 14800 8400 2    50   ~ 0
+DBG2
+Text Label 14800 8750 2    50   ~ 0
+DBG3
+Text Label 14800 9100 2    50   ~ 0
+DBG4
+Wire Wire Line
+	15400 8050 15900 8050
+Wire Wire Line
+	15900 8050 15900 8400
+Wire Wire Line
+	15400 8400 15900 8400
+Connection ~ 15900 8400
+Wire Wire Line
+	15900 8400 15900 8750
+Wire Wire Line
+	15400 8750 15900 8750
+Connection ~ 15900 8750
+Wire Wire Line
+	15900 8750 15900 9100
+Wire Wire Line
+	15400 9100 15900 9100
+$Comp
+L power:GND #PWR?
+U 1 1 5FB6ACE8
+P 15900 9100
+F 0 "#PWR?" H 15900 8850 50  0001 C CNN
+F 1 "GND" H 16050 9050 50  0000 C CNN
+F 2 "" H 15900 9100 50  0001 C CNN
+F 3 "" H 15900 9100 50  0001 C CNN
+	1    15900 9100
+	1    0    0    -1  
+$EndComp
+Connection ~ 15900 9100
+$Comp
+L formula:R_270K R?
+U 1 1 5FB7032A
+P 14950 8050
+F 0 "R?" V 14743 8050 50  0000 C CNN
+F 1 "R_270K" V 14834 8050 50  0000 C CNN
+F 2 "footprints:R_0805_OEM" V 14880 8050 50  0001 C CNN
+F 3 "https://industrial.panasonic.com/cdbs/www-data/pdf/RDM0000/AOA0000C307.pdf" V 15500 8150 50  0001 C CNN
+F 4 "DK" V 15130 8150 60  0001 C CNN "MFN"
+F 5 "P270KDACT-ND" V 15230 8250 60  0001 C CNN "MPN"
+F 6 "https://www.digikey.com/product-detail/en/panasonic-electronic-components/ERA-6AEB274V/P270KDACT-ND/1466005" V 15330 8350 60  0001 C CNN "Webpage"
+	1    14950 8050
+	0    1    1    0   
+$EndComp
+$Comp
+L formula:R_270K R?
+U 1 1 5FB71F0B
+P 14950 8400
+F 0 "R?" V 14743 8400 50  0000 C CNN
+F 1 "R_270K" V 14834 8400 50  0000 C CNN
+F 2 "footprints:R_0805_OEM" V 14880 8400 50  0001 C CNN
+F 3 "https://industrial.panasonic.com/cdbs/www-data/pdf/RDM0000/AOA0000C307.pdf" V 15500 8500 50  0001 C CNN
+F 4 "DK" V 15130 8500 60  0001 C CNN "MFN"
+F 5 "P270KDACT-ND" V 15230 8600 60  0001 C CNN "MPN"
+F 6 "https://www.digikey.com/product-detail/en/panasonic-electronic-components/ERA-6AEB274V/P270KDACT-ND/1466005" V 15330 8700 60  0001 C CNN "Webpage"
+	1    14950 8400
+	0    1    1    0   
+$EndComp
+$Comp
+L formula:R_270K R?
+U 1 1 5FB725E4
+P 14950 8750
+F 0 "R?" V 14743 8750 50  0000 C CNN
+F 1 "R_270K" V 14834 8750 50  0000 C CNN
+F 2 "footprints:R_0805_OEM" V 14880 8750 50  0001 C CNN
+F 3 "https://industrial.panasonic.com/cdbs/www-data/pdf/RDM0000/AOA0000C307.pdf" V 15500 8850 50  0001 C CNN
+F 4 "DK" V 15130 8850 60  0001 C CNN "MFN"
+F 5 "P270KDACT-ND" V 15230 8950 60  0001 C CNN "MPN"
+F 6 "https://www.digikey.com/product-detail/en/panasonic-electronic-components/ERA-6AEB274V/P270KDACT-ND/1466005" V 15330 9050 60  0001 C CNN "Webpage"
+	1    14950 8750
+	0    1    1    0   
+$EndComp
+$Comp
+L formula:R_270K R?
+U 1 1 5FB72D1D
+P 14950 9100
+F 0 "R?" V 14743 9100 50  0000 C CNN
+F 1 "R_270K" V 14834 9100 50  0000 C CNN
+F 2 "footprints:R_0805_OEM" V 14880 9100 50  0001 C CNN
+F 3 "https://industrial.panasonic.com/cdbs/www-data/pdf/RDM0000/AOA0000C307.pdf" V 15500 9200 50  0001 C CNN
+F 4 "DK" V 15130 9200 60  0001 C CNN "MFN"
+F 5 "P270KDACT-ND" V 15230 9300 60  0001 C CNN "MPN"
+F 6 "https://www.digikey.com/product-detail/en/panasonic-electronic-components/ERA-6AEB274V/P270KDACT-ND/1466005" V 15330 9400 60  0001 C CNN "Webpage"
+	1    14950 9100
+	0    1    1    0   
+$EndComp
+$Comp
+L template-rescue:ATMEGA16M1-formula U2
+U 1 1 5D58A7A6
+P 2700 2800
+F 0 "U2" H 3600 4660 50  0000 C CNN
+F 1 "ATMEGA16M1" H 2000 4650 50  0000 C CNN
+F 2 "footprints:TQFP-32_7x7mm_Pitch0.8mm" H 2700 2800 50  0001 C CIN
+F 3 "http://ww1.microchip.com/downloads/en/DeviceDoc/Atmel-8209-8-bit%20AVR%20ATmega16M1-32M1-64M1_Datasheet.pdf" H 1750 4630 50  0001 C CNN
+F 4 "DK" H 2700 2800 60  0001 C CNN "MFN"
+F 5 "ATMEGA16M1-AU-ND" H 2700 2800 60  0001 C CNN "MPN"
+F 6 "https://www.digikey.com/product-detail/en/atmel/ATMEGA16M1-AU/ATMEGA16M1-AU-ND/2271208" H 2150 5030 60  0001 C CNN "PurchasingLink"
+	1    2700 2800
+	1    0    0    -1  
+$EndComp
+Text Label 3800 1300 0    50   ~ 0
+DBG1
+Text Label 3800 1400 0    50   ~ 0
+DBG2
+Text Label 3800 1500 0    50   ~ 0
+DBG3
+Text Label 3800 1600 0    50   ~ 0
+DBG4
 $EndSCHEMATC
