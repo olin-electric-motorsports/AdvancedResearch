@@ -244,20 +244,6 @@ F 6 "https://www.digikey.com/products/en?keywords=478-3352-1-ND" H 7675 1850 60 
 	1    7250 1350
 	0    1    1    0   
 $EndComp
-$Comp
-L template-rescue:R_200-formula R2
-U 1 1 5D5FB79E
-P 8200 1950
-F 0 "R2" V 8290 1900 50  0000 L CNN
-F 1 "R_200" V 8110 1830 50  0000 L CNN
-F 2 "footprints:R_0805_OEM" H 8130 1950 50  0001 C CNN
-F 3 "https://www.seielect.com/Catalog/SEI-RMCF_RMCP.pdf" H 8280 1950 50  0001 C CNN
-F 4 "DK" H 8200 1950 60  0001 C CNN "MFN"
-F 5 "RMCF0805JT200RCT-ND" H 8200 1950 60  0001 C CNN "MPN"
-F 6 "https://www.digikey.com/products/en?keywords=RMCF0805JT200RCT-ND" H 8680 2350 60  0001 C CNN "PurchasingLink"
-	1    8200 1950
-	1    0    0    -1  
-$EndComp
 NoConn ~ 7900 1950
 $Comp
 L power:VCC #PWR01
@@ -513,17 +499,7 @@ Wire Wire Line
 Wire Wire Line
 	8000 1850 8000 1800
 Wire Wire Line
-	8000 1800 8200 1800
-Connection ~ 8200 1800
-Wire Wire Line
-	8200 1800 8350 1800
-Wire Wire Line
 	8000 2050 8000 2100
-Wire Wire Line
-	8000 2100 8200 2100
-Connection ~ 8200 2100
-Wire Wire Line
-	8200 2100 8350 2100
 Wire Wire Line
 	14950 5750 14950 5900
 Wire Wire Line
@@ -959,4 +935,28 @@ F 3 "" H 14800 6750 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 Connection ~ 14800 6750
+Wire Wire Line
+	8000 1800 8200 1800
+Wire Wire Line
+	8000 2100 8200 2100
+$Comp
+L formula:R_120_DNP R?
+U 1 1 5FB3CE18
+P 8200 1950
+F 0 "R?" H 8050 1950 50  0000 L CNN
+F 1 "R_120_DNP" H 8250 1950 50  0000 L CNN
+F 2 "footprints:R_0805_OEM" H 7000 2100 50  0001 L CNN
+F 3 "https://www.mouser.com/datasheet/2/315/AOA0000C304-1149620.pdf" H 7000 2400 50  0001 L CNN
+F 4 "DK" H 8200 1950 60  0001 C CNN "MFN"
+F 5 "667-ERJ-6ENF1200V" H 7000 2200 60  0001 L CNN "MPN"
+F 6 "https://www.mouser.com/ProductDetail/Panasonic-Industrial-Devices/ERJ-6ENF1200V?qs=sGAEpiMZZMvdGkrng054t8AJgcdMkx7x%252bFQnctTMUmU%3d" H 7000 2300 60  0001 L CNN "PurchasingLink"
+	1    8200 1950
+	1    0    0    -1  
+$EndComp
+Connection ~ 8200 1800
+Wire Wire Line
+	8200 1800 8350 1800
+Connection ~ 8200 2100
+Wire Wire Line
+	8200 2100 8350 2100
 $EndSCHEMATC
