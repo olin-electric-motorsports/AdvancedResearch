@@ -1131,4 +1131,5 @@ Text Label 3800 1500 0    50   ~ 0
 DBG3
 Text Label 3800 1600 0    50   ~ 0
 DBG4
+NoConn ~ 11200 2200
 $EndSCHEMATC
