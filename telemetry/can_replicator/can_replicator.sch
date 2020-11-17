@@ -865,10 +865,10 @@ Wire Notes Line
 Wire Notes Line
 	6450 2650 6450 650 
 $Comp
-L power:VCC #PWR?
+L power:VCC #PWR019
 U 1 1 5FB3615E
 P 11700 1800
-F 0 "#PWR?" H 11700 1650 50  0001 C CNN
+F 0 "#PWR019" H 11700 1650 50  0001 C CNN
 F 1 "VCC" H 11800 1850 50  0000 C CNN
 F 2 "" H 11700 1800 50  0001 C CNN
 F 3 "" H 11700 1800 50  0001 C CNN
@@ -876,10 +876,10 @@ F 3 "" H 11700 1800 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L power:VCC #PWR?
+L power:VCC #PWR020
 U 1 1 5FB37814
 P 13100 2000
-F 0 "#PWR?" H 13100 1850 50  0001 C CNN
+F 0 "#PWR020" H 13100 1850 50  0001 C CNN
 F 1 "VCC" H 13115 2173 50  0000 C CNN
 F 2 "" H 13100 2000 50  0001 C CNN
 F 3 "" H 13100 2000 50  0001 C CNN
@@ -888,10 +888,10 @@ F 3 "" H 13100 2000 50  0001 C CNN
 $EndComp
 Connection ~ 13100 2000
 $Comp
-L power:GND #PWR?
+L power:GND #PWR023
 U 1 1 5FB3808B
 P 15450 3700
-F 0 "#PWR?" H 15450 3450 50  0001 C CNN
+F 0 "#PWR023" H 15450 3450 50  0001 C CNN
 F 1 "GND" H 15455 3527 50  0000 C CNN
 F 2 "" H 15450 3700 50  0001 C CNN
 F 3 "" H 15450 3700 50  0001 C CNN
@@ -910,10 +910,10 @@ F 3 "" H 15900 7500 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L power:VCC #PWR?
+L power:VCC #PWR022
 U 1 1 5FB3A4ED
 P 14800 6750
-F 0 "#PWR?" H 14800 6600 50  0001 C CNN
+F 0 "#PWR022" H 14800 6600 50  0001 C CNN
 F 1 "VCC" H 14815 6923 50  0000 C CNN
 F 2 "" H 14800 6750 50  0001 C CNN
 F 3 "" H 14800 6750 50  0001 C CNN
@@ -926,10 +926,10 @@ Wire Wire Line
 Wire Wire Line
 	8000 2100 8200 2100
 $Comp
-L formula:R_120_DNP R?
+L formula:R_120_DNP R2
 U 1 1 5FB3CE18
 P 8200 1950
-F 0 "R?" H 8050 1950 50  0000 L CNN
+F 0 "R2" H 8050 1950 50  0000 L CNN
 F 1 "R_120_DNP" H 8250 1950 50  0000 L CNN
 F 2 "footprints:R_0805_OEM" H 7000 2100 50  0001 L CNN
 F 3 "https://www.mouser.com/datasheet/2/315/AOA0000C304-1149620.pdf" H 7000 2400 50  0001 L CNN
@@ -962,151 +962,104 @@ NoConn ~ 3800 1700
 Text Notes 12400 2650 0    50   ~ 0
 PLACE NEAR USB AND FTDI
 $Comp
-L formula:LED_0805 D?
+L formula:LED_0805 D4
 U 1 1 5FB56B11
-P 15250 8050
-F 0 "D?" H 15243 7795 50  0000 C CNN
-F 1 "LED_0805" H 15243 7886 50  0000 C CNN
-F 2 "footprints:LED_0805_OEM" H 15150 8050 50  0001 C CNN
-F 3 "http://www.osram-os.com/Graphics/XPic9/00078860_0.pdf" H 15250 8150 50  0001 C CNN
-F 4 "DK" H 15250 8050 60  0001 C CNN "MFN"
-F 5 "475-1410-1-ND" H 15250 8050 60  0001 C CNN "MPN"
-F 6 "https://www.digikey.com/products/en?keywords=475-1410-1-ND" H 15650 8550 60  0001 C CNN "PurchasingLink"
-	1    15250 8050
+P 15300 8150
+F 0 "D4" H 15293 7895 50  0000 C CNN
+F 1 "LED_0805" H 15293 7986 50  0000 C CNN
+F 2 "footprints:LED_0805_OEM" H 15200 8150 50  0001 C CNN
+F 3 "http://www.osram-os.com/Graphics/XPic9/00078860_0.pdf" H 15300 8250 50  0001 C CNN
+F 4 "DK" H 15300 8150 60  0001 C CNN "MFN"
+F 5 "475-1410-1-ND" H 15300 8150 60  0001 C CNN "MPN"
+F 6 "https://www.digikey.com/products/en?keywords=475-1410-1-ND" H 15700 8650 60  0001 C CNN "PurchasingLink"
+	1    15300 8150
 	-1   0    0    1   
 $EndComp
 $Comp
-L formula:LED_0805 D?
+L formula:LED_0805 D5
 U 1 1 5FB5B594
-P 15250 8400
-F 0 "D?" H 15243 8145 50  0000 C CNN
-F 1 "LED_0805" H 15243 8236 50  0000 C CNN
-F 2 "footprints:LED_0805_OEM" H 15150 8400 50  0001 C CNN
-F 3 "http://www.osram-os.com/Graphics/XPic9/00078860_0.pdf" H 15250 8500 50  0001 C CNN
-F 4 "DK" H 15250 8400 60  0001 C CNN "MFN"
-F 5 "475-1410-1-ND" H 15250 8400 60  0001 C CNN "MPN"
-F 6 "https://www.digikey.com/products/en?keywords=475-1410-1-ND" H 15650 8900 60  0001 C CNN "PurchasingLink"
-	1    15250 8400
+P 15300 8500
+F 0 "D5" H 15293 8245 50  0000 C CNN
+F 1 "LED_0805" H 15293 8336 50  0000 C CNN
+F 2 "footprints:LED_0805_OEM" H 15200 8500 50  0001 C CNN
+F 3 "http://www.osram-os.com/Graphics/XPic9/00078860_0.pdf" H 15300 8600 50  0001 C CNN
+F 4 "DK" H 15300 8500 60  0001 C CNN "MFN"
+F 5 "475-1410-1-ND" H 15300 8500 60  0001 C CNN "MPN"
+F 6 "https://www.digikey.com/products/en?keywords=475-1410-1-ND" H 15700 9000 60  0001 C CNN "PurchasingLink"
+	1    15300 8500
 	-1   0    0    1   
 $EndComp
 $Comp
-L formula:LED_0805 D?
+L formula:LED_0805 D6
 U 1 1 5FB5C14B
-P 15250 8750
-F 0 "D?" H 15243 8495 50  0000 C CNN
-F 1 "LED_0805" H 15243 8586 50  0000 C CNN
-F 2 "footprints:LED_0805_OEM" H 15150 8750 50  0001 C CNN
-F 3 "http://www.osram-os.com/Graphics/XPic9/00078860_0.pdf" H 15250 8850 50  0001 C CNN
-F 4 "DK" H 15250 8750 60  0001 C CNN "MFN"
-F 5 "475-1410-1-ND" H 15250 8750 60  0001 C CNN "MPN"
-F 6 "https://www.digikey.com/products/en?keywords=475-1410-1-ND" H 15650 9250 60  0001 C CNN "PurchasingLink"
-	1    15250 8750
+P 15300 8850
+F 0 "D6" H 15293 8595 50  0000 C CNN
+F 1 "LED_0805" H 15293 8686 50  0000 C CNN
+F 2 "footprints:LED_0805_OEM" H 15200 8850 50  0001 C CNN
+F 3 "http://www.osram-os.com/Graphics/XPic9/00078860_0.pdf" H 15300 8950 50  0001 C CNN
+F 4 "DK" H 15300 8850 60  0001 C CNN "MFN"
+F 5 "475-1410-1-ND" H 15300 8850 60  0001 C CNN "MPN"
+F 6 "https://www.digikey.com/products/en?keywords=475-1410-1-ND" H 15700 9350 60  0001 C CNN "PurchasingLink"
+	1    15300 8850
 	-1   0    0    1   
 $EndComp
-$Comp
-L formula:LED_0805 D?
-U 1 1 5FB5D408
-P 15250 9100
-F 0 "D?" H 15243 8845 50  0000 C CNN
-F 1 "LED_0805" H 15243 8936 50  0000 C CNN
-F 2 "footprints:LED_0805_OEM" H 15150 9100 50  0001 C CNN
-F 3 "http://www.osram-os.com/Graphics/XPic9/00078860_0.pdf" H 15250 9200 50  0001 C CNN
-F 4 "DK" H 15250 9100 60  0001 C CNN "MFN"
-F 5 "475-1410-1-ND" H 15250 9100 60  0001 C CNN "MPN"
-F 6 "https://www.digikey.com/products/en?keywords=475-1410-1-ND" H 15650 9600 60  0001 C CNN "PurchasingLink"
-	1    15250 9100
-	-1   0    0    1   
-$EndComp
-Text Label 14800 8050 2    50   ~ 0
+Text Label 14850 8150 2    50   ~ 0
 DBG1
-Text Label 14800 8400 2    50   ~ 0
+Text Label 14850 8500 2    50   ~ 0
 DBG2
-Text Label 14800 8750 2    50   ~ 0
+Text Label 14850 8850 2    50   ~ 0
 DBG3
-Text Label 14800 9100 2    50   ~ 0
-DBG4
 Wire Wire Line
-	15400 8050 15900 8050
+	15450 8150 15950 8150
 Wire Wire Line
-	15900 8050 15900 8400
+	15950 8150 15950 8500
 Wire Wire Line
-	15400 8400 15900 8400
-Connection ~ 15900 8400
+	15450 8500 15950 8500
+Connection ~ 15950 8500
 Wire Wire Line
-	15900 8400 15900 8750
+	15950 8500 15950 8850
 Wire Wire Line
-	15400 8750 15900 8750
-Connection ~ 15900 8750
-Wire Wire Line
-	15900 8750 15900 9100
-Wire Wire Line
-	15400 9100 15900 9100
+	15450 8850 15950 8850
 $Comp
-L power:GND #PWR?
-U 1 1 5FB6ACE8
-P 15900 9100
-F 0 "#PWR?" H 15900 8850 50  0001 C CNN
-F 1 "GND" H 16050 9050 50  0000 C CNN
-F 2 "" H 15900 9100 50  0001 C CNN
-F 3 "" H 15900 9100 50  0001 C CNN
-	1    15900 9100
-	1    0    0    -1  
-$EndComp
-Connection ~ 15900 9100
-$Comp
-L formula:R_270K R?
+L formula:R_270K R7
 U 1 1 5FB7032A
-P 14950 8050
-F 0 "R?" V 14743 8050 50  0000 C CNN
-F 1 "R_270K" V 14834 8050 50  0000 C CNN
-F 2 "footprints:R_0805_OEM" V 14880 8050 50  0001 C CNN
-F 3 "https://industrial.panasonic.com/cdbs/www-data/pdf/RDM0000/AOA0000C307.pdf" V 15500 8150 50  0001 C CNN
-F 4 "DK" V 15130 8150 60  0001 C CNN "MFN"
-F 5 "P270KDACT-ND" V 15230 8250 60  0001 C CNN "MPN"
-F 6 "https://www.digikey.com/product-detail/en/panasonic-electronic-components/ERA-6AEB274V/P270KDACT-ND/1466005" V 15330 8350 60  0001 C CNN "Webpage"
-	1    14950 8050
+P 15000 8150
+F 0 "R7" V 14793 8150 50  0000 C CNN
+F 1 "R_270K" V 14884 8150 50  0000 C CNN
+F 2 "footprints:R_0805_OEM" V 14930 8150 50  0001 C CNN
+F 3 "https://industrial.panasonic.com/cdbs/www-data/pdf/RDM0000/AOA0000C307.pdf" V 15550 8250 50  0001 C CNN
+F 4 "DK" V 15180 8250 60  0001 C CNN "MFN"
+F 5 "P270KDACT-ND" V 15280 8350 60  0001 C CNN "MPN"
+F 6 "https://www.digikey.com/product-detail/en/panasonic-electronic-components/ERA-6AEB274V/P270KDACT-ND/1466005" V 15380 8450 60  0001 C CNN "Webpage"
+	1    15000 8150
 	0    1    1    0   
 $EndComp
 $Comp
-L formula:R_270K R?
+L formula:R_270K R8
 U 1 1 5FB71F0B
-P 14950 8400
-F 0 "R?" V 14743 8400 50  0000 C CNN
-F 1 "R_270K" V 14834 8400 50  0000 C CNN
-F 2 "footprints:R_0805_OEM" V 14880 8400 50  0001 C CNN
-F 3 "https://industrial.panasonic.com/cdbs/www-data/pdf/RDM0000/AOA0000C307.pdf" V 15500 8500 50  0001 C CNN
-F 4 "DK" V 15130 8500 60  0001 C CNN "MFN"
-F 5 "P270KDACT-ND" V 15230 8600 60  0001 C CNN "MPN"
-F 6 "https://www.digikey.com/product-detail/en/panasonic-electronic-components/ERA-6AEB274V/P270KDACT-ND/1466005" V 15330 8700 60  0001 C CNN "Webpage"
-	1    14950 8400
+P 15000 8500
+F 0 "R8" V 14793 8500 50  0000 C CNN
+F 1 "R_270K" V 14884 8500 50  0000 C CNN
+F 2 "footprints:R_0805_OEM" V 14930 8500 50  0001 C CNN
+F 3 "https://industrial.panasonic.com/cdbs/www-data/pdf/RDM0000/AOA0000C307.pdf" V 15550 8600 50  0001 C CNN
+F 4 "DK" V 15180 8600 60  0001 C CNN "MFN"
+F 5 "P270KDACT-ND" V 15280 8700 60  0001 C CNN "MPN"
+F 6 "https://www.digikey.com/product-detail/en/panasonic-electronic-components/ERA-6AEB274V/P270KDACT-ND/1466005" V 15380 8800 60  0001 C CNN "Webpage"
+	1    15000 8500
 	0    1    1    0   
 $EndComp
 $Comp
-L formula:R_270K R?
+L formula:R_270K R9
 U 1 1 5FB725E4
-P 14950 8750
-F 0 "R?" V 14743 8750 50  0000 C CNN
-F 1 "R_270K" V 14834 8750 50  0000 C CNN
-F 2 "footprints:R_0805_OEM" V 14880 8750 50  0001 C CNN
-F 3 "https://industrial.panasonic.com/cdbs/www-data/pdf/RDM0000/AOA0000C307.pdf" V 15500 8850 50  0001 C CNN
-F 4 "DK" V 15130 8850 60  0001 C CNN "MFN"
-F 5 "P270KDACT-ND" V 15230 8950 60  0001 C CNN "MPN"
-F 6 "https://www.digikey.com/product-detail/en/panasonic-electronic-components/ERA-6AEB274V/P270KDACT-ND/1466005" V 15330 9050 60  0001 C CNN "Webpage"
-	1    14950 8750
-	0    1    1    0   
-$EndComp
-$Comp
-L formula:R_270K R?
-U 1 1 5FB72D1D
-P 14950 9100
-F 0 "R?" V 14743 9100 50  0000 C CNN
-F 1 "R_270K" V 14834 9100 50  0000 C CNN
-F 2 "footprints:R_0805_OEM" V 14880 9100 50  0001 C CNN
-F 3 "https://industrial.panasonic.com/cdbs/www-data/pdf/RDM0000/AOA0000C307.pdf" V 15500 9200 50  0001 C CNN
-F 4 "DK" V 15130 9200 60  0001 C CNN "MFN"
-F 5 "P270KDACT-ND" V 15230 9300 60  0001 C CNN "MPN"
-F 6 "https://www.digikey.com/product-detail/en/panasonic-electronic-components/ERA-6AEB274V/P270KDACT-ND/1466005" V 15330 9400 60  0001 C CNN "Webpage"
-	1    14950 9100
+P 15000 8850
+F 0 "R9" V 14793 8850 50  0000 C CNN
+F 1 "R_270K" V 14884 8850 50  0000 C CNN
+F 2 "footprints:R_0805_OEM" V 14930 8850 50  0001 C CNN
+F 3 "https://industrial.panasonic.com/cdbs/www-data/pdf/RDM0000/AOA0000C307.pdf" V 15550 8950 50  0001 C CNN
+F 4 "DK" V 15180 8950 60  0001 C CNN "MFN"
+F 5 "P270KDACT-ND" V 15280 9050 60  0001 C CNN "MPN"
+F 6 "https://www.digikey.com/product-detail/en/panasonic-electronic-components/ERA-6AEB274V/P270KDACT-ND/1466005" V 15380 9150 60  0001 C CNN "Webpage"
+	1    15000 8850
 	0    1    1    0   
 $EndComp
 $Comp
@@ -1129,18 +1082,29 @@ Text Label 3800 1400 0    50   ~ 0
 DBG2
 Text Label 3800 1500 0    50   ~ 0
 DBG3
-Text Label 3800 1600 0    50   ~ 0
-DBG4
 NoConn ~ 11200 2200
 $Comp
-L power:VCC #PWR?
+L power:VCC #PWR021
 U 1 1 5FB7A7F8
 P 14200 2500
-F 0 "#PWR?" H 14200 2350 50  0001 C CNN
+F 0 "#PWR021" H 14200 2350 50  0001 C CNN
 F 1 "VCC" H 14215 2673 50  0000 C CNN
 F 2 "" H 14200 2500 50  0001 C CNN
 F 3 "" H 14200 2500 50  0001 C CNN
 	1    14200 2500
 	1    0    0    -1  
 $EndComp
+$Comp
+L power:GND #PWR?
+U 1 1 5FB7CF68
+P 15950 8850
+F 0 "#PWR?" H 15950 8600 50  0001 C CNN
+F 1 "GND" H 15955 8677 50  0000 C CNN
+F 2 "" H 15950 8850 50  0001 C CNN
+F 3 "" H 15950 8850 50  0001 C CNN
+	1    15950 8850
+	1    0    0    -1  
+$EndComp
+Connection ~ 15950 8850
+NoConn ~ 3800 1600
 $EndSCHEMATC
