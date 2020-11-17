@@ -571,21 +571,10 @@ Wire Wire Line
 	14200 3700 14800 3700
 Connection ~ 14800 3700
 $Comp
-L power:GND #PWR0101
-U 1 1 5FABE223
-P 15450 3700
-F 0 "#PWR0101" H 15450 3450 50  0001 C CNN
-F 1 "GND" V 15455 3572 50  0000 R CNN
-F 2 "" H 15450 3700 50  0001 C CNN
-F 3 "" H 15450 3700 50  0001 C CNN
-	1    15450 3700
-	0    -1   -1   0   
-$EndComp
-$Comp
-L formula:FT232RL U?
+L formula:FT232RL U4
 U 1 1 5FA978AD
 P 15000 2500
-F 0 "U?" H 15000 3900 50  0000 C CNN
+F 0 "U4" H 15000 3900 50  0000 C CNN
 F 1 "FT232RL" H 15000 3800 50  0000 C CNN
 F 2 "Package_SO:SSOP-28_5.3x10.2mm_P0.65mm" H 16100 1600 50  0001 C CNN
 F 3 "https://www.ftdichip.com/Support/Documents/DataSheets/ICs/DS_FT232R.pdf" H 15000 2500 50  0001 C CNN
@@ -595,10 +584,10 @@ F 5 "768-1007-1-ND" H 15000 2500 50  0001 C CNN "Part Number (DK)"
 	1    0    0    -1  
 $EndComp
 $Comp
-L formula:C_100nF C?
+L formula:C_100nF C9
 U 1 1 5FAC0003
 P 14050 1800
-F 0 "C?" V 13798 1800 50  0000 C CNN
+F 0 "C9" V 13798 1800 50  0000 C CNN
 F 1 "C_100nF" V 13889 1800 50  0000 C CNN
 F 2 "footprints:C_0603_1608Metric" H 14088 1650 50  0001 C CNN
 F 3 "http://www.samsungsem.com/kr/support/product-search/mlcc/CL10A475KQ8NNNC.jsp" H 14075 1900 50  0001 C CNN
@@ -679,10 +668,10 @@ $EndComp
 Wire Wire Line
 	10900 2400 11150 2400
 $Comp
-L formula:USB_MicroB U?
+L formula:USB_MicroB U3
 U 1 1 5FA94609
 P 10900 2000
-F 0 "U?" H 10957 2467 50  0000 C CNN
+F 0 "U3" H 10957 2467 50  0000 C CNN
 F 1 "USB_MicroB" H 10957 2376 50  0000 C CNN
 F 2 "Connectors_USB:USB_Micro-B_Molex-105017-0001" H 10850 2350 50  0001 C CNN
 F 3 "https://www.molex.com/pdm_docs/sd/1050170001_sd.pdf" H 10850 2350 50  0001 C CNN
@@ -697,10 +686,10 @@ Wire Wire Line
 Wire Wire Line
 	11700 2400 11600 2400
 $Comp
-L formula:C_10nF C?
+L formula:C_10nF C6
 U 1 1 5FAF39CA
 P 11450 2400
-F 0 "C?" V 11198 2400 50  0000 C CNN
+F 0 "C6" V 11198 2400 50  0000 C CNN
 F 1 "C_10nF" V 11289 2400 50  0000 C CNN
 F 2 "footprints:C_0805_OEM" H 11250 2400 50  0001 C CNN
 F 3 "http://www.samsungsem.com/kr/support/product-search/mlcc/__icsFiles/afieldfile/2018/07/23/CL21B103KBANNNC.pdf" H 11350 2500 50  0001 C CNN
@@ -715,10 +704,10 @@ Wire Wire Line
 Wire Wire Line
 	11200 1800 11300 1800
 $Comp
-L Device:Ferrite_Bead FB?
+L Device:Ferrite_Bead FB1
 U 1 1 5FAF9058
 P 11450 1800
-F 0 "FB?" V 11700 1800 50  0000 C CNN
+F 0 "FB1" V 11700 1800 50  0000 C CNN
 F 1 "Ferrite_Bead" V 11600 1800 50  0000 C CNN
 F 2 "" V 11380 1800 50  0001 C CNN
 F 3 "~" H 11450 1800 50  0001 C CNN
@@ -727,33 +716,7 @@ F 3 "~" H 11450 1800 50  0001 C CNN
 $EndComp
 Wire Wire Line
 	11600 1800 11700 1800
-$Comp
-L power:VCC #PWR0105
-U 1 1 5FAFC426
-P 11700 1800
-F 0 "#PWR0105" H 11700 1650 50  0001 C CNN
-F 1 "VCC" V 11715 1927 50  0000 L CNN
-F 2 "" H 11700 1800 50  0001 C CNN
-F 3 "" H 11700 1800 50  0001 C CNN
-	1    11700 1800
-	0    1    1    0   
-$EndComp
 Connection ~ 11700 1800
-Wire Wire Line
-	12350 2000 12550 2000
-Wire Wire Line
-	12350 2300 12550 2300
-$Comp
-L power:VCC #PWR0106
-U 1 1 5FB299EF
-P 13250 2000
-F 0 "#PWR0106" H 13250 1850 50  0001 C CNN
-F 1 "VCC" V 13265 2128 50  0000 L CNN
-F 2 "" H 13250 2000 50  0001 C CNN
-F 3 "" H 13250 2000 50  0001 C CNN
-	1    13250 2000
-	0    1    1    0   
-$EndComp
 $Comp
 L power:GND #PWR0107
 U 1 1 5FB2AA73
@@ -769,10 +732,10 @@ Connection ~ 12850 2300
 Wire Wire Line
 	12850 2300 13100 2300
 $Comp
-L formula:C_100nF C?
+L formula:C_100nF C7
 U 1 1 5FB2B96B
 P 12550 2150
-F 0 "C?" H 12665 2196 50  0000 L CNN
+F 0 "C7" H 12665 2196 50  0000 L CNN
 F 1 "C_100nF" H 12665 2105 50  0000 L CNN
 F 2 "footprints:C_0603_1608Metric" H 12588 2000 50  0001 C CNN
 F 3 "http://www.samsungsem.com/kr/support/product-search/mlcc/CL10A475KQ8NNNC.jsp" H 12575 2250 50  0001 C CNN
@@ -782,14 +745,13 @@ F 6 "https://www.digikey.com/product-detail/en/samsung-electro-mechanics/CL10B10
 	1    12550 2150
 	1    0    0    -1  
 $EndComp
-Connection ~ 12550 2000
 Wire Wire Line
 	12550 2000 13100 2000
 $Comp
-L formula:C_4.7uF C?
+L formula:C_4.7uF C8
 U 1 1 5FB2C8CC
 P 13100 2150
-F 0 "C?" H 13215 2196 50  0000 L CNN
+F 0 "C8" H 13215 2196 50  0000 L CNN
 F 1 "C_4.7uF" H 13215 2105 50  0000 L CNN
 F 2 "footprints:C_0603_1608Metric" H 13138 2000 50  0001 C CNN
 F 3 "http://www.samsungsem.com/kr/support/product-search/mlcc/CL10A475KQ8NNNC.jsp" H 13125 2250 50  0001 C CNN
@@ -799,20 +761,13 @@ F 6 "https://www.digikey.com/product-detail/en/samsung-electro-mechanics/CL10A47
 	1    13100 2150
 	1    0    0    -1  
 $EndComp
-Connection ~ 13100 2000
-Wire Wire Line
-	13100 2000 13250 2000
-Connection ~ 12550 2300
 Wire Wire Line
 	12550 2300 12850 2300
-Connection ~ 13100 2300
-Wire Wire Line
-	13100 2300 13250 2300
 $Comp
-L formula:LED_0805 D?
+L formula:LED_0805 D3
 U 1 1 5FB4670F
 P 15250 7500
-F 0 "D?" H 15243 7716 50  0000 C CNN
+F 0 "D3" H 15243 7716 50  0000 C CNN
 F 1 "LED_0805" H 15243 7625 50  0000 C CNN
 F 2 "footprints:LED_0805_OEM" H 15150 7500 50  0001 C CNN
 F 3 "http://www.osram-os.com/Graphics/XPic9/00078860_0.pdf" H 15250 7600 50  0001 C CNN
@@ -822,28 +777,15 @@ F 6 "https://www.digikey.com/products/en?keywords=475-1410-1-ND" H 15650 8000 60
 	1    15250 7500
 	-1   0    0    1   
 $EndComp
-$Comp
-L power:VCC #PWR?
-U 1 1 5FB4B1C8
-P 14800 7950
-F 0 "#PWR?" H 14800 7800 50  0001 C CNN
-F 1 "VCC" H 14815 8123 50  0000 C CNN
-F 2 "" H 14800 7950 50  0001 C CNN
-F 3 "" H 14800 7950 50  0001 C CNN
-	1    14800 7950
-	-1   0    0    1   
-$EndComp
 Text Notes 14850 7450 0    50   ~ 0
 POWER
 Wire Wire Line
-	14800 7950 14800 7500
-Wire Wire Line
 	14800 7500 15100 7500
 $Comp
-L formula:R_270K R?
+L formula:R_270K R6
 U 1 1 5FB531FD
 P 15750 7500
-F 0 "R?" V 15957 7500 50  0000 C CNN
+F 0 "R6" V 15957 7500 50  0000 C CNN
 F 1 "R_270K" V 15866 7500 50  0000 C CNN
 F 2 "footprints:R_0805_OEM" V 15680 7500 50  0001 C CNN
 F 3 "https://industrial.panasonic.com/cdbs/www-data/pdf/RDM0000/AOA0000C307.pdf" V 16300 7600 50  0001 C CNN
@@ -854,21 +796,10 @@ F 6 "https://www.digikey.com/product-detail/en/panasonic-electronic-components/E
 	0    -1   -1   0   
 $EndComp
 $Comp
-L power:GND #PWR?
-U 1 1 5FB5662E
-P 15900 7500
-F 0 "#PWR?" H 15900 7250 50  0001 C CNN
-F 1 "GND" V 15905 7372 50  0000 R CNN
-F 2 "" H 15900 7500 50  0001 C CNN
-F 3 "" H 15900 7500 50  0001 C CNN
-	1    15900 7500
-	0    -1   -1   0   
-$EndComp
-$Comp
-L formula:LED_0805_Amber D?
+L formula:LED_0805_Amber D2
 U 1 1 5FB574C3
 P 15250 7150
-F 0 "D?" H 15243 6895 50  0000 C CNN
+F 0 "D2" H 15243 6895 50  0000 C CNN
 F 1 "LED_0805_Amber" H 15243 6986 50  0000 C CNN
 F 2 "footprints:LED_0805_OEM" H 15150 7150 50  0001 C CNN
 F 3 "https://media.digikey.com/pdf/Data%20Sheets/Chicago%20Miniature%20Lamps%20PDFs/CMDA5_Series_Rev_Aug_2014.pdf" H 15250 7250 50  0001 C CNN
@@ -879,10 +810,10 @@ F 6 "https://www.digikey.com/product-detail/en/visual-communications-company-vcc
 	-1   0    0    1   
 $EndComp
 $Comp
-L formula:LED_0805_Amber D?
+L formula:LED_0805_Amber D1
 U 1 1 5FB5A256
 P 15250 6750
-F 0 "D?" H 15243 6495 50  0000 C CNN
+F 0 "D1" H 15243 6495 50  0000 C CNN
 F 1 "LED_0805_Amber" H 15243 6586 50  0000 C CNN
 F 2 "footprints:LED_0805_OEM" H 15150 6750 50  0001 C CNN
 F 3 "https://media.digikey.com/pdf/Data%20Sheets/Chicago%20Miniature%20Lamps%20PDFs/CMDA5_Series_Rev_Aug_2014.pdf" H 15250 6850 50  0001 C CNN
@@ -893,10 +824,10 @@ F 6 "https://www.digikey.com/product-detail/en/visual-communications-company-vcc
 	-1   0    0    1   
 $EndComp
 $Comp
-L formula:R_270K R?
+L formula:R_270K R5
 U 1 1 5FB5AAD5
 P 15750 7150
-F 0 "R?" V 15543 7150 50  0000 C CNN
+F 0 "R5" V 15543 7150 50  0000 C CNN
 F 1 "R_270K" V 15634 7150 50  0000 C CNN
 F 2 "footprints:R_0805_OEM" V 15680 7150 50  0001 C CNN
 F 3 "https://industrial.panasonic.com/cdbs/www-data/pdf/RDM0000/AOA0000C307.pdf" V 16300 7250 50  0001 C CNN
@@ -907,10 +838,10 @@ F 6 "https://www.digikey.com/product-detail/en/panasonic-electronic-components/E
 	0    1    1    0   
 $EndComp
 $Comp
-L formula:R_270K R?
+L formula:R_270K R4
 U 1 1 5FB5BC61
 P 15750 6750
-F 0 "R?" V 15543 6750 50  0000 C CNN
+F 0 "R4" V 15543 6750 50  0000 C CNN
 F 1 "R_270K" V 15634 6750 50  0000 C CNN
 F 2 "footprints:R_0805_OEM" V 15680 6750 50  0001 C CNN
 F 3 "https://industrial.panasonic.com/cdbs/www-data/pdf/RDM0000/AOA0000C307.pdf" V 16300 6850 50  0001 C CNN
@@ -945,7 +876,6 @@ Text Label 15800 2800 0    50   ~ 0
 TXLED
 Text Label 15800 2900 0    50   ~ 0
 RXLED
-Connection ~ 14800 7500
 Wire Wire Line
 	14800 7150 14800 7500
 Wire Notes Line
@@ -972,4 +902,61 @@ Wire Notes Line
 	8750 2650 6450 2650
 Wire Notes Line
 	6450 2650 6450 650 
+$Comp
+L power:VCC #PWR?
+U 1 1 5FB3615E
+P 11700 1800
+F 0 "#PWR?" H 11700 1650 50  0001 C CNN
+F 1 "VCC" H 11800 1850 50  0000 C CNN
+F 2 "" H 11700 1800 50  0001 C CNN
+F 3 "" H 11700 1800 50  0001 C CNN
+	1    11700 1800
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:VCC #PWR?
+U 1 1 5FB37814
+P 13100 2000
+F 0 "#PWR?" H 13100 1850 50  0001 C CNN
+F 1 "VCC" H 13115 2173 50  0000 C CNN
+F 2 "" H 13100 2000 50  0001 C CNN
+F 3 "" H 13100 2000 50  0001 C CNN
+	1    13100 2000
+	1    0    0    -1  
+$EndComp
+Connection ~ 13100 2000
+$Comp
+L power:GND #PWR?
+U 1 1 5FB3808B
+P 15450 3700
+F 0 "#PWR?" H 15450 3450 50  0001 C CNN
+F 1 "GND" H 15455 3527 50  0000 C CNN
+F 2 "" H 15450 3700 50  0001 C CNN
+F 3 "" H 15450 3700 50  0001 C CNN
+	1    15450 3700
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR0110
+U 1 1 5FB5662E
+P 15900 7500
+F 0 "#PWR0110" H 15900 7250 50  0001 C CNN
+F 1 "GND" H 16050 7550 50  0000 R CNN
+F 2 "" H 15900 7500 50  0001 C CNN
+F 3 "" H 15900 7500 50  0001 C CNN
+	1    15900 7500
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:VCC #PWR?
+U 1 1 5FB3A4ED
+P 14800 6750
+F 0 "#PWR?" H 14800 6600 50  0001 C CNN
+F 1 "VCC" H 14815 6923 50  0000 C CNN
+F 2 "" H 14800 6750 50  0001 C CNN
+F 3 "" H 14800 6750 50  0001 C CNN
+	1    14800 6750
+	1    0    0    -1  
+$EndComp
+Connection ~ 14800 6750
 $EndSCHEMATC
