@@ -2,9 +2,11 @@
 import pytest
 import os
 import time
+import logging
 
 # Project Imports
 from modules.iocontroller import IOController
+from modules.utils import get_logging_config
 
 
 @pytest.fixture
@@ -17,13 +19,21 @@ def io():
     time.sleep(2)  # Was seeing weird errors without this
     return out
 
+@pytest.fixture
+def logger():
+    get_logging_config()
+    return logging.getLogger(name=__name__)
 
-def test_udev(io):
+
+def test_udev(io, logger):
     # Create an IOController to make sure it can connect to hardware!
+    logger.info("Testing hardware connection...")
     assert io.serial
 
 
-def test_read_io_file(io):
+def test_read_io_file(io, logger):
+    logger.info("Testing pin_info parser...")
+
     analog = io.pin_info["EXAMPLE_ANALOG_SIGNAL"]
     assert analog["type"] == "ANALOG"
     assert analog["max"] == 5
@@ -33,8 +43,10 @@ def test_read_io_file(io):
     assert digital["simulator"] == "EXAMPLE1"
 
 
-def test_get_set(io):
+def test_get_set(io, logger):
     # Assumes plugged into arduino running `firmware/arduino/hitl_interface_mock.ino`
+    logger.info("Send/receive functionality...")
+
     io.set_state("ARDUINO_STATE", 1)
     time.sleep(1)
     assert 0.99 < io.get_state("ARDUINO_STATE") < 1.01

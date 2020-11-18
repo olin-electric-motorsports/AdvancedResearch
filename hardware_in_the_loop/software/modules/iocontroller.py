@@ -12,13 +12,16 @@ class IOController:
     """
 
     def __init__(self, pin_info_path: str, serial_path: str):
+        # Create logger (all config should already be set by RoadkillHarness)
+        self.log = logging.getLogger(name=__name__)
+
         self.pin_info = self.read_pin_info(path=pin_info_path)
         try:
             self.serial = serial.Serial(port=serial_path, baudrate=115200, timeout=5)
         except Exception as e:
             # Couldn't open the specified port; initialize w/o hardware for testing
-            print("Could not connect to HitL System Interface!")
-            print(e)
+            self.log.error(f"Failed to connect to hardware at {pin_info_path}")
+            self.log.error(e)
             self.serial = None
 
     def set_state(self, pin: str, value) -> None:
@@ -45,6 +48,11 @@ class IOController:
                     For example, 2.5V is 00010100 or 0x20
                     To convert from int, multiply by 8 (or bitshift left 3 times)
         """
+        # If no hardware, log an error
+        if not self.serial:
+            self.log.error("Could not set state; no hardware connection")
+            return
+
         address = self.pin_info[pin]["address"] + 128  # set the leftmost bit to 1 to designate message as setter
         data: bytes = b""
         if self.pin_info[pin]["type"] == "DIGITAL":
@@ -56,6 +64,7 @@ class IOController:
 
         request = bytes([address, data])
         self._send_request(request)
+        self.log.info(f"Set state of {pin} to {value}")
 
     def get_state(self, pin: str):
         """Request a hardware state from the HitL system.
@@ -74,6 +83,11 @@ class IOController:
         Returns:
             int or float: The value of the requested state
         """
+        # If no hardware, log an error
+        if not self.serial:
+            self.log.error("Could not get state; no hardware connection")
+            return -1
+
         # Flush the serial buffer, in case anything has come in
         self.serial.flush()
 
@@ -83,7 +97,7 @@ class IOController:
 
         # Wait for response. We want this to block (which it does)
         response = self.serial.read(size=1)  # Read 1 byte
-        print(f"Recieved {response}")
+        self.log.debug(f"Received {response}")
 
         out = 0  # Type float or int
         if self.pin_info[pin]["type"] == "DIGITAL":
@@ -93,6 +107,7 @@ class IOController:
         else:
             raise Exception(f"Unsupported signal type: {self.pin_info[pin]['type']}")
 
+        self.log.info(f"Got state of {pin}: {out}")
         return out
 
     def read_pin_info(self, path: str) -> dict:
@@ -140,7 +155,7 @@ class IOController:
         Args:
             request (bytes): The bytes to send
         """
-        print(f"Sent {request}")
+        self.log.debug(f"Sent {request}")
         self.serial.write(request)
 
     def __del__(self) -> None:
