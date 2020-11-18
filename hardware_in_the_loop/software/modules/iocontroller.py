@@ -1,5 +1,6 @@
 # Extended python imports
 import serial
+import logging
 
 
 class IOController:

@@ -29,3 +29,6 @@ fp-info-cache
 # Pytest generated assets
 **/tests/assets/
 report.html
+
+# Logs
+*.log
