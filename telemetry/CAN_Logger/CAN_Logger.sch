@@ -366,10 +366,10 @@ SCK
 Text Label 4300 3700 0    50   ~ 0
 RESET
 $Comp
-L template-rescue:R_100-formula R1
+L template-rescue:R_100-formula R8
 U 1 1 5D58E16F
 P 1150 1150
-F 0 "R1" V 1050 1100 50  0000 L CNN
+F 0 "R8" V 1050 1100 50  0000 L CNN
 F 1 "R_100" V 1240 1030 50  0000 L CNN
 F 2 "footprints:R_0805_OEM" H 350 1300 50  0001 C CNN
 F 3 "https://www.seielect.com/Catalog/SEI-rncp.pdf" H 850 1650 50  0001 C CNN
@@ -458,10 +458,10 @@ F 6 "https://www.digikey.com/product-detail/en/samsung-electro-mechanics-america
 	1    0    0    -1  
 $EndComp
 $Comp
-L template-rescue:R_10K-formula R3
+L template-rescue:R_10K-formula R7
 U 1 1 5D5EB7F3
 P 4150 3500
-F 0 "R3" V 4070 3500 50  0000 C CNN
+F 0 "R7" V 4070 3500 50  0000 C CNN
 F 1 "R_10K" V 4200 3750 50  0000 C CNN
 F 2 "footprints:R_0805_OEM" H 4080 3500 50  0001 C CNN
 F 3 "http://www.bourns.com/data/global/pdfs/CRS.pdf" H 4230 3500 50  0001 C CNN
@@ -1007,10 +1007,10 @@ F 6 "https://www.digikey.com/product-detail/en/texas-instruments/LM3480IM3-3.3/L
 	1    0    0    -1  
 $EndComp
 $Comp
-L formula:C_0.1uF C?
+L formula:C_0.1uF C6
 U 1 1 5F9D32ED
 P 1400 6850
-F 0 "C?" H 1150 6900 50  0000 L CNN
+F 0 "C6" H 1150 6900 50  0000 L CNN
 F 1 "C_0.1uF" H 950 6800 50  0000 L CNN
 F 2 "footprints:C_0805_OEM" H 1438 6700 50  0001 C CNN
 F 3 "http://datasheets.avx.com/X7RDielectric.pdf" H 1425 6950 50  0001 C CNN
@@ -1021,10 +1021,10 @@ F 6 "https://www.digikey.com/products/en?keywords=478-3352-1-ND" H 1825 7350 60 
 	1    0    0    -1  
 $EndComp
 $Comp
-L formula:C_0.1uF C?
+L formula:C_0.1uF C7
 U 1 1 5F9D673F
 P 2250 6850
-F 0 "C?" H 2365 6896 50  0000 L CNN
+F 0 "C7" H 2365 6896 50  0000 L CNN
 F 1 "C_0.1uF" H 2365 6805 50  0000 L CNN
 F 2 "footprints:C_0805_OEM" H 2288 6700 50  0001 C CNN
 F 3 "http://datasheets.avx.com/X7RDielectric.pdf" H 2275 6950 50  0001 C CNN
@@ -1128,10 +1128,10 @@ F 3 "" H 4250 6400 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L formula:C_0.1uF C?
+L formula:C_0.1uF C8
 U 1 1 5FA99092
 P 4250 6650
-F 0 "C?" H 4000 6700 50  0000 L CNN
+F 0 "C8" H 4000 6700 50  0000 L CNN
 F 1 "C_0.1uF" H 3800 6600 50  0000 L CNN
 F 2 "footprints:C_0805_OEM" H 4288 6500 50  0001 C CNN
 F 3 "http://datasheets.avx.com/X7RDielectric.pdf" H 4275 6750 50  0001 C CNN
@@ -1142,10 +1142,10 @@ F 6 "https://www.digikey.com/products/en?keywords=478-3352-1-ND" H 4675 7150 60 
 	1    0    0    -1  
 $EndComp
 $Comp
-L formula:LED_0805 D?
+L formula:LED_0805 D3
 U 1 1 5FADB3E9
 P 5300 1800
-F 0 "D?" H 5293 2016 50  0000 C CNN
+F 0 "D3" H 5293 2016 50  0000 C CNN
 F 1 "LED_0805" H 5293 1925 50  0000 C CNN
 F 2 "footprints:LED_0805_OEM" H 5200 1800 50  0001 C CNN
 F 3 "http://www.osram-os.com/Graphics/XPic9/00078860_0.pdf" H 5300 1900 50  0001 C CNN
@@ -1242,10 +1242,10 @@ F 3 "" H 8300 5100 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L formula:C_0.1uF C?
+L formula:C_0.1uF C12
 U 1 1 5FB840B6
 P 9550 3950
-F 0 "C?" H 9665 3996 50  0000 L CNN
+F 0 "C12" H 9665 3996 50  0000 L CNN
 F 1 "C_0.1uF" H 9665 3905 50  0000 L CNN
 F 2 "footprints:C_0805_OEM" H 9588 3800 50  0001 C CNN
 F 3 "http://datasheets.avx.com/X7RDielectric.pdf" H 9575 4050 50  0001 C CNN
@@ -1256,10 +1256,10 @@ F 6 "https://www.digikey.com/products/en?keywords=478-3352-1-ND" H 9975 4450 60 
 	1    0    0    -1  
 $EndComp
 $Comp
-L formula:C_1uF C?
+L formula:C_1uF C11
 U 1 1 5FB87977
 P 9050 4000
-F 0 "C?" H 9165 4096 50  0000 L CNN
+F 0 "C11" H 9165 4096 50  0000 L CNN
 F 1 "C_1uF" H 9165 4005 50  0000 L CNN
 F 2 "footprints:C_0805_OEM" H 9088 4600 50  0001 C CNN
 F 3 "https://www.yageo.com/upload/media/product/productsearch/datasheet/mlcc/UPY-GPHC_Y5V_6.3V-to-50V_9.pdf" H 9075 4850 50  0001 C CNN
@@ -1268,10 +1268,10 @@ F 4 "https://www.digikey.com/product-detail/en/yageo/CC0805ZKY5V9BB105/311-1909-
 	1    0    0    -1  
 $EndComp
 $Comp
-L formula:C_10uF C?
+L formula:C_10uF C10
 U 1 1 5FB88F57
 P 8500 4000
-F 0 "C?" H 8615 4096 50  0000 L CNN
+F 0 "C10" H 8615 4096 50  0000 L CNN
 F 1 "C_10uF" H 8615 4005 50  0000 L CNN
 F 2 "footprints:C_0805_OEM" H 8538 4600 50  0001 C CNN
 F 3 "http://www.samsungsem.com/kr/support/product-search/mlcc/__icsFiles/afieldfile/2018/06/20/CL21A106KPFNNNE.pdf" H 8525 4850 50  0001 C CNN
@@ -1336,14 +1336,14 @@ Wire Wire Line
 Wire Wire Line
 	4600 1800 4850 1800
 Text Notes 8850 3650 0    50   ~ 0
-Put near pin 4
+Put capacitors near pin 4
 Text Notes 7250 3650 0    50   ~ 0
 SD CARD SOCKET
 $Comp
-L formula:R_200 R?
+L formula:R_200 R3
 U 1 1 5FB1B4F9
 P 5000 1800
-F 0 "R?" V 4793 1800 50  0000 C CNN
+F 0 "R3" V 4793 1800 50  0000 C CNN
 F 1 "R_200" V 4884 1800 50  0000 C CNN
 F 2 "footprints:R_0805_OEM" H 4930 1800 50  0001 C CNN
 F 3 "https://www.seielect.com/Catalog/SEI-RMCF_RMCP.pdf" H 5080 1800 50  0001 C CNN
@@ -1358,10 +1358,10 @@ Wire Wire Line
 Wire Wire Line
 	8800 2350 9100 2350
 $Comp
-L formula:R_120_DNP R?
+L formula:R_120_DNP R4
 U 1 1 5FB2AC8E
 P 9100 2500
-F 0 "R?" H 9170 2546 50  0000 L CNN
+F 0 "R4" H 9170 2546 50  0000 L CNN
 F 1 "R_120_DNP" H 9170 2455 50  0000 L CNN
 F 2 "footprints:R_0805_OEM" H 7900 2650 50  0001 L CNN
 F 3 "https://www.mouser.com/datasheet/2/315/AOA0000C304-1149620.pdf" H 7900 2950 50  0001 L CNN
@@ -1378,10 +1378,10 @@ Connection ~ 9100 2650
 Wire Wire Line
 	9100 2650 9150 2650
 $Comp
-L formula:C_0.1uF C?
+L formula:C_0.1uF C9
 U 1 1 5FA9BD05
 P 6150 6650
-F 0 "C?" H 6265 6696 50  0000 L CNN
+F 0 "C9" H 6265 6696 50  0000 L CNN
 F 1 "C_0.1uF" H 6265 6605 50  0000 L CNN
 F 2 "footprints:C_0805_OEM" H 6188 6500 50  0001 C CNN
 F 3 "http://datasheets.avx.com/X7RDielectric.pdf" H 6175 6750 50  0001 C CNN
@@ -1451,10 +1451,10 @@ SD_DETECT
 Text Label 6700 4750 2    50   ~ 0
 SD_PROTECT
 $Comp
-L formula:R_10K R?
+L formula:R_10K R6
 U 1 1 5FB68C05
 P 7150 4700
-F 0 "R?" H 7220 4746 50  0000 L CNN
+F 0 "R6" H 7220 4746 50  0000 L CNN
 F 1 "R_10K" H 7220 4655 50  0000 L CNN
 F 2 "footprints:R_0805_OEM" H 7080 4700 50  0001 C CNN
 F 3 "http://www.bourns.com/data/global/pdfs/CRS.pdf" H 7230 4700 50  0001 C CNN
@@ -1467,10 +1467,10 @@ $EndComp
 Wire Wire Line
 	6700 4850 7150 4850
 $Comp
-L formula:R_10K R?
+L formula:R_10K R5
 U 1 1 5FB8B59F
 P 7000 4600
-F 0 "R?" H 6800 4650 50  0000 L CNN
+F 0 "R5" H 6800 4650 50  0000 L CNN
 F 1 "R_10K" H 6700 4550 50  0000 L CNN
 F 2 "footprints:R_0805_OEM" H 6930 4600 50  0001 C CNN
 F 3 "http://www.bourns.com/data/global/pdfs/CRS.pdf" H 7080 4600 50  0001 C CNN
@@ -1511,10 +1511,10 @@ F 3 "" H 7000 4450 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L formula:LED_0805 D?
+L formula:LED_0805 D1
 U 1 1 5FBA8996
 P 5300 1000
-F 0 "D?" H 5293 1216 50  0000 C CNN
+F 0 "D1" H 5293 1216 50  0000 C CNN
 F 1 "LED_0805" H 5293 1125 50  0000 C CNN
 F 2 "footprints:LED_0805_OEM" H 5200 1000 50  0001 C CNN
 F 3 "http://www.osram-os.com/Graphics/XPic9/00078860_0.pdf" H 5300 1100 50  0001 C CNN
@@ -1540,10 +1540,10 @@ Wire Wire Line
 Wire Wire Line
 	4600 1000 4850 1000
 $Comp
-L formula:R_200 R?
+L formula:R_200 R1
 U 1 1 5FBA89A7
 P 5000 1000
-F 0 "R?" V 4793 1000 50  0000 C CNN
+F 0 "R1" V 4793 1000 50  0000 C CNN
 F 1 "R_200" V 4884 1000 50  0000 C CNN
 F 2 "footprints:R_0805_OEM" H 4930 1000 50  0001 C CNN
 F 3 "https://www.seielect.com/Catalog/SEI-RMCF_RMCP.pdf" H 5080 1000 50  0001 C CNN
@@ -1554,10 +1554,10 @@ F 6 "https://www.digikey.com/products/en?keywords=RMCF0805JT200RCT-ND" H 5480 14
 	0    1    1    0   
 $EndComp
 $Comp
-L formula:LED_0805 D?
+L formula:LED_0805 D2
 U 1 1 5FBABF78
 P 5300 1400
-F 0 "D?" H 5293 1616 50  0000 C CNN
+F 0 "D2" H 5293 1616 50  0000 C CNN
 F 1 "LED_0805" H 5293 1525 50  0000 C CNN
 F 2 "footprints:LED_0805_OEM" H 5200 1400 50  0001 C CNN
 F 3 "http://www.osram-os.com/Graphics/XPic9/00078860_0.pdf" H 5300 1500 50  0001 C CNN
@@ -1583,10 +1583,10 @@ Wire Wire Line
 Wire Wire Line
 	4600 1400 4850 1400
 $Comp
-L formula:R_200 R?
+L formula:R_200 R2
 U 1 1 5FBABF89
 P 5000 1400
-F 0 "R?" V 4793 1400 50  0000 C CNN
+F 0 "R2" V 4793 1400 50  0000 C CNN
 F 1 "R_200" V 4884 1400 50  0000 C CNN
 F 2 "footprints:R_0805_OEM" H 4930 1400 50  0001 C CNN
 F 3 "https://www.seielect.com/Catalog/SEI-RMCF_RMCP.pdf" H 5080 1400 50  0001 C CNN
@@ -1608,4 +1608,17 @@ Text Label 3650 1200 0    50   ~ 0
 P_LED_3
 Text Label 4600 1800 2    50   ~ 0
 P_LED_3
+NoConn ~ 3650 1900
+NoConn ~ 3650 2000
+NoConn ~ 3650 1300
+NoConn ~ 3650 1400
+NoConn ~ 3650 1500
+NoConn ~ 3650 2300
+NoConn ~ 3650 2400
+NoConn ~ 3650 2500
+NoConn ~ 3650 2600
+NoConn ~ 3650 2800
+NoConn ~ 3650 2900
+NoConn ~ 3650 3400
+NoConn ~ 3650 3500
 $EndSCHEMATC
