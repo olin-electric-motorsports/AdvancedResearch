@@ -1,52 +1,6 @@
 EESchema-LIBRARY Version 2.4
 #encoding utf-8
 #
-# Connector_USB_A
-#
-DEF Connector_USB_A J 0 40 Y Y 1 F N
-F0 "J" -200 450 50 H V L CNN
-F1 "Connector_USB_A" -200 350 50 H V L CNN
-F2 "" 150 -50 50 H I C CNN
-F3 "" 150 -50 50 H I C CNN
-$FPLIST
- USB*
-$ENDFPLIST
-DRAW
-C -150 85 25 0 1 10 F
-C -25 135 15 0 1 10 F
-S -200 -300 200 300 0 1 10 f
-S -60 190 -170 210 0 1 0 F
-S -50 180 -180 230 0 1 0 N
-S -5 -300 5 -270 0 1 0 N
-S 10 50 -20 20 0 1 10 F
-S 200 -105 170 -95 0 1 0 N
-S 200 -5 170 5 0 1 0 N
-S 200 195 170 205 0 1 0 N
-P 4 0 1 10 -125 85 -100 85 -50 135 -25 135 N
-P 4 0 1 10 -100 85 -75 85 -50 35 0 35 N
-P 4 0 1 10 25 110 25 60 75 85 25 110 F
-P 2 1 1 10 -75 85 25 85 N
-X VBUS 1 300 200 100 L 50 50 1 1 W
-X D- 2 300 -100 100 L 50 50 1 1 B
-X D+ 3 300 0 100 L 50 50 1 1 B
-X GND 4 0 -400 100 U 50 50 1 1 W
-X Shield 5 -100 -400 100 U 50 50 1 1 P
-ENDDRAW
-ENDDEF
-#
-# Graphic_SYM_Arrow_Large
-#
-DEF Graphic_SYM_Arrow_Large #SYM 0 40 Y Y 1 F N
-F0 "#SYM" 0 90 50 H I C CNN
-F1 "Graphic_SYM_Arrow_Large" 0 -80 50 H I C CNN
-F2 "" 0 0 50 H I C CNN
-F3 "" 0 0 50 H I C CNN
-DRAW
-P 2 0 1 20 100 0 -150 0 N
-P 4 0 1 0 150 0 50 -30 50 30 150 0 F
-ENDDRAW
-ENDDEF
-#
 # formula_1.5A_Fuse
 #
 DEF formula_1.5A_Fuse F 0 40 Y Y 1 F N
@@ -66,34 +20,13 @@ X 2 2 300 0 200 L 50 50 1 1 I
 ENDDRAW
 ENDDEF
 #
-# formula_CONN_01x02
-#
-DEF formula_CONN_01x02 J 0 40 Y N 1 F N
-F0 "J" 0 100 50 H V C CNN
-F1 "formula_CONN_01x02" 0 -200 50 H V C CNN
-F2 "Connector_PinHeader_2.54mm:PinHeader_1x02_P2.54mm_Vertical" -100 0 50 H I C CNN
-F3 "https://katalog.we-online.de/em/datasheet/6130xx11121.pdf" 0 100 50 H I C CNN
-F4 "DK" 100 200 50 H I C CNN "MFN"
-F5 "732-5315-ND" 200 300 50 H I C CNN "MPN"
-$FPLIST
- Connector*:*_1x??_*
-$ENDFPLIST
-DRAW
-S -50 -95 0 -105 1 1 6 N
-S -50 5 0 -5 1 1 6 N
-S -50 50 50 -150 1 1 10 f
-X Pin_1 1 -200 0 150 R 50 50 1 1 P
-X Pin_2 2 -200 -100 150 R 50 50 1 1 P
-ENDDRAW
-ENDDEF
-#
 # formula_C_100uF
 #
 DEF formula_C_100uF C 0 10 N Y 1 F N
 F0 "C" 25 100 50 H V L CNN
 F1 "formula_C_100uF" 25 -100 50 H V L CNN
-F2 "footprints:C_1812_OEM" 0 750 50 H I C CNN
-F3 "https://product.tdk.com/info/en/catalog/datasheets/mlcc_commercial_general_en.pdf" 200 -550 50 H I C CNN
+F2 "footprints:C_1812_4532Metric" 0 750 50 H I C CNN
+F3 "" 200 -550 50 H I C CNN
 F4 "C4532X5R0J107M280KA" 0 450 60 H I C CNN "MFN"
 F5 "445-1413-1-ND" -50 600 60 H I C CNN "MPN"
 F6 "https://www.digikey.com/product-detail/en/tdk-corporation/C4532X5R0J107M280KA/445-1413-1-ND/567567" 250 -400 60 H I C CNN "PurchasingLink"
@@ -250,7 +183,7 @@ ENDDEF
 DEF formula_L_6.8uH L 0 40 N N 1 F N
 F0 "L" 0 -50 50 H V C CNN
 F1 "formula_L_6.8uH" 0 100 50 H V C CNN
-F2 "" -100 -200 50 H I C CNN
+F2 "footprints:L_100uH_OEM" -100 -200 50 H I C CNN
 F3 "" -100 -150 50 H I C CNN
 F4 "Digikey" 100 -200 50 H I C CNN "MFN"
 F5 "445-1539-1-ND" 0 250 50 H I C CNN "MPN"
@@ -300,6 +233,23 @@ X ~PG~ 6 800 200 200 L 40 40 0 0 O
 X STAT2 7 800 400 200 L 40 40 0 0 O
 X STAT1/!LBO 8 800 500 200 L 40 40 0 0 O
 X ~TE~ 9 -800 0 200 R 40 40 0 0 I
+ENDDRAW
+ENDDEF
+#
+# formula_NanoFit_RA_TH_02
+#
+DEF formula_NanoFit_RA_TH_02 J 0 40 Y Y 1 F N
+F0 "J" 0 200 60 H V C CNN
+F1 "formula_NanoFit_RA_TH_02" 0 -300 60 H V C CNN
+F2 "footprints:NanoFit_Molex_1x02x2.50mm_Angled_OEM" 0 -600 60 H I C CNN
+F3 "https://www.molex.com/pdm_docs/sd/1053131102_sd.pdf" 0 -450 60 H I C CNN
+F4 "DK" 0 550 50 H I C CNN "MFN"
+F5 "WM14972-ND" 0 450 50 H I C CNN "MPN"
+F6 "https://www.digikey.com/products/en/connectors-interconnects/rectangular-connectors-headers-male-pins/314?k=nanofit+2&k=&pkeyword=nanofit+2&pv88=2&pv69=367&sf=0&FV=ffe0013a&quantity=&ColumnSort=0&page=1&pageSize=25" 0 -800 50 H I C CNN "PurchasingLink"
+DRAW
+S -250 150 250 -200 0 1 0 f
+X 1 1 -450 50 200 R 50 50 1 1 I
+X 2 2 -450 -100 200 R 50 50 1 1 I
 ENDDRAW
 ENDDEF
 #
@@ -592,6 +542,28 @@ X PGND 6 700 -450 200 L 40 40 0 0 W
 X PGND 7 700 -550 200 L 40 40 0 0 W
 X VBAT 8 -700 0 200 R 40 40 0 0 I
 X LBI 9 -700 -250 200 R 40 40 0 0 I
+ENDDRAW
+ENDDEF
+#
+# formula_USB-A-S-X-X-SM2
+#
+DEF formula_USB-A-S-X-X-SM2 J 0 40 Y Y 1 F N
+F0 "J" -200 350 50 H V L BNN
+F1 "formula_USB-A-S-X-X-SM2" -200 -500 50 H V L BNN
+F2 "footprints:SAMTEC_USB-A-S-X-X-SM2" 0 0 50 H I L BNN
+F3 "" 0 0 50 H I L BNN
+F4 "Samtec" 0 0 50 H I L BNN
+F5 "Manufacturer Recommendations" 0 0 50 H I L BNN
+F6 "7.8 mm" 0 0 50 H I L BNN
+F7 "SAM14899CT-ND" 0 0 50 H V C CNN "MPN"
+DRAW
+S -200 -400 200 300 0 0 10 f
+X VCC 01 -400 200 200 R 40 40 0 0 W
+X D- 02 -400 100 200 R 40 40 0 0 B
+X D+ 03 -400 0 200 R 40 40 0 0 B
+X GND 04 -400 -100 200 R 40 40 0 0 W
+X SHIELD S1 -400 -200 200 R 40 40 0 0 P
+X SHIELD S2 -400 -300 200 R 40 40 0 0 P
 ENDDRAW
 ENDDEF
 #
