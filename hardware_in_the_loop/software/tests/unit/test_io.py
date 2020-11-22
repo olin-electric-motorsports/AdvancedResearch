@@ -19,6 +19,7 @@ def io():
     time.sleep(2)  # Was seeing weird errors without this
     return out
 
+
 @pytest.fixture
 def logger():
     get_logging_config()
