@@ -18,7 +18,7 @@ class IOController:
         self.pin_info = self.read_pin_info(path=pin_info_path)
         try:
             self.serial = serial.Serial(port=serial_path, baudrate=115200, timeout=5)
-        except Exception as e:
+        except serial.serialutil.SerialException as e:
             # Couldn't open the specified port; initialize w/o hardware for testing
             self.log.error(f"Failed to connect to hardware at {pin_info_path}")
             self.log.error(e)
