@@ -17,15 +17,10 @@ sense",,,,Brakelight/BSPD/Shutdown,Done,AIR CONTROL,0x0B,PRECHARGE_INCOMPLETE,
 0xC,12,100,5,Throttle ,"Sends the throttle position, brake over travel switch, inertia device, and driver E-Stop","Error Code
 ","Throttle Pos
 (0x00 - 0xFF)",BOTS Sense,Inertia Switch Sense,Driver E-Stop Sense,,,,Throttle,Done,BRAKELIGHT,0x10,BSPD,
-0xD,13,16,5,"AIR Control
-Critical",Send Precharge Status and AIR aux contacts,"Error Code
-",State,State Independent Checks,"High Side AIR
-Open (0x00)
-Closed (0xFF)","Low Side AIR
-Open (0x00)
-Closed (0xFF)",,,,AIR CTRL,Done,BRAKELIGHT,0x11,,
+0xD,13fState,16,5,"AIR Control
+Critical",Send Precharge Status and AIR aux contacts,"Error Code",State,State Independent Checks,"High Side AIR","Low Side AIR",,,,AIR CTRL,Done,BRAKELIGHT,0x11,,
 0xE,14,16,8,"AIR Control
-Sense",Send shutdown node sense,TSMS Sense,IMD Sense,Main Pack (TSCONN) Sense,Connector to HVD (HVDCONN) Sense,HVD Sense,BMS Sense,IMD Status,BMS Status,,,,,,
+Sense",Send shutdown node sense,TSMS Sense,IMD Sense,Main Pack (TSCONN) Sense,Connector to HVD (HVDCONN) Sense,HVD Sense,BMS Sense,IMD Status,BMS Status,AIR CTRL,,,,,
 0xF,15,100,4,Dashboard,Sends the start button status and steering position,"Error Code
 ",Ready to Drive,Steering Pos (0x00 - 0xFF),"Start Button 
 (UNUSED)",,,,,Dashboard,Done,,,,
