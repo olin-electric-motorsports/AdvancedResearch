@@ -45,7 +45,7 @@ def test_read_io_file(io, logger):
 
 def test_get_set(io, logger):
     # Assumes plugged into arduino running `firmware/arduino/hitl_interface_mock.ino`
-    logger.info("Send/receive functionality...")
+    logger.info("Testing send/receive functionality...")
 
     io.set_state("ARDUINO_STATE", 1)
     time.sleep(1)
