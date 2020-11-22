@@ -4,7 +4,7 @@ from pprint import pprint
 data = pd.read_csv("mkv_can_address_space.csv") 
 
 # print(data.head())
-# lets start by just extracting the info thats therews
+# lets start by just extracting the info thats there
 output = {}
 for index, row in data.iterrows():
     if row < 13:
