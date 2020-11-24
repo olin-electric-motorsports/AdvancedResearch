@@ -1,5 +1,3 @@
 (sym_lib_table
-  (lib (name template-rescue)(type Legacy)(uri ${KIPRJMOD}/template-rescue.lib)(options "")(descr ""))
-  (lib (name benji_arduino2-rescue)(type Legacy)(uri ${KIPRJMOD}/benji_arduino2-rescue.lib)(options "")(descr ""))
   (lib (name rf_recevier-rescue)(type Legacy)(uri ${KIPRJMOD}/rf_recevier-rescue.lib)(options "")(descr ""))
 )
