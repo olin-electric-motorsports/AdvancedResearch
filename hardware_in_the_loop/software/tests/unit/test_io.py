@@ -23,7 +23,8 @@ def io():
 @pytest.fixture
 def logger():
     get_logging_config()
-    return logging.getLogger(name=__name__)
+    l = logging.getLogger(name=__name__)
+    return l
 
 
 def test_udev(io, logger):
@@ -47,6 +48,7 @@ def test_read_io_file(io, logger):
 def test_get_set(io, logger):
     # Assumes plugged into arduino running `firmware/arduino/hitl_interface_mock.ino`
     logger.info("Testing send/receive functionality...")
+    logger.warning(logger)
 
     io.set_state("ARDUINO_STATE", 1)
     time.sleep(1)

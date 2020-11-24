@@ -56,7 +56,7 @@ class IOController:
         board = self.pin_info[pin]["board"] | (1 << 7)  # set the leftmost bit to 1 to designate message as setter
 
         # Byte 2
-        pin = self.pin_info[pin]["pin"]
+        pin_num = self.pin_info[pin]["pin"]
 
         # Bytes 3-4
         byte2 = 0  # most significant byte
@@ -66,11 +66,11 @@ class IOController:
             if value == 1:
                 byte2 = byte3 = 0xFF  # oh yea, this syntax works :)
         elif self.pin_info[pin]["type"] == "ANALOG":
-            byte2, byte3 = self._map_to_machine(value, self.pin_info[pin]["min"], self.pin_info[pin]["min"])
+            byte2, byte3 = self._map_to_machine(value, self.pin_info[pin]["min"], self.pin_info[pin]["max"])
         else:
             raise Exception(f"Unsupported signal type: {self.pin_info[pin]['type']}")
 
-        request = bytes([board, pin, byte2, byte3])
+        request = bytes([board, pin_num, byte2, byte3])
         self._send_request(request)
         self.log.info(f"Set state of {pin} to {value}")
 
@@ -102,8 +102,8 @@ class IOController:
 
         # Create and send request
         board = self.pin_info[pin]["board"]
-        pin = self.pin_info[pin]["pin"]
-        request = bytes([board, pin])
+        pin_num = self.pin_info[pin]["pin"]
+        request = bytes([board, pin_num])
         self._send_request(request)
 
         # Wait for response. We want this to block (which it does)
@@ -178,7 +178,7 @@ class IOController:
         """
         if not (low < value < high):
             raise Exception(f"Value {value} not in range [{low}-{high}]! Cannot set value.")
-        mapped = (value - low) * (0xFFFF - 0x0000) / (high - low)
+        mapped = int((value - low) * (0xFFFF - 0x0000) / (high - low))
         byte0 = mapped >> 8
         byte1 = mapped & 0x00FF
         return byte0, byte1
@@ -195,7 +195,7 @@ class IOController:
         Returns:
             Tuple[int, int]: the two int values (0-255) that represent the scaled value
         """
-        response = int.from_bytes(response, "big")
+        response = int.from_bytes(value, "big")
 
         mapped = (response - 0x0000) * (high - low) / (0xFFFF - 0x0000)
 

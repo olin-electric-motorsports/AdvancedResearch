@@ -14,7 +14,6 @@ def get_logging_config():
     config = configparser.ConfigParser(interpolation=None)
     config.read(os.path.join(artifacts_path, "config.ini"))
 
-    # Create logger
     log_path = config.get("LOGGING", "log_path")
 
     if "None" in log_path:
