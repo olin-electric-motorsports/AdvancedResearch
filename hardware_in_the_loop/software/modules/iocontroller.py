@@ -95,7 +95,7 @@ class IOController:
         """
         # If no hardware, log an error
         if not self.serial:
-            raise Exception ("Could not get state, no hardware connection")
+            raise Exception("Could not get state, no hardware connection")
 
         # Flush the serial buffer, in case anything has come in
         self.serial.flush()
