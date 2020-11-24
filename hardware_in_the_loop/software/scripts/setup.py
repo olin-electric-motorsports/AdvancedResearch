@@ -15,6 +15,11 @@ bash(f'echo "export PYTHONPATH=$PYTHONPATH:{project_file_path}" >> ~/.bashrc')
 print(f"Installing python requirements from {project_file_path}/requirements.txt ...")
 bash(f"pip install -r {project_file_path}/requirements.txt")
 
+# Create udev rule
+print("Creating udev rule...")
+bash('sudo cp 99-arduino.rules /etc/udev/rules.d/')
+print()
+
 # SocketCAN setup
 bash("sudo modprobe vcan")  # for testing
 bash("sudo modprobe peak_usb")
