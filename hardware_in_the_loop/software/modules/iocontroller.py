@@ -171,7 +171,7 @@ class IOController:
             value (float): The value (usually a voltage) requested
             low, high (floats): The min and max acceptable voltages
 
-            Example: _map_to_machine(3.0, 2.5, 5) -> (0x00, 0x??)
+            Example: _map_to_machine(3.0, 2.5, 5) -> (0x33, 0x33)
 
         Returns:
             Tuple[int, int]: the two int values (0-255) that represent the scaled value
@@ -190,10 +190,10 @@ class IOController:
             value (float): The bytes received
             low, high (floats): The min and max acceptable voltages
 
-            Example: _map(3.0, 2.5, 5) -> (0x00, 0x??)
+            Example: _map_to_human(b'\x00\xff', 0, 5) -> 2.5
 
         Returns:
-            Tuple[int, int]: the two int values (0-255) that represent the scaled value
+            float: The voltage of the pin
         """
         response = int.from_bytes(value, "big")
 
