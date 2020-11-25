@@ -139,14 +139,14 @@ class IOController:
             while line != "":  # keep reading until we hit the end
                 # parse line
                 data = line.split(",")
-                add = data[0]
-                board = data[1]
-                pin = data[2]
-                sim = data[3]
-                sig = data[4]
-                sig_type = data[5]
-                sig_min = data[6]
-                sig_max = data[7]
+                add = data[0].strip()
+                board = data[1].strip()
+                pin = data[2].strip()
+                sim = data[3].strip()
+                sig = data[4].strip()
+                sig_type = data[5].strip()
+                sig_min = data[6].strip()
+                sig_max = data[7].strip()
 
                 # add data to dictionary
                 sig_dict = {}
