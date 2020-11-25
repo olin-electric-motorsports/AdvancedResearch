@@ -10,7 +10,7 @@ Note: All paths in this README file are given relative to the `software` directo
 
 ### Modules
 
-The modules directory contains all python classes that represent real hardware, as well as some modular software utilities. These modules make it easy to bring up and tear down a test environment; it's a simple as creating a new object.
+The modules directory contains all python classes that represent real hardware, as well as some modular software utilities. These modules make it easy to bring up and tear down a test environment; it's as simple as creating a new object.
 
 ### Tests
 
@@ -36,23 +36,23 @@ DISCLAIMER: This script requires root permissions  to edit some files, and will 
 
 1. If you haven't yet, clone this repository onto your computer
 
-    `git clone https://github.com/olin-electric-motorsports/AdvancedResearch.git`
+    `$ git clone https://github.com/olin-electric-motorsports/AdvancedResearch.git`
 
 2. Navigate to the folder with our setup script (the script must be run from the `scripts` directory because it includes relative paths!)
     
-    `cd AdvancedResearch/hardware_in_the_loop/software/scripts`
+    `$ cd AdvancedResearch/hardware_in_the_loop/software/scripts`
 
 3. Run the setup script
 
-    `python setup.py`
+    `$ python setup.py`
 
 4. Restart your computer.
 
-    `sudo shutdown -r now`
+    `$ sudo shutdown -r now`
 
     The reason you have to reboot is because this script adds udev rules, which create symbolic links to our hardware. If you know what you're doing and really don't want to reboot, you can instead try 
     
-    `source ~/.bashrc && sudo udevadm control --reload-rules`,
+    `$ source ~/.bashrc && sudo udevadm control --reload-rules`,
 
     but I generally recommend restarting just to be sure.
 
@@ -62,41 +62,41 @@ DISCLAIMER: This script requires root permissions  to edit some files, and will 
 
 While we haven't built out a command line interface for interacting with our HITL system yet, we think that the python shell works great! Just run the following commands:
 
-`python`
+`$ python`
 
-`>>> from modules.roadkillharness import Roadkillharness`
+`>>> from modules.roadkillharness import RoadkillHarness`
 
 ` >>> harness = RoadkillHarness('<pin_config_name>')`
 
 And thats it! You've created a RoadkillHarness object that you can use to control the HITL system. Here are some things you can try:
 
-_Getting a CAN state from the car_
+* _Getting a CAN state from the car_
 
-`>>> harness.can.get_state("signalName")`
+    `>>> harness.can.get_state("signalName")`
 
-_Setting a voltage on the car_
+* _Setting a voltage on the car_
 
-`>>> harness.io.set_state("SIGNAL_NAME", "2.5")`
+    `>>> harness.io.set_state("SIGNAL_NAME", "2.5")`
 
-If you want to get to know the system more, reach out to anyone on the HITL subteam for help.
+If you want to get to know the system more, keep reading, reach out to anyone on the HITL subteam for help, or check out the resources section below.
 
 ### Running Tests
 
 While the shell is certainly fun, this system is really built to run tests. We use [pytest](https://docs.pytest.org/en/stable/) for testing, which enables a lot of very powerful (but sometimes confusing) functionality. The simplest way to run tests is by navigating to the `tests` directory and running:
 
-`pytest`
+`$ pytest`
 
-This will run every single test in the `tests` directory, which might take a while. To run only a subset of those tests you can run the same command from a folder (for example, to run only unit tests, run `pytest unit` from the `tests` directory, or `pytest` from the `tests/unit` directory). 
+This will run every single test in the `tests` directory, which might take a while. To run only a subset of those tests you can run the same command from a folder. For example, to run only unit tests, run `$ pytest unit` from the `tests` directory, or `$ pytest` from the `tests/unit` directory. 
 
 To run an even smaller batch of tests, you can specify a file name, like `pytest unit/test_io.py`. This will run only the tests in that file.
 
-Finally, to run a single test, you can use `pytest unit/test_io.py::test_read_io_file`
+Finally, to run a single test, you can use `$ pytest unit/test_io.py::test_read_io_file`
 
 Currently, none of our tests use pytest markers, but we plan on updating that in the future.
 
 To generate a `.html` test report, use the `--report=path` option like this:
 
-`pytest --report=report.html`
+`$ pytest --report=report.html`
 
 For more information on pytest, see the [pytest docs](https://docs.pytest.org/en/stable/).
 
@@ -125,7 +125,7 @@ def test_throttle(harness):
 
 You might notice that this test requires a parameter, `harness`. We have already created a pytest fixture `harness`, and pytest knows to automatically deliver a harness to every test that requires one. To learn more about pytest fixtures, read the [pytest docs](https://docs.pytest.org/en/stable/fixture.html#fixture)
 
-If this doesn't make sense, a good way to start is always to copy and past some other test (probably not a unit test), and edit from there. If you still have questions, please feel free to reach out to awenstrup@olin.edu or anyone else on the HITL subteam.
+If this doesn't make sense, a good way to start is always to copy and paste some other test (probably not a unit test), and edit from there. If you still have questions, please feel free to reach out to awenstrup@olin.edu or anyone else on the HITL subteam.
 
 ### Writing pin config files
 
