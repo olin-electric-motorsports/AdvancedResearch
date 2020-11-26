@@ -1,3 +1,4 @@
 (sym_lib_table
   (lib (name buck_converter-rescue)(type Legacy)(uri ${KIPRJMOD}/buck_converter-rescue.lib)(options "")(descr ""))
+  (lib (name flyback_converter-rescue)(type Legacy)(uri ${KIPRJMOD}/flyback_converter-rescue.lib)(options "")(descr ""))
 )
