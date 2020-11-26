@@ -14,15 +14,17 @@ def io():
     path = os.path.abspath(os.path.dirname(__file__) + "/sample_io_addresses.csv")
     out = IOController(
         pin_info_path=path,
-        serial_path="/dev/cu.usbmodem142101",  # TODO make this static with udev rule
+        serial_path="/dev/arduino",
     )
     time.sleep(2)  # Was seeing weird errors without this
     return out
 
+
 @pytest.fixture
 def logger():
     get_logging_config()
-    return logging.getLogger(name=__name__)
+    l = logging.getLogger(name=__name__)
+    return l
 
 
 def test_udev(io, logger):

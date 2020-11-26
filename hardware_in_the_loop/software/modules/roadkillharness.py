@@ -2,6 +2,7 @@
 import os
 import logging
 import configparser
+from typing import Optional
 
 # Project imports
 from modules.ecu import ECU
@@ -16,7 +17,7 @@ class RoadkillHarness:
     https://docs.olinelectricmotorsports.com/display/AE/Roadkill+Harness
     """
 
-    def __init__(self, pin_config: str = "pin_info"):
+    def __init__(self, pin_config: Optional[str] = None):
         # Read config
         config = configparser.ConfigParser(interpolation=None)
         config.read(os.path.join(artifacts_path, "config.ini"))
@@ -27,9 +28,12 @@ class RoadkillHarness:
 
         # Create IOController
         self.log.info("Creating IOController...")
+        if not pin_config:
+            pin_config = config.get("HARDWARE", "pin_config", fallback="pin_info")
+
         self.io = IOController(
-            pin_info_path=os.path.join(artifacts_path, f"{pin_config}.csv"),
-            serial_path="/dev/cu.usbmodem142101",  # TODO make this static with udev rule
+            pin_info_path=os.path.join(pin_config),
+            serial_path="/dev/arduino",
         )
 
         # Create all ECUs

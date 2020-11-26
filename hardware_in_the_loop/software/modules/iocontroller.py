@@ -1,6 +1,7 @@
-# Extended python imports
+# Imports
 import serial
 import logging
+from typing import Tuple
 
 
 class IOController:
@@ -34,35 +35,42 @@ class IOController:
                 - 0 or 1 for digital, volts for analog
 
         Message format:
-            2 bytes.
-            Byte 1:
+            4 bytes (all big endian)
+
+            Byte 0:
                 Bit 0: 1 (indicates a set request)
-                Bits 1-7: Address (int)
+                Bits 1-7: Board number of the signal we want to set
 
-            Byte 2: Value
+            Byte 1:
+                Bits 0-7: Pin number of the signal we want to set
 
-            Value format
-                Digital: 0 or 1 (easy enough)
-                Analog: <5 bit>.<3 bit> floating point value (0 to 31.875 V)
-                    For example 5V is 00101000 or 0x40
-                    For example, 2.5V is 00010100 or 0x20
-                    To convert from int, multiply by 8 (or bitshift left 3 times)
+            Bytes 2-3:
+                Bits 0-15: 16 bit precision value to set, with 0% = 0x0000 and  100% = 0xFFFF
         """
         # If no hardware, log an error
         if not self.serial:
             self.log.error("Could not set state; no hardware connection")
             return
 
-        address = self.pin_info[pin]["address"] + 128  # set the leftmost bit to 1 to designate message as setter
-        data: bytes = b""
+        # Byte 1
+        board = self.pin_info[pin]["board"] | (1 << 7)  # set the leftmost bit to 1 to designate message as setter
+
+        # Byte 2
+        pin_num = self.pin_info[pin]["pin"]
+
+        # Bytes 3-4
+        byte2 = 0  # most significant byte
+        byte3 = 0  # least significant byte
+
         if self.pin_info[pin]["type"] == "DIGITAL":
-            data = value  # If value isn't dumped in a list first, it just makes a bunch of '0x00' bytes
+            if value == 1:
+                byte2 = byte3 = 0xFF  # oh yea, this syntax works :)
         elif self.pin_info[pin]["type"] == "ANALOG":
-            data = int(value * 8)
+            byte2, byte3 = self._map_to_machine(value, self.pin_info[pin]["min"], self.pin_info[pin]["max"])
         else:
             raise Exception(f"Unsupported signal type: {self.pin_info[pin]['type']}")
 
-        request = bytes([address, data])
+        request = bytes([board, pin_num, byte2, byte3])
         self._send_request(request)
         self.log.info(f"Set state of {pin} to {value}")
 
@@ -73,37 +81,40 @@ class IOController:
             pin (str): The name of the state we want to get (e.x. "THROTTLE_POT_1", not 11)
 
         Message format:
-            1 byte:
-                Bit 0: 0 (indicates a get request)
-                Bits 1-7: address of the signal we want
+            2 bytes (all big endian):
 
-        Note: If the HitL system interface sees a 1 byte message, it knows to get.
-        If it sees a 2 byte message, it knows to set.
+            Byte 0:
+                Bit 0: 0 (indicates a get request)
+                Bits 1-7: Board number of the signal we want to get
+
+            Byte 1:
+                Bits 0-7: Pin number of the signal we want to get
 
         Returns:
             int or float: The value of the requested state
         """
         # If no hardware, log an error
         if not self.serial:
-            self.log.error("Could not get state; no hardware connection")
-            return -1
+            raise Exception("Could not get state, no hardware connection")
 
         # Flush the serial buffer, in case anything has come in
         self.serial.flush()
 
         # Create and send request
-        request = bytes([self.pin_info[pin]["address"]])
+        board = self.pin_info[pin]["board"]
+        pin_num = self.pin_info[pin]["pin"]
+        request = bytes([board, pin_num])
         self._send_request(request)
 
         # Wait for response. We want this to block (which it does)
-        response = self.serial.read(size=1)  # Read 1 byte
+        response = self.serial.read(size=2)  # Read 2 bytes
         self.log.debug(f"Received {response}")
 
         out = 0  # Type float or int
         if self.pin_info[pin]["type"] == "DIGITAL":
-            out = int.from_bytes(response, "big")
+            out = 0 if int.from_bytes(response, "big") == 0 else 1
         elif self.pin_info[pin]["type"] == "ANALOG":
-            out = int.from_bytes(response, "big") / 8  # See set_io docstring message format
+            out = self._map_to_human(response, self.pin_info[pin]["min"], self.pin_info[pin]["max"])
         else:
             raise Exception(f"Unsupported signal type: {self.pin_info[pin]['type']}")
 
@@ -128,16 +139,20 @@ class IOController:
             while line != "":  # keep reading until we hit the end
                 # parse line
                 data = line.split(",")
-                add = data[0]
-                sim = data[1]
-                sig = data[2]
-                sig_type = data[3]
-                sig_min = data[4]
-                sig_max = data[5]
+                add = data[0].strip()
+                board = data[1].strip()
+                pin = data[2].strip()
+                sim = data[3].strip()
+                sig = data[4].strip()
+                sig_type = data[5].strip()
+                sig_min = data[6].strip()
+                sig_max = data[7].strip()
 
                 # add data to dictionary
                 sig_dict = {}
                 sig_dict["address"] = int(add)
+                sig_dict["board"] = int(add)
+                sig_dict["pin"] = int(add)
                 sig_dict["simulator"] = sim
                 sig_dict["type"] = sig_type
                 sig_dict["min"] = float(sig_min)
@@ -148,6 +163,46 @@ class IOController:
                 line = f.readline()
 
         return out
+
+    def _map_to_machine(self, value: float, low: float, high: float) -> Tuple[int, int]:
+        """Map from a floating point value to a 16 bit precision value, from min to max
+
+        Args:
+            value (float): The value (usually a voltage) requested
+            low, high (floats): The min and max acceptable voltages
+
+            Example: _map_to_machine(3.0, 2.5, 5) -> (0x33, 0x33)
+
+        Returns:
+            Tuple[int, int]: the two int values (0-255) that represent the scaled value
+        """
+        if not (low < value < high):
+            raise Exception(f"Value {value} not in range [{low}-{high}]! Cannot set value.")
+        mapped = int((value - low) * (0xFFFF - 0x0000) / (high - low))
+        byte0 = mapped >> 8
+        byte1 = mapped & 0x00FF
+        return byte0, byte1
+
+    def _map_to_human(self, value: bytes, low: float, high: float) -> float:
+        """Inverse of map to machine; convert from 2 bytes to a float
+
+        Args:
+            value (float): The bytes received
+            low, high (floats): The min and max acceptable voltages
+
+            Example: _map_to_human(b'\x00\xff', 0, 5) -> 2.5
+
+        Returns:
+            float: The voltage of the pin
+        """
+        response = int.from_bytes(value, "big")
+
+        mapped = (response - 0x0000) * (high - low) / (0xFFFF - 0x0000)
+
+        if not (low < mapped < high):
+            raise Exception(f"Value {value} not in range [{low}-{high}]! Invalid response received")
+
+        return mapped
 
     def _send_request(self, request: bytes) -> None:
         """Send a request over serial to set a pin's value
