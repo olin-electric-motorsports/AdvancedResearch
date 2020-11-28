@@ -44,7 +44,7 @@ DISCLAIMER: This script requires root permissions  to edit some files, and will 
 
 3. Run the setup script
 
-    `$ python setup.py`
+    `$ sudo python setup.py`
 
 4. Restart your computer.
 
