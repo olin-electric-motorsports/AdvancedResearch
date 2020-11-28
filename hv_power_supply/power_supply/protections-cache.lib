@@ -1,0 +1,235 @@
+EESchema-LIBRARY Version 2.4
+#encoding utf-8
+#
+# formula_DBR71210(NC)
+#
+DEF formula_DBR71210(NC) K 0 40 Y Y 1 F N
+F0 "K" 350 150 50 H V L CNN
+F1 "formula_DBR71210(NC)" 400 -150 50 H V L CNN
+F2 "footprints:D-Series_Cynergy_Relay" 450 -50 50 H I L CNN
+F3 "https://www.cynergy3.com/sites/default/files/D%20series%202016_5.pdf" 450 -350 50 H I L CNN
+F4 "DK" 850 550 60 H I C CNN "MFN"
+F5 "725-1049-ND" 750 450 60 H I C CNN "MPN"
+F6 "https://www.digikey.com/product-detail/en/cynergy-3/DBR71210/725-1049-ND/752025" 950 650 60 H I C CNN "PurchasingLink"
+$FPLIST
+ Relay?SPDT?OMRON?G5Q*
+$ENDFPLIST
+DRAW
+S -400 200 300 -200 0 1 10 f
+S -325 75 -75 -75 0 1 10 N
+P 2 0 0 0 100 150 100 200 N
+P 2 0 1 10 -300 -75 -100 75 N
+P 2 0 1 0 -200 -200 -200 -75 N
+P 2 0 1 0 -200 200 -200 75 N
+P 2 0 1 10 -75 0 -50 0 N
+P 2 0 1 10 -25 0 0 0 N
+P 2 0 1 10 25 0 50 0 N
+P 2 0 1 10 25 0 50 0 N
+P 2 0 1 10 75 0 100 0 N
+P 2 0 1 0 100 -100 100 -200 N
+P 2 0 1 10 100 -100 100 100 N
+P 2 0 1 10 125 0 150 0 N
+P 3 0 1 0 100 100 125 125 100 150 F
+X ~ 1 100 -300 100 U 50 50 1 1 P
+X ~ 2 100 300 100 D 50 50 1 1 P
+X - 3 -200 -300 100 U 50 50 1 1 P
+X + 4 -200 300 100 D 50 50 1 1 P
+ENDDRAW
+ENDDEF
+#
+# formula_LI12-1A85(NO)
+#
+DEF formula_LI12-1A85(NO) K 0 40 Y Y 1 F N
+F0 "K" 350 150 50 H V L CNN
+F1 "formula_LI12-1A85(NO)" 400 -150 50 H V L CNN
+F2 "footprints:Meder-LI12" 450 -50 50 H I L CNN
+F3 "https://media.digikey.com/pdf/Data%20Sheets/Meder%20PDFs/LI12-1A85_Spec.pdf" 450 -350 50 H I L CNN
+F4 "DK" 850 550 60 H I C CNN "MFN"
+F5 "374-1110-ND" 750 450 60 H I C CNN "MPN"
+F6 "https://www.digikey.com/product-detail/en/LI12-1A85/374-1110-ND/655844" 950 650 60 H I C CNN "PurchasingLink"
+$FPLIST
+ Relay?SPDT?OMRON?G5Q*
+$ENDFPLIST
+DRAW
+S -400 200 300 -200 0 1 10 f
+S -325 75 -75 -75 0 1 10 N
+P 2 0 0 0 100 150 100 200 N
+P 2 0 1 10 -300 -75 -100 75 N
+P 2 0 1 0 -200 -200 -200 -75 N
+P 2 0 1 0 -200 200 -200 75 N
+P 2 0 1 10 -75 0 -50 0 N
+P 2 0 1 10 -25 0 0 0 N
+P 2 0 1 10 25 0 50 0 N
+P 2 0 1 10 25 0 50 0 N
+P 2 0 1 10 75 0 100 0 N
+P 2 0 1 0 100 -100 100 -200 N
+P 2 0 1 20 100 -100 200 100 N
+P 2 0 1 10 125 0 150 0 N
+P 3 0 1 0 100 100 125 125 100 150 F
+X ~ 1 100 -300 100 U 50 50 1 1 P
+X ~ 2 100 300 100 D 50 50 1 1 P
+X ~ 3 -200 -300 100 U 50 50 1 1 P
+X ~ 4 -200 300 100 D 50 50 1 1 P
+ENDDRAW
+ENDDEF
+#
+# formula_MicroFit_RA_R_2
+#
+DEF formula_MicroFit_RA_R_2 J 0 40 Y Y 1 F N
+F0 "J" -100 50 50 H V C CNN
+F1 "formula_MicroFit_RA_R_2" 0 -150 50 H V C CNN
+F2 "footprints:MicroFit_RA_2" -50 200 50 H I C CNN
+F3 "https://www.molex.com/pdm_docs/sd/436500201_sd.pdf" -50 200 50 H I C CNN
+F4 "DK" 100 250 50 H I C CNN "MFN"
+F5 "WM1865-ND" 200 350 50 H I C CNN "MPN"
+F6 "https://www.digikey.com/product-detail/en/molex/0436500201/WM1865-ND/268994" 0 150 50 H I C CNN "PurchasingLink"
+DRAW
+S 150 -100 -150 100 1 1 0 f
+X 1 1 250 50 100 L 50 50 1 1 B
+X 2 2 250 -50 100 L 50 50 1 1 B
+ENDDRAW
+ENDDEF
+#
+# formula_R_100K
+#
+DEF formula_R_100K R 0 0 N Y 1 F N
+F0 "R" 80 0 50 V V C CNN
+F1 "formula_R_100K" -100 0 50 V V C CNN
+F2 "footprints:R_0805_OEM" -70 0 50 H I C CNN
+F3 "https://industrial.panasonic.com/cdbs/www-data/pdf/RDA0000/AOA0000C304.pdf" 80 0 50 H I C CNN
+F4 "DK" 0 0 60 H I C CNN "MFN"
+F5 "P100KCCT-ND" 0 0 60 H I C CNN "MPN"
+F6 "https://www.digikey.com/product-detail/en/panasonic-electronic-components/ERJ-6ENF1003V/P100KCCT-ND/119551" 480 400 60 H I C CNN "PurchasingLink"
+$FPLIST
+ R_*
+ Resistor_*
+$ENDFPLIST
+DRAW
+S -40 -100 40 100 0 1 10 N
+X ~ 1 0 150 50 D 50 50 1 1 P
+X ~ 2 0 -150 50 U 50 50 1 1 P
+ENDDRAW
+ENDDEF
+#
+# formula_R_3K_HS
+#
+DEF formula_R_3K_HS R 0 0 Y Y 1 F N
+F0 "R" 80 0 50 V V C CNN
+F1 "formula_R_3K_HS" -100 0 50 V V C CNN
+F2 "footprints:R_3k_HS_TO247" -70 0 50 H I C CNN
+F3 "http://dpk3n3gg92jwt.cloudfront.net/domains/ohmite/pdf/acl_ap101.pdf" 80 0 50 H I C CNN
+F4 "DK" 0 0 60 H I C CNN "MFN"
+F5 "AP1013KJ-ND" 0 0 60 H I C CNN "MPN"
+F6 "https://www.digikey.com/product-detail/en/ohmite/AP101-3K-J/AP101-3K-J-ND/5878525" 480 400 60 H I C CNN "PurchasingLink"
+F7 "345-1223-ND" 580 500 60 V I C CNN "MPN2"
+F8 "https://www.digikey.com/product-detail/en/wakefield-vette/657-15ABPEN/345-1223-ND/3945700" 680 600 60 V I C CNN "PurchasingLink2"
+$FPLIST
+ R_*
+ Resistor_*
+$ENDFPLIST
+DRAW
+S -40 -100 40 100 0 1 10 N
+X ~ 1 0 150 50 D 50 50 1 1 P
+X ~ 2 0 -150 50 U 50 50 1 1 P
+ENDDRAW
+ENDDEF
+#
+# formula_SSM3K333R
+#
+DEF formula_SSM3K333R Q 0 0 Y N 1 F N
+F0 "Q" 200 75 50 H V L CNN
+F1 "formula_SSM3K333R" 200 0 50 H V L CNN
+F2 "footprints:SOT-23F" 200 -75 50 H I L CIN
+F3 "https://drive.google.com/drive/folders/0B-V-iZf33Y4GNzhDQTJZanJRbVk" 200 75 50 H I L CNN
+F4 "DK" 500 375 60 H I C CNN "MFN"
+F5 "SSM3K333RLFCT-ND" 400 275 60 H I C CNN "MPN"
+F6 "https://www.digikey.com/product-detail/en/toshiba-semiconductor-and-storage/SSM3K333RLF/SSM3K333RLFCT-ND/3522391" 300 175 60 H I C CNN "PurchasingLink"
+$FPLIST
+ SOT?23*
+$ENDFPLIST
+DRAW
+C 65 0 111 0 1 10 N
+C 100 -70 11 0 1 0 F
+C 100 70 11 0 1 0 F
+P 2 0 1 0 30 -70 100 -70 N
+P 2 0 1 10 30 -50 30 -90 N
+P 2 0 1 0 30 0 100 0 N
+P 2 0 1 10 30 20 30 -20 N
+P 2 0 1 0 30 70 100 70 N
+P 2 0 1 10 30 90 30 50 N
+P 2 0 1 0 100 -70 100 -100 N
+P 2 0 1 0 100 -70 100 0 N
+P 2 0 1 0 100 100 100 70 N
+P 3 0 1 10 10 75 10 -75 10 -75 N
+P 4 0 1 0 40 0 80 15 80 -15 40 0 F
+P 4 0 1 0 100 -70 130 -70 130 70 100 70 N
+P 4 0 1 0 110 20 115 15 145 15 150 10 N
+P 4 0 1 0 130 15 115 -10 145 -10 130 15 N
+X G 1 -200 0 210 R 50 50 1 1 I
+X S 2 100 -200 100 U 50 50 1 1 P
+X D 3 100 200 100 D 50 50 1 1 P
+ENDDRAW
+ENDDEF
+#
+# formula_SW_Push_SPST_NO
+#
+DEF formula_SW_Push_SPST_NO SW 0 40 Y Y 1 F N
+F0 "SW" 100 150 50 H V C CNN
+F1 "formula_SW_Push_SPST_NO" 50 -100 50 H V C CNN
+F2 "footprints:SW_B3U-1000P_4.2x1.7mm" 0 50 50 H I C CNN
+F3 "https://omronfs.omron.com/en_US/ecb/products/pdf/en-b3u.pdf" 0 50 50 H I C CNN
+F4 "DK" 300 350 50 H I C CNN "MFN"
+F5 "SW1020CT-ND" 200 250 50 H I C CNN "MPN"
+F6 "https://www.digikey.com/product-detail/en/omron-electronics-inc-emc-div/B3U-1000P/SW1020CT-ND/1534357A" 400 450 50 H I C CNN "PurchasingLink"
+DRAW
+C -80 0 20 1 1 0 N
+C 80 0 20 1 1 0 N
+P 2 1 1 0 0 50 0 120 N
+P 2 1 1 0 100 50 -100 50 N
+X 1 1 -200 0 100 R 50 50 1 1 P
+X 2 2 200 0 100 L 50 50 1 1 P
+ENDDRAW
+ENDDEF
+#
+# power_+5V
+#
+DEF power_+5V #PWR 0 0 Y Y 1 F P
+F0 "#PWR" 0 -150 50 H I C CNN
+F1 "power_+5V" 0 140 50 H V C CNN
+F2 "" 0 0 50 H I C CNN
+F3 "" 0 0 50 H I C CNN
+DRAW
+P 2 0 1 0 -30 50 0 100 N
+P 2 0 1 0 0 0 0 100 N
+P 2 0 1 0 0 100 30 50 N
+X +5V 1 0 0 0 U 50 50 1 1 W N
+ENDDRAW
+ENDDEF
+#
+# power_GND
+#
+DEF power_GND #PWR 0 0 Y Y 1 F P
+F0 "#PWR" 0 -250 50 H I C CNN
+F1 "power_GND" 0 -150 50 H V C CNN
+F2 "" 0 0 50 H I C CNN
+F3 "" 0 0 50 H I C CNN
+DRAW
+P 6 0 1 0 0 0 0 -50 50 -50 0 -100 -50 -50 0 -50 N
+X GND 1 0 0 0 D 50 50 1 1 W N
+ENDDRAW
+ENDDEF
+#
+# power_PWR_FLAG
+#
+DEF power_PWR_FLAG #FLG 0 0 N N 1 F P
+F0 "#FLG" 0 75 50 H I C CNN
+F1 "power_PWR_FLAG" 0 150 50 H V C CNN
+F2 "" 0 0 50 H I C CNN
+F3 "" 0 0 50 H I C CNN
+DRAW
+P 6 0 1 0 0 0 0 50 -40 75 0 100 40 75 0 50 N
+X pwr 1 0 0 0 U 50 50 0 0 w
+ENDDRAW
+ENDDEF
+#
+#End Library
