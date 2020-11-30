@@ -64,10 +64,10 @@ Atmega328p
 Text Notes 4750 1850 0    118  ~ 0
 USB Connector
 $Comp
-L Formula:FT232RL U?
+L Formula:FT232RL U1
 U 1 1 5FBB1322
 P 5350 7200
-F 0 "U?" H 4750 8100 50  0000 C CNN
+F 0 "U1" H 4750 8100 50  0000 C CNN
 F 1 "FT232RL" H 5850 6300 50  0000 C CNN
 F 2 "Package_SO:SSOP-28_5.3x10.2mm_P0.65mm" H 6450 6300 50  0001 C CNN
 F 3 "https://www.ftdichip.com/Support/Documents/DataSheets/ICs/DS_FT232R.pdf" H 5350 7200 50  0001 C CNN
@@ -77,10 +77,10 @@ F 5 "768-1007-1-ND" H 5350 7200 50  0001 C CNN "Part Number (DK)"
 	1    0    0    -1  
 $EndComp
 $Comp
-L Formula:USB_A J?
+L Formula:USB_A J2
 U 1 1 5FBBADA0
 P 5300 2650
-F 0 "J?" H 5357 3117 50  0000 C CNN
+F 0 "J2" H 5357 3117 50  0000 C CNN
 F 1 "USB_A" H 5357 3026 50  0000 C CNN
 F 2 "" H 5450 2600 50  0001 C CNN
 F 3 " ~" H 5450 2600 50  0001 C CNN
@@ -88,10 +88,10 @@ F 3 " ~" H 5450 2600 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L Formula:0.1in_Female_Socket_01x16 J?
+L Formula:0.1in_Female_Socket_01x16 J1
 U 1 1 5FBD5439
 P 2150 4050
-F 0 "J?" H 2230 4042 50  0000 L CNN
+F 0 "J1" H 2230 4042 50  0000 L CNN
 F 1 "0.1in_Female_Socket_01x16" H 2230 3951 50  0000 L CNN
 F 2 "Connector_PinSocket_2.54mm:PinSocket_1x16_P2.54mm_Vertical" H 2050 4750 50  0001 C CNN
 F 3 "https://media.digikey.com/pdf/Data%20Sheets/Sullins%20PDFs/Female_Headers.100_DS.pdf" H 2150 4850 50  0001 C CNN
@@ -102,10 +102,10 @@ F 6 "https://www.digikey.com/product-detail/en/sullins-connector-solutions/PPTC1
 	1    0    0    -1  
 $EndComp
 $Comp
-L Formula:CONN_02X03 J?
+L Formula:CONN_02X03 J3
 U 1 1 5FBD8D61
 P 13200 5500
-F 0 "J?" H 13200 5815 50  0000 C CNN
+F 0 "J3" H 13200 5815 50  0000 C CNN
 F 1 "CONN_02X03" H 13200 5724 50  0000 C CNN
 F 2 "footprints:Pin_Header_Straight_2x03" H 13200 4300 50  0001 C CNN
 F 3 "http://portal.fciconnect.com/Comergent//fci/drawing/67996.pdf" H 13200 4300 50  0001 C CNN
@@ -122,10 +122,10 @@ Wire Wire Line
 Wire Wire Line
 	3950 7200 3950 7400
 $Comp
-L Formula:VBATT #PWR?
+L Formula:VBATT #PWR07
 U 1 1 5FBF11C9
 P 8450 4800
-F 0 "#PWR?" H 8450 4650 50  0001 C CNN
+F 0 "#PWR07" H 8450 4650 50  0001 C CNN
 F 1 "VBATT" H 8465 4973 50  0000 C CNN
 F 2 "" H 8450 4800 50  0001 C CNN
 F 3 "" H 8450 4800 50  0001 C CNN
@@ -144,10 +144,10 @@ Connection ~ 5350 8400
 Wire Wire Line
 	3950 7700 3950 7850
 $Comp
-L power:GND #PWR?
+L power:GND #PWR01
 U 1 1 5FC0F959
 P 3950 7850
-F 0 "#PWR?" H 3950 7600 50  0001 C CNN
+F 0 "#PWR01" H 3950 7600 50  0001 C CNN
 F 1 "GND" H 3955 7677 50  0000 C CNN
 F 2 "" H 3950 7850 50  0001 C CNN
 F 3 "" H 3950 7850 50  0001 C CNN
@@ -155,10 +155,10 @@ F 3 "" H 3950 7850 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L Formula:C_0.1uF C?
+L Formula:C_0.1uF C1
 U 1 1 5FBA02F3
 P 3950 7550
-F 0 "C?" H 4065 7596 50  0000 L CNN
+F 0 "C1" H 4065 7596 50  0000 L CNN
 F 1 "C_0.1uF" H 4065 7505 50  0000 L CNN
 F 2 "footprints:C_0805_OEM" H 3988 7400 50  0001 C CNN
 F 3 "http://datasheets.avx.com/X7RDielectric.pdf" H 3975 7650 50  0001 C CNN
@@ -171,10 +171,10 @@ $EndComp
 Wire Wire Line
 	8450 5050 8450 4950
 $Comp
-L Formula:VBATT #PWR?
+L Formula:VBATT #PWR06
 U 1 1 5FBCF49A
 P 7700 7350
-F 0 "#PWR?" H 7700 7200 50  0001 C CNN
+F 0 "#PWR06" H 7700 7200 50  0001 C CNN
 F 1 "VBATT" H 7715 7523 50  0000 C CNN
 F 2 "" H 7700 7350 50  0001 C CNN
 F 3 "" H 7700 7350 50  0001 C CNN
@@ -190,10 +190,10 @@ NoConn ~ 4550 7400
 Text Label 4550 6500 2    50   ~ 0
 3v3_FTDI
 $Comp
-L Formula:R_1K R?
+L Formula:R_1K R3
 U 1 1 5FBDE1F0
 P 7300 7600
-F 0 "R?" V 7200 7600 50  0000 C CNN
+F 0 "R3" V 7200 7600 50  0000 C CNN
 F 1 "R_1K" V 7300 7600 50  0000 C CNN
 F 2 "footprints:R_0805_OEM" H 7230 7600 50  0001 C CNN
 F 3 "https://www.seielect.com/Catalog/SEI-rncp.pdf" H 7380 7600 50  0001 C CNN
@@ -204,10 +204,10 @@ F 6 "https://www.digikey.com/products/en?keywords=RNCP0805FTD1K00CT-ND" H 7780 8
 	0    1    1    0   
 $EndComp
 $Comp
-L Formula:R_1K R?
+L Formula:R_1K R4
 U 1 1 5FBE3B53
 P 7300 7700
-F 0 "R?" V 7400 7700 50  0000 C CNN
+F 0 "R4" V 7400 7700 50  0000 C CNN
 F 1 "R_1K" V 7300 7700 50  0000 C CNN
 F 2 "footprints:R_0805_OEM" H 7230 7700 50  0001 C CNN
 F 3 "https://www.seielect.com/Catalog/SEI-rncp.pdf" H 7380 7700 50  0001 C CNN
@@ -218,10 +218,10 @@ F 6 "https://www.digikey.com/products/en?keywords=RNCP0805FTD1K00CT-ND" H 7780 8
 	0    1    1    0   
 $EndComp
 $Comp
-L Formula:LED_0805 D?
+L Formula:LED_0805 D1
 U 1 1 5FBD99DF
 P 6450 7700
-F 0 "D?" H 6450 7800 50  0000 C CNN
+F 0 "D1" H 6450 7800 50  0000 C CNN
 F 1 "LED_0805" H 6450 7900 50  0000 C CNN
 F 2 "footprints:LED_0805_OEM" H 6350 7700 50  0001 C CNN
 F 3 "http://www.osram-os.com/Graphics/XPic9/00078860_0.pdf" H 6450 7800 50  0001 C CNN
@@ -232,10 +232,10 @@ F 6 "https://www.digikey.com/products/en?keywords=475-1410-1-ND" H 6850 8200 60 
 	-1   0    0    1   
 $EndComp
 $Comp
-L Formula:LED_0805 D?
+L Formula:LED_0805 D2
 U 1 1 5FBD7332
 P 6850 7600
-F 0 "D?" H 6843 7345 50  0000 C CNN
+F 0 "D2" H 6843 7345 50  0000 C CNN
 F 1 "LED_0805" H 6843 7436 50  0000 C CNN
 F 2 "footprints:LED_0805_OEM" H 6750 7600 50  0001 C CNN
 F 3 "http://www.osram-os.com/Graphics/XPic9/00078860_0.pdf" H 6850 7700 50  0001 C CNN
@@ -263,10 +263,10 @@ Connection ~ 7700 7600
 Wire Wire Line
 	7700 7600 7700 7700
 $Comp
-L Formula:R_1K R?
+L Formula:R_1K R1
 U 1 1 5FC279C9
 P 6500 6500
-F 0 "R?" V 6400 6500 50  0000 C CNN
+F 0 "R1" V 6400 6500 50  0000 C CNN
 F 1 "R_1K" V 6500 6500 50  0000 C CNN
 F 2 "footprints:R_0805_OEM" H 6430 6500 50  0001 C CNN
 F 3 "https://www.seielect.com/Catalog/SEI-rncp.pdf" H 6580 6500 50  0001 C CNN
@@ -277,10 +277,10 @@ F 6 "https://www.digikey.com/products/en?keywords=RNCP0805FTD1K00CT-ND" H 6980 6
 	0    1    1    0   
 $EndComp
 $Comp
-L Formula:R_1K R?
+L Formula:R_1K R2
 U 1 1 5FC279D2
 P 6500 6600
-F 0 "R?" V 6600 6600 50  0000 C CNN
+F 0 "R2" V 6600 6600 50  0000 C CNN
 F 1 "R_1K" V 6500 6600 50  0000 C CNN
 F 2 "footprints:R_0805_OEM" H 6430 6600 50  0001 C CNN
 F 3 "https://www.seielect.com/Catalog/SEI-rncp.pdf" H 6580 6600 50  0001 C CNN
@@ -317,10 +317,10 @@ Wire Wire Line
 	5300 3300 5300 3150
 Connection ~ 5300 3150
 $Comp
-L power:GND #PWR?
+L power:GND #PWR03
 U 1 1 5FC02331
 P 5350 8550
-F 0 "#PWR?" H 5350 8300 50  0001 C CNN
+F 0 "#PWR03" H 5350 8300 50  0001 C CNN
 F 1 "GND" H 5355 8377 50  0000 C CNN
 F 2 "" H 5350 8550 50  0001 C CNN
 F 3 "" H 5350 8550 50  0001 C CNN
@@ -328,10 +328,10 @@ F 3 "" H 5350 8550 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L power:GND #PWR?
+L power:GND #PWR02
 U 1 1 5FC3F217
 P 5300 3300
-F 0 "#PWR?" H 5300 3050 50  0001 C CNN
+F 0 "#PWR02" H 5300 3050 50  0001 C CNN
 F 1 "GND" H 5305 3127 50  0000 C CNN
 F 2 "" H 5300 3300 50  0001 C CNN
 F 3 "" H 5300 3300 50  0001 C CNN
@@ -352,10 +352,10 @@ Wire Wire Line
 	6350 2450 6350 2500
 Connection ~ 6350 2450
 $Comp
-L Formula:C_100nF C?
+L Formula:C_100nF C2
 U 1 1 5FC4DEA7
 P 6350 2650
-F 0 "C?" H 6465 2696 50  0000 L CNN
+F 0 "C2" H 6465 2696 50  0000 L CNN
 F 1 "C_100nF" H 6465 2605 50  0000 L CNN
 F 2 "footprints:C_0603_1608Metric" H 6388 2500 50  0001 C CNN
 F 3 "http://www.samsungsem.com/kr/support/product-search/mlcc/CL10A475KQ8NNNC.jsp" H 6375 2750 50  0001 C CNN
@@ -366,10 +366,10 @@ F 6 "https://www.digikey.com/product-detail/en/samsung-electro-mechanics/CL10B10
 	1    0    0    -1  
 $EndComp
 $Comp
-L power:GND #PWR?
+L power:GND #PWR04
 U 1 1 5FC4F35A
 P 6350 2950
-F 0 "#PWR?" H 6350 2700 50  0001 C CNN
+F 0 "#PWR04" H 6350 2700 50  0001 C CNN
 F 1 "GND" H 6355 2777 50  0000 C CNN
 F 2 "" H 6350 2950 50  0001 C CNN
 F 3 "" H 6350 2950 50  0001 C CNN
@@ -377,10 +377,10 @@ F 3 "" H 6350 2950 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L Formula:VBATT #PWR?
+L Formula:VBATT #PWR05
 U 1 1 5FC5813F
 P 7000 2250
-F 0 "#PWR?" H 7000 2100 50  0001 C CNN
+F 0 "#PWR05" H 7000 2100 50  0001 C CNN
 F 1 "VBATT" H 7015 2423 50  0000 C CNN
 F 2 "" H 7000 2250 50  0001 C CNN
 F 3 "" H 7000 2250 50  0001 C CNN
@@ -388,10 +388,10 @@ F 3 "" H 7000 2250 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L Formula:F_500mA_16V F?
+L Formula:F_500mA_16V F1
 U 1 1 5FC59506
 P 6700 2450
-F 0 "F?" V 6503 2450 50  0000 C CNN
+F 0 "F1" V 6503 2450 50  0000 C CNN
 F 1 "F_500mA_16V" V 6594 2450 50  0000 C CNN
 F 2 "footprints:Fuse_1210" V 6630 2450 50  0001 C CNN
 F 3 "https://belfuse.com/resources/CircuitProtection/datasheets/0ZCH%20Nov2016.pdf" V 6780 2450 50  0001 C CNN
@@ -410,10 +410,10 @@ Wire Wire Line
 Wire Wire Line
 	6350 2800 6350 2950
 $Comp
-L power:GND #PWR?
+L power:GND #PWR012
 U 1 1 5FC6FC40
 P 11800 1950
-F 0 "#PWR?" H 11800 1700 50  0001 C CNN
+F 0 "#PWR012" H 11800 1700 50  0001 C CNN
 F 1 "GND" H 11805 1777 50  0000 C CNN
 F 2 "" H 11800 1950 50  0001 C CNN
 F 3 "" H 11800 1950 50  0001 C CNN
@@ -421,10 +421,10 @@ F 3 "" H 11800 1950 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L power:GND #PWR?
+L power:GND #PWR011
 U 1 1 5FC70A2A
 P 11600 2650
-F 0 "#PWR?" H 11600 2400 50  0001 C CNN
+F 0 "#PWR011" H 11600 2400 50  0001 C CNN
 F 1 "GND" H 11605 2477 50  0000 C CNN
 F 2 "" H 11600 2650 50  0001 C CNN
 F 3 "" H 11600 2650 50  0001 C CNN
@@ -432,10 +432,10 @@ F 3 "" H 11600 2650 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L power:GND #PWR?
+L power:GND #PWR010
 U 1 1 5FC71451
 P 11000 2750
-F 0 "#PWR?" H 11000 2500 50  0001 C CNN
+F 0 "#PWR010" H 11000 2500 50  0001 C CNN
 F 1 "GND" H 11005 2577 50  0000 C CNN
 F 2 "" H 11000 2750 50  0001 C CNN
 F 3 "" H 11000 2750 50  0001 C CNN
@@ -451,10 +451,10 @@ Wire Wire Line
 Wire Wire Line
 	11000 2350 11000 2400
 $Comp
-L Formula:C_30pF C?
+L Formula:C_30pF C4
 U 1 1 5FC75CBC
 P 11000 2550
-F 0 "C?" H 11115 2596 50  0000 L CNN
+F 0 "C4" H 11115 2596 50  0000 L CNN
 F 1 "C_30pF" H 11115 2505 50  0000 L CNN
 F 2 "footprints:C_0805_OEM" H 11038 2400 50  0001 C CNN
 F 3 "https://media.digikey.com/pdf/Data%20Sheets/Samsung%20PDFs/CL_Series_MLCC_ds.pdf" H 11025 2650 50  0001 C CNN
@@ -473,10 +473,10 @@ XTAL1
 Wire Wire Line
 	11600 2200 11600 1800
 $Comp
-L Formula:Crystal_SMD Y?
+L Formula:Crystal_SMD Y1
 U 1 1 5FBCF657
 P 11600 2350
-F 0 "Y?" H 11750 2450 50  0000 L CNN
+F 0 "Y1" H 11750 2450 50  0000 L CNN
 F 1 "Crystal_SMD" H 11050 2600 50  0000 L CNN
 F 2 "footprints:Crystal_SMD_FA238" H 11550 2425 50  0001 C CNN
 F 3 "http://www.txccorp.com/download/products/quartz_crystals/2015TXC_7M_17.pdf" H 11650 2525 50  0001 C CNN
@@ -489,10 +489,10 @@ $EndComp
 Wire Wire Line
 	11500 2350 11000 2350
 $Comp
-L Formula:C_30pF C?
+L Formula:C_30pF C5
 U 1 1 5FC76DF3
 P 12150 2550
-F 0 "C?" H 12265 2596 50  0000 L CNN
+F 0 "C5" H 12265 2596 50  0000 L CNN
 F 1 "C_30pF" H 12265 2505 50  0000 L CNN
 F 2 "footprints:C_0805_OEM" H 12188 2400 50  0001 C CNN
 F 3 "https://media.digikey.com/pdf/Data%20Sheets/Samsung%20PDFs/CL_Series_MLCC_ds.pdf" H 12175 2650 50  0001 C CNN
@@ -507,10 +507,10 @@ Wire Wire Line
 Wire Wire Line
 	12150 2350 12150 2400
 $Comp
-L power:GND #PWR?
+L power:GND #PWR013
 U 1 1 5FC71E29
 P 12150 2750
-F 0 "#PWR?" H 12150 2500 50  0001 C CNN
+F 0 "#PWR013" H 12150 2500 50  0001 C CNN
 F 1 "GND" H 12155 2577 50  0000 C CNN
 F 2 "" H 12150 2750 50  0001 C CNN
 F 3 "" H 12150 2750 50  0001 C CNN
@@ -522,10 +522,10 @@ Wire Wire Line
 Text Label 13450 5500 0    50   ~ 0
 MOSI
 $Comp
-L Formula:VBATT #PWR?
+L Formula:VBATT #PWR014
 U 1 1 5FC8EFC0
 P 13650 5250
-F 0 "#PWR?" H 13650 5100 50  0001 C CNN
+F 0 "#PWR014" H 13650 5100 50  0001 C CNN
 F 1 "VBATT" H 13665 5423 50  0000 C CNN
 F 2 "" H 13650 5250 50  0001 C CNN
 F 3 "" H 13650 5250 50  0001 C CNN
@@ -535,10 +535,10 @@ $EndComp
 Wire Wire Line
 	13650 5600 13650 5750
 $Comp
-L power:GND #PWR?
+L power:GND #PWR015
 U 1 1 5FC9132A
 P 13650 5750
-F 0 "#PWR?" H 13650 5500 50  0001 C CNN
+F 0 "#PWR015" H 13650 5500 50  0001 C CNN
 F 1 "GND" H 13655 5577 50  0000 C CNN
 F 2 "" H 13650 5750 50  0001 C CNN
 F 3 "" H 13650 5750 50  0001 C CNN
@@ -552,10 +552,10 @@ Wire Wire Line
 Wire Wire Line
 	13450 5600 13650 5600
 $Comp
-L Formula:LED_0805 D?
+L Formula:LED_0805 D4
 U 1 1 5FBD3B41
 P 13250 7250
-F 0 "D?" V 13250 7100 50  0000 C CNN
+F 0 "D4" V 13250 7100 50  0000 C CNN
 F 1 "LED_0805_PB0" V 13150 6850 50  0000 C CNN
 F 2 "footprints:LED_0805_OEM" H 13150 7250 50  0001 C CNN
 F 3 "http://www.osram-os.com/Graphics/XPic9/00078860_0.pdf" H 13250 7350 50  0001 C CNN
@@ -566,10 +566,10 @@ F 6 "https://www.digikey.com/products/en?keywords=475-1410-1-ND" H 13650 7750 60
 	0    -1   -1   0   
 $EndComp
 $Comp
-L Formula:LED_0805 D?
+L Formula:LED_0805 D3
 U 1 1 5FCB57F6
 P 12500 7250
-F 0 "D?" V 12500 7100 50  0000 C CNN
+F 0 "D3" V 12500 7100 50  0000 C CNN
 F 1 "LED_0805_PB5" V 12400 6850 50  0000 C CNN
 F 2 "footprints:LED_0805_OEM" H 12400 7250 50  0001 C CNN
 F 3 "http://www.osram-os.com/Graphics/XPic9/00078860_0.pdf" H 12500 7350 50  0001 C CNN
@@ -584,10 +584,10 @@ Wire Wire Line
 Wire Wire Line
 	8500 6200 8500 6350
 $Comp
-L power:GND #PWR?
+L power:GND #PWR08
 U 1 1 5FCD46B7
 P 8500 6350
-F 0 "#PWR?" H 8500 6100 50  0001 C CNN
+F 0 "#PWR08" H 8500 6100 50  0001 C CNN
 F 1 "GND" H 8505 6177 50  0000 C CNN
 F 2 "" H 8500 6350 50  0001 C CNN
 F 3 "" H 8500 6350 50  0001 C CNN
@@ -595,10 +595,10 @@ F 3 "" H 8500 6350 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L Formula:C_0.1uF C?
+L Formula:C_0.1uF C3
 U 1 1 5FCD46C0
 P 8500 6050
-F 0 "C?" H 8300 6100 50  0000 L CNN
+F 0 "C3" H 8300 6100 50  0000 L CNN
 F 1 "C_0.1uF" H 8100 6000 50  0000 L CNN
 F 2 "footprints:C_0805_OEM" H 8538 5900 50  0001 C CNN
 F 3 "http://datasheets.avx.com/X7RDielectric.pdf" H 8525 6150 50  0001 C CNN
@@ -609,10 +609,10 @@ F 6 "https://www.digikey.com/products/en?keywords=478-3352-1-ND" H 8925 6550 60 
 	1    0    0    -1  
 $EndComp
 $Comp
-L power:GND #PWR?
+L power:GND #PWR09
 U 1 1 5FCD90A5
 P 8500 7300
-F 0 "#PWR?" H 8500 7050 50  0001 C CNN
+F 0 "#PWR09" H 8500 7050 50  0001 C CNN
 F 1 "GND" H 8505 7127 50  0000 C CNN
 F 2 "" H 8500 7300 50  0001 C CNN
 F 3 "" H 8500 7300 50  0001 C CNN
@@ -620,10 +620,10 @@ F 3 "" H 8500 7300 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L Formula:ATmega328P-AU U?
+L Formula:ATmega328P-AU U2
 U 1 1 5FBA5FE4
 P 9700 6150
-F 0 "U?" H 8850 7600 50  0000 C CNN
+F 0 "U2" H 8850 7600 50  0000 C CNN
 F 1 "ATmega328P-AU" H 9900 4700 50  0000 C CNN
 F 2 "Package_QFP:TQFP-32_7x7mm_P0.8mm" H 9500 7700 50  0001 C CIN
 F 3 "http://ww1.microchip.com/downloads/en/DeviceDoc/Atmel-7810-Automotive-Microcontrollers-ATmega328P_Datasheet.pdf" H 9700 6150 50  0001 C CNN
@@ -712,10 +712,10 @@ XTAL2
 Text Label 10300 5550 0    50   ~ 0
 XTAL1
 $Comp
-L Formula:R_200 R?
+L Formula:R_200 R5
 U 1 1 5FD1F668
 P 12500 7650
-F 0 "R?" H 12570 7696 50  0000 L CNN
+F 0 "R5" H 12570 7696 50  0000 L CNN
 F 1 "R_200" H 12570 7605 50  0000 L CNN
 F 2 "footprints:R_0805_OEM" H 12430 7650 50  0001 C CNN
 F 3 "https://www.seielect.com/Catalog/SEI-RMCF_RMCP.pdf" H 12580 7650 50  0001 C CNN
@@ -726,10 +726,10 @@ F 6 "https://www.digikey.com/products/en?keywords=RMCF0805JT200RCT-ND" H 12980 8
 	1    0    0    -1  
 $EndComp
 $Comp
-L Formula:R_200 R?
+L Formula:R_200 R6
 U 1 1 5FD2117A
 P 13250 7650
-F 0 "R?" H 13320 7696 50  0000 L CNN
+F 0 "R6" H 13320 7696 50  0000 L CNN
 F 1 "R_200" H 13320 7605 50  0000 L CNN
 F 2 "footprints:R_0805_OEM" H 13180 7650 50  0001 C CNN
 F 3 "https://www.seielect.com/Catalog/SEI-RMCF_RMCP.pdf" H 13330 7650 50  0001 C CNN
