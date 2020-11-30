@@ -50,7 +50,7 @@ def find_arduino() -> Tuple[Optional[str], Optional[str]]:
                 pad_with_zeros(hex(device.idVendor).strip("0x"), 4),
                 pad_with_zeros(hex(device.idProduct).strip("0x"), 4),
             )
-    
+
     return (None, None)
 
 
