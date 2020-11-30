@@ -30,11 +30,15 @@ This is a work in progress! It is not at all functional yet, but the current goa
 
 ## Setup
 
-To setup testing on your computer, follow this procedure. This system only works on Linux devices, so make sure you are on a linux device before you start.
-
 DISCLAIMER: This script requires root permissions  to edit some files, and will also append to your `.bashrc` file.
 
-0. (OPTIONAL) This setup script will automatically create symbolic links to certain hardware it finds. For example, if you have an arduino plugged in, this scripts creates a rule that makes your arduino accessible at `/dev/arduino` all the time, so you don't have to guess whether it is at `/dev/ACM0` or `/dev/ACM1` or any other location anymore. Paths to hardware in this repository are hard-coded and assume these symbolic links exist, so these rules are necessary for consistent performance. If you have an arduino, I recommend plugging it in now.
+### Prerequisites
+* A linux system. Due to the hardware interfaces that this project relies on, I STRONGLY recommend against using a virtual machine; this project will not work out of the box on a VM.
+* A python environment on your computer. At the very least, you _should_ be able to use the version of python that came installed with your operating system, but I recommend setting up [pyenv](https://realpython.com/intro-to-pyenv/) with virtual environments to isolate this project's dependencies.
+
+### Installation
+
+0. (OPTIONAL) This setup script will automatically create symbolic links to certain hardware it finds. For example, if you have an arduino plugged in, this script creates a rule that makes your arduino accessible at `/dev/arduino` all the time, so you don't have to guess whether it is at `/dev/ACM0` or `/dev/ACM1` or any other location anymore. Paths to hardware in this repository are **hard-coded** and **assume these symbolic links exist**, so these rules are necessary for consistent performance. If you have an arduino, I recommend plugging it in now.
 
 1. If you haven't yet, clone this repository onto your computer
 
@@ -46,7 +50,7 @@ DISCLAIMER: This script requires root permissions  to edit some files, and will 
 
 3. Run the setup script
 
-    `$ sudo python setup.py`
+    `$ sudo python setup.py` or `$ sudo python3 setup.py`
 
 4. Restart your computer.
 
