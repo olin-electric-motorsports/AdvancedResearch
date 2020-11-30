@@ -1,0 +1,38 @@
+Address ,Board ,Pin Number ,System      ,Name                 ,Type    ,Min ,Max    ,Notes
+0       ,0     ,0          ,NONE        ,ERROR                ,DIGITAL ,0   ,1      ,Sent as response from HitL system interface if there was an error
+1       ,0     ,0          ,COCKPIT     ,SS_BOTS              ,DIGITAL ,0   ,1      ,
+2       ,0     ,0          ,COCKPIT     ,SS_INERTIA_SWITCH    ,DIGITAL ,0   ,1      ,
+3       ,0     ,0          ,COCKPIT     ,SS_COCKPIT_ESTOP     ,DIGITAL ,0   ,1      ,
+4       ,0     ,0          ,COCKPIT     ,STEERING_POT         ,ANALOG  ,0   ,5      ,
+5       ,0     ,0          ,COCKPIT     ,THROTTLE_POT_1       ,ANALOG  ,0   ,5      ,
+6       ,0     ,0          ,COCKPIT     ,THROTTLE_POT_2       ,ANALOG  ,0   ,5      ,
+7       ,0     ,0          ,COCKPIT     ,RTD_LSD              ,DIGITAL ,0   ,1      ,"Little confused on this one, plz ping @Alex Wenstrup"
+8       ,0     ,0          ,LV_BOX      ,BRAKE_PRESSURE       ,ANALOG  ,0   ,5      ,Not sure if 0-5
+9       ,0     ,0          ,LV_BOX      ,BRAKE_LIGHT          ,DIGITAL ,0   ,1      ,
+10      ,0     ,0          ,LV_BOX      ,SS_GLVMS             ,DIGITAL ,0   ,1      ,
+11      ,0     ,0          ,LV_BOX      ,SS_TSMS              ,DIGITAL ,0   ,1      ,
+12      ,0     ,0          ,LV_BOX      ,SS_ESTOP             ,DIGITAL ,0   ,1      ,
+13      ,0     ,0          ,LV_BOX      ,SS_BSPD              ,DIGITAL ,0   ,1      ,Add temp sensors
+14      ,0     ,0          ,ACCUMULATOR ,SS_BMS               ,DIGITAL ,0   ,1      ,Not sure how the AIRs are hooked up
+15      ,0     ,0          ,ACCUMULATOR ,SS_IMD               ,DIGITAL ,0   ,1      ,
+16      ,0     ,0          ,ACCUMULATOR ,TSAL                 ,DIGITAL ,0   ,1      ,"Little confused on this one, plz ping @Alex Wenstrup"
+17      ,0     ,0          ,SENSING     ,SUSPENSION_STRAIN_1  ,ANALOG  ,2.5 ,2.5008 ,
+18      ,0     ,0          ,SENSING     ,SUSPENSION_STRAIN_2  ,ANALOG  ,2.5 ,2.5008 ,
+19      ,0     ,0          ,SENSING     ,SUSPENSION_STRAIN_3  ,ANALOG  ,2.5 ,2.5008 ,
+20      ,0     ,0          ,SENSING     ,SUSPENSION_STRAIN_4  ,ANALOG  ,2.5 ,2.5008 ,
+21      ,0     ,0          ,SENSING     ,SUSPENSION_STRAIN_5  ,ANALOG  ,2.5 ,2.5008 ,
+22      ,0     ,0          ,SENSING     ,SUSPENSION_STRAIN_6  ,ANALOG  ,2.5 ,2.5008 ,
+23      ,0     ,0          ,SENSING     ,SUSPENSION_STRAIN_7  ,ANALOG  ,2.5 ,2.5008 ,
+24      ,0     ,0          ,SENSING     ,SUSPENSION_STRAIN_8  ,ANALOG  ,2.5 ,2.5008 ,
+25      ,0     ,0          ,SENSING     ,SUSPENSION_STRAIN_9  ,ANALOG  ,2.5 ,2.5008 ,
+26      ,0     ,0          ,SENSING     ,SUSPENSION_STRAIN_10 ,ANALOG  ,2.5 ,2.5008 ,
+27      ,0     ,0          ,SENSING     ,SUSPENSION_STRAIN_11 ,ANALOG  ,2.5 ,2.5008 ,
+28      ,0     ,0          ,SENSING     ,SUSPENSION_STRAIN_12 ,ANALOG  ,2.5 ,2.5008 ,
+29      ,0     ,0          ,SENSING     ,WHEEL_SPEED_1        ,DIGITAL ,0   ,1      ,Format of this?
+30      ,0     ,0          ,SENSING     ,WHEEL_SPEED_2        ,DIGITAL ,0   ,1      ,
+31      ,0     ,0          ,SENSING     ,WHEEL_SPEED_3        ,DIGITAL ,0   ,1      ,
+32      ,0     ,0          ,SENSING     ,WHEEL_SPEED_4        ,DIGITAL ,0   ,1      ,
+33      ,0     ,0          ,SENSING     ,SUSPENSION_TRAVEL_1  ,ANALOG  ,0   ,5      ,
+34      ,0     ,0          ,SENSING     ,SUSPENSION_TRAVEL_2  ,ANALOG  ,0   ,5      ,
+35      ,0     ,0          ,SENSING     ,SUSPENSION_TRAVEL_3  ,ANALOG  ,0   ,5      ,
+36      ,0     ,0          ,SENSING     ,SUSPENSION_TRAVEL_4  ,ANALOG  ,0   ,5      ,
