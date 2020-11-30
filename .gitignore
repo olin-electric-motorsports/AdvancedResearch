@@ -12,7 +12,9 @@ _autosave-*
 *.tmp
 *-save.pro
 *-save.kicad_pcb
+__pycache__/
 fp-info-cache
+*.DS_Store
 
 # Netlist files (exported from Eeschema)
 *.net
@@ -23,4 +25,11 @@ fp-info-cache
 
 # Exported BOM files
 *.xml
-*.csv
+# *.csv (need to be more specific here)
+
+# Pytest generated assets
+**/tests/assets/
+report.html
+
+# Logs
+*.log
