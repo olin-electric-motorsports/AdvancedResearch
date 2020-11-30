@@ -5,7 +5,7 @@ import configparser
 import os
 import sys
 import usb.core
-from typing import Tuple
+from typing import Tuple, Optional
 
 
 # Constant definitions
@@ -35,7 +35,7 @@ def get_logging_config() -> None:
     )
 
 
-def find_arduino() -> Tuple[str, str]:
+def find_arduino() -> Tuple[Optional[str], Optional[str]]:
     """Use pyusb to find an arduino, if it is plugged in.
 
     Returns:
@@ -50,6 +50,8 @@ def find_arduino() -> Tuple[str, str]:
                 pad_with_zeros(hex(device.idVendor).strip("0x"), 4),
                 pad_with_zeros(hex(device.idProduct).strip("0x"), 4),
             )
+    
+    return (None, None)
 
 
 def pad_with_zeros(s: str, length: int) -> str:

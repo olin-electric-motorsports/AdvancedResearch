@@ -34,6 +34,8 @@ To setup testing on your computer, follow this procedure. This system only works
 
 DISCLAIMER: This script requires root permissions  to edit some files, and will also append to your `.bashrc` file.
 
+0. (OPTIONAL) This setup script will automatically create symbolic links to certain hardware it finds. For example, if you have an arduino plugged in, this scripts creates a rule that makes your arduino accessible at `/dev/arduino` all the time, so you don't have to guess whether it is at `/dev/ACM0` or `/dev/ACM1` or any other location anymore. Paths to hardware in this repository are hard-coded and assume these symbolic links exist, so these rules are necessary for consistent performance. If you have an arduino, I recommend plugging it in now.
+
 1. If you haven't yet, clone this repository onto your computer
 
     `$ git clone https://github.com/olin-electric-motorsports/AdvancedResearch.git`
@@ -50,7 +52,7 @@ DISCLAIMER: This script requires root permissions  to edit some files, and will 
 
     `$ sudo shutdown -r now`
 
-    The reason you have to reboot is because this script adds udev rules, which create symbolic links to our hardware. If you know what you're doing and really don't want to reboot, you can instead try 
+    The reason you have to reboot is because this script adds udev rules, which create symbolic links to our hardware (see above). It also edits your `~/.bashrc` file. If you know what you're doing and really don't want to reboot, you can instead try 
     
     `$ source ~/.bashrc && sudo udevadm control --reload-rules`,
 
@@ -60,7 +62,7 @@ DISCLAIMER: This script requires root permissions  to edit some files, and will 
 
 ### The Shell
 
-While we haven't built out a command line interface for interacting with our HITL system yet, we think that the python shell works great! Just run the following commands:
+We haven't built out a command line interface for interacting with our HITL system yet, but we think that the python shell works great! Just run the following commands:
 
 `$ python`
 
