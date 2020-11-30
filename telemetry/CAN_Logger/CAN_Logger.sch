@@ -1090,55 +1090,44 @@ Text Notes 2600 8450 0    89   ~ 0
 BUCK CONVERTER\n
 Text Notes 1300 6150 0    50   ~ 0
 LINEAR VOLTAGE REGULATOR
-Text Notes 4750 6100 0    50   ~ 0
-5V-3V3 LEVEL SHIFTER
-$Comp
-L power:VCC #PWR?
-U 1 1 5FA5A02D
-P 6150 6400
-F 0 "#PWR?" H 6150 6250 50  0001 C CNN
-F 1 "VCC" H 6165 6573 50  0000 C CNN
-F 2 "" H 6150 6400 50  0001 C CNN
-F 3 "" H 6150 6400 50  0001 C CNN
-	1    6150 6400
-	1    0    0    -1  
-$EndComp
+Text Notes 4700 5850 0    50   ~ 0
+8-BIT 5V-3V3 LEVEL SHIFTER
 Wire Wire Line
-	4750 7100 4750 7250
+	5700 7200 5700 7350
 $Comp
 L power:GND #PWR?
 U 1 1 5FA9384F
-P 4750 7250
-F 0 "#PWR?" H 4750 7000 50  0001 C CNN
-F 1 "GND" H 4755 7077 50  0000 C CNN
-F 2 "" H 4750 7250 50  0001 C CNN
-F 3 "" H 4750 7250 50  0001 C CNN
-	1    4750 7250
+P 5700 7350
+F 0 "#PWR?" H 5700 7100 50  0001 C CNN
+F 1 "GND" H 5705 7177 50  0000 C CNN
+F 2 "" H 5700 7350 50  0001 C CNN
+F 3 "" H 5700 7350 50  0001 C CNN
+	1    5700 7350
 	1    0    0    -1  
 $EndComp
 $Comp
 L power:+3.3V #PWR?
 U 1 1 5FA600D5
-P 4250 6400
-F 0 "#PWR?" H 4250 6250 50  0001 C CNN
-F 1 "+3.3V" H 4265 6573 50  0000 C CNN
-F 2 "" H 4250 6400 50  0001 C CNN
-F 3 "" H 4250 6400 50  0001 C CNN
-	1    4250 6400
+P 4300 6200
+F 0 "#PWR?" H 4300 6050 50  0001 C CNN
+F 1 "+3.3V" H 4315 6373 50  0000 C CNN
+F 2 "" H 4300 6200 50  0001 C CNN
+F 3 "" H 4300 6200 50  0001 C CNN
+	1    4300 6200
 	1    0    0    -1  
 $EndComp
 $Comp
 L formula:C_0.1uF C8
 U 1 1 5FA99092
-P 4250 6650
-F 0 "C8" H 4000 6700 50  0000 L CNN
-F 1 "C_0.1uF" H 3800 6600 50  0000 L CNN
-F 2 "footprints:C_0805_OEM" H 4288 6500 50  0001 C CNN
-F 3 "http://datasheets.avx.com/X7RDielectric.pdf" H 4275 6750 50  0001 C CNN
-F 4 "DK" H 4250 6650 60  0001 C CNN "MFN"
-F 5 "478-3352-1-ND" H 4250 6650 60  0001 C CNN "MPN"
-F 6 "https://www.digikey.com/products/en?keywords=478-3352-1-ND" H 4675 7150 60  0001 C CNN "PurchasingLink"
-	1    4250 6650
+P 4300 6450
+F 0 "C8" H 4050 6500 50  0000 L CNN
+F 1 "C_0.1uF" H 3850 6400 50  0000 L CNN
+F 2 "footprints:C_0805_OEM" H 4338 6300 50  0001 C CNN
+F 3 "http://datasheets.avx.com/X7RDielectric.pdf" H 4325 6550 50  0001 C CNN
+F 4 "DK" H 4300 6450 60  0001 C CNN "MFN"
+F 5 "478-3352-1-ND" H 4300 6450 60  0001 C CNN "MPN"
+F 6 "https://www.digikey.com/products/en?keywords=478-3352-1-ND" H 4725 6950 60  0001 C CNN "PurchasingLink"
+	1    4300 6450
 	1    0    0    -1  
 $EndComp
 $Comp
@@ -1155,44 +1144,11 @@ F 6 "https://www.digikey.com/products/en?keywords=475-1410-1-ND" H 5700 2300 60 
 	1    5300 1800
 	-1   0    0    1   
 $EndComp
-$Comp
-L formula:TXB0104 U?
-U 1 1 5FA1ECD5
-P 5150 6350
-F 0 "U?" H 5200 6425 50  0000 C CNN
-F 1 "TXB0104" H 5200 6334 50  0000 C CNN
-F 2 "Housings_SSOP:TSSOP-14_4.4x5mm_Pitch0.65mm" H 5050 6250 50  0001 C CNN
-F 3 "http://www.ti.com/lit/ds/symlink/txb0104.pdf" H 5150 6350 50  0001 C CNN
-F 4 "DK" H 5250 6450 50  0001 C CNN "MFN"
-F 5 "296-21929-1-ND" H 5350 6550 50  0001 C CNN "MPN"
-F 6 "https://www.digikey.com/product-detail/en/texas-instruments/TXB0104PWR/296-21929-1-ND/1629282" H 5450 6650 50  0001 C CNN "PurchasingLink"
-	1    5150 6350
-	1    0    0    -1  
-$EndComp
-$Comp
-L power:+3.3V #PWR?
-U 1 1 5FB3450C
-P 5900 7100
-F 0 "#PWR?" H 5900 6950 50  0001 C CNN
-F 1 "+3.3V" H 5915 7273 50  0000 C CNN
-F 2 "" H 5900 7100 50  0001 C CNN
-F 3 "" H 5900 7100 50  0001 C CNN
-	1    5900 7100
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	5650 7100 5900 7100
-Text Label 5650 6600 0    50   ~ 0
-MISO
-Text Label 5650 6700 0    50   ~ 0
-MOSI
-Text Label 5650 6800 0    50   ~ 0
-SCK
-Text Label 4750 6600 2    50   ~ 0
+Text Label 4800 6400 2    50   ~ 0
 MISO_3.3V
-Text Label 4750 6700 2    50   ~ 0
+Text Label 4800 6500 2    50   ~ 0
 MOSI_3.3V
-Text Label 4750 6800 2    50   ~ 0
+Text Label 4800 6600 2    50   ~ 0
 SCK_3.3V
 Text Label 7600 4050 2    50   ~ 0
 MISO_3.3V
@@ -1202,9 +1158,7 @@ Text Label 7600 4250 2    50   ~ 0
 SCK_3.3V
 Text Label 3650 3300 0    50   ~ 0
 CS
-Text Label 5650 6900 0    50   ~ 0
-CS
-Text Label 4750 6900 2    50   ~ 0
+Text Label 4800 6700 2    50   ~ 0
 CS_3.3V
 Text Label 7600 4350 2    50   ~ 0
 CS_3.3V
@@ -1377,56 +1331,24 @@ Wire Wire Line
 Connection ~ 9100 2650
 Wire Wire Line
 	9100 2650 9150 2650
-$Comp
-L formula:C_0.1uF C9
-U 1 1 5FA9BD05
-P 6150 6650
-F 0 "C9" H 6265 6696 50  0000 L CNN
-F 1 "C_0.1uF" H 6265 6605 50  0000 L CNN
-F 2 "footprints:C_0805_OEM" H 6188 6500 50  0001 C CNN
-F 3 "http://datasheets.avx.com/X7RDielectric.pdf" H 6175 6750 50  0001 C CNN
-F 4 "DK" H 6150 6650 60  0001 C CNN "MFN"
-F 5 "478-3352-1-ND" H 6150 6650 60  0001 C CNN "MPN"
-F 6 "https://www.digikey.com/products/en?keywords=478-3352-1-ND" H 6575 7150 60  0001 C CNN "PurchasingLink"
-	1    6150 6650
-	1    0    0    -1  
-$EndComp
-$Comp
-L power:GND #PWR?
-U 1 1 5FBA01E3
-P 6150 6900
-F 0 "#PWR?" H 6150 6650 50  0001 C CNN
-F 1 "GND" H 6155 6727 50  0000 C CNN
-F 2 "" H 6150 6900 50  0001 C CNN
-F 3 "" H 6150 6900 50  0001 C CNN
-	1    6150 6900
-	1    0    0    -1  
-$EndComp
 Wire Wire Line
-	6150 6900 6150 6800
-Wire Wire Line
-	6150 6500 6150 6400
-Wire Wire Line
-	5650 6500 6150 6500
-Connection ~ 6150 6500
-Wire Wire Line
-	4250 6500 4250 6400
+	4300 6300 4300 6200
 $Comp
 L power:GND #PWR?
 U 1 1 5FBEF936
-P 4250 6900
-F 0 "#PWR?" H 4250 6650 50  0001 C CNN
-F 1 "GND" H 4255 6727 50  0000 C CNN
-F 2 "" H 4250 6900 50  0001 C CNN
-F 3 "" H 4250 6900 50  0001 C CNN
-	1    4250 6900
+P 4300 6700
+F 0 "#PWR?" H 4300 6450 50  0001 C CNN
+F 1 "GND" H 4305 6527 50  0000 C CNN
+F 2 "" H 4300 6700 50  0001 C CNN
+F 3 "" H 4300 6700 50  0001 C CNN
+	1    4300 6700
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	4250 6800 4250 6900
+	4300 6600 4300 6700
 Wire Wire Line
-	4250 6500 4750 6500
-Connection ~ 4250 6500
+	4300 6300 4800 6300
+Connection ~ 4300 6300
 $Comp
 L formula:SD_socket J?
 U 1 1 5FA2DFB9
@@ -1621,4 +1543,90 @@ NoConn ~ 3650 2800
 NoConn ~ 3650 2900
 NoConn ~ 3650 3400
 NoConn ~ 3650 3500
+NoConn ~ 4800 7100
+NoConn ~ 4800 7000
+NoConn ~ 4800 6900
+NoConn ~ 4800 6800
+$Comp
+L formula:TXB0108 U1
+U 1 1 5FC3D37A
+P 5250 6250
+F 0 "U1" H 5250 6425 50  0000 C CNN
+F 1 "TXB0108" H 5250 6334 50  0000 C CNN
+F 2 "Package_SO:TSSOP-20_4.4x6.5mm_P0.65mm" H 5150 6700 50  0001 C CNN
+F 3 "https://www.ti.com/lit/ds/symlink/txb0108.pdf?HQS=TI-null-null-digikeymode-df-pf-null-wwe&ts=1605211774233" H 5200 6350 50  0001 C CNN
+F 4 "DK" H 5250 6400 50  0001 C CNN "MFN"
+F 5 "296-21527-1-ND" H 5350 6500 50  0001 C CNN "MPN"
+F 6 "https://www.digikey.com/en/products/detail/texas-instruments/TXB0108PWR/1305699" H 5450 6600 50  0001 C CNN "PurchasingLink"
+	1    5250 6250
+	1    0    0    -1  
+$EndComp
+Connection ~ 6200 6300
+Wire Wire Line
+	5700 6300 6200 6300
+Wire Wire Line
+	6200 6300 6200 6200
+Wire Wire Line
+	6200 6700 6200 6600
+$Comp
+L power:GND #PWR?
+U 1 1 5FBA01E3
+P 6200 6700
+F 0 "#PWR?" H 6200 6450 50  0001 C CNN
+F 1 "GND" H 6205 6527 50  0000 C CNN
+F 2 "" H 6200 6700 50  0001 C CNN
+F 3 "" H 6200 6700 50  0001 C CNN
+	1    6200 6700
+	1    0    0    -1  
+$EndComp
+$Comp
+L formula:C_0.1uF C9
+U 1 1 5FA9BD05
+P 6200 6450
+F 0 "C9" H 6315 6496 50  0000 L CNN
+F 1 "C_0.1uF" H 6315 6405 50  0000 L CNN
+F 2 "footprints:C_0805_OEM" H 6238 6300 50  0001 C CNN
+F 3 "http://datasheets.avx.com/X7RDielectric.pdf" H 6225 6550 50  0001 C CNN
+F 4 "DK" H 6200 6450 60  0001 C CNN "MFN"
+F 5 "478-3352-1-ND" H 6200 6450 60  0001 C CNN "MPN"
+F 6 "https://www.digikey.com/products/en?keywords=478-3352-1-ND" H 6625 6950 60  0001 C CNN "PurchasingLink"
+	1    6200 6450
+	1    0    0    -1  
+$EndComp
+Text Label 5700 6700 0    50   ~ 0
+CS
+Text Label 5700 6600 0    50   ~ 0
+SCK
+Text Label 5700 6500 0    50   ~ 0
+MOSI
+Text Label 5700 6400 0    50   ~ 0
+MISO
+Wire Wire Line
+	4800 7200 4550 7200
+$Comp
+L power:+3.3V #PWR?
+U 1 1 5FB3450C
+P 4550 7200
+F 0 "#PWR?" H 4550 7050 50  0001 C CNN
+F 1 "+3.3V" H 4565 7373 50  0000 C CNN
+F 2 "" H 4550 7200 50  0001 C CNN
+F 3 "" H 4550 7200 50  0001 C CNN
+	1    4550 7200
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:VCC #PWR?
+U 1 1 5FA5A02D
+P 6200 6200
+F 0 "#PWR?" H 6200 6050 50  0001 C CNN
+F 1 "VCC" H 6215 6373 50  0000 C CNN
+F 2 "" H 6200 6200 50  0001 C CNN
+F 3 "" H 6200 6200 50  0001 C CNN
+	1    6200 6200
+	1    0    0    -1  
+$EndComp
+NoConn ~ 5700 6800
+NoConn ~ 5700 6900
+NoConn ~ 5700 7000
+NoConn ~ 5700 7100
 $EndSCHEMATC
