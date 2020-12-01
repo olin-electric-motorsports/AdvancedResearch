@@ -663,21 +663,6 @@ F 6 "https://www.digikey.com/product-detail/en/samsung-electro-mechanics/CL21B10
 $EndComp
 Wire Wire Line
 	11300 2400 11150 2400
-Wire Wire Line
-	11200 1800 11300 1800
-$Comp
-L Device:Ferrite_Bead FB1
-U 1 1 5FAF9058
-P 11450 1800
-F 0 "FB1" V 11700 1800 50  0000 C CNN
-F 1 "Ferrite_Bead" V 11600 1800 50  0000 C CNN
-F 2 "" V 11380 1800 50  0001 C CNN
-F 3 "~" H 11450 1800 50  0001 C CNN
-	1    11450 1800
-	0    -1   -1   0   
-$EndComp
-Wire Wire Line
-	11600 1800 11700 1800
 Connection ~ 11700 1800
 $Comp
 L power:GND #PWR0107
@@ -1107,4 +1092,6 @@ F 5 "P300KDACT-ND" H 15700 8850 60  0001 C CNN "MPN"
 $EndComp
 Wire Wire Line
 	15850 8850 15900 8850
+Wire Wire Line
+	11200 1800 11700 1800
 $EndSCHEMATC
