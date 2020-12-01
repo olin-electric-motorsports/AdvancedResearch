@@ -569,6 +569,20 @@ F 6 "https://www.digikey.com/products/en?keywords=478-3352-1-ND" H 15075 1950 60
 	1    14650 1450
 	0    1    1    0   
 $EndComp
+$Comp
+L template-rescue:R_200-formula R2
+U 1 1 5D5FB79E
+P 15600 2050
+F 0 "R2" V 15690 2000 50  0000 L CNN
+F 1 "R_200" V 15510 1930 50  0000 L CNN
+F 2 "footprints:R_0805_OEM" H 15530 2050 50  0001 C CNN
+F 3 "https://www.seielect.com/Catalog/SEI-RMCF_RMCP.pdf" H 15680 2050 50  0001 C CNN
+F 4 "DK" H 15600 2050 60  0001 C CNN "MFN"
+F 5 "RMCF0805JT200RCT-ND" H 15600 2050 60  0001 C CNN "MPN"
+F 6 "https://www.digikey.com/products/en?keywords=RMCF0805JT200RCT-ND" H 16080 2450 60  0001 C CNN "PurchasingLink"
+	1    15600 2050
+	1    0    0    -1  
+$EndComp
 NoConn ~ 15300 2050
 $Comp
 L power:VCC #PWR01
@@ -835,7 +849,17 @@ Wire Wire Line
 Wire Wire Line
 	15400 1950 15400 1900
 Wire Wire Line
+	15400 1900 15600 1900
+Connection ~ 15600 1900
+Wire Wire Line
+	15600 1900 15750 1900
+Wire Wire Line
 	15400 2150 15400 2200
+Wire Wire Line
+	15400 2200 15600 2200
+Connection ~ 15600 2200
+Wire Wire Line
+	15600 2200 15750 2200
 Wire Wire Line
 	14250 8450 14250 8600
 Wire Wire Line
@@ -997,27 +1021,598 @@ Connection ~ 1300 8800
 Wire Wire Line
 	1300 8800 1700 8800
 $Comp
-L formula:R_120_DNP R2
-U 1 1 5FA5AB4A
-P 15600 2050
-F 0 "R2" H 15670 2096 50  0000 L CNN
-F 1 "R_120_DNP" H 15670 2005 50  0000 L CNN
-F 2 "footprints:R_0805_OEM" H 14400 2200 50  0001 L CNN
-F 3 "https://www.mouser.com/datasheet/2/315/AOA0000C304-1149620.pdf" H 14400 2500 50  0001 L CNN
-F 4 "DK" H 15600 2050 60  0001 C CNN "MFN"
-F 5 "667-ERJ-6ENF1200V" H 14400 2300 60  0001 L CNN "MPN"
-F 6 "https://www.mouser.com/ProductDetail/Panasonic-Industrial-Devices/ERJ-6ENF1200V?qs=sGAEpiMZZMvdGkrng054t8AJgcdMkx7x%252bFQnctTMUmU%3d" H 14400 2400 60  0001 L CNN "PurchasingLink"
-	1    15600 2050
+L 74xx:74HCT4051 U?
+U 1 1 5F9F379D
+P 13450 5950
+F 0 "U?" H 13500 6631 50  0000 C CNN
+F 1 "74HCT4051" H 13500 6540 50  0000 C CNN
+F 2 "" H 13450 5550 50  0001 C CNN
+F 3 "http://www.ti.com/lit/ds/symlink/cd74hct4051.pdf" H 13450 5550 50  0001 C CNN
+	1    13450 5950
+	1    0    0    -1  
+$EndComp
+$Comp
+L 74xx:74HCT4051 U?
+U 1 1 5F9FF25D
+P 13450 7350
+F 0 "U?" H 13500 8031 50  0000 C CNN
+F 1 "74HCT4051" H 13500 7940 50  0000 C CNN
+F 2 "" H 13450 6950 50  0001 C CNN
+F 3 "http://www.ti.com/lit/ds/symlink/cd74hct4051.pdf" H 13450 6950 50  0001 C CNN
+	1    13450 7350
+	1    0    0    -1  
+$EndComp
+$Comp
+L formula:Ampseal_23_VT J?
+U 1 1 5FA3FEE8
+P 1250 6700
+F 0 "J?" H 1208 8047 60  0000 C CNN
+F 1 "Ampseal_23_VT" H 1208 7941 60  0000 C CNN
+F 2 "footprints:Ampseal_23" H 1050 7450 60  0001 C CNN
+F 3 "http://www.te.com/commerce/DocumentDelivery/DDEController?Action=showdoc&DocId=Customer+Drawing%7F776228%7FC13%7Fpdf%7FEnglish%7FENG_CD_776228_C13.pdf%7F776228-1" H 1050 7450 60  0001 C CNN
+F 4 "TE" H 1100 8000 60  0001 C CNN "MFN"
+F 5 "776228-1" H 1200 8100 60  0001 C CNN "MPN"
+F 6 "http://www.te.com/usa-en/product-776228-1.html" H 1300 8200 60  0001 C CNN "PurchasingLink"
+	1    1250 6700
+	1    0    0    -1  
+$EndComp
+$Comp
+L formula:NanoFit_RA_TH_06 J?
+U 1 1 5FA41601
+P 4050 5900
+F 0 "J?" H 4108 6375 50  0000 C CNN
+F 1 "NanoFit_RA_TH_06" H 4108 6284 50  0000 C CNN
+F 2 "footprints:NanoFit_RA_6" H 4050 5550 50  0001 C CNN
+F 3 "" H 4050 6250 50  0001 C CNN
+	1    4050 5900
+	1    0    0    -1  
+$EndComp
+Text Label 4250 5750 0    50   ~ 0
+MISO
+Text Label 4250 5850 0    50   ~ 0
+MOSI
+Text Label 4250 5950 0    50   ~ 0
+SCK
+Text Label 4250 6050 0    50   ~ 0
+SS
+$Comp
+L power:GND #PWR?
+U 1 1 5FA51D44
+P 4550 5650
+F 0 "#PWR?" H 4550 5400 50  0001 C CNN
+F 1 "GND" H 4555 5477 50  0000 C CNN
+F 2 "" H 4550 5650 50  0001 C CNN
+F 3 "" H 4550 5650 50  0001 C CNN
+	1    4550 5650
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR?
+U 1 1 5FA52B19
+P 4550 6150
+F 0 "#PWR?" H 4550 5900 50  0001 C CNN
+F 1 "GND" H 4555 5977 50  0000 C CNN
+F 2 "" H 4550 6150 50  0001 C CNN
+F 3 "" H 4550 6150 50  0001 C CNN
+	1    4550 6150
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	15400 1900 15600 1900
+	4250 5650 4550 5650
 Wire Wire Line
-	15400 2200 15600 2200
-Connection ~ 15600 1900
+	4550 6150 4250 6150
+Text Label 1450 5700 0    50   ~ 0
+12V
+Text Label 1450 5800 0    50   ~ 0
+GND
+Text Label 1450 5900 0    50   ~ 0
+CAN_P
+Text Label 1450 6000 0    50   ~ 0
+CAN_N
+Text Label 1450 6100 0    50   ~ 0
+12V
+Text Label 1450 6200 0    50   ~ 0
+GND
+Text Label 1450 6500 0    50   ~ 0
+CAN_P
+Text Label 1450 6600 0    50   ~ 0
+CAN_N
+Text Label 1450 6700 0    50   ~ 0
+GND
+Text Notes 1650 6700 0    50   ~ 0
+(CAN CABLE SHIELD)
+Text Label 1450 6800 0    50   ~ 0
+CAN_P
+Text Label 1450 6900 0    50   ~ 0
+CAN_N
+Text Label 1450 7000 0    50   ~ 0
+12V
+Text Label 1450 7100 0    50   ~ 0
+GND
+Text Label 1450 7200 0    50   ~ 0
+12V
+Text Label 1450 7300 0    50   ~ 0
+GND
+Text Label 1450 7400 0    50   ~ 0
+CAN_P
+Text Label 1450 7500 0    50   ~ 0
+CAN_N
+Text Label 1450 7600 0    50   ~ 0
+12V
+Text Label 1450 7700 0    50   ~ 0
+GND
+$Comp
+L formula:MicroFit_V_2 J?
+U 1 1 5FA6FBFE
+P 7250 1150
+F 0 "J?" H 7308 1425 50  0000 C CNN
+F 1 "MicroFit_V_2" H 7308 1334 50  0000 C CNN
+F 2 "footprints:MicroFit_V_2" H 7200 1350 50  0001 C CNN
+F 3 "https://www.molex.com/pdm_docs/sd/430450225_sd.pdf" H 7200 1350 50  0001 C CNN
+F 4 "MFN" H 7350 1400 50  0001 C CNN "DK"
+F 5 "WM10660-ND" H 7450 1500 50  0001 C CNN "MPN"
+F 6 "https://www.digikey.com/product-detail/en/molex/0430450225/WM10660-ND/3310180" H 7250 1300 50  0001 C CNN "PurchasingLink"
+	1    7250 1150
+	1    0    0    -1  
+$EndComp
+Text Label 7500 1100 0    50   ~ 0
+STRAIN_GAUGE_1_+
+Text Label 7500 1200 0    50   ~ 0
+STRAIN_GAUGE_1_-
+$Comp
+L formula:MicroFit_V_2 J?
+U 1 1 5FACB8F3
+P 7250 1600
+F 0 "J?" H 7308 1875 50  0000 C CNN
+F 1 "MicroFit_V_2" H 7308 1784 50  0000 C CNN
+F 2 "footprints:MicroFit_V_2" H 7200 1800 50  0001 C CNN
+F 3 "https://www.molex.com/pdm_docs/sd/430450225_sd.pdf" H 7200 1800 50  0001 C CNN
+F 4 "MFN" H 7350 1850 50  0001 C CNN "DK"
+F 5 "WM10660-ND" H 7450 1950 50  0001 C CNN "MPN"
+F 6 "https://www.digikey.com/product-detail/en/molex/0430450225/WM10660-ND/3310180" H 7250 1750 50  0001 C CNN "PurchasingLink"
+	1    7250 1600
+	1    0    0    -1  
+$EndComp
+Text Label 7500 1550 0    50   ~ 0
+STRAIN_GAUGE_2_+
+Text Label 7500 1650 0    50   ~ 0
+STRAIN_GAUGE_2_-
+$Comp
+L formula:MicroFit_V_2 J?
+U 1 1 5FAD0BB4
+P 7250 2050
+F 0 "J?" H 7308 2325 50  0000 C CNN
+F 1 "MicroFit_V_2" H 7308 2234 50  0000 C CNN
+F 2 "footprints:MicroFit_V_2" H 7200 2250 50  0001 C CNN
+F 3 "https://www.molex.com/pdm_docs/sd/430450225_sd.pdf" H 7200 2250 50  0001 C CNN
+F 4 "MFN" H 7350 2300 50  0001 C CNN "DK"
+F 5 "WM10660-ND" H 7450 2400 50  0001 C CNN "MPN"
+F 6 "https://www.digikey.com/product-detail/en/molex/0430450225/WM10660-ND/3310180" H 7250 2200 50  0001 C CNN "PurchasingLink"
+	1    7250 2050
+	1    0    0    -1  
+$EndComp
+Text Label 7500 2000 0    50   ~ 0
+STRAIN_GUAGE_3_+
+Text Label 7500 2100 0    50   ~ 0
+STRAIN_GAUGE_3_-
+$Comp
+L formula:MicroFit_V_2 J?
+U 1 1 5FAD26EA
+P 7250 2500
+F 0 "J?" H 7308 2775 50  0000 C CNN
+F 1 "MicroFit_V_2" H 7308 2684 50  0000 C CNN
+F 2 "footprints:MicroFit_V_2" H 7200 2700 50  0001 C CNN
+F 3 "https://www.molex.com/pdm_docs/sd/430450225_sd.pdf" H 7200 2700 50  0001 C CNN
+F 4 "MFN" H 7350 2750 50  0001 C CNN "DK"
+F 5 "WM10660-ND" H 7450 2850 50  0001 C CNN "MPN"
+F 6 "https://www.digikey.com/product-detail/en/molex/0430450225/WM10660-ND/3310180" H 7250 2650 50  0001 C CNN "PurchasingLink"
+	1    7250 2500
+	1    0    0    -1  
+$EndComp
+Text Label 7500 2450 0    50   ~ 0
+STRAIN_GUAGE_4_+
+Text Label 7500 2550 0    50   ~ 0
+STRAIN_GAUGE_4_-
+$Comp
+L formula:MicroFit_V_2 J?
+U 1 1 5FAD454E
+P 7250 2950
+F 0 "J?" H 7308 3225 50  0000 C CNN
+F 1 "MicroFit_V_2" H 7308 3134 50  0000 C CNN
+F 2 "footprints:MicroFit_V_2" H 7200 3150 50  0001 C CNN
+F 3 "https://www.molex.com/pdm_docs/sd/430450225_sd.pdf" H 7200 3150 50  0001 C CNN
+F 4 "MFN" H 7350 3200 50  0001 C CNN "DK"
+F 5 "WM10660-ND" H 7450 3300 50  0001 C CNN "MPN"
+F 6 "https://www.digikey.com/product-detail/en/molex/0430450225/WM10660-ND/3310180" H 7250 3100 50  0001 C CNN "PurchasingLink"
+	1    7250 2950
+	1    0    0    -1  
+$EndComp
+Text Label 7500 2900 0    50   ~ 0
+STRAIN_GUAGE_5_+
+Text Label 7500 3000 0    50   ~ 0
+STRAIN_GAUGE_5_-
+$Comp
+L formula:MicroFit_V_2 J?
+U 1 1 5FAD62F8
+P 7250 3400
+F 0 "J?" H 7308 3675 50  0000 C CNN
+F 1 "MicroFit_V_2" H 7308 3584 50  0000 C CNN
+F 2 "footprints:MicroFit_V_2" H 7200 3600 50  0001 C CNN
+F 3 "https://www.molex.com/pdm_docs/sd/430450225_sd.pdf" H 7200 3600 50  0001 C CNN
+F 4 "MFN" H 7350 3650 50  0001 C CNN "DK"
+F 5 "WM10660-ND" H 7450 3750 50  0001 C CNN "MPN"
+F 6 "https://www.digikey.com/product-detail/en/molex/0430450225/WM10660-ND/3310180" H 7250 3550 50  0001 C CNN "PurchasingLink"
+	1    7250 3400
+	1    0    0    -1  
+$EndComp
+Text Label 7500 3350 0    50   ~ 0
+STRAIN_GUAGE_6_+
+Text Label 7500 3450 0    50   ~ 0
+STRAIN_GAUGE_6_-
+$Comp
+L formula:MicroFit_V_2 J?
+U 1 1 5FADB6BC
+P 8500 1150
+F 0 "J?" H 8558 1425 50  0000 C CNN
+F 1 "MicroFit_V_2" H 8558 1334 50  0000 C CNN
+F 2 "footprints:MicroFit_V_2" H 8450 1350 50  0001 C CNN
+F 3 "https://www.molex.com/pdm_docs/sd/430450225_sd.pdf" H 8450 1350 50  0001 C CNN
+F 4 "MFN" H 8600 1400 50  0001 C CNN "DK"
+F 5 "WM10660-ND" H 8700 1500 50  0001 C CNN "MPN"
+F 6 "https://www.digikey.com/product-detail/en/molex/0430450225/WM10660-ND/3310180" H 8500 1300 50  0001 C CNN "PurchasingLink"
+	1    8500 1150
+	1    0    0    -1  
+$EndComp
+Text Label 8750 1100 0    50   ~ 0
+STRAIN_GUAGE_7_+
+Text Label 8750 1200 0    50   ~ 0
+STRAIN_GAUGE_7_-
+$Comp
+L formula:MicroFit_V_2 J?
+U 1 1 5FADB6C7
+P 8500 1600
+F 0 "J?" H 8558 1875 50  0000 C CNN
+F 1 "MicroFit_V_2" H 8558 1784 50  0000 C CNN
+F 2 "footprints:MicroFit_V_2" H 8450 1800 50  0001 C CNN
+F 3 "https://www.molex.com/pdm_docs/sd/430450225_sd.pdf" H 8450 1800 50  0001 C CNN
+F 4 "MFN" H 8600 1850 50  0001 C CNN "DK"
+F 5 "WM10660-ND" H 8700 1950 50  0001 C CNN "MPN"
+F 6 "https://www.digikey.com/product-detail/en/molex/0430450225/WM10660-ND/3310180" H 8500 1750 50  0001 C CNN "PurchasingLink"
+	1    8500 1600
+	1    0    0    -1  
+$EndComp
+Text Label 8750 1550 0    50   ~ 0
+STRAIN_GUAGE_8_+
+Text Label 8750 1650 0    50   ~ 0
+STRAIN_GAUGE_8_-
+$Comp
+L formula:MicroFit_V_2 J?
+U 1 1 5FADB6D2
+P 8450 2500
+F 0 "J?" H 8508 2775 50  0000 C CNN
+F 1 "MicroFit_V_2" H 8508 2684 50  0000 C CNN
+F 2 "footprints:MicroFit_V_2" H 8400 2700 50  0001 C CNN
+F 3 "https://www.molex.com/pdm_docs/sd/430450225_sd.pdf" H 8400 2700 50  0001 C CNN
+F 4 "MFN" H 8550 2750 50  0001 C CNN "DK"
+F 5 "WM10660-ND" H 8650 2850 50  0001 C CNN "MPN"
+F 6 "https://www.digikey.com/product-detail/en/molex/0430450225/WM10660-ND/3310180" H 8450 2650 50  0001 C CNN "PurchasingLink"
+	1    8450 2500
+	1    0    0    -1  
+$EndComp
+Text Label 8700 2450 0    50   ~ 0
+STRAIN_GUAGE_10_+
+Text Label 8700 2550 0    50   ~ 0
+STRAIN_GAUGE_10_-
+$Comp
+L formula:MicroFit_V_2 J?
+U 1 1 5FADB6DD
+P 8450 2950
+F 0 "J?" H 8508 3225 50  0000 C CNN
+F 1 "MicroFit_V_2" H 8508 3134 50  0000 C CNN
+F 2 "footprints:MicroFit_V_2" H 8400 3150 50  0001 C CNN
+F 3 "https://www.molex.com/pdm_docs/sd/430450225_sd.pdf" H 8400 3150 50  0001 C CNN
+F 4 "MFN" H 8550 3200 50  0001 C CNN "DK"
+F 5 "WM10660-ND" H 8650 3300 50  0001 C CNN "MPN"
+F 6 "https://www.digikey.com/product-detail/en/molex/0430450225/WM10660-ND/3310180" H 8450 3100 50  0001 C CNN "PurchasingLink"
+	1    8450 2950
+	1    0    0    -1  
+$EndComp
+Text Label 8700 2900 0    50   ~ 0
+STRAIN_GUAGE_11_+
+Text Label 8700 3000 0    50   ~ 0
+STRAIN_GAUGE_11_-
+$Comp
+L formula:MicroFit_V_2 J?
+U 1 1 5FADB6E8
+P 8450 3400
+F 0 "J?" H 8508 3675 50  0000 C CNN
+F 1 "MicroFit_V_2" H 8508 3584 50  0000 C CNN
+F 2 "footprints:MicroFit_V_2" H 8400 3600 50  0001 C CNN
+F 3 "https://www.molex.com/pdm_docs/sd/430450225_sd.pdf" H 8400 3600 50  0001 C CNN
+F 4 "MFN" H 8550 3650 50  0001 C CNN "DK"
+F 5 "WM10660-ND" H 8650 3750 50  0001 C CNN "MPN"
+F 6 "https://www.digikey.com/product-detail/en/molex/0430450225/WM10660-ND/3310180" H 8450 3550 50  0001 C CNN "PurchasingLink"
+	1    8450 3400
+	1    0    0    -1  
+$EndComp
+Text Label 8700 3350 0    50   ~ 0
+STRAIN_GUAGE_12_+
+Text Label 8700 3450 0    50   ~ 0
+STRAIN_GAUGE_12_-
+$Comp
+L formula:MicroFit_V_2 J?
+U 1 1 5FADB6F3
+P 8450 2050
+F 0 "J?" H 8508 2325 50  0000 C CNN
+F 1 "MicroFit_V_2" H 8508 2234 50  0000 C CNN
+F 2 "footprints:MicroFit_V_2" H 8400 2250 50  0001 C CNN
+F 3 "https://www.molex.com/pdm_docs/sd/430450225_sd.pdf" H 8400 2250 50  0001 C CNN
+F 4 "MFN" H 8550 2300 50  0001 C CNN "DK"
+F 5 "WM10660-ND" H 8650 2400 50  0001 C CNN "MPN"
+F 6 "https://www.digikey.com/product-detail/en/molex/0430450225/WM10660-ND/3310180" H 8450 2200 50  0001 C CNN "PurchasingLink"
+	1    8450 2050
+	1    0    0    -1  
+$EndComp
+Text Label 8700 2000 0    50   ~ 0
+STRAIN_GUAGE_9_+
+Text Label 8700 2100 0    50   ~ 0
+STRAIN_GAUGE_9_-
+Text Notes 3850 5350 0    50   ~ 0
+*needs to be vertical (vt)
+$Comp
+L formula:MM_M_VT_08 J?
+U 1 1 5FA15190
+P 10350 1550
+F 0 "J?" H 10408 2247 60  0000 C CNN
+F 1 "MM_M_VT_08" H 10408 2141 60  0000 C CNN
+F 2 "footprints:micromatch_female_ra_8" H 10250 2000 60  0001 C CNN
+F 3 "https://www.te.com/commerce/DocumentDelivery/DDEController?Action=showdoc&DocId=Customer+Drawing%7F215464%7FR%7Fpdf%7FEnglish%7FENG_CD_215464_R.pdf%7F2-215464-0" H 10250 2750 60  0001 C CNN
+F 4 "TE" H 10450 2950 60  0001 C CNN "MFN"
+F 5 "215464-8" H 10550 3050 60  0001 C CNN "MPN"
+F 6 "http://www.te.com/global-en/product-215464-8.html" H 10350 2850 60  0001 C CNN "PurchasingLink"
+	1    10350 1550
+	1    0    0    -1  
+$EndComp
+Text Label 10600 1100 0    50   ~ 0
+12V
+Text Label 10600 1200 0    50   ~ 0
+GND
+Text Label 10600 1300 0    50   ~ 0
+CAN_P
+Text Label 10600 1400 0    50   ~ 0
+CAN_N
+Text Label 10600 1500 0    50   ~ 0
+HALL_EFFECT_+
+Text Label 10600 1600 0    50   ~ 0
+HALL_EFFECT_SENSE
+Text Label 10600 1700 0    50   ~ 0
+HALL_EFFECT_-
+Text Label 10600 1800 0    50   ~ 0
+GND
+$Comp
+L formula:MM_M_VT_08 J?
+U 1 1 5FA24F3B
+P 10350 3400
+F 0 "J?" H 10408 4097 60  0000 C CNN
+F 1 "MM_M_VT_08" H 10408 3991 60  0000 C CNN
+F 2 "footprints:micromatch_female_ra_8" H 10250 3850 60  0001 C CNN
+F 3 "https://www.te.com/commerce/DocumentDelivery/DDEController?Action=showdoc&DocId=Customer+Drawing%7F215464%7FR%7Fpdf%7FEnglish%7FENG_CD_215464_R.pdf%7F2-215464-0" H 10250 4600 60  0001 C CNN
+F 4 "TE" H 10450 4800 60  0001 C CNN "MFN"
+F 5 "215464-8" H 10550 4900 60  0001 C CNN "MPN"
+F 6 "http://www.te.com/global-en/product-215464-8.html" H 10350 4700 60  0001 C CNN "PurchasingLink"
+	1    10350 3400
+	1    0    0    -1  
+$EndComp
+Text Label 10600 2950 0    50   ~ 0
+12V
+Text Label 10600 3050 0    50   ~ 0
+GND
+Text Label 10600 3150 0    50   ~ 0
+CAN_P
+Text Label 10600 3250 0    50   ~ 0
+CAN_N
+Text Label 10600 3350 0    50   ~ 0
+LINEAR_POT_+
+Text Label 10600 3450 0    50   ~ 0
+LINEAR_POT_SENSE
+Text Label 10600 3550 0    50   ~ 0
+LINEAR_POT_-
+Text Label 10600 3650 0    50   ~ 0
+GND
+Text Notes 900  5400 0    50   ~ 0
+To Road Kill Harness\n\n
+Text Label 3650 2000 0    50   ~ 0
+HALL_EFFECT_SENSE
+Text Notes 10100 2600 0    50   ~ 0
+Suspension Travel Sensor
+Wire Notes Line
+	10400 2000 10400 2450
+Wire Notes Line
+	10400 2450 11300 2450
+Wire Notes Line
+	11300 2450 11300 2000
+Wire Notes Line
+	11300 2000 10400 2000
+Text Notes 10500 2300 0    50   ~ 0
+RC FILTER
+Text Notes 10050 800  0    50   ~ 0
+Wheel Speed Sensor
+Text Label 3650 1200 0    50   ~ 0
+STRAIN_GAUGE_MAIN
+Text Label 3650 1100 0    50   ~ 0
+LINEAR_POT_SENSE
+Wire Notes Line
+	4950 900  4950 2150
+Wire Notes Line
+	4950 2150 5300 2150
+Wire Notes Line
+	5300 2150 5300 900 
+Wire Notes Line
+	5300 900  4950 900 
+Text Notes 4950 1650 0    50   ~ 0
+DEMUX1\n\n\n
+Wire Notes Line
+	4950 2300 4950 3550
+Wire Notes Line
+	4950 3550 5300 3550
+Wire Notes Line
+	5300 3550 5300 2300
+Wire Notes Line
+	5300 2300 4950 2300
+Text Notes 4950 2950 0    50   ~ 0
+DEMUX2\n\n
+Text Label 3650 1300 0    50   ~ 0
+TO_DEMUX1A
+Text Label 3650 1400 0    50   ~ 0
+TO_DEMUX1B
+Text Label 3650 1500 0    50   ~ 0
+TO_DEMUX2A
+Text Label 3650 1600 0    50   ~ 0
+TO_DEMUX2B
+Text Label 4950 1200 2    50   ~ 0
+TO_DEMUX1A
+Text Label 4950 1350 2    50   ~ 0
+TO_DEMUX1B
+Text Label 4950 2600 2    50   ~ 0
+TO_DEMUX2A
+Text Label 4950 2750 2    50   ~ 0
+TO_DEMUX2B
+$Comp
+L formula:Ampseal_23_VT J?
+U 1 1 5FA50EC9
+P 2750 6700
+F 0 "J?" H 2708 8047 60  0000 C CNN
+F 1 "Ampseal_23_VT" H 2708 7941 60  0000 C CNN
+F 2 "footprints:Ampseal_23" H 2550 7450 60  0001 C CNN
+F 3 "http://www.te.com/commerce/DocumentDelivery/DDEController?Action=showdoc&DocId=Customer+Drawing%7F776228%7FC13%7Fpdf%7FEnglish%7FENG_CD_776228_C13.pdf%7F776228-1" H 2550 7450 60  0001 C CNN
+F 4 "TE" H 2600 8000 60  0001 C CNN "MFN"
+F 5 "776228-1" H 2700 8100 60  0001 C CNN "MPN"
+F 6 "http://www.te.com/usa-en/product-776228-1.html" H 2800 8200 60  0001 C CNN "PurchasingLink"
+	1    2750 6700
+	1    0    0    -1  
+$EndComp
+Text Notes 2600 5300 0    50   ~ 0
+To Sensing Suite\n
+Text Label 2950 7800 0    50   ~ 0
+LINEAR_POT_-
+Text Label 2950 7700 0    50   ~ 0
+GND
+Text Label 2950 7600 0    50   ~ 0
+12V
+Text Label 2950 7500 0    50   ~ 0
+CAN_N
+Text Label 2950 7400 0    50   ~ 0
+CAN_P
+Text Label 2950 7300 0    50   ~ 0
+GND
+Text Label 2950 7200 0    50   ~ 0
+12V
+Text Label 2950 7100 0    50   ~ 0
+GND
+Text Label 2950 7000 0    50   ~ 0
+12V
+Text Label 2950 6900 0    50   ~ 0
+CAN_N
+Text Label 2950 6800 0    50   ~ 0
+CAN_P
+Text Notes 3150 6700 0    50   ~ 0
+(CAN CABLE SHIELD)
+Text Label 2950 6700 0    50   ~ 0
+GND
+Text Label 2950 6600 0    50   ~ 0
+CAN_N
+Text Label 2950 6500 0    50   ~ 0
+CAN_P
+Text Label 2950 6400 0    50   ~ 0
+HALL_EFFECT_SENSE
+Text Label 2950 6300 0    50   ~ 0
+LINEAR_POT_+
+Text Label 2950 6200 0    50   ~ 0
+GND
+Text Label 2950 6100 0    50   ~ 0
+12V
+Text Label 2950 6000 0    50   ~ 0
+CAN_N
+Text Label 2950 5900 0    50   ~ 0
+CAN_P
+Text Label 2950 5800 0    50   ~ 0
+GND
+Text Label 2950 5700 0    50   ~ 0
+12V
+Text Label 2950 5600 0    50   ~ 0
+HALL_EFFECT_+
+Text Label 5300 950  0    50   ~ 0
+STRAIN_GUAGE_1_+
+Text Label 5300 1050 0    50   ~ 0
+STRAIN_GAUGE_1_-
+Text Label 5300 1150 0    50   ~ 0
+STRAIN_GUAGE_2_+
+Text Label 5300 1250 0    50   ~ 0
+STRAIN_GAUGE_2_-
+Text Label 5300 1350 0    50   ~ 0
+STRAIN_GUAGE_3_+
+Text Label 5300 1450 0    50   ~ 0
+STRAIN_GAUGE_3_-
+Text Label 5300 1550 0    50   ~ 0
+STRAIN_GUAGE_4_+
+Text Label 5300 1650 0    50   ~ 0
+STRAIN_GAUGE_4_-
+Text Label 5300 1750 0    50   ~ 0
+STRAIN_GUAGE_5_+
+Text Label 5300 1850 0    50   ~ 0
+STRAIN_GAUGE_5_-
+Text Label 5300 1950 0    50   ~ 0
+STRAIN_GUAGE_6_+
+Text Label 5300 2050 0    50   ~ 0
+STRAIN_GAUGE_6_-
+Text Label 5300 2350 0    50   ~ 0
+STRAIN_GUAGE_7_+
+Text Label 5300 2450 0    50   ~ 0
+STRAIN_GAUGE_7_-
+Text Label 5300 2550 0    50   ~ 0
+STRAIN_GUAGE_8_+
+Text Label 5300 2650 0    50   ~ 0
+STRAIN_GAUGE_8_-
+Text Label 5300 2950 0    50   ~ 0
+STRAIN_GUAGE_10_+
+Text Label 5300 3050 0    50   ~ 0
+STRAIN_GAUGE_10_-
+Text Label 5300 3150 0    50   ~ 0
+STRAIN_GUAGE_11_+
+Text Label 5300 3250 0    50   ~ 0
+STRAIN_GAUGE_11_-
+Text Label 5300 3350 0    50   ~ 0
+STRAIN_GUAGE_12_+
+Text Label 5300 3450 0    50   ~ 0
+STRAIN_GAUGE_12_-
+Text Label 5300 2750 0    50   ~ 0
+STRAIN_GUAGE_9_+
+Text Label 5300 2850 0    50   ~ 0
+STRAIN_GAUGE_9_-
+Text Notes 8500 800  2    50   ~ 0
+Suspension Strain Gauge sensors\n
 Wire Wire Line
-	15600 1900 15750 1900
-Connection ~ 15600 2200
+	11300 2250 11450 2250
 Wire Wire Line
-	15600 2200 15750 2200
+	10400 2250 10300 2250
+Text Label 10300 2250 2    50   ~ 0
+LINEAR_POT_SENSE
+Text Label 11450 2250 0    50   ~ 0
+LINEAR_POT_SENSE
+Wire Notes Line
+	6150 1950 6150 2450
+Wire Notes Line
+	6150 2450 6800 2450
+Wire Notes Line
+	6800 2450 6800 1950
+Wire Notes Line
+	6150 1950 6800 1950
+Text Notes 6200 2300 0    39   ~ 0
+DIGITAL \nPOTENTIOMETER \nor \nRESISTOR DIVIDER\nfor Strain Gauge sensors
+Text Notes 6650 1900 2    50   ~ 0
+*before or\nafter demux
+Wire Wire Line
+	6150 2200 5950 2200
+Wire Wire Line
+	6800 2200 7000 2200
 $EndSCHEMATC
