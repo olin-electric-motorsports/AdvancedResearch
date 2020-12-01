@@ -536,8 +536,8 @@ $Comp
 L formula:FT232RL U4
 U 1 1 5FA978AD
 P 15000 2500
-F 0 "U4" H 15000 3900 50  0000 C CNN
-F 1 "FT232RL" H 15000 3800 50  0000 C CNN
+F 0 "U4" H 15300 3550 50  0000 C CNN
+F 1 "FT232RL" H 15300 3450 50  0000 C CNN
 F 2 "Package_SO:SSOP-28_5.3x10.2mm_P0.65mm" H 16100 1600 50  0001 C CNN
 F 3 "https://www.ftdichip.com/Support/Documents/DataSheets/ICs/DS_FT232R.pdf" H 15000 2500 50  0001 C CNN
 F 4 "https://www.digikey.com/product-detail/en/ftdi-future-technology-devices-international-ltd/FT232RL-REEL/768-1007-1-ND/1836402" H 15000 2500 50  0001 C CNN "Purchasing Link"
@@ -601,20 +601,6 @@ Wire Wire Line
 	14900 1300 15100 1300
 Wire Wire Line
 	15100 1500 15100 1300
-Connection ~ 15100 1300
-Wire Wire Line
-	15100 1300 15400 1300
-$Comp
-L power:VCC #PWR0103
-U 1 1 5FADCCAF
-P 15400 1300
-F 0 "#PWR0103" H 15400 1150 50  0001 C CNN
-F 1 "VCC" H 15415 1473 50  0000 C CNN
-F 2 "" H 15400 1300 50  0001 C CNN
-F 3 "" H 15400 1300 50  0001 C CNN
-	1    15400 1300
-	1    0    0    -1  
-$EndComp
 Connection ~ 11150 2400
 $Comp
 L power:GND #PWR0104
@@ -667,49 +653,49 @@ Connection ~ 11700 1800
 $Comp
 L power:GND #PWR0107
 U 1 1 5FB2AA73
-P 12850 2300
-F 0 "#PWR0107" H 12850 2050 50  0001 C CNN
-F 1 "GND" H 12855 2127 50  0000 C CNN
-F 2 "" H 12850 2300 50  0001 C CNN
-F 3 "" H 12850 2300 50  0001 C CNN
-	1    12850 2300
+P 14300 1350
+F 0 "#PWR0107" H 14300 1100 50  0001 C CNN
+F 1 "GND" H 14305 1177 50  0000 C CNN
+F 2 "" H 14300 1350 50  0001 C CNN
+F 3 "" H 14300 1350 50  0001 C CNN
+	1    14300 1350
 	1    0    0    -1  
 $EndComp
-Connection ~ 12850 2300
+Connection ~ 14300 1350
 Wire Wire Line
-	12850 2300 13100 2300
+	14300 1350 14550 1350
 $Comp
 L formula:C_100nF C7
 U 1 1 5FB2B96B
-P 12550 2150
-F 0 "C7" H 12665 2196 50  0000 L CNN
-F 1 "C_100nF" H 12665 2105 50  0000 L CNN
-F 2 "footprints:C_0603_1608Metric" H 12588 2000 50  0001 C CNN
-F 3 "http://www.samsungsem.com/kr/support/product-search/mlcc/CL10A475KQ8NNNC.jsp" H 12575 2250 50  0001 C CNN
-F 4 "DK" H 12550 2150 60  0001 C CNN "MFN"
-F 5 "1276-6717-1-ND" H 12550 2150 60  0001 C CNN "MPN"
-F 6 "https://www.digikey.com/product-detail/en/samsung-electro-mechanics/CL10B104KA8WPNC/1276-6717-1-ND/5961576" H 12975 2650 60  0001 C CNN "PurchasingLink"
-	1    12550 2150
+P 14000 1200
+F 0 "C7" H 14115 1246 50  0000 L CNN
+F 1 "C_100nF" H 14115 1155 50  0000 L CNN
+F 2 "footprints:C_0603_1608Metric" H 14038 1050 50  0001 C CNN
+F 3 "http://www.samsungsem.com/kr/support/product-search/mlcc/CL10A475KQ8NNNC.jsp" H 14025 1300 50  0001 C CNN
+F 4 "DK" H 14000 1200 60  0001 C CNN "MFN"
+F 5 "1276-6717-1-ND" H 14000 1200 60  0001 C CNN "MPN"
+F 6 "https://www.digikey.com/product-detail/en/samsung-electro-mechanics/CL10B104KA8WPNC/1276-6717-1-ND/5961576" H 14425 1700 60  0001 C CNN "PurchasingLink"
+	1    14000 1200
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	12550 2000 13100 2000
+	14000 1050 14550 1050
 $Comp
 L formula:C_4.7uF C8
 U 1 1 5FB2C8CC
-P 13100 2150
-F 0 "C8" H 13215 2196 50  0000 L CNN
-F 1 "C_4.7uF" H 13215 2105 50  0000 L CNN
-F 2 "footprints:C_0603_1608Metric" H 13138 2000 50  0001 C CNN
-F 3 "http://www.samsungsem.com/kr/support/product-search/mlcc/CL10A475KQ8NNNC.jsp" H 13125 2250 50  0001 C CNN
-F 4 "DK" H 13100 2150 60  0001 C CNN "MFN"
-F 5 "1276-1045-1-ND" H 13100 2150 60  0001 C CNN "MPN"
-F 6 "https://www.digikey.com/product-detail/en/samsung-electro-mechanics/CL10A475KQ8NNNC/1276-1045-1-ND/3889131" H 13525 2650 60  0001 C CNN "PurchasingLink"
-	1    13100 2150
+P 14550 1200
+F 0 "C8" H 14700 1200 50  0000 L CNN
+F 1 "C_4.7uF" H 14600 1100 50  0000 L CNN
+F 2 "footprints:C_0603_1608Metric" H 14588 1050 50  0001 C CNN
+F 3 "http://www.samsungsem.com/kr/support/product-search/mlcc/CL10A475KQ8NNNC.jsp" H 14575 1300 50  0001 C CNN
+F 4 "DK" H 14550 1200 60  0001 C CNN "MFN"
+F 5 "1276-1045-1-ND" H 14550 1200 60  0001 C CNN "MPN"
+F 6 "https://www.digikey.com/product-detail/en/samsung-electro-mechanics/CL10A475KQ8NNNC/1276-1045-1-ND/3889131" H 14975 1700 60  0001 C CNN "PurchasingLink"
+	1    14550 1200
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	12550 2300 12850 2300
+	14000 1350 14300 1350
 $Comp
 L formula:LED_0805 D3
 U 1 1 5FB4670F
@@ -821,15 +807,15 @@ $EndComp
 $Comp
 L power:VCC #PWR020
 U 1 1 5FB37814
-P 13100 2000
-F 0 "#PWR020" H 13100 1850 50  0001 C CNN
-F 1 "VCC" H 13115 2173 50  0000 C CNN
-F 2 "" H 13100 2000 50  0001 C CNN
-F 3 "" H 13100 2000 50  0001 C CNN
-	1    13100 2000
+P 14550 1050
+F 0 "#PWR020" H 14550 900 50  0001 C CNN
+F 1 "VCC" H 14565 1223 50  0000 C CNN
+F 2 "" H 14550 1050 50  0001 C CNN
+F 3 "" H 14550 1050 50  0001 C CNN
+	1    14550 1050
 	1    0    0    -1  
 $EndComp
-Connection ~ 13100 2000
+Connection ~ 14550 1050
 $Comp
 L power:GND #PWR023
 U 1 1 5FB3808B
@@ -902,8 +888,6 @@ NoConn ~ 3800 2400
 NoConn ~ 3800 2100
 NoConn ~ 3800 2000
 NoConn ~ 3800 1700
-Text Notes 12400 2650 0    50   ~ 0
-PLACE NEAR VCC ON FTDI
 $Comp
 L formula:LED_0805 D4
 U 1 1 5FB56B11
@@ -1094,4 +1078,9 @@ Wire Wire Line
 	15850 8850 15900 8850
 Wire Wire Line
 	11200 1800 11700 1800
+Wire Wire Line
+	14550 1050 14900 1050
+Wire Wire Line
+	14900 1050 14900 1300
+Connection ~ 14900 1300
 $EndSCHEMATC
