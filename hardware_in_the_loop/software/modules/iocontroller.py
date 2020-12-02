@@ -38,8 +38,9 @@ class IOController:
             4 bytes (all big endian)
 
             Byte 0:
-                Bit 0: 1 (indicates a set request)
-                Bits 1-7: Board number of the signal we want to set
+                Bit 0: 0 (reserved bit)
+                Bit 1: 1 (indicates a set request)
+                Bits 2-7: Board number of the signal we want to get (0-63)
 
             Byte 1:
                 Bits 0-7: Pin number of the signal we want to set
@@ -53,7 +54,7 @@ class IOController:
             return
 
         # Byte 1
-        board = self.pin_info[pin]["board"] | (1 << 7)  # set the leftmost bit to 1 to designate message as setter
+        board = self.pin_info[pin]["board"] | (1 << 6)  # set the leftmost bit to 1 to designate message as setter
 
         # Byte 2
         pin_num = self.pin_info[pin]["pin"]
@@ -84,8 +85,9 @@ class IOController:
             2 bytes (all big endian):
 
             Byte 0:
-                Bit 0: 0 (indicates a get request)
-                Bits 1-7: Board number of the signal we want to get
+                Bit 0: 0 (reserved bit)
+                Bit 1: 0 (indicates a get request)
+                Bits 2-7: Board number of the signal we want to get
 
             Byte 1:
                 Bits 0-7: Pin number of the signal we want to get
@@ -212,6 +214,41 @@ class IOController:
         """
         self.log.debug(f"Sent {request}")
         self.serial.write(request)
+
+    def __enter__(self) -> None:
+        """Enter and exit functions allow signals to be set simultaneously with hardware
+
+        Send 0xFF byte to system interface
+
+        Example: When we write:
+
+            ```
+            io.set_state("STATE_1", "1")
+            io.set_state("STATE_2", "1")
+            ```
+
+        the states are set one after another. If these states are, say,
+        throttle potentiometers, the delay between these two could cause
+        problems, like an implausibility error. Now, we can use the syntax:
+
+            ```
+            with io:
+                io.set_state("STATE_1", "1")
+                io.set_state("STATE_2", "1")
+            ```
+
+        to let the hardware know we want to set these state at the same exact time, 
+        minimizing any delay introduced by the serial communication/sequential 
+        function calls.
+        """
+        self._send_request(bytes([0xFF]))
+
+    def __exit__(self) -> None:
+        """See docstring for __enter__ above
+
+        Send 0xFF byte to system interface
+        """
+        self._send_request(bytes([0xFF]))
 
     def __del__(self) -> None:
         """Destructor (called when the program ends)
