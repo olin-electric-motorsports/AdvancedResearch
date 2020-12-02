@@ -3,6 +3,8 @@ import can
 import time
 import os
 from typing import Callable, Tuple
+import cantools
+from pprint import pprint
 
 
 class CANController:
@@ -43,12 +45,22 @@ class CANController:
         )
         listener.start()
 
-    def get_states(self, path: str) -> None:
+    def get_states(self, path: str):
         """Populate each ECUs `states` dictionary, and self.read_dict
 
         Args:
             path (str): Path the the CAN spec file
         """
+        ##create database that has all the messages in the dbc file in type message
+        db_msgs = cantools.database.load_file(path)
+        ##create a list of messages we can iterate through
+        msgs = db.messages
+        ##Iterates through messages to create ECUS
+        for msg in msgs:
+            ##Do the thing
+            source = msg.senders 
+
+
         throttle_states = {
             "THROTTLE_255": 0,
         }
