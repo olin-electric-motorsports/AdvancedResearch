@@ -10,7 +10,7 @@ class CANController:
 
     Used to read CAN messages from roadkill harness.
 
-    https://docs.olinelectricmotorsports.com/display/AE/CAN+Controller
+    `Confluence <https://docs.olinelectricmotorsports.com/display/AE/CAN+Controller>`_
     """
 
     def __init__(self, ecus: dict, can_spec_path: str, real_can: bool = True):

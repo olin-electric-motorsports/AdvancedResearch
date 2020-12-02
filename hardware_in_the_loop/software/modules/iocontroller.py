@@ -1,7 +1,7 @@
 # Imports
 import serial
 import logging
-from typing import Tuple
+from typing import Tuple, Union
 
 
 class IOController:
@@ -9,7 +9,7 @@ class IOController:
 
     Used to set analog and digital pins for simulation.
 
-    https://docs.olinelectricmotorsports.com/display/AE/IO+Controller
+    `Confluence <https://docs.olinelectricmotorsports.com/display/AE/IO+Controller>`_
     """
 
     def __init__(self, pin_info_path: str, serial_path: str):
@@ -29,24 +29,27 @@ class IOController:
         """Set the value of an IO pin in the HitL system
 
         Args:
-            pin (str): The name of the pin to update (e.x. THROTTLE_PEDAL_1)
+            pin (`str`): The name of the pin to update (e.x. THROTTLE_PEDAL_1)
 
-            value (int or float): The value to set the pin to (e.x. 2.5)
+            value (`int` or `float`): The value to set the pin to (e.x. 2.5)
                 - 0 or 1 for digital, volts for analog
+
+        Returns:
+            None
 
         Message format:
             4 bytes (all big endian)
 
             Byte 0:
-                Bit 0: 0 (reserved bit)
-                Bit 1: 1 (indicates a set request)
-                Bits 2-7: Board number of the signal we want to get (0-63)
+                * Bit 0: 0 (reserved bit)
+                * Bit 1: 1 (indicates a set request)
+                * Bits 2-7: Board number of the signal we want to get (0-63)
 
             Byte 1:
-                Bits 0-7: Pin number of the signal we want to set
+                * Bits 0-7: Pin number of the signal we want to set
 
             Bytes 2-3:
-                Bits 0-15: 16 bit precision value to set, with 0% = 0x0000 and  100% = 0xFFFF
+                * Bits 0-15: 16 bit precision value to set, with 0% = 0x0000 and  100% = 0xFFFF
         """
         # If no hardware, log an error
         if not self.serial:
@@ -75,25 +78,25 @@ class IOController:
         self._send_request(request)
         self.log.info(f"Set state of {pin} to {value}")
 
-    def get_state(self, pin: str):
+    def get_state(self, pin: str) -> Union[int, float]:
         """Request a hardware state from the HitL system.
 
         Args:
-            pin (str): The name of the state we want to get (e.x. "THROTTLE_POT_1", not 11)
+            pin (`str`): The name of the state we want to get (e.x. "THROTTLE_POT_1", NOT 11)
+
+        Returns:
+            `int` or `float`: The value of the requested state
 
         Message format:
             2 bytes (all big endian):
 
             Byte 0:
-                Bit 0: 0 (reserved bit)
-                Bit 1: 0 (indicates a get request)
-                Bits 2-7: Board number of the signal we want to get
+                * Bit 0: 0 (reserved bit)
+                * Bit 1: 0 (indicates a get request)
+                * Bits 2-7: Board number of the signal we want to get (0-63)
 
             Byte 1:
-                Bits 0-7: Pin number of the signal we want to get
-
-        Returns:
-            int or float: The value of the requested state
+                * Bits 0-7: Pin number of the signal we want to get
         """
         # If no hardware, log an error
         if not self.serial:
@@ -127,7 +130,7 @@ class IOController:
         """Read in the pin address information, given a path to a .csv file
 
         Args:
-            path: The path to the .csv file containing pin information (see
+            path (str): The path to the .csv file containing pin information (see software readme or 
             https://docs.google.com/spreadsheets/d/15hpe0DXfQto9N2hawawvfeHTE1sq-UT7sgDl__hCTZ4/edit?usp=sharing
             for details)
 

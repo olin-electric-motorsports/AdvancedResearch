@@ -14,7 +14,7 @@ from modules.cancontroller import CANController
 class RoadkillHarness:
     """Class to represent the entire tester
 
-    https://docs.olinelectricmotorsports.com/display/AE/Roadkill+Harness
+    `Confluence <https://docs.olinelectricmotorsports.com/display/AE/Roadkill+Harness>`_
     """
 
     def __init__(self, pin_config: Optional[str] = None):

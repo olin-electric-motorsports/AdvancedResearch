@@ -1,7 +1,7 @@
 class ECU:
     """Class to store the state of each ECU
 
-    https://docs.olinelectricmotorsports.com/display/AE/ECUs
+    `Confluence <https://docs.olinelectricmotorsports.com/display/AE/ECUs>_ 
     """
 
     def __init__(self, name: str, io):
