@@ -213,42 +213,10 @@ Wire Notes Line
 	5650 800  5650 2400
 Wire Notes Line
 	3000 800  3000 2400
-$Comp
-L formula:MicroFit_RA_R_2 J1
-U 1 1 5FC7105C
-P 6400 1150
-F 0 "J1" H 6458 1425 50  0000 C CNN
-F 1 "MicroFit_RA_R_2" H 6458 1334 50  0000 C CNN
-F 2 "footprints:MicroFit_RA_2" H 6350 1350 50  0001 C CNN
-F 3 "https://www.molex.com/pdm_docs/sd/436500201_sd.pdf" H 6350 1350 50  0001 C CNN
-F 4 "DK" H 6500 1400 50  0001 C CNN "MFN"
-F 5 "WM1865-ND" H 6600 1500 50  0001 C CNN "MPN"
-F 6 "https://www.digikey.com/product-detail/en/molex/0436500201/WM1865-ND/268994" H 6400 1300 50  0001 C CNN "PurchasingLink"
-	1    6400 1150
-	1    0    0    -1  
-$EndComp
-Text HLabel 6650 1100 2    47   Input ~ 0
-ACH+
-Text HLabel 6650 1200 2    47   Output ~ 0
-ACH-
 Wire Wire Line
 	800  1550 1300 1550
 Wire Notes Line
 	600  800  2650 800 
 Wire Notes Line
 	600  2400 2650 2400
-$Comp
-L formula:R_100K R2
-U 1 1 5FC80149
-P 2050 1900
-F 0 "R2" H 2120 1946 50  0000 L CNN
-F 1 "R_100K" H 2120 1855 50  0000 L CNN
-F 2 "footprints:R_0805_OEM" H 1980 1900 50  0001 C CNN
-F 3 "https://industrial.panasonic.com/cdbs/www-data/pdf/RDA0000/AOA0000C304.pdf" H 2130 1900 50  0001 C CNN
-F 4 "DK" H 2050 1900 60  0001 C CNN "MFN"
-F 5 "P100KCCT-ND" H 2050 1900 60  0001 C CNN "MPN"
-F 6 "https://www.digikey.com/product-detail/en/panasonic-electronic-components/ERJ-6ENF1003V/P100KCCT-ND/119551" H 2530 2300 60  0001 C CNN "PurchasingLink"
-	1    2050 1900
-	1    0    0    -1  
-$EndComp
 $EndSCHEMATC
