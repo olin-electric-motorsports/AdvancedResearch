@@ -16,6 +16,9 @@ __pycache__/
 fp-info-cache
 *.DS_Store
 
+# Python envrionment files
+*.python-version
+
 # Netlist files (exported from Eeschema)
 *.net
 
