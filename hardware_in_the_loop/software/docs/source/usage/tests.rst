@@ -8,15 +8,9 @@ While the shell is certainly fun, this system is really built to run tests. We u
 
    $ pytest
 
-This will run every single test in the ``tests`` directory, which might take a while. To run only a subset of those tests you can run the same command from a folder. For example, to run only unit tests, run ``$ pytest unit`` from the ``tests`` directory, or ``$ pytest`` from the ``tests/unit`` directory. 
+This will run every single test in the ``tests`` directory, which might take a while. Pytest has number of ways to specify which tests to run; most commonly, we use pytest markers to specify this. For example, to run only unit tests that don't require any hardware setup, run::
 
-To run an even smaller batch of tests, you can specify a file name, like ``pytest unit/test_io.py``. This will run only the tests in that file.
-
-Finally, to run a single test, you can use::
-
-   $ pytest unit/test_io.py::test_read_io_file
-
-Currently, none of our tests use pytest markers, but we plan on updating that in the future.
+   $ pytest -m "unit and soft"
 
 To generate a ``.html`` test report, use the ``--report=path`` option like this::
 
