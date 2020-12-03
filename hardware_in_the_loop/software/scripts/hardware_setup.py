@@ -30,7 +30,7 @@ def create_udev_rule():
 
         data = data.replace("VENDOR", idVendor)
         data = data.replace("PRODUCT", idProduct)
-        with open("/etc/udev/rules/99-arduino.rules", "w") as f:
+        with open("/etc/udev/rules.d/99-arduino.rules", "w") as f:
             f.write(data)
 
         print("udev rule created.\n")
