@@ -60,17 +60,15 @@ F 3 "" H 800 1550 50  0001 C CNN
 $EndComp
 Wire Wire Line
 	1900 1550 2050 1550
-Wire Wire Line
-	2050 1550 2050 1750
 $Comp
 L power:GND #PWR04
 U 1 1 5FC34A9E
-P 2050 2050
-F 0 "#PWR04" H 2050 1800 50  0001 C CNN
-F 1 "GND" H 2055 1877 50  0000 C CNN
-F 2 "" H 2050 2050 50  0001 C CNN
-F 3 "" H 2050 2050 50  0001 C CNN
-	1    2050 2050
+P 2050 2500
+F 0 "#PWR04" H 2050 2250 50  0001 C CNN
+F 1 "GND" H 2055 2327 50  0000 C CNN
+F 2 "" H 2050 2500 50  0001 C CNN
+F 3 "" H 2050 2500 50  0001 C CNN
+	1    2050 2500
 	1    0    0    -1  
 $EndComp
 Wire Notes Line
@@ -82,59 +80,59 @@ Discharge Relay
 $Comp
 L power:+5V #PWR01
 U 1 1 5FC37E55
-P 1050 2800
-F 0 "#PWR01" H 1050 2650 50  0001 C CNN
-F 1 "+5V" H 1065 2973 50  0000 C CNN
-F 2 "" H 1050 2800 50  0001 C CNN
-F 3 "" H 1050 2800 50  0001 C CNN
-	1    1050 2800
+P 900 7250
+F 0 "#PWR01" H 900 7100 50  0001 C CNN
+F 1 "+5V" H 915 7423 50  0000 C CNN
+F 2 "" H 900 7250 50  0001 C CNN
+F 3 "" H 900 7250 50  0001 C CNN
+	1    900  7250
 	1    0    0    -1  
 $EndComp
 $Comp
 L power:PWR_FLAG #FLG01
 U 1 1 5FC38367
-P 1050 2800
-F 0 "#FLG01" H 1050 2875 50  0001 C CNN
-F 1 "PWR_FLAG" H 1050 2973 50  0000 C CNN
-F 2 "" H 1050 2800 50  0001 C CNN
-F 3 "~" H 1050 2800 50  0001 C CNN
-	1    1050 2800
+P 900 7250
+F 0 "#FLG01" H 900 7325 50  0001 C CNN
+F 1 "PWR_FLAG" H 900 7423 50  0000 C CNN
+F 2 "" H 900 7250 50  0001 C CNN
+F 3 "~" H 900 7250 50  0001 C CNN
+	1    900  7250
 	-1   0    0    1   
 $EndComp
 $Comp
 L power:PWR_FLAG #FLG02
 U 1 1 5FC38703
-P 1550 2800
-F 0 "#FLG02" H 1550 2875 50  0001 C CNN
-F 1 "PWR_FLAG" H 1550 2973 50  0000 C CNN
-F 2 "" H 1550 2800 50  0001 C CNN
-F 3 "~" H 1550 2800 50  0001 C CNN
-	1    1550 2800
+P 1400 7250
+F 0 "#FLG02" H 1400 7325 50  0001 C CNN
+F 1 "PWR_FLAG" H 1400 7423 50  0000 C CNN
+F 2 "" H 1400 7250 50  0001 C CNN
+F 3 "~" H 1400 7250 50  0001 C CNN
+	1    1400 7250
 	-1   0    0    1   
 $EndComp
 $Comp
 L power:GND #PWR02
 U 1 1 5FC38C25
-P 1550 2800
-F 0 "#PWR02" H 1550 2550 50  0001 C CNN
-F 1 "GND" H 1550 2650 50  0000 C CNN
-F 2 "" H 1550 2800 50  0001 C CNN
-F 3 "" H 1550 2800 50  0001 C CNN
-	1    1550 2800
+P 1400 7250
+F 0 "#PWR02" H 1400 7000 50  0001 C CNN
+F 1 "GND" H 1400 7100 50  0000 C CNN
+F 2 "" H 1400 7250 50  0001 C CNN
+F 3 "" H 1400 7250 50  0001 C CNN
+	1    1400 7250
 	-1   0    0    1   
 $EndComp
 $Comp
 L formula:SSM3K333R Q2
 U 1 1 5FC3EB17
-P 4950 1950
-F 0 "Q2" H 5156 1996 50  0000 L CNN
-F 1 "SSM3K333R" H 5156 1905 50  0000 L CNN
-F 2 "footprints:SOT-23F" H 5150 1875 50  0001 L CIN
-F 3 "https://drive.google.com/drive/folders/0B-V-iZf33Y4GNzhDQTJZanJRbVk" H 5150 2025 50  0001 L CNN
-F 4 "DK" H 5450 2325 60  0001 C CNN "MFN"
-F 5 "SSM3K333RLFCT-ND" H 5350 2225 60  0001 C CNN "MPN"
-F 6 "https://www.digikey.com/product-detail/en/toshiba-semiconductor-and-storage/SSM3K333RLF/SSM3K333RLFCT-ND/3522391" H 5250 2125 60  0001 C CNN "PurchasingLink"
-	1    4950 1950
+P 4950 2250
+F 0 "Q2" H 5156 2296 50  0000 L CNN
+F 1 "SSM3K333R" H 5156 2205 50  0000 L CNN
+F 2 "footprints:SOT-23F" H 5150 2175 50  0001 L CIN
+F 3 "https://drive.google.com/drive/folders/0B-V-iZf33Y4GNzhDQTJZanJRbVk" H 5150 2325 50  0001 L CNN
+F 4 "DK" H 5450 2625 60  0001 C CNN "MFN"
+F 5 "SSM3K333RLFCT-ND" H 5350 2525 60  0001 C CNN "MPN"
+F 6 "https://www.digikey.com/product-detail/en/toshiba-semiconductor-and-storage/SSM3K333RLF/SSM3K333RLFCT-ND/3522391" H 5250 2425 60  0001 C CNN "PurchasingLink"
+	1    4950 2250
 	1    0    0    -1  
 $EndComp
 $Comp
@@ -151,7 +149,7 @@ F 6 "https://www.digikey.com/product-detail/en/omron-electronics-inc-emc-div/B3U
 	1    3700 1550
 	1    0    0    -1  
 $EndComp
-Text HLabel 4750 1950 0    50   Input ~ 0
+Text HLabel 4500 2250 0    50   Input ~ 0
 OutEnable
 $Comp
 L formula:LI12-1A85(NO) K2
@@ -172,18 +170,16 @@ HVOut
 Text HLabel 4300 1250 0    50   Input ~ 0
 HV+
 Wire Wire Line
-	5050 1750 5050 1550
-Wire Wire Line
 	5050 1550 4900 1550
 $Comp
 L power:GND #PWR06
 U 1 1 5FC4F4BB
-P 5050 2150
-F 0 "#PWR06" H 5050 1900 50  0001 C CNN
-F 1 "GND" H 5055 1977 50  0000 C CNN
-F 2 "" H 5050 2150 50  0001 C CNN
-F 3 "" H 5050 2150 50  0001 C CNN
-	1    5050 2150
+P 5050 2550
+F 0 "#PWR06" H 5050 2300 50  0001 C CNN
+F 1 "GND" H 5055 2377 50  0000 C CNN
+F 2 "" H 5050 2550 50  0001 C CNN
+F 3 "" H 5050 2550 50  0001 C CNN
+	1    5050 2550
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
@@ -205,8 +201,6 @@ Text Notes 3550 1700 0    24   ~ 0
 to become a connector\n for an external power \non switch
 Wire Notes Line
 	3000 800  5650 800 
-Wire Notes Line
-	5650 2400 3000 2400
 Text Notes 3050 750  0    50   ~ 0
 Output Relay
 Wire Notes Line
@@ -217,6 +211,146 @@ Wire Wire Line
 	800  1550 1300 1550
 Wire Notes Line
 	600  800  2650 800 
-Wire Notes Line
-	600  2400 2650 2400
+$Comp
+L formula:Diode_600V_1A_SM D??
+U 1 1 5FC85209
+P 1750 1900
+F 0 "D??" H 1750 1800 50  0000 C CNN
+F 1 "Diode_600V_1A_SM" H 1850 2000 50  0000 C CNN
+F 2 "footprints:Diode_600V_1A_SM" H 1700 2050 50  0001 C CNN
+F 3 "https://www.st.com/content/ccc/resource/technical/document/datasheet/c7/d5/fe/c4/56/21/41/02/CD00005135.pdf/files/CD00005135.pdf/jcr:content/translations/en.CD00005135.pdf" H 1700 2050 50  0001 C CNN
+F 4 "https://www.digikey.com/product-detail/en/stmicroelectronics/STTH1R06A/497-3765-1-ND/691935" H 1750 2100 50  0001 C CNN "Purchasing Link"
+	1    1750 1900
+	-1   0    0    1   
+$EndComp
+$Comp
+L formula:D_Zener_18V D?
+U 1 1 5FC870AF
+P 1000 1900
+F 0 "D?" H 1000 1800 50  0000 C CNN
+F 1 "D_Zener_18V" H 1000 2000 50  0000 C CNN
+F 2 "footprints:DO-214AA" H 900 1900 50  0001 C CNN
+F 3 "http://www.mccsemi.com/up_pdf/SMBJ5338B-SMBJ5388B(SMB).pdf" H 1000 2000 50  0001 C CNN
+F 4 "DK" H 1200 2200 60  0001 C CNN "MFN"
+F 5 "SMBJ5355B-TPMSCT-ND" H 1100 2100 60  0001 C CNN "MPN"
+F 6 "https://www.digikey.com/products/en?keywords=SMBJ5355B-TPMSCT-ND" H 1400 2400 60  0001 C CNN "PurchasingLink"
+	1    1000 1900
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	1900 1900 2050 1900
+Wire Wire Line
+	2050 1550 2050 1900
+Wire Wire Line
+	800  1900 800  1550
+Connection ~ 800  1550
+$Comp
+L formula:SSM3K333R Q?
+U 1 1 5FC8A045
+P 1950 2200
+F 0 "Q?" H 2156 2246 50  0000 L CNN
+F 1 "SSM3K333R" H 2156 2155 50  0000 L CNN
+F 2 "footprints:SOT-23F" H 2150 2125 50  0001 L CIN
+F 3 "https://drive.google.com/drive/folders/0B-V-iZf33Y4GNzhDQTJZanJRbVk" H 2150 2275 50  0001 L CNN
+F 4 "DK" H 2450 2575 60  0001 C CNN "MFN"
+F 5 "SSM3K333RLFCT-ND" H 2350 2475 60  0001 C CNN "MPN"
+F 6 "https://www.digikey.com/product-detail/en/toshiba-semiconductor-and-storage/SSM3K333RLF/SSM3K333RLFCT-ND/3522391" H 2250 2375 60  0001 C CNN "PurchasingLink"
+	1    1950 2200
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4500 2250 4650 2250
+$Comp
+L formula:R_100K R?
+U 1 1 5FC905D7
+P 4650 2400
+F 0 "R?" H 4720 2446 50  0000 L CNN
+F 1 "R_100K" H 4720 2355 50  0000 L CNN
+F 2 "footprints:R_0805_OEM" H 4580 2400 50  0001 C CNN
+F 3 "https://industrial.panasonic.com/cdbs/www-data/pdf/RDA0000/AOA0000C304.pdf" H 4730 2400 50  0001 C CNN
+F 4 "DK" H 4650 2400 60  0001 C CNN "MFN"
+F 5 "P100KCCT-ND" H 4650 2400 60  0001 C CNN "MPN"
+F 6 "https://www.digikey.com/product-detail/en/panasonic-electronic-components/ERJ-6ENF1003V/P100KCCT-ND/119551" H 5130 2800 60  0001 C CNN "PurchasingLink"
+	1    4650 2400
+	1    0    0    -1  
+$EndComp
+Connection ~ 4650 2250
+Wire Wire Line
+	4650 2250 4750 2250
+Wire Wire Line
+	4650 2550 5050 2550
+Wire Wire Line
+	5050 2450 5050 2550
+Connection ~ 5050 2550
+$Comp
+L formula:R_100K R?
+U 1 1 5FC97986
+P 1650 2350
+F 0 "R?" H 1720 2396 50  0000 L CNN
+F 1 "R_100K" H 1720 2305 50  0000 L CNN
+F 2 "footprints:R_0805_OEM" H 1580 2350 50  0001 C CNN
+F 3 "https://industrial.panasonic.com/cdbs/www-data/pdf/RDA0000/AOA0000C304.pdf" H 1730 2350 50  0001 C CNN
+F 4 "DK" H 1650 2350 60  0001 C CNN "MFN"
+F 5 "P100KCCT-ND" H 1650 2350 60  0001 C CNN "MPN"
+F 6 "https://www.digikey.com/product-detail/en/panasonic-electronic-components/ERJ-6ENF1003V/P100KCCT-ND/119551" H 2130 2750 60  0001 C CNN "PurchasingLink"
+	1    1650 2350
+	1    0    0    -1  
+$EndComp
+Text HLabel 1550 2200 0    50   Input ~ 0
+Discharge
+Wire Wire Line
+	1650 2200 1750 2200
+Wire Wire Line
+	1650 2500 2050 2500
+Wire Wire Line
+	2050 2400 2050 2500
+Connection ~ 2050 2500
+Wire Wire Line
+	850  1900 800  1900
+Wire Wire Line
+	1150 1900 1600 1900
+Wire Wire Line
+	2050 1900 2050 2000
+Connection ~ 2050 1900
+$Comp
+L formula:D_Zener_18V D?
+U 1 1 5FCA7EE2
+P 4050 1900
+F 0 "D?" H 4050 1800 50  0000 C CNN
+F 1 "D_Zener_18V" H 4050 2000 50  0000 C CNN
+F 2 "footprints:DO-214AA" H 3950 1900 50  0001 C CNN
+F 3 "http://www.mccsemi.com/up_pdf/SMBJ5338B-SMBJ5388B(SMB).pdf" H 4050 2000 50  0001 C CNN
+F 4 "DK" H 4250 2200 60  0001 C CNN "MFN"
+F 5 "SMBJ5355B-TPMSCT-ND" H 4150 2100 60  0001 C CNN "MPN"
+F 6 "https://www.digikey.com/products/en?keywords=SMBJ5355B-TPMSCT-ND" H 4450 2400 60  0001 C CNN "PurchasingLink"
+	1    4050 1900
+	-1   0    0    1   
+$EndComp
+$Comp
+L formula:Diode_600V_1A_SM D?
+U 1 1 5FCADFFB
+P 4800 1900
+F 0 "D?" H 4800 1800 50  0000 C CNN
+F 1 "Diode_600V_1A_SM" H 4900 2000 50  0000 C CNN
+F 2 "footprints:Diode_600V_1A_SM" H 4750 2050 50  0001 C CNN
+F 3 "https://www.st.com/content/ccc/resource/technical/document/datasheet/c7/d5/fe/c4/56/21/41/02/CD00005135.pdf/files/CD00005135.pdf/jcr:content/translations/en.CD00005135.pdf" H 4750 2050 50  0001 C CNN
+F 4 "https://www.digikey.com/product-detail/en/stmicroelectronics/STTH1R06A/497-3765-1-ND/691935" H 4800 2100 50  0001 C CNN "Purchasing Link"
+	1    4800 1900
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	4200 1900 4650 1900
+Wire Wire Line
+	5050 1550 5050 1900
+Wire Wire Line
+	4950 1900 5050 1900
+Connection ~ 5050 1900
+Wire Wire Line
+	5050 1900 5050 2050
+Wire Wire Line
+	3900 1900 3900 1550
+Connection ~ 3900 1550
+Wire Wire Line
+	1650 2200 1550 2200
+Connection ~ 1650 2200
 $EndSCHEMATC
