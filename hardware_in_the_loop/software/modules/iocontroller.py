@@ -32,7 +32,7 @@ class IOController:
             pin (`str`): The name of the pin to update (e.x. THROTTLE_PEDAL_1)
 
             value (`int` or `float`): The value to set the pin to (e.x. 2.5)
-                - 0 or 1 for digital, volts for analog
+            0 or 1 for digital, volts for analog
 
         Returns:
             None
@@ -130,8 +130,10 @@ class IOController:
         """Read in the pin address information, given a path to a .csv file
 
         Args:
-            path (str): The path to the .csv file containing pin information (see software readme or 
-            https://docs.google.com/spreadsheets/d/15hpe0DXfQto9N2hawawvfeHTE1sq-UT7sgDl__hCTZ4/edit?usp=sharing
+            path (str): The path to the .csv file containing pin information (see 
+            `software readme <https://github.com/olin-electric-motorsports/AdvancedResearch/tree/main/hardware_in_the_loop/software>`_ 
+            or 
+            `google docs <https://docs.google.com/spreadsheets/d/15hpe0DXfQto9N2hawawvfeHTE1sq-UT7sgDl__hCTZ4/edit?usp=sharing>`_ 
             for details)
 
         Returns:
