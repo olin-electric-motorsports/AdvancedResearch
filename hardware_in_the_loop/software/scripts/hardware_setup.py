@@ -47,8 +47,8 @@ def install_kernel_modules():
     """
 
     print("Installing kernel modules...")
-    run("sudo modprobe vcan")  # for testing
-    run("sudo modprobe peak_usb")
+    os.system("sudo modprobe vcan")  # for testing
+    os.system("sudo modprobe peak_usb")
     # run("sudo modprobe peak_pci") not sure if necessary
     # run("sudo modprobe can_raw") not sure if necessary
     print("Kernel modules installed.\n")
