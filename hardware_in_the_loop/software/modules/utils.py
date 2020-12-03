@@ -45,7 +45,7 @@ def find_arduino() -> Tuple[Optional[str], Optional[str]]:
     devices = usb.core.find(find_all=True)
     # loop through devices, printing vendor and product ids in decimal and hex
     for device in devices:
-        if "Arduino" in device.manufacturer:
+        if device.manufacturer and "Arduino" in device.manufacturer:
             return (
                 pad_with_zeros(hex(device.idVendor).strip("0x"), 4),
                 pad_with_zeros(hex(device.idProduct).strip("0x"), 4),
