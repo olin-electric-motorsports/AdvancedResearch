@@ -14,7 +14,16 @@ artifacts_path = os.path.join(root_path, "artifacts")
 
 
 def get_logging_config() -> None:
-    """Get the logging config options from config.ini, and apply them"""
+    """Get the logging config options from config.ini, and apply them
+    
+    Look for ``artifacts/config.ini`` and check the logging section for config options. If they are found, apply them.
+    If interpolation is required, interpolate. For example, if the line::
+        
+        log_path=$LOGS/$DATETIME.log
+        
+    is found, replace ``$LOGS`` and ``$DATETIME`` with the absolute path to ``artifacts/logs`` and the current datetime,
+    respectively. The datetime format used is ``%Y_%m_%d_%H_%M_%S``
+    """
     # Read config
     config = configparser.ConfigParser(interpolation=None)
     config.read(os.path.join(artifacts_path, "config.ini"))
@@ -36,10 +45,10 @@ def get_logging_config() -> None:
 
 
 def find_arduino() -> Tuple[Optional[str], Optional[str]]:
-    """Use pyusb to find an arduino, if it is plugged in.
+    """Use ``pyusb`` to find an arduino, if it is plugged in.
 
-    Returns:
-       tuple: (idProduct, idVendor)
+    :rtype: Tuple[Optional[str], Optional[str]]
+    :returns: (idProduct, idVendor). If no arduino found, return ``(None, None)``
     """
     # find USB devices
     devices = usb.core.find(find_all=True)
@@ -57,12 +66,17 @@ def find_arduino() -> Tuple[Optional[str], Optional[str]]:
 def pad_with_zeros(s: str, length: int) -> str:
     """Given a string, add 0s to the front until it reaches the specified length
 
-    Args:
-        s (str): The input string
-        length (int): The desired length
+    :param str s: The input string
+    :param int length: The desired length
 
-    Returns:
-        str: a 0-padded string
+    :rtype: str
+    :returns: a 0-padded string
+
+    Example::
+
+        >>> utils.pad_with_zeros("45", 4)
+        0045
+    
     """
     out = s
     while len(out) < length:

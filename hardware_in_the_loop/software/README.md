@@ -68,7 +68,7 @@ DISCLAIMER: This process requires root permissions to edit some files.
 
     `$ cd scripts && sudo python hardware_setup.py`
 
-    This script creates a udev rule which generates a permanent symbolic link to your arduino at `/dev/arduino`, so we never need to guess where to find it. The software relies on these symbolic links, so we will need them to work to interact with hardware.
+    This script creates a udev rule which generates a permanent symbolic link to your arduino at `/dev/arduino`, so we never need to guess where to find it. The software defaults to these symbolic links if they are not specified in `config.ini`.
 
 8. Restart your computer.
 
@@ -81,8 +81,12 @@ DISCLAIMER: This process requires root permissions to edit some files.
     but I generally recommend restarting just to be sure.
 
 Common issues:
-* Wrong/mismatched python versions
-* Missing hardware permissions
+* **Wrong/mismatched python versions**
+    
+    If you're having trouble using pip or python (especially when running with `sudo`), make sure you are using the right python version with `$ which python` or `$ which python3`. When I was setting this up, I noticed I was using the expected python interpreter when I called `python3` or `pip3`, but as soon as I ran `sudo python3` or `sudo pip3`, the python version was different. If this is confusing and you don't know how to resolve it, please just follow the virtual environment tutorial I linked above to setup python >=3.7 on your machine.
+* **Missing hardware permissions**
+
+    If the `hardware_setup.py` script is returning a "`no langid`" error or similar, it is probably because your user doesn't have permission to get certain information from the USB device. Try running this command with `sudo` (and, as noted above, make sure you are using the expected python version).
 
 ## Usage
 
@@ -151,7 +155,7 @@ def test_throttle(harness):
     assert 100 < torque < 150
 ```
 
-You might notice that this test requires a parameter, `harness`. We have already created a pytest fixture `harness`, and pytest knows to automatically deliver a harness to every test that requires one. To learn more about pytest fixtures, read the [pytest docs](https://docs.pytest.org/en/stable/fixture.html#fixture)
+You might notice that this test requires a parameter, `harness`. We have already created a pytest fixture `harness`, and pytest knows to automatically deliver a harness to every test that requires one; you don't need to do anything! To learn more about pytest fixtures, read the [pytest docs](https://docs.pytest.org/en/stable/fixture.html#fixture)
 
 If this doesn't make sense, a good way to start is always to copy and paste some other test (probably not a unit test), and edit from there. If you still have questions, please feel free to reach out to awenstrup@olin.edu or anyone else on the HITL subteam.
 
@@ -170,6 +174,24 @@ You'll see that `artifacts/pin_info.csv` has 9 columns. The `IOController` pytho
 * **Type:** The supported signals (right now) are analog and digital. Analog signals represent voltages; some of our expansion boards have DACs (digital to analog converters) to output these voltages and ADCs (analog to digital converters) to read them in. Digital signals are "slow", in that you can set a pin to be high or low, but we don't currently support digital communication protocols like SPI, I2C, or PWM.
 
 * **Min/Max:** These two values represent the minimum and maximum values for each pin. For digital signals, we conventionally use 0 and 1 (rather than 0 and the nominal voltage of the system), but it doesn't really matter. For analog values, min and max are much more important. _Make sure these represent the low and high rails of the DAC or ADC connected to the pin._
+
+### Generating Documentation
+
+If this wasn't enough for you, or you also want to read the python documentation, you can do that! You will need to do a few things:
+
+1. Navigate to the docs directory
+
+    `$ cd docs`
+
+2. Install sphinx and the extensions we use
+
+    `$ pip install sphinx $$ pip install sphinx_rtd_theme`
+
+3. Build the documentation!
+
+    `$ make html`
+
+The documentation should appear in the `docs/build/html` directory. Open `index.html` in chrome (or the browser of your choice), and you should be good to go!
 
 ## Resources
 

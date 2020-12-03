@@ -7,7 +7,9 @@ from typing import Tuple, Union
 class IOController:
     """High level python object to interface with hardware.
 
-    Used to set analog and digital pins for simulation.
+    The ``IOController`` is used to set analog and digital pins for simulation. It
+    is configured using a ``.csv`` file, documented below. It allows a user to interact
+    with our custom hardware by getting and setting digital and analog states.
 
     `Confluence <https://docs.olinelectricmotorsports.com/display/AE/IO+Controller>`_
     """
@@ -16,7 +18,7 @@ class IOController:
         # Create logger (all config should already be set by RoadkillHarness)
         self.log = logging.getLogger(name=__name__)
 
-        self.pin_info = self.read_pin_info(path=pin_info_path)
+        self.pin_info = self._read_pin_info(path=pin_info_path)
         try:
             self.serial = serial.Serial(port=serial_path, baudrate=115200, timeout=5)
         except serial.serialutil.SerialException as e:
@@ -28,14 +30,11 @@ class IOController:
     def set_state(self, pin: str, value) -> None:
         """Set the value of an IO pin in the HitL system
 
-        Args:
-            pin (`str`): The name of the pin to update (e.x. THROTTLE_PEDAL_1)
+        :param str pin: The name of the pin to update (e.x. THROTTLE_PEDAL_1)
+        :param Union[int,float] value: The value to set the pin to (e.x. 2.5).
+            Use 0 or 1 for digital, floating point voltage number for analog
 
-            value (`int` or `float`): The value to set the pin to (e.x. 2.5)
-            0 or 1 for digital, volts for analog
-
-        Returns:
-            None
+        :returns: None
 
         Message format:
             4 bytes (all big endian)
@@ -81,11 +80,10 @@ class IOController:
     def get_state(self, pin: str) -> Union[int, float]:
         """Request a hardware state from the HitL system.
 
-        Args:
-            pin (`str`): The name of the state we want to get (e.x. "THROTTLE_POT_1", NOT 11)
+        :param str pin: The name of the state we want to get (e.x. "THROTTLE_POT_1", NOT 11)
 
-        Returns:
-            `int` or `float`: The value of the requested state
+        :rtype:  Union[int, float]
+        :returns: The value of the requested state. If the signal is analog, returns a ``float``, otherwise an ``int``.
 
         Message format:
             2 bytes (all big endian):
@@ -126,7 +124,7 @@ class IOController:
         self.log.info(f"Got state of {pin}: {out}")
         return out
 
-    def read_pin_info(self, path: str) -> dict:
+    def _read_pin_info(self, path: str) -> dict:
         """Read in the pin address information, given a path to a .csv file
 
         Args:

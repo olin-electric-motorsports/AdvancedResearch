@@ -31,5 +31,8 @@ fp-info-cache
 **/tests/assets/
 report.html
 
+# Documentation
+**/docs/build/
+
 # Logs
 *.log

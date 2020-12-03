@@ -33,7 +33,7 @@ class RoadkillHarness:
 
         self.io = IOController(
             pin_info_path=os.path.join(pin_config),
-            serial_path="/dev/arduino",
+            serial_path=config.get("PATHS", "serial_path", fallback="/dev/arduino"),
         )
 
         # Create all ECUs
