@@ -1,28 +1,5 @@
-.. hardware_in_the_loop documentation master file, created by
-   sphinx-quickstart on Wed Dec  2 15:30:53 2020.
-   You can adapt this file completely to your liking, but it should at least
-   contain the root `toctree` directive.
-
-Welcome to hardware_in_the_loop's documentation!
-================================================
-
-.. toctree::
-   :maxdepth: 1
-   :caption: Contents:
-
-   setup
-   usage/shell
-   usage/tests
-   modules/roadkillharness
-   modules/cancontroller
-   modules/iocontroller
-   modules/ecu
-   modules/utils
-
-Getting started
-===============
 Setup
------
+=====
 
 DISCLAIMER: This process requires root permissions to edit some files.
 
@@ -82,10 +59,3 @@ Common issues
 * **Missing hardware permissions**
 
     If the ``hardware_setup.py`` script is returning a ``no langid`` error or similar, it is probably because your user doesn't have permission to get certain information from the USB device. Try running this command with ``sudo`` (and, as noted above, make sure you are using the expected python version).
-
-Indices and tables
-==================
-
-* :ref:`genindex`
-* :ref:`modindex`
-* :ref:`search`
