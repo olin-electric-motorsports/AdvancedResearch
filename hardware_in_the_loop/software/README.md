@@ -6,6 +6,8 @@ This directory stores all code used to control and test with Olin Electric Motor
 
 Note: All paths in this README file are given relative to the `software` directory.
 
+**Project docs:** awenstrup.github.io
+
 ## Directory Structure
 
 ### Modules
@@ -177,7 +179,7 @@ You'll see that `artifacts/pin_info.csv` has 9 columns. The `IOController` pytho
 
 ### Generating Documentation
 
-If this wasn't enough for you, or you also want to read the python documentation, you can do that! You will need to do a few things:
+We should keep the [project docs](awenstrup.github.io) relatively up-to-date, but in case you want to build the docs from scratch yourself, you can do so! The steps are listed below.
 
 1. Navigate to the docs directory
 
