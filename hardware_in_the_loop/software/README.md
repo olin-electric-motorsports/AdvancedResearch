@@ -52,7 +52,7 @@ DISCLAIMER: This process requires root permissions to edit some files.
 
 3. (Optional) If you want to setup a virtual envrionment for this project (I reccomend it), now is the time. If you don't know how to do this, read [here](https://realpython.com/intro-to-pyenv/)
 
-4. Use pip to install the project and its dependencies on your computer
+4. Use pip to install the project and its dependencies on your computer. If you usually use `pip3` to invoke pip, use that instead; as long as the actual version of pip is >3.6.0, you should be fine.
 
     `$ pip install -e .`
 
@@ -79,6 +79,10 @@ DISCLAIMER: This process requires root permissions to edit some files.
     `$ sudo udevadm control --reload-rules`,
 
     but I generally recommend restarting just to be sure.
+
+Common issues:
+* Wrong/mismatched python versions
+* Missing hardware permissions
 
 ## Usage
 

@@ -22,7 +22,7 @@ def create_udev_rule():
     """
     print("Creating udev rule...")
 
-    idProduct, idVendor = find_arduino()
+    idVendor, idProduct = find_arduino()
 
     if idProduct:
         with open("99-arduino.rules", "r") as f:
