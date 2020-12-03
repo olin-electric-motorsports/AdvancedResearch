@@ -1,6 +1,7 @@
 # Base imports
 from subprocess import run
 import sys
+import os
 
 # Get paths
 home = os.getenv("HOME")
