@@ -19,23 +19,22 @@ class CANController:
     `Confluence <https://docs.olinelectricmotorsports.com/display/AE/CAN+Controller>`_
     """
 
-    def __init__(self, ecus: dict, can_spec_path: str, real_can: bool = True):
+    def __init__(self, ecus: dict, can_spec_path: str, channel: str, bitrate: int):
         """
-        Args:
-            ecus (dict): dict of (str: ECU) pairs
-            can_spec_path (str): path to the can spec file
-            real_can (bool): Whether to use real CAN hardware, or to simulate a bus (for testing)
+        TODO write this
         """
         # Create logger (all config should already be set by RoadkillHarness)
         self.log = logging.getLogger(name=__name__)
 
+        # Get config
+
         if "linux" in sys.platform:
             # Bring CAN hardware online
-            if real_can:
-                os.system("sudo ip link set can0 up type can bitrate 500000 restart-ms 100")  # real hardware
+            if "vcan" in channel:
+                os.system(f"sudo ip link add dev {channel} type vcan")
+                os.system(f"sudo ip link set {channel} up")  # virtual hardware
             else:
-                os.system("sudo ip link add dev vcan0 type vcan")
-                os.system("sudo ip link set vcan0 up")  # virtual hardware
+                os.system(f"sudo ip link set {channel} up type can bitrate {bitrate} restart-ms 100")  # real hardware
         else:
             self.log.error("Cannot bring up real or fake can hardware; must be on linux.")
 
@@ -44,22 +43,21 @@ class CANController:
         self._get_states(can_spec_path)
 
         # Start listening
-        bus_name = "can0"  # set above, see socketcan setup docs
-        bus_type = "socketcan" if real_can else "virtual"
+        bus_type = "socketcan"
         if "linux" in sys.platform:
-            can_bus = can.interface.Bus(bus_name, bus_type=bus_type)
+            can_bus = can.interface.Bus(channel=channel, bus_type=bus_type, bitrate=bitrate)
             self.kill_threads = threading.Event()
             listener = threading.Thread(
                 target=self.listen,
                 name="listener",
-                kwargs={"can_bus": can_bus, "callback": self.update_ecu, "kill_threads": self.kill_threads},
+                kwargs={"can_bus": can_bus, "callback": self._update_ecu, "kill_threads": self.kill_threads},
             )
             listener.start()
         else:
             can_bus = None
             self.log.error("Not on linux; initializing self.can to None")
 
-    def update_ecu(self, message: can.Message) -> None:
+    def _update_ecu(self, message: can.Message) -> None:
         """Update an ECUs states
 
         :param can.Message message: The `can message <https://python-can.readthedocs.io/en/master/message.html#can.Message>`_ that was received.
@@ -69,20 +67,6 @@ class CANController:
 
         for ecu in ecus:
             self.ecus[ecu].update(values)
-
-
-    def to_bits(self, data: bytearray) -> str:
-        """Convert a bytearray to a bit string
-
-        Args:
-            bytes: a bytearray
-
-        Returns:
-            str: some bits
-        """
-        out = ""
-        for byte in data:
-            out += bin(byte)
 
     def _get_states(self, path: str) -> None:
         """Populate each ECUs ``states`` dictionary, and self.read_dict

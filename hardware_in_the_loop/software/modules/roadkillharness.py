@@ -47,7 +47,6 @@ class RoadkillHarness:
         self.dashboard = ECU(name="dashboard", io=self.io)
         ecus["dashboard"] = self.dashboard
 
-
         self.log.info("Creating air_ctrl ecu...")
         self.air_ctrl = ECU(name="air_ctrl", io=self.io)
         ecus["air_ctrl"] = self.air_ctrl
@@ -60,9 +59,13 @@ class RoadkillHarness:
         self.brakelight_bspd = ECU(name="brakelight_bspd", io=self.io)
         ecus["brakelight_bspd"] = self.brakelight_bspd
 
-
         # Add more ECUs here
 
         # Create CANController
         self.log.info("Creating CANController...")
-        self.can = CANController(ecus=ecus, can_spec_path=os.path.join(artifacts_path, config.get("PATHS", "dbc_path")))
+        self.can = CANController(
+            ecus=ecus,
+            can_spec_path=os.path.join(artifacts_path, config.get("PATHS", "dbc_path")),
+            channel=config.get("HARDWARE", "can_channel", fallback="vcan0"),
+            bitrate=confif.get("HARDWARE", "can_bitrate", fallback="500000"),
+        )
