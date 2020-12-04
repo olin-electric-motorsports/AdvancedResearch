@@ -1,0 +1,4 @@
+(sym_lib_table
+  (lib (name template-rescue)(type Legacy)(uri ${KIPRJMOD}/template-rescue.lib)(options "")(descr ""))
+  (lib (name telemetry_car_interface-rescue)(type Legacy)(uri ${KIPRJMOD}/telemetry_car_interface-rescue.lib)(options "")(descr ""))
+)
