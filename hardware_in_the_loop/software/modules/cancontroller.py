@@ -59,43 +59,17 @@ class CANController:
             can_bus = None
             self.log.error("Not on linux; initializing self.can to None")
 
-    def update_ecu(self, message) -> None:
+    def update_ecu(self, message: can.Message) -> None:
         """Update an ECUs states
 
-        Args:
-            message: can.Message object. Notable attributes include
-                - timestamp
-                - arbitration_id
-                - data
-                - see https://python-can.readthedocs.io/en/master/message.html#can.Message
-
-        TODO assumes all can signals have a single sender, which isn't true (CAN_PANIC)
+        :param can.Message message: The `can message <https://python-can.readthedocs.io/en/master/message.html#can.Message>`_ that was received.
         """
-        ecu, values = self._translate(message)
-        self.ecus[ecu].update(values)
+        ecus = self.db.get_message_by_frame_id(message.arbitration_id).senders
+        values = self.db.decode_message(message.arbitration_id, message.data)
 
-    def _translate(self, message) -> Tuple[str, dict]:
-        """Given a raw can message, generate a dictionary of values to update
+        for ecu in ecus:
+            self.ecus[ecu].update(values)
 
-        Args:
-            message: can.Message object. Notable attributes include
-                - timestamp
-                - arbitration_id
-                - data
-                - see https://python-can.readthedocs.io/en/master/message.html#can.Message
-
-        Returns:
-            (str, dict): The ECU name as a str, and a dict of values to update
-
-        """
-        states = self.read_dict[message.arbitration_id]
-        data = self.to_bits(message.data)
-        values = {}
-
-        for state in states:
-            temp = int(data[state["start_index"] : state["end_index"]], 2)  # convert bits to int
-            # TODO do some more stuff here to handle enums and non-int values
-            values[state] = temp
 
     def to_bits(self, data: bytearray) -> str:
         """Convert a bytearray to a bit string
@@ -116,13 +90,10 @@ class CANController:
         :param str path: Path the the CAN spec file
         """
         ##create database that has all the messages in the dbc file in type message
-        db = cantools.database.load_file(path)
-
-        ##create a list of messages we can iterate through
-        msgs = db.messages
+        self.db = cantools.database.load_file(path)
 
         ##Iterates through messages to create ECUS
-        for msg in db.messages:
+        for msg in self.db.messages:
             for signal in msg.signals:
                 for sender in msg.senders:
                     try:

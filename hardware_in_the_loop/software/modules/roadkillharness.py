@@ -40,25 +40,25 @@ class RoadkillHarness:
         ecus = {}
 
         self.log.info("Creating throttle ecu...")
-        throttle = ECU(name="throttle", io=self.io)
-        ecus["throttle"] = throttle
+        self.throttle = ECU(name="throttle", io=self.io)
+        ecus["throttle"] = self.throttle
 
         self.log.info("Creating dashboard ecu...")
-        dashboard = ECU(name="dashboard", io=self.io)
-        ecus["dashboard"] = dashboard
+        self.dashboard = ECU(name="dashboard", io=self.io)
+        ecus["dashboard"] = self.dashboard
 
 
         self.log.info("Creating air_ctrl ecu...")
-        air_ctrl = ECU(name="air_ctrl", io=self.io)
-        ecus["air_ctrl"] = air_ctrl
+        self.air_ctrl = ECU(name="air_ctrl", io=self.io)
+        ecus["air_ctrl"] = self.air_ctrl
 
         self.log.info("Creating bms_core ecu...")
-        bms_core = ECU(name="bms_core", io=self.io)
-        ecus["bms_core"] = bms_core
+        self.bms_core = ECU(name="bms_core", io=self.io)
+        ecus["bms_core"] = self.bms_core
 
         self.log.info("Creating brakelight_bspd ecu...")
-        brakelight_bspd = ECU(name="brakelight_bspd", io=self.io)
-        ecus["brakelight_bspd"] = brakelight_bspd
+        self.brakelight_bspd = ECU(name="brakelight_bspd", io=self.io)
+        ecus["brakelight_bspd"] = self.brakelight_bspd
 
 
         # Add more ECUs here

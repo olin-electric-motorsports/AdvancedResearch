@@ -24,7 +24,7 @@ class ECU:
         else:
             return self.io.get_state(pin=state)
 
-    def _update(self, signals: dict) -> None:
+    def update(self, signals: dict) -> None:
         """Update the state of an ECU
 
         For now, we are not simulating ECUs, so this is only ever called
