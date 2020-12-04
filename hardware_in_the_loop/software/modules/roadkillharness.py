@@ -15,9 +15,17 @@ class RoadkillHarness:
     """Class to represent the entire tester
 
     `Confluence <https://docs.olinelectricmotorsports.com/display/AE/Roadkill+Harness>`_
+
+    This class makes it easy to bring-up an entire tester with one line of python::
+
+        harness = RoadkillHarness()
+
+    Notice that this object isn't parameterized at all; it looks in the ``config.ini`` file
+    for information. It exposes all the functionality you need to write and run tests with
+    this system.
     """
 
-    def __init__(self, pin_config: Optional[str] = None):
+    def __init__(self):
         # Read config
         config = configparser.ConfigParser(interpolation=None)
         config.read(os.path.join(artifacts_path, "config.ini"))
@@ -28,11 +36,8 @@ class RoadkillHarness:
 
         # Create IOController
         self.log.info("Creating IOController...")
-        if not pin_config:
-            pin_config = config.get("PATHS", "pin_config", fallback="pin_info.csv")
-
         self.io = IOController(
-            pin_info_path=os.path.join(artifacts_path, pin_config),
+            pin_info_path=os.path.join(artifacts_path, config.get("PATHS", "pin_config", fallback="pin_info.csv")),
             serial_path=config.get("PATHS", "serial_path", fallback="/dev/arduino"),
         )
 
@@ -67,5 +72,5 @@ class RoadkillHarness:
             ecus=ecus,
             can_spec_path=os.path.join(artifacts_path, config.get("PATHS", "dbc_path")),
             channel=config.get("HARDWARE", "can_channel", fallback="vcan0"),
-            bitrate=confif.get("HARDWARE", "can_bitrate", fallback="500000"),
+            bitrate=config.get("HARDWARE", "can_bitrate", fallback="500000"),
         )

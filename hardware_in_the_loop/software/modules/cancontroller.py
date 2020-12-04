@@ -14,15 +14,25 @@ import can
 class CANController:
     """High level python object to interface with hardware.
 
-    Used to read CAN messages from roadkill harness.
+    The CANController works **passively** for reading signals; you create one with a dictionary of ECUs, and it
+    will automatically keep all of their CAN states updated according to the CAN traffic it reads.
 
     `Confluence <https://docs.olinelectricmotorsports.com/display/AE/CAN+Controller>`_
+
+    :param dict ecus: A dictionary of ``str : ECU`` pairs. The CANController needs this to automatically
+        update the states of those ECUs. The keys in this dictionary should match the names of the senders in your
+        can spec file.
+
+    :param str can_spec_path: The path to the can spec. For now, we only support ``.dbc`` files. Should be
+        stored in ``artifacts``.
+
+    :param str channel: The name of the can channel to use. If using a virtual can bus, use ``vcan0`` or similar;
+        if using a real CAN bus, use ``can0`` or similar. You can use ``$ ip link show`` to view options.
+
+    :param int bitrate: The bitrate of the can bus. Defaults to 500K If using a virtual bus, you can ignore this.
     """
 
-    def __init__(self, ecus: dict, can_spec_path: str, channel: str, bitrate: int):
-        """
-        TODO write this
-        """
+    def __init__(self, ecus: dict, can_spec_path: str, channel: str, bitrate: int = 500000):
         # Create logger (all config should already be set by RoadkillHarness)
         self.log = logging.getLogger(name=__name__)
 
@@ -48,7 +58,7 @@ class CANController:
             can_bus = can.interface.Bus(channel=channel, bus_type=bus_type, bitrate=bitrate)
             self.kill_threads = threading.Event()
             listener = threading.Thread(
-                target=self.listen,
+                target=self._listen,
                 name="listener",
                 kwargs={"can_bus": can_bus, "callback": self._update_ecu, "kill_threads": self.kill_threads},
             )
@@ -94,7 +104,7 @@ class CANController:
         if hasattr(self, "kill_threads"):
             self.kill_threads.set()
 
-    def listen(self, can_bus: can.Bus, callback: Callable, kill_threads: threading.Event) -> None:
+    def _listen(self, can_bus: can.Bus, callback: Callable, kill_threads: threading.Event) -> None:
         """Thread that runs all the time to listen to CAN messages
 
         References:

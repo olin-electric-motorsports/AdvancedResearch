@@ -12,6 +12,11 @@ class IOController:
     with our custom hardware by getting and setting digital and analog states.
 
     `Confluence <https://docs.olinelectricmotorsports.com/display/AE/IO+Controller>`_
+
+    :param str pin_info_path: The path to the pin_info file (should be stored in ``artifacts``).
+    :param str serial_path: The path to the serial device you are connecting to. If you are using
+        an arduino and have run ``scripts/hardware_setup.py``, then you should be able to use
+        ``/dev/arduino``. Otherwise, you might have to look for your device with ``$ ls /dev/*``
     """
 
     def __init__(self, pin_info_path: str, serial_path: str):
