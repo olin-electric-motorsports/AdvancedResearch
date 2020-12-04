@@ -103,7 +103,7 @@ F 3 "" H 3275 5825 50  0001 C CNN
 	1    3275 5825
 	1    0    0    -1  
 $EndComp
-Text Notes 7375 1075 0    50   ~ 0
+Text Notes 7425 1100 0    50   ~ 0
 Boost Converter\n
 $Comp
 L power:+BATT #PWR0112
@@ -2513,8 +2513,6 @@ F 5 "RMCF0805FT1M82CT-ND" H 9000 1575 60  0001 C CNN "MPN"
 	1    9000 1575
 	1    0    0    -1  
 $EndComp
-Wire Wire Line
-	9000 1425 9450 1425
 $Comp
 L formula:R_200K R12
 U 1 1 5FBDD4D3
@@ -2641,42 +2639,12 @@ F 5 "RMCF0805FT1M82CT-ND" H 6200 1875 60  0001 C CNN "MPN"
 	1    6200 1875
 	1    0    0    -1  
 $EndComp
-Connection ~ 7000 2275
-Connection ~ 8400 2275
-Connection ~ 7000 1425
-Wire Wire Line
-	8400 2175 8400 2275
-Wire Wire Line
-	7000 2275 7000 2425
 Wire Wire Line
 	7000 1425 7000 1525
-$Comp
-L formula:TPS61090RSAR U3
-U 1 1 5FB842FE
-P 7700 1725
-F 0 "U3" H 7700 2295 50  0000 C CNN
-F 1 "TPS61090RSAR" H 7700 2204 50  0000 C CNN
-F 2 "formula:TPS61090RSAR" H 7450 2325 50  0001 L BNN
-F 3 "https://www.ti.com/lit/ds/symlink/tps61090.pdf?HQS=TI-null-null-digikeymode-df-pf-null-wwe&ts=1601340035977" H 7700 1725 50  0001 L BNN
-F 4 "1.48 USD" H 7550 2275 50  0001 L BNN "Field4"
-F 5 "TPS61090RSAR" H 7500 2175 50  0001 L BNN "Field5"
-F 6 "2A Switch, 96% Efficient Boost Converter 16-QFN -40 to 85" H 8150 2325 50  0001 L BNN "Field6"
-F 7 "Good" H 7500 2325 50  0001 L BNN "Field7"
-F 8 "VQFN-16 Texas Instruments" H 7400 2275 50  0001 L BNN "Field8"
-F 9 "Texas Instruments" H 7450 2275 50  0001 L BNN "Field9"
-F 10 "https://www.digikey.com/product-detail/en/texas-instruments/TPS61090RSAR/296-15259-1-ND/566899" H 8300 2325 50  0001 C CNN "Purchasing Link"
-	1    7700 1725
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	7000 2075 7000 2275
 Wire Wire Line
 	7000 1825 6900 1825
 Wire Wire Line
 	6900 1825 6900 1975
-Wire Wire Line
-	8400 2175 8400 2075
-Connection ~ 8400 2175
 Connection ~ 6900 1825
 $Comp
 L formula:GNDPWR #PWR0131
@@ -2748,12 +2716,7 @@ Wire Wire Line
 	3525 3925 3875 3925
 Wire Wire Line
 	3525 3775 3625 3775
-Wire Wire Line
-	8400 1575 8400 1475
-Connection ~ 8400 1475
 Connection ~ 9000 1425
-Wire Wire Line
-	8400 1425 8400 1475
 Wire Wire Line
 	8400 1375 8400 1425
 Connection ~ 8400 1425
@@ -2963,4 +2926,41 @@ Text Notes 1850 850  0    50   ~ 0
 \n
 Text Notes 1375 1350 0    50   ~ 0
 Output USB \n(To charge phone) \n
+$Comp
+L formula:TPS61090RSAR U3
+U 1 1 5FCCC227
+P 7700 1725
+F 0 "U3" H 7700 2295 50  0000 C CNN
+F 1 "TPS61090RSAR" H 7700 2204 50  0000 C CNN
+F 2 "formula:TPS61090RSAR" H 7450 2325 50  0001 L BNN
+F 3 "https://www.ti.com/lit/ds/symlink/tps61090.pdf?HQS=TI-null-null-digikeymode-df-pf-null-wwe&ts=1601340035977" H 7700 1725 50  0001 L BNN
+F 4 "1.48 USD" H 7550 2275 50  0001 L BNN "Field4"
+F 5 "TPS61090RSAR" H 7500 2175 50  0001 L BNN "Field5"
+F 6 "2A Switch, 96% Efficient Boost Converter 16-QFN -40 to 85" H 8150 2325 50  0001 L BNN "Field6"
+F 7 "Good" H 7500 2325 50  0001 L BNN "Field7"
+F 8 "VQFN-16 Texas Instruments" H 7400 2275 50  0001 L BNN "Field8"
+F 9 "Texas Instruments" H 7450 2275 50  0001 L BNN "Field9"
+F 10 "https://www.digikey.com/product-detail/en/texas-instruments/TPS61090RSAR/296-15259-1-ND/566899" H 8300 2325 50  0001 C CNN "Purchasing Link"
+	1    7700 1725
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	8400 1425 8400 1475
+Wire Wire Line
+	8400 2175 8400 2275
+Connection ~ 7000 1425
+Connection ~ 8400 2275
+Wire Wire Line
+	9000 1425 9450 1425
+Wire Wire Line
+	8400 2075 8400 2175
+Connection ~ 8400 2175
+Wire Wire Line
+	8400 1575 8400 1475
+Connection ~ 8400 1475
+Wire Wire Line
+	7000 2075 7000 2275
+Connection ~ 7000 2275
+Wire Wire Line
+	7000 2275 7000 2425
 $EndSCHEMATC
