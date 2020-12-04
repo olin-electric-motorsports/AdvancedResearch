@@ -31,53 +31,18 @@ class CANController:
 
         self.ecus = ecus
         self.read_dict = {}  # Dictionary to help translate raw can to useful signals
-        self.get_states(can_spec_path)
+        self._get_states(can_spec_path)
 
         # start listening
         bus_name = "can0"  # set above, see socketcan setup docs
         bus_type = "socketcan" if real_can else "virtual"
         can_bus = can.interface.Bus(bus_name, bus_type=bus_type)
 
-        global kill_threads  # Global flag we can set to kill threads on teardown
-        kill_threads = False
+        kill_threads = threading.event()
         listener = threading.Thread(
-            target=self.listen, name="listener", kwargs={"can_bus": can_bus, "callback": self.update_ecu}
+            target=self.listen, name="listener", kwargs={"can_bus": can_bus, "callback": self.update_ecu, "kill_threads": kill_threads}
         )
         listener.start()
-
-    def get_states(self, path: str):
-        """Populate each ECUs `states` dictionary, and self.read_dict
-
-        Args:
-            path (str): Path the the CAN spec file
-        """
-        ##create database that has all the messages in the dbc file in type message
-        db_msgs = cantools.database.load_file(path)
-        ##create a list of messages we can iterate through
-        msgs = db.messages
-        ##Iterates through messages to create ECUS
-        for msg in msgs:
-            ##Do the thing
-            source = msg.senders 
-
-
-        throttle_states = {
-            "THROTTLE_255": 0,
-        }
-        self.throttle.update(throttle_states)
-
-        self.read_dict = {
-            0x00C: {
-                "THROTTLE_255": {
-                    "start_index": 0,
-                    "end_index": 8,
-                }
-            }
-        }
-
-        # with open(path, 'r') as f:
-        # pass
-        # raise Exception("Not implemented!")
 
     def update_ecu(self, message) -> None:
         """Update an ECUs states
@@ -129,6 +94,23 @@ class CANController:
         out = ""
         for byte in data:
             out += bin(byte)
+
+    def _get_states(self, path: str):
+        """Populate each ECUs ``states`` dictionary, and self.read_dict
+
+        Args:
+            path (str): Path the the CAN spec file
+        """
+        ##create database that has all the messages in the dbc file in type message
+        db_msgs = cantools.database.load_file(path)
+        ##create a list of messages we can iterate through
+        msgs = db.messages
+        ##Iterates through messages to create ECUS
+        for msg in db.messages:
+            for signal in msg.signals: 
+                for sender in msg.senders:
+                    try:
+                        self.ecus[sender.upper()][signal] = None  # TODO Idk what to use for default values...
 
     def __del__(self):
         """Destructor (called when the program ends)
