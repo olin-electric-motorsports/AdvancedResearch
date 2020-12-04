@@ -19,5 +19,6 @@ setup(
         "pytest>=6.1.1",
         "pytest-html>=2.1.1",
         "pyusb>=1.1.0",
+        "cantools>=35.5.0",
     ],
 )
