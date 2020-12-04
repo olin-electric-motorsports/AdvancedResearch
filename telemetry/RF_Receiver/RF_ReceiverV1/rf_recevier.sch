@@ -64,7 +64,7 @@ Atmega328p
 Text Notes 4750 1850 0    118  ~ 0
 USB Connector
 $Comp
-L Formula:FT232RL U1
+L formula:FT232RL U1
 U 1 1 5FBB1322
 P 5350 7200
 F 0 "U1" H 4750 8100 50  0000 C CNN
@@ -77,7 +77,7 @@ F 5 "768-1007-1-ND" H 5350 7200 50  0001 C CNN "Part Number (DK)"
 	1    0    0    -1  
 $EndComp
 $Comp
-L Formula:USB_A J2
+L formula:USB_A J2
 U 1 1 5FBBADA0
 P 5300 2650
 F 0 "J2" H 5357 3117 50  0000 C CNN
@@ -88,7 +88,7 @@ F 3 " ~" H 5450 2600 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L Formula:0.1in_Female_Socket_01x16 J1
+L formula:0.1in_Female_Socket_01x16 J1
 U 1 1 5FBD5439
 P 2150 4050
 F 0 "J1" H 2230 4042 50  0000 L CNN
@@ -102,7 +102,7 @@ F 6 "https://www.digikey.com/product-detail/en/sullins-connector-solutions/PPTC1
 	1    0    0    -1  
 $EndComp
 $Comp
-L Formula:CONN_02X03 J3
+L formula:CONN_02X03 J3
 U 1 1 5FBD8D61
 P 13200 5500
 F 0 "J3" H 13200 5815 50  0000 C CNN
@@ -122,7 +122,7 @@ Wire Wire Line
 Wire Wire Line
 	3950 7200 3950 7400
 $Comp
-L Formula:VBATT #PWR07
+L formula:VBATT #PWR07
 U 1 1 5FBF11C9
 P 8450 4800
 F 0 "#PWR07" H 8450 4650 50  0001 C CNN
@@ -155,7 +155,7 @@ F 3 "" H 3950 7850 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L Formula:C_0.1uF C1
+L formula:C_0.1uF C1
 U 1 1 5FBA02F3
 P 3950 7550
 F 0 "C1" H 4065 7596 50  0000 L CNN
@@ -171,7 +171,7 @@ $EndComp
 Wire Wire Line
 	8450 5050 8450 4950
 $Comp
-L Formula:VBATT #PWR06
+L formula:VBATT #PWR06
 U 1 1 5FBCF49A
 P 7700 7350
 F 0 "#PWR06" H 7700 7200 50  0001 C CNN
@@ -190,7 +190,7 @@ NoConn ~ 4550 7400
 Text Label 4550 6500 2    50   ~ 0
 3v3_FTDI
 $Comp
-L Formula:R_1K R3
+L formula:R_1K R3
 U 1 1 5FBDE1F0
 P 7300 7600
 F 0 "R3" V 7200 7600 50  0000 C CNN
@@ -204,7 +204,7 @@ F 6 "https://www.digikey.com/products/en?keywords=RNCP0805FTD1K00CT-ND" H 7780 8
 	0    1    1    0   
 $EndComp
 $Comp
-L Formula:R_1K R4
+L formula:R_1K R4
 U 1 1 5FBE3B53
 P 7300 7700
 F 0 "R4" V 7400 7700 50  0000 C CNN
@@ -218,7 +218,7 @@ F 6 "https://www.digikey.com/products/en?keywords=RNCP0805FTD1K00CT-ND" H 7780 8
 	0    1    1    0   
 $EndComp
 $Comp
-L Formula:LED_0805 D1
+L formula:LED_0805 D1
 U 1 1 5FBD99DF
 P 6450 7700
 F 0 "D1" H 6450 7800 50  0000 C CNN
@@ -232,7 +232,7 @@ F 6 "https://www.digikey.com/products/en?keywords=475-1410-1-ND" H 6850 8200 60 
 	-1   0    0    1   
 $EndComp
 $Comp
-L Formula:LED_0805 D2
+L formula:LED_0805 D2
 U 1 1 5FBD7332
 P 6850 7600
 F 0 "D2" H 6843 7345 50  0000 C CNN
@@ -263,7 +263,7 @@ Connection ~ 7700 7600
 Wire Wire Line
 	7700 7600 7700 7700
 $Comp
-L Formula:R_1K R1
+L formula:R_1K R1
 U 1 1 5FC279C9
 P 6500 6500
 F 0 "R1" V 6400 6500 50  0000 C CNN
@@ -277,7 +277,7 @@ F 6 "https://www.digikey.com/products/en?keywords=RNCP0805FTD1K00CT-ND" H 6980 6
 	0    1    1    0   
 $EndComp
 $Comp
-L Formula:R_1K R2
+L formula:R_1K R2
 U 1 1 5FC279D2
 P 6500 6600
 F 0 "R2" V 6600 6600 50  0000 C CNN
@@ -352,7 +352,7 @@ Wire Wire Line
 	6350 2450 6350 2500
 Connection ~ 6350 2450
 $Comp
-L Formula:C_100nF C2
+L formula:C_100nF C2
 U 1 1 5FC4DEA7
 P 6350 2650
 F 0 "C2" H 6465 2696 50  0000 L CNN
@@ -377,7 +377,7 @@ F 3 "" H 6350 2950 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L Formula:VBATT #PWR05
+L formula:VBATT #PWR05
 U 1 1 5FC5813F
 P 7000 2250
 F 0 "#PWR05" H 7000 2100 50  0001 C CNN
@@ -388,7 +388,7 @@ F 3 "" H 7000 2250 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L Formula:F_500mA_16V F1
+L formula:F_500mA_16V F1
 U 1 1 5FC59506
 P 6700 2450
 F 0 "F1" V 6503 2450 50  0000 C CNN
@@ -451,7 +451,7 @@ Wire Wire Line
 Wire Wire Line
 	11000 2350 11000 2400
 $Comp
-L Formula:C_30pF C4
+L formula:C_30pF C4
 U 1 1 5FC75CBC
 P 11000 2550
 F 0 "C4" H 11115 2596 50  0000 L CNN
@@ -473,7 +473,7 @@ XTAL1
 Wire Wire Line
 	11600 2200 11600 1800
 $Comp
-L Formula:Crystal_SMD Y1
+L formula:Crystal_SMD Y1
 U 1 1 5FBCF657
 P 11600 2350
 F 0 "Y1" H 11750 2450 50  0000 L CNN
@@ -489,7 +489,7 @@ $EndComp
 Wire Wire Line
 	11500 2350 11000 2350
 $Comp
-L Formula:C_30pF C5
+L formula:C_30pF C5
 U 1 1 5FC76DF3
 P 12150 2550
 F 0 "C5" H 12265 2596 50  0000 L CNN
@@ -522,7 +522,7 @@ Wire Wire Line
 Text Label 13450 5500 0    50   ~ 0
 MOSI
 $Comp
-L Formula:VBATT #PWR014
+L formula:VBATT #PWR014
 U 1 1 5FC8EFC0
 P 13650 5250
 F 0 "#PWR014" H 13650 5100 50  0001 C CNN
@@ -552,7 +552,7 @@ Wire Wire Line
 Wire Wire Line
 	13450 5600 13650 5600
 $Comp
-L Formula:LED_0805 D4
+L formula:LED_0805 D4
 U 1 1 5FBD3B41
 P 13250 7250
 F 0 "D4" V 13250 7100 50  0000 C CNN
@@ -566,7 +566,7 @@ F 6 "https://www.digikey.com/products/en?keywords=475-1410-1-ND" H 13650 7750 60
 	0    -1   -1   0   
 $EndComp
 $Comp
-L Formula:LED_0805 D3
+L formula:LED_0805 D3
 U 1 1 5FCB57F6
 P 12500 7250
 F 0 "D3" V 12500 7100 50  0000 C CNN
@@ -595,7 +595,7 @@ F 3 "" H 8500 6350 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L Formula:C_0.1uF C3
+L formula:C_0.1uF C3
 U 1 1 5FCD46C0
 P 8500 6050
 F 0 "C3" H 8300 6100 50  0000 L CNN
@@ -620,7 +620,7 @@ F 3 "" H 8500 7300 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L Formula:ATmega328P-AU U2
+L formula:ATmega328P-AU U2
 U 1 1 5FBA5FE4
 P 9700 6150
 F 0 "U2" H 8850 7600 50  0000 C CNN
@@ -712,7 +712,7 @@ XTAL2
 Text Label 10300 5550 0    50   ~ 0
 XTAL1
 $Comp
-L Formula:R_200 R5
+L formula:R_200 R5
 U 1 1 5FD1F668
 P 12500 7650
 F 0 "R5" H 12570 7696 50  0000 L CNN
@@ -726,7 +726,7 @@ F 6 "https://www.digikey.com/products/en?keywords=RMCF0805JT200RCT-ND" H 12980 8
 	1    0    0    -1  
 $EndComp
 $Comp
-L Formula:R_200 R6
+L formula:R_200 R6
 U 1 1 5FD2117A
 P 13250 7650
 F 0 "R6" H 13320 7696 50  0000 L CNN
