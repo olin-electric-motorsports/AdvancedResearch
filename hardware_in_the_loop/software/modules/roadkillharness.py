@@ -29,21 +29,40 @@ class RoadkillHarness:
         # Create IOController
         self.log.info("Creating IOController...")
         if not pin_config:
-            pin_config = config.get("HARDWARE", "pin_config", fallback="pin_info")
+            pin_config = config.get("PATHS", "pin_config", fallback="pin_info.csv")
 
         self.io = IOController(
-            pin_info_path=os.path.join(pin_config),
+            pin_info_path=os.path.join(artifacts_path, pin_config),
             serial_path=config.get("PATHS", "serial_path", fallback="/dev/arduino"),
         )
 
         # Create all ECUs
         ecus = {}
 
-        self.log.info("Creating THROTTLE ecu...")
-        self.throttle = ECU(name="THROTTLE", io=self.io)
-        ecus["THROTTLE"] = self.throttle
+        self.log.info("Creating throttle ecu...")
+        throttle = ECU(name="throttle", io=self.io)
+        ecus["throttle"] = throttle
+
+        self.log.info("Creating dashboard ecu...")
+        dashboard = ECU(name="dashboard", io=self.io)
+        ecus["dashboard"] = dashboard
+
+
+        self.log.info("Creating air_ctrl ecu...")
+        air_ctrl = ECU(name="air_ctrl", io=self.io)
+        ecus["air_ctrl"] = air_ctrl
+
+        self.log.info("Creating bms_core ecu...")
+        bms_core = ECU(name="bms_core", io=self.io)
+        ecus["bms_core"] = bms_core
+
+        self.log.info("Creating brakelight_bspd ecu...")
+        brakelight_bspd = ECU(name="brakelight_bspd", io=self.io)
+        ecus["brakelight_bspd"] = brakelight_bspd
+
+
         # Add more ECUs here
 
         # Create CANController
-        # self.log.info("Creating CANController...")
-        # self.can = CANController(ecus=ecus, can_spec_path="path/to/can/spec")
+        self.log.info("Creating CANController...")
+        self.can = CANController(ecus=ecus, can_spec_path=os.path.join(artifacts_path, config.get("PATHS", "dbc_path")))

@@ -1,9 +1,10 @@
 from typing import Union
 
+
 class ECU:
     """Class to store the state of each ECU
 
-    `Confluence <https://docs.olinelectricmotorsports.com/display/AE/ECUs>`_ 
+    `Confluence <https://docs.olinelectricmotorsports.com/display/AE/ECUs>`_
     """
 
     def __init__(self, name: str, io):

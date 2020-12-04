@@ -23,7 +23,7 @@ class IOController:
             self.serial = serial.Serial(port=serial_path, baudrate=115200, timeout=5)
         except serial.serialutil.SerialException as e:
             # Couldn't open the specified port; initialize w/o hardware for testing
-            self.log.error(f"Failed to connect to hardware at {pin_info_path}")
+            self.log.error(f"Failed to connect to hardware at {serial_path}")
             self.log.error(e)
             self.serial = None
 
@@ -128,10 +128,10 @@ class IOController:
         """Read in the pin address information, given a path to a .csv file
 
         Args:
-            path (str): The path to the .csv file containing pin information (see 
-            `software readme <https://github.com/olin-electric-motorsports/AdvancedResearch/tree/main/hardware_in_the_loop/software>`_ 
-            or 
-            `google docs <https://docs.google.com/spreadsheets/d/15hpe0DXfQto9N2hawawvfeHTE1sq-UT7sgDl__hCTZ4/edit?usp=sharing>`_ 
+            path (str): The path to the .csv file containing pin information (see
+            `software readme <https://github.com/olin-electric-motorsports/AdvancedResearch/tree/main/hardware_in_the_loop/software>`_
+            or
+            `google docs <https://docs.google.com/spreadsheets/d/15hpe0DXfQto9N2hawawvfeHTE1sq-UT7sgDl__hCTZ4/edit?usp=sharing>`_
             for details)
 
         Returns:
@@ -240,8 +240,8 @@ class IOController:
                 io.set_state("STATE_2", "1")
             ```
 
-        to let the hardware know we want to set these state at the same exact time, 
-        minimizing any delay introduced by the serial communication/sequential 
+        to let the hardware know we want to set these state at the same exact time,
+        minimizing any delay introduced by the serial communication/sequential
         function calls.
         """
         self._send_request(bytes([0xFF]))

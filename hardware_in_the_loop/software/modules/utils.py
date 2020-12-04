@@ -15,12 +15,12 @@ artifacts_path = os.path.join(root_path, "artifacts")
 
 def get_logging_config() -> None:
     """Get the logging config options from config.ini, and apply them
-    
+
     Look for ``artifacts/config.ini`` and check the logging section for config options. If they are found, apply them.
     If interpolation is required, interpolate. For example, if the line::
-        
+
         log_path=$LOGS/$DATETIME.log
-        
+
     is found, replace ``$LOGS`` and ``$DATETIME`` with the absolute path to ``artifacts/logs`` and the current datetime,
     respectively. The datetime format used is ``%Y_%m_%d_%H_%M_%S``
     """
@@ -76,7 +76,7 @@ def pad_with_zeros(s: str, length: int) -> str:
 
         >>> utils.pad_with_zeros("45", 4)
         0045
-    
+
     """
     out = s
     while len(out) < length:
