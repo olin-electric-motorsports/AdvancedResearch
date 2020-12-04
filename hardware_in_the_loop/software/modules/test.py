@@ -22,4 +22,4 @@ class Tester:
             callback()
 
 
-t = Tester()
+t = Tester()  # should print hello 5 times then die

@@ -259,8 +259,6 @@ F 4 "https://www.digikey.com/product-detail/en/tdk-corporation/C2012X7R1H225M125
 	1    0    0    -1  
 $EndComp
 Connection ~ 8800 1400
-Wire Wire Line
-	8800 1400 9100 1400
 $Comp
 L power:GND #PWR029
 U 1 1 5F7B502E
@@ -270,20 +268,6 @@ F 1 "GND" H 8805 1527 50  0000 C CNN
 F 2 "" H 8800 1700 50  0001 C CNN
 F 3 "" H 8800 1700 50  0001 C CNN
 	1    8800 1700
-	1    0    0    -1  
-$EndComp
-$Comp
-L formula:C_100uF C7
-U 1 1 5F7B6B11
-P 9100 1550
-F 0 "C7" H 9050 1800 50  0000 L CNN
-F 1 "C_100uF" V 8950 1350 50  0000 L CNN
-F 2 "footprints:C_1812_OEM" H 9100 2300 50  0001 C CNN
-F 3 "https://product.tdk.com/info/en/catalog/datasheets/mlcc_commercial_general_en.pdf" H 9300 1000 50  0001 C CNN
-F 4 "C4532X5R0J107M280KA" H 9100 2000 60  0001 C CNN "MFN"
-F 5 "445-1413-1-ND" H 9050 2150 60  0001 C CNN "MPN"
-F 6 "https://www.digikey.com/product-detail/en/tdk-corporation/C4532X5R0J107M280KA/445-1413-1-ND/567567" H 9350 1150 60  0001 C CNN "PurchasingLink"
-	1    9100 1550
 	1    0    0    -1  
 $EndComp
 $Comp
@@ -430,11 +414,6 @@ F 3 "" H 9750 2050 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	9350 1400 9100 1400
-Connection ~ 9100 1400
-Wire Wire Line
-	2200 5150 2450 5150
-Wire Wire Line
 	2750 5150 2750 4850
 $Comp
 L formula:C_10uF C2
@@ -464,7 +443,7 @@ F 3 "" H 2750 5450 50  0001 C CNN
 $EndComp
 NoConn ~ 2200 5350
 NoConn ~ 2200 5450
-NoConn ~ 2200 5550
+NoConn ~ 2200 5250
 $Comp
 L formula:TP TP1
 U 1 1 5F85097E
@@ -540,39 +519,14 @@ F 5 "732-5315-ND" H 1950 4400 50  0001 C CNN "MPN"
 	-1   0    0    -1  
 $EndComp
 $Comp
-L Connector:USB_A J3
-U 1 1 5F8090A7
-P 1900 1650
-F 0 "J3" H 1957 2117 50  0000 C CNN
-F 1 "USB_A" H 1957 2026 50  0000 C CNN
-F 2 "" H 2050 1600 50  0001 C CNN
-F 3 " ~" H 2050 1600 50  0001 C CNN
-	1    1900 1650
-	1    0    0    -1  
-$EndComp
-$Comp
 L power:GND #PWR04
 U 1 1 5F7F1D8F
-P 2100 5800
-F 0 "#PWR04" H 2100 5550 50  0001 C CNN
-F 1 "GND" H 2105 5627 50  0000 C CNN
-F 2 "" H 2100 5800 50  0001 C CNN
-F 3 "" H 2100 5800 50  0001 C CNN
-	1    2100 5800
-	1    0    0    -1  
-$EndComp
-$Comp
-L formula:USB_MicroB U1
-U 1 1 5F7ED398
-P 1900 5350
-F 0 "U1" H 1957 5817 50  0000 C CNN
-F 1 "USB_MicroB" H 1957 5726 50  0000 C CNN
-F 2 "Connectors_USB:USB_Micro-B_Molex-105017-0001" H 1850 5700 50  0001 C CNN
-F 3 "https://www.molex.com/pdm_docs/sd/1050170001_sd.pdf" H 1850 5700 50  0001 C CNN
-F 4 "DK" H 2150 5100 50  0001 C CNN "MFN"
-F 5 "WM1399CT-ND" H 2250 5200 50  0001 C CNN "MPN"
-F 6 "https://www.digikey.com/product-detail/en/molex-llc/1050170001/WM1399CT-ND/2350885" H 2350 5300 50  0001 C CNN "PurchasingLink"
-	1    1900 5350
+P 2500 5800
+F 0 "#PWR04" H 2500 5550 50  0001 C CNN
+F 1 "GND" H 2505 5627 50  0000 C CNN
+F 2 "" H 2500 5800 50  0001 C CNN
+F 3 "" H 2500 5800 50  0001 C CNN
+	1    2500 5800
 	1    0    0    -1  
 $EndComp
 Text Label 2550 4100 0    50   ~ 0
@@ -731,25 +685,11 @@ $EndComp
 Wire Wire Line
 	2700 1200 2700 1150
 Wire Wire Line
-	2700 1500 2700 1650
-Wire Wire Line
 	2700 2200 2700 2250
-Wire Wire Line
-	2200 1650 2700 1650
-Connection ~ 2700 1650
-Wire Wire Line
-	2700 1650 2700 1900
 Wire Wire Line
 	3150 1150 3150 1200
 Wire Wire Line
-	3150 1500 3150 1750
-Wire Wire Line
 	3150 2200 3150 2250
-Wire Wire Line
-	2200 1750 3150 1750
-Connection ~ 3150 1750
-Wire Wire Line
-	3150 1750 3150 1900
 $Comp
 L power:GND #PWR01
 U 1 1 5F92CB04
@@ -762,19 +702,7 @@ F 3 "" H 2050 2150 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	1800 2050 1900 2050
-Wire Wire Line
-	2050 2050 2050 2100
-Connection ~ 1900 2050
-Wire Wire Line
-	1900 2050 2050 2050
-Wire Wire Line
-	2100 5800 2100 5750
-Wire Wire Line
-	2100 5750 1900 5750
-Connection ~ 1900 5750
-Wire Wire Line
-	1900 5750 1800 5750
+	2500 5800 2500 5750
 $Comp
 L power:+5V #PWR05
 U 1 1 5F9359B1
@@ -786,10 +714,6 @@ F 3 "" H 2350 1350 50  0001 C CNN
 	1    2350 1350
 	1    0    0    -1  
 $EndComp
-Wire Wire Line
-	2350 1350 2350 1450
-Wire Wire Line
-	2350 1450 2200 1450
 $Comp
 L formula:C_10uF C1
 U 1 1 5F93A07E
@@ -809,9 +733,6 @@ Wire Wire Line
 Connection ~ 2050 2100
 Wire Wire Line
 	2050 2100 2050 2150
-Wire Wire Line
-	2350 1800 2350 1450
-Connection ~ 2350 1450
 $Comp
 L power:VBUS #PWR08
 U 1 1 5F94EAD0
@@ -829,7 +750,7 @@ Text Notes 2000 2800 2    79   ~ 0
 Thermistor
 Text Notes 1950 3800 2    79   ~ 0
 Battery
-Text Notes 1800 4850 2    79   ~ 0
+Text Notes 1800 4800 2    79   ~ 0
 Input USB\n(to charge bat)
 Text Notes 3300 6500 0    98   Italic 0
 Power Flow
@@ -2961,9 +2882,6 @@ F 6 "https://www.digikey.com/product-detail/en/keystone-electronics/5006/36-5006
 	1    2450 4950
 	1    0    0    -1  
 $EndComp
-Connection ~ 2450 5150
-Wire Wire Line
-	2450 5150 2750 5150
 $Comp
 L formula:TP TP3
 U 1 1 5F8BA2B0
@@ -3068,10 +2986,10 @@ Wire Wire Line
 Wire Wire Line
 	8150 1550 8200 1550
 $Comp
-L formula:GNDPWR #PWR?
+L formula:GNDPWR #PWR0102
 U 1 1 5F8EA6AD
 P 7700 2700
-F 0 "#PWR?" H 7700 2500 50  0001 C CNN
+F 0 "#PWR0102" H 7700 2500 50  0001 C CNN
 F 1 "GNDPWR" H 7704 2546 50  0000 C CNN
 F 2 "" H 7700 2650 50  0001 C CNN
 F 3 "" H 7700 2650 50  0001 C CNN
@@ -3079,10 +2997,10 @@ F 3 "" H 7700 2650 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L power:GND #PWR?
+L power:GND #PWR0103
 U 1 1 5F8EAEBF
 P 8000 2700
-F 0 "#PWR?" H 8000 2450 50  0001 C CNN
+F 0 "#PWR0103" H 8000 2450 50  0001 C CNN
 F 1 "GND" H 8005 2527 50  0000 C CNN
 F 2 "" H 8000 2700 50  0001 C CNN
 F 3 "" H 8000 2700 50  0001 C CNN
@@ -3091,4 +3009,92 @@ F 3 "" H 8000 2700 50  0001 C CNN
 $EndComp
 Wire Wire Line
 	7700 2700 8000 2700
+Wire Wire Line
+	2200 5750 2500 5750
+Wire Wire Line
+	8800 1400 9100 1400
+$Comp
+L formula:C_100uF C7
+U 1 1 5FB5E8BF
+P 9100 1550
+F 0 "C7" H 9215 1596 50  0000 L CNN
+F 1 "C_100uF" H 9215 1505 50  0000 L CNN
+F 2 "footprints:C_1812_4532Metric" H 9100 2300 50  0001 C CNN
+F 3 "https://product.tdk.com/info/en/catalog/datasheets/mlcc_commercial_general_en.pdf" H 9300 1000 50  0001 C CNN
+F 4 "C4532X5R0J107M280KA" H 9100 2000 60  0001 C CNN "MFN"
+F 5 "445-1413-1-ND" H 9050 2150 60  0001 C CNN "MPN"
+F 6 "https://www.digikey.com/product-detail/en/tdk-corporation/C4532X5R0J107M280KA/445-1413-1-ND/567567" H 9350 1150 60  0001 C CNN "PurchasingLink"
+	1    9100 1550
+	1    0    0    -1  
+$EndComp
+Connection ~ 9100 1400
+Wire Wire Line
+	9100 1400 9350 1400
+$Comp
+L formula:USB-Micro-1981568-1 J4
+U 1 1 5FB6FE94
+P 1900 5450
+F 0 "J4" H 1957 6107 50  0000 C CNN
+F 1 "USB-Micro-1981568-1" H 1957 6016 50  0000 C CNN
+F 2 "footprints:TE_1981568-1" H 1900 5450 50  0001 L BNN
+F 3 "https://www.te.com/commerce/DocumentDelivery/DDEController?Action=srchrtrv&DocNm=1981568&DocType=Customer+Drawing&DocLang=English" H 1900 5450 50  0001 L BNN
+F 4 ".65 mm[.025 in]" H 1900 5450 50  0001 L BNN "Field4"
+F 5 "Connector" H 1900 5450 50  0001 L BNN "Field5"
+F 6 "1981568-1" H 1900 5450 50  0001 L BNN "Field6"
+F 7 "1981568-1" H 1957 5925 50  0000 C CNN "MPN"
+	1    1900 5450
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2700 1500 2700 1750
+Wire Wire Line
+	2350 1350 2350 1550
+Wire Wire Line
+	3150 1500 3150 1650
+Wire Wire Line
+	2050 1550 2350 1550
+Connection ~ 2350 1550
+Wire Wire Line
+	2350 1550 2350 1800
+Wire Wire Line
+	2050 1650 3150 1650
+Connection ~ 3150 1650
+Wire Wire Line
+	3150 1650 3150 1900
+Wire Wire Line
+	2050 1750 2700 1750
+Connection ~ 2700 1750
+Wire Wire Line
+	2700 1750 2700 1900
+Wire Wire Line
+	2050 2050 2050 2100
+$Comp
+L formula:USB-A-S-X-X-SM2 J3
+U 1 1 5FB623FD
+P 1650 1750
+F 0 "J3" H 1543 2307 50  0000 C CNN
+F 1 "USB-A-S-X-X-SM2" H 1543 2216 50  0000 C CNN
+F 2 "footprints:SAMTEC_USB-A-S-X-X-SM2" H 1650 1750 50  0001 L BNN
+F 3 "http://suddendocs.samtec.com/catalog_english/usb_a.pdf" H 1650 1750 50  0001 L BNN
+F 4 "Samtec" H 1650 1750 50  0001 L BNN "Field4"
+F 5 "Manufacturer Recommendations" H 1650 1750 50  0001 L BNN "Field5"
+F 6 "7.8 mm" H 1650 1750 50  0001 L BNN "Field6"
+F 7 "SAM14899CT-ND" H 1543 2125 50  0000 C CNN "MPN"
+	1    1650 1750
+	-1   0    0    -1  
+$EndComp
+Wire Wire Line
+	2050 1850 2050 1950
+Connection ~ 2050 2050
+Connection ~ 2050 1950
+Wire Wire Line
+	2050 1950 2050 2050
+Wire Wire Line
+	2450 5150 2750 5150
+Wire Wire Line
+	2200 5150 2450 5150
+Connection ~ 2450 5150
+Wire Wire Line
+	2200 5550 2200 5750
+Connection ~ 2200 5750
 $EndSCHEMATC
