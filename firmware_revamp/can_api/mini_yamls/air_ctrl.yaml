@@ -1,60 +1,58 @@
 MessagesTX:
-  - name: AirControl
+  air_ctrl:
     id: 14.0
     data_bytes: 8.0
     signals:
-      - name: TSMS_Sense
+      tsms_sense:
         length: 8
         scale: 1
         offset: 0
         min: 0
         max: 1
         unit: bit
-      - name: IMD_Sense
+      imd_sense:
         length: 8
         scale: 1
         offset: 0
         min: 0
         max: 1
         unit: bit
-      - name: Main_Pack_Sense
+      main_pack_(tsconn)_sense:
         length: 8
         scale: 1
         offset: 0
         min: 0
         max: 1
         unit: bit
-        comment: "Tractive System Connector"
-      - name: HVD_Connector_Sense
+      connector_to_hvd_(hvdconn)_sense:
         length: 8
         scale: 1
         offset: 0
         min: 0
         max: 1
         unit: bit
-        comment: "Connector to High Voltage Disconnect"
-      - name: HVD_Sense
+      hvd_sense:
         length: 8
         scale: 1
         offset: 0
         min: 0
         max: 1
         unit: bit
-      - name: BMS_Sense
+      bms_sense:
         length: 8
         scale: 1
         offset: 0
         min: 0
         max: 1
         unit: bit
-      - name: IMD_Status
+      imd_status:
         length: 8
         scale: 1
         offset: 0
         min: 0
         max: 1
         unit: bit
-      - name: BMS_Status
+      bms_status:
         length: 8
         scale: 1
         offset: 0
