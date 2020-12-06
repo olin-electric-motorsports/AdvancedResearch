@@ -13,42 +13,10 @@ Comment2 ""
 Comment3 ""
 Comment4 ""
 $EndDescr
-$Comp
-L power:GND #PWR026
-U 1 1 5FA45E26
-P 1800 7600
-F 0 "#PWR026" H 1800 7350 50  0001 C CNN
-F 1 "GND" V 1805 7472 50  0000 R CNN
-F 2 "" H 1800 7600 50  0001 C CNN
-F 3 "" H 1800 7600 50  0001 C CNN
-	1    1800 7600
-	0    -1   -1   0   
-$EndComp
-Text Label 1800 7500 0    50   ~ 0
-SS_Sensing
-Text Label 1800 7400 0    50   ~ 0
-SS_LVBox
-Text Label 1800 7300 0    50   ~ 0
-SS_Cockpit
-Text Label 1800 7200 0    50   ~ 0
-SS_Accumulator
-Text Label 1800 7100 0    50   ~ 0
-SCK
-Text Label 1800 7000 0    50   ~ 0
+Text Label 1650 7250 0    50   ~ 0
 MOSI
-Text Label 1800 6900 0    50   ~ 0
+Text Label 1650 7150 0    50   ~ 0
 MISO
-$Comp
-L formula:NanoFit_RA_SMT_08 J2
-U 1 1 5FA3D7DF
-P 1600 7050
-F 0 "J2" H 1658 7425 50  0000 C CNN
-F 1 "NanoFit_RA_SMT_08" H 1658 7334 50  0000 C CNN
-F 2 "footprints:NanoFit_RA_8" H 1300 6400 50  0001 C CNN
-F 3 "" H 1600 7300 50  0001 C CNN
-	1    1600 7050
-	1    0    0    -1  
-$EndComp
 $Comp
 L power:GND #PWR029
 U 1 1 5FA39AB7
@@ -118,17 +86,6 @@ F 3 "" H 8050 1900 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L power:VCC #PWR027
-U 1 1 5FA2F0E9
-P 2600 5600
-F 0 "#PWR027" H 2600 5450 50  0001 C CNN
-F 1 "VCC" V 2615 5728 50  0000 L CNN
-F 2 "" H 2600 5600 50  0001 C CNN
-F 3 "" H 2600 5600 50  0001 C CNN
-	1    2600 5600
-	0    1    1    0   
-$EndComp
-$Comp
 L power:GND #PWR024
 U 1 1 5FA2D38B
 P 1600 6200
@@ -150,7 +107,7 @@ F 3 "" H 1700 6200 50  0001 C CNN
 	1    1700 6200
 	1    0    0    -1  
 $EndComp
-Text Notes 2050 5350 0    50   ~ 0
+Text Notes 1800 5200 0    50   ~ 0
 We want to use a \n100mA fuse here, \nbut we haven't \nsourced one yet\n
 $Comp
 L formula:200mA_Fuse F1
@@ -262,17 +219,6 @@ Connection ~ 8250 1750
 Wire Wire Line
 	8250 1750 8250 1350
 $Comp
-L power:VCC #PWR?
-U 1 1 5FA1EE9B
-P 8250 1250
-F 0 "#PWR?" H 8250 1100 50  0001 C CNN
-F 1 "VCC" H 8265 1423 50  0000 C CNN
-F 2 "" H 8250 1250 50  0001 C CNN
-F 3 "" H 8250 1250 50  0001 C CNN
-	1    8250 1250
-	1    0    0    -1  
-$EndComp
-$Comp
 L formula:C_4.7uF C?
 U 1 1 5FA203A0
 P 8600 1350
@@ -341,7 +287,7 @@ Wire Notes Line
 Text Notes 1350 4650 0    118  ~ 24
 CONNECTORS
 Text Notes 7900 850  0    118  ~ 24
-CONVERTER
+USB CONVERTER
 Wire Notes Line
 	13650 900  11050 900 
 Wire Notes Line
@@ -350,254 +296,130 @@ Wire Notes Line
 	11050 4900 13650 4900
 Wire Notes Line
 	11050 900  11050 4900
-Text Notes 12950 2100 0    50   ~ 0
-Do not populate
 Wire Wire Line
-	12500 2200 12600 2200
+	12900 1450 12900 1600
 Wire Wire Line
-	12800 3400 12800 3550
+	12600 1450 12600 1600
 Wire Wire Line
-	12500 3400 12500 3550
+	12200 1450 12200 1600
 Wire Wire Line
-	12100 3400 12100 3550
-Wire Wire Line
-	11400 3400 11400 3550
-Wire Wire Line
-	12800 2250 12950 2250
-Connection ~ 12800 2250
-Wire Wire Line
-	12600 2250 12800 2250
-Wire Wire Line
-	12600 2200 12600 2250
-Wire Wire Line
-	12800 1950 12950 1950
-Connection ~ 12800 1950
-Wire Wire Line
-	12600 1950 12800 1950
-Wire Wire Line
-	12600 2000 12600 1950
-Wire Wire Line
-	12500 2000 12600 2000
-Wire Wire Line
-	12000 1500 12000 1350
-Connection ~ 12000 1500
-Wire Wire Line
-	12000 1700 12000 1500
-Wire Wire Line
-	11700 1500 11700 1650
-Text Notes 11300 4200 0    89   ~ 0
+	11500 1450 11500 1600
+Text Notes 11400 2250 0    89   ~ 0
 16M1 PROGRAMMING HEADER\n
 $Comp
 L power:VCC #PWR07
 U 1 1 5D6297EA
-P 12550 4450
-F 0 "#PWR07" H 12550 4300 50  0001 C CNN
-F 1 "VCC" H 12567 4623 50  0000 C CNN
-F 2 "" H 12550 4450 50  0001 C CNN
-F 3 "" H 12550 4450 50  0001 C CNN
-	1    12550 4450
+P 12650 2500
+F 0 "#PWR07" H 12650 2350 50  0001 C CNN
+F 1 "VCC" H 12667 2673 50  0000 C CNN
+F 2 "" H 12650 2500 50  0001 C CNN
+F 3 "" H 12650 2500 50  0001 C CNN
+	1    12650 2500
 	1    0    0    -1  
 $EndComp
 $Comp
 L power:GND #PWR09
 U 1 1 5D62962D
-P 12550 4650
-F 0 "#PWR09" H 12550 4400 50  0001 C CNN
-F 1 "GND" H 12555 4477 50  0000 C CNN
-F 2 "" H 12550 4650 50  0001 C CNN
-F 3 "" H 12550 4650 50  0001 C CNN
-	1    12550 4650
+P 12650 2700
+F 0 "#PWR09" H 12650 2450 50  0001 C CNN
+F 1 "GND" H 12655 2527 50  0000 C CNN
+F 2 "" H 12650 2700 50  0001 C CNN
+F 3 "" H 12650 2700 50  0001 C CNN
+	1    12650 2700
 	1    0    0    -1  
 $EndComp
-Text Label 12550 4550 0    50   ~ 0
+Text Label 12650 2600 0    50   ~ 0
 MOSI
-Text Label 12050 4650 2    50   ~ 0
+Text Label 12150 2700 2    50   ~ 0
 RESET
-Text Label 12050 4550 2    50   ~ 0
+Text Label 12150 2600 2    50   ~ 0
 SCK
-Text Label 12050 4450 2    50   ~ 0
+Text Label 12150 2500 2    50   ~ 0
 MISO
 $Comp
 L template-rescue:CONN_02X03-formula J1
 U 1 1 5D628C9D
-P 12300 4550
-F 0 "J1" H 12300 4760 50  0000 C CNN
-F 1 "CONN_02X03" H 12190 4350 50  0000 C CNN
-F 2 "footprints:Pin_Header_Straight_2x03" H 12300 3350 50  0001 C CNN
-F 3 "http://portal.fciconnect.com/Comergent//fci/drawing/67996.pdf" H 12300 3350 50  0001 C CNN
-F 4 "DK" H 12300 4550 60  0001 C CNN "MFN"
-F 5 "609-3234-ND" H 12300 4550 60  0001 C CNN "MPN"
-F 6 "https://www.digikey.com/product-detail/en/amphenol-fci/67997-206HLF/609-3234-ND/1878491" H 12700 5150 60  0001 C CNN "PurchasingLink"
-	1    12300 4550
+P 12400 2600
+F 0 "J1" H 12400 2810 50  0000 C CNN
+F 1 "CONN_02X03" H 12290 2400 50  0000 C CNN
+F 2 "footprints:Pin_Header_Straight_2x03" H 12400 1400 50  0001 C CNN
+F 3 "http://portal.fciconnect.com/Comergent//fci/drawing/67996.pdf" H 12400 1400 50  0001 C CNN
+F 4 "DK" H 12400 2600 60  0001 C CNN "MFN"
+F 5 "609-3234-ND" H 12400 2600 60  0001 C CNN "MPN"
+F 6 "https://www.digikey.com/product-detail/en/amphenol-fci/67997-206HLF/609-3234-ND/1878491" H 12800 3200 60  0001 C CNN "PurchasingLink"
+	1    12400 2600
 	1    0    0    -1  
 $EndComp
-Text Label 12800 3400 2    50   ~ 0
+Text Label 12900 1450 2    50   ~ 0
 GND
 $Comp
 L power:GND #PWR017
 U 1 1 5D622997
-P 12800 3550
-F 0 "#PWR017" H 12800 3300 50  0001 C CNN
-F 1 "GND" H 12805 3377 50  0000 C CNN
-F 2 "" H 12800 3550 50  0001 C CNN
-F 3 "" H 12800 3550 50  0001 C CNN
-	1    12800 3550
+P 12900 1600
+F 0 "#PWR017" H 12900 1350 50  0001 C CNN
+F 1 "GND" H 12905 1427 50  0000 C CNN
+F 2 "" H 12900 1600 50  0001 C CNN
+F 3 "" H 12900 1600 50  0001 C CNN
+	1    12900 1600
 	1    0    0    -1  
 $EndComp
 $Comp
 L power:VCC #PWR015
 U 1 1 5D61D085
-P 11400 3400
-F 0 "#PWR015" H 11400 3250 50  0001 C CNN
-F 1 "VCC" H 11417 3573 50  0000 C CNN
-F 2 "" H 11400 3400 50  0001 C CNN
-F 3 "" H 11400 3400 50  0001 C CNN
-	1    11400 3400
+P 11500 1450
+F 0 "#PWR015" H 11500 1300 50  0001 C CNN
+F 1 "VCC" H 11517 1623 50  0000 C CNN
+F 2 "" H 11500 1450 50  0001 C CNN
+F 3 "" H 11500 1450 50  0001 C CNN
+	1    11500 1450
 	1    0    0    -1  
 $EndComp
-Text Label 11400 3550 0    50   ~ 0
+Text Label 11500 1600 0    50   ~ 0
 5V
 $Comp
 L power:VCC #PWR016
 U 1 1 5D6181B6
-P 12100 3550
-F 0 "#PWR016" H 12100 3400 50  0001 C CNN
-F 1 "VCC" H 12118 3723 50  0000 C CNN
-F 2 "" H 12100 3550 50  0001 C CNN
-F 3 "" H 12100 3550 50  0001 C CNN
-	1    12100 3550
+P 12200 1600
+F 0 "#PWR016" H 12200 1450 50  0001 C CNN
+F 1 "VCC" H 12218 1773 50  0000 C CNN
+F 2 "" H 12200 1600 50  0001 C CNN
+F 3 "" H 12200 1600 50  0001 C CNN
+	1    12200 1600
 	-1   0    0    1   
 $EndComp
 $Comp
 L power:PWR_FLAG #FLG03
 U 1 1 5D615217
-P 12500 3400
-F 0 "#FLG03" H 12500 3475 50  0001 C CNN
-F 1 "PWR_FLAG" H 12500 3574 50  0000 C CNN
-F 2 "" H 12500 3400 50  0001 C CNN
-F 3 "~" H 12500 3400 50  0001 C CNN
-	1    12500 3400
+P 12600 1450
+F 0 "#FLG03" H 12600 1525 50  0001 C CNN
+F 1 "PWR_FLAG" H 12600 1624 50  0000 C CNN
+F 2 "" H 12600 1450 50  0001 C CNN
+F 3 "~" H 12600 1450 50  0001 C CNN
+	1    12600 1450
 	1    0    0    -1  
 $EndComp
 $Comp
 L power:PWR_FLAG #FLG02
 U 1 1 5D615167
-P 12100 3400
-F 0 "#FLG02" H 12100 3475 50  0001 C CNN
-F 1 "PWR_FLAG" H 12100 3574 50  0000 C CNN
-F 2 "" H 12100 3400 50  0001 C CNN
-F 3 "~" H 12100 3400 50  0001 C CNN
-	1    12100 3400
+P 12200 1450
+F 0 "#FLG02" H 12200 1525 50  0001 C CNN
+F 1 "PWR_FLAG" H 12200 1624 50  0000 C CNN
+F 2 "" H 12200 1450 50  0001 C CNN
+F 3 "~" H 12200 1450 50  0001 C CNN
+	1    12200 1450
 	1    0    0    -1  
 $EndComp
-Text Notes 11550 3100 0    89   ~ 0
+Text Notes 11650 1150 0    89   ~ 0
 POWER FLAGS\n
-Text Notes 11400 1100 0    89   ~ 0
-CAN TRANSCEIVER\n
-Text Label 12950 2250 0    50   ~ 0
-CAN_LO
-Text Label 12950 1950 0    50   ~ 0
-CAN_HI
-Text Label 11500 2000 2    50   ~ 0
-CAN_RX
-Text Label 11500 1900 2    50   ~ 0
-CAN_TX
-$Comp
-L power:GND #PWR05
-U 1 1 5D607469
-P 11500 2300
-F 0 "#PWR05" H 11500 2050 50  0001 C CNN
-F 1 "GND" H 11505 2127 50  0000 C CNN
-F 2 "" H 11500 2300 50  0001 C CNN
-F 3 "" H 11500 2300 50  0001 C CNN
-	1    11500 2300
-	1    0    0    -1  
-$EndComp
-$Comp
-L power:GND #PWR06
-U 1 1 5D6030BB
-P 12000 2500
-F 0 "#PWR06" H 12000 2250 50  0001 C CNN
-F 1 "GND" H 12005 2327 50  0000 C CNN
-F 2 "" H 12000 2500 50  0001 C CNN
-F 3 "" H 12000 2500 50  0001 C CNN
-	1    12000 2500
-	1    0    0    -1  
-$EndComp
-$Comp
-L power:GND #PWR02
-U 1 1 5D60300D
-P 11700 1650
-F 0 "#PWR02" H 11700 1400 50  0001 C CNN
-F 1 "GND" H 11600 1650 50  0000 C CNN
-F 2 "" H 11700 1650 50  0001 C CNN
-F 3 "" H 11700 1650 50  0001 C CNN
-	1    11700 1650
-	1    0    0    -1  
-$EndComp
-$Comp
-L power:VCC #PWR01
-U 1 1 5D602F58
-P 12000 1350
-F 0 "#PWR01" H 12000 1200 50  0001 C CNN
-F 1 "VCC" H 12017 1523 50  0000 C CNN
-F 2 "" H 12000 1350 50  0001 C CNN
-F 3 "" H 12000 1350 50  0001 C CNN
-	1    12000 1350
-	1    0    0    -1  
-$EndComp
-NoConn ~ 12500 2100
-$Comp
-L template-rescue:R_200-formula R2
-U 1 1 5D5FB79E
-P 12800 2100
-F 0 "R2" V 12890 2050 50  0000 L CNN
-F 1 "R_200" V 12710 1980 50  0000 L CNN
-F 2 "footprints:R_0805_OEM" H 12730 2100 50  0001 C CNN
-F 3 "https://www.seielect.com/Catalog/SEI-RMCF_RMCP.pdf" H 12880 2100 50  0001 C CNN
-F 4 "DK" H 12800 2100 60  0001 C CNN "MFN"
-F 5 "RMCF0805JT200RCT-ND" H 12800 2100 60  0001 C CNN "MPN"
-F 6 "https://www.digikey.com/products/en?keywords=RMCF0805JT200RCT-ND" H 13280 2500 60  0001 C CNN "PurchasingLink"
-	1    12800 2100
-	1    0    0    -1  
-$EndComp
-$Comp
-L template-rescue:C_0.1uF-formula C1
-U 1 1 5D5FB603
-P 11850 1500
-F 0 "C1" V 11800 1610 50  0000 C CNN
-F 1 "C_0.1uF" V 11810 1310 50  0000 C CNN
-F 2 "footprints:C_0805_OEM" H 11888 1350 50  0001 C CNN
-F 3 "http://datasheets.avx.com/X7RDielectric.pdf" H 11875 1600 50  0001 C CNN
-F 4 "DK" H 11850 1500 60  0001 C CNN "MFN"
-F 5 "478-3352-1-ND" H 11850 1500 60  0001 C CNN "MPN"
-F 6 "https://www.digikey.com/products/en?keywords=478-3352-1-ND" H 12275 2000 60  0001 C CNN "PurchasingLink"
-	1    11850 1500
-	0    1    1    0   
-$EndComp
-$Comp
-L template-rescue:MCP2561-E_SN-formula U1
-U 1 1 5D5FAEDE
-P 12000 2100
-F 0 "U1" H 12360 2450 50  0000 C CNN
-F 1 "MCP2561-E_SN" H 12350 1740 50  0000 C CNN
-F 2 "footprints:SOIC-8_3.9x4.9mm_Pitch1.27mm_OEM" H 12000 1600 50  0001 C CIN
-F 3 "http://www.microchip.com/mymicrochip/filehandler.aspx?ddocname=en561044" H 11600 2450 50  0001 C CNN
-F 4 "DK" H 12000 2100 60  0001 C CNN "MFN"
-F 5 "MCP2561-E/SN-ND" H 12000 2100 60  0001 C CNN "MPN"
-F 6 "https://www.digikey.com/products/en?keywords=mcp2561-e%2Fsn" H 12000 2850 60  0001 C CNN "PurchasingLink"
-	1    12000 2100
-	1    0    0    -1  
-$EndComp
 $Comp
 L power:GND #PWR0108
 U 1 1 5BEE3CCE
-P 12500 3550
-F 0 "#PWR0108" H 12500 3300 50  0001 C CNN
-F 1 "GND" H 12505 3377 50  0000 C CNN
-F 2 "" H 12500 3550 50  0001 C CNN
-F 3 "" H 12500 3550 50  0001 C CNN
-	1    12500 3550
+P 12600 1600
+F 0 "#PWR0108" H 12600 1350 50  0001 C CNN
+F 1 "GND" H 12605 1427 50  0000 C CNN
+F 2 "" H 12600 1600 50  0001 C CNN
+F 3 "" H 12600 1600 50  0001 C CNN
+	1    12600 1600
 	1    0    0    -1  
 $EndComp
 Text Label 11700 850  0    118  ~ 24
@@ -1116,12 +938,12 @@ Wire Notes Line
 $Comp
 L power:VCC #PWR?
 U 1 1 5FC7EF16
-P 9050 5050
-F 0 "#PWR?" H 9050 4900 50  0001 C CNN
-F 1 "VCC" H 9065 5223 50  0000 C CNN
-F 2 "" H 9050 5050 50  0001 C CNN
-F 3 "" H 9050 5050 50  0001 C CNN
-	1    9050 5050
+P 9050 5000
+F 0 "#PWR?" H 9050 4850 50  0001 C CNN
+F 1 "VCC" H 9065 5173 50  0000 C CNN
+F 2 "" H 9050 5000 50  0001 C CNN
+F 3 "" H 9050 5000 50  0001 C CNN
+	1    9050 5000
 	1    0    0    -1  
 $EndComp
 $Comp
@@ -1169,16 +991,13 @@ F 3 "" H 9050 6600 50  0001 C CNN
 $EndComp
 Text Notes 9000 4800 0    50   ~ 0
 5V
-Connection ~ 9050 5300
 Wire Wire Line
 	9050 5300 9050 5350
-Wire Wire Line
-	9050 5300 9050 5050
 Text Notes 6700 6250 0    50   ~ 0
 Feedback Divider
 Text Notes 8900 6350 1    50   ~ 0
 5V Indicator
-Text Notes 8500 5200 0    50   ~ 0
+Text Notes 8450 5200 0    50   ~ 0
 VCC Jumper
 Text Notes 7200 5100 0    50   ~ 0
 Output Capacitors
@@ -1595,4 +1414,77 @@ Wire Notes Line
 	9550 6950 9550 4700
 Wire Notes Line
 	9550 4700 3650 4700
+$Comp
+L formula:NanoFit_VT_TH_10 U?
+U 1 1 5FCF34D8
+P 1450 7200
+F 0 "U?" H 1508 7875 50  0000 C CNN
+F 1 "NanoFit_VT_TH_10" H 1508 7784 50  0000 C CNN
+F 2 "footprints:NanoFit_VT_10" H 1450 6550 50  0001 C CNN
+F 3 "" H 1450 7200 50  0001 C CNN
+	1    1450 7200
+	1    0    0    -1  
+$EndComp
+Text Label 1650 7650 0    50   ~ 0
+SCL
+Text Label 1650 7550 0    50   ~ 0
+SDA
+Text Label 1650 7450 0    50   ~ 0
+SS_HITL
+Text Label 1650 7350 0    50   ~ 0
+SCK
+Text Label 1650 6750 0    50   ~ 0
+GND
+Text Label 1650 6850 0    50   ~ 0
+12V
+Text Label 1650 6950 0    50   ~ 0
+5V
+Text Label 1650 7050 0    50   ~ 0
+3.3V
+$Comp
+L formula:BAS40-00 D?
+U 1 1 5FD20640
+P 9050 5150
+F 0 "D?" H 9050 5250 50  0000 C CNN
+F 1 "BAS40-00" H 9050 5350 50  0000 C CNN
+F 2 "Package_TO_SOT_SMD:SOT-23" H 8950 5150 50  0001 C CNN
+F 3 "https://assets.nexperia.com/documents/data-sheet/BAS40_1PSXXSB4X_SER.pdf" H 9050 5250 50  0001 C CNN
+F 4 "DK" H 9150 5350 50  0001 C CNN "MFN"
+F 5 "1727-4234-1-ND" H 9250 5450 50  0001 C CNN "MPN"
+F 6 "https://www.digikey.com/product-detail/en/nexperia-usa-inc/BAS40215/1727-4234-1-ND/2122190" H 9350 5550 50  0001 C CNN "PurchasingLink"
+	1    9050 5150
+	0    1    1    0   
+$EndComp
+Connection ~ 9050 5300
+Text Label 2600 5600 0    50   ~ 0
+VCCUSB
+Text Label 8250 1250 1    50   ~ 0
+VCCUSB
+$Comp
+L formula:BAS40-00 D?
+U 1 1 5FD5496B
+P 2600 5450
+F 0 "D?" H 2600 5234 50  0000 C CNN
+F 1 "BAS40-00" H 2600 5325 50  0000 C CNN
+F 2 "Package_TO_SOT_SMD:SOT-23" H 2500 5450 50  0001 C CNN
+F 3 "https://assets.nexperia.com/documents/data-sheet/BAS40_1PSXXSB4X_SER.pdf" H 2600 5550 50  0001 C CNN
+F 4 "DK" H 2700 5650 50  0001 C CNN "MFN"
+F 5 "1727-4234-1-ND" H 2800 5750 50  0001 C CNN "MPN"
+F 6 "https://www.digikey.com/product-detail/en/nexperia-usa-inc/BAS40215/1727-4234-1-ND/2122190" H 2900 5850 50  0001 C CNN "PurchasingLink"
+	1    2600 5450
+	0    1    1    0   
+$EndComp
+$Comp
+L power:VCC #PWR?
+U 1 1 5FD80D62
+P 2600 5300
+F 0 "#PWR?" H 2600 5150 50  0001 C CNN
+F 1 "VCC" H 2615 5473 50  0000 C CNN
+F 2 "" H 2600 5300 50  0001 C CNN
+F 3 "" H 2600 5300 50  0001 C CNN
+	1    2600 5300
+	1    0    0    -1  
+$EndComp
+Text Label 2550 5100 0    50   ~ 0
+5V
 $EndSCHEMATC
