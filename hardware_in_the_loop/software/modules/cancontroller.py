@@ -114,3 +114,4 @@ class CANController:
         while not kill_threads.isSet():
             msg = can_bus.recv()  # No timeout (wait indefinitely)
             callback(message)
+        can_bus.shutdown()

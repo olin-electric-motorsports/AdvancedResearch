@@ -24,7 +24,7 @@ class ECU:
 
         This function allows you to monitor all of the ECU's states. It first checks its own CAN ``self.states`` dictionary,
         return the correct if it finds one. Next, it tries to use the ``IOController`` to get an I/O state from the ECU. If the
-        state is not in the CAN ``states`` dictionary and the ``ECU`` doesn't have an ``IOController``, it will raise an 
+        state is not in the CAN ``states`` dictionary and the ``ECU`` doesn't have an ``IOController``, it will raise an
         exception.
 
         :param str state: The name of the state you want. This should match the name of the state from the can spec file or the

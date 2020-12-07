@@ -11,6 +11,7 @@ Welcome to hardware_in_the_loop's documentation!
    :caption: Contents:
 
    setup
+   config
    usage/shell
    usage/tests
    modules/roadkillharness
