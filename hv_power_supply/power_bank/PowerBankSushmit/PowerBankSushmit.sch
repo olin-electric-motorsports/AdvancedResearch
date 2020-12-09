@@ -54,12 +54,12 @@ Input USB\n(To charge bat)\n
 $Comp
 L power:GND #PWR0109
 U 1 1 5F906C2E
-P 2425 6225
-F 0 "#PWR0109" H 2425 5975 50  0001 C CNN
-F 1 "GND" H 2430 6052 50  0000 C CNN
-F 2 "" H 2425 6225 50  0001 C CNN
-F 3 "" H 2425 6225 50  0001 C CNN
-	1    2425 6225
+P 2325 6200
+F 0 "#PWR0109" H 2325 5950 50  0001 C CNN
+F 1 "GND" H 2330 6027 50  0000 C CNN
+F 2 "" H 2325 6200 50  0001 C CNN
+F 3 "" H 2325 6200 50  0001 C CNN
+	1    2325 6200
 	1    0    0    -1  
 $EndComp
 $Comp
@@ -78,20 +78,9 @@ Wire Wire Line
 Wire Wire Line
 	3275 4875 3275 5425
 Connection ~ 3275 5425
-Wire Wire Line
-	1825 6025 1825 6175
-Wire Wire Line
-	1825 6175 1925 6175
-Wire Wire Line
-	2425 6175 2425 6225
-Wire Wire Line
-	1925 6025 1925 6175
-Connection ~ 1925 6175
-Wire Wire Line
-	1925 6175 2425 6175
 NoConn ~ 2225 5625
 NoConn ~ 2225 5725
-NoConn ~ 2225 5825
+NoConn ~ 2225 5525
 $Comp
 L power:GND #PWR0111
 U 1 1 5F90DDEB
@@ -2121,20 +2110,6 @@ Wire Wire Line
 Wire Wire Line
 	6350 4900 6350 5000
 $Comp
-L formula:USB_MicroB U1
-U 1 1 5FA5499B
-P 1925 5625
-F 0 "U1" H 1982 6092 50  0000 C CNN
-F 1 "USB_MicroB" H 1982 6001 50  0000 C CNN
-F 2 "formula:USB_Micro-B" H 1875 5975 50  0001 C CNN
-F 3 "https://www.molex.com/pdm_docs/sd/1050170001_sd.pdf" H 1875 5975 50  0001 C CNN
-F 4 "DK" H 2175 5375 50  0001 C CNN "MFN"
-F 5 "WM1399CT-ND" H 2275 5475 50  0001 C CNN "MPN"
-F 6 "https://www.digikey.com/product-detail/en/molex-llc/1050170001/WM1399CT-ND/2350885" H 2375 5575 50  0001 C CNN "PurchasingLink"
-	1    1925 5625
-	1    0    0    -1  
-$EndComp
-$Comp
 L formula:TP TP2
 U 1 1 5FA633AD
 P 2725 5225
@@ -2963,4 +2938,29 @@ Wire Wire Line
 Connection ~ 7000 2275
 Wire Wire Line
 	7000 2275 7000 2425
+$Comp
+L formula:USB-Micro-1981568-1 U1
+U 1 1 5FD810EB
+P 1925 5725
+F 0 "U1" H 1982 6292 50  0000 C CNN
+F 1 "USB-Micro-1981568-1" H 1982 6201 50  0000 C CNN
+F 2 "formula:TE_1981568-1" H 1725 6275 50  0001 L BNN
+F 3 "https://www.te.com/commerce/DocumentDelivery/DDEController?Action=srchrtrv&DocNm=1981568&DocType=Customer+Drawing&DocLang=English" H 1925 5725 50  0001 L BNN
+F 4 ".65 mm[.025 in]" H 1875 6275 50  0001 L BNN "Field4"
+F 5 "Connector" H 1325 6075 50  0001 L BNN "Field5"
+F 6 "1981568-1" H 1825 6275 50  0001 L BNN "Field6"
+F 7 "1981568-1" H 2075 6175 50  0001 C CNN "MPN"
+F 8 "https://www.digikey.com/en/products/detail/te-connectivity-amp-connectors/1981568-1/1786248?s=N4IgTCBcDaIIwE4AccCsA2JBaOIC6AvkA" H 1725 6275 50  0001 C CNN "Purchasing Link"
+	1    1925 5725
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2225 5825 2325 5825
+Wire Wire Line
+	2325 5825 2325 6025
+Wire Wire Line
+	2225 6025 2325 6025
+Connection ~ 2325 6025
+Wire Wire Line
+	2325 6025 2325 6200
 $EndSCHEMATC
