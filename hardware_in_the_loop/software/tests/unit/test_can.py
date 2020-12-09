@@ -7,9 +7,9 @@ from configparser import ConfigParser
 from can import Message
 
 # Project Imports
-from modules.cancontroller import CANController
-from modules.ecu import ECU
-from modules.utils import get_logging_config, artifacts_path
+from hitl.cancontroller import CANController
+from hitl.ecu import ECU
+from hitl.utils import get_logging_config, artifacts_path
 
 config = ConfigParser(interpolation=None)
 config.read(os.path.join(artifacts_path, "config.ini"))

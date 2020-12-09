@@ -2,7 +2,7 @@
 
 ## Intro
 
-This directory stores all code used to control and test with Olin Electric Motorsports' hardware-in-the-loop harness. It is organized into modules, tests, scripts, docs, and artifacts (see below).
+This directory stores all code used to control and test with Olin Electric Motorsports' hardware-in-the-loop harness. It is organized into hitl, tests, scripts, docs, and artifacts (see below).
 
 Note: All paths in this README file are given relative to the `software` directory.
 
@@ -12,9 +12,9 @@ For setup instructions and documentation, see the [project docs](awenstrup.githu
 
 ## Directory Structure
 
-### Modules
+### Hitl
 
-The modules directory contains all python classes that represent real hardware, as well as some modular software utilities. These modules make it easy to bring up and tear down a test environment; it's as simple as creating a new object.
+The hitl directory contains all python classes that represent real hardware, as well as some modular software utilities. These hitl make it easy to bring up and tear down a test environment; it's as simple as creating a new object.
 
 ### Tests
 

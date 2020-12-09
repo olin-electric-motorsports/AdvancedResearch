@@ -6,8 +6,8 @@ import logging
 from configparser import ConfigParser
 
 # Project Imports
-from modules.iocontroller import IOController
-from modules.utils import get_logging_config, artifacts_path
+from hitl.iocontroller import IOController
+from hitl.utils import get_logging_config, artifacts_path
 
 config = ConfigParser(interpolation=None)
 config.read(os.path.join(artifacts_path, "config.ini"))

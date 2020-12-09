@@ -10,7 +10,7 @@ project_file_path = os.path.abspath(os.path.join(this_file_path, os.pardir, os.p
 
 # Add this project to python path to import utils
 sys.path.append(project_file_path)
-from modules.utils import find_arduino
+from hitl.utils import find_arduino
 
 # Create udev rule
 def create_udev_rule():
@@ -39,19 +39,19 @@ def create_udev_rule():
 
 
 # SocketCAN setup
-def install_kernel_modules():
-    """Load the necessary kernel modules.
+def install_kernel_hitl():
+    """Load the necessary kernel hitl.
 
     This is necessary to interface with CAN hardware.
     See socketcan docs for details.
     """
 
-    print("Installing kernel modules...")
+    print("Installing kernel hitl...")
     os.system("sudo modprobe vcan")  # for testing
     os.system("sudo modprobe peak_usb")
     # run("sudo modprobe peak_pci") not sure if necessary
     # run("sudo modprobe can_raw") not sure if necessary
-    print("Kernel modules installed.\n")
+    print("Kernel hitl installed.\n")
 
 
 if __name__ == "__main__":
@@ -62,4 +62,4 @@ if __name__ == "__main__":
         )
 
     create_udev_rule()
-    install_kernel_modules()
+    install_kernel_hitl()

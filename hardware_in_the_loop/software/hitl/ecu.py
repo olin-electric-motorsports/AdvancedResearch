@@ -10,7 +10,7 @@ class ECU:
     ECU is passed to a CANController, I/O states can be monitored if the ECU is provided an IOController.
 
     :param str name: The name of the ECU.
-    :param modules.IOController io: An IOController for the HitL system. This optional parameter allows
+    :param hitl.IOController io: An IOController for the HitL system. This optional parameter allows
         you to check hard
     """
 

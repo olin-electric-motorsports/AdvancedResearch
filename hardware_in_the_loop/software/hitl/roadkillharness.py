@@ -5,10 +5,10 @@ import configparser
 from typing import Optional
 
 # Project imports
-from modules.ecu import ECU
-from modules.utils import get_logging_config, root_path, artifacts_path
-from modules.iocontroller import IOController
-from modules.cancontroller import CANController
+from hitl.ecu import ECU
+from hitl.utils import get_logging_config, root_path, artifacts_path
+from hitl.iocontroller import IOController
+from hitl.cancontroller import CANController
 
 
 class RoadkillHarness:

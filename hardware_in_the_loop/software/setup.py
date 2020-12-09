@@ -12,7 +12,7 @@ from setuptools import setup, find_packages
 setup(
     name="hitl",
     version="0.1.0",
-    packages=find_packages(include=["modules", "modules.*"]),
+    packages=find_packages(include=["hitl", "hitl.*"]),
     install_requires=[
         "python-can>=3.3.4",
         "pyserial>=3.4",
