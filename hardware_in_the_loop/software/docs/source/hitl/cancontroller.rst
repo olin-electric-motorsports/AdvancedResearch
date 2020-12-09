@@ -3,5 +3,5 @@ CANController
 
 API
 ---
-.. automodule:: modules.cancontroller
+.. automodule:: hitl.cancontroller
    :members:

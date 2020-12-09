@@ -3,5 +3,5 @@ ECU
 
 API
 ---
-.. automodule:: modules.ecu
+.. automodule:: hitl.ecu
    :members:

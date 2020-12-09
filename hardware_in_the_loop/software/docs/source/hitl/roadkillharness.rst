@@ -3,5 +3,5 @@ RoadkillHarness
 
 API
 ---
-.. automodule:: modules.roadkillharness
+.. automodule:: hitl.roadkillharness
    :members:

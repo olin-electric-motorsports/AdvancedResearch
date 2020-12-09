@@ -3,7 +3,7 @@ IOController
 
 API
 ---
-.. automodule:: modules.iocontroller
+.. automodule:: hitl.iocontroller
    :members:
 
 Writing pin config files

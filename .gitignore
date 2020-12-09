@@ -16,8 +16,9 @@ __pycache__/
 fp-info-cache
 *.DS_Store
 
-# Python envrionment files
+# Python stuff
 *.python-version
+**/*.egg-info
 
 # Netlist files (exported from Eeschema)
 *.net
@@ -29,6 +30,9 @@ fp-info-cache
 # Exported BOM files
 *.xml
 # *.csv (need to be more specific here)
+
+# VSCode settings
+**/.vscode/
 
 # Pytest generated assets
 **/tests/assets/

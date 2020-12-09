@@ -1,4 +1,4 @@
 Utils
 =============
-.. automodule:: modules.utils
+.. automodule:: hitl.utils
    :members:
