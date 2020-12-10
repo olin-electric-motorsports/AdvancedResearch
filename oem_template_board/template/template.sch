@@ -584,9 +584,9 @@ CAN_TX
 Text Label 14300 1950 2    50   ~ 0
 CAN_RX
 Text Label 15750 1900 0    50   ~ 0
-CAN_HI
+CAN_+
 Text Label 15750 2200 0    50   ~ 0
-CAN_LO
+CAN_-
 Text Notes 14200 1050 0    89   ~ 0
 CAN TRANSCEIVER\n
 Text Notes 2250 800  0    89   ~ 0
