@@ -13,17 +13,6 @@ Comment2 ""
 Comment3 ""
 Comment4 ""
 $EndDescr
-$Comp
-L power:GND #PWR0108
-U 1 1 5BEE3CCE
-P 15300 2800
-F 0 "#PWR0108" H 15300 2550 50  0001 C CNN
-F 1 "GND" H 15305 2627 50  0000 C CNN
-F 2 "" H 15300 2800 50  0001 C CNN
-F 3 "" H 15300 2800 50  0001 C CNN
-	1    15300 2800
-	1    0    0    -1  
-$EndComp
 Text Label 3950 2550 0    50   ~ 0
 CAN_TX
 Text Label 3950 2650 0    50   ~ 0
@@ -289,54 +278,6 @@ Text Notes 2550 1250 0    89   ~ 0
 ATMEGA 16M1\n
 Text Notes 3850 5350 0    89   ~ 0
 16 MHz CRYSTAL\n
-Text Notes 14900 2350 0    89   ~ 0
-POWER FLAGS\n
-$Comp
-L power:PWR_FLAG #FLG02
-U 1 1 5D615167
-P 14900 2650
-F 0 "#FLG02" H 14900 2725 50  0001 C CNN
-F 1 "PWR_FLAG" H 14900 2824 50  0000 C CNN
-F 2 "" H 14900 2650 50  0001 C CNN
-F 3 "~" H 14900 2650 50  0001 C CNN
-	1    14900 2650
-	1    0    0    -1  
-$EndComp
-$Comp
-L power:PWR_FLAG #FLG03
-U 1 1 5D615217
-P 15300 2650
-F 0 "#FLG03" H 15300 2725 50  0001 C CNN
-F 1 "PWR_FLAG" H 15300 2824 50  0000 C CNN
-F 2 "" H 15300 2650 50  0001 C CNN
-F 3 "~" H 15300 2650 50  0001 C CNN
-	1    15300 2650
-	1    0    0    -1  
-$EndComp
-$Comp
-L power:VCC #PWR016
-U 1 1 5D6181B6
-P 14900 2800
-F 0 "#PWR016" H 14900 2650 50  0001 C CNN
-F 1 "VCC" H 14918 2973 50  0000 C CNN
-F 2 "" H 14900 2800 50  0001 C CNN
-F 3 "" H 14900 2800 50  0001 C CNN
-	1    14900 2800
-	-1   0    0    1   
-$EndComp
-$Comp
-L power:GND #PWR017
-U 1 1 5D622997
-P 15600 2800
-F 0 "#PWR017" H 15600 2550 50  0001 C CNN
-F 1 "GND" H 15605 2627 50  0000 C CNN
-F 2 "" H 15600 2800 50  0001 C CNN
-F 3 "" H 15600 2800 50  0001 C CNN
-	1    15600 2800
-	1    0    0    -1  
-$EndComp
-Text Label 15600 2650 2    50   ~ 0
-GND
 $Comp
 L template-rescue:CONN_02X03-formula J1
 U 1 1 5D628C9D
@@ -474,12 +415,6 @@ Wire Wire Line
 Wire Wire Line
 	6950 2400 6950 2450
 Wire Wire Line
-	14900 2650 14900 2800
-Wire Wire Line
-	15300 2650 15300 2800
-Wire Wire Line
-	15600 2650 15600 2800
-Wire Wire Line
 	6850 2400 6950 2400
 Text Notes 1550 6150 0    89   ~ 0
 USB + POWER
@@ -613,27 +548,20 @@ F 6 "https://www.digikey.com/product-detail/en/molex-llc/1050170001/WM1399CT-ND/
 	1    1200 7150
 	1    0    0    -1  
 $EndComp
-Wire Wire Line
-	2000 7550 2000 6950
-Wire Wire Line
-	2000 7550 1900 7550
 $Comp
 L formula:C_10nF C6
 U 1 1 5FAF39CA
-P 1750 7550
-F 0 "C6" V 1498 7550 50  0000 C CNN
-F 1 "C_10nF" V 1589 7550 50  0000 C CNN
-F 2 "footprints:C_0805_OEM" H 1550 7550 50  0001 C CNN
-F 3 "http://www.samsungsem.com/kr/support/product-search/mlcc/__icsFiles/afieldfile/2018/07/23/CL21B103KBANNNC.pdf" H 1650 7650 50  0001 C CNN
-F 4 "DK" H 1750 7750 50  0001 C CNN "MFN"
-F 5 "1276-1015-1-ND" H 1850 7850 50  0001 C CNN "MPN"
-F 6 "https://www.digikey.com/product-detail/en/samsung-electro-mechanics/CL21B103KBANNNC/1276-1015-1-ND/3889101" H 1950 7950 50  0001 C CNN "PurchasingLink"
-	1    1750 7550
+P 2100 7550
+F 0 "C6" V 1848 7550 50  0000 C CNN
+F 1 "C_10nF" V 1939 7550 50  0000 C CNN
+F 2 "footprints:C_0805_OEM" H 1900 7550 50  0001 C CNN
+F 3 "http://www.samsungsem.com/kr/support/product-search/mlcc/__icsFiles/afieldfile/2018/07/23/CL21B103KBANNNC.pdf" H 2000 7650 50  0001 C CNN
+F 4 "DK" H 2100 7750 50  0001 C CNN "MFN"
+F 5 "1276-1015-1-ND" H 2200 7850 50  0001 C CNN "MPN"
+F 6 "https://www.digikey.com/product-detail/en/samsung-electro-mechanics/CL21B103KBANNNC/1276-1015-1-ND/3889101" H 2300 7950 50  0001 C CNN "PurchasingLink"
+	1    2100 7550
 	0    -1   -1   0   
 $EndComp
-Wire Wire Line
-	1600 7550 1500 7550
-Connection ~ 2000 6950
 $Comp
 L power:GND #PWR0107
 U 1 1 5FB2AA73
@@ -926,7 +854,7 @@ Wire Wire Line
 Wire Wire Line
 	14950 6000 15100 6000
 $Comp
-L template-rescue:ATMEGA16M1-formula U2
+L formula:ATMEGA16M1 U2
 U 1 1 5D58A7A6
 P 2850 3150
 F 0 "U2" H 3750 5010 50  0000 C CNN
@@ -991,12 +919,6 @@ Wire Notes Line
 	16000 6350 16000 3400
 Wire Notes Line
 	14100 3400 16000 3400
-Wire Notes Line
-	16000 2150 16000 3100
-Wire Notes Line
-	16000 3100 14150 3100
-Wire Notes Line
-	14150 3100 14150 2150
 Wire Notes Line
 	16000 1000 16000 1850
 Wire Notes Line
@@ -1090,8 +1012,6 @@ F 6 "https://www.digikey.com/products/en?keywords=RMCF0805JT200RCT-ND" H 15730 6
 	0    1    1    0   
 $EndComp
 Wire Notes Line
-	14150 2150 16000 2150
-Wire Notes Line
 	5100 5800 5100 9200
 Wire Notes Line
 	850  9200 5100 9200
@@ -1127,7 +1047,7 @@ F 6 "https://www.digikey.com/product-detail/en/keystone-electronics/5006/36-5006
 $EndComp
 Connection ~ 1700 6950
 Wire Wire Line
-	1700 6950 2000 6950
+	1700 6950 1900 6950
 $Comp
 L formula:TP TP1
 U 1 1 5FCB51EF
@@ -1143,7 +1063,6 @@ F 6 "https://www.digikey.com/product-detail/en/keystone-electronics/5006/36-5006
 	-1   0    0    1   
 $EndComp
 Connection ~ 1300 7550
-Connection ~ 1500 7550
 Wire Wire Line
 	1300 7550 1500 7550
 Text Label 15000 8750 2    50   ~ 0
@@ -1210,14 +1129,48 @@ Wire Wire Line
 Wire Wire Line
 	14600 8550 15000 8550
 $Comp
-L power:GND #PWR?
+L power:GND #PWR0103
 U 1 1 5FD1E507
 P 14600 8550
-F 0 "#PWR?" H 14600 8300 50  0001 C CNN
+F 0 "#PWR0103" H 14600 8300 50  0001 C CNN
 F 1 "GND" H 14605 8377 50  0000 C CNN
 F 2 "" H 14600 8550 50  0001 C CNN
 F 3 "" H 14600 8550 50  0001 C CNN
 	1    14600 8550
 	1    0    0    -1  
 $EndComp
+$Comp
+L formula:D_Zener_5.6V D?
+U 1 1 5FD3EFD3
+P 1900 7250
+F 0 "D?" V 1854 7329 50  0000 L CNN
+F 1 "D_Zener_5.6V" V 1945 7329 50  0000 L CNN
+F 2 "footprints:D_5.6V_Zener" H 1800 7250 50  0001 C CNN
+F 3 "https://www.mccsemi.com/pdf/Products/3SMBJ5918B-3SMBJ5956B(DO-214AA).pdf" H 1900 7350 50  0001 C CNN
+F 4 "DK" H 2100 7550 60  0001 C CNN "MFN"
+F 5 "3SMBJ5919B-TP" H 2000 7450 60  0001 C CNN "MPN"
+F 6 "https://www.digikey.com/en/products/detail/micro-commercial-co/3SMBJ5919B-TP/8554648" H 2300 7750 60  0001 C CNN "PurchasingLink"
+	1    1900 7250
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	1900 7100 1900 6950
+Connection ~ 1900 6950
+Wire Wire Line
+	1900 6950 2000 6950
+Wire Wire Line
+	1900 7400 1900 7550
+Connection ~ 1900 7550
+Connection ~ 1500 7550
+Wire Wire Line
+	1500 7550 1900 7550
+Wire Wire Line
+	1950 7550 1900 7550
+Wire Wire Line
+	2500 7550 2500 6950
+Wire Wire Line
+	2500 6950 2000 6950
+Connection ~ 2000 6950
+Wire Wire Line
+	2250 7550 2500 7550
 $EndSCHEMATC
