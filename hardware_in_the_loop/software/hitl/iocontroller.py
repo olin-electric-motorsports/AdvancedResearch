@@ -1,51 +1,59 @@
 # Imports
 import serial
 import logging
-from typing import Tuple
+from typing import Tuple, Union
 
 
 class IOController:
     """High level python object to interface with hardware.
 
-    Used to set analog and digital pins for simulation.
+    The ``IOController`` is used to set analog and digital pins for simulation. It
+    is configured using a ``.csv`` file, documented below. It allows a user to interact
+    with our custom hardware by getting and setting digital and analog states.
 
-    https://docs.olinelectricmotorsports.com/display/AE/IO+Controller
+    `Confluence <https://docs.olinelectricmotorsports.com/display/AE/IO+Controller>`_
+
+    :param str pin_info_path: The path to the pin_info file (should be stored in ``artifacts``).
+    :param str serial_path: The path to the serial device you are connecting to. If you are using
+        an arduino and have run ``scripts/hardware_setup.py``, then you should be able to use
+        ``/dev/arduino``. Otherwise, you might have to look for your device with ``$ ls /dev/*``
     """
 
     def __init__(self, pin_info_path: str, serial_path: str):
         # Create logger (all config should already be set by RoadkillHarness)
         self.log = logging.getLogger(name=__name__)
 
-        self.pin_info = self.read_pin_info(path=pin_info_path)
+        self.pin_info = self._read_pin_info(path=pin_info_path)
         try:
             self.serial = serial.Serial(port=serial_path, baudrate=115200, timeout=5)
         except serial.serialutil.SerialException as e:
             # Couldn't open the specified port; initialize w/o hardware for testing
-            self.log.error(f"Failed to connect to hardware at {pin_info_path}")
+            self.log.error(f"Failed to connect to hardware at {serial_path}")
             self.log.error(e)
             self.serial = None
 
     def set_state(self, pin: str, value) -> None:
         """Set the value of an IO pin in the HitL system
 
-        Args:
-            pin (str): The name of the pin to update (e.x. THROTTLE_PEDAL_1)
+        :param str pin: The name of the pin to update (e.x. THROTTLE_PEDAL_1)
+        :param Union[int,float] value: The value to set the pin to (e.x. 2.5).
+            Use 0 or 1 for digital, floating point voltage number for analog
 
-            value (int or float): The value to set the pin to (e.x. 2.5)
-                - 0 or 1 for digital, volts for analog
+        :returns: None
 
         Message format:
             4 bytes (all big endian)
 
             Byte 0:
-                Bit 0: 1 (indicates a set request)
-                Bits 1-7: Board number of the signal we want to set
+                * Bit 0: 0 (reserved bit)
+                * Bit 1: 1 (indicates a set request)
+                * Bits 2-7: Board number of the signal we want to get (0-63)
 
             Byte 1:
-                Bits 0-7: Pin number of the signal we want to set
+                * Bits 0-7: Pin number of the signal we want to set
 
             Bytes 2-3:
-                Bits 0-15: 16 bit precision value to set, with 0% = 0x0000 and  100% = 0xFFFF
+                * Bits 0-15: 16 bit precision value to set, with 0% = 0x0000 and  100% = 0xFFFF
         """
         # If no hardware, log an error
         if not self.serial:
@@ -53,7 +61,7 @@ class IOController:
             return
 
         # Byte 1
-        board = self.pin_info[pin]["board"] | (1 << 7)  # set the leftmost bit to 1 to designate message as setter
+        board = self.pin_info[pin]["board"] | (1 << 6)  # set the leftmost bit to 1 to designate message as setter
 
         # Byte 2
         pin_num = self.pin_info[pin]["pin"]
@@ -74,24 +82,24 @@ class IOController:
         self._send_request(request)
         self.log.info(f"Set state of {pin} to {value}")
 
-    def get_state(self, pin: str):
+    def get_state(self, pin: str) -> Union[int, float]:
         """Request a hardware state from the HitL system.
 
-        Args:
-            pin (str): The name of the state we want to get (e.x. "THROTTLE_POT_1", not 11)
+        :param str pin: The name of the state we want to get (e.x. "THROTTLE_POT_1", NOT 11)
+
+        :rtype:  Union[int, float]
+        :returns: The value of the requested state. If the signal is analog, returns a ``float``, otherwise an ``int``.
 
         Message format:
             2 bytes (all big endian):
 
             Byte 0:
-                Bit 0: 0 (indicates a get request)
-                Bits 1-7: Board number of the signal we want to get
+                * Bit 0: 0 (reserved bit)
+                * Bit 1: 0 (indicates a get request)
+                * Bits 2-7: Board number of the signal we want to get (0-63)
 
             Byte 1:
-                Bits 0-7: Pin number of the signal we want to get
-
-        Returns:
-            int or float: The value of the requested state
+                * Bits 0-7: Pin number of the signal we want to get
         """
         # If no hardware, log an error
         if not self.serial:
@@ -121,12 +129,14 @@ class IOController:
         self.log.info(f"Got state of {pin}: {out}")
         return out
 
-    def read_pin_info(self, path: str) -> dict:
+    def _read_pin_info(self, path: str) -> dict:
         """Read in the pin address information, given a path to a .csv file
 
         Args:
-            path: The path to the .csv file containing pin information (see
-            https://docs.google.com/spreadsheets/d/15hpe0DXfQto9N2hawawvfeHTE1sq-UT7sgDl__hCTZ4/edit?usp=sharing
+            path (str): The path to the .csv file containing pin information (see
+            `software readme <https://github.com/olin-electric-motorsports/AdvancedResearch/tree/main/hardware_in_the_loop/software>`_
+            or
+            `google docs <https://docs.google.com/spreadsheets/d/15hpe0DXfQto9N2hawawvfeHTE1sq-UT7sgDl__hCTZ4/edit?usp=sharing>`_
             for details)
 
         Returns:
@@ -212,6 +222,41 @@ class IOController:
         """
         self.log.debug(f"Sent {request}")
         self.serial.write(request)
+
+    def __enter__(self) -> None:
+        """Enter and exit functions allow signals to be set simultaneously with hardware
+
+        Send 0xFF byte to system interface
+
+        Example: When we write:
+
+            ```
+            io.set_state("STATE_1", "1")
+            io.set_state("STATE_2", "1")
+            ```
+
+        the states are set one after another. If these states are, say,
+        throttle potentiometers, the delay between these two could cause
+        problems, like an implausibility error. Now, we can use the syntax:
+
+            ```
+            with io:
+                io.set_state("STATE_1", "1")
+                io.set_state("STATE_2", "1")
+            ```
+
+        to let the hardware know we want to set these state at the same exact time,
+        minimizing any delay introduced by the serial communication/sequential
+        function calls.
+        """
+        self._send_request(bytes([0xFF]))
+
+    def __exit__(self) -> None:
+        """See docstring for __enter__ above
+
+        Send 0xFF byte to system interface
+        """
+        self._send_request(bytes([0xFF]))
 
     def __del__(self) -> None:
         """Destructor (called when the program ends)
