@@ -12,19 +12,26 @@ void setup() {
 }
 
 void loop() {
-  // put your main code here, to run repeatedly:
   int msg = Serial.read();
+  delay(20); // I was seeing bugs, maybe bc code was runnning before every message came in
+  
   if (msg >= 0) { // if -1, then there was no message
     
-    if (msg >= 128) { // this is a set request
-      int address = msg - 128; // we will ignore this for testing purposes
-      delay(20);
-      state = Serial.read(); // get the value to set
+    if (msg >> 7 == 1) { // this is a set request (4 bytes total)
+      Serial.read(); // clear byte 2 (of 4)
+      state = Serial.read(); // set state to byte 3 of 4
+      state = state << 8; // make room for next byte
+      state |= Serial.read(); // byte 4 of 4 is just least significant bits
     }
    
-    else { //this is a get request; address doesn't matter for now, return state
-      delay(20);
-      Serial.write(state);
+    else { //this is a get request (2 bytes total)
+      Serial.read(); // clear byte 2 (of 2)
+      
+      // serial.write only sends 1 byte if you give it a value
+      int m1 = state >> 8; // first 8 bits
+      int m2 = state & 0x00FF; // last 8 bits
+      Serial.write(m1);
+      Serial.write(m2);
     }
   }
 }
