@@ -1,5 +1,6 @@
 import threading
 import time
+from subprocess import run
 
 
 class Tester:
@@ -22,4 +23,9 @@ class Tester:
             callback()
 
 
-t = Tester()  # should print hello 5 times then die
+# t = Tester()  # should print hello 5 times then die
+
+try:
+    run("asdf")
+except FileNotFoundError as e:
+    print(type(e))

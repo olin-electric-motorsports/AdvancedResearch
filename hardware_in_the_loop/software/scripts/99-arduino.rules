@@ -1,1 +1,1 @@
-ATTRS{idVendor}=="2341", ATTRS{idProduct}=="0043", SYMLINK+="arduino"
+ATTRS{idVendor}=="VENDOR", ATTRS{idProduct}=="PRODUCT", SYMLINK+="arduino"

@@ -47,21 +47,21 @@ F 3 "" H 2100 9100 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L template-rescue:C_2.2uF-formula C102
+L formula:C_2.2uF C102
 U 1 1 5BEE2647
-P 2400 8950
-F 0 "C102" H 2450 8800 50  0000 L CNN
-F 1 "C_2.2uF" H 2280 9200 50  0000 L CNN
-F 2 "footprints:C_0603_1608Metric" H 2438 8800 50  0001 C CNN
-F 3 "http://www.yageo.com/documents/recent/UPY-GPHC_X5R_4V-to-50V_25.pdf" H 2425 9050 50  0001 C CNN
-F 4 "DK" H 2400 8950 60  0001 C CNN "MFN"
-F 5 "311-1451-1-ND" H 2400 8950 60  0001 C CNN "MPN"
-F 6 "https://www.digikey.com/product-detail/en/yageo/CC0603KRX5R6BB225/311-1451-1-ND/2833757" H 2825 9450 60  0001 C CNN "PurchasingLink"
-	1    2400 8950
+P 2400 9000
+F 0 "C102" H 2450 8850 50  0000 L CNN
+F 1 "C_2.2uF" H 2280 9250 50  0000 L CNN
+F 2 "footprints:C_0603_1608Metric" H 2438 8850 50  0001 C CNN
+F 3 "http://www.yageo.com/documents/recent/UPY-GPHC_X5R_4V-to-50V_25.pdf" H 2425 9100 50  0001 C CNN
+F 4 "DK" H 2400 9000 60  0001 C CNN "MFN"
+F 5 "311-1451-1-ND" H 2400 9000 60  0001 C CNN "MPN"
+F 6 "https://www.digikey.com/product-detail/en/yageo/CC0603KRX5R6BB225/311-1451-1-ND/2833757" H 2825 9500 60  0001 C CNN "PurchasingLink"
+	1    2400 9000
 	1    0    0    -1  
 $EndComp
 $Comp
-L template-rescue:C_0.1uF-formula C101
+L formula:C_0.1uF C101
 U 1 1 5BEE2923
 P 2100 8950
 F 0 "C101" H 2150 8800 50  0000 L CNN
@@ -75,7 +75,7 @@ F 6 "https://www.digikey.com/products/en?keywords=478-3352-1-ND" H 2525 9450 60 
 	1    0    0    -1  
 $EndComp
 $Comp
-L template-rescue:R_100K-formula R103
+L formula:R_100K R103
 U 1 1 5BEE2A52
 P 4000 9600
 F 0 "R103" V 4100 9550 50  0000 L CNN
@@ -89,7 +89,7 @@ F 6 "https://www.digikey.com/product-detail/en/panasonic-electronic-components/E
 	0    1    1    0   
 $EndComp
 $Comp
-L template-rescue:C_0.1uF-formula C103
+L formula:C_0.1uF C103
 U 1 1 5BEE239B
 P 4000 8750
 F 0 "C103" V 3940 8890 50  0000 C CNN
@@ -116,7 +116,7 @@ $EndComp
 Text Label 14550 8600 0    50   ~ 0
 12V
 $Comp
-L template-rescue:C_22uF-formula COUT101
+L formula:C_22uF COUT101
 U 1 1 5C061BB4
 P 4800 9050
 F 0 "COUT101" H 4690 9300 50  0000 L CNN
@@ -130,7 +130,7 @@ F 6 "https://www.digikey.com/product-detail/en/tdk-corporation/C3216JB1C226M160A
 	1    0    0    -1  
 $EndComp
 $Comp
-L template-rescue:C_47uF-formula COUT103
+L formula:C_47uF COUT103
 U 1 1 5C062E7A
 P 5600 9050
 F 0 "COUT103" H 5500 9300 50  0000 L CNN
@@ -144,7 +144,7 @@ F 6 "https://www.digikey.com/product-detail/en/samsung-electro-mechanics/CL21A47
 	1    0    0    -1  
 $EndComp
 $Comp
-L template-rescue:C_33uF-formula COUT102
+L formula:C_33uF COUT102
 U 1 1 5C08921B
 P 5200 9050
 F 0 "COUT102" H 5100 9300 50  0000 L CNN
@@ -158,7 +158,7 @@ F 6 "https://www.digikey.com/product-detail/en/tdk-corporation/C4532X7R1C336M250
 	1    0    0    -1  
 $EndComp
 $Comp
-L template-rescue:R_25K-formula R102
+L formula:R_25K R102
 U 1 1 5C0B315C
 P 3500 9600
 F 0 "R102" V 3600 9550 50  0000 L CNN
@@ -172,7 +172,7 @@ F 6 "https://www.digikey.com/product-detail/en/te-connectivity-passive-product/C
 	0    1    1    0   
 $EndComp
 $Comp
-L template-rescue:F_500mA_16V-formula F101
+L formula:F_500mA_16V F101
 U 1 1 5C0BFA29
 P 1050 8800
 F 0 "F101" V 1130 8800 50  0000 C CNN
@@ -186,7 +186,7 @@ F 6 "https://www.digikey.com/product-detail/en/bel-fuse-inc/0ZCH0050FF2G/507-178
 	0    1    1    0   
 $EndComp
 $Comp
-L template-rescue:R_0_2512-formula R104
+L formula:R_0_2512 R104
 U 1 1 5C0C29A9
 P 6150 8900
 F 0 "R104" V 5950 8900 50  0000 C CNN
@@ -200,7 +200,7 @@ F 6 "https://www.digikey.com/products/en?keywords=A121322CT-ND" H 6630 9300 60  
 	0    -1   -1   0   
 $EndComp
 $Comp
-L template-rescue:LED_0805-formula D103
+L formula:LED_0805 D103
 U 1 1 5C0C344A
 P 6550 9750
 F 0 "D103" V 6750 9730 50  0000 R CNN
@@ -214,7 +214,7 @@ F 6 "https://www.digikey.com/products/en?keywords=475-1410-1-ND" H 6950 10250 60
 	0    -1   -1   0   
 $EndComp
 $Comp
-L template-rescue:R_200-formula R105
+L formula:R_200 R105
 U 1 1 5C0C44F9
 P 6550 9150
 F 0 "R105" H 6620 9196 50  0000 L CNN
@@ -239,7 +239,7 @@ F 3 "" H 6550 10100 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L template-rescue:D_Zener_18V-formula D101
+L formula:D_Zener_18V D101
 U 1 1 5C623D49
 P 1300 9100
 F 0 "D101" H 1290 9290 50  0000 C CNN
@@ -266,7 +266,7 @@ $EndComp
 Text Label 800  8500 0    50   ~ 0
 12V
 $Comp
-L template-rescue:LED_0805-formula D102
+L formula:LED_0805 D102
 U 1 1 5C754D7D
 P 1700 9350
 F 0 "D102" V 1738 9233 50  0000 R CNN
@@ -328,23 +328,10 @@ F 3 "" H 5200 9200 50  0001 C CNN
 $EndComp
 Text Notes 5950 8800 0    50   ~ 0
 VCC Jumper\n
-$Comp
-L power:VCC #PWR0112
-U 1 1 5C74E72F
-P 6550 8750
-F 0 "#PWR0112" H 6550 8600 50  0001 C CNN
-F 1 "VCC" H 6567 8923 50  0000 C CNN
-F 2 "" H 6550 8750 50  0001 C CNN
-F 3 "" H 6550 8750 50  0001 C CNN
-	1    6550 8750
-	1    0    0    -1  
-$EndComp
-Text Notes 6650 8700 0    50   ~ 0
-5V
 Text Notes 6400 10000 1    50   ~ 0
 5V Indicator
 $Comp
-L template-rescue:ATMEGA16M1-formula U2
+L formula:ATMEGA16M1 U2
 U 1 1 5D58A7A6
 P 2550 2700
 F 0 "U2" H 3450 4560 50  0000 C CNN
@@ -370,7 +357,7 @@ SCK
 Text Label 4300 3700 0    50   ~ 0
 RESET
 $Comp
-L template-rescue:R_100-formula R1
+L formula:R_100 R1
 U 1 1 5D58E16F
 P 1150 1150
 F 0 "R1" V 1050 1100 50  0000 L CNN
@@ -384,7 +371,7 @@ F 6 "https://www.digikey.com/products/en?keywords=RNCP0805FTD100RCT-ND" H 1630 1
 	1    0    0    -1  
 $EndComp
 $Comp
-L template-rescue:C_100pF-formula C3
+L formula:C_100pF C3
 U 1 1 5D58E505
 P 1150 1450
 F 0 "C3" V 1200 1300 50  0000 L CNN
@@ -420,7 +407,7 @@ F 3 "" H 1150 1600 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L template-rescue:Crystal_SMD-formula Y1
+L formula:Crystal_SMD Y1
 U 1 1 5D5EB332
 P 4100 4100
 F 0 "Y1" H 3810 4170 50  0000 L CNN
@@ -434,7 +421,7 @@ F 6 "https://www.digikey.com/product-detail/en/txc-corporation/7M-16.000MAAJ-T/8
 	1    0    0    -1  
 $EndComp
 $Comp
-L template-rescue:C_30pF-formula C4
+L formula:C_30pF C4
 U 1 1 5D5EB5B2
 P 3900 4350
 F 0 "C4" H 3790 4430 50  0000 L CNN
@@ -448,7 +435,7 @@ F 6 "https://www.digikey.com/product-detail/en/samsung-electro-mechanics-america
 	1    0    0    -1  
 $EndComp
 $Comp
-L template-rescue:C_30pF-formula C5
+L formula:C_30pF C5
 U 1 1 5D5EB694
 P 4300 4350
 F 0 "C5" H 4320 4430 50  0000 L CNN
@@ -462,7 +449,7 @@ F 6 "https://www.digikey.com/product-detail/en/samsung-electro-mechanics-america
 	1    0    0    -1  
 $EndComp
 $Comp
-L template-rescue:R_10K-formula R3
+L formula:R_10K R3
 U 1 1 5D5EB7F3
 P 4150 3500
 F 0 "R3" V 4070 3500 50  0000 C CNN
@@ -520,17 +507,6 @@ F 3 "" H 4450 3950 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L power:VCC #PWR08
-U 1 1 5D5F7547
-P 4450 3350
-F 0 "#PWR08" H 4450 3200 50  0001 C CNN
-F 1 "VCC" H 4560 3410 50  0000 C CNN
-F 2 "" H 4450 3350 50  0001 C CNN
-F 3 "" H 4450 3350 50  0001 C CNN
-	1    4450 3350
-	1    0    0    -1  
-$EndComp
-$Comp
 L power:GND #PWR011
 U 1 1 5D5F86E8
 P 1300 4050
@@ -542,7 +518,7 @@ F 3 "" H 1300 4050 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L template-rescue:MCP2561-E_SN-formula U1
+L formula:MCP2561-E_SN U1
 U 1 1 5D5FAEDE
 P 14800 2050
 F 0 "U1" H 15160 2400 50  0000 C CNN
@@ -556,7 +532,7 @@ F 6 "https://www.digikey.com/products/en?keywords=mcp2561-e%2Fsn" H 14800 2800 6
 	1    0    0    -1  
 $EndComp
 $Comp
-L template-rescue:C_0.1uF-formula C1
+L formula:C_0.1uF C1
 U 1 1 5D5FB603
 P 14650 1450
 F 0 "C1" V 14600 1560 50  0000 C CNN
@@ -570,17 +546,6 @@ F 6 "https://www.digikey.com/products/en?keywords=478-3352-1-ND" H 15075 1950 60
 	0    1    1    0   
 $EndComp
 NoConn ~ 15300 2050
-$Comp
-L power:VCC #PWR01
-U 1 1 5D602F58
-P 14800 1300
-F 0 "#PWR01" H 14800 1150 50  0001 C CNN
-F 1 "VCC" H 14817 1473 50  0000 C CNN
-F 2 "" H 14800 1300 50  0001 C CNN
-F 3 "" H 14800 1300 50  0001 C CNN
-	1    14800 1300
-	1    0    0    -1  
-$EndComp
 $Comp
 L power:GND #PWR02
 U 1 1 5D60300D
@@ -619,9 +584,9 @@ CAN_TX
 Text Label 14300 1950 2    50   ~ 0
 CAN_RX
 Text Label 15750 1900 0    50   ~ 0
-CAN_HI
+CAN_+
 Text Label 15750 2200 0    50   ~ 0
-CAN_LO
+CAN_-
 Text Notes 14200 1050 0    89   ~ 0
 CAN TRANSCEIVER\n
 Text Notes 2250 800  0    89   ~ 0
@@ -664,44 +629,7 @@ F 3 "~" H 15350 8450 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L power:VCC #PWR016
-U 1 1 5D6181B6
-P 14950 8600
-F 0 "#PWR016" H 14950 8450 50  0001 C CNN
-F 1 "VCC" H 14968 8773 50  0000 C CNN
-F 2 "" H 14950 8600 50  0001 C CNN
-F 3 "" H 14950 8600 50  0001 C CNN
-	1    14950 8600
-	-1   0    0    1   
-$EndComp
-Text Label 14250 8600 0    50   ~ 0
-5V
-$Comp
-L power:VCC #PWR015
-U 1 1 5D61D085
-P 14250 8450
-F 0 "#PWR015" H 14250 8300 50  0001 C CNN
-F 1 "VCC" H 14267 8623 50  0000 C CNN
-F 2 "" H 14250 8450 50  0001 C CNN
-F 3 "" H 14250 8450 50  0001 C CNN
-	1    14250 8450
-	1    0    0    -1  
-$EndComp
-$Comp
-L power:GND #PWR017
-U 1 1 5D622997
-P 15650 8600
-F 0 "#PWR017" H 15650 8350 50  0001 C CNN
-F 1 "GND" H 15655 8427 50  0000 C CNN
-F 2 "" H 15650 8600 50  0001 C CNN
-F 3 "" H 15650 8600 50  0001 C CNN
-	1    15650 8600
-	1    0    0    -1  
-$EndComp
-Text Label 15650 8450 2    50   ~ 0
-GND
-$Comp
-L template-rescue:CONN_02X03-formula J1
+L formula:CONN_02X03 J1
 U 1 1 5D628C9D
 P 14850 3750
 F 0 "J1" H 14850 3960 50  0000 C CNN
@@ -733,35 +661,13 @@ F 3 "" H 15100 3850 50  0001 C CNN
 	1    15100 3850
 	1    0    0    -1  
 $EndComp
-$Comp
-L power:VCC #PWR07
-U 1 1 5D6297EA
-P 15100 3650
-F 0 "#PWR07" H 15100 3500 50  0001 C CNN
-F 1 "VCC" H 15117 3823 50  0000 C CNN
-F 2 "" H 15100 3650 50  0001 C CNN
-F 3 "" H 15100 3650 50  0001 C CNN
-	1    15100 3650
-	1    0    0    -1  
-$EndComp
 Text Notes 13850 3400 0    89   ~ 0
 16M1 PROGRAMMING HEADER\n
-$Comp
-L power:VCC #PWR018
-U 1 1 5DB132A0
-P 800 850
-F 0 "#PWR018" H 800 700 50  0001 C CNN
-F 1 "VCC" H 817 1023 50  0000 C CNN
-F 2 "" H 800 850 50  0001 C CNN
-F 3 "" H 800 850 50  0001 C CNN
-	1    800  850 
-	1    0    0    -1  
-$EndComp
 Wire Wire Line
 	1450 1300 1150 1300
 Connection ~ 1150 1300
 $Comp
-L template-rescue:C_0.1uF-formula C2
+L formula:C_0.1uF C2
 U 1 1 5D58E34B
 P 800 1150
 F 0 "C2" V 850 1010 50  0000 L CNN
@@ -837,15 +743,11 @@ Wire Wire Line
 Wire Wire Line
 	15400 2150 15400 2200
 Wire Wire Line
-	14250 8450 14250 8600
-Wire Wire Line
 	14550 8450 14550 8600
 Wire Wire Line
 	14950 8450 14950 8600
 Wire Wire Line
 	15350 8450 15350 8600
-Wire Wire Line
-	15650 8450 15650 8600
 Wire Wire Line
 	3500 8750 3850 8750
 Wire Wire Line
@@ -899,11 +801,6 @@ Wire Wire Line
 	1300 9250 1300 9350
 Connection ~ 2100 8800
 Wire Wire Line
-	2100 8800 2400 8800
-Connection ~ 2400 8800
-Wire Wire Line
-	2400 8800 2650 8800
-Wire Wire Line
 	1700 9100 1700 9200
 Wire Wire Line
 	1700 9500 1700 9650
@@ -919,7 +816,7 @@ Wire Wire Line
 Wire Wire Line
 	800  8500 800  8800
 $Comp
-L template-rescue:TPS560430YF-formula U101
+L formula:TPS560430YF U101
 U 1 1 5C75D405
 P 3100 8950
 F 0 "U101" H 3125 9415 50  0000 C CNN
@@ -974,7 +871,7 @@ F 3 "" H 5600 9200 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L template-rescue:L_100uH-formula L101
+L formula:L_100uH L101
 U 1 1 5F881F17
 P 4400 8900
 F 0 "L101" H 4400 9000 50  0000 C CNN
@@ -1020,4 +917,77 @@ Wire Wire Line
 Connection ~ 15600 2200
 Wire Wire Line
 	15600 2200 15750 2200
+Wire Wire Line
+	2100 8800 2400 8800
+$Comp
+L power:+5V #PWR?
+U 1 1 5FD33116
+P 6550 8750
+F 0 "#PWR?" H 6550 8600 50  0001 C CNN
+F 1 "+5V" H 6565 8923 50  0000 C CNN
+F 2 "" H 6550 8750 50  0001 C CNN
+F 3 "" H 6550 8750 50  0001 C CNN
+	1    6550 8750
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+5V #PWR?
+U 1 1 5FD33423
+P 800 850
+F 0 "#PWR?" H 800 700 50  0001 C CNN
+F 1 "+5V" H 815 1023 50  0000 C CNN
+F 2 "" H 800 850 50  0001 C CNN
+F 3 "" H 800 850 50  0001 C CNN
+	1    800  850 
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+5V #PWR?
+U 1 1 5FD3B2BE
+P 14800 1300
+F 0 "#PWR?" H 14800 1150 50  0001 C CNN
+F 1 "+5V" H 14815 1473 50  0000 C CNN
+F 2 "" H 14800 1300 50  0001 C CNN
+F 3 "" H 14800 1300 50  0001 C CNN
+	1    14800 1300
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+5V #PWR?
+U 1 1 5FD3C2F8
+P 15100 3650
+F 0 "#PWR?" H 15100 3500 50  0001 C CNN
+F 1 "+5V" H 15115 3823 50  0000 C CNN
+F 2 "" H 15100 3650 50  0001 C CNN
+F 3 "" H 15100 3650 50  0001 C CNN
+	1    15100 3650
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+5V #PWR?
+U 1 1 5FD3CE98
+P 14950 8600
+F 0 "#PWR?" H 14950 8450 50  0001 C CNN
+F 1 "+5V" H 14965 8773 50  0000 C CNN
+F 2 "" H 14950 8600 50  0001 C CNN
+F 3 "" H 14950 8600 50  0001 C CNN
+	1    14950 8600
+	-1   0    0    1   
+$EndComp
+Connection ~ 2400 8800
+Wire Wire Line
+	2400 8800 2650 8800
+Text Notes 3900 3050 0    50   ~ 0
+MOSI, MISO, and SCK must\nstay connected to the _A pins\nfor programming.
+$Comp
+L power:+5V #PWR?
+U 1 1 5FD477AE
+P 4450 3350
+F 0 "#PWR?" H 4450 3200 50  0001 C CNN
+F 1 "+5V" H 4465 3523 50  0000 C CNN
+F 2 "" H 4450 3350 50  0001 C CNN
+F 3 "" H 4450 3350 50  0001 C CNN
+	1    4450 3350
+	1    0    0    -1  
+$EndComp
 $EndSCHEMATC
