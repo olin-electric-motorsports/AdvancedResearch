@@ -353,4 +353,197 @@ Connection ~ 3900 1550
 Wire Wire Line
 	1650 2200 1550 2200
 Connection ~ 1650 2200
+Wire Wire Line
+	850  3750 1100 3750
+$Comp
+L formula:C_1uF C?
+U 1 1 5FD57537
+P 1100 3950
+F 0 "C?" H 1215 4046 50  0000 L CNN
+F 1 "C_1uF" H 1215 3955 50  0000 L CNN
+F 2 "footprints:C_0805_OEM" H 1138 4550 50  0001 C CNN
+F 3 "https://www.yageo.com/upload/media/product/productsearch/datasheet/mlcc/UPY-GPHC_Y5V_6.3V-to-50V_9.pdf" H 1125 4800 50  0001 C CNN
+F 4 "https://www.digikey.com/product-detail/en/yageo/CC0805ZKY5V9BB105/311-1909-1-ND/5195811#images" H 1525 4450 60  0001 C CNN "PurchasingLink"
+	1    1100 3950
+	1    0    0    -1  
+$EndComp
+Text HLabel 850  3750 0    50   Input ~ 0
+5S
+Connection ~ 2500 4850
+Wire Wire Line
+	2500 4750 2500 4850
+Wire Wire Line
+	2050 4850 2500 4850
+Text HLabel 1950 4550 0    50   Input ~ 0
+Discharge
+Wire Wire Line
+	2050 4550 1950 4550
+Connection ~ 2050 4550
+Wire Wire Line
+	2200 4550 2050 4550
+$Comp
+L formula:R_100K R?
+U 1 1 5FD49978
+P 2050 4700
+F 0 "R?" H 2120 4746 50  0000 L CNN
+F 1 "R_100K" H 2120 4655 50  0000 L CNN
+F 2 "footprints:R_0805_OEM" H 1980 4700 50  0001 C CNN
+F 3 "https://industrial.panasonic.com/cdbs/www-data/pdf/RDA0000/AOA0000C304.pdf" H 2130 4700 50  0001 C CNN
+F 4 "DK" H 2050 4700 60  0001 C CNN "MFN"
+F 5 "P100KCCT-ND" H 2050 4700 60  0001 C CNN "MPN"
+F 6 "https://www.digikey.com/product-detail/en/panasonic-electronic-components/ERJ-6ENF1003V/P100KCCT-ND/119551" H 2530 5100 60  0001 C CNN "PurchasingLink"
+	1    2050 4700
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR?
+U 1 1 5FD491A0
+P 2500 4850
+F 0 "#PWR?" H 2500 4600 50  0001 C CNN
+F 1 "GND" H 2505 4677 50  0000 C CNN
+F 2 "" H 2500 4850 50  0001 C CNN
+F 3 "" H 2500 4850 50  0001 C CNN
+	1    2500 4850
+	1    0    0    -1  
+$EndComp
+$Comp
+L formula:SSM3K333R Q?
+U 1 1 5FD46161
+P 2400 4550
+F 0 "Q?" H 2606 4596 50  0000 L CNN
+F 1 "SSM3K333R" H 2606 4505 50  0000 L CNN
+F 2 "footprints:SOT-23F" H 2600 4475 50  0001 L CIN
+F 3 "https://drive.google.com/drive/folders/0B-V-iZf33Y4GNzhDQTJZanJRbVk" H 2600 4625 50  0001 L CNN
+F 4 "DK" H 2900 4925 60  0001 C CNN "MFN"
+F 5 "SSM3K333RLFCT-ND" H 2800 4825 60  0001 C CNN "MPN"
+F 6 "https://www.digikey.com/product-detail/en/toshiba-semiconductor-and-storage/SSM3K333RLF/SSM3K333RLFCT-ND/3522391" H 2700 4725 60  0001 C CNN "PurchasingLink"
+	1    2400 4550
+	1    0    0    -1  
+$EndComp
+Text HLabel 1300 4050 0    50   Input ~ 0
+5S
+Text HLabel 3100 4050 3    50   Output ~ 0
+HV-
+Text HLabel 3100 3250 1    50   Input ~ 0
+HV+
+$Comp
+L formula:R_3K_HS R?
+U 1 1 5FD26F91
+P 3100 3400
+F 0 "R?" V 2893 3400 50  0000 C CNN
+F 1 "R_3K_HS" V 2984 3400 50  0000 C CNN
+F 2 "footprints:R_3k_HS_TO247" H 3030 3400 50  0001 C CNN
+F 3 "http://dpk3n3gg92jwt.cloudfront.net/domains/ohmite/pdf/acl_ap101.pdf" H 3180 3400 50  0001 C CNN
+F 4 "DK" H 3100 3400 60  0001 C CNN "MFN"
+F 5 "AP1013KJ-ND" H 3100 3400 60  0001 C CNN "MPN"
+F 6 "https://www.digikey.com/product-detail/en/ohmite/AP101-3K-J/AP101-3K-J-ND/5878525" H 3580 3800 60  0001 C CNN "PurchasingLink"
+F 7 "345-1223-ND" V 3680 3900 60  0001 C CNN "MPN2"
+F 8 "https://www.digikey.com/product-detail/en/wakefield-vette/657-15ABPEN/345-1223-ND/3945700" V 3780 4000 60  0001 C CNN "PurchasingLink2"
+	1    3100 3400
+	1    0    0    -1  
+$EndComp
+$Comp
+L formula:FQD2N60CTM Q?
+U 1 1 5FD240E6
+P 3100 3800
+F 0 "Q?" H 3236 3846 50  0000 L CNN
+F 1 "FQD2N60CTM" H 3236 3755 50  0000 L CNN
+F 2 "footprints:DPAK229P990X239-4N" H 3090 4260 50  0001 C CNN
+F 3 "https://www.onsemi.com/pub/Collateral/FQU2N60C-D.PDF" H 3100 3800 50  0001 C CNN
+F 4 "ON Semiconductor" H 3100 3800 50  0001 C CNN "MFN"
+F 5 "FDB33N25TM" H 3100 3800 50  0001 C CNN "MPN"
+F 6 "https://www.digikey.com/en/products/detail/on-semiconductor/FQD2N60CTM/1053993" H 3100 3800 50  0001 C CNN "Purchasing Link"
+	1    3100 3800
+	1    0    0    -1  
+$EndComp
+$Comp
+L formula:DBR71210(NC) K?
+U 1 1 5FCF383E
+P 1900 3850
+F 0 "K?" V 1333 3850 50  0000 C CNN
+F 1 "DBR71210(NC)" V 2250 3850 50  0000 C CNN
+F 2 "footprints:D-Series_Cynergy_Relay" H 2350 3800 50  0001 L CNN
+F 3 "https://www.cynergy3.com/sites/default/files/D%20series%202016_5.pdf" H 2350 3500 50  0001 L CNN
+F 4 "DK" H 2750 4400 60  0001 C CNN "MFN"
+F 5 "725-1049-ND" H 2650 4300 60  0001 C CNN "MPN"
+F 6 "https://www.digikey.com/product-detail/en/cynergy-3/DBR71210/725-1049-ND/752025" H 2850 4500 60  0001 C CNN "PurchasingLink"
+	1    1900 3850
+	0    -1   -1   0   
+$EndComp
+Connection ~ 1100 3750
+Wire Wire Line
+	1100 3750 1600 3750
+$Comp
+L power:GND #PWR?
+U 1 1 5FD6CC93
+P 1100 4050
+F 0 "#PWR?" H 1100 3800 50  0001 C CNN
+F 1 "GND" H 1105 3877 50  0000 C CNN
+F 2 "" H 1100 4050 50  0001 C CNN
+F 3 "" H 1100 4050 50  0001 C CNN
+	1    1100 4050
+	1    0    0    -1  
+$EndComp
+$Comp
+L formula:D_Zener_18V D?
+U 1 1 5FD6F617
+P 1450 4350
+F 0 "D?" H 1450 4250 50  0000 C CNN
+F 1 "D_Zener_18V" H 1450 4450 50  0000 C CNN
+F 2 "footprints:DO-214AA" H 1350 4350 50  0001 C CNN
+F 3 "http://www.mccsemi.com/up_pdf/SMBJ5338B-SMBJ5388B(SMB).pdf" H 1450 4450 50  0001 C CNN
+F 4 "DK" H 1650 4650 60  0001 C CNN "MFN"
+F 5 "SMBJ5355B-TPMSCT-ND" H 1550 4550 60  0001 C CNN "MPN"
+F 6 "https://www.digikey.com/products/en?keywords=SMBJ5355B-TPMSCT-ND" H 1850 4850 60  0001 C CNN "PurchasingLink"
+	1    1450 4350
+	-1   0    0    1   
+$EndComp
+$Comp
+L formula:Diode_600V_1A_SM D?
+U 1 1 5FD6FE42
+P 1950 4350
+F 0 "D?" H 2000 3400 50  0000 C CNN
+F 1 "Diode_600V_1A_SM" H 2050 4450 50  0000 C CNN
+F 2 "footprints:Diode_600V_1A_SM" H 1900 4500 50  0001 C CNN
+F 3 "https://www.st.com/content/ccc/resource/technical/document/datasheet/c7/d5/fe/c4/56/21/41/02/CD00005135.pdf/files/CD00005135.pdf/jcr:content/translations/en.CD00005135.pdf" H 1900 4500 50  0001 C CNN
+F 4 "https://www.digikey.com/product-detail/en/stmicroelectronics/STTH1R06A/497-3765-1-ND/691935" H 1950 4550 50  0001 C CNN "Purchasing Link"
+	1    1950 4350
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	2200 4050 2500 4050
+Wire Wire Line
+	2500 4050 2500 4350
+Wire Wire Line
+	2500 4350 2100 4350
+Connection ~ 2500 4350
+Wire Wire Line
+	1800 4350 1600 4350
+Wire Wire Line
+	1300 4350 1300 4050
+Wire Wire Line
+	1300 4050 1600 4050
+$Comp
+L formula:R_100K R?
+U 1 1 5FEA809A
+P 2700 3900
+F 0 "R?" H 2770 3946 50  0000 L CNN
+F 1 "R_100K" H 2770 3855 50  0000 L CNN
+F 2 "footprints:R_0805_OEM" H 2630 3900 50  0001 C CNN
+F 3 "https://industrial.panasonic.com/cdbs/www-data/pdf/RDA0000/AOA0000C304.pdf" H 2780 3900 50  0001 C CNN
+F 4 "DK" H 2700 3900 60  0001 C CNN "MFN"
+F 5 "P100KCCT-ND" H 2700 3900 60  0001 C CNN "MPN"
+F 6 "https://www.digikey.com/product-detail/en/panasonic-electronic-components/ERJ-6ENF1003V/P100KCCT-ND/119551" H 3180 4300 60  0001 C CNN "PurchasingLink"
+	1    2700 3900
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2200 3750 2700 3750
+Connection ~ 2700 3750
+Wire Wire Line
+	2700 3750 2800 3750
+Wire Wire Line
+	2700 4050 3100 4050
+Wire Wire Line
+	3100 3950 3100 4050
 $EndSCHEMATC

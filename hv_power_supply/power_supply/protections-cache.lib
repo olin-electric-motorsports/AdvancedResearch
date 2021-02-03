@@ -1,6 +1,29 @@
 EESchema-LIBRARY Version 2.4
 #encoding utf-8
 #
+# formula_C_1uF
+#
+DEF formula_C_1uF C 0 10 N Y 1 F N
+F0 "C" 25 150 50 H V L CNN
+F1 "formula_C_1uF" 25 -50 50 H V L CNN
+F2 "footprints:C_0805_OEM" 38 600 50 H I C CNN
+F3 "" 25 850 50 H I C CNN
+F4 "https://www.digikey.com/product-detail/en/yageo/CC0805ZKY5V9BB105/311-1909-1-ND/5195811#images" 425 500 60 H I C CNN "PurchasingLink"
+$FPLIST
+ C?
+ C_????_*
+ C_????
+ SMD*_c
+ Capacitor*
+$ENDFPLIST
+DRAW
+P 2 0 1 20 -80 20 80 20 N
+P 2 0 1 20 -80 80 80 80 N
+X ~ 1 0 200 110 D 50 50 1 1 P
+X ~ 2 0 -100 110 U 50 50 1 1 P
+ENDDRAW
+ENDDEF
+#
 # formula_DBR71210(NC)
 #
 DEF formula_DBR71210(NC) K 0 40 Y Y 1 F N
@@ -79,6 +102,40 @@ P 2 1 1 10 50 50 50 -50 N
 P 4 1 1 10 -50 -50 -50 50 50 0 -50 -50 N
 X ~ 1 -150 0 100 R 50 50 1 1 P
 X ~ 2 150 0 100 L 50 50 1 1 P
+ENDDRAW
+ENDDEF
+#
+# formula_FQD2N60CTM
+#
+DEF formula_FQD2N60CTM Q 0 40 Y Y 1 F N
+F0 "Q" -140 210 50 H V C CNN
+F1 "formula_FQD2N60CTM" -300 280 50 H V C CNN
+F2 "footprints:DPAK229P990X239-4N" -40 510 50 H I C CNN
+F3 "" -30 50 50 H I C CNN
+F4 "ON Semiconductor" -30 50 50 H I C CNN "MFN"
+F5 "FDB33N25TM" -30 50 50 H I C CNN "MPN"
+F6 "https://www.digikey.com/en/products/detail/on-semiconductor/FQD2N60CTM/1053993" -30 50 50 H I C CNN "Purchasing Link"
+DRAW
+C -35 50 111 1 1 10 N
+C 0 -20 11 1 1 0 F
+C 0 120 11 1 1 0 F
+P 2 1 1 0 -70 -20 0 -20 N
+P 2 1 1 10 -70 0 -70 -40 N
+P 2 1 1 0 -70 50 0 50 N
+P 2 1 1 10 -70 70 -70 30 N
+P 2 1 1 0 -70 120 0 120 N
+P 2 1 1 10 -70 140 -70 100 N
+P 2 1 1 0 0 -20 0 -50 N
+P 2 1 1 0 0 -20 0 50 N
+P 2 1 1 0 0 150 0 120 N
+P 3 1 1 10 -90 125 -90 -25 -90 -25 N
+P 4 1 1 0 -60 50 -20 65 -20 35 -60 50 F
+P 4 1 1 0 0 -20 30 -20 30 120 0 120 N
+P 4 1 1 0 10 70 15 65 45 65 50 60 N
+P 4 1 1 0 30 65 15 40 45 40 30 65 N
+X ~ 1 -300 50 210 R 50 50 1 1 I
+X ~ 2 0 250 100 D 50 50 1 1 P
+X ~ 3 0 -150 100 U 50 50 1 1 P
 ENDDRAW
 ENDDEF
 #
