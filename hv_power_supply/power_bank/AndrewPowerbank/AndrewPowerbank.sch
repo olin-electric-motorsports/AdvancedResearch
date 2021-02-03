@@ -465,17 +465,6 @@ Wire Wire Line
 Text Notes 1850 6250 2    50   ~ 0
 Micro USB Input
 $Comp
-L Connector_Generic:Conn_01x02 J1
-U 1 1 5FD375C1
-P 1300 5600
-F 0 "J1" H 1218 5275 50  0000 C CNN
-F 1 "Conn_01x02" H 1218 5366 50  0000 C CNN
-F 2 "" H 1300 5600 50  0001 C CNN
-F 3 "~" H 1300 5600 50  0001 C CNN
-	1    1300 5600
-	-1   0    0    1   
-$EndComp
-$Comp
 L formula:1.5A_Fuse F1
 U 1 1 5FD385D6
 P 1850 5500
@@ -506,17 +495,6 @@ Text Label 2150 5500 0    50   ~ 0
 Battery+
 Text Notes 1250 5150 0    50   ~ 0
 Battery
-$Comp
-L Connector_Generic:Conn_01x02 J2
-U 1 1 5FD3CA00
-P 1300 4700
-F 0 "J2" H 1218 4375 50  0000 C CNN
-F 1 "Conn_01x02" H 1218 4466 50  0000 C CNN
-F 2 "" H 1300 4700 50  0001 C CNN
-F 3 "~" H 1300 4700 50  0001 C CNN
-	1    1300 4700
-	-1   0    0    1   
-$EndComp
 $Comp
 L power:GND #PWR01
 U 1 1 5FD416C2
@@ -619,11 +597,6 @@ F 4 "https://www.digikey.com/product-detail/en/panasonic-electronic-components/E
 	1    2550 3300
 	1    0    0    -1  
 $EndComp
-Connection ~ 2050 3150
-Wire Wire Line
-	2050 3150 2550 3150
-Wire Wire Line
-	1850 3150 2050 3150
 $Comp
 L power:GND #PWR08
 U 1 1 5FD4DA6C
@@ -648,7 +621,6 @@ F 3 "" H 2550 2650 50  0001 C CNN
 $EndComp
 Wire Wire Line
 	2550 2950 2550 3150
-Connection ~ 2550 3150
 $Comp
 L formula:R_43k R3
 U 1 1 5FD50E99
@@ -1288,4 +1260,36 @@ Wire Wire Line
 	6500 3500 6200 3500
 Text Notes 7100 3800 2    50   ~ 0
 connect gndpwr to gnd @ fb pin gnd
+$Comp
+L formula:CONN_01x02 J2
+U 1 1 5FCC75FF
+P 1300 4700
+F 0 "J2" H 1218 4375 50  0000 C CNN
+F 1 "CONN_01x02" H 1218 4466 50  0000 C CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_1x02_P2.54mm_Vertical" H 1200 4700 50  0001 C CNN
+F 3 "https://katalog.we-online.de/em/datasheet/6130xx11121.pdf" H 1300 4800 50  0001 C CNN
+F 4 "DK" H 1400 4900 50  0001 C CNN "MFN"
+F 5 "732-5315-ND" H 1500 5000 50  0001 C CNN "MPN"
+	1    1300 4700
+	-1   0    0    1   
+$EndComp
+$Comp
+L formula:CONN_01x02 J1
+U 1 1 5FCC9A30
+P 1300 5600
+F 0 "J1" H 1218 5275 50  0000 C CNN
+F 1 "CONN_01x02" H 1218 5366 50  0000 C CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_1x02_P2.54mm_Vertical" H 1200 5600 50  0001 C CNN
+F 3 "https://katalog.we-online.de/em/datasheet/6130xx11121.pdf" H 1300 5700 50  0001 C CNN
+F 4 "DK" H 1400 5800 50  0001 C CNN "MFN"
+F 5 "732-5315-ND" H 1500 5900 50  0001 C CNN "MPN"
+	1    1300 5600
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	2550 3150 2050 3150
+Connection ~ 2550 3150
+Wire Wire Line
+	2050 3150 1850 3150
+Connection ~ 1850 7200
 $EndSCHEMATC

@@ -1,4 +1,4 @@
-19026049694377994
+19379526243519106
 Battery
 BatteryHolder_Bulgin_BX0036_1xC
 Bulgin Battery Holder, BX0036, Battery Type C (https://www.bulgin.com/products/pub/media/bulgin/data/Battery_holders.pdf)
@@ -83026,3 +83026,1543 @@ varistor SIOV
 0
 2
 2
+footprints
+7490100111A
+
+
+0
+16
+16
+footprints
+3P4T_rotary_switch
+
+
+0
+15
+15
+footprints
+4-pin_SOP
+
+
+0
+4
+4
+footprints
+4.7uH_Inductor_OEM
+
+
+0
+2
+2
+footprints
+26pos_screwsocket_.1in
+
+
+0
+26
+26
+footprints
+ABM3-8_5.0x3.2mm_P3.7mm
+
+
+0
+2
+2
+footprints
+AD623_SOIC-8
+
+
+0
+8
+8
+footprints
+ADXL335
+
+
+0
+17
+14
+footprints
+ADXL345
+
+
+0
+14
+11
+footprints
+ATMEGA_328PB_CONN
+
+
+0
+28
+28
+footprints
+Ampseal_8
+
+
+0
+8
+8
+footprints
+Ampseal_14
+
+
+0
+14
+14
+footprints
+Ampseal_23
+
+
+0
+23
+23
+footprints
+Ampseal_35
+
+
+0
+35
+35
+footprints
+B5B-PH-K-S
+
+
+0
+5
+5
+footprints
+BRL3225
+
+
+0
+2
+2
+footprints
+Bolt_connect
+
+
+0
+1
+1
+footprints
+Bolt_connect_4-40
+
+
+0
+1
+1
+footprints
+Bolt_connect_4-40_round
+
+
+0
+1
+1
+footprints
+Byron-Face-2
+
+
+0
+0
+0
+footprints
+CONN RECEPT 2MM VERT AU 10POS
+
+
+0
+10
+10
+footprints
+CP2120-QFN
+
+
+0
+22
+21
+footprints
+C_10uF_450V
+Capacitor SMD 
+capacitor
+0
+2
+2
+footprints
+C_100uF+
+
+
+0
+2
+2
+footprints
+C_100uF_35V
+
+
+0
+2
+2
+footprints
+C_0603_1608Metric
+Capacitor SMD 0603 (1608 Metric), square (rectangular) end terminal, IPC_7351 nominal, (Body size source: http://www.tortai-tech.com/upload/download/2011102023233369053.pdf), generated with kicad-footprint-generator
+capacitor
+0
+2
+2
+footprints
+C_0805_OEM
+Capacitor SMD 0805, reflow soldering, AVX (see smccp.pdf)
+capacitor 0805
+0
+2
+2
+footprints
+C_1206_OEM
+Capacitor SMD 1206, reflow soldering, AVX (see smccp.pdf)
+capacitor 1206
+0
+2
+2
+footprints
+C_1812_4532Metric
+Capacitor SMD 1812 (4532 Metric), square (rectangular) end terminal, IPC_7351 nominal, (Body size source: https://www.nikhef.nl/pub/departments/mt/projects/detectorR_D/dtddice/ERJ2G.pdf), generated with kicad-footprint-generator
+capacitor
+0
+2
+2
+footprints
+C_Radial_D10_L13_P5_OEM
+
+
+0
+2
+2
+footprints
+Converter_DCDC_MPS_MP9488
+
+
+0
+8
+8
+footprints
+Crystal_SMD_FA238
+crystal Epson Toyocom FA-238 series http://www.mouser.com/ds/2/137/1721499-465440.pdf, hand-soldering, 3.2x2.5mm^2 package
+SMD SMT crystal hand-soldering
+0
+4
+4
+footprints
+D-Series_Cynergy_Relay
+
+
+0
+4
+4
+footprints
+D2PAK
+
+
+0
+3
+3
+footprints
+DIP-5-6_W7.62mm
+5-lead though-hole mounted DIP package, row spacing 7.62 mm (300 mils)
+THT DIP DIL PDIP 2.54mm 7.62mm 300mil
+0
+5
+5
+footprints
+DO-214AA
+http://www.diodes.com/datasheets/ap02001.pdf p.144
+Diode SOD523
+0
+2
+2
+footprints
+DO-214AC
+https://www.diodes.com/assets/Package-Files/DO-214AC.pdf
+
+0
+2
+2
+footprints
+DTO25
+
+
+0
+3
+3
+footprints
+D_13V_Zener
+http://www.diodes.com/datasheets/ap02001.pdf p.144
+Diode SOD523
+0
+2
+2
+footprints
+D_0805_OEM
+Diode SMD in 0805 package http://datasheets.avx.com/schottky.pdf
+smd diode
+0
+2
+2
+footprints
+D_SOD-123W_OEM
+D_SOD-123F
+D_SOD-123F
+0
+2
+2
+footprints
+D_SOD-923
+SOD-110
+SOD-110
+0
+2
+2
+footprints
+Data-Logger-Pads
+
+
+0
+5
+5
+footprints
+Diode_600V_1A_SM
+SMA
+
+0
+2
+2
+footprints
+FC-135_3.2x1.5mm
+
+
+0
+2
+2
+footprints
+F_2A_500V
+Fuse
+
+0
+2
+2
+footprints
+F_21mA_420V
+
+
+0
+2
+2
+footprints
+Fuse_1A_600V
+
+
+0
+2
+2
+footprints
+Fuse_1206
+Fuse SMD 1206 (3216 Metric), square (rectangular) end terminal, IPC_7351 nominal, (Body size source: http://www.tortai-tech.com/upload/download/2011102023233369053.pdf), generated with kicad-footprint-generator
+resistor
+0
+2
+2
+footprints
+Fuse_1210
+Resistor SMD 1210, reflow soldering, Vishay (see dcrcw.pdf)
+resistor 1210
+0
+2
+2
+footprints
+Fuse_1812
+
+
+0
+2
+2
+footprints
+Fuse_1812_4532Metric
+Fuse SMD 1812 (4532 Metric), square (rectangular) end terminal, IPC_7351 nominal, (Body size source: https://www.nikhef.nl/pub/departments/mt/projects/detectorR_D/dtddice/ERJ2G.pdf), generated with kicad-footprint-generator
+resistor
+0
+2
+2
+footprints
+Fuse_Block_Holder
+
+
+0
+4
+2
+footprints
+Fuse_TE7_Littelfuse-807Series
+Fuse, TE5, Littlefuse/Wickmann, No. 460, No560,
+Fuse TE5 Littlefuse/Wickmann No. 460 No560 
+0
+2
+2
+footprints
+GA3460-BL
+
+
+0
+12
+12
+footprints
+HO_60_250-p0100
+
+
+0
+9
+9
+footprints
+IHLP2020BZER4R7M11
+
+
+0
+2
+2
+footprints
+IHLP2020BZER4R7M11-L_4.7_3.2A
+
+
+0
+2
+2
+footprints
+L78M05CDT-TR
+
+
+0
+3
+3
+footprints
+L6932D1.2TR
+
+
+0
+8
+8
+footprints
+LED_0805_No_Silk_OEM
+LED 0805 smd package
+LED led 0805 SMD smd SMT smt smdled SMDLED smtled SMTLED
+0
+2
+2
+footprints
+LED_0805_OEM
+LED 0805 smd package
+LED led 0805 SMD smd SMT smt smdled SMDLED smtled SMTLED
+0
+2
+2
+footprints
+LIS3DHTR
+
+
+0
+16
+16
+footprints
+LM2937-SOT-223
+module CMS SOT223 4 pins
+CMS SOT
+0
+4
+4
+footprints
+LMT85-Q1
+
+
+0
+5
+5
+footprints
+LQFP-144_20x20mm_P0.5mm
+144-Lead Plastic Low Profile Quad Flatpack (PL) - 20x20x1.40 mm Body [LQFP], 2.00 mm Footprint (see Microchip Packaging Specification 00000049BS.pdf)
+QFP 0.5
+0
+144
+144
+footprints
+LQFP-208_28x28mm_P0.5mm
+LQFP208; plastic low profile quad flat package; 208 leads; body 28 x 28 x 1.4 mm (see NXP sot459-1_po.pdf and sot459-1_fr.pdf)
+QFP 0.5
+0
+208
+208
+footprints
+LTC6820_OEM
+
+
+0
+16
+16
+footprints
+L_1.2mH
+
+
+0
+2
+2
+footprints
+L_100uH_OEM
+Resistor SMD 2512, reflow soldering, Vishay (see dcrcw.pdf)
+resistor 2512
+0
+2
+2
+footprints
+Logo_Large
+
+
+0
+0
+0
+footprints
+MCP73871T
+
+
+0
+21
+21
+footprints
+MFSOP6-4_4.4x3.6mm_Pitch1.27mm_OEM
+https://toshiba.semicon-storage.com/ap-en/design-support/package/detail.4pin%20MFSOP6.html
+MFSOP 4 pin SMD
+0
+4
+4
+footprints
+MHSS1105
+
+
+0
+3
+3
+footprints
+MLX90621ESF-BAB-000-TU
+
+
+0
+4
+4
+footprints
+Meder-LI12
+
+
+0
+4
+4
+footprints
+MicroFit_RA_2
+
+
+0
+3
+2
+footprints
+MicroFit_RA_2_SMD
+
+
+0
+4
+4
+footprints
+MicroFit_RA_4
+Molex Micro-Fit 3.0 Connector System, 43045-0400 (compatible alternatives: 43045-0401, 43045-0402), 2 Pins per row (https://www.molex.com/pdm_docs/sd/430450200_sd.pdf), generated with kicad-footprint-generator
+connector Molex Micro-Fit_3.0 top entry
+0
+4
+4
+footprints
+MicroFit_RA_06
+
+
+0
+6
+6
+footprints
+MicroFit_RA_08
+
+
+0
+8
+8
+footprints
+MicroFit_RA_10
+
+
+0
+12
+10
+footprints
+MicroFit_RA_V_2
+
+
+0
+3
+2
+footprints
+MicroFit_VT_4
+Molex Micro-Fit 3.0 Connector System, 43045-0412 (compatible alternatives: 43045-0413, 43045-0424), 2 Pins per row (http://www.molex.com/pdm_docs/sd/430450212_sd.pdf), generated with kicad-footprint-generator
+connector Molex Micro-Fit_3.0 side entry
+0
+4
+4
+footprints
+MicroFit_VT_6
+Molex Micro-Fit 3.0 Connector System, 43045-0612 (compatible alternatives: 43045-0613, 43045-0624), 3 Pins per row (http://www.molex.com/pdm_docs/sd/430450212_sd.pdf), generated with kicad-footprint-generator
+connector Molex Micro-Fit_3.0 side entry
+0
+6
+6
+footprints
+MicroFit_VT_10
+
+
+0
+12
+10
+footprints
+MicroFit_VT_12
+Molex Micro-Fit 3.0 Connector System, 43045-1212 (compatible alternatives: 43045-1213, 43045-1224), 6 Pins per row (http://www.molex.com/pdm_docs/sd/430450212_sd.pdf), generated with kicad-footprint-generator
+connector Molex Micro-Fit_3.0 side entry
+0
+12
+12
+footprints
+MicroFit_V_2
+
+
+0
+2
+2
+footprints
+Microfit3_Header_02x06_Angled_OEM
+Microfit3 header angled 02x06 43045-1200
+connector Microfit 02x06 angled 3mm pitch
+0
+12
+12
+footprints
+Molex_MicroFit_3.0-11x3.00mm_Angled
+Molex Micro-Fit 3.0 connector, PN:43045-2211, top entry type, SMDhttp://www.molex.com/pdm_docs/sd/430450211_sd.pdf
+conn molex micro fit 3.0
+0
+13
+11
+footprints
+Molex_Microfit3_Header_02x10_Angled_OEM
+Microfit3 header angled 02x10 43045-2000
+connector Microfit 02x10 angled 3mm pitch
+0
+20
+20
+footprints
+Molex_Microfit3_Header_02x12_Straight_0444322401_OEM
+Microfit3 Header Straight 02x12 43045-2428
+connector Microfit 02x12 header straight 3mm
+0
+24
+24
+footprints
+Molex_NanoFit_1x02x2.50mm_Angled_OEM
+Molex Nano Fit, single row, side entry, through hole, Datasheet:http://www.molex.com/pdm_docs/sd/1053131208_sd.pdf
+connector molex nano-fit 105313-xx04
+0
+2
+2
+footprints
+Mounting_Hole_4-40
+
+
+0
+1
+1
+footprints
+NHD-0216K1Z-FL-YBW_LCD
+http://www.icbank.com/data/ICBShop/board/HY1602E.pdf
+LCD 16x2 Alphanumeric 16pin
+0
+20
+17
+footprints
+NHD-0216K1Z-FL-YBW_LCD--NoTopHole
+http://www.icbank.com/data/ICBShop/board/HY1602E.pdf
+LCD 16x2 Alphanumeric 16pin
+0
+18
+17
+footprints
+NanoFit_Molex_1x02x2.50mm_Angled_OEM
+Molex Nano Fit, single row, side entry, through hole, Datasheet:http://www.molex.com/pdm_docs/sd/1053131208_sd.pdf
+connector molex nano-fit 105313-xx04
+0
+2
+2
+footprints
+NanoFit_RA_4
+Molex Nano-Fit Power Connectors, 105314-xx04, 2 Pins per row (http://www.molex.com/pdm_docs/sd/1053141208_sd.pdf), generated with kicad-footprint-generator
+connector Molex Nano-Fit top entry
+0
+4
+4
+footprints
+NanoFit_RA_6
+Molex Nano-Fit Power Connectors, 105314-xx06, 3 Pins per row (http://www.molex.com/pdm_docs/sd/1053141208_sd.pdf), generated with kicad-footprint-generator
+connector Molex Nano-Fit top entry
+0
+6
+6
+footprints
+NanoFit_RA_8
+Molex Nano-Fit Power Connectors, 105314-xx08, 4 Pins per row (http://www.molex.com/pdm_docs/sd/1053141208_sd.pdf), generated with kicad-footprint-generator
+connector Molex Nano-Fit top entry
+0
+8
+8
+footprints
+NanoFit_RA_10
+Molex Nano-Fit Power Connectors, 105314-xx10, 5 Pins per row (http://www.molex.com/pdm_docs/sd/1053141208_sd.pdf), generated with kicad-footprint-generator
+connector Molex Nano-Fit top entry
+0
+10
+10
+footprints
+NanoFit_RA_12
+Molex Nano-Fit Power Connectors, 105314-xx12, 6 Pins per row (http://www.molex.com/pdm_docs/sd/1053141208_sd.pdf), generated with kicad-footprint-generator
+connector Molex Nano-Fit top entry
+0
+12
+12
+footprints
+NanoFit_RA_SMT_4
+1054051104-3
+Connector
+0
+6
+6
+footprints
+NanoFit_RA_TH_4
+Molex Nano-Fit Power Connectors, 105314-xx04, 2 Pins per row (http://www.molex.com/pdm_docs/sd/1053141208_sd.pdf), generated with kicad-footprint-generator
+connector Molex Nano-Fit top entry
+0
+4
+4
+footprints
+NanoFit_RA_TH_6
+Molex Nano-Fit Power Connectors, 105314-xx06, 3 Pins per row (http://www.molex.com/pdm_docs/sd/1053141208_sd.pdf), generated with kicad-footprint-generator
+connector Molex Nano-Fit top entry
+0
+6
+6
+footprints
+NanoFit_RA_TH_8
+Molex Nano-Fit Power Connectors, 105314-xx08, 4 Pins per row (http://www.molex.com/pdm_docs/sd/1053141208_sd.pdf), generated with kicad-footprint-generator
+connector Molex Nano-Fit top entry
+0
+8
+8
+footprints
+NanoFit_RA_TH_10
+Molex Nano-Fit Power Connectors, 105314-xx10, 5 Pins per row (http://www.molex.com/pdm_docs/sd/1053141208_sd.pdf), generated with kicad-footprint-generator
+connector Molex Nano-Fit top entry
+0
+10
+10
+footprints
+NanoFit_RA_TH_12
+Molex Nano-Fit Power Connectors, 105314-xx12, 6 Pins per row (http://www.molex.com/pdm_docs/sd/1053141208_sd.pdf), generated with kicad-footprint-generator
+connector Molex Nano-Fit top entry
+0
+12
+12
+footprints
+NanoFit_VT_10
+Molex Nano-Fit Power Connectors, 105310-xx10, 5 Pins per row (http://www.molex.com/pdm_docs/sd/1053101208_sd.pdf), generated with kicad-footprint-generator
+connector Molex Nano-Fit side entry
+0
+10
+10
+footprints
+NanoFit_VT_12
+Molex Nano-Fit Power Connectors, 105310-xx12, 6 Pins per row (http://www.molex.com/pdm_docs/sd/1053101208_sd.pdf), generated with kicad-footprint-generator
+connector Molex Nano-Fit side entry
+0
+12
+12
+footprints
+NanoFit_VT_TH_10
+Molex Nano-Fit Power Connectors, 105310-xx10, 5 Pins per row (http://www.molex.com/pdm_docs/sd/1053101208_sd.pdf), generated with kicad-footprint-generator
+connector Molex Nano-Fit side entry
+0
+10
+10
+footprints
+NanoFit_VT_TH_12
+Molex Nano-Fit Power Connectors, 105310-xx12, 6 Pins per row (http://www.molex.com/pdm_docs/sd/1053101208_sd.pdf), generated with kicad-footprint-generator
+connector Molex Nano-Fit side entry
+0
+12
+12
+footprints
+OE Logo ft
+
+
+0
+0
+0
+footprints
+Olin_Electric_Smaller
+
+
+0
+0
+0
+footprints
+Olin_O
+
+
+0
+0
+0
+footprints
+POT_TRIM_20k
+
+
+0
+3
+3
+footprints
+PWR163
+
+
+0
+3
+3
+footprints
+PinHeader_1x10_P2.54mm_Vertical
+Through hole straight pin header, 1x10, 2.54mm pitch, single row
+Through hole pin header THT 1x10 2.54mm single row
+0
+10
+10
+footprints
+PinHeader_1x11_P2.54mm_Vertical
+Through hole straight pin header, 1x11, 2.54mm pitch, single row
+Through hole pin header THT 1x11 2.54mm single row
+0
+11
+11
+footprints
+PinHeader_2x20_P2.54mm_Vertical
+Through hole straight pin header, 2x20, 2.54mm pitch, double rows
+Through hole pin header THT 2x20 2.54mm double row
+0
+40
+40
+footprints
+PinSocket_2x02_P2.54mm_Vertical
+Through hole straight socket strip, 2x02, 2.54mm pitch, double cols (from Kicad 4.0.7), script generated
+Through hole socket strip THT 2x02 2.54mm double row
+0
+4
+4
+footprints
+Pin_Header_Straight_2x03
+Through hole pin header
+pin header
+0
+6
+6
+footprints
+Pin_Header_Straight_2x10
+Through hole pin header
+pin header
+0
+20
+20
+footprints
+Potentiometer_Trimmer_Bourns_TCC3
+Spindle Trimmer Potentiometer, Bourns 3224J, https://www.bourns.com/pdfs/3224.pdf
+Spindle Trimmer Potentiometer   Bourns 3224J
+0
+3
+3
+footprints
+Pushbutton
+
+
+0
+4
+2
+footprints
+QFN-24-1EP_4x4mm_P0.5mm_EP2.6x2.6mm_ThermalVias
+QFN, 24 Pin (http://ww1.microchip.com/downloads/en/PackagingSpec/00000049BQ.pdf (Page 278)), generated with kicad-footprint-generator ipc_dfn_qfn_generator.py
+QFN DFN_QFN
+0
+39
+25
+footprints
+QFN20
+
+
+0
+20
+20
+footprints
+QFP50P900X900X120-48N
+BQ79606PHPRQ1
+Integrated Circuit
+0
+48
+48
+footprints
+R4.7k_0805_OEM
+Resistor SMD 0805, reflow soldering, Vishay (see dcrcw.pdf)
+resistor 0805
+0
+2
+2
+footprints
+RJ45-RightAngle
+
+
+0
+14
+14
+footprints
+RJ45-Vertical
+
+
+0
+14
+14
+footprints
+R_1K_HV
+Resistor, Radial_Power series, Radial, pin pitch=5.00mm, 2W, length*width=11*7mm^2, http://www.vishay.com/docs/30218/cpcx.pdf
+Resistor Radial_Power series Radial pin pitch 5.00mm 2W length 11mm width 7mm
+0
+2
+2
+footprints
+R_1k_HS_TO247
+Resistor, Radial_Power series, Radial, pin pitch=5.00mm, 2W, length*width=11*7mm^2, http://www.vishay.com/docs/30218/cpcx.pdf
+Resistor Radial_Power series Radial pin pitch 5.00mm 2W length 11mm width 7mm
+0
+2
+2
+footprints
+R_3k_HS_TO247
+Resistor, Radial_Power series, Radial, pin pitch=5.00mm, 2W, length*width=11*7mm^2, http://www.vishay.com/docs/30218/cpcx.pdf
+Resistor Radial_Power series Radial pin pitch 5.00mm 2W length 11mm width 7mm
+0
+4
+4
+footprints
+R_10K_HV
+Resistor, Radial_Power series, Radial, pin pitch=5.00mm, 2W, length*width=11*7mm^2, http://www.vishay.com/docs/30218/cpcx.pdf
+Resistor Radial_Power series Radial pin pitch 5.00mm 2W length 11mm width 7mm
+0
+2
+2
+footprints
+R_0402_OEM
+Resistor SMD 0402, reflow soldering, Vishay (see dcrcw.pdf)
+resistor 0402
+0
+2
+2
+footprints
+R_0603_1608Metric
+Resistor SMD 0603 (1608 Metric), square (rectangular) end terminal, IPC_7351 nominal, (Body size source: http://www.tortai-tech.com/upload/download/2011102023233369053.pdf), generated with kicad-footprint-generator
+resistor
+0
+2
+2
+footprints
+R_0805_OEM
+Resistor SMD 0805, reflow soldering, Vishay (see dcrcw.pdf)
+resistor 0805
+0
+2
+2
+footprints
+R_2512_OEM
+Resistor SMD 2512, reflow soldering, Vishay (see dcrcw.pdf)
+resistor 2512
+0
+2
+2
+footprints
+R_TSMP_SMD_5329
+
+
+0
+2
+2
+footprints
+Relay_SPDT_OMRON-G2RL-1-E
+Relay SPDT Omron Serie G6E
+Relay SPDT Omron Serie G6E 1x um
+0
+8
+8
+footprints
+Relay_SPST_OMRON-G5Q-1A4_OEM
+Relay SPST-NO Omron Serie G5Q
+Relay SPST-NO Omron Serie G5Q
+0
+4
+4
+footprints
+Relay_SPST_OMRON-G6C
+Relay SPST-NO Omron Serie G5Q
+Relay SPST-NO Omron Serie G5Q
+0
+4
+3
+footprints
+SAMTEC_USB-A-S-X-X-SM2
+
+
+0
+6
+6
+footprints
+SC-70-5_MCP6001
+
+
+0
+5
+5
+footprints
+SEGMENT_BICOL_BL-AR12Z3010
+SOUCE: HTTP://WWW.BETLUX.COM/PRODUCT/LED_LIGHT_BAR/BL-AR12B3010XX.PDF
+SOUCE: HTTP://WWW.BETLUX.COM/PRODUCT/LED_LIGHT_BAR/BL-AR12B3010XX.PDF
+0
+14
+14
+footprints
+SK6812
+
+
+0
+4
+4
+footprints
+SM_5
+
+
+0
+2
+2
+footprints
+SOIC-8_3.9x4.9mm_Pitch1.27mm_OEM
+8-Lead Plastic Small Outline (SN) - Narrow, 3.90 mm Body [SOIC] (see Microchip Packaging Specification 00000049BS.pdf)
+SOIC 1.27
+0
+8
+8
+footprints
+SOP28
+
+
+0
+28
+28
+footprints
+SOT-23-3_OEM
+5-pin SOT23 package
+SOT-23-5
+0
+3
+3
+footprints
+SOT-23-5
+5-pin SOT23 package
+SOT-23-5
+0
+5
+5
+footprints
+SOT-23-5_OEM
+5-pin SOT23 package
+SOT-23-5
+0
+5
+5
+footprints
+SOT-23-5_OEM_24AA01
+5-pin SOT23 package
+SOT-23-5
+0
+5
+5
+footprints
+SOT-23-6_OEM
+6-pin SOT-23 package
+SOT-23-6
+0
+6
+6
+footprints
+SOT-23F
+SOT-23, Standard
+SOT-23
+0
+3
+3
+footprints
+SOT-89-3
+SOT-89-3
+SOT-89-3
+0
+6
+3
+footprints
+SOT-223
+module CMS SOT223 4 pins
+CMS SOT
+0
+4
+4
+footprints
+SSO-8
+
+
+0
+8
+8
+footprints
+SSOP-16_LTC1380
+
+
+0
+16
+16
+footprints
+SSOP5
+5-pin SOT23 package
+SOT-23-5
+0
+5
+5
+footprints
+SU-48
+48-TQFP
+
+0
+48
+48
+footprints
+SW_B3U-1000P_4.2x1.7mm
+
+
+0
+2
+2
+footprints
+ScrewTerminal_TE_282834-5_1x05_P2.54mm_Horizontal
+Terminal Block TE 282834-5, 5 pins, pitch 2.54mm, size 13.16x6.5mm^2, drill diamater 1.1mm, pad diameter 2.1mm, see http://www.te.com/commerce/DocumentDelivery/DDEController?Action=showdoc&DocId=Customer+Drawing%7F282834%7FC1%7Fpdf%7FEnglish%7FENG_CD_282834_C1.pdf, script-generated using https://github.com/pointhi/kicad-footprint-generator/scripts/TerminalBlock_TE-Connectivity
+THT Terminal Block TE 282834-5 pitch 2.54mm size 13.16x6.5mm^2 drill 1.1mm pad 2.1mm
+0
+5
+5
+footprints
+Small_OE_Logo
+
+
+0
+0
+0
+footprints
+TE_1-776180-1_35_RA
+
+
+0
+35
+35
+footprints
+TE_1981568-1
+
+
+0
+11
+11
+footprints
+TO-92-3_Inline_Narrow_Oval
+TO-92 leads in-line, narrow, oval pads, drill 0.6mm (see NXP sot054_po.pdf)
+to-92 sc-43 sc-43a sot54 PA33 transistor
+0
+3
+3
+footprints
+TO-220NFM
+
+
+0
+2
+2
+footprints
+TO-252-2
+TO-252 / DPAK SMD package, http://www.infineon.com/cms/en/product/packages/PG-TO252/PG-TO252-3-1/
+DPAK TO-252 DPAK-3 TO-252-3 SOT-428
+0
+7
+3
+footprints
+TO-263-2-Heatsink
+TO-263 / D2PAK / DDPAK SMD package, http://www.infineon.com/cms/en/product/packages/PG-TO263/PG-TO263-3-1/
+D2PAK DDPAK TO-263 D2PAK-3 TO-263-3 SOT-404
+0
+5
+2
+footprints
+TPS61090RSAR
+
+
+0
+17
+17
+footprints
+TPS563208DDCR
+
+
+0
+6
+6
+footprints
+TQFP-32_7x7mm_Pitch0.8mm
+32-Lead Plastic Thin Quad Flatpack (PT) - 7x7x1.0 mm Body, 2.00 mm [TQFP] (see Microchip Packaging Specification 00000049BS.pdf)
+QFP 0.8
+0
+32
+32
+footprints
+TSSOP-16-OEM
+
+
+0
+16
+16
+footprints
+TSSOP-20_EXPOSED_PAD
+
+
+0
+21
+21
+footprints
+TSSOP-48_LTC6811-1
+TSSOP48: plastic thin shrink small outline package; 48 leads; body width 6.1 mm (see NXP SSOP-TSSOP-VSO-REFLOW.pdf and sot362-1_po.pdf)
+SSOP 0.5
+0
+48
+48
+footprints
+T_LAN_7490100111A
+
+
+0
+16
+16
+footprints
+T_LAN_SM91501ALE
+
+
+0
+12
+12
+footprints
+TacoCorey
+
+
+0
+0
+0
+footprints
+Test_Point_SMD
+
+
+0
+1
+1
+footprints
+Thermistor
+
+
+0
+2
+2
+footprints
+Trim_Pot
+
+
+0
+3
+3
+footprints
+USB_Micro-B
+Micro USB Type B Receptacle
+USB USB_B USB_micro USB_OTG
+0
+9
+6
+footprints
+USB_Micro-B_Molex-105017-0001
+http://www.molex.com/pdm_docs/sd/1050170001_sd.pdf
+Micro-USB SMD Typ-B
+0
+13
+6
+footprints
+Ultrafit_2
+
+
+0
+3
+2
+footprints
+Ultrafit_2_RA
+
+
+0
+3
+2
+footprints
+Ultrafit_4
+
+
+0
+5
+4
+footprints
+Ultrafit_4_RA
+
+
+0
+6
+4
+footprints
+Ultrafit_5
+
+
+0
+6
+5
+footprints
+ZXRE160
+SOT-353, SC-70-5
+SOT-353 SC-70-5
+0
+5
+5
+footprints
+barrel_jack_PJ-037A
+
+
+0
+2
+2
+footprints
+bmi088
+
+
+0
+16
+16
+footprints
+fuse_block
+
+
+0
+12
+12
+footprints
+iso_spi_cutout
+Molex Nano Fit, single row, side entry, through hole, Datasheet:http://www.molex.com/pdm_docs/sd/1053131208_sd.pdf
+connector molex nano-fit 105313-xx04
+0
+2
+2
+footprints
+micromatch_female_ra_4
+
+
+0
+4
+4
+footprints
+micromatch_female_ra_6
+
+
+0
+6
+6
+footprints
+micromatch_female_ra_8
+
+
+0
+8
+8
+footprints
+micromatch_female_ra_10
+
+
+0
+10
+10
+footprints
+micromatch_female_ra_12
+
+
+0
+12
+12
+footprints
+micromatch_female_ra_14
+
+
+0
+14
+14
+footprints
+micromatch_female_ra_16
+
+
+0
+16
+16
+footprints
+micromatch_female_ra_18
+
+
+0
+18
+18
+footprints
+micromatch_female_ra_20
+
+
+0
+20
+20
+footprints
+micromatch_female_vert_4
+
+
+0
+5
+5
+footprints
+micromatch_female_vert_6
+
+
+0
+7
+7
+footprints
+micromatch_female_vert_8
+
+
+0
+9
+9
+footprints
+micromatch_female_vert_10
+
+
+0
+11
+11
+footprints
+micromatch_female_vert_14
+
+
+0
+15
+15
+footprints
+micromatch_female_vert_16
+
+
+0
+17
+17
+footprints
+micromatch_female_vert_18
+
+
+0
+19
+19
+footprints
+micromatch_female_vert_20
+
+
+0
+21
+21
+footprints
+micromatch_female_vt_12
+
+
+0
+13
+13
+footprints
+micromatch_via
+
+
+0
+1
+0
+footprints
+mx150l_2
+
+
+0
+6
+6
+footprints
+phoenix
+
+
+0
+0
+0
+footprints
+redcube_7461166
+
+
+0
+13
+1
+footprints
+sd_socket_molex_5009980900
+
+
+0
+16
+12
+footprints
+thumb_pot
+
+
+0
+3
+3
+footprints
+tp_1.6mm
+
+
+0
+1
+1
