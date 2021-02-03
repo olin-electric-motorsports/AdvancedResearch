@@ -1,0 +1,4 @@
+(sym_lib_table
+  (lib (name template-rescue)(type Legacy)(uri ${KIPRJMOD}/template-rescue.lib)(options "")(descr ""))
+  (lib (name SS-HITL-Schematic-rescue)(type Legacy)(uri "${KIPRJMOD}/SS HITL Schematic-rescue.lib")(options "")(descr ""))
+)
