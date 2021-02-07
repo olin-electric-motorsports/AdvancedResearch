@@ -717,18 +717,11 @@ F 3 "" H 5650 3350 50  0001 C CNN
 	1    5650 3350
 	1    0    0    -1  
 $EndComp
-Connection ~ 7050 3350
 Connection ~ 7050 2550
 Wire Wire Line
 	7050 2550 7050 2650
 Wire Wire Line
 	7050 2450 7050 2550
-Wire Wire Line
-	7050 3150 7050 3250
-Wire Wire Line
-	7050 3250 7050 3350
-Connection ~ 7050 3250
-Connection ~ 5650 2500
 $Comp
 L formula:GNDPWR #PWR031
 U 1 1 5FD67282
@@ -738,24 +731,6 @@ F 1 "GNDPWR" H 7054 3196 50  0000 C CNN
 F 2 "" H 7050 3300 50  0001 C CNN
 F 3 "" H 7050 3300 50  0001 C CNN
 	1    7050 3350
-	1    0    0    -1  
-$EndComp
-$Comp
-L formula:TPS61090RSAR U3
-U 1 1 5FD57E24
-P 6350 2800
-F 0 "U3" H 6350 3370 50  0000 C CNN
-F 1 "TPS61090RSAR" H 6350 3279 50  0000 C CNN
-F 2 "footprints:TPS61090RSAR" H 6100 3400 50  0001 L BNN
-F 3 "https://www.ti.com/lit/ds/symlink/tps61090.pdf?HQS=TI-null-null-digikeymode-df-pf-null-wwe&ts=1601340035977" H 6350 2800 50  0001 L BNN
-F 4 "1.48 USD" H 6200 3350 50  0001 L BNN "Field4"
-F 5 "TPS61090RSAR" H 6150 3250 50  0001 L BNN "Field5"
-F 6 "2A Switch, 96% Efficient Boost Converter 16-QFN -40 to 85" H 6800 3400 50  0001 L BNN "Field6"
-F 7 "Good" H 6150 3400 50  0001 L BNN "Field7"
-F 8 "VQFN-16 Texas Instruments" H 6050 3350 50  0001 L BNN "Field8"
-F 9 "Texas Instruments" H 6100 3350 50  0001 L BNN "Field9"
-F 10 "https://www.digikey.com/product-detail/en/texas-instruments/TPS61090RSAR/296-15259-1-ND/566899" H 6950 3400 50  0001 C CNN "Purchasing Link"
-	1    6350 2800
 	1    0    0    -1  
 $EndComp
 $Comp
@@ -949,120 +924,74 @@ $EndComp
 $Comp
 L formula:TP TP1
 U 1 1 5FDAB347
-P 7300 3650
-F 0 "TP1" H 7222 3496 50  0000 R CNN
-F 1 "TP" H 7222 3587 50  0000 R CNN
-F 2 "footprints:tp_1.6mm" H 7200 3550 50  0001 C CNN
-F 3 "http://www.keyelco.com/product-pdf.cfm?p=1314" H 7300 3650 50  0001 C CNN
-F 4 "DK" H 7400 3750 50  0001 C CNN "MFN"
-F 5 "36-5006-ND" H 7500 3850 50  0001 C CNN "MPN"
-F 6 "https://www.digikey.com/product-detail/en/keystone-electronics/5006/36-5006-ND/255330" H 7600 3950 50  0001 C CNN "PurchasingLink"
-	1    7300 3650
+P 7300 3550
+F 0 "TP1" H 7222 3396 50  0000 R CNN
+F 1 "TP" H 7222 3487 50  0000 R CNN
+F 2 "footprints:tp_1.6mm" H 7200 3450 50  0001 C CNN
+F 3 "http://www.keyelco.com/product-pdf.cfm?p=1314" H 7300 3550 50  0001 C CNN
+F 4 "DK" H 7400 3650 50  0001 C CNN "MFN"
+F 5 "36-5006-ND" H 7500 3750 50  0001 C CNN "MPN"
+F 6 "https://www.digikey.com/product-detail/en/keystone-electronics/5006/36-5006-ND/255330" H 7600 3850 50  0001 C CNN "PurchasingLink"
+	1    7300 3550
 	-1   0    0    1   
 $EndComp
-Wire Wire Line
-	7050 3050 7300 3050
-Wire Wire Line
-	7300 3050 7300 3450
-$Comp
-L formula:R_10K R15
-U 1 1 5FDB0AE9
-P 7600 3600
-F 0 "R15" H 7670 3646 50  0000 L CNN
-F 1 "R_10K" H 7670 3555 50  0000 L CNN
-F 2 "footprints:R_0805_OEM" H 7530 3600 50  0001 C CNN
-F 3 "http://www.bourns.com/data/global/pdfs/CRS.pdf" H 7680 3600 50  0001 C CNN
-F 4 "DK" H 7600 3600 60  0001 C CNN "MFN"
-F 5 "CRS0805-FX-1002ELFCT-ND" H 7600 3600 60  0001 C CNN "MPN"
-F 6 "https://www.digikey.com/products/en?keywords=CRS0805-FX-1002ELFCT-ND" H 8080 4000 60  0001 C CNN "PurchasingLink"
-	1    7600 3600
-	1    0    0    -1  
-$EndComp
-$Comp
-L power:GND #PWR034
-U 1 1 5FDB1DC6
-P 7600 3750
-F 0 "#PWR034" H 7600 3500 50  0001 C CNN
-F 1 "GND" H 7605 3577 50  0000 C CNN
-F 2 "" H 7600 3750 50  0001 C CNN
-F 3 "" H 7600 3750 50  0001 C CNN
-	1    7600 3750
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	7300 3450 7600 3450
-Connection ~ 7300 3450
 $Comp
 L formula:SSM3K333R Q1
 U 1 1 5FDB5B69
-P 7950 3450
-F 0 "Q1" H 8156 3496 50  0000 L CNN
-F 1 "SSM3K333R" H 8156 3405 50  0000 L CNN
-F 2 "footprints:SOT-23F" H 8150 3375 50  0001 L CIN
-F 3 "https://drive.google.com/drive/folders/0B-V-iZf33Y4GNzhDQTJZanJRbVk" H 8150 3525 50  0001 L CNN
-F 4 "DK" H 8450 3825 60  0001 C CNN "MFN"
-F 5 "SSM3K333RLFCT-ND" H 8350 3725 60  0001 C CNN "MPN"
-F 6 "https://www.digikey.com/product-detail/en/toshiba-semiconductor-and-storage/SSM3K333RLF/SSM3K333RLFCT-ND/3522391" H 8250 3625 60  0001 C CNN "PurchasingLink"
-	1    7950 3450
+P 8700 3350
+F 0 "Q1" H 8906 3396 50  0000 L CNN
+F 1 "SSM3K333R" H 8906 3305 50  0000 L CNN
+F 2 "footprints:SOT-23F" H 8900 3275 50  0001 L CIN
+F 3 "https://drive.google.com/drive/folders/0B-V-iZf33Y4GNzhDQTJZanJRbVk" H 8900 3425 50  0001 L CNN
+F 4 "DK" H 9200 3725 60  0001 C CNN "MFN"
+F 5 "SSM3K333RLFCT-ND" H 9100 3625 60  0001 C CNN "MPN"
+F 6 "https://www.digikey.com/product-detail/en/toshiba-semiconductor-and-storage/SSM3K333RLF/SSM3K333RLFCT-ND/3522391" H 9000 3525 60  0001 C CNN "PurchasingLink"
+	1    8700 3350
 	1    0    0    -1  
 $EndComp
 $Comp
 L power:GND #PWR036
 U 1 1 5FDB770F
-P 8050 3650
-F 0 "#PWR036" H 8050 3400 50  0001 C CNN
-F 1 "GND" H 8055 3477 50  0000 C CNN
-F 2 "" H 8050 3650 50  0001 C CNN
-F 3 "" H 8050 3650 50  0001 C CNN
-	1    8050 3650
+P 8800 3550
+F 0 "#PWR036" H 8800 3300 50  0001 C CNN
+F 1 "GND" H 8805 3377 50  0000 C CNN
+F 2 "" H 8800 3550 50  0001 C CNN
+F 3 "" H 8800 3550 50  0001 C CNN
+	1    8800 3550
 	1    0    0    -1  
 $EndComp
-Connection ~ 7600 3450
 $Comp
 L formula:LED_0805 D3
 U 1 1 5FDBC233
-P 7900 3250
-F 0 "D3" H 7893 2995 50  0000 C CNN
-F 1 "LED_0805" H 7893 3086 50  0000 C CNN
-F 2 "footprints:LED_0805_OEM" H 7800 3250 50  0001 C CNN
-F 3 "http://www.osram-os.com/Graphics/XPic9/00078860_0.pdf" H 7900 3350 50  0001 C CNN
-F 4 "DK" H 7900 3250 60  0001 C CNN "MFN"
-F 5 "475-1410-1-ND" H 7900 3250 60  0001 C CNN "MPN"
-F 6 "https://www.digikey.com/products/en?keywords=475-1410-1-ND" H 8300 3750 60  0001 C CNN "PurchasingLink"
-	1    7900 3250
+P 8650 3150
+F 0 "D3" H 8643 2895 50  0000 C CNN
+F 1 "LED_0805" H 8643 2986 50  0000 C CNN
+F 2 "footprints:LED_0805_OEM" H 8550 3150 50  0001 C CNN
+F 3 "http://www.osram-os.com/Graphics/XPic9/00078860_0.pdf" H 8650 3250 50  0001 C CNN
+F 4 "DK" H 8650 3150 60  0001 C CNN "MFN"
+F 5 "475-1410-1-ND" H 8650 3150 60  0001 C CNN "MPN"
+F 6 "https://www.digikey.com/products/en?keywords=475-1410-1-ND" H 9050 3650 60  0001 C CNN "PurchasingLink"
+	1    8650 3150
 	-1   0    0    1   
 $EndComp
 $Comp
 L formula:R_1K R16
 U 1 1 5FDBE1CF
-P 7600 3250
-F 0 "R16" V 7807 3250 50  0000 C CNN
-F 1 "R_1K" V 7716 3250 50  0000 C CNN
-F 2 "footprints:R_0805_OEM" H 7530 3250 50  0001 C CNN
-F 3 "https://www.seielect.com/Catalog/SEI-rncp.pdf" H 7680 3250 50  0001 C CNN
-F 4 "DK" H 7600 3250 60  0001 C CNN "MFN"
-F 5 "RNCP0805FTD1K00CT-ND" H 7600 3250 60  0001 C CNN "MPN"
-F 6 "https://www.digikey.com/products/en?keywords=RNCP0805FTD1K00CT-ND" H 8080 3650 60  0001 C CNN "PurchasingLink"
-	1    7600 3250
+P 8350 3150
+F 0 "R16" V 8557 3150 50  0000 C CNN
+F 1 "R_1K" V 8466 3150 50  0000 C CNN
+F 2 "footprints:R_0805_OEM" H 8280 3150 50  0001 C CNN
+F 3 "https://www.seielect.com/Catalog/SEI-rncp.pdf" H 8430 3150 50  0001 C CNN
+F 4 "DK" H 8350 3150 60  0001 C CNN "MFN"
+F 5 "RNCP0805FTD1K00CT-ND" H 8350 3150 60  0001 C CNN "MPN"
+F 6 "https://www.digikey.com/products/en?keywords=RNCP0805FTD1K00CT-ND" H 8830 3550 60  0001 C CNN "PurchasingLink"
+	1    8350 3150
 	0    -1   -1   0   
 $EndComp
-$Comp
-L power:+BATT #PWR033
-U 1 1 5FDBF161
-P 7400 3150
-F 0 "#PWR033" H 7400 3000 50  0001 C CNN
-F 1 "+BATT" H 7415 3323 50  0000 C CNN
-F 2 "" H 7400 3150 50  0001 C CNN
-F 3 "" H 7400 3150 50  0001 C CNN
-	1    7400 3150
-	1    0    0    -1  
-$EndComp
 Wire Wire Line
-	7600 3450 7750 3450
+	8200 3150 8150 3150
 Wire Wire Line
-	7450 3250 7400 3250
-Wire Wire Line
-	7400 3250 7400 3150
+	8150 3150 8150 3050
 Wire Wire Line
 	7250 2650 7250 2600
 Wire Wire Line
@@ -1074,14 +1003,14 @@ Wire Wire Line
 $Comp
 L formula:R_200K R12
 U 1 1 5FDCD27A
-P 8100 2900
-F 0 "R12" V 7893 2900 50  0000 C CNN
-F 1 "R_200K" V 7984 2900 50  0000 C CNN
-F 2 "footprints:R_0805_OEM" H 8030 2900 50  0001 C CNN
-F 3 "" H 8180 2900 50  0001 C CNN
-F 4 "DK" H 8100 2900 60  0001 C CNN "MFN"
-F 5 "P300KDACT-ND" H 8100 2900 60  0001 C CNN "MPN"
-	1    8100 2900
+P 7650 2900
+F 0 "R12" V 7850 2850 50  0000 C CNN
+F 1 "R_200K" V 7750 2900 50  0000 C CNN
+F 2 "footprints:R_0805_OEM" H 7580 2900 50  0001 C CNN
+F 3 "" H 7730 2900 50  0001 C CNN
+F 4 "DK" H 7650 2900 60  0001 C CNN "MFN"
+F 5 "P300KDACT-ND" H 7650 2900 60  0001 C CNN "MPN"
+	1    7650 2900
 	0    1    1    0   
 $EndComp
 $Comp
@@ -1098,10 +1027,7 @@ F 5 "RMCF0805FT1M82CT-ND" H 7500 2700 60  0001 C CNN "MPN"
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	7950 2900 7500 2900
-Wire Wire Line
 	7500 2850 7500 2900
-Connection ~ 7500 2900
 Wire Wire Line
 	7500 2900 7050 2900
 Wire Wire Line
@@ -1109,16 +1035,16 @@ Wire Wire Line
 $Comp
 L power:GND #PWR039
 U 1 1 5FDD99FE
-P 8300 2900
-F 0 "#PWR039" H 8300 2650 50  0001 C CNN
-F 1 "GND" H 8305 2727 50  0000 C CNN
-F 2 "" H 8300 2900 50  0001 C CNN
-F 3 "" H 8300 2900 50  0001 C CNN
-	1    8300 2900
+P 7850 2900
+F 0 "#PWR039" H 7850 2650 50  0001 C CNN
+F 1 "GND" H 7855 2727 50  0000 C CNN
+F 2 "" H 7850 2900 50  0001 C CNN
+F 3 "" H 7850 2900 50  0001 C CNN
+	1    7850 2900
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	8250 2900 8300 2900
+	7800 2900 7850 2900
 $Comp
 L formula:C_2.2uF C6
 U 1 1 5FDDE527
@@ -1192,47 +1118,45 @@ Connection ~ 8300 2050
 $Comp
 L formula:R_1K R18
 U 1 1 5FDEE4EA
-P 8600 2200
-F 0 "R18" H 8670 2246 50  0000 L CNN
-F 1 "R_1K" H 8670 2155 50  0000 L CNN
-F 2 "footprints:R_0805_OEM" H 8530 2200 50  0001 C CNN
-F 3 "https://www.seielect.com/Catalog/SEI-rncp.pdf" H 8680 2200 50  0001 C CNN
-F 4 "DK" H 8600 2200 60  0001 C CNN "MFN"
-F 5 "RNCP0805FTD1K00CT-ND" H 8600 2200 60  0001 C CNN "MPN"
-F 6 "https://www.digikey.com/products/en?keywords=RNCP0805FTD1K00CT-ND" H 9080 2600 60  0001 C CNN "PurchasingLink"
-	1    8600 2200
+P 8950 2200
+F 0 "R18" H 9020 2246 50  0000 L CNN
+F 1 "R_1K" H 9020 2155 50  0000 L CNN
+F 2 "footprints:R_0805_OEM" H 8880 2200 50  0001 C CNN
+F 3 "https://www.seielect.com/Catalog/SEI-rncp.pdf" H 9030 2200 50  0001 C CNN
+F 4 "DK" H 8950 2200 60  0001 C CNN "MFN"
+F 5 "RNCP0805FTD1K00CT-ND" H 8950 2200 60  0001 C CNN "MPN"
+F 6 "https://www.digikey.com/products/en?keywords=RNCP0805FTD1K00CT-ND" H 9430 2600 60  0001 C CNN "PurchasingLink"
+	1    8950 2200
 	1    0    0    -1  
 $EndComp
 $Comp
 L formula:LED_0805 D4
 U 1 1 5FDEF42E
-P 8600 2500
-F 0 "D4" V 8639 2383 50  0000 R CNN
-F 1 "LED_0805" V 8548 2383 50  0000 R CNN
-F 2 "footprints:LED_0805_OEM" H 8500 2500 50  0001 C CNN
-F 3 "http://www.osram-os.com/Graphics/XPic9/00078860_0.pdf" H 8600 2600 50  0001 C CNN
-F 4 "DK" H 8600 2500 60  0001 C CNN "MFN"
-F 5 "475-1410-1-ND" H 8600 2500 60  0001 C CNN "MPN"
-F 6 "https://www.digikey.com/products/en?keywords=475-1410-1-ND" H 9000 3000 60  0001 C CNN "PurchasingLink"
-	1    8600 2500
+P 8950 2500
+F 0 "D4" V 8989 2383 50  0000 R CNN
+F 1 "LED_0805" V 8898 2383 50  0000 R CNN
+F 2 "footprints:LED_0805_OEM" H 8850 2500 50  0001 C CNN
+F 3 "http://www.osram-os.com/Graphics/XPic9/00078860_0.pdf" H 8950 2600 50  0001 C CNN
+F 4 "DK" H 8950 2500 60  0001 C CNN "MFN"
+F 5 "475-1410-1-ND" H 8950 2500 60  0001 C CNN "MPN"
+F 6 "https://www.digikey.com/products/en?keywords=475-1410-1-ND" H 9350 3000 60  0001 C CNN "PurchasingLink"
+	1    8950 2500
 	0    -1   -1   0   
 $EndComp
 $Comp
 L power:GND #PWR040
 U 1 1 5FDF0C2D
-P 8600 2650
-F 0 "#PWR040" H 8600 2400 50  0001 C CNN
-F 1 "GND" H 8605 2477 50  0000 C CNN
-F 2 "" H 8600 2650 50  0001 C CNN
-F 3 "" H 8600 2650 50  0001 C CNN
-	1    8600 2650
+P 8950 2650
+F 0 "#PWR040" H 8950 2400 50  0001 C CNN
+F 1 "GND" H 8955 2477 50  0000 C CNN
+F 2 "" H 8950 2650 50  0001 C CNN
+F 3 "" H 8950 2650 50  0001 C CNN
+	1    8950 2650
 	1    0    0    -1  
 $EndComp
-Wire Wire Line
-	8300 2050 8600 2050
-Text Notes 8500 2550 1    50   ~ 0
+Text Notes 8850 2550 1    50   ~ 0
 Power LED
-Text Notes 8950 3300 2    50   ~ 0
+Text Notes 9700 3200 2    50   ~ 0
 Low Batery Indicator
 $Comp
 L power:GND #PWR029
@@ -1292,4 +1216,76 @@ Connection ~ 2550 3150
 Wire Wire Line
 	2050 3150 1850 3150
 Connection ~ 1850 7200
+Connection ~ 7050 3350
+Wire Wire Line
+	7050 3250 7050 3350
+Wire Wire Line
+	7050 3150 7050 3250
+Connection ~ 7050 3250
+Connection ~ 5650 2500
+$Comp
+L formula:TPS61090RSAR U3
+U 1 1 5FD57E24
+P 6350 2800
+F 0 "U3" H 6350 3370 50  0000 C CNN
+F 1 "TPS61090RSAR" H 6350 3279 50  0000 C CNN
+F 2 "footprints:TPS61090RSAR" H 6100 3400 50  0001 L BNN
+F 3 "https://www.ti.com/lit/ds/symlink/tps61090.pdf?HQS=TI-null-null-digikeymode-df-pf-null-wwe&ts=1601340035977" H 6350 2800 50  0001 L BNN
+F 4 "1.48 USD" H 6200 3350 50  0001 L BNN "Field4"
+F 5 "TPS61090RSAR" H 6150 3250 50  0001 L BNN "Field5"
+F 6 "2A Switch, 96% Efficient Boost Converter 16-QFN -40 to 85" H 6800 3400 50  0001 L BNN "Field6"
+F 7 "Good" H 6150 3400 50  0001 L BNN "Field7"
+F 8 "VQFN-16 Texas Instruments" H 6050 3350 50  0001 L BNN "Field8"
+F 9 "Texas Instruments" H 6100 3350 50  0001 L BNN "Field9"
+F 10 "https://www.digikey.com/product-detail/en/texas-instruments/TPS61090RSAR/296-15259-1-ND/566899" H 6950 3400 50  0001 C CNN "Purchasing Link"
+	1    6350 2800
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+5V #PWR0101
+U 1 1 6020816E
+P 8150 3050
+F 0 "#PWR0101" H 8150 2900 50  0001 C CNN
+F 1 "+5V" H 8165 3223 50  0000 C CNN
+F 2 "" H 8150 3050 50  0001 C CNN
+F 3 "" H 8150 3050 50  0001 C CNN
+	1    8150 3050
+	1    0    0    -1  
+$EndComp
+Connection ~ 7500 2900
+Wire Wire Line
+	8600 2350 8600 2800
+Wire Wire Line
+	8600 2800 8000 2800
+Wire Wire Line
+	8000 2800 8000 3350
+Wire Wire Line
+	8000 3350 8500 3350
+Wire Wire Line
+	8000 3350 7300 3350
+Wire Wire Line
+	7300 3350 7300 3050
+Wire Wire Line
+	7300 3050 7050 3050
+Connection ~ 8000 3350
+Connection ~ 7300 3350
+$Comp
+L formula:R_1M R15
+U 1 1 602B4C5C
+P 8600 2200
+F 0 "R15" V 8400 2150 50  0000 L CNN
+F 1 "R_1M" V 8500 2100 50  0000 L CNN
+F 2 "footprints:R_0805_OEM" H 8530 2200 50  0001 C CNN
+F 3 "https://www.seielect.com/Catalog/SEI-rncp.pdf" H 8680 2200 50  0001 C CNN
+F 4 "DK" H 8600 2200 60  0001 C CNN "MFN"
+F 5 "RMCF0805JT1M00CT-ND" H 8600 2200 60  0001 C CNN "MPN"
+F 6 "https://www.digikey.com/product-detail/en/stackpole-electronics-inc/RMCF0805JT1M00/RMCF0805JT1M00CT-ND/1942600" H 9080 2600 60  0001 C CNN "PurchasingLink"
+	1    8600 2200
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	8300 2050 8600 2050
+Connection ~ 8600 2050
+Wire Wire Line
+	8600 2050 8950 2050
 $EndSCHEMATC
