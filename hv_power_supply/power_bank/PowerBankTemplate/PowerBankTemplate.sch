@@ -312,17 +312,6 @@ Wire Wire Line
 Wire Wire Line
 	8500 2050 8500 2100
 $Comp
-L power:+BATT #PWR032
-U 1 1 5F7C320C
-P 9100 2200
-F 0 "#PWR032" H 9100 2050 50  0001 C CNN
-F 1 "+BATT" H 9115 2373 50  0000 C CNN
-F 2 "" H 9100 2200 50  0001 C CNN
-F 3 "" H 9100 2200 50  0001 C CNN
-	1    9100 2200
-	1    0    0    -1  
-$EndComp
-$Comp
 L formula:R_1K R16
 U 1 1 5F7C543A
 P 9100 2350
@@ -447,16 +436,16 @@ NoConn ~ 2200 5250
 $Comp
 L formula:TP TP1
 U 1 1 5F85097E
-P 8500 2800
-F 0 "TP1" H 8578 2738 50  0000 L CNN
-F 1 "TP" H 8578 2647 50  0000 L CNN
-F 2 "footprints:tp_1.6mm" H 8400 2700 50  0001 C CNN
-F 3 "http://www.keyelco.com/product-pdf.cfm?p=1314" H 8500 2800 50  0001 C CNN
-F 4 "DK" H 8600 2900 50  0001 C CNN "MFN"
-F 5 "36-5006-ND" H 8700 3000 50  0001 C CNN "MPN"
-F 6 "https://www.digikey.com/product-detail/en/keystone-electronics/5006/36-5006-ND/255330" H 8800 3100 50  0001 C CNN "PurchasingLink"
-	1    8500 2800
-	1    0    0    -1  
+P 8300 3200
+F 0 "TP1" H 8378 3138 50  0000 L CNN
+F 1 "TP" H 8378 3047 50  0000 L CNN
+F 2 "footprints:tp_1.6mm" H 8200 3100 50  0001 C CNN
+F 3 "http://www.keyelco.com/product-pdf.cfm?p=1314" H 8300 3200 50  0001 C CNN
+F 4 "DK" H 8400 3300 50  0001 C CNN "MFN"
+F 5 "36-5006-ND" H 8500 3400 50  0001 C CNN "MPN"
+F 6 "https://www.digikey.com/product-detail/en/keystone-electronics/5006/36-5006-ND/255330" H 8600 3500 50  0001 C CNN "PurchasingLink"
+	1    8300 3200
+	-1   0    0    1   
 $EndComp
 Wire Wire Line
 	9750 1950 9750 2050
@@ -467,20 +456,6 @@ Wire Wire Line
 Connection ~ 9350 1250
 Wire Wire Line
 	9350 1250 9350 1400
-$Comp
-L formula:SSM3K333R Q1
-U 1 1 5F85122D
-P 9000 3000
-F 0 "Q1" H 9206 3046 50  0000 L CNN
-F 1 "SSM3K333R" H 9206 2955 50  0000 L CNN
-F 2 "footprints:SOT-23F" H 9200 2925 50  0001 L CIN
-F 3 "https://drive.google.com/drive/folders/0B-V-iZf33Y4GNzhDQTJZanJRbVk" H 9200 3075 50  0001 L CNN
-F 4 "DK" H 9500 3375 60  0001 C CNN "MFN"
-F 5 "SSM3K333RLFCT-ND" H 9400 3275 60  0001 C CNN "MPN"
-F 6 "https://www.digikey.com/product-detail/en/toshiba-semiconductor-and-storage/SSM3K333RLF/SSM3K333RLFCT-ND/3522391" H 9300 3175 60  0001 C CNN "PurchasingLink"
-	1    9000 3000
-	1    0    0    -1  
-$EndComp
 Wire Wire Line
 	8300 1900 8300 3000
 Wire Wire Line
@@ -488,23 +463,18 @@ Wire Wire Line
 $Comp
 L formula:R_10K R15
 U 1 1 5F85B692
-P 8700 3150
-F 0 "R15" H 8770 3196 50  0000 L CNN
-F 1 "R_10K" H 8770 3105 50  0000 L CNN
-F 2 "footprints:R_0805_OEM" H 8630 3150 50  0001 C CNN
-F 3 "http://www.bourns.com/data/global/pdfs/CRS.pdf" H 8780 3150 50  0001 C CNN
-F 4 "DK" H 8700 3150 60  0001 C CNN "MFN"
-F 5 "CRS0805-FX-1002ELFCT-ND" H 8700 3150 60  0001 C CNN "MPN"
-F 6 "https://www.digikey.com/products/en?keywords=CRS0805-FX-1002ELFCT-ND" H 9180 3550 60  0001 C CNN "PurchasingLink"
-	1    8700 3150
+P 8500 2750
+F 0 "R15" H 8570 2796 50  0000 L CNN
+F 1 "R_10K" H 8570 2705 50  0000 L CNN
+F 2 "footprints:R_0805_OEM" H 8430 2750 50  0001 C CNN
+F 3 "http://www.bourns.com/data/global/pdfs/CRS.pdf" H 8580 2750 50  0001 C CNN
+F 4 "DK" H 8500 2750 60  0001 C CNN "MFN"
+F 5 "CRS0805-FX-1002ELFCT-ND" H 8500 2750 60  0001 C CNN "MPN"
+F 6 "https://www.digikey.com/products/en?keywords=CRS0805-FX-1002ELFCT-ND" H 8980 3150 60  0001 C CNN "PurchasingLink"
+	1    8500 2750
 	1    0    0    -1  
 $EndComp
-Connection ~ 8700 3000
-Wire Wire Line
-	8700 3000 8800 3000
 Connection ~ 8500 3000
-Wire Wire Line
-	8500 3000 8700 3000
 $Comp
 L formula:CONN_01x02 J2
 U 1 1 5F838577
@@ -2573,19 +2543,6 @@ Wire Wire Line
 Text Label 3800 4450 2    50   ~ 0
 Battery+
 Wire Wire Line
-	8700 3300 8700 3450
-$Comp
-L power:GND #PWR028
-U 1 1 5F85BCCC
-P 8700 3450
-F 0 "#PWR028" H 8700 3200 50  0001 C CNN
-F 1 "GND" H 8705 3277 50  0000 C CNN
-F 2 "" H 8700 3450 50  0001 C CNN
-F 3 "" H 8700 3450 50  0001 C CNN
-	1    8700 3450
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
 	5950 4950 5950 5050
 Wire Wire Line
 	6050 5050 6050 5100
@@ -3097,4 +3054,44 @@ Connection ~ 2450 5150
 Wire Wire Line
 	2200 5550 2200 5750
 Connection ~ 2200 5750
+Wire Wire Line
+	8500 3000 8800 3000
+Wire Wire Line
+	8500 3000 8500 2900
+$Comp
+L power:+5V #PWR?
+U 1 1 60224A48
+P 8500 2600
+F 0 "#PWR?" H 8500 2450 50  0001 C CNN
+F 1 "+5V" H 8515 2773 50  0000 C CNN
+F 2 "" H 8500 2600 50  0001 C CNN
+F 3 "" H 8500 2600 50  0001 C CNN
+	1    8500 2600
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+5V #PWR?
+U 1 1 6022A291
+P 9100 2200
+F 0 "#PWR?" H 9100 2050 50  0001 C CNN
+F 1 "+5V" H 9115 2373 50  0000 C CNN
+F 2 "" H 9100 2200 50  0001 C CNN
+F 3 "" H 9100 2200 50  0001 C CNN
+	1    9100 2200
+	1    0    0    -1  
+$EndComp
+$Comp
+L formula:BSS308PE Q?
+U 1 1 6022BB7A
+P 9000 3000
+F 0 "Q?" H 9206 3046 50  0000 L CNN
+F 1 "BSS308PE" H 9206 2955 50  0000 L CNN
+F 2 "footprints:SOT-23-3_OEM" H 9200 3100 50  0001 C CNN
+F 3 "https://www.infineon.com/dgdl/BSS308PE_Rev2.03.pdf?folderId=db3a304314dca38901154a72e3951a65&fileId=db3a304330f686060131099c80400073" H 9200 3050 50  0001 C CNN
+F 4 "DK" H 9000 3000 60  0001 C CNN "MFN"
+F 5 "BSS308PEH6327XTSA1CT-ND" H 9000 3000 60  0001 C CNN "MPN"
+F 6 "https://www.digikey.com/products/en/discrete-semiconductor-products/transistors-fets-mosfets-single/278?k=bss308pe&k=&pkeyword=bss308pe&pv7=2&pv1989=0&sf=0&quantity=&ColumnSort=0&page=1&stock=1&datasheet=1&pageSize=25" H 9600 3450 60  0001 C CNN "PurchasingLink"
+	1    9000 3000
+	1    0    0    -1  
+$EndComp
 $EndSCHEMATC

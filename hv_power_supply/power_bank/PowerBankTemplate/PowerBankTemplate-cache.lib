@@ -33,6 +33,41 @@ X 2 2 300 0 200 L 50 50 1 1 I
 ENDDRAW
 ENDDEF
 #
+# formula_BSS308PE
+#
+DEF formula_BSS308PE Q 0 0 Y N 1 F N
+F0 "Q" 200 50 50 H V L CNN
+F1 "formula_BSS308PE" 200 -50 50 H V L CNN
+F2 "footprints:SOT-23-3_OEM" 200 100 50 H I C CNN
+F3 "https://www.infineon.com/dgdl/BSS308PE_Rev2.03.pdf?folderId=db3a304314dca38901154a72e3951a65&fileId=db3a304330f686060131099c80400073" 200 50 50 H I C CNN
+F4 "DK" 0 0 60 H I C CNN "MFN"
+F5 "BSS308PEH6327XTSA1CT-ND" 0 0 60 H I C CNN "MPN"
+F6 "https://www.digikey.com/products/en/discrete-semiconductor-products/transistors-fets-mosfets-single/278?k=bss308pe&k=&pkeyword=bss308pe&pv7=2&pv1989=0&sf=0&quantity=&ColumnSort=0&page=1&stock=1&datasheet=1&pageSize=25" 600 450 60 H I C CNN "PurchasingLink"
+DRAW
+C 65 0 111 0 1 10 N
+C 100 -70 11 0 1 0 F
+C 100 70 11 0 1 0 F
+P 2 0 1 0 2 0 10 0 N
+P 2 0 1 0 30 -70 100 -70 N
+P 2 0 1 10 30 -50 30 -90 N
+P 2 0 1 0 30 0 100 0 N
+P 2 0 1 10 30 20 30 -20 N
+P 2 0 1 0 30 70 100 70 N
+P 2 0 1 10 30 90 30 50 N
+P 2 0 1 0 100 -70 100 -100 N
+P 2 0 1 0 100 -70 100 0 N
+P 2 0 1 0 100 100 100 70 N
+P 3 0 1 10 10 75 10 -75 10 -75 N
+P 4 0 1 0 90 0 50 -15 50 15 90 0 F
+P 4 0 1 0 100 -70 130 -70 130 70 100 70 N
+P 4 0 1 0 110 -20 115 -15 145 -15 150 -10 N
+P 4 0 1 0 130 -15 115 10 145 10 130 -15 N
+X G 1 -200 0 200 R 50 50 1 1 I
+X S 2 100 -200 100 U 50 50 1 1 P
+X D 3 100 200 100 D 50 50 1 1 P
+ENDDRAW
+ENDDEF
+#
 # formula_CONN_01x02
 #
 DEF formula_CONN_01x02 J 0 40 Y N 1 F N
@@ -242,7 +277,7 @@ ENDDEF
 DEF formula_L_6.8uH L 0 40 N N 1 F N
 F0 "L" 0 -50 50 H V C CNN
 F1 "formula_L_6.8uH" 0 100 50 H V C CNN
-F2 "" -100 -200 50 H I C CNN
+F2 "footprints:L_100uH_OEM" -100 -200 50 H I C CNN
 F3 "" -100 -150 50 H I C CNN
 F4 "Digikey" 100 -200 50 H I C CNN "MFN"
 F5 "445-1539-1-ND" 0 250 50 H I C CNN "MPN"
@@ -455,43 +490,6 @@ DRAW
 S -40 -100 40 100 0 1 10 N
 X ~ 1 0 150 50 D 50 50 1 1 P
 X ~ 2 0 -150 50 U 50 50 1 1 P
-ENDDRAW
-ENDDEF
-#
-# formula_SSM3K333R
-#
-DEF formula_SSM3K333R Q 0 0 Y N 1 F N
-F0 "Q" 200 75 50 H V L CNN
-F1 "formula_SSM3K333R" 200 0 50 H V L CNN
-F2 "footprints:SOT-23F" 200 -75 50 H I L CIN
-F3 "https://drive.google.com/drive/folders/0B-V-iZf33Y4GNzhDQTJZanJRbVk" 200 75 50 H I L CNN
-F4 "DK" 500 375 60 H I C CNN "MFN"
-F5 "SSM3K333RLFCT-ND" 400 275 60 H I C CNN "MPN"
-F6 "https://www.digikey.com/product-detail/en/toshiba-semiconductor-and-storage/SSM3K333RLF/SSM3K333RLFCT-ND/3522391" 300 175 60 H I C CNN "PurchasingLink"
-$FPLIST
- SOT?23*
-$ENDFPLIST
-DRAW
-C 65 0 111 0 1 10 N
-C 100 -70 11 0 1 0 F
-C 100 70 11 0 1 0 F
-P 2 0 1 0 30 -70 100 -70 N
-P 2 0 1 10 30 -50 30 -90 N
-P 2 0 1 0 30 0 100 0 N
-P 2 0 1 10 30 20 30 -20 N
-P 2 0 1 0 30 70 100 70 N
-P 2 0 1 10 30 90 30 50 N
-P 2 0 1 0 100 -70 100 -100 N
-P 2 0 1 0 100 -70 100 0 N
-P 2 0 1 0 100 100 100 70 N
-P 3 0 1 10 10 75 10 -75 10 -75 N
-P 4 0 1 0 40 0 80 15 80 -15 40 0 F
-P 4 0 1 0 100 -70 130 -70 130 70 100 70 N
-P 4 0 1 0 110 20 115 15 145 15 150 10 N
-P 4 0 1 0 130 15 115 -10 145 -10 130 15 N
-X G 1 -200 0 210 R 50 50 1 1 I
-X S 2 100 -200 100 U 50 50 1 1 P
-X D 3 100 200 100 D 50 50 1 1 P
 ENDDRAW
 ENDDEF
 #
