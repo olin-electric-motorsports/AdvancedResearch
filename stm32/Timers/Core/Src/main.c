@@ -65,48 +65,32 @@ static void MX_TIM2_Init(void);
   */
 int main(void)
 {
-  /* USER CODE BEGIN 1 */
-
-  /* USER CODE END 1 */
 
   /* MCU Configuration--------------------------------------------------------*/
 
   /* Reset of all peripherals, Initializes the Flash interface and the Systick. */
   HAL_Init();
 
-  /* USER CODE BEGIN Init */
-
-  /* USER CODE END Init */
 
   /* Configure the system clock */
   SystemClock_Config();
-
-  /* USER CODE BEGIN SysInit */
-
-  /* USER CODE END SysInit */
-
   /* Initialize all configured peripherals */
   MX_GPIO_Init();
   MX_TIM2_Init();
-  /* USER CODE BEGIN 2 */
-
-  /* USER CODE END 2 */
+  HAL_TIM_Base_Start_IT(&htim2);
 
   /* Infinite loop */
-  /* USER CODE BEGIN WHILE */
   while (1)
   {
-    /* USER CODE END WHILE */
-
-    /* USER CODE BEGIN 3 */
+    //Leave Blank
   }
-  /* USER CODE END 3 */
 }
 
-/**
-  * @brief System Clock Configuration
-  * @retval None
-  */
+void HAL_TIM_PeriodElapsedCallback(TIM_HandleTypeDef* htim)
+{
+    HAL_GPIO_TogglePin(GPIOB, GPIO_PIN_13);
+}
+
 void SystemClock_Config(void)
 {
   RCC_OscInitTypeDef RCC_OscInitStruct = {0};
@@ -160,9 +144,9 @@ static void MX_TIM2_Init(void)
 
   /* USER CODE END TIM2_Init 1 */
   htim2.Instance = TIM2;
-  htim2.Init.Prescaler = 1000;
+  htim2.Init.Prescaler = 7200;
   htim2.Init.CounterMode = TIM_COUNTERMODE_UP;
-  htim2.Init.Period = 7200;
+  htim2.Init.Period = 10000;
   htim2.Init.ClockDivision = TIM_CLOCKDIVISION_DIV1;
   htim2.Init.AutoReloadPreload = TIM_AUTORELOAD_PRELOAD_ENABLE;
   if (HAL_TIM_Base_Init(&htim2) != HAL_OK)
