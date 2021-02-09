@@ -3,7 +3,7 @@ EELAYER 30 0
 EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
-Sheet 1 5
+Sheet 1 1
 Title ""
 Date ""
 Rev ""
@@ -358,7 +358,6 @@ F 3 "" H 9010 3400 50  0001 C CNN
 	1    9010 3400
 	1    0    0    -1  
 $EndComp
-NoConn ~ 8610 2980
 Wire Wire Line
 	8290 3390 9010 3390
 Text Label 5980 2210 2    50   ~ 0
@@ -623,4 +622,104 @@ Text Label 3670 2800 0    50   ~ 0
 PROGRAMMINGLED1
 Text Label 3670 2900 0    50   ~ 0
 PROGRAMMINGLED2
+Text Label 3670 1500 0    50   ~ 0
+SCLK
+$Comp
+L formula:HLMP-Q150-F0011 D?
+U 1 1 601FF02D
+P 3600 6800
+F 0 "D?" H 3593 7016 50  0000 C CNN
+F 1 "HLMP-Q150-F0011" H 3593 6925 50  0000 C CNN
+F 2 "footprints:HLMP-Q150-F0011" H 3500 6800 50  0001 C CNN
+F 3 "https://docs.broadcom.com/doc/AV02-3609EN" H 3600 6900 50  0001 C CNN
+F 4 "DK" H 3600 6800 60  0001 C CNN "MFN"
+F 5 "475-1410-1-ND" H 3600 6800 60  0001 C CNN "MPN"
+F 6 "https://www.digikey.com/products/en?keywords=475-1410-1-ND" H 4000 7300 60  0001 C CNN "PurchasingLink"
+	1    3600 6800
+	-1   0    0    1   
+$EndComp
+$Comp
+L formula:HLMP-Q150-F0011 D?
+U 1 1 60200963
+P 3570 6410
+F 0 "D?" H 3563 6626 50  0000 C CNN
+F 1 "HLMP-Q150-F0011" H 3563 6535 50  0000 C CNN
+F 2 "footprints:HLMP-Q150-F0011" H 3470 6410 50  0001 C CNN
+F 3 "https://docs.broadcom.com/doc/AV02-3609EN" H 3570 6510 50  0001 C CNN
+F 4 "DK" H 3570 6410 60  0001 C CNN "MFN"
+F 5 "475-1410-1-ND" H 3570 6410 60  0001 C CNN "MPN"
+F 6 "https://www.digikey.com/products/en?keywords=475-1410-1-ND" H 3970 6910 60  0001 C CNN "PurchasingLink"
+	1    3570 6410
+	-1   0    0    1   
+$EndComp
+Text Label 3670 3300 0    50   ~ 0
+DEBUG_LED1
+Text Label 3670 3400 0    50   ~ 0
+DEBUG_LED2
+Wire Wire Line
+	2720 6410 2420 6410
+Wire Wire Line
+	2730 6800 2430 6800
+Text Label 2420 6410 2    50   ~ 0
+DEBUG_LED1
+Text Label 2430 6800 2    50   ~ 0
+DEBUG_LED2
+Wire Wire Line
+	3020 6410 3420 6410
+Wire Wire Line
+	3030 6800 3450 6800
+$Comp
+L power:GND #PWR?
+U 1 1 602010BB
+P 4000 6410
+F 0 "#PWR?" H 4000 6160 50  0001 C CNN
+F 1 "GND" H 4005 6237 50  0000 C CNN
+F 2 "" H 4000 6410 50  0001 C CNN
+F 3 "" H 4000 6410 50  0001 C CNN
+	1    4000 6410
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR?
+U 1 1 602010C2
+P 4010 6800
+F 0 "#PWR?" H 4010 6550 50  0001 C CNN
+F 1 "GND" H 4015 6627 50  0000 C CNN
+F 2 "" H 4010 6800 50  0001 C CNN
+F 3 "" H 4010 6800 50  0001 C CNN
+	1    4010 6800
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4010 6800 3750 6800
+Wire Wire Line
+	3720 6410 4000 6410
+$Comp
+L formula:R_3.01K R?
+U 1 1 6020AA87
+P 2870 6410
+F 0 "R?" V 2663 6410 50  0000 C CNN
+F 1 "R_3.01K" V 2754 6410 50  0000 C CNN
+F 2 "footprints:R_0805_OEM" H 2800 6410 50  0001 C CNN
+F 3 "http://www.yageo.com.tw/exep/pages/download/literatures/PYu-R_INT-thick_7.pdf" H 2950 6410 50  0001 C CNN
+F 4 "DK" H 2870 6410 60  0001 C CNN "MFN"
+F 5 "311-3.01KCRCT-ND" H 2870 6410 60  0001 C CNN "MPN"
+F 6 "https://www.digikey.com/products/en?keywords=311-3.01KCRCT-ND" H 3350 6810 60  0001 C CNN "PurchasingLink"
+	1    2870 6410
+	0    1    1    0   
+$EndComp
+$Comp
+L formula:R_3.01K R?
+U 1 1 6020BAE1
+P 2880 6800
+F 0 "R?" V 2673 6800 50  0000 C CNN
+F 1 "R_3.01K" V 2764 6800 50  0000 C CNN
+F 2 "footprints:R_0805_OEM" H 2810 6800 50  0001 C CNN
+F 3 "http://www.yageo.com.tw/exep/pages/download/literatures/PYu-R_INT-thick_7.pdf" H 2960 6800 50  0001 C CNN
+F 4 "DK" H 2880 6800 60  0001 C CNN "MFN"
+F 5 "311-3.01KCRCT-ND" H 2880 6800 60  0001 C CNN "MPN"
+F 6 "https://www.digikey.com/products/en?keywords=311-3.01KCRCT-ND" H 3360 7200 60  0001 C CNN "PurchasingLink"
+	1    2880 6800
+	0    1    1    0   
+$EndComp
 $EndSCHEMATC
