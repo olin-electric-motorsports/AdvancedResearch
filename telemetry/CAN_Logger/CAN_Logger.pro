@@ -1,4 +1,4 @@
-update=Wed 14 Oct 2020 04:47:18 PM PDT
+update=Mon 08 Feb 2021 21:12:17 EST
 version=1
 last_client=kicad
 [general]
@@ -15,7 +15,7 @@ LibDir=
 [pcbnew]
 version=1
 PageLayoutDescrFile=
-LastNetListRead=template.net
+LastNetListRead=CAN_Logger.net
 CopperLayerCount=2
 BoardThickness=1.6
 AllowMicroVias=0
