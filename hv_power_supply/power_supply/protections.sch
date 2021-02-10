@@ -344,7 +344,7 @@ Connection ~ 2650 2150
 Wire Wire Line
 	2650 2150 2650 2400
 Text Notes 700  1150 0    50   ~ 0
-5V on secondar side = 5S
+5V on secondary side = 5S
 Wire Wire Line
 	1000 1550 1250 1550
 $Comp
@@ -417,6 +417,4 @@ Wire Notes Line
 	3950 800  600  800 
 Wire Notes Line
 	600  800  600  3150
-Text Notes 7150 750  0    50   ~ 0
-Power On
 $EndSCHEMATC
