@@ -3,7 +3,7 @@ EELAYER 30 0
 EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
-Sheet 5 5
+Sheet 1 1
 Title ""
 Date ""
 Rev ""
@@ -140,7 +140,7 @@ Wire Wire Line
 	7200 1900 7200 2050
 Wire Wire Line
 	6050 1900 6050 1550
-Text HLabel 3550 1400 2    50   Input ~ 0
+Text HLabel 3600 1400 2    50   Input ~ 0
 5S
 Connection ~ 1700 2450
 Wire Wire Line
@@ -148,7 +148,7 @@ Wire Wire Line
 Wire Wire Line
 	1250 2450 1700 2450
 Text HLabel 1150 2150 0    50   Input ~ 0
-Discharge
+nDischarge
 Wire Wire Line
 	1250 2150 1150 2150
 Connection ~ 1250 2150
@@ -193,8 +193,6 @@ F 6 "https://www.digikey.com/product-detail/en/toshiba-semiconductor-and-storage
 	1    1600 2150
 	1    0    0    -1  
 $EndComp
-Text HLabel 1250 1750 0    50   Input ~ 0
-5S
 Text HLabel 4000 2250 3    50   Output ~ 0
 HV-
 Text HLabel 4000 1450 1    50   Input ~ 0
@@ -244,10 +242,8 @@ Wire Wire Line
 	3600 2250 4000 2250
 Wire Wire Line
 	4000 2150 4000 2250
-Text Notes 700  1150 0    50   ~ 0
+Text Notes 3650 1100 0    50   ~ 0
 5V on secondary side = 5S
-Wire Wire Line
-	3300 1400 3550 1400
 $Comp
 L formula:C_100uF C23
 U 1 1 601C2FA9
@@ -324,7 +320,6 @@ Wire Wire Line
 	3300 1400 3100 1400
 Wire Wire Line
 	3100 1400 3100 1750
-Connection ~ 3300 1400
 Wire Notes Line
 	600  2750 4850 2750
 Wire Notes Line
@@ -333,18 +328,6 @@ Wire Notes Line
 	600  800  600  2750
 Wire Notes Line
 	4850 800  4850 2750
-$Comp
-L formula:R_7.5M R23
-U 1 1 602D916B
-P 1550 1750
-F 0 "R23" V 1343 1750 50  0000 C CNN
-F 1 "R_7.5M" V 1434 1750 50  0000 C CNN
-F 2 "footprints:R_0805_OEM" H 450 2050 50  0001 L CNN
-F 3 "https://www.yageo.com/upload/media/product/productsearch/datasheet/rchip/PYu-RC_Group_51_RoHS_L_11.pdf" H 450 2150 50  0001 L CNN
-F 4 "https://www.digikey.com/product-detail/en/yageo/RC0805FR-077M5L/311-7-50MCRTR-ND/728117" H 450 2250 60  0001 L CNN "PurchasingLink"
-	1    1550 1750
-	0    1    1    0   
-$EndComp
 Wire Wire Line
 	1400 1750 1250 1750
 Wire Notes Line
@@ -354,5 +337,45 @@ Low Voltage
 Text Notes 2450 900  0    50   ~ 0
 High Voltage
 Text Notes 1400 1450 0    20   ~ 0
-16mA to turn on: \n5V/16mA = 3000MOhm
+0.16mA to turn on:\n5V/25000Ohm = 0.0002A = .2mA
+Text Notes 2450 2150 0    50   ~ 0
+Normally Closed
+$Comp
+L formula:BAT400D-7-F D1
+U 1 1 6028B857
+P 3450 1400
+F 0 "D1" H 3450 1616 50  0000 C CNN
+F 1 "BAT400D-7-F" H 3450 1525 50  0000 C CNN
+F 2 "footprints:SOT-23-3_OEM" H 3350 1400 50  0001 C CNN
+F 3 "https://www.diodes.com/assets/Datasheets/ds30182.pdf" H 3450 1500 50  0001 C CNN
+F 4 "https://www.digikey.com/products/en?keywords=BAT400D-FDICT-ND" H 3750 1800 60  0001 C CNN "PurchasingLink"
+	1    3450 1400
+	1    0    0    -1  
+$EndComp
+Connection ~ 3300 1400
+$Comp
+L power:+5V #PWR01
+U 1 1 6029A8EE
+P 1250 1750
+F 0 "#PWR01" H 1250 1600 50  0001 C CNN
+F 1 "+5V" H 1265 1923 50  0000 C CNN
+F 2 "" H 1250 1750 50  0001 C CNN
+F 3 "" H 1250 1750 50  0001 C CNN
+	1    1250 1750
+	1    0    0    -1  
+$EndComp
+$Comp
+L formula:R_25K R1
+U 1 1 602A28CD
+P 1550 1750
+F 0 "R1" V 1343 1750 50  0000 C CNN
+F 1 "R_25K" V 1434 1750 50  0000 C CNN
+F 2 "footprints:R_0805_OEM" H 1600 1200 50  0001 C CNN
+F 3 "https://www.te.com/commerce/DocumentDelivery/DDEController?Action=srchrtrv&DocNm=1773200-1&DocType=DS&DocLang=English" H 1550 1350 50  0001 C CNN
+F 4 "DK" H 950 1750 60  0001 C CNN "MFN"
+F 5 "A124124CT-ND" H 1600 2250 60  0001 C CNN "MPN"
+F 6 "https://www.digikey.com/product-detail/en/te-connectivity-passive-product/CPF-A-0805B25KE/A124124CT-ND/5970044" H 1600 2150 60  0001 C CNN "PurchasingLink"
+	1    1550 1750
+	0    1    1    0   
+$EndComp
 $EndSCHEMATC
