@@ -227,17 +227,6 @@ F 6 "https://www.digikey.com/en/products/detail/on-semiconductor/FQD2N60CTM/1053
 	1    4000 2000
 	1    0    0    -1  
 $EndComp
-$Comp
-L power:GND #PWR072
-U 1 1 5FD6CC93
-P 3300 1700
-F 0 "#PWR072" H 3300 1450 50  0001 C CNN
-F 1 "GND" H 3305 1527 50  0000 C CNN
-F 2 "" H 3300 1700 50  0001 C CNN
-F 3 "" H 3300 1700 50  0001 C CNN
-	1    3300 1700
-	1    0    0    -1  
-$EndComp
 Wire Wire Line
 	3600 2250 4000 2250
 Wire Wire Line
@@ -378,4 +367,6 @@ F 6 "https://www.digikey.com/product-detail/en/te-connectivity-passive-product/C
 	1    1550 1750
 	0    1    1    0   
 $EndComp
+Text HLabel 3300 1700 3    50   Output ~ 0
+HV-
 $EndSCHEMATC
