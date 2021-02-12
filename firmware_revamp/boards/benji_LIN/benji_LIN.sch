@@ -75,34 +75,6 @@ F 6 "https://www.digikey.com/products/en?keywords=478-3352-1-ND" H 3025 8000 60 
 	1    0    0    -1  
 $EndComp
 $Comp
-L template-rescue:R_100K-formula R103
-U 1 1 5BEE2A52
-P 4500 8150
-F 0 "R103" V 4600 8100 50  0000 L CNN
-F 1 "R_100K" V 4400 8000 50  0000 L CNN
-F 2 "footprints:R_0805_OEM" H 4430 8150 50  0001 C CNN
-F 3 "https://industrial.panasonic.com/cdbs/www-data/pdf/RDA0000/AOA0000C304.pdf" H 4580 8150 50  0001 C CNN
-F 4 "DK" H 4500 8150 60  0001 C CNN "MFN"
-F 5 "P100KCCT-ND" H 4500 8150 60  0001 C CNN "MPN"
-F 6 "https://www.digikey.com/product-detail/en/panasonic-electronic-components/ERJ-6ENF1003V/P100KCCT-ND/119551" H 4980 8550 60  0001 C CNN "PurchasingLink"
-	1    4500 8150
-	0    1    1    0   
-$EndComp
-$Comp
-L template-rescue:C_0.1uF-formula C103
-U 1 1 5BEE239B
-P 4500 7300
-F 0 "C103" V 4440 7440 50  0000 C CNN
-F 1 "C_0.1uF" V 4540 7500 50  0000 C CNN
-F 2 "footprints:C_0805_OEM" H 4538 7150 50  0001 C CNN
-F 3 "http://datasheets.avx.com/X7RDielectric.pdf" H 4525 7400 50  0001 C CNN
-F 4 "DK" H 4500 7300 60  0001 C CNN "MFN"
-F 5 "478-3352-1-ND" H 4500 7300 60  0001 C CNN "MPN"
-F 6 "https://www.digikey.com/products/en?keywords=478-3352-1-ND" H 4925 7800 60  0001 C CNN "PurchasingLink"
-	1    4500 7300
-	0    -1   -1   0   
-$EndComp
-$Comp
 L power:GND #PWR0108
 U 1 1 5BEE3CCE
 P 13000 7650
@@ -309,10 +281,6 @@ F 3 "" H 3850 8450 50  0001 C CNN
 	1    3850 8450
 	1    0    0    -1  
 $EndComp
-Text Notes 3950 8400 0    50   ~ 0
-Feedback Divider\n
-Text Notes 4100 7150 0    50   ~ 0
-Bootstrap Capacitor\n
 Text Notes 5400 7200 0    50   ~ 0
 Output Capacitors\n
 $Comp
@@ -613,7 +581,7 @@ Text Notes 2250 800  0    89   ~ 0
 ATMEGA 16M1\n
 Text Notes 3550 4900 0    89   ~ 0
 16 MHz CRYSTAL\n
-Text Notes 12050 7200 0    89   ~ 0
+Text Notes 12450 7200 0    89   ~ 0
 POWER FLAGS\n
 $Comp
 L power:PWR_FLAG #FLG01
@@ -817,9 +785,6 @@ Wire Wire Line
 	4650 7300 4750 7300
 Wire Wire Line
 	4750 7300 4750 7450
-Wire Wire Line
-	4000 7450 4750 7450
-Connection ~ 4750 7450
 Wire Wire Line
 	4750 7450 4800 7450
 Wire Wire Line
@@ -1180,10 +1145,10 @@ MISO
 Text Label 13400 4950 2    50   ~ 0
 RESET
 $Comp
-L formula:R_330 R?
+L formula:R_330 R7
 U 1 1 602CA042
 P 14350 4500
-F 0 "R?" V 14143 4500 50  0000 C CNN
+F 0 "R7" V 14143 4500 50  0000 C CNN
 F 1 "R_330" V 14234 4500 50  0000 C CNN
 F 2 "footprints:R_0805_OEM" H 14280 4500 50  0001 C CNN
 F 3 "https://www.seielect.com/Catalog/SEI-RMCF_RMCP.pdf" H 14430 4500 50  0001 C CNN
@@ -1198,10 +1163,10 @@ Wire Wire Line
 Wire Wire Line
 	14500 4500 14600 4500
 $Comp
-L formula:R_330 R?
+L formula:R_330 R6
 U 1 1 602D41EE
 P 13300 4400
-F 0 "R?" V 13093 4400 50  0000 C CNN
+F 0 "R6" V 13093 4400 50  0000 C CNN
 F 1 "R_330" V 13184 4400 50  0000 C CNN
 F 2 "footprints:R_0805_OEM" H 13230 4400 50  0001 C CNN
 F 3 "https://www.seielect.com/Catalog/SEI-RMCF_RMCP.pdf" H 13380 4400 50  0001 C CNN
@@ -1218,10 +1183,10 @@ Wire Wire Line
 Wire Wire Line
 	13400 4600 13600 4600
 $Comp
-L formula:R_330 R?
+L formula:R_330 R5
 U 1 1 602DEDF9
 P 13150 4700
-F 0 "R?" V 12943 4700 50  0000 C CNN
+F 0 "R5" V 12943 4700 50  0000 C CNN
 F 1 "R_330" V 13034 4700 50  0000 C CNN
 F 2 "footprints:R_0805_OEM" H 13080 4700 50  0001 C CNN
 F 3 "https://www.seielect.com/Catalog/SEI-RMCF_RMCP.pdf" H 13230 4700 50  0001 C CNN
@@ -1262,4 +1227,68 @@ NoConn ~ 3650 1300
 NoConn ~ 3650 1200
 NoConn ~ 3650 1100
 NoConn ~ 3650 1000
+Connection ~ 4750 7450
+Wire Wire Line
+	4000 7450 4750 7450
+Text Notes 4100 7150 0    50   ~ 0
+Bootstrap Capacitor\n
+Text Notes 3950 8400 0    50   ~ 0
+Feedback Divider\n
+$Comp
+L template-rescue:C_0.1uF-formula C103
+U 1 1 5BEE239B
+P 4500 7300
+F 0 "C103" V 4440 7440 50  0000 C CNN
+F 1 "C_0.1uF" V 4540 7500 50  0000 C CNN
+F 2 "footprints:C_0805_OEM" H 4538 7150 50  0001 C CNN
+F 3 "http://datasheets.avx.com/X7RDielectric.pdf" H 4525 7400 50  0001 C CNN
+F 4 "DK" H 4500 7300 60  0001 C CNN "MFN"
+F 5 "478-3352-1-ND" H 4500 7300 60  0001 C CNN "MPN"
+F 6 "https://www.digikey.com/products/en?keywords=478-3352-1-ND" H 4925 7800 60  0001 C CNN "PurchasingLink"
+	1    4500 7300
+	0    -1   -1   0   
+$EndComp
+$Comp
+L template-rescue:R_100K-formula R103
+U 1 1 5BEE2A52
+P 4500 8150
+F 0 "R103" V 4600 8100 50  0000 L CNN
+F 1 "R_100K" V 4400 8000 50  0000 L CNN
+F 2 "footprints:R_0805_OEM" H 4430 8150 50  0001 C CNN
+F 3 "https://industrial.panasonic.com/cdbs/www-data/pdf/RDA0000/AOA0000C304.pdf" H 4580 8150 50  0001 C CNN
+F 4 "DK" H 4500 8150 60  0001 C CNN "MFN"
+F 5 "P100KCCT-ND" H 4500 8150 60  0001 C CNN "MPN"
+F 6 "https://www.digikey.com/product-detail/en/panasonic-electronic-components/ERJ-6ENF1003V/P100KCCT-ND/119551" H 4980 8550 60  0001 C CNN "PurchasingLink"
+	1    4500 8150
+	0    1    1    0   
+$EndComp
+Text Label 13550 7650 0    50   ~ 0
+12V_Protected
+$Comp
+L power:PWR_FLAG #FLG?
+U 1 1 603FB834
+P 13550 7500
+F 0 "#FLG?" H 13550 7575 50  0001 C CNN
+F 1 "PWR_FLAG" H 13550 7674 50  0000 C CNN
+F 2 "" H 13550 7500 50  0001 C CNN
+F 3 "~" H 13550 7500 50  0001 C CNN
+	1    13550 7500
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	13550 7500 13550 7650
+Text Notes 12500 6000 0    89   ~ 0
+TEST POINTS
+Text Label 12000 6200 0    50   ~ 0
+12V_Protected
+Text Label 12650 6200 0    50   ~ 0
+GND
+Text Label 12900 6200 0    50   ~ 0
+5V
+Text Label 13100 6200 0    50   ~ 0
+CAN_+
+Text Label 13400 6200 0    50   ~ 0
+CAN_-
+Text Label 13700 6200 0    50   ~ 0
+LIN_BUS
 $EndSCHEMATC
