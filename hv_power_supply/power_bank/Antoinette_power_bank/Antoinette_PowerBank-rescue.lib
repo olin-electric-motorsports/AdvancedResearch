@@ -1,11 +1,11 @@
 EESchema-LIBRARY Version 2.4
 #encoding utf-8
 #
-# Antoinette_PowerBank-rescue_+5V-power
+# +5V-power
 #
-DEF Antoinette_PowerBank-rescue_+5V-power #PWR 0 0 Y Y 1 F P
+DEF +5V-power #PWR 0 0 Y Y 1 F P
 F0 "#PWR" 0 -150 50 H I C CNN
-F1 "Antoinette_PowerBank-rescue_+5V-power" 0 140 50 H V C CNN
+F1 "+5V-power" 0 140 50 H V C CNN
 F2 "" 0 0 50 H I C CNN
 F3 "" 0 0 50 H I C CNN
 DRAW
@@ -16,11 +16,11 @@ X +5V 1 0 0 0 U 50 50 1 1 W N
 ENDDRAW
 ENDDEF
 #
-# Antoinette_PowerBank-rescue_1.5A_Fuse-formula
+# 1.5A_Fuse-formula
 #
-DEF Antoinette_PowerBank-rescue_1.5A_Fuse-formula F 0 40 Y Y 1 F N
+DEF 1.5A_Fuse-formula F 0 40 Y Y 1 F N
 F0 "F" 0 150 50 H V C CNN
-F1 "Antoinette_PowerBank-rescue_1.5A_Fuse-formula" 0 -150 50 H V C CNN
+F1 "1.5A_Fuse-formula" 0 -150 50 H V C CNN
 F2 "footprints:Fuse_1206" 0 -300 50 H I C CNN
 F3 "" -50 0 50 H I C CNN
 F4 "F1462CT-ND" 100 250 50 H I C CNN "MPN"
@@ -35,11 +35,11 @@ X 2 2 300 0 200 L 50 50 1 1 I
 ENDDRAW
 ENDDEF
 #
-# Antoinette_PowerBank-rescue_C_0.1uF-formula
+# C_0.1uF-formula
 #
-DEF Antoinette_PowerBank-rescue_C_0.1uF-formula C 0 10 N Y 1 F N
+DEF C_0.1uF-formula C 0 10 N Y 1 F N
 F0 "C" 25 100 50 H V L CNN
-F1 "Antoinette_PowerBank-rescue_C_0.1uF-formula" 25 -100 50 H V L CNN
+F1 "C_0.1uF-formula" 25 -100 50 H V L CNN
 F2 "footprints:C_0805_OEM" 38 -150 50 H I C CNN
 F3 "http://datasheets.avx.com/X7RDielectric.pdf" 25 100 50 H I C CNN
 F4 "DK" 0 0 60 H I C CNN "MFN"
@@ -60,11 +60,11 @@ X ~ 2 0 -150 110 U 50 50 1 1 P
 ENDDRAW
 ENDDEF
 #
-# Antoinette_PowerBank-rescue_C_100uF-formula
+# C_100uF-formula
 #
-DEF Antoinette_PowerBank-rescue_C_100uF-formula C 0 10 N Y 1 F N
+DEF C_100uF-formula C 0 10 N Y 1 F N
 F0 "C" 25 100 50 H V L CNN
-F1 "Antoinette_PowerBank-rescue_C_100uF-formula" 25 -100 50 H V L CNN
+F1 "C_100uF-formula" 25 -100 50 H V L CNN
 F2 "footprints:C_1812_4532Metric" 0 750 50 H I C CNN
 F3 "" 200 -550 50 H I C CNN
 F4 "C4532X5R0J107M280KA" 0 450 60 H I C CNN "MFN"
@@ -85,11 +85,11 @@ X ~ 2 0 -150 110 U 50 50 1 1 P
 ENDDRAW
 ENDDEF
 #
-# Antoinette_PowerBank-rescue_C_10nF-formula
+# C_10nF-formula
 #
-DEF Antoinette_PowerBank-rescue_C_10nF-formula C 0 40 Y Y 1 F N
+DEF C_10nF-formula C 0 40 Y Y 1 F N
 F0 "C" -100 100 50 H V C CNN
-F1 "Antoinette_PowerBank-rescue_C_10nF-formula" 150 0 50 V V C CNN
+F1 "C_10nF-formula" 150 0 50 V V C CNN
 F2 "footprints:C_0805_OEM" -200 0 50 H I C CNN
 F3 "http://www.samsungsem.com/kr/support/product-search/mlcc/__icsFiles/afieldfile/2018/07/23/CL21B103KBANNNC.pdf" -100 100 50 H I C CNN
 F4 "DK" 0 200 50 H I C CNN "MFN"
@@ -103,11 +103,11 @@ X ~ 2 0 -150 110 U 50 50 1 1 P
 ENDDRAW
 ENDDEF
 #
-# Antoinette_PowerBank-rescue_C_10uF-formula
+# C_10uF-formula
 #
-DEF Antoinette_PowerBank-rescue_C_10uF-formula C 0 10 N Y 1 F N
+DEF C_10uF-formula C 0 10 N Y 1 F N
 F0 "C" 25 150 50 H V L CNN
-F1 "Antoinette_PowerBank-rescue_C_10uF-formula" 25 -50 50 H V L CNN
+F1 "C_10uF-formula" 25 -50 50 H V L CNN
 F2 "footprints:C_0805_OEM" 38 600 50 H I C CNN
 F3 "" 25 850 50 H I C CNN
 F4 "DK" 0 50 60 H I C CNN "MFN"
@@ -128,11 +128,11 @@ X ~ 2 0 -100 110 U 50 50 1 1 P
 ENDDRAW
 ENDDEF
 #
-# Antoinette_PowerBank-rescue_C_2.2uF-formula
+# C_2.2uF-formula
 #
-DEF Antoinette_PowerBank-rescue_C_2.2uF-formula C 0 10 N Y 1 F N
+DEF C_2.2uF-formula C 0 10 N Y 1 F N
 F0 "C" 25 150 50 H V L CNN
-F1 "Antoinette_PowerBank-rescue_C_2.2uF-formula" 25 -50 50 H V L CNN
+F1 "C_2.2uF-formula" 25 -50 50 H V L CNN
 F2 "footprints:C_0805_OEM" 38 600 50 H I C CNN
 F3 "" 25 850 50 H I C CNN
 F4 "https://www.digikey.com/product-detail/en/tdk-corporation/C2012X7R1H225M125AE/445-172488-1-ND/4990030" 425 500 60 H I C CNN "PurchasingLink"
@@ -151,11 +151,11 @@ X ~ 2 0 -100 110 U 50 50 1 1 P
 ENDDRAW
 ENDDEF
 #
-# Antoinette_PowerBank-rescue_GND-power
+# GND-power
 #
-DEF Antoinette_PowerBank-rescue_GND-power #PWR 0 0 Y Y 1 F P
+DEF GND-power #PWR 0 0 Y Y 1 F P
 F0 "#PWR" 0 -250 50 H I C CNN
-F1 "Antoinette_PowerBank-rescue_GND-power" 0 -150 50 H V C CNN
+F1 "GND-power" 0 -150 50 H V C CNN
 F2 "" 0 0 50 H I C CNN
 F3 "" 0 0 50 H I C CNN
 DRAW
@@ -164,11 +164,11 @@ X GND 1 0 0 0 D 50 50 1 1 W N
 ENDDRAW
 ENDDEF
 #
-# Antoinette_PowerBank-rescue_GNDPWR-power
+# GNDPWR-power
 #
-DEF Antoinette_PowerBank-rescue_GNDPWR-power #PWR 0 0 Y Y 1 F P
+DEF GNDPWR-power #PWR 0 0 Y Y 1 F P
 F0 "#PWR" 0 -200 50 H I C CNN
-F1 "Antoinette_PowerBank-rescue_GNDPWR-power" 0 -130 50 H V C CNN
+F1 "GNDPWR-power" 0 -130 50 H V C CNN
 F2 "" 0 -50 50 H I C CNN
 F3 "" 0 -50 50 H I C CNN
 DRAW
@@ -183,11 +183,11 @@ X GNDPWR 1 0 0 0 D 50 50 1 1 W N
 ENDDRAW
 ENDDEF
 #
-# Antoinette_PowerBank-rescue_LED_0805-formula
+# LED_0805-formula
 #
-DEF Antoinette_PowerBank-rescue_LED_0805-formula D 0 40 N N 1 F N
+DEF LED_0805-formula D 0 40 N N 1 F N
 F0 "D" 0 -100 50 H V C CNN
-F1 "Antoinette_PowerBank-rescue_LED_0805-formula" 0 100 50 H V C CNN
+F1 "LED_0805-formula" 0 100 50 H V C CNN
 F2 "footprints:LED_0805_OEM" -100 0 50 H I C CNN
 F3 "http://www.osram-os.com/Graphics/XPic9/00078860_0.pdf" 0 100 50 H I C CNN
 F4 "DK" 0 0 60 H I C CNN "MFN"
@@ -207,11 +207,11 @@ X A 2 150 0 100 L 50 50 1 1 P
 ENDDRAW
 ENDDEF
 #
-# Antoinette_PowerBank-rescue_LED_0805_Amber-formula
+# LED_0805_Amber-formula
 #
-DEF Antoinette_PowerBank-rescue_LED_0805_Amber-formula D 0 40 N N 1 F N
+DEF LED_0805_Amber-formula D 0 40 N N 1 F N
 F0 "D" 0 -100 50 H V C CNN
-F1 "Antoinette_PowerBank-rescue_LED_0805_Amber-formula" 0 100 50 H V C CNN
+F1 "LED_0805_Amber-formula" 0 100 50 H V C CNN
 F2 "footprints:LED_0805_OEM" -100 0 50 H I C CNN
 F3 "https://media.digikey.com/pdf/Data%20Sheets/Chicago%20Miniature%20Lamps%20PDFs/CMDA5_Series_Rev_Aug_2014.pdf" 0 100 50 H I C CNN
 F4 "DK" 0 0 60 H I C CNN "MFN"
@@ -231,11 +231,11 @@ X A 2 150 0 100 L 50 50 1 1 P
 ENDDRAW
 ENDDEF
 #
-# Antoinette_PowerBank-rescue_L_6.8uH-formula
+# L_6.8uH-formula
 #
-DEF Antoinette_PowerBank-rescue_L_6.8uH-formula L 0 40 N N 1 F N
+DEF L_6.8uH-formula L 0 40 N N 1 F N
 F0 "L" 0 -50 50 H V C CNN
-F1 "Antoinette_PowerBank-rescue_L_6.8uH-formula" 0 100 50 H V C CNN
+F1 "L_6.8uH-formula" 0 100 50 H V C CNN
 F2 "footprints:L_100uH_OEM" -100 -200 50 H I C CNN
 F3 "" -100 -150 50 H I C CNN
 F4 "Digikey" 100 -200 50 H I C CNN "MFN"
@@ -250,11 +250,11 @@ X ~ 2 100 0 20 L 50 50 1 1 P
 ENDDRAW
 ENDDEF
 #
-# Antoinette_PowerBank-rescue_MCP73871T-2CCI_ML-formula
+# MCP73871T-2CCI_ML-formula
 #
-DEF Antoinette_PowerBank-rescue_MCP73871T-2CCI_ML-formula U 0 40 Y Y 1 F N
+DEF MCP73871T-2CCI_ML-formula U 0 40 Y Y 1 F N
 F0 "U" -604 823 50 H V L BNN
-F1 "Antoinette_PowerBank-rescue_MCP73871T-2CCI_ML-formula" -606 -920 50 H V L BNN
+F1 "MCP73871T-2CCI_ML-formula" -606 -920 50 H V L BNN
 F2 "footprints:MCP73871T" 50 850 50 H I L BNN
 F3 "" 50 950 50 H I L BNN
 F4 "D" 0 0 50 H I L BNN
@@ -289,11 +289,11 @@ X ~TE~ 9 -800 0 200 R 40 40 0 0 I
 ENDDRAW
 ENDDEF
 #
-# Antoinette_PowerBank-rescue_NanoFit_RA_TH_02-formula
+# NanoFit_RA_TH_02-formula
 #
-DEF Antoinette_PowerBank-rescue_NanoFit_RA_TH_02-formula J 0 40 Y Y 1 F N
+DEF NanoFit_RA_TH_02-formula J 0 40 Y Y 1 F N
 F0 "J" 0 200 60 H V C CNN
-F1 "Antoinette_PowerBank-rescue_NanoFit_RA_TH_02-formula" 0 -300 60 H V C CNN
+F1 "NanoFit_RA_TH_02-formula" 0 -300 60 H V C CNN
 F2 "footprints:NanoFit_Molex_1x02x2.50mm_Angled_OEM" 0 -600 60 H I C CNN
 F3 "https://www.molex.com/pdm_docs/sd/1053131102_sd.pdf" 0 -450 60 H I C CNN
 F4 "DK" 0 550 50 H I C CNN "MFN"
@@ -306,11 +306,11 @@ X 2 2 -450 -100 200 R 50 50 1 1 I
 ENDDRAW
 ENDDEF
 #
-# Antoinette_PowerBank-rescue_R_1.87M-formula
+# R_1.87M-formula
 #
-DEF Antoinette_PowerBank-rescue_R_1.87M-formula R 0 0 N Y 1 F N
+DEF R_1.87M-formula R 0 0 N Y 1 F N
 F0 "R" 80 0 50 V V C CNN
-F1 "Antoinette_PowerBank-rescue_R_1.87M-formula" -100 0 50 V V C CNN
+F1 "R_1.87M-formula" -100 0 50 V V C CNN
 F2 "footprints:R_0805_OEM" -70 0 50 H I C CNN
 F3 "" 80 0 50 H I C CNN
 F4 "DK" 0 0 60 H I C CNN "MFN"
@@ -326,11 +326,11 @@ X ~ 2 0 -150 50 U 50 50 1 1 P
 ENDDRAW
 ENDDEF
 #
-# Antoinette_PowerBank-rescue_R_100K-formula
+# R_100K-formula
 #
-DEF Antoinette_PowerBank-rescue_R_100K-formula R 0 0 N Y 1 F N
+DEF R_100K-formula R 0 0 N Y 1 F N
 F0 "R" 80 0 50 V V C CNN
-F1 "Antoinette_PowerBank-rescue_R_100K-formula" -100 0 50 V V C CNN
+F1 "R_100K-formula" -100 0 50 V V C CNN
 F2 "footprints:R_0805_OEM" -70 0 50 H I C CNN
 F3 "https://industrial.panasonic.com/cdbs/www-data/pdf/RDA0000/AOA0000C304.pdf" 80 0 50 H I C CNN
 F4 "DK" 0 0 60 H I C CNN "MFN"
@@ -347,11 +347,11 @@ X ~ 2 0 -150 50 U 50 50 1 1 P
 ENDDRAW
 ENDDEF
 #
-# Antoinette_PowerBank-rescue_R_10K-formula
+# R_10K-formula
 #
-DEF Antoinette_PowerBank-rescue_R_10K-formula R 0 0 N Y 1 F N
+DEF R_10K-formula R 0 0 N Y 1 F N
 F0 "R" 80 0 50 V V C CNN
-F1 "Antoinette_PowerBank-rescue_R_10K-formula" -100 0 50 V V C CNN
+F1 "R_10K-formula" -100 0 50 V V C CNN
 F2 "footprints:R_0805_OEM" -70 0 50 H I C CNN
 F3 "http://www.bourns.com/data/global/pdfs/CRS.pdf" 80 0 50 H I C CNN
 F4 "DK" 0 0 60 H I C CNN "MFN"
@@ -368,11 +368,11 @@ X ~ 2 0 -150 50 U 50 50 1 1 P
 ENDDRAW
 ENDDEF
 #
-# Antoinette_PowerBank-rescue_R_1K-formula
+# R_1K-formula
 #
-DEF Antoinette_PowerBank-rescue_R_1K-formula R 0 0 N Y 1 F N
+DEF R_1K-formula R 0 0 N Y 1 F N
 F0 "R" 80 0 50 V V C CNN
-F1 "Antoinette_PowerBank-rescue_R_1K-formula" -100 0 50 V V C CNN
+F1 "R_1K-formula" -100 0 50 V V C CNN
 F2 "footprints:R_0805_OEM" -70 0 50 H I C CNN
 F3 "https://www.seielect.com/Catalog/SEI-rncp.pdf" 80 0 50 H I C CNN
 F4 "DK" 0 0 60 H I C CNN "MFN"
@@ -389,11 +389,11 @@ X ~ 2 0 -150 50 U 50 50 1 1 P
 ENDDRAW
 ENDDEF
 #
-# Antoinette_PowerBank-rescue_R_200K-formula
+# R_200K-formula
 #
-DEF Antoinette_PowerBank-rescue_R_200K-formula R 0 0 N Y 1 F N
+DEF R_200K-formula R 0 0 N Y 1 F N
 F0 "R" 80 0 50 V V C CNN
-F1 "Antoinette_PowerBank-rescue_R_200K-formula" -100 0 50 V V C CNN
+F1 "R_200K-formula" -100 0 50 V V C CNN
 F2 "footprints:R_0805_OEM" -70 0 50 H I C CNN
 F3 "" 80 0 50 H I C CNN
 F4 "DK" 0 0 60 H I C CNN "MFN"
@@ -409,11 +409,11 @@ X ~ 2 0 -150 50 U 50 50 1 1 P
 ENDDRAW
 ENDDEF
 #
-# Antoinette_PowerBank-rescue_R_270K-formula
+# R_270K-formula
 #
-DEF Antoinette_PowerBank-rescue_R_270K-formula R 0 0 N Y 1 F N
+DEF R_270K-formula R 0 0 N Y 1 F N
 F0 "R" 80 0 50 V V C CNN
-F1 "Antoinette_PowerBank-rescue_R_270K-formula" -100 0 50 V V C CNN
+F1 "R_270K-formula" -100 0 50 V V C CNN
 F2 "footprints:R_0805_OEM" -70 0 50 V I C CNN
 F3 "https://industrial.panasonic.com/cdbs/www-data/pdf/RDM0000/AOA0000C307.pdf" 550 100 50 V I C CNN
 F4 "DK" 180 100 60 V I C CNN "MFN"
@@ -430,11 +430,11 @@ X ~ 2 0 -150 50 U 50 50 1 1 P
 ENDDRAW
 ENDDEF
 #
-# Antoinette_PowerBank-rescue_R_340K-formula
+# R_340K-formula
 #
-DEF Antoinette_PowerBank-rescue_R_340K-formula R 0 0 N Y 1 F N
+DEF R_340K-formula R 0 0 N Y 1 F N
 F0 "R" 80 0 50 V V C CNN
-F1 "Antoinette_PowerBank-rescue_R_340K-formula" -100 0 50 V V C CNN
+F1 "R_340K-formula" -100 0 50 V V C CNN
 F2 "footprints:R_0805_OEM" -70 0 50 H I C CNN
 F3 "" 80 0 50 H I C CNN
 F4 "DK" 0 0 60 H I C CNN "MFN"
@@ -450,11 +450,11 @@ X ~ 2 0 -150 50 U 50 50 1 1 P
 ENDDRAW
 ENDDEF
 #
-# Antoinette_PowerBank-rescue_R_43k-formula
+# R_43k-formula
 #
-DEF Antoinette_PowerBank-rescue_R_43k-formula R 0 0 N Y 1 F N
+DEF R_43k-formula R 0 0 N Y 1 F N
 F0 "R" 80 0 50 V V C CNN
-F1 "Antoinette_PowerBank-rescue_R_43k-formula" -100 0 50 V V C CNN
+F1 "R_43k-formula" -100 0 50 V V C CNN
 F2 "footprints:R_0805_OEM" -70 0 50 H I C CNN
 F3 "" 80 0 50 H I C CNN
 $FPLIST
@@ -468,11 +468,11 @@ X ~ 2 0 -150 50 U 50 50 1 1 P
 ENDDRAW
 ENDDEF
 #
-# Antoinette_PowerBank-rescue_R_49.9K-formula
+# R_49.9K-formula
 #
-DEF Antoinette_PowerBank-rescue_R_49.9K-formula R 0 0 N Y 1 F N
+DEF R_49.9K-formula R 0 0 N Y 1 F N
 F0 "R" 80 0 50 V V C CNN
-F1 "Antoinette_PowerBank-rescue_R_49.9K-formula" -100 0 50 V V C CNN
+F1 "R_49.9K-formula" -100 0 50 V V C CNN
 F2 "footprints:R_0805_OEM" -1100 300 50 H I L CNN
 F3 "" -1100 400 50 H I L CNN
 F4 "https://www.digikey.com/product-detail/en/panasonic-electronic-components/ERA-6AEB4992V/P49-9KDACT-ND/3075162" -1100 500 60 H I L CNN "PurchasingLink"
@@ -487,11 +487,11 @@ X ~ 2 0 -150 50 U 50 50 1 1 P
 ENDDRAW
 ENDDEF
 #
-# Antoinette_PowerBank-rescue_R_75k-formula
+# R_75k-formula
 #
-DEF Antoinette_PowerBank-rescue_R_75k-formula R 0 0 N Y 1 F N
+DEF R_75k-formula R 0 0 N Y 1 F N
 F0 "R" 80 0 50 V V C CNN
-F1 "Antoinette_PowerBank-rescue_R_75k-formula" -100 0 50 V V C CNN
+F1 "R_75k-formula" -100 0 50 V V C CNN
 F2 "footprints:R_0805_OEM" -70 0 50 H I C CNN
 F3 "" 80 0 50 H I C CNN
 $FPLIST
@@ -505,11 +505,11 @@ X ~ 2 0 -150 50 U 50 50 1 1 P
 ENDDRAW
 ENDDEF
 #
-# Antoinette_PowerBank-rescue_SSM3K333R-formula
+# SSM3K333R-formula
 #
-DEF Antoinette_PowerBank-rescue_SSM3K333R-formula Q 0 0 Y N 1 F N
+DEF SSM3K333R-formula Q 0 0 Y N 1 F N
 F0 "Q" 200 75 50 H V L CNN
-F1 "Antoinette_PowerBank-rescue_SSM3K333R-formula" 200 0 50 H V L CNN
+F1 "SSM3K333R-formula" 200 0 50 H V L CNN
 F2 "footprints:SOT-23F" 200 -75 50 H I L CIN
 F3 "https://drive.google.com/drive/folders/0B-V-iZf33Y4GNzhDQTJZanJRbVk" 200 75 50 H I L CNN
 F4 "DK" 500 375 60 H I C CNN "MFN"
@@ -542,11 +542,11 @@ X D 3 100 200 100 D 50 50 1 1 P
 ENDDRAW
 ENDDEF
 #
-# Antoinette_PowerBank-rescue_TP-formula
+# TP-formula
 #
-DEF Antoinette_PowerBank-rescue_TP-formula TP 0 0 N N 1 F N
+DEF TP-formula TP 0 0 N N 1 F N
 F0 "TP" 0 0 50 H V C CNN
-F1 "Antoinette_PowerBank-rescue_TP-formula" 0 0 50 H V C CNN
+F1 "TP-formula" 0 0 50 H V C CNN
 F2 "footprints:tp_1.6mm" -100 -100 50 H I C CNN
 F3 "http://www.keyelco.com/product-pdf.cfm?p=1314" 0 0 50 H I C CNN
 F4 "DK" 100 100 50 H I C CNN "MFN"
@@ -558,11 +558,11 @@ X TP 1 0 -200 100 U 50 50 1 1 I
 ENDDRAW
 ENDDEF
 #
-# Antoinette_PowerBank-rescue_TPS61090RSAR-formula
+# TPS61090RSAR-formula
 #
-DEF Antoinette_PowerBank-rescue_TPS61090RSAR-formula U 0 40 Y Y 1 F N
+DEF TPS61090RSAR-formula U 0 40 Y Y 1 F N
 F0 "U" -501 441 50 H V L BNN
-F1 "Antoinette_PowerBank-rescue_TPS61090RSAR-formula" -501 -659 50 H V L BNN
+F1 "TPS61090RSAR-formula" -501 -659 50 H V L BNN
 F2 "footprints:TPS61090RSAR" -250 600 50 H I L BNN
 F3 "" 0 0 50 H I L BNN
 F4 "1.48 USD" -150 550 50 H I L BNN
@@ -598,11 +598,11 @@ X LBI 9 -700 -250 200 R 40 40 0 0 I
 ENDDRAW
 ENDDEF
 #
-# Antoinette_PowerBank-rescue_USB-A-S-X-X-SM2-formula
+# USB-A-S-X-X-SM2-formula
 #
-DEF Antoinette_PowerBank-rescue_USB-A-S-X-X-SM2-formula J 0 40 Y Y 1 F N
+DEF USB-A-S-X-X-SM2-formula J 0 40 Y Y 1 F N
 F0 "J" -200 350 50 H V L BNN
-F1 "Antoinette_PowerBank-rescue_USB-A-S-X-X-SM2-formula" -200 -500 50 H V L BNN
+F1 "USB-A-S-X-X-SM2-formula" -200 -500 50 H V L BNN
 F2 "footprints:SAMTEC_USB-A-S-X-X-SM2" 0 0 50 H I L BNN
 F3 "" 0 0 50 H I L BNN
 F4 "Samtec" 0 0 50 H I L BNN
@@ -620,11 +620,11 @@ X SHIELD S2 -400 -300 200 R 40 40 0 0 P
 ENDDRAW
 ENDDEF
 #
-# Antoinette_PowerBank-rescue_USB-Micro-1981568-1-formula
+# USB-Micro-1981568-1-formula
 #
-DEF Antoinette_PowerBank-rescue_USB-Micro-1981568-1-formula J 0 40 Y Y 1 F N
+DEF USB-Micro-1981568-1-formula J 0 40 Y Y 1 F N
 F0 "J" -210 430 50 H V L BNN
-F1 "Antoinette_PowerBank-rescue_USB-Micro-1981568-1-formula" -210 -490 50 H V L BNN
+F1 "USB-Micro-1981568-1-formula" -210 -490 50 H V L BNN
 F2 "footprints:TE_1981568-1" -200 550 50 H I L BNN
 F3 "" 0 0 50 H I L BNN
 F4 ".65 mm[.025 in]" -50 550 50 H I L BNN
@@ -648,11 +648,11 @@ X SHIELD 9 300 -300 100 L 40 40 0 0 P
 ENDDRAW
 ENDDEF
 #
-# Antoinette_PowerBank-rescue_VBATT-formula
+# VBATT-formula
 #
-DEF Antoinette_PowerBank-rescue_VBATT-formula #PWR 0 0 Y Y 1 F P
+DEF VBATT-formula #PWR 0 0 Y Y 1 F P
 F0 "#PWR" 0 -150 50 H I C CNN
-F1 "Antoinette_PowerBank-rescue_VBATT-formula" 0 140 50 H V C CNN
+F1 "VBATT-formula" 0 140 50 H V C CNN
 F2 "" 0 0 50 H I C CNN
 F3 "" 0 0 50 H I C CNN
 DRAW
@@ -663,11 +663,11 @@ X +BATT 1 0 0 0 U 50 50 1 1 W N
 ENDDRAW
 ENDDEF
 #
-# Antoinette_PowerBank-rescue_VBUS-power
+# VBUS-power
 #
-DEF Antoinette_PowerBank-rescue_VBUS-power #PWR 0 0 Y Y 1 F P
+DEF VBUS-power #PWR 0 0 Y Y 1 F P
 F0 "#PWR" 0 -150 50 H I C CNN
-F1 "Antoinette_PowerBank-rescue_VBUS-power" 0 150 50 H V C CNN
+F1 "VBUS-power" 0 150 50 H V C CNN
 F2 "" 0 0 50 H I C CNN
 F3 "" 0 0 50 H I C CNN
 DRAW
