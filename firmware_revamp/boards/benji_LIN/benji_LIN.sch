@@ -1219,14 +1219,12 @@ NoConn ~ 3650 2400
 NoConn ~ 3650 2300
 NoConn ~ 3650 2000
 NoConn ~ 3650 1900
-NoConn ~ 3650 1700
 NoConn ~ 3650 1600
 NoConn ~ 3650 1500
 NoConn ~ 3650 1400
 NoConn ~ 3650 1300
 NoConn ~ 3650 1200
 NoConn ~ 3650 1100
-NoConn ~ 3650 1000
 Connection ~ 4750 7450
 Wire Wire Line
 	4000 7450 4750 7450
@@ -1265,10 +1263,10 @@ $EndComp
 Text Label 13550 7650 0    50   ~ 0
 12V_Protected
 $Comp
-L power:PWR_FLAG #FLG?
+L power:PWR_FLAG #FLG0101
 U 1 1 603FB834
 P 13550 7500
-F 0 "#FLG?" H 13550 7575 50  0001 C CNN
+F 0 "#FLG0101" H 13550 7575 50  0001 C CNN
 F 1 "PWR_FLAG" H 13550 7674 50  0000 C CNN
 F 2 "" H 13550 7500 50  0001 C CNN
 F 3 "~" H 13550 7500 50  0001 C CNN
@@ -1291,4 +1289,104 @@ Text Label 13400 6200 0    50   ~ 0
 CAN_-
 Text Label 13700 6200 0    50   ~ 0
 LIN_BUS
+Text Notes 8300 5100 0    50   ~ 0
+DEBUG LEDS
+Text Label 3650 1700 0    50   ~ 0
+SCK
+Text Label 3650 1000 0    50   ~ 0
+IO8
+Text Label 8150 5250 0    50   ~ 0
+SCK
+Text Label 8750 5250 0    50   ~ 0
+IO8
+$Comp
+L formula:LED_0805 D?
+U 1 1 60323BBE
+P 8150 5550
+F 0 "D?" V 8189 5433 50  0000 R CNN
+F 1 "LED_0805" V 8098 5433 50  0000 R CNN
+F 2 "footprints:LED_0805_OEM" H 8050 5550 50  0001 C CNN
+F 3 "http://www.osram-os.com/Graphics/XPic9/00078860_0.pdf" H 8150 5650 50  0001 C CNN
+F 4 "DK" H 8150 5550 60  0001 C CNN "MFN"
+F 5 "475-1410-1-ND" H 8150 5550 60  0001 C CNN "MPN"
+F 6 "https://www.digikey.com/products/en?keywords=475-1410-1-ND" H 8550 6050 60  0001 C CNN "PurchasingLink"
+	1    8150 5550
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	8150 5400 8150 5250
+$Comp
+L formula:LED_0805_Red D?
+U 1 1 60327C95
+P 8750 5550
+F 0 "D?" V 8789 5433 50  0000 R CNN
+F 1 "LED_0805_Red" V 8698 5433 50  0000 R CNN
+F 2 "footprints:LED_0805_OEM" H 8650 5550 50  0001 C CNN
+F 3 "http://www.osram-os.com/Graphics/XPic8/00078869_0.pdf" H 8750 5650 50  0001 C CNN
+F 4 "DK" H 8750 5550 60  0001 C CNN "MFN"
+F 5 "475-1415-1-ND" H 8750 5550 60  0001 C CNN "MPN"
+F 6 "https://www.digikey.com/product-detail/en/osram-opto-semiconductors-inc/LH-R974-LP-1/475-1415-1-ND/1802604" H 9150 6050 60  0001 C CNN "PurchasingLink"
+	1    8750 5550
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	8750 5250 8750 5400
+$Comp
+L formula:R_1K R?
+U 1 1 6032BF02
+P 8150 5950
+F 0 "R?" H 8220 5996 50  0000 L CNN
+F 1 "R_1K" H 8220 5905 50  0000 L CNN
+F 2 "footprints:R_0805_OEM" H 8080 5950 50  0001 C CNN
+F 3 "https://www.seielect.com/Catalog/SEI-rncp.pdf" H 8230 5950 50  0001 C CNN
+F 4 "DK" H 8150 5950 60  0001 C CNN "MFN"
+F 5 "RNCP0805FTD1K00CT-ND" H 8150 5950 60  0001 C CNN "MPN"
+F 6 "https://www.digikey.com/products/en?keywords=RNCP0805FTD1K00CT-ND" H 8630 6350 60  0001 C CNN "PurchasingLink"
+	1    8150 5950
+	1    0    0    -1  
+$EndComp
+$Comp
+L formula:R_1K R?
+U 1 1 6032C9E2
+P 8750 5950
+F 0 "R?" H 8820 5996 50  0000 L CNN
+F 1 "R_1K" H 8820 5905 50  0000 L CNN
+F 2 "footprints:R_0805_OEM" H 8680 5950 50  0001 C CNN
+F 3 "https://www.seielect.com/Catalog/SEI-rncp.pdf" H 8830 5950 50  0001 C CNN
+F 4 "DK" H 8750 5950 60  0001 C CNN "MFN"
+F 5 "RNCP0805FTD1K00CT-ND" H 8750 5950 60  0001 C CNN "MPN"
+F 6 "https://www.digikey.com/products/en?keywords=RNCP0805FTD1K00CT-ND" H 9230 6350 60  0001 C CNN "PurchasingLink"
+	1    8750 5950
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	8150 5700 8150 5800
+Wire Wire Line
+	8750 5700 8750 5800
+$Comp
+L power:GND #PWR?
+U 1 1 60332FFA
+P 8150 6200
+F 0 "#PWR?" H 8150 5950 50  0001 C CNN
+F 1 "GND" H 8155 6027 50  0000 C CNN
+F 2 "" H 8150 6200 50  0001 C CNN
+F 3 "" H 8150 6200 50  0001 C CNN
+	1    8150 6200
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	8150 6200 8150 6100
+$Comp
+L power:GND #PWR?
+U 1 1 6033649C
+P 8750 6200
+F 0 "#PWR?" H 8750 5950 50  0001 C CNN
+F 1 "GND" H 8755 6027 50  0000 C CNN
+F 2 "" H 8750 6200 50  0001 C CNN
+F 3 "" H 8750 6200 50  0001 C CNN
+	1    8750 6200
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	8750 6200 8750 6100
 $EndSCHEMATC
