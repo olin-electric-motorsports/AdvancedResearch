@@ -1218,19 +1218,15 @@ F 3 "~" H 13550 7500 50  0001 C CNN
 $EndComp
 Wire Wire Line
 	13550 7500 13550 7650
-Text Notes 12500 6000 0    89   ~ 0
-TEST POINTS
-Text Label 12000 6200 0    50   ~ 0
-12V_Protected
-Text Label 12650 6200 0    50   ~ 0
+Text Label 12150 6200 0    50   ~ 0
 GND
-Text Label 12900 6200 0    50   ~ 0
+Text Label 12600 6200 0    50   ~ 0
 5V
-Text Label 13100 6200 0    50   ~ 0
+Text Label 12950 6200 0    50   ~ 0
 CAN_+
-Text Label 13400 6200 0    50   ~ 0
+Text Label 13450 6200 0    50   ~ 0
 CAN_-
-Text Label 13700 6200 0    50   ~ 0
+Text Label 13950 6200 0    50   ~ 0
 LIN_BUS
 Text Notes 8300 5100 0    50   ~ 0
 DEBUG LEDS
@@ -1376,4 +1372,104 @@ F 3 "" H 6700 1750 50  0001 C CNN
 	1    6700 1750
 	1    0    0    -1  
 $EndComp
+$Comp
+L formula:TP TP?
+U 1 1 6043188E
+P 12150 6500
+F 0 "TP?" H 12072 6346 50  0000 R CNN
+F 1 "TP" H 12072 6437 50  0000 R CNN
+F 2 "footprints:tp_1.6mm" H 12050 6400 50  0001 C CNN
+F 3 "http://www.keyelco.com/product-pdf.cfm?p=1314" H 12150 6500 50  0001 C CNN
+F 4 "DK" H 12250 6600 50  0001 C CNN "MFN"
+F 5 "36-5006-ND" H 12350 6700 50  0001 C CNN "MPN"
+F 6 "https://www.digikey.com/product-detail/en/keystone-electronics/5006/36-5006-ND/255330" H 12450 6800 50  0001 C CNN "PurchasingLink"
+	1    12150 6500
+	-1   0    0    1   
+$EndComp
+$Comp
+L formula:TP TP?
+U 1 1 60452016
+P 12600 6500
+F 0 "TP?" H 12522 6346 50  0000 R CNN
+F 1 "TP" H 12522 6437 50  0000 R CNN
+F 2 "footprints:tp_1.6mm" H 12500 6400 50  0001 C CNN
+F 3 "http://www.keyelco.com/product-pdf.cfm?p=1314" H 12600 6500 50  0001 C CNN
+F 4 "DK" H 12700 6600 50  0001 C CNN "MFN"
+F 5 "36-5006-ND" H 12800 6700 50  0001 C CNN "MPN"
+F 6 "https://www.digikey.com/product-detail/en/keystone-electronics/5006/36-5006-ND/255330" H 12900 6800 50  0001 C CNN "PurchasingLink"
+	1    12600 6500
+	-1   0    0    1   
+$EndComp
+$Comp
+L formula:TP TP?
+U 1 1 60452657
+P 12950 6500
+F 0 "TP?" H 12872 6346 50  0000 R CNN
+F 1 "TP" H 12872 6437 50  0000 R CNN
+F 2 "footprints:tp_1.6mm" H 12850 6400 50  0001 C CNN
+F 3 "http://www.keyelco.com/product-pdf.cfm?p=1314" H 12950 6500 50  0001 C CNN
+F 4 "DK" H 13050 6600 50  0001 C CNN "MFN"
+F 5 "36-5006-ND" H 13150 6700 50  0001 C CNN "MPN"
+F 6 "https://www.digikey.com/product-detail/en/keystone-electronics/5006/36-5006-ND/255330" H 13250 6800 50  0001 C CNN "PurchasingLink"
+	1    12950 6500
+	-1   0    0    1   
+$EndComp
+$Comp
+L formula:TP TP?
+U 1 1 60452C4A
+P 13450 6500
+F 0 "TP?" H 13372 6346 50  0000 R CNN
+F 1 "TP" H 13372 6437 50  0000 R CNN
+F 2 "footprints:tp_1.6mm" H 13350 6400 50  0001 C CNN
+F 3 "http://www.keyelco.com/product-pdf.cfm?p=1314" H 13450 6500 50  0001 C CNN
+F 4 "DK" H 13550 6600 50  0001 C CNN "MFN"
+F 5 "36-5006-ND" H 13650 6700 50  0001 C CNN "MPN"
+F 6 "https://www.digikey.com/product-detail/en/keystone-electronics/5006/36-5006-ND/255330" H 13750 6800 50  0001 C CNN "PurchasingLink"
+	1    13450 6500
+	-1   0    0    1   
+$EndComp
+$Comp
+L formula:TP TP?
+U 1 1 604534CE
+P 13950 6500
+F 0 "TP?" H 13872 6346 50  0000 R CNN
+F 1 "TP" H 13872 6437 50  0000 R CNN
+F 2 "footprints:tp_1.6mm" H 13850 6400 50  0001 C CNN
+F 3 "http://www.keyelco.com/product-pdf.cfm?p=1314" H 13950 6500 50  0001 C CNN
+F 4 "DK" H 14050 6600 50  0001 C CNN "MFN"
+F 5 "36-5006-ND" H 14150 6700 50  0001 C CNN "MPN"
+F 6 "https://www.digikey.com/product-detail/en/keystone-electronics/5006/36-5006-ND/255330" H 14250 6800 50  0001 C CNN "PurchasingLink"
+	1    13950 6500
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	12150 6300 12150 6200
+Wire Wire Line
+	12600 6200 12600 6300
+Wire Wire Line
+	12950 6300 12950 6200
+Wire Wire Line
+	13450 6200 13450 6300
+Wire Wire Line
+	13950 6300 13950 6200
+Text Notes 12500 6000 0    89   ~ 0
+TEST POINTS
+Wire Wire Line
+	11500 6200 11500 6300
+$Comp
+L formula:TP TP?
+U 1 1 6042FA03
+P 11500 6500
+F 0 "TP?" H 11422 6346 50  0000 R CNN
+F 1 "TP" H 11422 6437 50  0000 R CNN
+F 2 "footprints:tp_1.6mm" H 11400 6400 50  0001 C CNN
+F 3 "http://www.keyelco.com/product-pdf.cfm?p=1314" H 11500 6500 50  0001 C CNN
+F 4 "DK" H 11600 6600 50  0001 C CNN "MFN"
+F 5 "36-5006-ND" H 11700 6700 50  0001 C CNN "MPN"
+F 6 "https://www.digikey.com/product-detail/en/keystone-electronics/5006/36-5006-ND/255330" H 11800 6800 50  0001 C CNN "PurchasingLink"
+	1    11500 6500
+	-1   0    0    1   
+$EndComp
+Text Label 11500 6200 0    50   ~ 0
+12V_Protected
 $EndSCHEMATC
