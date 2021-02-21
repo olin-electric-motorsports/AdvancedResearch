@@ -4,11 +4,11 @@ EELAYER END
 $Descr B 17000 11000
 encoding utf-8
 Sheet 1 1
-Title "OEM Project Template"
+Title "OEM LIN Hackerboard"
 Date "2019-08-22"
 Rev "1"
 Comp "Olin Electric Motorsports"
-Comment1 "Wesley Soo-Hoo"
+Comment1 "Benji Pugh"
 Comment2 ""
 Comment3 ""
 Comment4 ""
@@ -1351,10 +1351,10 @@ Wire Wire Line
 Wire Wire Line
 	7850 3700 7950 3700
 $Comp
-L formula:Conn_01x11 J?
+L formula:Conn_01x11 J2
 U 1 1 603F6805
 P 5650 1750
-F 0 "J?" H 5730 1850 50  0000 L CNN
+F 0 "J2" H 5730 1850 50  0000 L CNN
 F 1 "Conn_01x11" H 5730 1759 50  0000 L CNN
 F 2 "footprints:PinHeader_1x11_P2.54mm_Vertical" H 5550 2450 50  0001 C CNN
 F 3 "" H 5650 1750 50  0001 C CNN
@@ -1362,10 +1362,10 @@ F 3 "" H 5650 1750 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L formula:Conn_01x11 J?
+L formula:Conn_01x11 J3
 U 1 1 6040C0B1
 P 6700 1750
-F 0 "J?" H 6780 1850 50  0000 L CNN
+F 0 "J3" H 6780 1850 50  0000 L CNN
 F 1 "Conn_01x11" H 6780 1759 50  0000 L CNN
 F 2 "footprints:PinHeader_1x11_P2.54mm_Vertical" H 6600 2450 50  0001 C CNN
 F 3 "" H 6700 1750 50  0001 C CNN
@@ -1373,10 +1373,10 @@ F 3 "" H 6700 1750 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L formula:TP TP?
+L formula:TP TP2
 U 1 1 6043188E
 P 12150 6500
-F 0 "TP?" H 12072 6346 50  0000 R CNN
+F 0 "TP2" H 12072 6346 50  0000 R CNN
 F 1 "TP" H 12072 6437 50  0000 R CNN
 F 2 "footprints:tp_1.6mm" H 12050 6400 50  0001 C CNN
 F 3 "http://www.keyelco.com/product-pdf.cfm?p=1314" H 12150 6500 50  0001 C CNN
@@ -1387,10 +1387,10 @@ F 6 "https://www.digikey.com/product-detail/en/keystone-electronics/5006/36-5006
 	-1   0    0    1   
 $EndComp
 $Comp
-L formula:TP TP?
+L formula:TP TP3
 U 1 1 60452016
 P 12600 6500
-F 0 "TP?" H 12522 6346 50  0000 R CNN
+F 0 "TP3" H 12522 6346 50  0000 R CNN
 F 1 "TP" H 12522 6437 50  0000 R CNN
 F 2 "footprints:tp_1.6mm" H 12500 6400 50  0001 C CNN
 F 3 "http://www.keyelco.com/product-pdf.cfm?p=1314" H 12600 6500 50  0001 C CNN
@@ -1401,10 +1401,10 @@ F 6 "https://www.digikey.com/product-detail/en/keystone-electronics/5006/36-5006
 	-1   0    0    1   
 $EndComp
 $Comp
-L formula:TP TP?
+L formula:TP TP4
 U 1 1 60452657
 P 12950 6500
-F 0 "TP?" H 12872 6346 50  0000 R CNN
+F 0 "TP4" H 12872 6346 50  0000 R CNN
 F 1 "TP" H 12872 6437 50  0000 R CNN
 F 2 "footprints:tp_1.6mm" H 12850 6400 50  0001 C CNN
 F 3 "http://www.keyelco.com/product-pdf.cfm?p=1314" H 12950 6500 50  0001 C CNN
@@ -1415,10 +1415,10 @@ F 6 "https://www.digikey.com/product-detail/en/keystone-electronics/5006/36-5006
 	-1   0    0    1   
 $EndComp
 $Comp
-L formula:TP TP?
+L formula:TP TP5
 U 1 1 60452C4A
 P 13450 6500
-F 0 "TP?" H 13372 6346 50  0000 R CNN
+F 0 "TP5" H 13372 6346 50  0000 R CNN
 F 1 "TP" H 13372 6437 50  0000 R CNN
 F 2 "footprints:tp_1.6mm" H 13350 6400 50  0001 C CNN
 F 3 "http://www.keyelco.com/product-pdf.cfm?p=1314" H 13450 6500 50  0001 C CNN
@@ -1429,10 +1429,10 @@ F 6 "https://www.digikey.com/product-detail/en/keystone-electronics/5006/36-5006
 	-1   0    0    1   
 $EndComp
 $Comp
-L formula:TP TP?
+L formula:TP TP6
 U 1 1 604534CE
 P 13950 6500
-F 0 "TP?" H 13872 6346 50  0000 R CNN
+F 0 "TP6" H 13872 6346 50  0000 R CNN
 F 1 "TP" H 13872 6437 50  0000 R CNN
 F 2 "footprints:tp_1.6mm" H 13850 6400 50  0001 C CNN
 F 3 "http://www.keyelco.com/product-pdf.cfm?p=1314" H 13950 6500 50  0001 C CNN
@@ -1457,10 +1457,10 @@ TEST POINTS
 Wire Wire Line
 	11500 6200 11500 6300
 $Comp
-L formula:TP TP?
+L formula:TP TP1
 U 1 1 6042FA03
 P 11500 6500
-F 0 "TP?" H 11422 6346 50  0000 R CNN
+F 0 "TP1" H 11422 6346 50  0000 R CNN
 F 1 "TP" H 11422 6437 50  0000 R CNN
 F 2 "footprints:tp_1.6mm" H 11400 6400 50  0001 C CNN
 F 3 "http://www.keyelco.com/product-pdf.cfm?p=1314" H 11500 6500 50  0001 C CNN
