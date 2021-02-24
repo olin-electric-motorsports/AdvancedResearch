@@ -3,7 +3,7 @@ EELAYER 30 0
 EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
-Sheet 1 1
+Sheet 5 5
 Title ""
 Date ""
 Rev ""
@@ -73,7 +73,7 @@ $EndComp
 Text HLabel 4000 2250 3    50   Output ~ 0
 HV-
 Text HLabel 4000 1450 1    50   Input ~ 0
-HV+
+HVOut
 $Comp
 L formula:R_3K_HS R25
 U 1 1 5FD26F91
@@ -241,20 +241,16 @@ $EndComp
 $Comp
 L formula:CONN_01x02 J2
 U 1 1 6035D5F6
-P 6150 1150
-F 0 "J2" V 6350 1200 50  0000 R CNN
-F 1 "CONN_01x02" V 6250 1300 50  0000 R CNN
-F 2 "Connector_PinHeader_2.54mm:PinHeader_1x02_P2.54mm_Vertical" H 6050 1150 50  0001 C CNN
-F 3 "https://katalog.we-online.de/em/datasheet/6130xx11121.pdf" H 6150 1250 50  0001 C CNN
-F 4 "DK" H 6250 1350 50  0001 C CNN "MFN"
-F 5 "732-5315-ND" H 6350 1450 50  0001 C CNN "MPN"
-	1    6150 1150
+P 6050 1150
+F 0 "J2" V 6250 1200 50  0000 R CNN
+F 1 "CONN_01x02" V 6150 1300 50  0000 R CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_1x02_P2.54mm_Vertical" H 5950 1150 50  0001 C CNN
+F 3 "https://katalog.we-online.de/em/datasheet/6130xx11121.pdf" H 6050 1250 50  0001 C CNN
+F 4 "DK" H 6150 1350 50  0001 C CNN "MFN"
+F 5 "732-5315-ND" H 6250 1450 50  0001 C CNN "MPN"
+	1    6050 1150
 	0    -1   -1   0   
 $EndComp
-Wire Wire Line
-	6450 1350 6250 1350
-Wire Wire Line
-	6150 1350 5750 1350
 Wire Wire Line
 	5750 1350 5750 1250
 $Comp
@@ -350,4 +346,22 @@ Text Notes 6550 900  0    50   ~ 0
 Low Voltage
 Text Notes 7100 900  0    50   ~ 0
 High Voltage
+Text Notes 6000 1650 0    20   ~ 0
+10mA to turn on:\n5V/475Ohm = 0.0105A= 10.5mA
+$Comp
+L formula:R_475 R27
+U 1 1 6039FDDB
+P 6300 1350
+F 0 "R27" V 6500 1350 50  0000 C CNN
+F 1 "R_475" V 6400 1350 50  0000 C CNN
+F 2 "footprints:R_0805_OEM" H 6230 1350 50  0001 C CNN
+F 3 "http://www.yageo.com.tw/exep/pages/download/literatures/PYu-R_INT-thick_7.pdf" H 6380 1350 50  0001 C CNN
+F 4 "DK" H 6300 1350 60  0001 C CNN "MFN"
+F 5 "311-475CRCT-ND" H 6300 1350 60  0001 C CNN "MPN"
+F 6 "https://www.digikey.com/products/en?keywords=311-475CRCT-ND" H 6780 1750 60  0001 C CNN "PurchasingLink"
+	1    6300 1350
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	6050 1350 5750 1350
 $EndSCHEMATC
