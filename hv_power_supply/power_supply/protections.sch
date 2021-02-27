@@ -25,7 +25,7 @@ Wire Wire Line
 Wire Wire Line
 	1250 2450 1700 2450
 Text HLabel 1150 2150 0    50   Input ~ 0
-nDischarge
+Out&nDis
 Wire Wire Line
 	1250 2150 1150 2150
 Connection ~ 1250 2150
@@ -196,17 +196,6 @@ F 4 "https://www.digikey.com/products/en?keywords=BAT400D-FDICT-ND" H 3750 1800 
 $EndComp
 Connection ~ 3300 1400
 $Comp
-L power:+5V #PWR071
-U 1 1 6029A8EE
-P 1250 1750
-F 0 "#PWR071" H 1250 1600 50  0001 C CNN
-F 1 "+5V" H 1265 1923 50  0000 C CNN
-F 2 "" H 1250 1750 50  0001 C CNN
-F 3 "" H 1250 1750 50  0001 C CNN
-	1    1250 1750
-	1    0    0    -1  
-$EndComp
-$Comp
 L formula:R_25K R23
 U 1 1 602A28CD
 P 1550 1750
@@ -241,31 +230,31 @@ $EndComp
 $Comp
 L formula:CONN_01x02 J2
 U 1 1 6035D5F6
-P 6050 1150
-F 0 "J2" V 6250 1200 50  0000 R CNN
-F 1 "CONN_01x02" V 6150 1300 50  0000 R CNN
-F 2 "Connector_PinHeader_2.54mm:PinHeader_1x02_P2.54mm_Vertical" H 5950 1150 50  0001 C CNN
-F 3 "https://katalog.we-online.de/em/datasheet/6130xx11121.pdf" H 6050 1250 50  0001 C CNN
-F 4 "DK" H 6150 1350 50  0001 C CNN "MFN"
-F 5 "732-5315-ND" H 6250 1450 50  0001 C CNN "MPN"
-	1    6050 1150
+P 5700 1150
+F 0 "J2" V 5900 1200 50  0000 R CNN
+F 1 "CONN_01x02" V 5800 1300 50  0000 R CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_1x02_P2.54mm_Vertical" H 5600 1150 50  0001 C CNN
+F 3 "https://katalog.we-online.de/em/datasheet/6130xx11121.pdf" H 5700 1250 50  0001 C CNN
+F 4 "DK" H 5800 1350 50  0001 C CNN "MFN"
+F 5 "732-5315-ND" H 5900 1450 50  0001 C CNN "MPN"
+	1    5700 1150
 	0    -1   -1   0   
 $EndComp
 Wire Wire Line
-	5750 1350 5750 1250
+	5450 1350 5450 1250
 $Comp
 L power:+5V #PWR073
 U 1 1 60366556
-P 5750 1250
-F 0 "#PWR073" H 5750 1100 50  0001 C CNN
-F 1 "+5V" H 5765 1423 50  0000 C CNN
-F 2 "" H 5750 1250 50  0001 C CNN
-F 3 "" H 5750 1250 50  0001 C CNN
-	1    5750 1250
+P 5450 1250
+F 0 "#PWR073" H 5450 1100 50  0001 C CNN
+F 1 "+5V" H 5465 1423 50  0000 C CNN
+F 2 "" H 5450 1250 50  0001 C CNN
+F 3 "" H 5450 1250 50  0001 C CNN
+	1    5450 1250
 	1    0    0    -1  
 $EndComp
 Text HLabel 5650 2200 0    50   Input ~ 0
-OutEnable
+Out&nDis
 $Comp
 L formula:R_100K R26
 U 1 1 6037132F
@@ -362,6 +351,12 @@ F 6 "https://www.digikey.com/products/en?keywords=311-475CRCT-ND" H 6780 1750 60
 	1    6300 1350
 	0    1    1    0   
 $EndComp
+Text Label 5800 1350 0    50   ~ 0
+OutSwitch
+Text Label 1250 1750 2    50   ~ 0
+OutSwitch
 Wire Wire Line
-	6050 1350 5750 1350
+	5700 1350 5450 1350
+Wire Wire Line
+	5800 1350 6150 1350
 $EndSCHEMATC
