@@ -45,9 +45,9 @@ for file in os.listdir('./mini_yamls'):
     rec_data = dict((k, data[k]) for k in [rec_names] if k in data)
 
     #turns list of recievers into a string for dbc
-    rec_keys = str(rec_data.values())
-    rec_keys = rec_keys.replace('dict_values','')
-    rec_keys = rec_keys.strip(string.punctuation)
+    rec_vals = str(rec_data.values())
+    rec_vals = rec_vals.replace('dict_values','')
+    rec_vals = rec_vals.strip(string.punctuation)
 
     # Add frame
     for frame_name, frame_data in board_data.items():
@@ -73,7 +73,7 @@ for file in os.listdir('./mini_yamls'):
                 offset = signal_data["offset"],
                 min = signal_data["min"],
                 max = signal_data["max"],
-                receivers = [rec_keys],
+                receivers = [rec_vals],
             )
             start_bit += signal_data["length"]
             frame.add_signal(sig)
