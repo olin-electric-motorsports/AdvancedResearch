@@ -3,6 +3,7 @@ import yaml
 import os
 import canmatrix
 import math
+import string
 
 dbc = canmatrix.CanMatrix()
 #import pdb
@@ -33,27 +34,34 @@ for file in os.listdir('./mini_yamls'):
         data = yaml.load(yaml_file)
     data = data["MessagesTX"]
 
-    print(data)
-    print(f"Decoding {file} ...")
+    #isolate name of board (transmitter)
+    board_name = list(data.keys())[1]
+    #create dictionary of board specific data from yaml data
+    board_data = dict((k, data[k]) for k in [board_name] if k in data)
+
+    #isolate receiver key
+    rec_names = list(data.keys())[0]
+    #create dictionary of reciever names
+    rec_data = dict((k, data[k]) for k in [rec_names] if k in data)
+
+    #turns list of recievers into a string for dbc
+    rec_keys = str(rec_data.values())
+    rec_keys = rec_keys.replace('dict_values','')
+    rec_keys = rec_keys.strip(string.punctuation)
+
     # Add frame
-    for frame_name, frame_data in data.items():
-        #import pdb; pdb.set_trace()
-        #print(frame_data["name"])
-        # print(f"  Decoding frame {frame_data["name"]} ...")
+    for frame_name, frame_data in board_data.items():
         frame = canmatrix.Frame(
             name = frame_name,
             arbitration_id = int(frame_data["id"]),
-            transmitters = [ file.replace(".yaml","")],
+            transmitters = [frame_name],
             attributes = {},
-            comment = "yo",
+            comment = "add comment here",
             )
-
 
         # Add signals
         start_bit = 0
         for signal_name, signal_data in frame_data["signals"].items():
-            # print(f"    Decoding signal {signal["name"]} ...")
-
             sig = canmatrix.Signal(
                 name = signal_name,
                 start_bit = start_bit,
@@ -65,19 +73,18 @@ for file in os.listdir('./mini_yamls'):
                 offset = signal_data["offset"],
                 min = signal_data["min"],
                 max = signal_data["max"],
-                receivers = [""],
+                receivers = [rec_keys],
             )
             start_bit += signal_data["length"]
             frame.add_signal(sig)
         frame.calc_dlc()
 
-
     dbc.add_frame(frame)
 
     dbc.add_ecu(
         canmatrix.Ecu(
-            name = file.replace(".yaml",""),
-            comment = "potato"
+            name = board_name,
+            comment = "more comments can go here"
             )
     )
 

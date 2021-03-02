@@ -1,5 +1,4 @@
 MessagesTX:
-  transmitters: bms_core
   receivers: air_ctrl, brakelight_bspd_shutdown, dashboard, throttle
   bms_core:
     id: 16.0

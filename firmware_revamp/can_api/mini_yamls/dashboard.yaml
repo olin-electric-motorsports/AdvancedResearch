@@ -1,5 +1,4 @@
 MessagesTX:
-  transmitters: dashboard
   receivers: air_ctrl, bms_core, brakelight_bspd_shutdown, throttle
   dashboard:
     id: 15.0
