@@ -289,19 +289,16 @@ X INH 8 550 150 200 L 50 50 0 0 P
 ENDDRAW
 ENDDEF
 #
-# formula_TP
+# formula_Test_Point_SMD
 #
-DEF formula_TP TP 0 0 N N 1 F N
-F0 "TP" 0 0 50 H V C CNN
-F1 "formula_TP" 0 0 50 H V C CNN
-F2 "footprints:tp_1.6mm" -100 -100 50 H I C CNN
-F3 "http://www.keyelco.com/product-pdf.cfm?p=1314" 0 0 50 H I C CNN
-F4 "DK" 100 100 50 H I C CNN "MFN"
-F5 "36-5006-ND" 200 200 50 H I C CNN "MPN"
-F6 "https://www.digikey.com/product-detail/en/keystone-electronics/5006/36-5006-ND/255330" 300 300 50 H I C CNN "PurchasingLink"
+DEF formula_Test_Point_SMD TP 0 40 Y Y 1 F N
+F0 "TP" 0 300 50 H V C CNN
+F1 "formula_Test_Point_SMD" 50 200 50 H V C CNN
+F2 "footprints:Test_Point_SMD" 0 -150 50 H I C CNN
+F3 "" 0 0 50 H I C CNN
 DRAW
-C 0 -50 50 0 1 0 N
-X TP 1 0 -200 100 U 50 50 1 1 I
+C 0 100 50 1 1 0 N
+X ~ 1 0 -50 100 U 50 50 1 1 I
 ENDDRAW
 ENDDEF
 #
