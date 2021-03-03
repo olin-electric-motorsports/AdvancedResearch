@@ -27,49 +27,47 @@ $EndComp
 $Comp
 L formula:C_1uF C_IN
 U 1 1 60344498
-P 3700 3300
-F 0 "C_IN" H 3815 3396 50  0000 L CNN
-F 1 "C_1uF" H 3815 3305 50  0000 L CNN
-F 2 "footprints:C_0805_OEM" H 3738 3900 50  0001 C CNN
-F 3 "https://www.yageo.com/upload/media/product/productsearch/datasheet/mlcc/UPY-GPHC_Y5V_6.3V-to-50V_9.pdf" H 3725 4150 50  0001 C CNN
-F 4 "https://www.digikey.com/product-detail/en/yageo/CC0805ZKY5V9BB105/311-1909-1-ND/5195811#images" H 4125 3800 60  0001 C CNN "PurchasingLink"
-	1    3700 3300
+P 3450 3300
+F 0 "C_IN" H 3565 3396 50  0000 L CNN
+F 1 "C_1uF" H 3565 3305 50  0000 L CNN
+F 2 "footprints:C_0805_OEM" H 3488 3900 50  0001 C CNN
+F 3 "https://www.yageo.com/upload/media/product/productsearch/datasheet/mlcc/UPY-GPHC_Y5V_6.3V-to-50V_9.pdf" H 3475 4150 50  0001 C CNN
+F 4 "https://www.digikey.com/product-detail/en/yageo/CC0805ZKY5V9BB105/311-1909-1-ND/5195811#images" H 3875 3800 60  0001 C CNN "PurchasingLink"
+	1    3450 3300
 	1    0    0    -1  
 $EndComp
 $Comp
 L formula:C_1uF C1
 U 1 1 60347394
-P 4100 3950
-F 0 "C1" H 4215 4046 50  0000 L CNN
-F 1 "C_1uF" H 4215 3955 50  0000 L CNN
-F 2 "footprints:C_0805_OEM" H 4138 4550 50  0001 C CNN
-F 3 "https://www.yageo.com/upload/media/product/productsearch/datasheet/mlcc/UPY-GPHC_Y5V_6.3V-to-50V_9.pdf" H 4125 4800 50  0001 C CNN
-F 4 "https://www.digikey.com/product-detail/en/yageo/CC0805ZKY5V9BB105/311-1909-1-ND/5195811#images" H 4525 4450 60  0001 C CNN "PurchasingLink"
-	1    4100 3950
+P 4000 3950
+F 0 "C1" H 4115 4046 50  0000 L CNN
+F 1 "C_1uF" H 4115 3955 50  0000 L CNN
+F 2 "footprints:C_0805_OEM" H 4038 4550 50  0001 C CNN
+F 3 "https://www.yageo.com/upload/media/product/productsearch/datasheet/mlcc/UPY-GPHC_Y5V_6.3V-to-50V_9.pdf" H 4025 4800 50  0001 C CNN
+F 4 "https://www.digikey.com/product-detail/en/yageo/CC0805ZKY5V9BB105/311-1909-1-ND/5195811#images" H 4425 4450 60  0001 C CNN "PurchasingLink"
+	1    4000 3950
 	1    0    0    -1  
 $EndComp
-Wire Wire Line
-	4100 3650 4100 3750
 $Comp
 L power:GND #PWR?
 U 1 1 6034E7B2
-P 4100 4050
-F 0 "#PWR?" H 4100 3800 50  0001 C CNN
-F 1 "GND" H 4105 3877 50  0000 C CNN
-F 2 "" H 4100 4050 50  0001 C CNN
-F 3 "" H 4100 4050 50  0001 C CNN
-	1    4100 4050
+P 4000 4050
+F 0 "#PWR?" H 4000 3800 50  0001 C CNN
+F 1 "GND" H 4005 3877 50  0000 C CNN
+F 2 "" H 4000 4050 50  0001 C CNN
+F 3 "" H 4000 4050 50  0001 C CNN
+	1    4000 4050
 	1    0    0    -1  
 $EndComp
 $Comp
 L power:GND #PWR?
 U 1 1 60350117
-P 3700 3400
-F 0 "#PWR?" H 3700 3150 50  0001 C CNN
-F 1 "GND" H 3705 3227 50  0000 C CNN
-F 2 "" H 3700 3400 50  0001 C CNN
-F 3 "" H 3700 3400 50  0001 C CNN
-	1    3700 3400
+P 3450 3400
+F 0 "#PWR?" H 3450 3150 50  0001 C CNN
+F 1 "GND" H 3455 3227 50  0000 C CNN
+F 2 "" H 3450 3400 50  0001 C CNN
+F 3 "" H 3450 3400 50  0001 C CNN
+	1    3450 3400
 	1    0    0    -1  
 $EndComp
 $Comp
@@ -110,10 +108,8 @@ Wire Wire Line
 	6250 3650 6250 3050
 Text Label 6500 3050 0    50   ~ 0
 V_OUT(5V)
-Text Label 4100 3050 2    50   ~ 0
-V_IN(24V)
 Wire Wire Line
-	3700 3050 3700 3100
+	3450 3050 3450 3100
 $Comp
 L power:GND #PWR?
 U 1 1 6037D3E3
@@ -126,23 +122,11 @@ F 3 "" H 5250 3650 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	4100 3450 4100 3050
-Connection ~ 4100 3050
-Wire Wire Line
-	3700 3050 4100 3050
-Wire Wire Line
 	4350 3250 4250 3250
 Wire Wire Line
 	4250 3250 4250 3050
 Wire Wire Line
-	4100 3050 4250 3050
-Connection ~ 4250 3050
-Wire Wire Line
 	4250 3050 4350 3050
-Wire Wire Line
-	4100 3450 4350 3450
-Wire Wire Line
-	4100 3650 4350 3650
 Connection ~ 5850 3050
 Wire Wire Line
 	5250 3050 5850 3050
@@ -157,31 +141,36 @@ Wire Wire Line
 	5250 3200 5700 3200
 Wire Wire Line
 	5600 3650 6250 3650
+Text Label 3850 3050 2    50   ~ 0
+V_IN(24V)
 $Comp
-L formula:R_10K R?
-U 1 1 6039780D
-P 4100 2800
-F 0 "R?" H 4170 2846 50  0000 L CNN
-F 1 "R_10K" H 4170 2755 50  0000 L CNN
-F 2 "footprints:R_0805_OEM" H 4030 2800 50  0001 C CNN
-F 3 "http://www.bourns.com/data/global/pdfs/CRS.pdf" H 4180 2800 50  0001 C CNN
-F 4 "DK" H 4100 2800 60  0001 C CNN "MFN"
-F 5 "CRS0805-FX-1002ELFCT-ND" H 4100 2800 60  0001 C CNN "MPN"
-F 6 "https://www.digikey.com/products/en?keywords=CRS0805-FX-1002ELFCT-ND" H 4580 3200 60  0001 C CNN "PurchasingLink"
-	1    4100 2800
+L formula:R_0 DNP
+U 1 1 6040106D
+P 4000 3250
+F 0 "DNP" H 4070 3296 50  0000 L CNN
+F 1 "R_0" H 4070 3205 50  0000 L CNN
+F 2 "footprints:R_0603_1608Metric" H 3930 3250 50  0001 C CNN
+F 3 "http://industrial.panasonic.com/www-cgi/jvcr13pz.cgi?E+PZ+3+AOA0001+ERJ3GEY0R00V+7+WW" H 4080 3250 50  0001 C CNN
+F 4 "DK" H 4000 3250 60  0001 C CNN "MFN"
+F 5 "P0.0GCT-ND" H 4000 3250 60  0001 C CNN "MPN"
+F 6 "https://www.digikey.com/product-detail/en/panasonic-electronic-components/ERJ-3GEY0R00V/P0.0GCT-ND/134711" H 4480 3650 60  0001 C CNN "PurchasingLink"
+	1    4000 3250
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	4100 3050 4100 2950
-$Comp
-L power:GND #PWR?
-U 1 1 6039F701
-P 4100 2650
-F 0 "#PWR?" H 4100 2400 50  0001 C CNN
-F 1 "GND" H 4105 2477 50  0000 C CNN
-F 2 "" H 4100 2650 50  0001 C CNN
-F 3 "" H 4100 2650 50  0001 C CNN
-	1    4100 2650
-	-1   0    0    1   
-$EndComp
+	4000 3750 4000 3650
+Wire Wire Line
+	4000 3650 4350 3650
+Wire Wire Line
+	4000 3400 4000 3450
+Wire Wire Line
+	4000 3450 4350 3450
+Wire Wire Line
+	3450 3050 4000 3050
+Connection ~ 4250 3050
+Wire Wire Line
+	4000 3100 4000 3050
+Connection ~ 4000 3050
+Wire Wire Line
+	4000 3050 4250 3050
 $EndSCHEMATC
