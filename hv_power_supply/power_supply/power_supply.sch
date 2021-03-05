@@ -3,7 +3,7 @@ EELAYER 30 0
 EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
-Sheet 1 4
+Sheet 1 5
 Title ""
 Date ""
 Rev ""
@@ -37,4 +37,8 @@ U 5F8B30A2
 F0 "Protections" 50
 F1 "protections.sch" 50
 $EndSheet
+Text HLabel 6700 1820 2    50   Input ~ 0
+VCC
+Text HLabel 6700 1980 2    50   Input ~ 0
+OUTPUT_DAC
 $EndSCHEMATC
