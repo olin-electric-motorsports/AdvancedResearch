@@ -1003,20 +1003,6 @@ F 6 "https://www.digikey.com/products/en/connectors-interconnects/rectangular-co
 	-1   0    0    1   
 $EndComp
 $Comp
-L formula:NanoFit_RA_TH_02 J3
-U 1 1 5FBCFFB4
-P 1250 4050
-F 0 "J3" H 1142 3663 60  0000 C CNN
-F 1 "NanoFit_RA_TH_02" H 1142 3769 60  0000 C CNN
-F 2 "formula:NanoFit_Molex_1x02x2.50mm_Angled_OEM" H 1250 3450 60  0001 C CNN
-F 3 "https://www.molex.com/pdm_docs/sd/1053131102_sd.pdf" H 1250 3600 60  0001 C CNN
-F 4 "DK" H 1250 4600 50  0001 C CNN "MFN"
-F 5 "WM14972-ND" H 1250 4500 50  0001 C CNN "MPN"
-F 6 "https://www.digikey.com/products/en/connectors-interconnects/rectangular-connectors-headers-male-pins/314?k=nanofit+2&k=&pkeyword=nanofit+2&pv88=2&pv69=367&sf=0&FV=ffe0013a&quantity=&ColumnSort=0&page=1&pageSize=25" H 1250 3250 50  0001 C CNN "PurchasingLink"
-	1    1250 4050
-	-1   0    0    1   
-$EndComp
-$Comp
 L formula:R_1.87M R6
 U 1 1 5FC80133
 P 6300 1950
@@ -1044,20 +1030,6 @@ Text Label 7200 1900 2    50   ~ 0
 switch
 Text Label 2150 6450 0    50   ~ 0
 switch
-$Comp
-L formula:NanoFit_RA_TH_02 J5
-U 1 1 6034D59C
-P 1700 6550
-F 0 "J5" H 1592 6163 60  0000 C CNN
-F 1 "NanoFit_RA_TH_02" H 1592 6269 60  0000 C CNN
-F 2 "formula:NanoFit_Molex_1x02x2.50mm_Angled_OEM" H 1700 5950 60  0001 C CNN
-F 3 "https://www.molex.com/pdm_docs/sd/1053131102_sd.pdf" H 1700 6100 60  0001 C CNN
-F 4 "DK" H 1700 7100 50  0001 C CNN "MFN"
-F 5 "WM14972-ND" H 1700 7000 50  0001 C CNN "MPN"
-F 6 "https://www.digikey.com/products/en/connectors-interconnects/rectangular-connectors-headers-male-pins/314?k=nanofit+2&k=&pkeyword=nanofit+2&pv88=2&pv69=367&sf=0&FV=ffe0013a&quantity=&ColumnSort=0&page=1&pageSize=25" H 1700 5750 50  0001 C CNN "PurchasingLink"
-	1    1700 6550
-	-1   0    0    1   
-$EndComp
 Wire Wire Line
 	1500 5150 1700 5150
 Wire Wire Line
@@ -1338,5 +1310,33 @@ F 5 "RMCF0805FT330RCT-ND" H 9700 2500 60  0001 C CNN "MPN"
 F 6 "https://www.digikey.com/product-detail/en/stackpole-electronics-inc/RMCF0805FT330R/RMCF0805FT330RCT-ND/1942351" H 10180 2900 60  0001 C CNN "PurchasingLink"
 	1    9700 2500
 	1    0    0    -1  
+$EndComp
+$Comp
+L formula:NanoFit_RA_TH_02 J3
+U 1 1 60426277
+P 1250 4050
+F 0 "J3" H 1142 3663 60  0000 C CNN
+F 1 "NanoFit_RA_TH_02" H 1142 3769 60  0000 C CNN
+F 2 "footprints:NanoFit_Molex_1x02x2.50mm_Angled_OEM" H 1250 3450 60  0001 C CNN
+F 3 "https://www.molex.com/pdm_docs/sd/1053131102_sd.pdf" H 1250 3600 60  0001 C CNN
+F 4 "DK" H 1250 4600 50  0001 C CNN "MFN"
+F 5 "WM14972-ND" H 1250 4500 50  0001 C CNN "MPN"
+F 6 "https://www.digikey.com/products/en/connectors-interconnects/rectangular-connectors-headers-male-pins/314?k=nanofit+2&k=&pkeyword=nanofit+2&pv88=2&pv69=367&sf=0&FV=ffe0013a&quantity=&ColumnSort=0&page=1&pageSize=25" H 1250 3250 50  0001 C CNN "PurchasingLink"
+	1    1250 4050
+	-1   0    0    1   
+$EndComp
+$Comp
+L formula:NanoFit_RA_TH_02 J5
+U 1 1 6042CE2F
+P 1700 6550
+F 0 "J5" H 1592 6163 60  0000 C CNN
+F 1 "NanoFit_RA_TH_02" H 1592 6269 60  0000 C CNN
+F 2 "footprints:NanoFit_Molex_1x02x2.50mm_Angled_OEM" H 1700 5950 60  0001 C CNN
+F 3 "https://www.molex.com/pdm_docs/sd/1053131102_sd.pdf" H 1700 6100 60  0001 C CNN
+F 4 "DK" H 1700 7100 50  0001 C CNN "MFN"
+F 5 "WM14972-ND" H 1700 7000 50  0001 C CNN "MPN"
+F 6 "https://www.digikey.com/products/en/connectors-interconnects/rectangular-connectors-headers-male-pins/314?k=nanofit+2&k=&pkeyword=nanofit+2&pv88=2&pv69=367&sf=0&FV=ffe0013a&quantity=&ColumnSort=0&page=1&pageSize=25" H 1700 5750 50  0001 C CNN "PurchasingLink"
+	1    1700 6550
+	-1   0    0    1   
 $EndComp
 $EndSCHEMATC

@@ -1,11 +1,11 @@
 EESchema-LIBRARY Version 2.4
 #encoding utf-8
 #
-# Formula_1.5A_Fuse
+# formula_1.5A_Fuse
 #
-DEF Formula_1.5A_Fuse F 0 40 Y Y 1 F N
+DEF formula_1.5A_Fuse F 0 40 Y Y 1 F N
 F0 "F" 0 150 50 H V C CNN
-F1 "Formula_1.5A_Fuse" 0 -150 50 H V C CNN
+F1 "formula_1.5A_Fuse" 0 -150 50 H V C CNN
 F2 "footprints:Fuse_1206" 0 -300 50 H I C CNN
 F3 "" -50 0 50 H I C CNN
 F4 "F1462CT-ND" 100 250 50 H I C CNN "MPN"
@@ -20,11 +20,11 @@ X 2 2 300 0 200 L 50 50 1 1 I
 ENDDRAW
 ENDDEF
 #
-# Formula_C_0.1uF
+# formula_C_0.1uF
 #
-DEF Formula_C_0.1uF C 0 10 N Y 1 F N
+DEF formula_C_0.1uF C 0 10 N Y 1 F N
 F0 "C" 25 100 50 H V L CNN
-F1 "Formula_C_0.1uF" 25 -100 50 H V L CNN
+F1 "formula_C_0.1uF" 25 -100 50 H V L CNN
 F2 "footprints:C_0805_OEM" 38 -150 50 H I C CNN
 F3 "http://datasheets.avx.com/X7RDielectric.pdf" 25 100 50 H I C CNN
 F4 "DK" 0 0 60 H I C CNN "MFN"
@@ -45,11 +45,11 @@ X ~ 2 0 -150 110 U 50 50 1 1 P
 ENDDRAW
 ENDDEF
 #
-# Formula_C_100uF
+# formula_C_100uF
 #
-DEF Formula_C_100uF C 0 10 N Y 1 F N
+DEF formula_C_100uF C 0 10 N Y 1 F N
 F0 "C" 25 100 50 H V L CNN
-F1 "Formula_C_100uF" 25 -100 50 H V L CNN
+F1 "formula_C_100uF" 25 -100 50 H V L CNN
 F2 "footprints:C_1812_4532Metric" 0 750 50 H I C CNN
 F3 "" 200 -550 50 H I C CNN
 F4 "C4532X5R0J107M280KA" 0 450 60 H I C CNN "MFN"
@@ -70,11 +70,11 @@ X ~ 2 0 -150 110 U 50 50 1 1 P
 ENDDRAW
 ENDDEF
 #
-# Formula_C_10nF
+# formula_C_10nF
 #
-DEF Formula_C_10nF C 0 40 Y Y 1 F N
+DEF formula_C_10nF C 0 40 Y Y 1 F N
 F0 "C" -100 100 50 H V C CNN
-F1 "Formula_C_10nF" 150 0 50 V V C CNN
+F1 "formula_C_10nF" 150 0 50 V V C CNN
 F2 "footprints:C_0805_OEM" -200 0 50 H I C CNN
 F3 "http://www.samsungsem.com/kr/support/product-search/mlcc/__icsFiles/afieldfile/2018/07/23/CL21B103KBANNNC.pdf" -100 100 50 H I C CNN
 F4 "DK" 0 200 50 H I C CNN "MFN"
@@ -88,11 +88,11 @@ X ~ 2 0 -150 110 U 50 50 1 1 P
 ENDDRAW
 ENDDEF
 #
-# Formula_C_10uF
+# formula_C_10uF
 #
-DEF Formula_C_10uF C 0 10 N Y 1 F N
+DEF formula_C_10uF C 0 10 N Y 1 F N
 F0 "C" 25 150 50 H V L CNN
-F1 "Formula_C_10uF" 25 -50 50 H V L CNN
+F1 "formula_C_10uF" 25 -50 50 H V L CNN
 F2 "footprints:C_0805_OEM" 38 600 50 H I C CNN
 F3 "" 25 850 50 H I C CNN
 F4 "DK" 0 50 60 H I C CNN "MFN"
@@ -113,11 +113,11 @@ X ~ 2 0 -100 110 U 50 50 1 1 P
 ENDDRAW
 ENDDEF
 #
-# Formula_C_2.2uF
+# formula_C_2.2uF
 #
-DEF Formula_C_2.2uF C 0 10 N Y 1 F N
+DEF formula_C_2.2uF C 0 10 N Y 1 F N
 F0 "C" 25 150 50 H V L CNN
-F1 "Formula_C_2.2uF" 25 -50 50 H V L CNN
+F1 "formula_C_2.2uF" 25 -50 50 H V L CNN
 F2 "footprints:C_0805_OEM" 38 600 50 H I C CNN
 F3 "" 25 850 50 H I C CNN
 F4 "https://www.digikey.com/product-detail/en/tdk-corporation/C2012X7R1H225M125AE/445-172488-1-ND/4990030" 425 500 60 H I C CNN "PurchasingLink"
@@ -136,11 +136,11 @@ X ~ 2 0 -100 110 U 50 50 1 1 P
 ENDDRAW
 ENDDEF
 #
-# Formula_LED_0805
+# formula_LED_0805
 #
-DEF Formula_LED_0805 D 0 40 N N 1 F N
+DEF formula_LED_0805 D 0 40 N N 1 F N
 F0 "D" 0 -100 50 H V C CNN
-F1 "Formula_LED_0805" 0 100 50 H V C CNN
+F1 "formula_LED_0805" 0 100 50 H V C CNN
 F2 "footprints:LED_0805_OEM" -100 0 50 H I C CNN
 F3 "http://www.osram-os.com/Graphics/XPic9/00078860_0.pdf" 0 100 50 H I C CNN
 F4 "DK" 0 0 60 H I C CNN "MFN"
@@ -160,11 +160,11 @@ X A 2 150 0 100 L 50 50 1 1 P
 ENDDRAW
 ENDDEF
 #
-# Formula_LED_0805_Amber
+# formula_LED_0805_Amber
 #
-DEF Formula_LED_0805_Amber D 0 40 N N 1 F N
+DEF formula_LED_0805_Amber D 0 40 N N 1 F N
 F0 "D" 0 -100 50 H V C CNN
-F1 "Formula_LED_0805_Amber" 0 100 50 H V C CNN
+F1 "formula_LED_0805_Amber" 0 100 50 H V C CNN
 F2 "footprints:LED_0805_OEM" -100 0 50 H I C CNN
 F3 "https://media.digikey.com/pdf/Data%20Sheets/Chicago%20Miniature%20Lamps%20PDFs/CMDA5_Series_Rev_Aug_2014.pdf" 0 100 50 H I C CNN
 F4 "DK" 0 0 60 H I C CNN "MFN"
@@ -184,11 +184,11 @@ X A 2 150 0 100 L 50 50 1 1 P
 ENDDRAW
 ENDDEF
 #
-# Formula_L_6.8uH
+# formula_L_6.8uH
 #
-DEF Formula_L_6.8uH L 0 40 N N 1 F N
+DEF formula_L_6.8uH L 0 40 N N 1 F N
 F0 "L" 0 -50 50 H V C CNN
-F1 "Formula_L_6.8uH" 0 100 50 H V C CNN
+F1 "formula_L_6.8uH" 0 100 50 H V C CNN
 F2 "footprints:L_100uH_OEM" -100 -200 50 H I C CNN
 F3 "" -100 -150 50 H I C CNN
 F4 "Digikey" 100 -200 50 H I C CNN "MFN"
@@ -203,11 +203,11 @@ X ~ 2 100 0 20 L 50 50 1 1 P
 ENDDRAW
 ENDDEF
 #
-# Formula_MCP73871T-2CCI_ML
+# formula_MCP73871T-2CCI_ML
 #
-DEF Formula_MCP73871T-2CCI_ML U 0 40 Y Y 1 F N
+DEF formula_MCP73871T-2CCI_ML U 0 40 Y Y 1 F N
 F0 "U" -604 823 50 H V L BNN
-F1 "Formula_MCP73871T-2CCI_ML" -606 -920 50 H V L BNN
+F1 "formula_MCP73871T-2CCI_ML" -606 -920 50 H V L BNN
 F2 "footprints:MCP73871T" 50 850 50 H I L BNN
 F3 "" 50 950 50 H I L BNN
 F4 "D" 0 0 50 H I L BNN
@@ -242,11 +242,11 @@ X ~TE~ 9 -800 0 200 R 40 40 0 0 I
 ENDDRAW
 ENDDEF
 #
-# Formula_NanoFit_RA_TH_02
+# formula_NanoFit_RA_TH_02
 #
-DEF Formula_NanoFit_RA_TH_02 J 0 40 Y Y 1 F N
+DEF formula_NanoFit_RA_TH_02 J 0 40 Y Y 1 F N
 F0 "J" 0 200 60 H V C CNN
-F1 "Formula_NanoFit_RA_TH_02" 0 -300 60 H V C CNN
+F1 "formula_NanoFit_RA_TH_02" 0 -300 60 H V C CNN
 F2 "footprints:NanoFit_Molex_1x02x2.50mm_Angled_OEM" 0 -600 60 H I C CNN
 F3 "https://www.molex.com/pdm_docs/sd/1053131102_sd.pdf" 0 -450 60 H I C CNN
 F4 "DK" 0 550 50 H I C CNN "MFN"
@@ -259,11 +259,11 @@ X 2 2 -450 -100 200 R 50 50 1 1 I
 ENDDRAW
 ENDDEF
 #
-# Formula_R_1.87M
+# formula_R_1.87M
 #
-DEF Formula_R_1.87M R 0 0 N Y 1 F N
+DEF formula_R_1.87M R 0 0 N Y 1 F N
 F0 "R" 80 0 50 V V C CNN
-F1 "Formula_R_1.87M" -100 0 50 V V C CNN
+F1 "formula_R_1.87M" -100 0 50 V V C CNN
 F2 "footprints:R_0805_OEM" -70 0 50 H I C CNN
 F3 "" 80 0 50 H I C CNN
 F4 "DK" 0 0 60 H I C CNN "MFN"
@@ -279,11 +279,11 @@ X ~ 2 0 -150 50 U 50 50 1 1 P
 ENDDRAW
 ENDDEF
 #
-# Formula_R_100K
+# formula_R_100K
 #
-DEF Formula_R_100K R 0 0 N Y 1 F N
+DEF formula_R_100K R 0 0 N Y 1 F N
 F0 "R" 80 0 50 V V C CNN
-F1 "Formula_R_100K" -100 0 50 V V C CNN
+F1 "formula_R_100K" -100 0 50 V V C CNN
 F2 "footprints:R_0805_OEM" -70 0 50 H I C CNN
 F3 "https://industrial.panasonic.com/cdbs/www-data/pdf/RDA0000/AOA0000C304.pdf" 80 0 50 H I C CNN
 F4 "DK" 0 0 60 H I C CNN "MFN"
@@ -300,11 +300,11 @@ X ~ 2 0 -150 50 U 50 50 1 1 P
 ENDDRAW
 ENDDEF
 #
-# Formula_R_10K
+# formula_R_10K
 #
-DEF Formula_R_10K R 0 0 N Y 1 F N
+DEF formula_R_10K R 0 0 N Y 1 F N
 F0 "R" 80 0 50 V V C CNN
-F1 "Formula_R_10K" -100 0 50 V V C CNN
+F1 "formula_R_10K" -100 0 50 V V C CNN
 F2 "footprints:R_0805_OEM" -70 0 50 H I C CNN
 F3 "http://www.bourns.com/data/global/pdfs/CRS.pdf" 80 0 50 H I C CNN
 F4 "DK" 0 0 60 H I C CNN "MFN"
@@ -321,11 +321,11 @@ X ~ 2 0 -150 50 U 50 50 1 1 P
 ENDDRAW
 ENDDEF
 #
-# Formula_R_1K
+# formula_R_1K
 #
-DEF Formula_R_1K R 0 0 N Y 1 F N
+DEF formula_R_1K R 0 0 N Y 1 F N
 F0 "R" 80 0 50 V V C CNN
-F1 "Formula_R_1K" -100 0 50 V V C CNN
+F1 "formula_R_1K" -100 0 50 V V C CNN
 F2 "footprints:R_0805_OEM" -70 0 50 H I C CNN
 F3 "https://www.seielect.com/Catalog/SEI-rncp.pdf" 80 0 50 H I C CNN
 F4 "DK" 0 0 60 H I C CNN "MFN"
@@ -342,11 +342,11 @@ X ~ 2 0 -150 50 U 50 50 1 1 P
 ENDDRAW
 ENDDEF
 #
-# Formula_R_200K
+# formula_R_200K
 #
-DEF Formula_R_200K R 0 0 N Y 1 F N
+DEF formula_R_200K R 0 0 N Y 1 F N
 F0 "R" 80 0 50 V V C CNN
-F1 "Formula_R_200K" -100 0 50 V V C CNN
+F1 "formula_R_200K" -100 0 50 V V C CNN
 F2 "footprints:R_0805_OEM" -70 0 50 H I C CNN
 F3 "" 80 0 50 H I C CNN
 F4 "DK" 0 0 60 H I C CNN "MFN"
@@ -362,11 +362,11 @@ X ~ 2 0 -150 50 U 50 50 1 1 P
 ENDDRAW
 ENDDEF
 #
-# Formula_R_270K
+# formula_R_270K
 #
-DEF Formula_R_270K R 0 0 N Y 1 F N
+DEF formula_R_270K R 0 0 N Y 1 F N
 F0 "R" 80 0 50 V V C CNN
-F1 "Formula_R_270K" -100 0 50 V V C CNN
+F1 "formula_R_270K" -100 0 50 V V C CNN
 F2 "footprints:R_0805_OEM" -70 0 50 V I C CNN
 F3 "https://industrial.panasonic.com/cdbs/www-data/pdf/RDM0000/AOA0000C307.pdf" 550 100 50 V I C CNN
 F4 "DK" 180 100 60 V I C CNN "MFN"
@@ -383,11 +383,11 @@ X ~ 2 0 -150 50 U 50 50 1 1 P
 ENDDRAW
 ENDDEF
 #
-# Formula_R_330
+# formula_R_330
 #
-DEF Formula_R_330 R 0 0 N Y 1 F N
+DEF formula_R_330 R 0 0 N Y 1 F N
 F0 "R" 80 0 50 V V C CNN
-F1 "Formula_R_330" -100 0 50 V V C CNN
+F1 "formula_R_330" -100 0 50 V V C CNN
 F2 "footprints:R_0805_OEM" -70 0 50 H I C CNN
 F3 "https://www.seielect.com/Catalog/SEI-RMCF_RMCP.pdf" 80 0 50 H I C CNN
 F4 "DK" 0 0 60 H I C CNN "MFN"
@@ -404,11 +404,11 @@ X ~ 2 0 -150 50 U 50 50 1 1 P
 ENDDRAW
 ENDDEF
 #
-# Formula_R_340K
+# formula_R_340K
 #
-DEF Formula_R_340K R 0 0 N Y 1 F N
+DEF formula_R_340K R 0 0 N Y 1 F N
 F0 "R" 80 0 50 V V C CNN
-F1 "Formula_R_340K" -100 0 50 V V C CNN
+F1 "formula_R_340K" -100 0 50 V V C CNN
 F2 "footprints:R_0805_OEM" -70 0 50 H I C CNN
 F3 "" 80 0 50 H I C CNN
 F4 "DK" 0 0 60 H I C CNN "MFN"
@@ -424,11 +424,11 @@ X ~ 2 0 -150 50 U 50 50 1 1 P
 ENDDRAW
 ENDDEF
 #
-# Formula_R_43k
+# formula_R_43k
 #
-DEF Formula_R_43k R 0 0 N Y 1 F N
+DEF formula_R_43k R 0 0 N Y 1 F N
 F0 "R" 80 0 50 V V C CNN
-F1 "Formula_R_43k" -100 0 50 V V C CNN
+F1 "formula_R_43k" -100 0 50 V V C CNN
 F2 "footprints:R_0805_OEM" -70 0 50 H I C CNN
 F3 "" 80 0 50 H I C CNN
 $FPLIST
@@ -442,11 +442,11 @@ X ~ 2 0 -150 50 U 50 50 1 1 P
 ENDDRAW
 ENDDEF
 #
-# Formula_R_49.9K
+# formula_R_49.9K
 #
-DEF Formula_R_49.9K R 0 0 N Y 1 F N
+DEF formula_R_49.9K R 0 0 N Y 1 F N
 F0 "R" 80 0 50 V V C CNN
-F1 "Formula_R_49.9K" -100 0 50 V V C CNN
+F1 "formula_R_49.9K" -100 0 50 V V C CNN
 F2 "footprints:R_0805_OEM" -1100 300 50 H I L CNN
 F3 "" -1100 400 50 H I L CNN
 F4 "https://www.digikey.com/product-detail/en/panasonic-electronic-components/ERA-6AEB4992V/P49-9KDACT-ND/3075162" -1100 500 60 H I L CNN "PurchasingLink"
@@ -461,11 +461,11 @@ X ~ 2 0 -150 50 U 50 50 1 1 P
 ENDDRAW
 ENDDEF
 #
-# Formula_R_75k
+# formula_R_75k
 #
-DEF Formula_R_75k R 0 0 N Y 1 F N
+DEF formula_R_75k R 0 0 N Y 1 F N
 F0 "R" 80 0 50 V V C CNN
-F1 "Formula_R_75k" -100 0 50 V V C CNN
+F1 "formula_R_75k" -100 0 50 V V C CNN
 F2 "footprints:R_0805_OEM" -70 0 50 H I C CNN
 F3 "" 80 0 50 H I C CNN
 F4 "DK" 0 0 50 H I C CNN "MFN"
@@ -482,11 +482,11 @@ X ~ 2 0 -150 50 U 50 50 1 1 P
 ENDDRAW
 ENDDEF
 #
-# Formula_SSM3K333R
+# formula_SSM3K333R
 #
-DEF Formula_SSM3K333R Q 0 0 Y N 1 F N
+DEF formula_SSM3K333R Q 0 0 Y N 1 F N
 F0 "Q" 200 75 50 H V L CNN
-F1 "Formula_SSM3K333R" 200 0 50 H V L CNN
+F1 "formula_SSM3K333R" 200 0 50 H V L CNN
 F2 "footprints:SOT-23F" 200 -75 50 H I L CIN
 F3 "https://drive.google.com/drive/folders/0B-V-iZf33Y4GNzhDQTJZanJRbVk" 200 75 50 H I L CNN
 F4 "DK" 500 375 60 H I C CNN "MFN"
@@ -519,11 +519,11 @@ X D 3 100 200 100 D 50 50 1 1 P
 ENDDRAW
 ENDDEF
 #
-# Formula_TP
+# formula_TP
 #
-DEF Formula_TP TP 0 0 N N 1 F N
+DEF formula_TP TP 0 0 N N 1 F N
 F0 "TP" 0 0 50 H V C CNN
-F1 "Formula_TP" 0 0 50 H V C CNN
+F1 "formula_TP" 0 0 50 H V C CNN
 F2 "footprints:tp_1.6mm" -100 -100 50 H I C CNN
 F3 "http://www.keyelco.com/product-pdf.cfm?p=1314" 0 0 50 H I C CNN
 F4 "DK" 100 100 50 H I C CNN "MFN"
@@ -535,11 +535,11 @@ X TP 1 0 -200 100 U 50 50 1 1 I
 ENDDRAW
 ENDDEF
 #
-# Formula_TPS61090RSAR
+# formula_TPS61090RSAR
 #
-DEF Formula_TPS61090RSAR U 0 40 Y Y 1 F N
+DEF formula_TPS61090RSAR U 0 40 Y Y 1 F N
 F0 "U" -501 441 50 H V L BNN
-F1 "Formula_TPS61090RSAR" -501 -659 50 H V L BNN
+F1 "formula_TPS61090RSAR" -501 -659 50 H V L BNN
 F2 "footprints:TPS61090RSAR" -250 600 50 H I L BNN
 F3 "" 0 0 50 H I L BNN
 F4 "1.48 USD" -150 550 50 H I L BNN
@@ -575,11 +575,11 @@ X LBI 9 -700 -250 200 R 40 40 0 0 I
 ENDDRAW
 ENDDEF
 #
-# Formula_USB-A-S-X-X-SM2
+# formula_USB-A-S-X-X-SM2
 #
-DEF Formula_USB-A-S-X-X-SM2 J 0 40 Y Y 1 F N
+DEF formula_USB-A-S-X-X-SM2 J 0 40 Y Y 1 F N
 F0 "J" -200 350 50 H V L BNN
-F1 "Formula_USB-A-S-X-X-SM2" -200 -500 50 H V L BNN
+F1 "formula_USB-A-S-X-X-SM2" -200 -500 50 H V L BNN
 F2 "footprints:SAMTEC_USB-A-S-X-X-SM2" 0 0 50 H I L BNN
 F3 "" 0 0 50 H I L BNN
 F4 "Samtec" 0 0 50 H I L BNN
@@ -597,11 +597,11 @@ X SHIELD S2 -400 -300 200 R 40 40 0 0 P
 ENDDRAW
 ENDDEF
 #
-# Formula_USB-Micro-1981568-1
+# formula_USB-Micro-1981568-1
 #
-DEF Formula_USB-Micro-1981568-1 J 0 40 Y Y 1 F N
+DEF formula_USB-Micro-1981568-1 J 0 40 Y Y 1 F N
 F0 "J" -210 430 50 H V L BNN
-F1 "Formula_USB-Micro-1981568-1" -210 -490 50 H V L BNN
+F1 "formula_USB-Micro-1981568-1" -210 -490 50 H V L BNN
 F2 "footprints:TE_1981568-1" -200 550 50 H I L BNN
 F3 "" 0 0 50 H I L BNN
 F4 ".65 mm[.025 in]" -50 550 50 H I L BNN
@@ -625,11 +625,11 @@ X SHIELD 9 300 -300 100 L 40 40 0 0 P
 ENDDRAW
 ENDDEF
 #
-# Formula_VBATT
+# formula_VBATT
 #
-DEF Formula_VBATT #PWR 0 0 Y Y 1 F P
+DEF formula_VBATT #PWR 0 0 Y Y 1 F P
 F0 "#PWR" 0 -150 50 H I C CNN
-F1 "Formula_VBATT" 0 140 50 H V C CNN
+F1 "formula_VBATT" 0 140 50 H V C CNN
 F2 "" 0 0 50 H I C CNN
 F3 "" 0 0 50 H I C CNN
 DRAW
