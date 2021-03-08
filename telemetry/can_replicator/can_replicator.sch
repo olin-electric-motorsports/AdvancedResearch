@@ -246,9 +246,9 @@ Text Label 5850 2100 2    50   ~ 0
 CAN_TX
 Text Label 5850 2200 2    50   ~ 0
 CAN_RX
-Text Label 7300 2150 0    50   ~ 0
+Text Label 8650 1900 0    50   ~ 0
 CAN_+
-Text Label 7300 2450 0    50   ~ 0
+Text Label 8650 2400 0    50   ~ 0
 CAN_-
 Text Notes 2550 1250 0    89   ~ 0
 ATMEGA 16M1\n
@@ -358,14 +358,6 @@ Wire Wire Line
 Connection ~ 6350 1700
 Wire Wire Line
 	6350 1700 6350 1550
-Wire Wire Line
-	6850 2200 6950 2200
-Wire Wire Line
-	6950 2200 6950 2150
-Wire Wire Line
-	6950 2400 6950 2450
-Wire Wire Line
-	6850 2400 6950 2400
 Text Notes 1800 6050 0    89   ~ 0
 USB + POWER
 Text Label 1500 7150 0    50   ~ 0
@@ -559,11 +551,7 @@ Wire Notes Line
 Wire Notes Line
 	5100 1000 850  1000
 Wire Notes Line
-	5400 1000 7700 1000
-Wire Notes Line
-	7700 1000 7700 3000
-Wire Notes Line
-	7700 3000 5400 3000
+	9050 1000 9050 3000
 Wire Notes Line
 	5400 3000 5400 1000
 Connection ~ 4450 6250
@@ -578,30 +566,6 @@ F 3 "" H 5350 8900 50  0001 C CNN
 	1    5350 8900
 	1    0    0    -1  
 $EndComp
-Wire Wire Line
-	6950 2150 7150 2150
-Wire Wire Line
-	6950 2450 7150 2450
-$Comp
-L formula:R_120_DNP R2
-U 1 1 5FB3CE18
-P 7150 2300
-F 0 "R2" H 7000 2300 50  0000 L CNN
-F 1 "R_120_DNP" H 7200 2300 50  0000 L CNN
-F 2 "footprints:R_0805_OEM" H 5950 2450 50  0001 L CNN
-F 3 "https://www.mouser.com/datasheet/2/315/AOA0000C304-1149620.pdf" H 5950 2750 50  0001 L CNN
-F 4 "DK" H 7150 2300 60  0001 C CNN "MFN"
-F 5 "667-ERJ-6ENF1200V" H 5950 2550 60  0001 L CNN "MPN"
-F 6 "https://www.mouser.com/ProductDetail/Panasonic-Industrial-Devices/ERJ-6ENF1200V?qs=sGAEpiMZZMvdGkrng054t8AJgcdMkx7x%252bFQnctTMUmU%3d" H 5950 2650 60  0001 L CNN "PurchasingLink"
-	1    7150 2300
-	1    0    0    -1  
-$EndComp
-Connection ~ 7150 2150
-Wire Wire Line
-	7150 2150 7300 2150
-Connection ~ 7150 2450
-Wire Wire Line
-	7150 2450 7300 2450
 NoConn ~ 1100 7550
 NoConn ~ 3950 3750
 NoConn ~ 3950 3850
@@ -1261,4 +1225,86 @@ Text Notes 5500 3400 0    89   ~ 0
 16M1 PROGRAMMING HEADER\n
 Text Label 4500 3650 0    50   ~ 0
 UART_TXD
+$Comp
+L formula:CONN_01x02 J?
+U 1 1 604765A9
+P 7250 2200
+F 0 "J?" H 7330 2192 50  0000 L CNN
+F 1 "CONN_01x02" H 7330 2101 50  0000 L CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_1x02_P2.54mm_Vertical" H 7150 2200 50  0001 C CNN
+F 3 "https://katalog.we-online.de/em/datasheet/6130xx11121.pdf" H 7250 2300 50  0001 C CNN
+F 4 "DK" H 7350 2400 50  0001 C CNN "MFN"
+F 5 "732-5315-ND" H 7450 2500 50  0001 C CNN "MPN"
+	1    7250 2200
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	6850 2400 7050 2400
+Wire Wire Line
+	7050 2300 7050 2400
+Connection ~ 7050 2400
+Wire Wire Line
+	7050 2400 7850 2400
+$Comp
+L formula:R_120 R?
+U 1 1 604A0174
+P 7050 2050
+F 0 "R?" H 7120 2096 50  0000 L CNN
+F 1 "R_120" H 7120 2005 50  0000 L CNN
+F 2 "footprints:R_0805_OEM" H 5850 2200 50  0001 L CNN
+F 3 "https://www.mouser.com/datasheet/2/315/AOA0000C304-1149620.pdf" H 5850 2500 50  0001 L CNN
+F 4 "DK" H 7050 2050 60  0001 C CNN "MFN"
+F 5 "667-ERJ-6ENF1200V" H 5850 2300 60  0001 L CNN "MPN"
+F 6 "https://www.mouser.com/ProductDetail/Panasonic-Industrial-Devices/ERJ-6ENF1200V?qs=sGAEpiMZZMvdGkrng054t8AJgcdMkx7x%252bFQnctTMUmU%3d" H 5850 2400 60  0001 L CNN "PurchasingLink"
+	1    7050 2050
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	6850 2200 6850 1900
+Wire Wire Line
+	6850 1900 7050 1900
+Connection ~ 7050 1900
+Wire Wire Line
+	7050 1900 7850 1900
+$Comp
+L formula:CONN_01x02 J?
+U 1 1 604B1E63
+P 8050 2200
+F 0 "J?" H 8130 2192 50  0000 L CNN
+F 1 "CONN_01x02" H 8130 2101 50  0000 L CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_1x02_P2.54mm_Vertical" H 7950 2200 50  0001 C CNN
+F 3 "https://katalog.we-online.de/em/datasheet/6130xx11121.pdf" H 8050 2300 50  0001 C CNN
+F 4 "DK" H 8150 2400 50  0001 C CNN "MFN"
+F 5 "732-5315-ND" H 8250 2500 50  0001 C CNN "MPN"
+	1    8050 2200
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	7850 2300 7850 2400
+$Comp
+L formula:R_120 R?
+U 1 1 604B2391
+P 7850 2050
+F 0 "R?" H 7920 2096 50  0000 L CNN
+F 1 "R_120" H 7920 2005 50  0000 L CNN
+F 2 "footprints:R_0805_OEM" H 6650 2200 50  0001 L CNN
+F 3 "https://www.mouser.com/datasheet/2/315/AOA0000C304-1149620.pdf" H 6650 2500 50  0001 L CNN
+F 4 "DK" H 7850 2050 60  0001 C CNN "MFN"
+F 5 "667-ERJ-6ENF1200V" H 6650 2300 60  0001 L CNN "MPN"
+F 6 "https://www.mouser.com/ProductDetail/Panasonic-Industrial-Devices/ERJ-6ENF1200V?qs=sGAEpiMZZMvdGkrng054t8AJgcdMkx7x%252bFQnctTMUmU%3d" H 6650 2400 60  0001 L CNN "PurchasingLink"
+	1    7850 2050
+	1    0    0    -1  
+$EndComp
+Connection ~ 7850 1900
+Connection ~ 7850 2400
+Wire Wire Line
+	7850 2400 8650 2400
+Wire Wire Line
+	7850 1900 8650 1900
+Wire Notes Line
+	5400 3000 9050 3000
+Wire Notes Line
+	5400 1000 9050 1000
+Text Notes 6850 1800 0    50   ~ 0
+JUMPERS FOR TERMINATING RESISTORS
 $EndSCHEMATC

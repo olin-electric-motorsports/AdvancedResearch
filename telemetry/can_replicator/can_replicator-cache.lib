@@ -75,6 +75,27 @@ X A 2 150 0 100 L 50 50 1 1 P
 ENDDRAW
 ENDDEF
 #
+# formula_CONN_01x02
+#
+DEF formula_CONN_01x02 J 0 40 Y N 1 F N
+F0 "J" 0 100 50 H V C CNN
+F1 "formula_CONN_01x02" 0 -200 50 H V C CNN
+F2 "Connector_PinHeader_2.54mm:PinHeader_1x02_P2.54mm_Vertical" -100 0 50 H I C CNN
+F3 "https://katalog.we-online.de/em/datasheet/6130xx11121.pdf" 0 100 50 H I C CNN
+F4 "DK" 100 200 50 H I C CNN "MFN"
+F5 "732-5315-ND" 200 300 50 H I C CNN "MPN"
+$FPLIST
+ Connector*:*_1x??_*
+$ENDFPLIST
+DRAW
+S -50 -95 0 -105 1 1 6 N
+S -50 5 0 -5 1 1 6 N
+S -50 50 50 -150 1 1 10 f
+X Pin_1 1 -200 0 150 R 50 50 1 1 P
+X Pin_2 2 -200 -100 150 R 50 50 1 1 P
+ENDDRAW
+ENDDEF
+#
 # formula_CONN_02X03
 #
 DEF formula_CONN_02X03 J 0 1 Y N 1 F N
@@ -520,13 +541,13 @@ X ~ 2 0 -150 50 U 50 50 1 1 P
 ENDDRAW
 ENDDEF
 #
-# formula_R_120_DNP
+# formula_R_120
 #
-DEF formula_R_120_DNP R 0 0 N Y 1 F N
+DEF formula_R_120 R 0 0 N Y 1 F N
 F0 "R" 80 0 50 V V C CNN
-F1 "formula_R_120_DNP" -100 0 50 V V C CNN
+F1 "formula_R_120" -100 0 50 V V C CNN
 F2 "footprints:R_0805_OEM" -1200 150 50 H I L CNN
-F3 "" -1200 450 50 H I L CNN
+F3 "https://www.mouser.com/datasheet/2/315/AOA0000C304-1149620.pdf" -1200 450 50 H I L CNN
 F4 "DK" 0 0 60 H I C CNN "MFN"
 F5 "667-ERJ-6ENF1200V" -1200 250 60 H I L CNN "MPN"
 F6 "https://www.mouser.com/ProductDetail/Panasonic-Industrial-Devices/ERJ-6ENF1200V?qs=sGAEpiMZZMvdGkrng054t8AJgcdMkx7x%252bFQnctTMUmU%3d" -1200 350 60 H I L CNN "PurchasingLink"
