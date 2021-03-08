@@ -1116,10 +1116,10 @@ $EndComp
 Text Notes 7100 6450 0    89   ~ 0
 STATUS LEDS
 $Comp
-L formula:MM_M_VT_20 J?
+L formula:MM_M_VT_20 J2
 U 1 1 60394CE9
 P 6850 4950
-F 0 "J?" V 6519 5105 60  0000 C CNN
+F 0 "J2" V 6519 5105 60  0000 C CNN
 F 1 "MM_M_VT_20" V 6413 5105 60  0000 C CNN
 F 2 "footprints:micromatch_female_ra_20" H 6650 6050 60  0001 C CNN
 F 3 "https://www.te.com/commerce/DocumentDelivery/DDEController?Action=showdoc&DocId=Customer+Drawing%7F215464%7FR%7Fpdf%7FEnglish%7FENG_CD_215464_R.pdf%7F2-215464-0" H 6750 6150 60  0001 C CNN
@@ -1178,10 +1178,10 @@ Connection ~ 7650 4800
 Wire Wire Line
 	7650 4800 7800 4800
 $Comp
-L power:GND #PWR?
+L power:GND #PWR020
 U 1 1 6039EEAA
 P 7800 4800
-F 0 "#PWR?" H 7800 4550 50  0001 C CNN
+F 0 "#PWR020" H 7800 4550 50  0001 C CNN
 F 1 "GND" H 7805 4627 50  0000 C CNN
 F 2 "" H 7800 4800 50  0001 C CNN
 F 3 "" H 7800 4800 50  0001 C CNN
@@ -1189,10 +1189,10 @@ F 3 "" H 7800 4800 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L power:GND #PWR?
+L power:GND #PWR019
 U 1 1 6039FA95
 P 5600 4800
-F 0 "#PWR?" H 5600 4550 50  0001 C CNN
+F 0 "#PWR019" H 5600 4550 50  0001 C CNN
 F 1 "GND" H 5605 4627 50  0000 C CNN
 F 2 "" H 5600 4800 50  0001 C CNN
 F 3 "" H 5600 4800 50  0001 C CNN
@@ -1226,10 +1226,10 @@ Text Notes 5500 3400 0    89   ~ 0
 Text Label 4500 3650 0    50   ~ 0
 UART_TXD
 $Comp
-L formula:CONN_01x02 J?
+L formula:CONN_01x02 J3
 U 1 1 604765A9
 P 7250 2200
-F 0 "J?" H 7330 2192 50  0000 L CNN
+F 0 "J3" H 7330 2192 50  0000 L CNN
 F 1 "CONN_01x02" H 7330 2101 50  0000 L CNN
 F 2 "Connector_PinHeader_2.54mm:PinHeader_1x02_P2.54mm_Vertical" H 7150 2200 50  0001 C CNN
 F 3 "https://katalog.we-online.de/em/datasheet/6130xx11121.pdf" H 7250 2300 50  0001 C CNN
@@ -1246,10 +1246,10 @@ Connection ~ 7050 2400
 Wire Wire Line
 	7050 2400 7850 2400
 $Comp
-L formula:R_120 R?
+L formula:R_120 R2
 U 1 1 604A0174
 P 7050 2050
-F 0 "R?" H 7120 2096 50  0000 L CNN
+F 0 "R2" H 7120 2096 50  0000 L CNN
 F 1 "R_120" H 7120 2005 50  0000 L CNN
 F 2 "footprints:R_0805_OEM" H 5850 2200 50  0001 L CNN
 F 3 "https://www.mouser.com/datasheet/2/315/AOA0000C304-1149620.pdf" H 5850 2500 50  0001 L CNN
@@ -1267,10 +1267,10 @@ Connection ~ 7050 1900
 Wire Wire Line
 	7050 1900 7850 1900
 $Comp
-L formula:CONN_01x02 J?
+L formula:CONN_01x02 J4
 U 1 1 604B1E63
 P 8050 2200
-F 0 "J?" H 8130 2192 50  0000 L CNN
+F 0 "J4" H 8130 2192 50  0000 L CNN
 F 1 "CONN_01x02" H 8130 2101 50  0000 L CNN
 F 2 "Connector_PinHeader_2.54mm:PinHeader_1x02_P2.54mm_Vertical" H 7950 2200 50  0001 C CNN
 F 3 "https://katalog.we-online.de/em/datasheet/6130xx11121.pdf" H 8050 2300 50  0001 C CNN
@@ -1282,10 +1282,10 @@ $EndComp
 Wire Wire Line
 	7850 2300 7850 2400
 $Comp
-L formula:R_120 R?
+L formula:R_120 R12
 U 1 1 604B2391
 P 7850 2050
-F 0 "R?" H 7920 2096 50  0000 L CNN
+F 0 "R12" H 7920 2096 50  0000 L CNN
 F 1 "R_120" H 7920 2005 50  0000 L CNN
 F 2 "footprints:R_0805_OEM" H 6650 2200 50  0001 L CNN
 F 3 "https://www.mouser.com/datasheet/2/315/AOA0000C304-1149620.pdf" H 6650 2500 50  0001 L CNN
