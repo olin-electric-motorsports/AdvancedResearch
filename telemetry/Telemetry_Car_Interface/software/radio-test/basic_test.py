@@ -8,5 +8,5 @@ def send(s):
 
 
 if __name__ == "__main__":
-    ser = serial.Serial ("/dev/ttyS0", 9600) 
+    ser = serial.Serial ("/dev/ttyS0", 115200) 
     send(ser)
