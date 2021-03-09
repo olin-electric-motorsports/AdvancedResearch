@@ -10,5 +10,10 @@ def send(s):
 
 
 if __name__ == "__main__":
+<<<<<<< HEAD
     ser = serial.Serial ("/dev/ttyUSB0", 57600) 
     send(ser)
+=======
+    ser = serial.Serial ("/dev/ttyS0", 115200) 
+    send(ser)
+>>>>>>> b3c7bd783bf200abe2a7cca8047a9752c94c1616
