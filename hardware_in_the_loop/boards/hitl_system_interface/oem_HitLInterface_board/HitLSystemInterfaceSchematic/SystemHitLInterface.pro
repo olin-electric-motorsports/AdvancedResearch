@@ -1,4 +1,4 @@
-update=Mon 01 Mar 2021 09:13:05 PM EST
+update=Mon 08 Mar 2021 09:01:42 PM EST
 version=1
 last_client=pcbnew
 [general]
@@ -25,7 +25,7 @@ ERC_TestSimilarLabels=1
 [pcbnew]
 version=1
 PageLayoutDescrFile=
-LastNetListRead=SystemHitLSInterface.net
+LastNetListRead=SystemHitLInterface.net
 CopperLayerCount=2
 BoardThickness=1.6
 AllowMicroVias=0
