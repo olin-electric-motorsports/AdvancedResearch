@@ -14,7 +14,7 @@ Comment3 ""
 Comment4 ""
 $EndDescr
 $Comp
-L formula:1.5A_Fuse F1
+L Antoinette_PowerBank-rescue:1.5A_Fuse-formula F1
 U 1 1 5F921D2E
 P 2000 3950
 F 0 "F1" H 2000 4175 50  0000 C CNN
@@ -28,7 +28,7 @@ F 6 "046601.5NR" H 2300 4400 50  0001 C CNN "MFN"
 	1    0    0    -1  
 $EndComp
 $Comp
-L power:GND #PWR07
+L Antoinette_PowerBank-rescue:GND-power #PWR07
 U 1 1 5F9227D8
 P 1850 4250
 F 0 "#PWR07" H 1850 4000 50  0001 C CNN
@@ -43,7 +43,7 @@ Wire Wire Line
 Wire Wire Line
 	1850 4100 1850 4250
 $Comp
-L power:+5V #PWR04
+L Antoinette_PowerBank-rescue:+5V-power #PWR04
 U 1 1 5F92411D
 P 2450 1350
 F 0 "#PWR04" H 2450 1200 50  0001 C CNN
@@ -56,7 +56,7 @@ $EndComp
 Wire Wire Line
 	2450 1550 2450 1350
 $Comp
-L formula:C_10uF C1
+L Antoinette_PowerBank-rescue:C_10uF-formula C1
 U 1 1 5F924127
 P 2450 2100
 F 0 "C1" H 2565 2196 50  0000 L CNN
@@ -71,7 +71,7 @@ F 6 "https://www.digikey.com/product-detail/en/samsung-electro-mechanics/CL21A10
 $EndComp
 Connection ~ 2450 1550
 $Comp
-L power:GND #PWR03
+L Antoinette_PowerBank-rescue:GND-power #PWR03
 U 1 1 5F92412E
 P 2300 2200
 F 0 "#PWR03" H 2300 1950 50  0001 C CNN
@@ -84,7 +84,7 @@ $EndComp
 Wire Wire Line
 	2450 1900 2450 1550
 $Comp
-L formula:R_49.9K R2
+L Antoinette_PowerBank-rescue:R_49.9K-formula R2
 U 1 1 5F924143
 P 2950 2100
 F 0 "R2" H 3020 2146 50  0000 L CNN
@@ -98,7 +98,7 @@ $EndComp
 Wire Wire Line
 	2950 1250 2950 1150
 $Comp
-L power:+5V #PWR08
+L Antoinette_PowerBank-rescue:+5V-power #PWR08
 U 1 1 5F92415A
 P 2950 1150
 F 0 "#PWR08" H 2950 1000 50  0001 C CNN
@@ -109,7 +109,7 @@ F 3 "" H 2950 1150 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L power:GND #PWR09
+L Antoinette_PowerBank-rescue:GND-power #PWR09
 U 1 1 5F924160
 P 2950 2400
 F 0 "#PWR09" H 2950 2150 50  0001 C CNN
@@ -128,7 +128,7 @@ Wire Wire Line
 Text Notes 1750 1050 0    79   ~ 0
      Output USB\n(to charge phone)
 $Comp
-L formula:R_75k R1
+L Antoinette_PowerBank-rescue:R_75k-formula R1
 U 1 1 5F924176
 P 2950 1400
 F 0 "R1" H 3020 1446 50  0000 L CNN
@@ -139,7 +139,7 @@ F 3 "" H 3030 1400 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L power:GND #PWR02
+L Antoinette_PowerBank-rescue:GND-power #PWR02
 U 1 1 5F9226D5
 P 1750 3000
 F 0 "#PWR02" H 1750 2750 50  0001 C CNN
@@ -164,7 +164,7 @@ Battery
 Text Notes 850  4800 0    79   ~ 0
 Input USB\n(to charge bat)
 $Comp
-L formula:C_10uF C2
+L Antoinette_PowerBank-rescue:C_10uF-formula C2
 U 1 1 5F92E826
 P 1950 5400
 F 0 "C2" H 2065 5496 50  0000 L CNN
@@ -178,7 +178,7 @@ F 6 "https://www.digikey.com/product-detail/en/samsung-electro-mechanics/CL21A10
 	1    0    0    -1  
 $EndComp
 $Comp
-L power:VBUS #PWR05
+L Antoinette_PowerBank-rescue:VBUS-power #PWR05
 U 1 1 5F92F457
 P 1950 4950
 F 0 "#PWR05" H 1950 4800 50  0001 C CNN
@@ -194,7 +194,7 @@ Wire Wire Line
 	1950 4950 1950 5150
 Connection ~ 1950 5150
 $Comp
-L power:GND #PWR06
+L Antoinette_PowerBank-rescue:GND-power #PWR06
 U 1 1 5F930713
 P 1950 5500
 F 0 "#PWR06" H 1950 5250 50  0001 C CNN
@@ -205,7 +205,7 @@ F 3 "" H 1950 5500 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L power:GND #PWR01
+L Antoinette_PowerBank-rescue:GND-power #PWR01
 U 1 1 5F9314A5
 P 1700 5850
 F 0 "#PWR01" H 1700 5600 50  0001 C CNN
@@ -223,7 +223,7 @@ NoConn ~ 1500 5250
 Wire Wire Line
 	1500 5150 1700 5150
 $Comp
-L formula:TP TP1
+L Antoinette_PowerBank-rescue:TP-formula TP1
 U 1 1 5F936478
 P 1700 4950
 F 0 "TP1" H 1778 4888 50  0000 L CNN
@@ -240,7 +240,7 @@ Connection ~ 1700 5150
 Wire Wire Line
 	1700 5150 1950 5150
 $Comp
-L formula:TPS61090RSAR U3
+L Antoinette_PowerBank-rescue:TPS61090RSAR-formula U3
 U 1 1 5F93A0E2
 P 7900 1800
 F 0 "U3" H 7900 2370 50  0000 C CNN
@@ -258,7 +258,7 @@ F 10 "https://www.digikey.com/product-detail/en/texas-instruments/TPS61090RSAR/2
 	1    0    0    -1  
 $EndComp
 $Comp
-L formula:L_6.8uH L1
+L Antoinette_PowerBank-rescue:L_6.8uH-formula L1
 U 1 1 5F93B925
 P 6850 1500
 F 0 "L1" H 6850 1685 50  0000 C CNN
@@ -273,7 +273,7 @@ $EndComp
 Wire Wire Line
 	7200 1500 6950 1500
 $Comp
-L formula:TP TP3
+L Antoinette_PowerBank-rescue:TP-formula TP3
 U 1 1 5F93E0BD
 P 6000 1300
 F 0 "TP3" H 6078 1238 50  0000 L CNN
@@ -287,7 +287,7 @@ F 6 "https://www.digikey.com/product-detail/en/keystone-electronics/5006/36-5006
 	1    0    0    -1  
 $EndComp
 $Comp
-L formula:VBATT #PWR016
+L Antoinette_PowerBank-rescue:VBATT-formula #PWR016
 U 1 1 5F94059A
 P 5700 1450
 F 0 "#PWR016" H 5700 1300 50  0001 C CNN
@@ -306,7 +306,7 @@ Wire Wire Line
 	7200 1600 7200 1500
 Connection ~ 7200 1500
 $Comp
-L formula:TP TP4
+L Antoinette_PowerBank-rescue:TP-formula TP4
 U 1 1 5F94306C
 P 6850 1900
 F 0 "TP4" V 7065 1792 50  0000 C CNN
@@ -320,7 +320,7 @@ F 6 "https://www.digikey.com/product-detail/en/keystone-electronics/5006/36-5006
 	0    -1   -1   0   
 $EndComp
 $Comp
-L formula:R_200K R10
+L Antoinette_PowerBank-rescue:R_200K-formula R10
 U 1 1 5F9446C9
 P 6900 2050
 F 0 "R10" V 6850 2250 50  0000 C CNN
@@ -340,7 +340,7 @@ Connection ~ 7050 1900
 Wire Wire Line
 	6750 2050 6550 2050
 $Comp
-L formula:C_0.1uF C5
+L Antoinette_PowerBank-rescue:C_0.1uF-formula C5
 U 1 1 5F94A827
 P 6050 1950
 F 0 "C5" H 6050 1800 50  0000 L CNN
@@ -354,7 +354,7 @@ F 6 "https://www.digikey.com/products/en?keywords=478-3352-1-ND" H 6475 2450 60 
 	1    0    0    -1  
 $EndComp
 $Comp
-L formula:C_10uF C4
+L Antoinette_PowerBank-rescue:C_10uF-formula C4
 U 1 1 5F94B212
 P 5700 2000
 F 0 "C4" H 5750 1950 50  0000 L CNN
@@ -374,7 +374,7 @@ Wire Wire Line
 	5700 1800 6050 1800
 Connection ~ 5700 1800
 $Comp
-L power:GND #PWR017
+L Antoinette_PowerBank-rescue:GND-power #PWR017
 U 1 1 5F94D44A
 P 5700 2100
 F 0 "#PWR017" H 5700 1850 50  0001 C CNN
@@ -385,7 +385,7 @@ F 3 "" H 5700 2100 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L power:GND #PWR019
+L Antoinette_PowerBank-rescue:GND-power #PWR019
 U 1 1 5F94DAED
 P 6050 2100
 F 0 "#PWR019" H 6050 1850 50  0001 C CNN
@@ -396,7 +396,7 @@ F 3 "" H 6050 2100 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L formula:R_340K R7
+L Antoinette_PowerBank-rescue:R_340K-formula R7
 U 1 1 5F94FB34
 P 6300 2450
 F 0 "R7" H 6370 2496 50  0000 L CNN
@@ -409,7 +409,7 @@ F 5 "P300KDACT-ND" H 6300 2450 60  0001 C CNN "MPN"
 	1    0    0    -1  
 $EndComp
 $Comp
-L power:GND #PWR021
+L Antoinette_PowerBank-rescue:GND-power #PWR021
 U 1 1 5F95105B
 P 6300 2600
 F 0 "#PWR021" H 6300 2350 50  0001 C CNN
@@ -420,7 +420,7 @@ F 3 "" H 6300 2600 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L power:GND #PWR025
+L Antoinette_PowerBank-rescue:GND-power #PWR025
 U 1 1 5F951788
 P 7200 2450
 F 0 "#PWR025" H 7200 2200 50  0001 C CNN
@@ -447,7 +447,7 @@ Wire Wire Line
 	7200 2450 7200 2350
 Connection ~ 7200 2350
 $Comp
-L power:GNDPWR #PWR030
+L Antoinette_PowerBank-rescue:GNDPWR-power #PWR030
 U 1 1 5F90D5A4
 P 8750 1700
 F 0 "#PWR030" H 8750 1500 50  0001 C CNN
@@ -464,7 +464,7 @@ Wire Wire Line
 Wire Wire Line
 	8700 1700 8750 1700
 $Comp
-L formula:C_2.2uF C6
+L Antoinette_PowerBank-rescue:C_2.2uF-formula C6
 U 1 1 5F912C95
 P 9350 1750
 F 0 "C6" H 9300 2050 50  0000 L CNN
@@ -477,7 +477,7 @@ F 4 "https://www.digikey.com/product-detail/en/tdk-corporation/C2012X7R1H225M125
 $EndComp
 Connection ~ 9350 1550
 $Comp
-L formula:R_1K R16
+L Antoinette_PowerBank-rescue:R_1K-formula R16
 U 1 1 5F917CC2
 P 10500 1650
 F 0 "R16" H 10570 1696 50  0000 L CNN
@@ -493,7 +493,7 @@ $EndComp
 Wire Wire Line
 	10500 1400 10000 1400
 $Comp
-L power:+5V #PWR037
+L Antoinette_PowerBank-rescue:+5V-power #PWR037
 U 1 1 5F91EC9C
 P 10000 1300
 F 0 "#PWR037" H 10000 1150 50  0001 C CNN
@@ -511,7 +511,7 @@ Wire Wire Line
 Wire Wire Line
 	10500 1400 10500 1500
 $Comp
-L formula:LED_0805 D4
+L Antoinette_PowerBank-rescue:LED_0805-formula D4
 U 1 1 5F927053
 P 10500 1950
 F 0 "D4" V 10539 1833 50  0000 R CNN
@@ -525,7 +525,7 @@ F 6 "https://www.digikey.com/products/en?keywords=475-1410-1-ND" H 10900 2450 60
 	0    -1   -1   0   
 $EndComp
 $Comp
-L power:GND #PWR038
+L Antoinette_PowerBank-rescue:GND-power #PWR038
 U 1 1 5F928034
 P 10500 2200
 F 0 "#PWR038" H 10500 1950 50  0001 C CNN
@@ -538,7 +538,7 @@ $EndComp
 Wire Wire Line
 	10500 2200 10500 2100
 $Comp
-L formula:R_200K R13
+L Antoinette_PowerBank-rescue:R_200K-formula R13
 U 1 1 5F929ECA
 P 9000 2050
 F 0 "R13" H 9070 2096 50  0000 L CNN
@@ -555,7 +555,7 @@ Wire Wire Line
 Wire Wire Line
 	8600 1550 9000 1550
 $Comp
-L formula:R_1.87M R12
+L Antoinette_PowerBank-rescue:R_1.87M-formula R12
 U 1 1 5F93C0EB
 P 9000 1700
 F 0 "R12" H 8950 1950 50  0000 L CNN
@@ -574,7 +574,7 @@ Wire Wire Line
 	9000 1850 9000 1900
 Connection ~ 9000 1900
 $Comp
-L power:GNDPWR #PWR029
+L Antoinette_PowerBank-rescue:GNDPWR-power #PWR029
 U 1 1 5F93DFAD
 P 8600 2350
 F 0 "#PWR029" H 8600 2150 50  0001 C CNN
@@ -591,7 +591,7 @@ Wire Wire Line
 	8600 2150 8600 2250
 Connection ~ 8600 2250
 $Comp
-L formula:TP TP5
+L Antoinette_PowerBank-rescue:TP-formula TP5
 U 1 1 5F942010
 P 9100 2950
 F 0 "TP5" H 9178 2888 50  0000 L CNN
@@ -605,21 +605,21 @@ F 6 "https://www.digikey.com/product-detail/en/keystone-electronics/5006/36-5006
 	1    0    0    -1  
 $EndComp
 $Comp
-L formula:R_10K R14
+L Antoinette_PowerBank-rescue:R_10K-formula R14
 U 1 1 5F943142
-P 9300 3300
-F 0 "R14" H 9370 3346 50  0000 L CNN
-F 1 "R_10K" H 9370 3255 50  0000 L CNN
-F 2 "footprints:R_0805_OEM" H 9230 3300 50  0001 C CNN
-F 3 "http://www.bourns.com/data/global/pdfs/CRS.pdf" H 9380 3300 50  0001 C CNN
-F 4 "DK" H 9300 3300 60  0001 C CNN "MFN"
-F 5 "CRS0805-FX-1002ELFCT-ND" H 9300 3300 60  0001 C CNN "MPN"
-F 6 "https://www.digikey.com/products/en?keywords=CRS0805-FX-1002ELFCT-ND" H 9780 3700 60  0001 C CNN "PurchasingLink"
-	1    9300 3300
+P 9300 3000
+F 0 "R14" H 9370 3046 50  0000 L CNN
+F 1 "R_10K" H 9370 2955 50  0000 L CNN
+F 2 "footprints:R_0805_OEM" H 9230 3000 50  0001 C CNN
+F 3 "http://www.bourns.com/data/global/pdfs/CRS.pdf" H 9380 3000 50  0001 C CNN
+F 4 "DK" H 9300 3000 60  0001 C CNN "MFN"
+F 5 "CRS0805-FX-1002ELFCT-ND" H 9300 3000 60  0001 C CNN "MPN"
+F 6 "https://www.digikey.com/products/en?keywords=CRS0805-FX-1002ELFCT-ND" H 9780 3400 60  0001 C CNN "PurchasingLink"
+	1    9300 3000
 	1    0    0    -1  
 $EndComp
 $Comp
-L formula:SSM3K333R Q1
+L Antoinette_PowerBank-rescue:SSM3K333R-formula Q1
 U 1 1 5F9440B8
 P 9600 3150
 F 0 "Q1" H 9806 3196 50  0000 L CNN
@@ -633,7 +633,7 @@ F 6 "https://www.digikey.com/product-detail/en/toshiba-semiconductor-and-storage
 	1    0    0    -1  
 $EndComp
 $Comp
-L formula:LED_0805 D3
+L Antoinette_PowerBank-rescue:LED_0805-formula D3
 U 1 1 5F94621C
 P 9700 2800
 F 0 "D3" V 9739 2683 50  0000 R CNN
@@ -647,7 +647,7 @@ F 6 "https://www.digikey.com/products/en?keywords=475-1410-1-ND" H 10100 3300 60
 	0    -1   -1   0   
 $EndComp
 $Comp
-L formula:R_1K R15
+L Antoinette_PowerBank-rescue:R_1K-formula R15
 U 1 1 5F946F56
 P 9700 2500
 F 0 "R15" H 9770 2546 50  0000 L CNN
@@ -666,7 +666,7 @@ Wire Wire Line
 	9400 3150 9300 3150
 Connection ~ 9300 3150
 $Comp
-L power:GND #PWR036
+L Antoinette_PowerBank-rescue:GND-power #PWR036
 U 1 1 5F94AF9F
 P 9700 3350
 F 0 "#PWR036" H 9700 3100 50  0001 C CNN
@@ -677,20 +677,7 @@ F 3 "" H 9700 3350 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L power:GND #PWR032
-U 1 1 5F94B791
-P 9300 3600
-F 0 "#PWR032" H 9300 3350 50  0001 C CNN
-F 1 "GND" H 9305 3427 50  0000 C CNN
-F 2 "" H 9300 3600 50  0001 C CNN
-F 3 "" H 9300 3600 50  0001 C CNN
-	1    9300 3600
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	9300 3600 9300 3450
-$Comp
-L power:GND #PWR033
+L Antoinette_PowerBank-rescue:GND-power #PWR033
 U 1 1 5F9608B7
 P 9350 1850
 F 0 "#PWR033" H 9350 1600 50  0001 C CNN
@@ -701,7 +688,7 @@ F 3 "" H 9350 1850 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L power:GND #PWR034
+L Antoinette_PowerBank-rescue:GND-power #PWR034
 U 1 1 5F961019
 P 9700 1850
 F 0 "#PWR034" H 9700 1600 50  0001 C CNN
@@ -719,7 +706,7 @@ Wire Wire Line
 	8850 3150 9100 3150
 Connection ~ 9100 3150
 $Comp
-L power:GND #PWR031
+L Antoinette_PowerBank-rescue:GND-power #PWR031
 U 1 1 5F97A51F
 P 9000 2200
 F 0 "#PWR031" H 9000 1950 50  0001 C CNN
@@ -735,7 +722,7 @@ Connection ~ 8600 1550
 Wire Wire Line
 	8600 1550 8600 1650
 $Comp
-L power:GNDPWR #PWR027
+L Antoinette_PowerBank-rescue:GNDPWR-power #PWR027
 U 1 1 5F98580F
 P 7950 2950
 F 0 "#PWR027" H 7950 2750 50  0001 C CNN
@@ -746,7 +733,7 @@ F 3 "" H 7950 2900 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L power:GND #PWR028
+L Antoinette_PowerBank-rescue:GND-power #PWR028
 U 1 1 5F986163
 P 8250 2950
 F 0 "#PWR028" H 8250 2700 50  0001 C CNN
@@ -767,7 +754,7 @@ Low Battery Indicator
 Text Notes 10300 2200 1    50   ~ 0
 Power LED
 $Comp
-L power:VBUS #PWR024
+L Antoinette_PowerBank-rescue:VBUS-power #PWR024
 U 1 1 5F9F5105
 P 6850 4200
 F 0 "#PWR024" H 6850 4050 50  0001 C CNN
@@ -782,7 +769,7 @@ Wire Wire Line
 Wire Wire Line
 	6850 4450 6850 4200
 $Comp
-L formula:LED_0805 D2
+L Antoinette_PowerBank-rescue:LED_0805-formula D2
 U 1 1 5F9F9473
 P 6950 4550
 F 0 "D2" H 6900 4300 50  0000 C CNN
@@ -796,7 +783,7 @@ F 6 "https://www.digikey.com/products/en?keywords=475-1410-1-ND" H 7350 5050 60 
 	1    0    0    -1  
 $EndComp
 $Comp
-L formula:R_1K R11
+L Antoinette_PowerBank-rescue:R_1K-formula R11
 U 1 1 5F9FB8C1
 P 7250 4550
 F 0 "R11" V 7043 4550 50  0000 C CNN
@@ -810,7 +797,7 @@ F 6 "https://www.digikey.com/products/en?keywords=RNCP0805FTD1K00CT-ND" H 7730 4
 	0    1    1    0   
 $EndComp
 $Comp
-L power:VBUS #PWR026
+L Antoinette_PowerBank-rescue:VBUS-power #PWR026
 U 1 1 5F9FC14A
 P 7550 4300
 F 0 "#PWR026" H 7550 4150 50  0001 C CNN
@@ -825,7 +812,7 @@ Wire Wire Line
 Wire Wire Line
 	7550 4550 7400 4550
 $Comp
-L formula:R_100K R5
+L Antoinette_PowerBank-rescue:R_100K-formula R5
 U 1 1 5FA06FD7
 P 6100 5600
 F 0 "R5" H 6170 5646 50  0000 L CNN
@@ -843,7 +830,7 @@ Wire Wire Line
 Wire Wire Line
 	6100 5350 6100 5450
 $Comp
-L formula:R_1K R9
+L Antoinette_PowerBank-rescue:R_1K-formula R9
 U 1 1 5FA09BF6
 P 6550 5550
 F 0 "R9" H 6620 5596 50  0000 L CNN
@@ -859,7 +846,7 @@ $EndComp
 Wire Wire Line
 	6550 5250 6550 5400
 $Comp
-L power:GND #PWR018
+L Antoinette_PowerBank-rescue:GND-power #PWR018
 U 1 1 5FA0BF83
 P 5750 5750
 F 0 "#PWR018" H 5750 5500 50  0001 C CNN
@@ -874,7 +861,7 @@ Wire Wire Line
 Wire Wire Line
 	5750 5700 5650 5700
 $Comp
-L power:GND #PWR020
+L Antoinette_PowerBank-rescue:GND-power #PWR020
 U 1 1 5FA12B08
 P 6100 5750
 F 0 "#PWR020" H 6100 5500 50  0001 C CNN
@@ -885,7 +872,7 @@ F 3 "" H 6100 5750 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L power:GND #PWR023
+L Antoinette_PowerBank-rescue:GND-power #PWR023
 U 1 1 5FA1309A
 P 6550 5700
 F 0 "#PWR023" H 6550 5450 50  0001 C CNN
@@ -898,7 +885,7 @@ $EndComp
 Wire Wire Line
 	3800 4050 3950 4050
 $Comp
-L formula:R_270K R3
+L Antoinette_PowerBank-rescue:R_270K-formula R3
 U 1 1 5FA207E3
 P 3800 3900
 F 0 "R3" H 3870 3946 50  0000 L CNN
@@ -914,7 +901,7 @@ $EndComp
 Wire Wire Line
 	3950 4050 3950 4450
 $Comp
-L formula:R_100K R4
+L Antoinette_PowerBank-rescue:R_100K-formula R4
 U 1 1 5FA2A403
 P 3800 4200
 F 0 "R4" H 3850 4050 50  0000 L CNN
@@ -929,7 +916,7 @@ F 6 "https://www.digikey.com/product-detail/en/panasonic-electronic-components/E
 $EndComp
 Connection ~ 3800 4050
 $Comp
-L power:VBUS #PWR011
+L Antoinette_PowerBank-rescue:VBUS-power #PWR011
 U 1 1 5FA2AD7E
 P 3800 3750
 F 0 "#PWR011" H 3800 3600 50  0001 C CNN
@@ -940,7 +927,7 @@ F 3 "" H 3800 3750 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L power:GND #PWR012
+L Antoinette_PowerBank-rescue:GND-power #PWR012
 U 1 1 5FA2B8CE
 P 3800 4350
 F 0 "#PWR012" H 3800 4100 50  0001 C CNN
@@ -951,7 +938,7 @@ F 3 "" H 3800 4350 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L power:VBUS #PWR010
+L Antoinette_PowerBank-rescue:VBUS-power #PWR010
 U 1 1 5FA36F6C
 P 3600 4750
 F 0 "#PWR010" H 3600 4600 50  0001 C CNN
@@ -962,7 +949,7 @@ F 3 "" H 3600 4750 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L formula:TP TP2
+L Antoinette_PowerBank-rescue:TP-formula TP2
 U 1 1 5FA387DD
 P 3800 4950
 F 0 "TP2" H 3878 4888 50  0000 L CNN
@@ -982,7 +969,7 @@ Wire Wire Line
 Wire Wire Line
 	3600 5150 3600 5050
 $Comp
-L formula:C_10nF C3
+L Antoinette_PowerBank-rescue:C_10nF-formula C3
 U 1 1 5FA5B66D
 P 3800 5500
 F 0 "C3" H 3915 5546 50  0000 L CNN
@@ -996,7 +983,7 @@ F 6 "https://www.digikey.com/product-detail/en/samsung-electro-mechanics/CL21B10
 	1    0    0    -1  
 $EndComp
 $Comp
-L power:GND #PWR013
+L Antoinette_PowerBank-rescue:GND-power #PWR013
 U 1 1 5FA5D6CC
 P 3800 5800
 F 0 "#PWR013" H 3800 5550 50  0001 C CNN
@@ -1013,7 +1000,7 @@ Wire Wire Line
 Text Notes 3900 3350 0    118  ~ 0
 Battery + Load Manager
 $Comp
-L formula:R_43k R17
+L Antoinette_PowerBank-rescue:R_43k-formula R17
 U 1 1 5FAC4418
 P 3500 1400
 F 0 "R17" H 3570 1446 50  0000 L CNN
@@ -1024,7 +1011,7 @@ F 3 "" H 3580 1400 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L formula:R_49.9K R18
+L Antoinette_PowerBank-rescue:R_49.9K-formula R18
 U 1 1 5FAEF9FD
 P 3500 2100
 F 0 "R18" H 3570 2146 50  0000 L CNN
@@ -1036,7 +1023,7 @@ F 4 "https://www.digikey.com/product-detail/en/panasonic-electronic-components/E
 	1    0    0    -1  
 $EndComp
 $Comp
-L power:+5V #PWR039
+L Antoinette_PowerBank-rescue:+5V-power #PWR039
 U 1 1 5FB36951
 P 3500 1150
 F 0 "#PWR039" H 3500 1000 50  0001 C CNN
@@ -1047,7 +1034,7 @@ F 3 "" H 3500 1150 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L power:GND #PWR040
+L Antoinette_PowerBank-rescue:GND-power #PWR040
 U 1 1 5FB37DEC
 P 3500 2400
 F 0 "#PWR040" H 3500 2150 50  0001 C CNN
@@ -1074,7 +1061,7 @@ Wire Wire Line
 Wire Wire Line
 	5650 5700 5650 5600
 $Comp
-L formula:LED_0805_Amber D1
+L Antoinette_PowerBank-rescue:LED_0805_Amber-formula D1
 U 1 1 5F9F302E
 P 6200 4450
 F 0 "D1" H 6150 4650 50  0000 C CNN
@@ -1115,7 +1102,7 @@ Wire Wire Line
 Wire Wire Line
 	4050 4000 4050 4250
 $Comp
-L power:VBUS #PWR014
+L Antoinette_PowerBank-rescue:VBUS-power #PWR014
 U 1 1 5FA172BB
 P 4050 4000
 F 0 "#PWR014" H 4050 3850 50  0001 C CNN
@@ -1135,7 +1122,7 @@ NoConn ~ 5650 4750
 Wire Wire Line
 	6800 4550 5650 4550
 $Comp
-L formula:R_1K R8
+L Antoinette_PowerBank-rescue:R_1K-formula R8
 U 1 1 5F9F422E
 P 6500 4450
 F 0 "R8" V 6707 4450 50  0000 C CNN
@@ -1154,7 +1141,7 @@ Wire Wire Line
 Wire Wire Line
 	5650 4250 5650 4000
 $Comp
-L formula:VBATT #PWR015
+L Antoinette_PowerBank-rescue:VBATT-formula #PWR015
 U 1 1 5F9ED162
 P 5650 4000
 F 0 "#PWR015" H 5650 3850 50  0001 C CNN
@@ -1165,7 +1152,7 @@ F 3 "" H 5650 4000 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L formula:MCP73871T-2CCI_ML U2
+L Antoinette_PowerBank-rescue:MCP73871T-2CCI_ML-formula U2
 U 1 1 5F9E9E16
 P 4850 4950
 F 0 "U2" H 4850 5917 50  0000 C CNN
@@ -1181,7 +1168,7 @@ $EndComp
 Text Notes 8100 4650 0    177  ~ 0
 Power Bank Project
 $Comp
-L formula:USB-A-S-X-X-SM2 J4
+L Antoinette_PowerBank-rescue:USB-A-S-X-X-SM2-formula J4
 U 1 1 5FB17265
 P 1900 1750
 F 0 "J4" H 1793 2307 50  0000 C CNN
@@ -1198,7 +1185,7 @@ $EndComp
 Wire Wire Line
 	1500 5750 1650 5750
 $Comp
-L formula:USB-Micro-1981568-1 J2
+L Antoinette_PowerBank-rescue:USB-Micro-1981568-1-formula J2
 U 1 1 5FB0DC42
 P 1200 5450
 F 0 "J2" H 1257 6017 50  0000 C CNN
@@ -1244,7 +1231,7 @@ Wire Wire Line
 Wire Wire Line
 	9350 1550 9700 1550
 $Comp
-L formula:C_100uF C7
+L Antoinette_PowerBank-rescue:C_100uF-formula C7
 U 1 1 5FBD94B6
 P 9700 1700
 F 0 "C7" H 9815 1746 50  0000 L CNN
@@ -1261,7 +1248,7 @@ Connection ~ 9700 1550
 Wire Wire Line
 	9700 1550 10000 1550
 $Comp
-L formula:NanoFit_RA_TH_02 J1
+L Antoinette_PowerBank-rescue:NanoFit_RA_TH_02-formula J1
 U 1 1 5FB78F91
 P 1100 2850
 F 0 "J1" H 992 2463 60  0000 C CNN
@@ -1275,7 +1262,7 @@ F 6 "https://www.digikey.com/products/en/connectors-interconnects/rectangular-co
 	-1   0    0    1   
 $EndComp
 $Comp
-L formula:NanoFit_RA_TH_02 J3
+L Antoinette_PowerBank-rescue:NanoFit_RA_TH_02-formula J3
 U 1 1 5FBCFFB4
 P 1250 4050
 F 0 "J3" H 1142 3663 60  0000 C CNN
@@ -1291,7 +1278,7 @@ $EndComp
 Wire Wire Line
 	6000 1500 6750 1500
 $Comp
-L formula:R_1.87M R6
+L Antoinette_PowerBank-rescue:R_1.87M-formula R6
 U 1 1 5FC80133
 P 6300 1950
 F 0 "R6" H 6370 1996 50  0000 L CNN
@@ -1310,18 +1297,7 @@ Connection ~ 6300 1800
 Wire Wire Line
 	6300 1800 7200 1800
 $Comp
-L formula:VBATT #PWR0101
-U 1 1 5FCB3508
-P 9700 2350
-F 0 "#PWR0101" H 9700 2200 50  0001 C CNN
-F 1 "VBATT" H 9715 2523 50  0000 C CNN
-F 2 "" H 9700 2350 50  0001 C CNN
-F 3 "" H 9700 2350 50  0001 C CNN
-	1    9700 2350
-	1    0    0    -1  
-$EndComp
-$Comp
-L formula:VBATT #PWR0102
+L Antoinette_PowerBank-rescue:VBATT-formula #PWR0102
 U 1 1 5FCBCBA4
 P 6550 2050
 F 0 "#PWR0102" H 6550 1900 50  0001 C CNN
@@ -1329,6 +1305,28 @@ F 1 "VBATT" H 6565 2223 50  0000 C CNN
 F 2 "" H 6550 2050 50  0001 C CNN
 F 3 "" H 6550 2050 50  0001 C CNN
 	1    6550 2050
+	1    0    0    -1  
+$EndComp
+$Comp
+L Antoinette_PowerBank-rescue:+5V-power #PWR0101
+U 1 1 602BBE53
+P 9700 2350
+F 0 "#PWR0101" H 9700 2200 50  0001 C CNN
+F 1 "+5V" H 9715 2523 50  0000 C CNN
+F 2 "" H 9700 2350 50  0001 C CNN
+F 3 "" H 9700 2350 50  0001 C CNN
+	1    9700 2350
+	1    0    0    -1  
+$EndComp
+$Comp
+L Antoinette_PowerBank-rescue:+5V-power #PWR0103
+U 1 1 602C41E4
+P 9300 2850
+F 0 "#PWR0103" H 9300 2700 50  0001 C CNN
+F 1 "+5V" H 9315 3023 50  0000 C CNN
+F 2 "" H 9300 2850 50  0001 C CNN
+F 3 "" H 9300 2850 50  0001 C CNN
+	1    9300 2850
 	1    0    0    -1  
 $EndComp
 $EndSCHEMATC
