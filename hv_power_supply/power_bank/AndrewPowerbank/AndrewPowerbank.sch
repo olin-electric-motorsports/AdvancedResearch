@@ -417,12 +417,12 @@ Wire Wire Line
 $Comp
 L power:GND #PWR02
 U 1 1 5FD3A846
-P 1500 5600
-F 0 "#PWR02" H 1500 5350 50  0001 C CNN
-F 1 "GND" H 1505 5427 50  0000 C CNN
-F 2 "" H 1500 5600 50  0001 C CNN
-F 3 "" H 1500 5600 50  0001 C CNN
-	1    1500 5600
+P 1500 5650
+F 0 "#PWR02" H 1500 5400 50  0001 C CNN
+F 1 "GND" H 1505 5477 50  0000 C CNN
+F 2 "" H 1500 5650 50  0001 C CNN
+F 3 "" H 1500 5650 50  0001 C CNN
+	1    1500 5650
 	1    0    0    -1  
 $EndComp
 Text Label 2150 5500 0    50   ~ 0
@@ -432,17 +432,17 @@ Battery
 $Comp
 L power:GND #PWR01
 U 1 1 5FD416C2
-P 1500 4700
-F 0 "#PWR01" H 1500 4450 50  0001 C CNN
-F 1 "GND" H 1505 4527 50  0000 C CNN
-F 2 "" H 1500 4700 50  0001 C CNN
-F 3 "" H 1500 4700 50  0001 C CNN
-	1    1500 4700
+P 1500 4800
+F 0 "#PWR01" H 1500 4550 50  0001 C CNN
+F 1 "GND" H 1505 4627 50  0000 C CNN
+F 2 "" H 1500 4800 50  0001 C CNN
+F 3 "" H 1500 4800 50  0001 C CNN
+	1    1500 4800
 	1    0    0    -1  
 $EndComp
-Text Label 1500 4600 0    50   ~ 0
+Text Label 1500 4650 0    50   ~ 0
 16KThermistor
-Text Notes 1200 4300 0    50   ~ 0
+Text Notes 1150 4300 0    50   ~ 0
 Thermistor
 $Comp
 L formula:USB-A-S-X-X-SM2 J3
@@ -1108,32 +1108,6 @@ Wire Wire Line
 	6500 3500 6200 3500
 Text Notes 7100 3800 2    50   ~ 0
 connect gndpwr to gnd @ fb pin gnd
-$Comp
-L formula:CONN_01x02 J1
-U 1 1 5FCC75FF
-P 1300 4700
-F 0 "J1" H 1218 4375 50  0000 C CNN
-F 1 "CONN_01x02" H 1218 4466 50  0000 C CNN
-F 2 "Connector_PinHeader_2.54mm:PinHeader_1x02_P2.54mm_Vertical" H 1200 4700 50  0001 C CNN
-F 3 "https://katalog.we-online.de/em/datasheet/6130xx11121.pdf" H 1300 4800 50  0001 C CNN
-F 4 "DK" H 1400 4900 50  0001 C CNN "MFN"
-F 5 "732-5315-ND" H 1500 5000 50  0001 C CNN "MPN"
-	1    1300 4700
-	-1   0    0    1   
-$EndComp
-$Comp
-L formula:CONN_01x02 J2
-U 1 1 5FCC9A30
-P 1300 5600
-F 0 "J2" H 1218 5275 50  0000 C CNN
-F 1 "CONN_01x02" H 1218 5366 50  0000 C CNN
-F 2 "Connector_PinHeader_2.54mm:PinHeader_1x02_P2.54mm_Vertical" H 1200 5600 50  0001 C CNN
-F 3 "https://katalog.we-online.de/em/datasheet/6130xx11121.pdf" H 1300 5700 50  0001 C CNN
-F 4 "DK" H 1400 5800 50  0001 C CNN "MFN"
-F 5 "732-5315-ND" H 1500 5900 50  0001 C CNN "MPN"
-	1    1300 5600
-	-1   0    0    1   
-$EndComp
 Wire Wire Line
 	2550 3150 2050 3150
 Connection ~ 2550 3150
@@ -1345,4 +1319,51 @@ Wire Wire Line
 Wire Wire Line
 	4150 6950 4150 6850
 Connection ~ 4150 6850
+$Comp
+L formula:NanoFit_RA_TH_02 J2
+U 1 1 605E598D
+P 1050 5600
+F 0 "J2" H 942 5213 60  0000 C CNN
+F 1 "NanoFit_RA_TH_02" H 942 5319 60  0000 C CNN
+F 2 "footprints:NanoFit_Molex_1x02x2.50mm_Angled_OEM" H 1050 5000 60  0001 C CNN
+F 3 "https://www.molex.com/pdm_docs/sd/1053131102_sd.pdf" H 1050 5150 60  0001 C CNN
+F 4 "DK" H 1050 6150 50  0001 C CNN "MFN"
+F 5 "WM14972-ND" H 1050 6050 50  0001 C CNN "MPN"
+F 6 "https://www.digikey.com/products/en/connectors-interconnects/rectangular-connectors-headers-male-pins/314?k=nanofit+2&k=&pkeyword=nanofit+2&pv88=2&pv69=367&sf=0&FV=ffe0013a&quantity=&ColumnSort=0&page=1&pageSize=25" H 1050 4800 50  0001 C CNN "PurchasingLink"
+	1    1050 5600
+	-1   0    0    1   
+$EndComp
+$Comp
+L formula:NanoFit_RA_TH_02 J1
+U 1 1 605ED628
+P 1050 4750
+F 0 "J1" H 942 4363 60  0000 C CNN
+F 1 "NanoFit_RA_TH_02" H 942 4469 60  0000 C CNN
+F 2 "footprints:NanoFit_Molex_1x02x2.50mm_Angled_OEM" H 1050 4150 60  0001 C CNN
+F 3 "https://www.molex.com/pdm_docs/sd/1053131102_sd.pdf" H 1050 4300 60  0001 C CNN
+F 4 "DK" H 1050 5300 50  0001 C CNN "MFN"
+F 5 "WM14972-ND" H 1050 5200 50  0001 C CNN "MPN"
+F 6 "https://www.digikey.com/products/en/connectors-interconnects/rectangular-connectors-headers-male-pins/314?k=nanofit+2&k=&pkeyword=nanofit+2&pv88=2&pv69=367&sf=0&FV=ffe0013a&quantity=&ColumnSort=0&page=1&pageSize=25" H 1050 3950 50  0001 C CNN "PurchasingLink"
+	1    1050 4750
+	-1   0    0    1   
+$EndComp
+$Comp
+L formula:NanoFit_RA_TH_02 J5
+U 1 1 605F0515
+P 2800 4800
+F 0 "J5" H 2692 4413 60  0000 C CNN
+F 1 "NanoFit_RA_TH_02" H 2692 4519 60  0000 C CNN
+F 2 "footprints:NanoFit_Molex_1x02x2.50mm_Angled_OEM" H 2800 4200 60  0001 C CNN
+F 3 "https://www.molex.com/pdm_docs/sd/1053131102_sd.pdf" H 2800 4350 60  0001 C CNN
+F 4 "DK" H 2800 5350 50  0001 C CNN "MFN"
+F 5 "WM14972-ND" H 2800 5250 50  0001 C CNN "MPN"
+F 6 "https://www.digikey.com/products/en/connectors-interconnects/rectangular-connectors-headers-male-pins/314?k=nanofit+2&k=&pkeyword=nanofit+2&pv88=2&pv69=367&sf=0&FV=ffe0013a&quantity=&ColumnSort=0&page=1&pageSize=25" H 2800 4000 50  0001 C CNN "PurchasingLink"
+	1    2800 4800
+	-1   0    0    1   
+$EndComp
+Text Notes 2500 4300 0    50   ~ 0
+Switch
+Wire Wire Line
+	5750 5950 5750 5850
+Connection ~ 5750 5850
 $EndSCHEMATC
