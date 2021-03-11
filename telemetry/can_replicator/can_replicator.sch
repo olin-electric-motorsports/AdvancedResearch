@@ -571,7 +571,6 @@ NoConn ~ 3950 3950
 NoConn ~ 3950 3350
 NoConn ~ 3950 3250
 NoConn ~ 3950 3050
-NoConn ~ 3950 2950
 NoConn ~ 3950 2850
 NoConn ~ 3950 2750
 NoConn ~ 3950 2450
@@ -591,7 +590,7 @@ F 6 "https://www.digikey.com/product-detail/en/atmel/ATMEGA16M1-AU/ATMEGA16M1-AU
 	1    2850 3150
 	1    0    0    -1  
 $EndComp
-Text Label 3950 1650 0    50   ~ 0
+Text Label 3950 2950 0    50   ~ 0
 DBG1
 Text Label 3950 1750 0    50   ~ 0
 DBG2
@@ -1301,4 +1300,5 @@ $EndComp
 Connection ~ 1300 7550
 Wire Wire Line
 	1300 7550 1500 7550
+NoConn ~ 3950 1650
 $EndSCHEMATC
