@@ -464,8 +464,6 @@ F 3 "" H 1500 7550 50  0001 C CNN
 	1    1500 7550
 	1    0    0    -1  
 $EndComp
-Wire Wire Line
-	1200 7550 1300 7550
 $Comp
 L formula:USB_MicroB U3
 U 1 1 5FA94609
@@ -602,8 +600,6 @@ DBG3
 NoConn ~ 1500 7350
 NoConn ~ 3950 1950
 Wire Wire Line
-	1500 6950 1550 6950
-Wire Wire Line
 	4450 6250 4800 6250
 Wire Wire Line
 	4800 6250 4800 6500
@@ -616,37 +612,6 @@ Wire Notes Line
 	5400 4100 5400 3250
 Wire Notes Line
 	5400 3250 7650 3250
-$Comp
-L formula:TP TP2
-U 1 1 5FCAB95B
-P 1550 6750
-F 0 "TP2" H 1628 6688 50  0000 L CNN
-F 1 "TP" H 1628 6597 50  0000 L CNN
-F 2 "footprints:tp_1.6mm" H 1450 6650 50  0001 C CNN
-F 3 "http://www.keyelco.com/product-pdf.cfm?p=1314" H 1550 6750 50  0001 C CNN
-F 4 "DK" H 1650 6850 50  0001 C CNN "MFN"
-F 5 "36-5006-ND" H 1750 6950 50  0001 C CNN "MPN"
-F 6 "https://www.digikey.com/product-detail/en/keystone-electronics/5006/36-5006-ND/255330" H 1850 7050 50  0001 C CNN "PurchasingLink"
-	1    1550 6750
-	1    0    0    -1  
-$EndComp
-$Comp
-L formula:TP TP1
-U 1 1 5FCB51EF
-P 1300 7750
-F 0 "TP1" H 1350 7800 50  0000 R CNN
-F 1 "TP" H 1350 7900 50  0000 R CNN
-F 2 "footprints:tp_1.6mm" H 1200 7650 50  0001 C CNN
-F 3 "http://www.keyelco.com/product-pdf.cfm?p=1314" H 1300 7750 50  0001 C CNN
-F 4 "DK" H 1400 7850 50  0001 C CNN "MFN"
-F 5 "36-5006-ND" H 1500 7950 50  0001 C CNN "MPN"
-F 6 "https://www.digikey.com/product-detail/en/keystone-electronics/5006/36-5006-ND/255330" H 1600 8050 50  0001 C CNN "PurchasingLink"
-	1    1300 7750
-	-1   0    0    1   
-$EndComp
-Connection ~ 1300 7550
-Wire Wire Line
-	1300 7550 1500 7550
 $Comp
 L formula:D_Zener_5.6V D8
 U 1 1 5FD3EFD3
@@ -696,9 +661,6 @@ F 6 "https://www.digikey.com/product-detail/en/bel-fuse-inc/0ZCH0050FF2G/507-178
 	1    2050 6950
 	0    1    1    0   
 $EndComp
-Wire Wire Line
-	1900 6950 1550 6950
-Connection ~ 1550 6950
 Wire Wire Line
 	2200 6950 2500 6950
 Wire Wire Line
@@ -1307,4 +1269,36 @@ Wire Notes Line
 	5400 1000 9050 1000
 Text Notes 6850 1800 0    50   ~ 0
 JUMPERS FOR TERMINATING RESISTORS
+$Comp
+L formula:Test_Point_SMD TP2
+U 1 1 6052D1D7
+P 1600 6900
+F 0 "TP2" H 1678 6988 50  0000 L CNN
+F 1 "Test_Point_SMD" H 1450 7150 50  0000 L CNN
+F 2 "footprints:Test_Point_SMD" H 1600 6750 50  0001 C CNN
+F 3 "" H 1600 6900 50  0001 C CNN
+	1    1600 6900
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	1500 6950 1600 6950
+Connection ~ 1600 6950
+Wire Wire Line
+	1600 6950 1900 6950
+Wire Wire Line
+	1200 7550 1300 7550
+$Comp
+L formula:Test_Point_SMD TP1
+U 1 1 6052ED64
+P 1300 7600
+F 0 "TP1" H 1350 7800 50  0000 R CNN
+F 1 "Test_Point_SMD" H 1350 7900 50  0000 R CNN
+F 2 "footprints:Test_Point_SMD" H 1300 7450 50  0001 C CNN
+F 3 "" H 1300 7600 50  0001 C CNN
+	1    1300 7600
+	-1   0    0    1   
+$EndComp
+Connection ~ 1300 7550
+Wire Wire Line
+	1300 7550 1500 7550
 $EndSCHEMATC
