@@ -28,6 +28,27 @@ X P3 3 -250 -100 150 R 50 50 1 1 P
 ENDDRAW
 ENDDEF
 #
+# formula_CONN_01x02
+#
+DEF formula_CONN_01x02 J 0 40 Y N 1 F N
+F0 "J" 0 100 50 H V C CNN
+F1 "formula_CONN_01x02" 0 -200 50 H V C CNN
+F2 "Connector_PinHeader_2.54mm:PinHeader_1x02_P2.54mm_Vertical" -100 0 50 H I C CNN
+F3 "https://katalog.we-online.de/em/datasheet/6130xx11121.pdf" 0 100 50 H I C CNN
+F4 "DK" 100 200 50 H I C CNN "MFN"
+F5 "732-5315-ND" 200 300 50 H I C CNN "MPN"
+$FPLIST
+ Connector*:*_1x??_*
+$ENDFPLIST
+DRAW
+S -50 -95 0 -105 1 1 6 N
+S -50 5 0 -5 1 1 6 N
+S -50 50 50 -150 1 1 10 f
+X Pin_1 1 -200 0 150 R 50 50 1 1 P
+X Pin_2 2 -200 -100 150 R 50 50 1 1 P
+ENDDRAW
+ENDDEF
+#
 # formula_C_0.1uF
 #
 DEF formula_C_0.1uF C 0 10 N Y 1 F N

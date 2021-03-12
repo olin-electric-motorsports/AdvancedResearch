@@ -776,26 +776,11 @@ Wire Wire Line
 Text Notes 12500 6000 0    89   ~ 0
 TEST POINTS
 Wire Wire Line
-	11500 6200 11500 6300
-Text Label 11500 6200 0    50   ~ 0
-12V_Protected
+	11450 6200 11450 6300
+Text Label 11450 6200 0    50   ~ 0
+12V
 Text Label 7950 3400 2    50   ~ 0
 RXLIN
-Wire Wire Line
-	13550 7500 13550 7650
-$Comp
-L power:PWR_FLAG #FLG0101
-U 1 1 603FB834
-P 13550 7500
-F 0 "#FLG0101" H 13550 7575 50  0001 C CNN
-F 1 "PWR_FLAG" H 13550 7674 50  0000 C CNN
-F 2 "" H 13550 7500 50  0001 C CNN
-F 3 "~" H 13550 7500 50  0001 C CNN
-	1    13550 7500
-	1    0    0    -1  
-$EndComp
-Text Label 13550 7650 0    50   ~ 0
-12V_Protected
 Text Label 11400 2600 0    50   ~ 0
 VIN
 $Comp
@@ -804,7 +789,7 @@ U 1 1 5FCEFE21
 P 8500 3550
 F 0 "U3" H 8500 3965 50  0000 C CNN
 F 1 "TLIN1021DRQ1" H 8500 3874 50  0000 C CNN
-F 2 "SOIC127P600X175-8N" H 9300 3300 50  0001 L CNN
+F 2 "footprints:SOIC127P600X175-8N" H 9300 3300 50  0001 L CNN
 F 3 "https://www.ti.com/lit/gpn/TLIN1021-Q1" H 7900 2650 50  0001 L CNN
 F 4 "LIN Transceivers Automotive local interconnect network (LIN) transceiver with WAKE and INH 8-SOIC -40 to 125" H 9300 3700 50  0001 L CNN "Description"
 F 5 "1.75" H 9300 3600 50  0001 L CNN "Height"
@@ -939,44 +924,39 @@ Wire Wire Line
 Connection ~ 7100 3500
 Wire Wire Line
 	7100 3500 7950 3500
-Text Label 5400 1500 0    50   ~ 0
+Text Label 4200 1500 0    50   ~ 0
 5V
 $Comp
 L power:GND #PWR020
 U 1 1 6040DE06
-P 4700 1300
-F 0 "#PWR020" H 4700 1050 50  0001 C CNN
-F 1 "GND" H 4705 1127 50  0000 C CNN
-F 2 "" H 4700 1300 50  0001 C CNN
-F 3 "" H 4700 1300 50  0001 C CNN
-	1    4700 1300
+P 5400 1250
+F 0 "#PWR020" H 5400 1000 50  0001 C CNN
+F 1 "GND" H 5405 1077 50  0000 C CNN
+F 2 "" H 5400 1250 50  0001 C CNN
+F 3 "" H 5400 1250 50  0001 C CNN
+	1    5400 1250
 	1    0    0    -1  
 $EndComp
 $Comp
 L formula:R_1K R5
 U 1 1 60403698
-P 5400 1250
-F 0 "R5" H 5470 1296 50  0000 L CNN
-F 1 "R_1K" H 5470 1205 50  0000 L CNN
-F 2 "footprints:R_0805_OEM" H 5330 1250 50  0001 C CNN
-F 3 "https://www.seielect.com/Catalog/SEI-rncp.pdf" H 5480 1250 50  0001 C CNN
-F 4 "DK" H 5400 1250 60  0001 C CNN "MFN"
-F 5 "RNCP0805FTD1K00CT-ND" H 5400 1250 60  0001 C CNN "MPN"
-F 6 "https://www.digikey.com/products/en?keywords=RNCP0805FTD1K00CT-ND" H 5880 1650 60  0001 C CNN "PurchasingLink"
-	1    5400 1250
+P 4200 1250
+F 0 "R5" H 4270 1296 50  0000 L CNN
+F 1 "R_1K" H 4270 1205 50  0000 L CNN
+F 2 "footprints:R_0805_OEM" H 4130 1250 50  0001 C CNN
+F 3 "https://www.seielect.com/Catalog/SEI-rncp.pdf" H 4280 1250 50  0001 C CNN
+F 4 "DK" H 4200 1250 60  0001 C CNN "MFN"
+F 5 "RNCP0805FTD1K00CT-ND" H 4200 1250 60  0001 C CNN "MPN"
+F 6 "https://www.digikey.com/products/en?keywords=RNCP0805FTD1K00CT-ND" H 4680 1650 60  0001 C CNN "PurchasingLink"
+	1    4200 1250
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	5400 1500 5400 1400
+	4200 1500 4200 1400
 Wire Wire Line
-	5400 1100 5400 1000
+	4200 1100 4200 1000
 Wire Wire Line
 	5400 1000 5250 1000
-Wire Wire Line
-	4700 1000 4700 1300
-Connection ~ 4700 1000
-Wire Wire Line
-	4850 1000 4700 1000
 $Comp
 L formula:SW_Push_SPST_NO SW1
 U 1 1 603700F1
@@ -992,7 +972,7 @@ F 6 "https://www.digikey.com/product-detail/en/omron-electronics-inc-emc-div/B3U
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	3650 1000 4700 1000
+	3650 1000 4200 1000
 Text Label 3950 3050 0    50   ~ 0
 MOSI
 Text Label 4200 3350 0    50   ~ 0
@@ -1001,30 +981,10 @@ Text Label 8750 5250 0    50   ~ 0
 RIGHT_DEBUG
 Text Label 8150 5250 0    50   ~ 0
 LEFT_DEBUG
-$Comp
-L formula:CONN_01X03 J4
-U 1 1 604EFE2E
-P 5750 6850
-F 0 "J4" H 5571 7028 50  0000 L CNN
-F 1 "CONN_01X03" H 5662 7028 50  0000 L CNN
-F 2 "Pin_Headers:Pin_Header_Straight_1x03_Pitch2.54mm" H 5750 5650 50  0001 C CNN
-F 3 "https://www.mouser.com/datasheet/2/181/M20-999-1218971.pdf" H 5750 5650 50  0001 C CNN
-F 4 "Mouser" H 5750 6850 60  0001 C CNN "MFN"
-F 5 "855-M20-9990346" H 5750 6850 60  0001 C CNN "MPN"
-F 6 "https://www.mouser.com/ProductDetail/Harwin/M20-9990346?qs=sGAEpiMZZMs%252bGHln7q6pmzlZUuX%2f53qj1ROyRKct5o4%3d" H 6150 7450 60  0001 C CNN "PurchasingLink"
-	1    5750 6850
-	-1   0    0    1   
-$EndComp
 Text Notes 2550 6400 0    79   ~ 0
 PINS
 Text Notes 5500 6450 0    79   ~ 0
 LIN POWER
-Text Label 6000 6850 0    50   ~ 0
-VIN
-Text Label 6000 6750 0    50   ~ 0
-12V
-Text Label 6000 6950 0    50   ~ 0
-5V
 Wire Wire Line
 	3650 3200 3950 3200
 Wire Wire Line
@@ -1068,12 +1028,12 @@ $EndComp
 $Comp
 L formula:Test_Point_SMD TP1
 U 1 1 603FFDF1
-P 11500 6350
-F 0 "TP1" H 11412 6346 50  0000 R CNN
-F 1 "Test_Point_SMD" H 11412 6437 50  0000 R CNN
-F 2 "footprints:Test_Point_SMD" H 11500 6200 50  0001 C CNN
-F 3 "" H 11500 6350 50  0001 C CNN
-	1    11500 6350
+P 11450 6350
+F 0 "TP1" H 11362 6346 50  0000 R CNN
+F 1 "Test_Point_SMD" H 11362 6437 50  0000 R CNN
+F 2 "footprints:Test_Point_SMD" H 11450 6200 50  0001 C CNN
+F 3 "" H 11450 6350 50  0001 C CNN
+	1    11450 6350
 	-1   0    0    1   
 $EndComp
 $Comp
@@ -1133,4 +1093,99 @@ F 3 "" H 15550 6350 50  0001 C CNN
 $EndComp
 Text Label 3650 1500 0    50   ~ 0
 ENABLE
+Text Label 2050 6600 2    50   ~ 0
+VCC
+Text Label 2050 6700 2    50   ~ 0
+GND
+Text Label 3100 6600 2    50   ~ 0
+VCC
+Text Label 3100 6700 2    50   ~ 0
+GND
+NoConn ~ 3100 6800
+NoConn ~ 3100 6900
+NoConn ~ 3100 7000
+NoConn ~ 3100 7100
+NoConn ~ 3100 7200
+NoConn ~ 3100 7300
+NoConn ~ 3100 7400
+NoConn ~ 3100 7500
+NoConn ~ 3100 7600
+NoConn ~ 2050 7600
+NoConn ~ 2050 7500
+NoConn ~ 2050 7400
+NoConn ~ 2050 7300
+NoConn ~ 2050 7200
+NoConn ~ 2050 7100
+NoConn ~ 2050 7000
+NoConn ~ 2050 6900
+NoConn ~ 2050 6800
+Connection ~ 4200 1000
+Wire Wire Line
+	5400 1000 5400 1250
+Wire Wire Line
+	4200 1000 4850 1000
+Text Label 6000 6850 0    50   ~ 0
+VIN
+Text Label 6000 6750 0    50   ~ 0
+12V
+Text Label 6000 6950 0    50   ~ 0
+5V
+$Comp
+L formula:CONN_01X03 J?
+U 1 1 60515ECB
+P 15250 2200
+F 0 "J?" H 14850 2450 50  0000 L CNN
+F 1 "CONN_01X03" H 14950 2450 50  0000 L CNN
+F 2 "footprints:PinHeader_1x03_P2.54mm_Vertical" H 15250 1000 50  0001 C CNN
+F 3 "https://www.mouser.com/datasheet/2/181/M20-999-1218971.pdf" H 15250 1000 50  0001 C CNN
+F 4 "Mouser" H 15250 2200 60  0001 C CNN "MFN"
+F 5 "855-M20-9990346" H 15250 2200 60  0001 C CNN "MPN"
+F 6 "https://www.mouser.com/ProductDetail/Harwin/M20-9990346?qs=sGAEpiMZZMs%252bGHln7q6pmzlZUuX%2f53qj1ROyRKct5o4%3d" H 15650 2800 60  0001 C CNN "PurchasingLink"
+	1    15250 2200
+	-1   0    0    1   
+$EndComp
+Text Label 15500 2100 0    50   ~ 0
+CAN_+
+Text Label 15500 2200 0    50   ~ 0
+CAN_-
+$Comp
+L power:GND #PWR?
+U 1 1 60527C42
+P 15500 2300
+F 0 "#PWR?" H 15500 2050 50  0001 C CNN
+F 1 "GND" V 15505 2172 50  0000 R CNN
+F 2 "" H 15500 2300 50  0001 C CNN
+F 3 "" H 15500 2300 50  0001 C CNN
+	1    15500 2300
+	0    -1   -1   0   
+$EndComp
+Text Notes 15200 1850 0    79   ~ 0
+CAN PINS
+$Comp
+L formula:CONN_01X03 J4
+U 1 1 604EFE2E
+P 5750 6850
+F 0 "J4" H 5500 7050 50  0000 L CNN
+F 1 "CONN_01X03" H 5650 7050 50  0000 L CNN
+F 2 "footprints:PinHeader_1x03_P2.54mm_Vertical" H 5750 5650 50  0001 C CNN
+F 3 "https://www.mouser.com/datasheet/2/181/M20-999-1218971.pdf" H 5750 5650 50  0001 C CNN
+F 4 "Mouser" H 5750 6850 60  0001 C CNN "MFN"
+F 5 "855-M20-9990346" H 5750 6850 60  0001 C CNN "MPN"
+F 6 "https://www.mouser.com/ProductDetail/Harwin/M20-9990346?qs=sGAEpiMZZMs%252bGHln7q6pmzlZUuX%2f53qj1ROyRKct5o4%3d" H 6150 7450 60  0001 C CNN "PurchasingLink"
+	1    5750 6850
+	-1   0    0    1   
+$EndComp
+$Comp
+L formula:CONN_01x02 J?
+U 1 1 60553656
+P 5800 7800
+F 0 "J?" H 5718 7475 50  0000 C CNN
+F 1 "CONN_01x02" H 5718 7566 50  0000 C CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_1x02_P2.54mm_Vertical" H 5700 7800 50  0001 C CNN
+F 3 "https://katalog.we-online.de/em/datasheet/6130xx11121.pdf" H 5800 7900 50  0001 C CNN
+F 4 "DK" H 5900 8000 50  0001 C CNN "MFN"
+F 5 "732-5315-ND" H 6000 8100 50  0001 C CNN "MPN"
+	1    5800 7800
+	-1   0    0    1   
+$EndComp
 $EndSCHEMATC
