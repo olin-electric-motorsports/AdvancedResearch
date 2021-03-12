@@ -170,7 +170,7 @@ F 3 "" H 5050 7050 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 Text Label 4900 6850 0    50   ~ 0
-CS
+CS_SD
 $Comp
 L formula:C_0.1uF C9
 U 1 1 5FA9BD05
@@ -222,13 +222,11 @@ $EndComp
 Wire Wire Line
 	3500 6450 3500 6350
 Text Label 4000 6850 2    50   ~ 0
-CS_3.3V
+CS_3V3
 Text Label 4000 6750 2    50   ~ 0
-SCK_3.3V
+SCK_3V3
 Text Label 4000 6650 2    50   ~ 0
-MOSI_3.3V
-Text Label 4000 6550 2    50   ~ 0
-MISO_3.3V
+MOSI_3V3
 $Comp
 L formula:C_0.1uF C8
 U 1 1 5FA99092
@@ -272,19 +270,6 @@ Wire Wire Line
 	9050 3800 9550 3800
 Connection ~ 9050 3800
 Connection ~ 8500 3800
-Wire Wire Line
-	7400 4650 7600 4650
-$Comp
-L power:+3.3V #PWR035
-U 1 1 5FB944A8
-P 7400 4650
-F 0 "#PWR035" H 7400 4500 50  0001 C CNN
-F 1 "+3.3V" H 7415 4823 50  0000 C CNN
-F 2 "" H 7400 4650 50  0001 C CNN
-F 3 "" H 7400 4650 50  0001 C CNN
-	1    7400 4650
-	1    0    0    -1  
-$EndComp
 Wire Wire Line
 	8200 3800 8500 3800
 Wire Wire Line
@@ -354,19 +339,8 @@ F 3 "" H 8300 5200 50  0001 C CNN
 	1    8300 5200
 	1    0    0    -1  
 $EndComp
-$Comp
-L power:+3.3V #PWR037
-U 1 1 5FB76E08
-P 8200 3800
-F 0 "#PWR037" H 8200 3650 50  0001 C CNN
-F 1 "+3.3V" H 8215 3973 50  0000 C CNN
-F 2 "" H 8200 3800 50  0001 C CNN
-F 3 "" H 8200 3800 50  0001 C CNN
-	1    8200 3800
-	1    0    0    -1  
-$EndComp
 Text Label 7600 4350 2    50   ~ 0
-CS_3.3V
+CS_3V3
 Wire Wire Line
 	11400 2400 11450 2400
 Connection ~ 11400 2400
@@ -540,11 +514,11 @@ $EndComp
 Wire Wire Line
 	15350 8450 15350 8600
 Text Label 7600 4050 2    50   ~ 0
-MISO_3.3V
+MISO_3V3
 Text Label 7600 4150 2    50   ~ 0
-MOSI_3.3V
+MOSI_3V3
 Text Label 7600 4250 2    50   ~ 0
-SCK_3.3V
+SCK_3V3
 Text Label 4900 6550 0    50   ~ 0
 MISO_SD
 Text Label 4900 6650 0    50   ~ 0
@@ -690,17 +664,6 @@ F 3 "~" H 15800 8600 50  0001 C CNN
 $EndComp
 Wire Wire Line
 	15800 8450 15800 8600
-$Comp
-L power:+3.3V #PWR0102
-U 1 1 602DE8A6
-P 15800 8450
-F 0 "#PWR0102" H 15800 8300 50  0001 C CNN
-F 1 "+3.3V" H 15815 8623 50  0000 C CNN
-F 2 "" H 15800 8450 50  0001 C CNN
-F 3 "" H 15800 8450 50  0001 C CNN
-	1    15800 8450
-	1    0    0    -1  
-$EndComp
 Wire Wire Line
 	1550 1500 1850 1500
 Connection ~ 1550 1500
@@ -790,22 +753,20 @@ NoConn ~ 4050 1700
 NoConn ~ 4050 2900
 NoConn ~ 4050 2800
 NoConn ~ 4050 2000
-NoConn ~ 4050 1600
-NoConn ~ 4050 1500
 NoConn ~ 4050 2500
 NoConn ~ 4050 2400
-Text Label 4050 3000 0    50   ~ 0
+Text Label 4050 1600 0    50   ~ 0
 P_LED_3
 Text Label 4050 1800 0    50   ~ 0
 P_LED_2
-Text Label 4050 1900 0    50   ~ 0
+Text Label 4050 1500 0    50   ~ 0
 P_LED_1
 Text Label 4050 2200 0    50   ~ 0
 SD_DETECT
 Text Label 4050 2100 0    50   ~ 0
 SD_PROTECT
-Text Label 4050 3800 0    50   ~ 0
-CS
+Text Label 5550 4700 0    50   ~ 0
+CS_SD
 Wire Wire Line
 	4700 4000 4850 4000
 Wire Wire Line
@@ -1106,7 +1067,6 @@ Wire Notes Line
 	12050 1000 9450 1000
 Text Notes 6400 1400 0    89   ~ 0
 DEBUGGING LEDS & TEST POINTS
-Connection ~ 8200 3800
 Connection ~ 7400 4850
 Wire Wire Line
 	7600 4850 7400 4850
@@ -1125,11 +1085,7 @@ F 6 "https://www.digikey.com/product-detail/en/molex-llc/5009980900/WM24032CT-ND
 	1    0    0    -1  
 $EndComp
 Wire Notes Line
-	7700 7800 7700 10350
-Wire Notes Line
 	1000 7800 1000 10350
-Wire Notes Line
-	7700 7800 1000 7800
 Wire Notes Line
 	1000 10350 7700 10350
 Text Notes 3100 8200 0    89   ~ 0
@@ -1912,4 +1868,77 @@ Wire Wire Line
 Wire Wire Line
 	11400 4200 11400 4100
 Connection ~ 11400 4200
+$Comp
+L formula:R_10K R12
+U 1 1 6061ED8A
+P 5400 4700
+F 0 "R12" H 5450 4700 50  0000 L CNN
+F 1 "R_10K" H 5450 4600 50  0000 L CNN
+F 2 "footprints:R_0805_OEM" H 5330 4700 50  0001 C CNN
+F 3 "" H 5480 4700 50  0001 C CNN
+F 4 "DK" H 5400 4700 60  0001 C CNN "MFN"
+F 5 "CRS0805-FX-1002ELFCT-ND" H 5400 4700 60  0001 C CNN "MPN"
+F 6 "https://www.digikey.com/products/en?keywords=CRS0805-FX-1002ELFCT-ND" H 5880 5100 60  0001 C CNN "PurchasingLink"
+	1    5400 4700
+	0    -1   -1   0   
+$EndComp
+$Comp
+L power:+5V #PWR021
+U 1 1 606B653B
+P 5250 4550
+F 0 "#PWR021" H 5250 4400 50  0001 C CNN
+F 1 "+5V" H 5250 4700 50  0000 C CNN
+F 2 "" H 5250 4550 50  0001 C CNN
+F 3 "" H 5250 4550 50  0001 C CNN
+	1    5250 4550
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5250 4700 5250 4550
+$Comp
+L power:+3V3 #PWR0102
+U 1 1 60542B3E
+P 8200 3800
+F 0 "#PWR0102" H 8200 3650 50  0001 C CNN
+F 1 "+3V3" H 8215 3973 50  0000 C CNN
+F 2 "" H 8200 3800 50  0001 C CNN
+F 3 "" H 8200 3800 50  0001 C CNN
+	1    8200 3800
+	1    0    0    -1  
+$EndComp
+Connection ~ 8200 3800
+Text Label 4000 6550 2    50   ~ 0
+MISO_3V3
+$Comp
+L power:+3V3 #PWR0114
+U 1 1 60557034
+P 7400 4650
+F 0 "#PWR0114" H 7400 4500 50  0001 C CNN
+F 1 "+3V3" H 7415 4823 50  0000 C CNN
+F 2 "" H 7400 4650 50  0001 C CNN
+F 3 "" H 7400 4650 50  0001 C CNN
+	1    7400 4650
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	7600 4650 7400 4650
+Wire Notes Line
+	7700 7800 1000 7800
+Wire Notes Line
+	7700 7800 7700 10350
+$Comp
+L power:+3V3 #PWR0115
+U 1 1 6058846A
+P 15800 8450
+F 0 "#PWR0115" H 15800 8300 50  0001 C CNN
+F 1 "+3V3" H 15815 8623 50  0000 C CNN
+F 2 "" H 15800 8450 50  0001 C CNN
+F 3 "" H 15800 8450 50  0001 C CNN
+	1    15800 8450
+	1    0    0    -1  
+$EndComp
+Text Label 4050 3800 0    50   ~ 0
+CS
+NoConn ~ 4050 1900
+NoConn ~ 4050 3000
 $EndSCHEMATC
