@@ -462,52 +462,44 @@ $EndComp
 $Comp
 L power:GND #PWR03
 U 1 1 5FD43E4E
-P 1850 3450
-F 0 "#PWR03" H 1850 3200 50  0001 C CNN
-F 1 "GND" H 1855 3277 50  0000 C CNN
-F 2 "" H 1850 3450 50  0001 C CNN
-F 3 "" H 1850 3450 50  0001 C CNN
-	1    1850 3450
+P 1850 3500
+F 0 "#PWR03" H 1850 3250 50  0001 C CNN
+F 1 "GND" H 1855 3327 50  0000 C CNN
+F 2 "" H 1850 3500 50  0001 C CNN
+F 3 "" H 1850 3500 50  0001 C CNN
+	1    1850 3500
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
 	1850 3450 1850 3350
-Connection ~ 1850 3450
 Connection ~ 1850 3350
 Wire Wire Line
 	1850 3350 1850 3250
 $Comp
 L formula:C_10uF C1
 U 1 1 5FD453CD
-P 2050 3350
-F 0 "C1" H 2165 3446 50  0000 L CNN
-F 1 "C_10uF" H 2165 3355 50  0000 L CNN
-F 2 "footprints:C_0805_OEM" H 2088 3950 50  0001 C CNN
-F 3 "http://www.samsungsem.com/kr/support/product-search/mlcc/__icsFiles/afieldfile/2018/06/20/CL21A106KPFNNNE.pdf" H 2075 4200 50  0001 C CNN
-F 4 "DK" H 2050 3400 60  0001 C CNN "MFN"
-F 5 "1276-1052-1-ND" H 2050 4100 60  0001 C CNN "MPN"
-F 6 "https://www.digikey.com/product-detail/en/samsung-electro-mechanics/CL21A106KPFNNNE/1276-1052-1-ND/3889138" H 2475 3850 60  0001 C CNN "PurchasingLink"
-	1    2050 3350
+P 2150 3400
+F 0 "C1" H 2250 3450 50  0000 L CNN
+F 1 "C_10uF" H 2200 3350 50  0000 L CNN
+F 2 "footprints:C_0805_OEM" H 2188 4000 50  0001 C CNN
+F 3 "http://www.samsungsem.com/kr/support/product-search/mlcc/__icsFiles/afieldfile/2018/06/20/CL21A106KPFNNNE.pdf" H 2175 4250 50  0001 C CNN
+F 4 "DK" H 2150 3450 60  0001 C CNN "MFN"
+F 5 "1276-1052-1-ND" H 2150 4150 60  0001 C CNN "MPN"
+F 6 "https://www.digikey.com/product-detail/en/samsung-electro-mechanics/CL21A106KPFNNNE/1276-1052-1-ND/3889138" H 2575 3900 60  0001 C CNN "PurchasingLink"
+	1    2150 3400
 	1    0    0    -1  
 $EndComp
 $Comp
 L power:+5V #PWR05
 U 1 1 5FD4634B
-P 2050 2950
-F 0 "#PWR05" H 2050 2800 50  0001 C CNN
-F 1 "+5V" H 2065 3123 50  0000 C CNN
-F 2 "" H 2050 2950 50  0001 C CNN
-F 3 "" H 2050 2950 50  0001 C CNN
-	1    2050 2950
+P 2150 2950
+F 0 "#PWR05" H 2150 2800 50  0001 C CNN
+F 1 "+5V" H 2165 3123 50  0000 C CNN
+F 2 "" H 2150 2950 50  0001 C CNN
+F 3 "" H 2150 2950 50  0001 C CNN
+	1    2150 2950
 	1    0    0    -1  
 $EndComp
-Wire Wire Line
-	1850 2950 2050 2950
-Wire Wire Line
-	2050 3150 2050 2950
-Connection ~ 2050 2950
-Wire Wire Line
-	2050 3450 1850 3450
 $Comp
 L formula:R_75k R1
 U 1 1 5FD493A3
@@ -553,8 +545,6 @@ F 3 "" H 2550 2650 50  0001 C CNN
 	1    2550 2650
 	1    0    0    -1  
 $EndComp
-Wire Wire Line
-	2550 2950 2550 3150
 $Comp
 L formula:R_43k R3
 U 1 1 5FD50E99
@@ -670,94 +660,43 @@ $EndComp
 $Comp
 L formula:TP TP4
 U 1 1 5FD6BF15
-P 5450 3100
-F 0 "TP4" H 5373 2946 50  0000 R CNN
-F 1 "TP" H 5373 3037 50  0000 R CNN
-F 2 "footprints:tp_1.6mm" H 5350 3000 50  0001 C CNN
-F 3 "http://www.keyelco.com/product-pdf.cfm?p=1314" H 5450 3100 50  0001 C CNN
-F 4 "DK" H 5550 3200 50  0001 C CNN "MFN"
-F 5 "36-5006-ND" H 5650 3300 50  0001 C CNN "MPN"
-F 6 "https://www.digikey.com/product-detail/en/keystone-electronics/5006/36-5006-ND/255330" H 5750 3400 50  0001 C CNN "PurchasingLink"
-	1    5450 3100
-	1    0    0    1   
+P 5150 2700
+F 0 "TP4" H 5073 2546 50  0000 R CNN
+F 1 "TP" H 5073 2637 50  0000 R CNN
+F 2 "footprints:tp_1.6mm" H 5050 2600 50  0001 C CNN
+F 3 "http://www.keyelco.com/product-pdf.cfm?p=1314" H 5150 2700 50  0001 C CNN
+F 4 "DK" H 5250 2800 50  0001 C CNN "MFN"
+F 5 "36-5006-ND" H 5350 2900 50  0001 C CNN "MPN"
+F 6 "https://www.digikey.com/product-detail/en/keystone-electronics/5006/36-5006-ND/255330" H 5450 3000 50  0001 C CNN "PurchasingLink"
+	1    5150 2700
+	-1   0    0    -1  
 $EndComp
 $Comp
 L formula:R_200K R9
 U 1 1 5FD705A4
-P 5100 2900
-F 0 "R9" V 4893 2900 50  0000 C CNN
-F 1 "R_200K" V 4984 2900 50  0000 C CNN
-F 2 "footprints:R_0805_OEM" H 5030 2900 50  0001 C CNN
-F 3 "" H 5180 2900 50  0001 C CNN
-F 4 "DK" H 5100 2900 60  0001 C CNN "MFN"
-F 5 "P300KDACT-ND" H 5100 2900 60  0001 C CNN "MPN"
-	1    5100 2900
-	0    1    1    0   
+P 4850 3050
+F 0 "R9" V 4643 3050 50  0000 C CNN
+F 1 "R_200K" V 4734 3050 50  0000 C CNN
+F 2 "footprints:R_0805_OEM" H 4780 3050 50  0001 C CNN
+F 3 "" H 4930 3050 50  0001 C CNN
+F 4 "DK" H 4850 3050 60  0001 C CNN "MFN"
+F 5 "P300KDACT-ND" H 4850 3050 60  0001 C CNN "MPN"
+	1    4850 3050
+	1    0    0    -1  
 $EndComp
-Wire Wire Line
-	5650 2900 5450 2900
-Connection ~ 5450 2900
-Wire Wire Line
-	5450 2900 5250 2900
 $Comp
 L formula:VBATT #PWR021
 U 1 1 5FD731B2
-P 4800 2900
-F 0 "#PWR021" H 4800 2750 50  0001 C CNN
-F 1 "VBATT" H 4815 3073 50  0000 C CNN
-F 2 "" H 4800 2900 50  0001 C CNN
-F 3 "" H 4800 2900 50  0001 C CNN
-	1    4800 2900
+P 4500 3350
+F 0 "#PWR021" H 4500 3200 50  0001 C CNN
+F 1 "VBATT" H 4515 3523 50  0000 C CNN
+F 2 "" H 4500 3350 50  0001 C CNN
+F 3 "" H 4500 3350 50  0001 C CNN
+	1    4500 3350
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	4950 2900 4800 2900
-$Comp
-L formula:R_340K R8
-U 1 1 5FD75B13
-P 4650 3300
-F 0 "R8" H 4720 3346 50  0000 L CNN
-F 1 "R_340K" H 4720 3255 50  0000 L CNN
-F 2 "footprints:R_0805_OEM" H 4580 3300 50  0001 C CNN
-F 3 "" H 4730 3300 50  0001 C CNN
-F 4 "DK" H 4650 3300 60  0001 C CNN "MFN"
-F 5 "P300KDACT-ND" H 4650 3300 60  0001 C CNN "MPN"
-	1    4650 3300
-	1    0    0    -1  
-$EndComp
-$Comp
-L formula:R_1.87M R7
-U 1 1 5FD76C00
-P 4650 2900
-F 0 "R7" H 4580 2854 50  0000 R CNN
-F 1 "R_1.87M" H 4580 2945 50  0000 R CNN
-F 2 "footprints:R_0805_OEM" H 4580 2900 50  0001 C CNN
-F 3 "" H 4730 2900 50  0001 C CNN
-F 4 "DK" H 4650 2900 60  0001 C CNN "MFN"
-F 5 "RMCF0805FT1M82CT-ND" H 4650 2900 60  0001 C CNN "MPN"
-	1    4650 2900
-	1    0    0    1   
-$EndComp
-Wire Wire Line
-	5650 3050 5550 3050
-Wire Wire Line
-	5550 3050 5550 3150
-Wire Wire Line
-	4650 3050 4650 3150
-Connection ~ 4650 3150
-Wire Wire Line
-	4650 3150 5550 3150
-$Comp
-L power:GND #PWR020
-U 1 1 5FD7F149
-P 4650 3450
-F 0 "#PWR020" H 4650 3200 50  0001 C CNN
-F 1 "GND" H 4655 3277 50  0000 C CNN
-F 2 "" H 4650 3450 50  0001 C CNN
-F 3 "" H 4650 3450 50  0001 C CNN
-	1    4650 3450
-	1    0    0    -1  
-$EndComp
+	4850 3200 4850 3350
 Wire Wire Line
 	5650 2800 5350 2800
 Wire Wire Line
@@ -1081,7 +1020,7 @@ $EndComp
 Text Notes 8850 2550 1    50   ~ 0
 Power LED
 Text Notes 9700 3200 2    50   ~ 0
-Low Batery Indicator
+Low Battery Indicator
 $Comp
 L power:GND #PWR029
 U 1 1 5FE017C8
@@ -1108,11 +1047,6 @@ Wire Wire Line
 	6500 3500 6200 3500
 Text Notes 7100 3800 2    50   ~ 0
 connect gndpwr to gnd @ fb pin gnd
-Wire Wire Line
-	2550 3150 2050 3150
-Connection ~ 2550 3150
-Wire Wire Line
-	2050 3150 1850 3150
 Connection ~ 1850 7200
 Connection ~ 7050 3350
 Wire Wire Line
@@ -1347,23 +1281,110 @@ F 6 "https://www.digikey.com/products/en/connectors-interconnects/rectangular-co
 	1    1050 4750
 	-1   0    0    1   
 $EndComp
-$Comp
-L formula:NanoFit_RA_TH_02 J5
-U 1 1 605F0515
-P 2800 4800
-F 0 "J5" H 2692 4413 60  0000 C CNN
-F 1 "NanoFit_RA_TH_02" H 2692 4519 60  0000 C CNN
-F 2 "footprints:NanoFit_Molex_1x02x2.50mm_Angled_OEM" H 2800 4200 60  0001 C CNN
-F 3 "https://www.molex.com/pdm_docs/sd/1053131102_sd.pdf" H 2800 4350 60  0001 C CNN
-F 4 "DK" H 2800 5350 50  0001 C CNN "MFN"
-F 5 "WM14972-ND" H 2800 5250 50  0001 C CNN "MPN"
-F 6 "https://www.digikey.com/products/en/connectors-interconnects/rectangular-connectors-headers-male-pins/314?k=nanofit+2&k=&pkeyword=nanofit+2&pv88=2&pv69=367&sf=0&FV=ffe0013a&quantity=&ColumnSort=0&page=1&pageSize=25" H 2800 4000 50  0001 C CNN "PurchasingLink"
-	1    2800 4800
-	-1   0    0    1   
-$EndComp
-Text Notes 2500 4300 0    50   ~ 0
+Text Notes 5200 3700 0    50   ~ 0
 Switch
 Wire Wire Line
 	5750 5950 5750 5850
 Connection ~ 5750 5850
+Wire Wire Line
+	2550 2950 2550 3150
+Wire Wire Line
+	1850 3150 2550 3150
+Connection ~ 2550 3150
+Wire Wire Line
+	2150 3500 1850 3500
+Wire Wire Line
+	1850 3450 1850 3500
+Connection ~ 1850 3450
+Connection ~ 1850 3500
+Wire Wire Line
+	1850 2950 2150 2950
+Wire Wire Line
+	2150 3200 2150 2950
+Connection ~ 2150 2950
+$Comp
+L formula:R_1.87M R7
+U 1 1 5FD76C00
+P 4250 3200
+F 0 "R7" H 4150 3350 50  0000 R CNN
+F 1 "R_1.87M" H 4200 3250 50  0000 R CNN
+F 2 "footprints:R_0805_OEM" H 4180 3200 50  0001 C CNN
+F 3 "" H 4330 3200 50  0001 C CNN
+F 4 "DK" H 4250 3200 60  0001 C CNN "MFN"
+F 5 "RMCF0805FT1M82CT-ND" H 4250 3200 60  0001 C CNN "MPN"
+	1    4250 3200
+	1    0    0    1   
+$EndComp
+$Comp
+L formula:NanoFit_RA_TH_02 J5
+U 1 1 605F0515
+P 5350 3350
+F 0 "J5" H 5242 2963 60  0000 C CNN
+F 1 "NanoFit_RA_TH_02" H 5350 3050 60  0000 C CNN
+F 2 "footprints:NanoFit_Molex_1x02x2.50mm_Angled_OEM" H 5350 2750 60  0001 C CNN
+F 3 "https://www.molex.com/pdm_docs/sd/1053131102_sd.pdf" H 5350 2900 60  0001 C CNN
+F 4 "DK" H 5350 3900 50  0001 C CNN "MFN"
+F 5 "WM14972-ND" H 5350 3800 50  0001 C CNN "MPN"
+F 6 "https://www.digikey.com/products/en/connectors-interconnects/rectangular-connectors-headers-male-pins/314?k=nanofit+2&k=&pkeyword=nanofit+2&pv88=2&pv69=367&sf=0&FV=ffe0013a&quantity=&ColumnSort=0&page=1&pageSize=25" H 5350 2550 50  0001 C CNN "PurchasingLink"
+	1    5350 3350
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	5650 3050 5550 3050
+$Comp
+L power:GND #PWR020
+U 1 1 5FD7F149
+P 4250 3800
+F 0 "#PWR020" H 4250 3550 50  0001 C CNN
+F 1 "GND" H 4255 3627 50  0000 C CNN
+F 2 "" H 4250 3800 50  0001 C CNN
+F 3 "" H 4250 3800 50  0001 C CNN
+	1    4250 3800
+	1    0    0    -1  
+$EndComp
+$Comp
+L formula:R_340K R8
+U 1 1 5FD75B13
+P 4250 3650
+F 0 "R8" H 4320 3696 50  0000 L CNN
+F 1 "R_340K" H 4320 3605 50  0000 L CNN
+F 2 "footprints:R_0805_OEM" H 4180 3650 50  0001 C CNN
+F 3 "" H 4330 3650 50  0001 C CNN
+F 4 "DK" H 4250 3650 60  0001 C CNN "MFN"
+F 5 "P300KDACT-ND" H 4250 3650 60  0001 C CNN "MPN"
+	1    4250 3650
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4650 2750 4450 2750
+Wire Wire Line
+	4450 2750 4450 2950
+Wire Wire Line
+	4450 2950 4250 2950
+Wire Wire Line
+	4250 2950 4250 3050
+Wire Wire Line
+	4250 3350 4250 3450
+Wire Wire Line
+	5650 2900 5400 2900
+Wire Wire Line
+	5250 2900 5150 2900
+Connection ~ 5150 2900
+Wire Wire Line
+	5150 2900 4850 2900
+Wire Wire Line
+	4850 3350 4500 3350
+Wire Wire Line
+	4900 3450 4250 3450
+Connection ~ 4250 3450
+Wire Wire Line
+	4250 3450 4250 3500
+Wire Wire Line
+	5550 3800 4900 3800
+Wire Wire Line
+	4900 3450 4900 3800
+Wire Wire Line
+	5550 3050 5550 3800
+Text Notes 6650 2100 2    50   ~ 0
+Boost Converter
 $EndSCHEMATC
