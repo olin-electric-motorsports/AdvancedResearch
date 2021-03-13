@@ -1095,13 +1095,12 @@ Text Label 3650 1500 0    50   ~ 0
 ENABLE
 Text Label 2050 6600 2    50   ~ 0
 VCC
-Text Label 2050 6700 2    50   ~ 0
+Text Label 2050 6800 2    50   ~ 0
 GND
 Text Label 3100 6600 2    50   ~ 0
 VCC
-Text Label 3100 6700 2    50   ~ 0
+Text Label 3100 6800 2    50   ~ 0
 GND
-NoConn ~ 3100 6800
 NoConn ~ 3100 6900
 NoConn ~ 3100 7000
 NoConn ~ 3100 7100
@@ -1118,7 +1117,6 @@ NoConn ~ 2050 7200
 NoConn ~ 2050 7100
 NoConn ~ 2050 7000
 NoConn ~ 2050 6900
-NoConn ~ 2050 6800
 Connection ~ 4200 1000
 Wire Wire Line
 	5400 1000 5400 1250
@@ -1131,35 +1129,35 @@ Text Label 6000 6750 0    50   ~ 0
 Text Label 6000 6950 0    50   ~ 0
 5V
 $Comp
-L formula:CONN_01X03 J?
+L formula:CONN_01X03 J6
 U 1 1 60515ECB
-P 15250 2200
-F 0 "J?" H 14850 2450 50  0000 L CNN
-F 1 "CONN_01X03" H 14950 2450 50  0000 L CNN
-F 2 "footprints:PinHeader_1x03_P2.54mm_Vertical" H 15250 1000 50  0001 C CNN
-F 3 "https://www.mouser.com/datasheet/2/181/M20-999-1218971.pdf" H 15250 1000 50  0001 C CNN
-F 4 "Mouser" H 15250 2200 60  0001 C CNN "MFN"
-F 5 "855-M20-9990346" H 15250 2200 60  0001 C CNN "MPN"
-F 6 "https://www.mouser.com/ProductDetail/Harwin/M20-9990346?qs=sGAEpiMZZMs%252bGHln7q6pmzlZUuX%2f53qj1ROyRKct5o4%3d" H 15650 2800 60  0001 C CNN "PurchasingLink"
-	1    15250 2200
+P 15250 2150
+F 0 "J6" H 14850 2400 50  0000 L CNN
+F 1 "CONN_01X03" H 14950 2400 50  0000 L CNN
+F 2 "footprints:PinHeader_1x03_P2.54mm_Vertical" H 15250 950 50  0001 C CNN
+F 3 "https://www.mouser.com/datasheet/2/181/M20-999-1218971.pdf" H 15250 950 50  0001 C CNN
+F 4 "Mouser" H 15250 2150 60  0001 C CNN "MFN"
+F 5 "855-M20-9990346" H 15250 2150 60  0001 C CNN "MPN"
+F 6 "https://www.mouser.com/ProductDetail/Harwin/M20-9990346?qs=sGAEpiMZZMs%252bGHln7q6pmzlZUuX%2f53qj1ROyRKct5o4%3d" H 15650 2750 60  0001 C CNN "PurchasingLink"
+	1    15250 2150
 	-1   0    0    1   
 $EndComp
-Text Label 15500 2100 0    50   ~ 0
+Text Label 15500 2150 0    50   ~ 0
 CAN_+
-Text Label 15500 2200 0    50   ~ 0
+Text Label 15500 2250 0    50   ~ 0
 CAN_-
 $Comp
-L power:GND #PWR?
+L power:GND #PWR0101
 U 1 1 60527C42
-P 15500 2300
-F 0 "#PWR?" H 15500 2050 50  0001 C CNN
-F 1 "GND" V 15505 2172 50  0000 R CNN
-F 2 "" H 15500 2300 50  0001 C CNN
-F 3 "" H 15500 2300 50  0001 C CNN
-	1    15500 2300
-	0    -1   -1   0   
+P 15500 2050
+F 0 "#PWR0101" H 15500 1800 50  0001 C CNN
+F 1 "GND" V 15505 1922 50  0000 R CNN
+F 2 "" H 15500 2050 50  0001 C CNN
+F 3 "" H 15500 2050 50  0001 C CNN
+	1    15500 2050
+	-1   0    0    1   
 $EndComp
-Text Notes 15200 1850 0    79   ~ 0
+Text Notes 15200 1700 0    79   ~ 0
 CAN PINS
 $Comp
 L formula:CONN_01X03 J4
@@ -1175,17 +1173,34 @@ F 6 "https://www.mouser.com/ProductDetail/Harwin/M20-9990346?qs=sGAEpiMZZMs%252b
 	1    5750 6850
 	-1   0    0    1   
 $EndComp
+Text Label 11200 4200 0    50   ~ 0
+LIN_BUS
 $Comp
-L formula:CONN_01x02 J?
+L formula:CONN_01x02 J5
 U 1 1 60553656
-P 5800 7800
-F 0 "J?" H 5718 7475 50  0000 C CNN
-F 1 "CONN_01x02" H 5718 7566 50  0000 C CNN
-F 2 "Connector_PinHeader_2.54mm:PinHeader_1x02_P2.54mm_Vertical" H 5700 7800 50  0001 C CNN
-F 3 "https://katalog.we-online.de/em/datasheet/6130xx11121.pdf" H 5800 7900 50  0001 C CNN
-F 4 "DK" H 5900 8000 50  0001 C CNN "MFN"
-F 5 "732-5315-ND" H 6000 8100 50  0001 C CNN "MPN"
-	1    5800 7800
+P 11000 4300
+F 0 "J5" H 10918 3975 50  0000 C CNN
+F 1 "CONN_01x02" H 10918 4066 50  0000 C CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_1x02_P2.54mm_Vertical" H 10900 4300 50  0001 C CNN
+F 3 "https://katalog.we-online.de/em/datasheet/6130xx11121.pdf" H 11000 4400 50  0001 C CNN
+F 4 "DK" H 11100 4500 50  0001 C CNN "MFN"
+F 5 "732-5315-ND" H 11200 4600 50  0001 C CNN "MPN"
+	1    11000 4300
 	-1   0    0    1   
 $EndComp
+$Comp
+L power:GND #PWR0102
+U 1 1 604F917F
+P 11200 4300
+F 0 "#PWR0102" H 11200 4050 50  0001 C CNN
+F 1 "GND" V 11205 4172 50  0000 R CNN
+F 2 "" H 11200 4300 50  0001 C CNN
+F 3 "" H 11200 4300 50  0001 C CNN
+	1    11200 4300
+	0    -1   -1   0   
+$EndComp
+Text Label 3100 6700 2    50   ~ 0
+12V
+Text Label 2050 6700 2    50   ~ 0
+12V
 $EndSCHEMATC
