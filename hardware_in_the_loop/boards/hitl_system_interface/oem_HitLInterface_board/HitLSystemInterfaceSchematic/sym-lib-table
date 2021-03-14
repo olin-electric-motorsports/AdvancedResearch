@@ -1,0 +1,4 @@
+(sym_lib_table
+  (lib (name template-rescue)(type Legacy)(uri ${KIPRJMOD}/template-rescue.lib)(options "")(descr ""))
+  (lib (name SystemHitLSInterface-rescue)(type Legacy)(uri ${KIPRJMOD}/SystemHitLSInterface-rescue.lib)(options "")(descr ""))
+)
