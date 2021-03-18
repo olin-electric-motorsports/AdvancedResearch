@@ -1,0 +1,3 @@
+(sym_lib_table
+  (lib (name Antoinette_PowerBank-rescue)(type Legacy)(uri ${KIPRJMOD}/Antoinette_PowerBank-rescue.lib)(options "")(descr ""))
+)
