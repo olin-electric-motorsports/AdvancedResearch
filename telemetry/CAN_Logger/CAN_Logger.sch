@@ -1938,7 +1938,7 @@ F 3 "" H 15800 8450 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 Text Label 4050 3800 0    50   ~ 0
-CS
+CS_SD
 NoConn ~ 4050 1900
 NoConn ~ 4050 3000
 $EndSCHEMATC
