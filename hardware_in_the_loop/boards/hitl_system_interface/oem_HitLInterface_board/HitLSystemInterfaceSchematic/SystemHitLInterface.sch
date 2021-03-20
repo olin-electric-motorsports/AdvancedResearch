@@ -753,8 +753,6 @@ F 6 "https://www.digikey.com/products/en?keywords=475-1410-1-ND" H 5550 4100 60 
 	1    5150 3600
 	-1   0    0    1   
 $EndComp
-Text Label 1700 2300 2    50   ~ 0
-AI1
 Text Label 1700 2400 2    50   ~ 0
 AI2
 Text Label 3300 2250 0    50   ~ 0
@@ -773,8 +771,6 @@ Text Label 3300 3750 0    50   ~ 0
 D5
 Text Label 3300 1350 0    50   ~ 0
 D6
-Text Label 3300 1450 0    50   ~ 0
-D7
 $Comp
 L power:VCC #PWR042
 U 1 1 5FC7EF16
@@ -1336,10 +1332,6 @@ Text Label 2250 8100 0    50   ~ 0
 D5
 Text Label 2250 8200 0    50   ~ 0
 D6
-Text Label 2250 8300 0    50   ~ 0
-D7
-Text Label 2250 8400 0    50   ~ 0
-AI1
 Text Label 2250 8500 0    50   ~ 0
 AI2
 Text Label 2250 8600 0    50   ~ 0
@@ -1609,5 +1601,57 @@ F 5 "475-1410-1-ND" H 12750 7500 60  0001 C CNN "MPN"
 F 6 "https://www.digikey.com/products/en?keywords=475-1410-1-ND" H 13150 8000 60  0001 C CNN "PurchasingLink"
 	1    12750 7500
 	0    -1   -1   0   
+$EndComp
+NoConn ~ 3300 1450
+NoConn ~ 1700 2300
+NoConn ~ 2250 8300
+NoConn ~ 2250 8400
+$Comp
+L Connector:Conn_01x01_Female J6
+U 1 1 60528E1B
+P 3100 9150
+F 0 "J6" H 2992 8925 50  0000 C CNN
+F 1 "Conn_01x01_Female" H 2992 9016 50  0000 C CNN
+F 2 "Connector_PinSocket_2.54mm:PinSocket_1x01_P2.54mm_Vertical" H 3100 9150 50  0001 C CNN
+F 3 "~" H 3100 9150 50  0001 C CNN
+	1    3100 9150
+	-1   0    0    1   
+$EndComp
+$Comp
+L Connector:Conn_01x01_Female J7
+U 1 1 6052AD9D
+P 3100 9450
+F 0 "J7" H 2992 9225 50  0000 C CNN
+F 1 "Conn_01x01_Female" H 2992 9316 50  0000 C CNN
+F 2 "Connector_PinSocket_2.54mm:PinSocket_1x01_P2.54mm_Vertical" H 3100 9450 50  0001 C CNN
+F 3 "~" H 3100 9450 50  0001 C CNN
+	1    3100 9450
+	-1   0    0    1   
+$EndComp
+$Comp
+L Connector:Conn_01x01_Female J8
+U 1 1 6052E741
+P 3100 9750
+F 0 "J8" H 2992 9525 50  0000 C CNN
+F 1 "Conn_01x01_Female" H 2992 9616 50  0000 C CNN
+F 2 "Connector_PinSocket_2.54mm:PinSocket_1x01_P2.54mm_Vertical" H 3100 9750 50  0001 C CNN
+F 3 "~" H 3100 9750 50  0001 C CNN
+	1    3100 9750
+	-1   0    0    1   
+$EndComp
+Text Label 3300 9150 0    50   ~ 0
+12V
+Text Label 3300 9450 0    50   ~ 0
+5V
+$Comp
+L power:GND #PWR05
+U 1 1 60555167
+P 3300 9750
+F 0 "#PWR05" H 3300 9500 50  0001 C CNN
+F 1 "GND" H 3305 9577 50  0000 C CNN
+F 2 "" H 3300 9750 50  0001 C CNN
+F 3 "" H 3300 9750 50  0001 C CNN
+	1    3300 9750
+	1    0    0    -1  
 $EndComp
 $EndSCHEMATC
