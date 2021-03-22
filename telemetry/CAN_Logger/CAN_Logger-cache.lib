@@ -409,7 +409,7 @@ ENDDEF
 DEF formula_LM3480 U 0 10 Y Y 1 F N
 F0 "U" -150 125 50 H V C CNN
 F1 "formula_LM3480" 0 125 50 H V L CNN
-F2 "Package_TO_SOT_SMD:SOT-23" -50 200 50 H I C CNN
+F2 "footprints:SOT-23-3_OEM" -50 200 50 H I C CNN
 F3 "" 100 -250 50 H I C CNN
 F4 "DK" 50 325 60 H I C CNN "MFN"
 F5 "LM3480IM3-3.3CT-ND" 150 425 60 H I C CNN "MPN"
@@ -679,7 +679,7 @@ ENDDEF
 DEF formula_R_500 U 0 40 Y Y 1 F N
 F0 "U" 0 200 50 H V C CNN
 F1 "formula_R_500" 0 100 50 H V C CNN
-F2 "footprints:R_0805_OEM" 0 0 50 H I C CNN
+F2 "" 0 0 50 H I C CNN
 F3 "" 0 0 50 H I C CNN
 DRAW
 S 100 -40 -100 40 1 1 10 N
@@ -742,8 +742,8 @@ ENDDEF
 DEF formula_TXB0104 U 0 40 Y Y 1 F N
 F0 "U" 0 0 50 H V C CNN
 F1 "formula_TXB0104" 0 0 50 H V C CNN
-F2 "Package_SO:TSSOP-14_4.4x5mm_P0.65mm" -100 -100 50 H I C CNN
-F3 "" 0 0 50 H I C CNN
+F2 "Housings_SSOP:TSSOP-14_4.4x5mm_Pitch0.65mm" -100 -100 50 H I C CNN
+F3 "http://www.ti.com/lit/ds/symlink/txb0104.pdf" 0 0 50 H I C CNN
 F4 "DK" 100 100 50 H I C CNN "MFN"
 F5 "296-21929-1-ND" 200 200 50 H I C CNN "MPN"
 F6 "https://www.digikey.com/product-detail/en/texas-instruments/TXB0104PWR/296-21929-1-ND/1629282" 300 300 50 H I C CNN "PurchasingLink"

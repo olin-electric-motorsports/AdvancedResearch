@@ -75,24 +75,30 @@ X A 2 150 0 100 L 50 50 1 1 P
 ENDDRAW
 ENDDEF
 #
-# formula_CONN_01x02
+# formula_CONN_01X03
 #
-DEF formula_CONN_01x02 J 0 40 Y N 1 F N
-F0 "J" 0 100 50 H V C CNN
-F1 "formula_CONN_01x02" 0 -200 50 H V C CNN
-F2 "Connector_PinHeader_2.54mm:PinHeader_1x02_P2.54mm_Vertical" -100 0 50 H I C CNN
-F3 "https://katalog.we-online.de/em/datasheet/6130xx11121.pdf" 0 100 50 H I C CNN
-F4 "DK" 100 200 50 H I C CNN "MFN"
-F5 "732-5315-ND" 200 300 50 H I C CNN "MPN"
+DEF formula_CONN_01X03 J 0 1 Y N 1 F N
+F0 "J" 0 200 50 H V C CNN
+F1 "formula_CONN_01X03" 0 -200 50 H V C CNN
+F2 "Pin_Headers:Pin_Header_Straight_1x03_Pitch2.54mm" 0 -1200 50 H I C CNN
+F3 "https://www.mouser.com/datasheet/2/181/M20-999-1218971.pdf" 0 -1200 50 H I C CNN
+F4 "Mouser" 0 0 60 H I C CNN "MFN"
+F5 "855-M20-9990346" 0 0 60 H I C CNN "MPN"
+F6 "https://www.mouser.com/ProductDetail/Harwin/M20-9990346?qs=sGAEpiMZZMs%252bGHln7q6pmzlZUuX%2f53qj1ROyRKct5o4%3d" 400 600 60 H I C CNN "PurchasingLink"
 $FPLIST
- Connector*:*_1x??_*
+ Pin_Header_Straight_2X03
+ Pin_Header_Angled_2X03
+ Socket_Strip_Straight_2X03
+ Socket_Strip_Angled_2X03
 $ENDFPLIST
 DRAW
-S -50 -95 0 -105 1 1 6 N
-S -50 5 0 -5 1 1 6 N
-S -50 50 50 -150 1 1 10 f
-X Pin_1 1 -200 0 150 R 50 50 1 1 P
-X Pin_2 2 -200 -100 150 R 50 50 1 1 P
+S -100 -95 -50 -105 0 1 0 N
+S -100 5 -50 -5 0 1 0 N
+S -100 105 -50 95 0 1 0 N
+S -100 150 0 -150 0 1 0 f
+X P1 1 -250 100 150 R 50 50 1 1 P
+X P2 2 -250 0 150 R 50 50 1 1 P
+X P3 3 -250 -100 150 R 50 50 1 1 P
 ENDDRAW
 ENDDEF
 #
