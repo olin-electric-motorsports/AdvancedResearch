@@ -831,47 +831,45 @@ Text Notes 8400 6300 0    50   ~ 0
 Input Capacitors
 Text Notes 8150 7550 1    50   ~ 0
 12V Indicator
-Text Notes 7600 7200 1    50   ~ 0
+Text Notes 7400 7300 1    50   ~ 0
 Protection
 $Comp
 L power:GND #PWR014
 U 1 1 5FCD86BF
-P 7450 7500
-F 0 "#PWR014" H 7450 7250 50  0001 C CNN
-F 1 "GND" H 7455 7327 50  0000 C CNN
-F 2 "" H 7450 7500 50  0001 C CNN
-F 3 "" H 7450 7500 50  0001 C CNN
-	1    7450 7500
+P 7500 7500
+F 0 "#PWR014" H 7500 7250 50  0001 C CNN
+F 1 "GND" H 7505 7327 50  0000 C CNN
+F 2 "" H 7500 7500 50  0001 C CNN
+F 3 "" H 7500 7500 50  0001 C CNN
+	1    7500 7500
 	1    0    0    -1  
 $EndComp
 $Comp
 L formula:F_500mA_16V F101
 U 1 1 5FCD25BC
-P 7200 7100
-F 0 "F101" V 7300 7050 50  0000 L CNN
-F 1 "F_500mA_16V" V 7050 6850 50  0000 L CNN
-F 2 "footprints:Fuse_1210" V 7130 7100 50  0001 C CNN
-F 3 "https://belfuse.com/resources/CircuitProtection/datasheets/0ZCH%20Nov2016.pdf" V 7280 7100 50  0001 C CNN
-F 4 "DK" H 7200 7100 60  0001 C CNN "MFN"
-F 5 "507-1786-1-ND" H 7200 7100 60  0001 C CNN "MPN"
-F 6 "https://www.digikey.com/product-detail/en/bel-fuse-inc/0ZCH0050FF2G/507-1786-1-ND/4156209" V 7680 7500 60  0001 C CNN "PurchasingLink"
-	1    7200 7100
-	1    0    0    -1  
+P 7000 6550
+F 0 "F101" V 7100 6500 50  0000 L CNN
+F 1 "F_500mA_16V" V 6850 6300 50  0000 L CNN
+F 2 "footprints:Fuse_1210" V 6930 6550 50  0001 C CNN
+F 3 "https://belfuse.com/resources/CircuitProtection/datasheets/0ZCH%20Nov2016.pdf" V 7080 6550 50  0001 C CNN
+F 4 "DK" H 7000 6550 60  0001 C CNN "MFN"
+F 5 "507-1786-1-ND" H 7000 6550 60  0001 C CNN "MPN"
+F 6 "https://www.digikey.com/product-detail/en/bel-fuse-inc/0ZCH0050FF2G/507-1786-1-ND/4156209" V 7480 6950 60  0001 C CNN "PurchasingLink"
+	1    7000 6550
+	0    -1   -1   0   
 $EndComp
-Wire Wire Line
-	7450 7350 7450 7500
 $Comp
 L formula:D_Zener_18V D101
 U 1 1 5FCCB5C8
-P 7700 7050
-F 0 "D101" H 7700 7300 50  0000 L CNN
-F 1 "D_Zener_18V" H 7500 7200 50  0000 L CNN
-F 2 "footprints:DO-214AA" H 7600 7050 50  0001 C CNN
-F 3 "http://www.mccsemi.com/up_pdf/SMBJ5338B-SMBJ5388B(SMB).pdf" H 7700 7150 50  0001 C CNN
-F 4 "DK" H 7900 7350 60  0001 C CNN "MFN"
-F 5 "SMBJ5355B-TPMSCT-ND" H 7800 7250 60  0001 C CNN "MPN"
-F 6 "https://www.digikey.com/products/en?keywords=SMBJ5355B-TPMSCT-ND" H 8100 7550 60  0001 C CNN "PurchasingLink"
-	1    7700 7050
+P 7500 7050
+F 0 "D101" H 7500 7300 50  0000 L CNN
+F 1 "D_Zener_18V" H 7300 7200 50  0000 L CNN
+F 2 "footprints:DO-214AA" H 7400 7050 50  0001 C CNN
+F 3 "http://www.mccsemi.com/up_pdf/SMBJ5338B-SMBJ5388B(SMB).pdf" H 7500 7150 50  0001 C CNN
+F 4 "DK" H 7700 7350 60  0001 C CNN "MFN"
+F 5 "SMBJ5355B-TPMSCT-ND" H 7600 7250 60  0001 C CNN "MPN"
+F 6 "https://www.digikey.com/products/en?keywords=SMBJ5355B-TPMSCT-ND" H 7900 7550 60  0001 C CNN "PurchasingLink"
+	1    7500 7050
 	0    1    1    0   
 $EndComp
 $Comp
@@ -1355,34 +1353,8 @@ Wire Wire Line
 Wire Wire Line
 	3850 3900 4000 3900
 Wire Wire Line
-	7200 6950 7200 6750
-Wire Wire Line
-	7200 6750 7450 6750
-Wire Wire Line
-	7700 6750 7700 6900
-Wire Wire Line
-	7200 7250 7200 7350
-Wire Wire Line
-	7200 7350 7450 7350
-Wire Wire Line
-	7700 7350 7700 7200
-Connection ~ 7450 7350
-Wire Wire Line
-	7450 7350 7700 7350
-Wire Wire Line
-	7450 6750 7450 6550
-Connection ~ 7450 6750
-Wire Wire Line
-	7450 6750 7700 6750
-Wire Wire Line
-	8250 6550 7450 6550
-Wire Wire Line
-	6750 6400 6750 6550
-Connection ~ 8250 6550
-Connection ~ 7450 6550
-Wire Wire Line
-	7450 6550 6750 6550
-Text Label 6750 6400 0    50   ~ 0
+	6650 6400 6650 6550
+Text Label 6650 6400 0    50   ~ 0
 12V
 $Comp
 L Connector:Conn_01x04_Female J5
@@ -1654,4 +1626,16 @@ F 3 "" H 3300 9750 50  0001 C CNN
 	1    3300 9750
 	1    0    0    -1  
 $EndComp
+Connection ~ 8250 6550
+Wire Wire Line
+	7150 6550 7500 6550
+Wire Wire Line
+	6850 6550 6650 6550
+Wire Wire Line
+	7500 6900 7500 6550
+Connection ~ 7500 6550
+Wire Wire Line
+	7500 6550 8250 6550
+Wire Wire Line
+	7500 7200 7500 7500
 $EndSCHEMATC
