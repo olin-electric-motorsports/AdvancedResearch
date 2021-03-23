@@ -72,12 +72,12 @@ $EndComp
 $Comp
 L power:GND #PWR04
 U 1 1 5D591138
-P 1150 1600
-F 0 "#PWR04" H 1150 1350 50  0001 C CNN
-F 1 "GND" H 1155 1427 50  0000 C CNN
-F 2 "" H 1150 1600 50  0001 C CNN
-F 3 "" H 1150 1600 50  0001 C CNN
-	1    1150 1600
+P 1150 1750
+F 0 "#PWR04" H 1150 1500 50  0001 C CNN
+F 1 "GND" H 1155 1577 50  0000 C CNN
+F 2 "" H 1150 1750 50  0001 C CNN
+F 3 "" H 1150 1750 50  0001 C CNN
+	1    1150 1750
 	1    0    0    -1  
 $EndComp
 $Comp
@@ -399,7 +399,6 @@ Wire Wire Line
 Connection ~ 1300 3900
 Wire Wire Line
 	1300 3900 1300 3500
-NoConn ~ 1450 1700
 Wire Wire Line
 	3900 4200 3900 4100
 Wire Wire Line
@@ -596,18 +595,6 @@ F 6 "https://www.digikey.com/products/en?keywords=478-3352-1-ND" H 11625 3450 60
 $EndComp
 Wire Wire Line
 	9900 3050 9900 3200
-$Comp
-L formula:Diode_600V_1A_SM D1
-U 1 1 603D587E
-P 9900 2900
-F 0 "D1" V 9854 2988 50  0000 L CNN
-F 1 "Diode_600V_1A_SM" V 9945 2988 50  0000 L CNN
-F 2 "footprints:Diode_600V_1A_SM" H 9850 3050 50  0001 C CNN
-F 3 "https://www.st.com/content/ccc/resource/technical/document/datasheet/c7/d5/fe/c4/56/21/41/02/CD00005135.pdf/files/CD00005135.pdf/jcr:content/translations/en.CD00005135.pdf" H 9850 3050 50  0001 C CNN
-F 4 "https://www.digikey.com/product-detail/en/stmicroelectronics/STTH1R06A/497-3765-1-ND/691935" H 9900 3100 50  0001 C CNN "Purchasing Link"
-	1    9900 2900
-	0    1    1    0   
-$EndComp
 Connection ~ 11200 2600
 Wire Wire Line
 	11200 2600 11400 2600
@@ -742,17 +729,6 @@ $EndComp
 Wire Wire Line
 	8750 6200 8750 6100
 $Comp
-L formula:Conn_01x11 J2
-U 1 1 603F6805
-P 2250 7150
-F 0 "J2" H 2330 7250 50  0000 L CNN
-F 1 "Conn_01x11" H 2330 7159 50  0000 L CNN
-F 2 "footprints:PinHeader_1x11_P2.54mm_Vertical" H 2150 7850 50  0001 C CNN
-F 3 "" H 2250 7150 50  0001 C CNN
-	1    2250 7150
-	1    0    0    -1  
-$EndComp
-$Comp
 L formula:Conn_01x11 J3
 U 1 1 6040C0B1
 P 3300 7150
@@ -802,20 +778,10 @@ F 9 "https://www.mouser.co.uk/ProductDetail/Texas-Instruments/TLIN1021DRQ1?qs=%2
 $EndComp
 Text Label 6650 3500 2    50   ~ 0
 ENABLE
-NoConn ~ 3650 1700
 NoConn ~ 3650 1100
 NoConn ~ 3650 1200
-NoConn ~ 3650 1300
-NoConn ~ 3650 1400
-NoConn ~ 3650 1600
-NoConn ~ 3650 1900
 NoConn ~ 3650 2000
-NoConn ~ 3650 2300
-NoConn ~ 3650 2400
-NoConn ~ 3650 2500
-NoConn ~ 3650 2600
 NoConn ~ 3650 2900
-NoConn ~ 3650 2800
 Text Label 3650 3000 0    50   ~ 0
 MISO
 Text Label 3650 2200 0    50   ~ 0
@@ -1097,14 +1063,6 @@ Text Label 2050 6600 2    50   ~ 0
 VCC
 Text Label 2050 6800 2    50   ~ 0
 GND
-Text Label 3100 6600 2    50   ~ 0
-VCC
-Text Label 3100 6800 2    50   ~ 0
-GND
-NoConn ~ 3100 6900
-NoConn ~ 3100 7000
-NoConn ~ 3100 7100
-NoConn ~ 3100 7200
 NoConn ~ 3100 7300
 NoConn ~ 3100 7400
 NoConn ~ 3100 7500
@@ -1113,10 +1071,6 @@ NoConn ~ 2050 7600
 NoConn ~ 2050 7500
 NoConn ~ 2050 7400
 NoConn ~ 2050 7300
-NoConn ~ 2050 7200
-NoConn ~ 2050 7100
-NoConn ~ 2050 7000
-NoConn ~ 2050 6900
 Connection ~ 4200 1000
 Wire Wire Line
 	5400 1000 5400 1250
@@ -1199,8 +1153,77 @@ F 3 "" H 11200 4300 50  0001 C CNN
 	1    11200 4300
 	0    -1   -1   0   
 $EndComp
-Text Label 3100 6700 2    50   ~ 0
-12V
 Text Label 2050 6700 2    50   ~ 0
 12V
+$Comp
+L formula:LED_0805 D1
+U 1 1 605B388F
+P 9900 2900
+F 0 "D1" V 9939 2783 50  0000 R CNN
+F 1 "LED_0805" V 9848 2783 50  0000 R CNN
+F 2 "footprints:LED_0805_OEM" H 9800 2900 50  0001 C CNN
+F 3 "http://www.osram-os.com/Graphics/XPic9/00078860_0.pdf" H 9900 3000 50  0001 C CNN
+F 4 "DK" H 9900 2900 60  0001 C CNN "MFN"
+F 5 "475-1410-1-ND" H 9900 2900 60  0001 C CNN "MPN"
+F 6 "https://www.digikey.com/products/en?keywords=475-1410-1-ND" H 10300 3400 60  0001 C CNN "PurchasingLink"
+	1    9900 2900
+	0    -1   -1   0   
+$EndComp
+Text Label 1450 1700 2    50   ~ 0
+GPIO_3
+Wire Wire Line
+	1150 1600 1150 1750
+Text Label 3650 2500 0    50   ~ 0
+GPIO_4
+Text Label 3650 1300 0    50   ~ 0
+GPIO_11
+Text Label 3650 1400 0    50   ~ 0
+GPIO_10
+Text Label 3650 2300 0    50   ~ 0
+GPIO_1
+Text Label 3650 2400 0    50   ~ 0
+GPIO_2
+Text Label 3650 1900 0    50   ~ 0
+GPIO_5
+Text Label 3650 2800 0    50   ~ 0
+GPIO_6
+Text Label 3650 1700 0    50   ~ 0
+GPIO_7
+Text Label 3650 1600 0    50   ~ 0
+GPIO_8
+Text Label 3650 2600 0    50   ~ 0
+GPIO_9
+$Comp
+L formula:Conn_01x11 J2
+U 1 1 603F6805
+P 2250 7150
+F 0 "J2" H 2330 7250 50  0000 L CNN
+F 1 "Conn_01x11" H 2330 7159 50  0000 L CNN
+F 2 "footprints:PinHeader_1x11_P2.54mm_Vertical" H 2150 7850 50  0001 C CNN
+F 3 "" H 2250 7150 50  0001 C CNN
+	1    2250 7150
+	1    0    0    -1  
+$EndComp
+Text Label 2050 6900 2    50   ~ 0
+GPIO_1
+Text Label 2050 7000 2    50   ~ 0
+GPIO_2
+Text Label 2050 7100 2    50   ~ 0
+GPIO_3
+Text Label 2050 7200 2    50   ~ 0
+GPIO_4
+Text Label 3100 6600 2    50   ~ 0
+GPIO_5
+Text Label 3100 6700 2    50   ~ 0
+GPIO_6
+Text Label 3100 6800 2    50   ~ 0
+GPIO_7
+Text Label 3100 6900 2    50   ~ 0
+GPIO_8
+Text Label 3100 7000 2    50   ~ 0
+GPIO_9
+Text Label 3100 7100 2    50   ~ 0
+GPIO_10
+Text Label 3100 7200 2    50   ~ 0
+GPIO_11
 $EndSCHEMATC

@@ -133,23 +133,6 @@ X ~ 9 -200 -250 150 R 50 50 1 1 P
 ENDDRAW
 ENDDEF
 #
-# formula_Diode_600V_1A_SM
-#
-DEF formula_Diode_600V_1A_SM D? 0 40 Y Y 1 F N
-F0 "D?" 0 250 50 H V C CNN
-F1 "formula_Diode_600V_1A_SM" 0 350 50 H V C CNN
-F2 "footprints:Diode_600V_1A_SM" -50 150 50 H I C CNN
-F3 "" -50 150 50 H I C CNN
-F4 "https://www.digikey.com/product-detail/en/stmicroelectronics/STTH1R06A/497-3765-1-ND/691935" 0 200 50 H I C CNN "Purchasing Link"
-DRAW
-P 2 1 1 0 50 0 -50 0 N
-P 2 1 1 10 50 50 50 -50 N
-P 4 1 1 10 -50 -50 -50 50 50 0 -50 -50 N
-X ~ 1 -150 0 100 R 50 50 1 1 P
-X ~ 2 150 0 100 L 50 50 1 1 P
-ENDDRAW
-ENDDEF
-#
 # formula_LED_0805
 #
 DEF formula_LED_0805 D 0 40 N N 1 F N
