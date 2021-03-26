@@ -479,8 +479,8 @@ $Comp
 L formula:C_10uF C1
 U 1 1 5FD453CD
 P 2150 3400
-F 0 "C1" H 2265 3496 50  0000 L CNN
-F 1 "C_10uF" H 2265 3405 50  0000 L CNN
+F 0 "C1" H 2250 3450 50  0000 L CNN
+F 1 "C_10uF" H 2200 3350 50  0000 L CNN
 F 2 "footprints:C_0805_OEM" H 2188 4000 50  0001 C CNN
 F 3 "http://www.samsungsem.com/kr/support/product-search/mlcc/__icsFiles/afieldfile/2018/06/20/CL21A106KPFNNNE.pdf" H 2175 4250 50  0001 C CNN
 F 4 "DK" H 2150 3450 60  0001 C CNN "MFN"
@@ -1020,7 +1020,7 @@ $EndComp
 Text Notes 8850 2550 1    50   ~ 0
 Power LED
 Text Notes 9700 3200 2    50   ~ 0
-Low Batery Indicator
+Low Battery Indicator
 $Comp
 L power:GND #PWR029
 U 1 1 5FE017C8
@@ -1281,7 +1281,7 @@ F 6 "https://www.digikey.com/products/en/connectors-interconnects/rectangular-co
 	1    1050 4750
 	-1   0    0    1   
 $EndComp
-Text Notes 2500 4300 0    50   ~ 0
+Text Notes 5200 3700 0    50   ~ 0
 Switch
 Wire Wire Line
 	5750 5950 5750 5850
@@ -1306,8 +1306,8 @@ $Comp
 L formula:R_1.87M R7
 U 1 1 5FD76C00
 P 4250 3200
-F 0 "R7" H 4180 3154 50  0000 R CNN
-F 1 "R_1.87M" H 4180 3245 50  0000 R CNN
+F 0 "R7" H 4150 3350 50  0000 R CNN
+F 1 "R_1.87M" H 4200 3250 50  0000 R CNN
 F 2 "footprints:R_0805_OEM" H 4180 3200 50  0001 C CNN
 F 3 "" H 4330 3200 50  0001 C CNN
 F 4 "DK" H 4250 3200 60  0001 C CNN "MFN"
@@ -1356,8 +1356,6 @@ F 5 "P300KDACT-ND" H 4250 3650 60  0001 C CNN "MPN"
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	5250 2900 5400 2900
-Wire Wire Line
 	4650 2750 4450 2750
 Wire Wire Line
 	4450 2750 4450 2950
@@ -1369,10 +1367,8 @@ Wire Wire Line
 	4250 3350 4250 3450
 Wire Wire Line
 	5650 2900 5400 2900
-Connection ~ 5400 2900
 Wire Wire Line
 	5250 2900 5150 2900
-Connection ~ 5250 2900
 Connection ~ 5150 2900
 Wire Wire Line
 	5150 2900 4850 2900
@@ -1389,4 +1385,6 @@ Wire Wire Line
 	4900 3450 4900 3800
 Wire Wire Line
 	5550 3050 5550 3800
+Text Notes 6650 2100 2    50   ~ 0
+Boost Converter
 $EndSCHEMATC
