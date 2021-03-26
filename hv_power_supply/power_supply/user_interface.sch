@@ -327,7 +327,7 @@ U 1 1 603B1F69
 P 9650 1750
 F 0 "U9" H 9650 2417 50  0000 C CNN
 F 1 "COM-11441" H 9650 2326 50  0000 C CNN
-F 2 "Display_7Segment:CA56-12EWA" H 9650 1150 50  0001 C CNN
+F 2 "" H 9650 1150 50  0001 C CNN
 F 3 "https://github.com/sparkfun/Serial7SegmentDisplay/wiki/Serial-7-Segment-Display-Datasheet" H 9220 1780 50  0001 C CNN
 	1    9650 1750
 	1    0    0    -1  
@@ -636,7 +636,7 @@ U 1 1 605503BA
 P 3850 6650
 F 0 "D7" H 3843 6866 50  0000 C CNN
 F 1 "Q8P7BXXG02E" H 3843 6775 50  0000 C CNN
-F 2 "footprints:LED_0805_OEM" H 3750 6650 50  0001 C CNN
+F 2 "" H 3750 6650 50  0001 C CNN
 F 3 "https://www.apem.com/us/index.php?controller=attachment&id_attachment=1780" H 3850 6750 50  0001 C CNN
 F 4 "DK" H 3850 6650 60  0001 C CNN "MFN"
 F 5 "Q8P7BXXG02E" H 3850 6650 60  0001 C CNN "MPN"
@@ -703,7 +703,7 @@ U 1 1 60579F84
 P 3850 7050
 F 0 "D8" H 3843 7266 50  0000 C CNN
 F 1 "Q8P7BXXG02E" H 3843 7175 50  0000 C CNN
-F 2 "footprints:LED_0805_OEM" H 3750 7050 50  0001 C CNN
+F 2 "" H 3750 7050 50  0001 C CNN
 F 3 "https://www.apem.com/us/index.php?controller=attachment&id_attachment=1780" H 3850 7150 50  0001 C CNN
 F 4 "DK" H 3850 7050 60  0001 C CNN "MFN"
 F 5 "Q8P7BXXG02E" H 3850 7050 60  0001 C CNN "MPN"
@@ -1045,7 +1045,7 @@ U 1 1 603E7395
 P 9700 3500
 F 0 "U10" H 9700 4167 50  0000 C CNN
 F 1 "COM-11441" H 9700 4076 50  0000 C CNN
-F 2 "Display_7Segment:CA56-12EWA" H 9700 2900 50  0001 C CNN
+F 2 "" H 9700 2900 50  0001 C CNN
 F 3 "https://github.com/sparkfun/Serial7SegmentDisplay/wiki/Serial-7-Segment-Display-Datasheet" H 9270 3530 50  0001 C CNN
 	1    9700 3500
 	1    0    0    -1  
