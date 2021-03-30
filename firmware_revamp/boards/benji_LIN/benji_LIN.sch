@@ -888,8 +888,8 @@ Text Label 8750 5250 0    50   ~ 0
 RIGHT_DEBUG
 Text Label 8150 5250 0    50   ~ 0
 LEFT_DEBUG
-Text Notes 2550 6400 0    79   ~ 0
-PINS
+Text Notes 2300 6400 0    79   ~ 0
+HEADER PINS
 Text Notes 5500 6450 0    79   ~ 0
 LIN POWER
 Wire Wire Line
@@ -987,10 +987,6 @@ Text Label 3650 1100 0    50   ~ 0
 ENABLE
 Text Label 2050 6600 2    50   ~ 0
 GND
-NoConn ~ 3100 7500
-NoConn ~ 3100 7600
-NoConn ~ 2050 7600
-NoConn ~ 2050 7500
 Connection ~ 4200 1000
 Wire Wire Line
 	5400 1000 5400 1250
@@ -1089,17 +1085,6 @@ Text Label 3650 1600 0    50   ~ 0
 PB6
 Text Label 3650 2600 0    50   ~ 0
 PC7
-$Comp
-L formula:Conn_01x11 J2
-U 1 1 603F6805
-P 2250 7150
-F 0 "J2" H 2330 7250 50  0000 L CNN
-F 1 "Conn_01x11" H 2330 7159 50  0000 L CNN
-F 2 "footprints:PinHeader_1x11_P2.54mm_Vertical" H 2150 7850 50  0001 C CNN
-F 3 "" H 2250 7150 50  0001 C CNN
-	1    2250 7150
-	1    0    0    -1  
-$EndComp
 Text Label 2050 6900 2    50   ~ 0
 PD7
 Text Label 2050 7000 2    50   ~ 0
@@ -1237,21 +1222,32 @@ Text Label 3100 6800 2    50   ~ 0
 PD0
 Text Label 3100 6700 2    50   ~ 0
 PC0
-$Comp
-L formula:Conn_01x11 J3
-U 1 1 6040C0B1
-P 3300 7150
-F 0 "J3" H 3380 7250 50  0000 L CNN
-F 1 "Conn_01x11" H 3380 7159 50  0000 L CNN
-F 2 "footprints:PinHeader_1x11_P2.54mm_Vertical" H 3200 7850 50  0001 C CNN
-F 3 "" H 3300 7150 50  0001 C CNN
-	1    3300 7150
-	1    0    0    -1  
-$EndComp
 Text Label 3100 6900 2    50   ~ 0
 PB7
 Text Label 2050 6800 2    50   ~ 0
 12V
 Text Label 2050 6700 2    50   ~ 0
 VCC
+$Comp
+L formula:Conn_01x09 J2
+U 1 1 6064A828
+P 2250 7000
+F 0 "J2" H 2330 7050 50  0000 L CNN
+F 1 "Conn_01x09" H 2330 6959 50  0000 L CNN
+F 2 "footprints:PinHeader_1x9_P2.54mm_Vertical" H 2250 6450 50  0001 C CNN
+F 3 "" H 2250 6500 50  0001 C CNN
+	1    2250 7000
+	1    0    0    -1  
+$EndComp
+$Comp
+L formula:Conn_01x09 J3
+U 1 1 60655A24
+P 3300 7000
+F 0 "J3" H 3380 7050 50  0000 L CNN
+F 1 "Conn_01x09" H 3380 6959 50  0000 L CNN
+F 2 "footprints:PinHeader_1x9_P2.54mm_Vertical" H 3300 6450 50  0001 C CNN
+F 3 "" H 3300 6500 50  0001 C CNN
+	1    3300 7000
+	1    0    0    -1  
+$EndComp
 $EndSCHEMATC
