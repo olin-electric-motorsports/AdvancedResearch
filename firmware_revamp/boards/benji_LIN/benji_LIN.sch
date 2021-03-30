@@ -709,11 +709,11 @@ Wire Wire Line
 	14700 6200 14700 6300
 Wire Wire Line
 	15550 6300 15550 6200
-Text Notes 12500 6000 0    89   ~ 0
+Text Notes 13600 6050 0    89   ~ 0
 TEST POINTS
 Wire Wire Line
-	11450 6200 11450 6300
-Text Label 11450 6200 0    50   ~ 0
+	12200 6200 12200 6300
+Text Label 12200 6200 0    50   ~ 0
 12V
 Text Label 7950 3400 2    50   ~ 0
 RXLIN
@@ -931,12 +931,12 @@ $EndComp
 $Comp
 L formula:Test_Point_SMD 12V1
 U 1 1 603FFDF1
-P 11450 6350
-F 0 "12V1" H 11362 6346 50  0000 R CNN
-F 1 "Test_Point_SMD" H 11362 6437 50  0000 R CNN
-F 2 "footprints:Test_Point_SMD" H 11450 6200 50  0001 C CNN
-F 3 "" H 11450 6350 50  0001 C CNN
-	1    11450 6350
+P 12200 6350
+F 0 "12V1" H 12112 6346 50  0000 R CNN
+F 1 "Test_Point_SMD" H 12112 6437 50  0000 R CNN
+F 2 "footprints:Test_Point_SMD" H 12200 6200 50  0001 C CNN
+F 3 "" H 12200 6350 50  0001 C CNN
+	1    12200 6350
 	-1   0    0    1   
 $EndComp
 $Comp
@@ -986,8 +986,6 @@ $EndComp
 Text Label 3650 1100 0    50   ~ 0
 ENABLE
 Text Label 2050 6600 2    50   ~ 0
-VCC
-Text Label 2050 6800 2    50   ~ 0
 GND
 NoConn ~ 3100 7500
 NoConn ~ 3100 7600
@@ -1073,8 +1071,6 @@ F 3 "" H 11200 4300 50  0001 C CNN
 	1    11200 4300
 	0    -1   -1   0   
 $EndComp
-Text Label 2050 6700 2    50   ~ 0
-12V
 Wire Wire Line
 	1150 1600 1150 1750
 Text Label 3650 2500 0    50   ~ 0
@@ -1254,4 +1250,8 @@ F 3 "" H 3300 7150 50  0001 C CNN
 $EndComp
 Text Label 3100 6900 2    50   ~ 0
 PB7
+Text Label 2050 6800 2    50   ~ 0
+12V
+Text Label 2050 6700 2    50   ~ 0
+VCC
 $EndSCHEMATC
