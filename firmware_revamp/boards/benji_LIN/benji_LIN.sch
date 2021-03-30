@@ -636,7 +636,7 @@ Text Label 14700 6200 0    50   ~ 0
 CAN_-
 Text Label 15550 6200 0    50   ~ 0
 LIN_BUS
-Text Notes 8300 5100 0    50   ~ 0
+Text Notes 9000 5050 0    50   ~ 0
 DEBUG LEDS
 $Comp
 L formula:LED_0805 D2
@@ -779,9 +779,7 @@ $EndComp
 Text Label 6650 3500 2    50   ~ 0
 ENABLE
 NoConn ~ 3650 1100
-NoConn ~ 3650 1200
 NoConn ~ 3650 2000
-NoConn ~ 3650 2900
 Text Label 3650 3000 0    50   ~ 0
 MISO
 Text Label 3650 2200 0    50   ~ 0
@@ -922,22 +920,6 @@ Wire Wire Line
 Wire Wire Line
 	4200 1100 4200 1000
 Wire Wire Line
-	5400 1000 5250 1000
-$Comp
-L formula:SW_Push_SPST_NO SW1
-U 1 1 603700F1
-P 5050 1000
-F 0 "SW1" H 5050 1285 50  0000 C CNN
-F 1 "SW_Push_SPST_NO" H 5050 1194 50  0000 C CNN
-F 2 "footprints:SW_B3U-1000P_4.2x1.7mm" H 5050 1050 50  0001 C CNN
-F 3 "https://omronfs.omron.com/en_US/ecb/products/pdf/en-b3u.pdf" H 5050 1050 50  0001 C CNN
-F 4 "DK" H 5350 1350 50  0001 C CNN "MFN"
-F 5 "SW1020CT-ND" H 5250 1250 50  0001 C CNN "MPN"
-F 6 "https://www.digikey.com/product-detail/en/omron-electronics-inc-emc-div/B3U-1000P/SW1020CT-ND/1534357A" H 5450 1450 50  0001 C CNN "PurchasingLink"
-	1    5050 1000
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
 	3650 1000 4200 1000
 Text Label 3950 3050 0    50   ~ 0
 MOSI
@@ -992,10 +974,10 @@ F 3 "" H 11900 7500 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L formula:Test_Point_SMD TP1
+L formula:Test_Point_SMD 12V
 U 1 1 603FFDF1
 P 11450 6350
-F 0 "TP1" H 11362 6346 50  0000 R CNN
+F 0 "12V" H 11362 6346 50  0000 R CNN
 F 1 "Test_Point_SMD" H 11362 6437 50  0000 R CNN
 F 2 "footprints:Test_Point_SMD" H 11450 6200 50  0001 C CNN
 F 3 "" H 11450 6350 50  0001 C CNN
@@ -1003,10 +985,10 @@ F 3 "" H 11450 6350 50  0001 C CNN
 	-1   0    0    1   
 $EndComp
 $Comp
-L formula:Test_Point_SMD TP2
+L formula:Test_Point_SMD GND
 U 1 1 60414A2B
 P 12350 6350
-F 0 "TP2" H 12262 6346 50  0000 R CNN
+F 0 "GND" H 12262 6346 50  0000 R CNN
 F 1 "Test_Point_SMD" H 12262 6437 50  0000 R CNN
 F 2 "footprints:Test_Point_SMD" H 12350 6200 50  0001 C CNN
 F 3 "" H 12350 6350 50  0001 C CNN
@@ -1014,10 +996,10 @@ F 3 "" H 12350 6350 50  0001 C CNN
 	-1   0    0    1   
 $EndComp
 $Comp
-L formula:Test_Point_SMD TP3
+L formula:Test_Point_SMD 5V
 U 1 1 60414DEF
 P 13150 6350
-F 0 "TP3" H 13062 6346 50  0000 R CNN
+F 0 "5V" H 13062 6346 50  0000 R CNN
 F 1 "Test_Point_SMD" H 13062 6437 50  0000 R CNN
 F 2 "footprints:Test_Point_SMD" H 13150 6200 50  0001 C CNN
 F 3 "" H 13150 6350 50  0001 C CNN
@@ -1025,10 +1007,10 @@ F 3 "" H 13150 6350 50  0001 C CNN
 	-1   0    0    1   
 $EndComp
 $Comp
-L formula:Test_Point_SMD TP4
+L formula:Test_Point_SMD CAN_+
 U 1 1 60415519
 P 13850 6350
-F 0 "TP4" H 13762 6346 50  0000 R CNN
+F 0 "CAN_+" H 13762 6346 50  0000 R CNN
 F 1 "Test_Point_SMD" H 13762 6437 50  0000 R CNN
 F 2 "footprints:Test_Point_SMD" H 13850 6200 50  0001 C CNN
 F 3 "" H 13850 6350 50  0001 C CNN
@@ -1036,10 +1018,10 @@ F 3 "" H 13850 6350 50  0001 C CNN
 	-1   0    0    1   
 $EndComp
 $Comp
-L formula:Test_Point_SMD TP5
+L formula:Test_Point_SMD CAN_-
 U 1 1 604158E2
 P 14700 6350
-F 0 "TP5" H 14612 6346 50  0000 R CNN
+F 0 "CAN_-" H 14612 6346 50  0000 R CNN
 F 1 "Test_Point_SMD" H 14612 6437 50  0000 R CNN
 F 2 "footprints:Test_Point_SMD" H 14700 6200 50  0001 C CNN
 F 3 "" H 14700 6350 50  0001 C CNN
@@ -1063,19 +1045,15 @@ Text Label 2050 6600 2    50   ~ 0
 VCC
 Text Label 2050 6800 2    50   ~ 0
 GND
-NoConn ~ 3100 7300
 NoConn ~ 3100 7400
 NoConn ~ 3100 7500
 NoConn ~ 3100 7600
 NoConn ~ 2050 7600
 NoConn ~ 2050 7500
 NoConn ~ 2050 7400
-NoConn ~ 2050 7300
 Connection ~ 4200 1000
 Wire Wire Line
 	5400 1000 5400 1250
-Wire Wire Line
-	4200 1000 4850 1000
 Text Label 6000 6850 0    50   ~ 0
 VIN
 Text Label 6000 6750 0    50   ~ 0
@@ -1176,23 +1154,23 @@ Wire Wire Line
 Text Label 3650 2500 0    50   ~ 0
 GPIO_4
 Text Label 3650 1300 0    50   ~ 0
-GPIO_11
+GPIO_5
 Text Label 3650 1400 0    50   ~ 0
-GPIO_10
+GPIO_11
 Text Label 3650 2300 0    50   ~ 0
 GPIO_1
 Text Label 3650 2400 0    50   ~ 0
 GPIO_2
 Text Label 3650 1900 0    50   ~ 0
-GPIO_5
-Text Label 3650 2800 0    50   ~ 0
 GPIO_6
-Text Label 3650 1700 0    50   ~ 0
+Text Label 3650 2800 0    50   ~ 0
 GPIO_7
-Text Label 3650 1600 0    50   ~ 0
+Text Label 3650 1700 0    50   ~ 0
 GPIO_8
-Text Label 3650 2600 0    50   ~ 0
+Text Label 3650 1600 0    50   ~ 0
 GPIO_9
+Text Label 3650 2600 0    50   ~ 0
+GPIO_10
 $Comp
 L formula:Conn_01x11 J2
 U 1 1 603F6805
@@ -1212,18 +1190,94 @@ Text Label 2050 7100 2    50   ~ 0
 GPIO_3
 Text Label 2050 7200 2    50   ~ 0
 GPIO_4
-Text Label 3100 6600 2    50   ~ 0
+Text Label 2050 7300 2    50   ~ 0
 GPIO_5
-Text Label 3100 6700 2    50   ~ 0
-GPIO_6
 Text Label 3100 6800 2    50   ~ 0
-GPIO_7
+GPIO_6
 Text Label 3100 6900 2    50   ~ 0
-GPIO_8
+GPIO_7
 Text Label 3100 7000 2    50   ~ 0
-GPIO_9
+GPIO_8
 Text Label 3100 7100 2    50   ~ 0
-GPIO_10
+GPIO_9
 Text Label 3100 7200 2    50   ~ 0
+GPIO_10
+Text Label 3100 7300 2    50   ~ 0
 GPIO_11
+$Comp
+L formula:LED_0805_Amber D5
+U 1 1 606678A5
+P 9700 5550
+F 0 "D5" V 9739 5432 50  0000 R CNN
+F 1 "LED_0805_Amber" V 9648 5432 50  0000 R CNN
+F 2 "footprints:LED_0805_OEM" H 9600 5550 50  0001 C CNN
+F 3 "https://media.digikey.com/pdf/Data%20Sheets/Chicago%20Miniature%20Lamps%20PDFs/CMDA5_Series_Rev_Aug_2014.pdf" H 9700 5650 50  0001 C CNN
+F 4 "DK" H 9700 5550 60  0001 C CNN "MFN"
+F 5 "L71517CT-ND" H 9700 5550 60  0001 C CNN "MPN"
+F 6 "https://www.digikey.com/product-detail/en/visual-communications-company-vcc/CMDA5DY7D1S/L71517CT-ND/614867" H 10100 6050 60  0001 C CNN "PurchasingLink"
+	1    9700 5550
+	0    -1   -1   0   
+$EndComp
+Text Label 9700 5250 0    50   ~ 0
+VCC
+Wire Wire Line
+	9700 5250 9700 5400
+$Comp
+L formula:R_1K R9
+U 1 1 6066FCA6
+P 9700 5950
+F 0 "R9" H 9770 5996 50  0000 L CNN
+F 1 "R_1K" H 9770 5905 50  0000 L CNN
+F 2 "footprints:R_0805_OEM" H 9630 5950 50  0001 C CNN
+F 3 "https://www.seielect.com/Catalog/SEI-rncp.pdf" H 9780 5950 50  0001 C CNN
+F 4 "DK" H 9700 5950 60  0001 C CNN "MFN"
+F 5 "RNCP0805FTD1K00CT-ND" H 9700 5950 60  0001 C CNN "MPN"
+F 6 "https://www.digikey.com/products/en?keywords=RNCP0805FTD1K00CT-ND" H 10180 6350 60  0001 C CNN "PurchasingLink"
+	1    9700 5950
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	9700 5800 9700 5700
+$Comp
+L power:GND #PWR024
+U 1 1 606730CC
+P 9700 6200
+F 0 "#PWR024" H 9700 5950 50  0001 C CNN
+F 1 "GND" H 9705 6027 50  0000 C CNN
+F 2 "" H 9700 6200 50  0001 C CNN
+F 3 "" H 9700 6200 50  0001 C CNN
+	1    9700 6200
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	9700 6200 9700 6100
+Text Label 3100 6700 2    50   ~ 0
+GND
+Text Label 3100 6600 2    50   ~ 0
+VCC
+$Comp
+L formula:CONN_01x02 J7
+U 1 1 60655BBB
+P 5100 1250
+F 0 "J7" H 5150 900 50  0000 C CNN
+F 1 "CONN_01x02" H 5150 1000 50  0000 C CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_1x02_P2.54mm_Vertical" H 5000 1250 50  0001 C CNN
+F 3 "https://katalog.we-online.de/em/datasheet/6130xx11121.pdf" H 5100 1350 50  0001 C CNN
+F 4 "DK" H 5200 1450 50  0001 C CNN "MFN"
+F 5 "732-5315-ND" H 5300 1550 50  0001 C CNN "MPN"
+	1    5100 1250
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	5000 1000 5000 1050
+Wire Wire Line
+	4200 1000 5000 1000
+Wire Wire Line
+	5100 1000 5100 1050
+Wire Wire Line
+	5100 1000 5400 1000
+Text Label 3650 2900 0    50   ~ 0
+RIGHT_DEBUG
+Text Label 3650 1200 0    50   ~ 0
+LEFT_DEBUG
 $EndSCHEMATC

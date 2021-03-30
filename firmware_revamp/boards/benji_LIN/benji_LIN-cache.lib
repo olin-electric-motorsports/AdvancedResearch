@@ -247,26 +247,6 @@ X ~ 2 0 -150 50 U 50 50 1 1 P
 ENDDRAW
 ENDDEF
 #
-# formula_SW_Push_SPST_NO
-#
-DEF formula_SW_Push_SPST_NO SW 0 40 Y Y 1 F N
-F0 "SW" 100 150 50 H V C CNN
-F1 "formula_SW_Push_SPST_NO" 50 -100 50 H V C CNN
-F2 "footprints:SW_B3U-1000P_4.2x1.7mm" 0 50 50 H I C CNN
-F3 "https://omronfs.omron.com/en_US/ecb/products/pdf/en-b3u.pdf" 0 50 50 H I C CNN
-F4 "DK" 300 350 50 H I C CNN "MFN"
-F5 "SW1020CT-ND" 200 250 50 H I C CNN "MPN"
-F6 "https://www.digikey.com/product-detail/en/omron-electronics-inc-emc-div/B3U-1000P/SW1020CT-ND/1534357A" 400 450 50 H I C CNN "PurchasingLink"
-DRAW
-C -80 0 20 1 1 0 N
-C 80 0 20 1 1 0 N
-P 2 1 1 0 0 50 0 120 N
-P 2 1 1 0 100 50 -100 50 N
-X 1 1 -200 0 100 R 50 50 1 1 P
-X 2 2 200 0 100 L 50 50 1 1 P
-ENDDRAW
-ENDDEF
-#
 # formula_TLIN1021DRQ1
 #
 DEF formula_TLIN1021DRQ1 U 0 30 Y Y 1 F N
