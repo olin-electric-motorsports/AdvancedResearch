@@ -86,20 +86,6 @@ F 8 "https://www.digikey.com/product-detail/en/wakefield-vette/657-15ABPEN/345-1
 	1    4250 1600
 	1    0    0    -1  
 $EndComp
-$Comp
-L formula:FQD2N60CTM Q4
-U 1 1 5FD240E6
-P 4250 2000
-F 0 "Q4" H 4386 2046 50  0000 L CNN
-F 1 "FQD2N60CTM" H 4386 1955 50  0000 L CNN
-F 2 "footprints:DPAK229P990X239-4N" H 4240 2460 50  0001 C CNN
-F 3 "https://www.onsemi.com/pub/Collateral/FQU2N60C-D.PDF" H 4250 2000 50  0001 C CNN
-F 4 "ON Semiconductor" H 4250 2000 50  0001 C CNN "MFN"
-F 5 "FDB33N25TM" H 4250 2000 50  0001 C CNN "MPN"
-F 6 "https://www.digikey.com/en/products/detail/on-semiconductor/FQD2N60CTM/1053993" H 4250 2000 50  0001 C CNN "Purchasing Link"
-	1    4250 2000
-	1    0    0    -1  
-$EndComp
 Wire Wire Line
 	3850 2250 4250 2250
 Wire Wire Line
@@ -139,19 +125,6 @@ $EndComp
 Connection ~ 3850 1950
 Wire Wire Line
 	3850 1950 3950 1950
-$Comp
-L formula:CPC1117NTR U7
-U 1 1 602537FD
-P 2650 1850
-F 0 "U7" H 2650 2217 50  0000 C CNN
-F 1 "CPC1117NTR" H 2650 2126 50  0000 C CNN
-F 2 "SOIC254P610X218-4N" H 2650 1850 50  0001 L BNN
-F 3 "https://www.ixysic.com/home/pdfs.nsf/www/CPC1117N.pdf/$file/CPC1117N.pdf" H 2650 1850 50  0001 L BNN
-F 4 "IXYS" H 2650 1850 50  0001 L BNN "MANUFACTURER"
-F 5 "https://www.digikey.com/en/products/detail/ixys-integrated-circuits-division/CPC1117NTR/1277122" H 2650 1850 50  0001 C CNN "Purchasing"
-	1    2650 1850
-	1    0    0    -1  
-$EndComp
 Wire Wire Line
 	3550 1400 3350 1400
 Wire Wire Line
@@ -210,19 +183,6 @@ F 7 "IPC 7351B" H 2700 3600 50  0001 L BNN "STANDARD"
 F 8 "https://www.ixysic.com/home/pdfs.nsf/www/CPC1979J.pdf/$file/CPC1979J.pdf" H 2700 3600 50  0001 C CNN "Purchasing Link"
 	1    2700 3600
 	1    0    0    -1  
-$EndComp
-$Comp
-L formula:CONN_01x02 J6
-U 1 1 6035D5F6
-P 1350 3100
-F 0 "J6" V 1550 3150 50  0000 R CNN
-F 1 "CONN_01x02" V 1450 3250 50  0000 R CNN
-F 2 "Connector_PinHeader_2.54mm:PinHeader_1x02_P2.54mm_Vertical" H 1250 3100 50  0001 C CNN
-F 3 "https://katalog.we-online.de/em/datasheet/6130xx11121.pdf" H 1350 3200 50  0001 C CNN
-F 4 "DK" H 1450 3300 50  0001 C CNN "MFN"
-F 5 "732-5315-ND" H 1550 3400 50  0001 C CNN "MPN"
-	1    1350 3100
-	0    -1   -1   0   
 $EndComp
 Text HLabel 1300 4150 0    50   Input ~ 0
 Out&nDis
@@ -388,10 +348,6 @@ F 3 "" H 6350 4700 50  0001 C CNN
 	1    6350 4700
 	1    0    0    -1  
 $EndComp
-Wire Wire Line
-	6150 4150 6150 4400
-Wire Wire Line
-	6150 4400 6600 4400
 $Comp
 L formula:C_0.1uF C30
 U 1 1 60FD244C
@@ -1118,36 +1074,11 @@ F 6 "https://www.digikey.com/en/products/detail/panasonic-electronic-components/
 	1    4050 4200
 	-1   0    0    1   
 $EndComp
-$Comp
-L formula:BAS40-00 D7
-U 1 1 60FD2663
-P 1700 7250
-F 0 "D7" H 1700 7034 50  0000 C CNN
-F 1 "BAS40-00" H 1700 7125 50  0000 C CNN
-F 2 "Package_TO_SOT_SMD:SOT-23" H 1600 7250 50  0001 C CNN
-F 3 "https://assets.nexperia.com/documents/data-sheet/BAS40_1PSXXSB4X_SER.pdf" H 1700 7350 50  0001 C CNN
-F 4 "DK" H 1800 7450 50  0001 C CNN "MFN"
-F 5 "1727-4234-1-ND" H 1900 7550 50  0001 C CNN "MPN"
-F 6 "https://www.digikey.com/product-detail/en/nexperia-usa-inc/BAS40215/1727-4234-1-ND/2122190" H 2000 7650 50  0001 C CNN "PurchasingLink"
-	1    1700 7250
-	-1   0    0    1   
-$EndComp
 Wire Wire Line
 	1850 7250 1950 7250
 Connection ~ 1850 5400
 Wire Wire Line
 	1850 5400 2150 5400
-$Comp
-L formula:R_55 R32
-U 1 1 60FD266E
-P 1300 7250
-F 0 "R32" H 1300 7475 50  0000 C CNN
-F 1 "R_55" H 1300 7384 50  0000 C CNN
-F 2 "" V 1300 7250 50  0001 C CNN
-F 3 "" V 1300 7250 50  0001 C CNN
-	1    1300 7250
-	1    0    0    -1  
-$EndComp
 Wire Wire Line
 	1450 7250 1550 7250
 Wire Wire Line
@@ -1231,10 +1162,8 @@ Text HLabel 10000 1950 2    50   Output ~ 0
 LV_I_SENSE
 Wire Wire Line
 	9950 1950 10000 1950
-Text HLabel 6200 4150 2    50   Input ~ 0
+Text HLabel 6400 4400 0    50   Input ~ 0
 MCU_DAC
-Wire Wire Line
-	6150 4150 6200 4150
 Text HLabel 8450 5750 2    50   Input ~ 0
 ~MCU_OFFSET_SHDN
 Text HLabel 1100 7250 0    50   Input ~ 0
@@ -1402,4 +1331,74 @@ Wire Wire Line
 	7650 4900 7700 4900
 Wire Wire Line
 	8050 3150 8000 3150
+$Comp
+L formula:R_100 R32
+U 1 1 60632281
+P 1300 7250
+F 0 "R32" V 1093 7250 50  0000 C CNN
+F 1 "R_100" V 1184 7250 50  0000 C CNN
+F 2 "footprints:R_0805_OEM" H 500 7400 50  0001 C CNN
+F 3 "https://www.seielect.com/Catalog/SEI-rncp.pdf" H 1000 7750 50  0001 C CNN
+F 4 "DK" H 1300 7250 60  0001 C CNN "MFN"
+F 5 "RNCP0805FTD100RCT-ND" H 650 7500 60  0001 C CNN "MPN"
+F 6 "https://www.digikey.com/products/en?keywords=RNCP0805FTD100RCT-ND" H 1780 7650 60  0001 C CNN "PurchasingLink"
+	1    1300 7250
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	6400 4400 6600 4400
+$Comp
+L formula:1N4148WSTR D7
+U 1 1 60678A17
+P 1700 7250
+F 0 "D7" H 1700 7475 50  0000 C CNN
+F 1 "1N4148WSTR" H 1700 7384 50  0000 C CNN
+F 2 "formula:SOD-323" H 1650 7400 50  0001 C CNN
+F 3 "http://www.smc-diodes.com/propdf/1N4148WS%20N0572%20REV.B.pdf" H 1650 7400 50  0001 C CNN
+F 4 "https://www.digikey.com/en/products/detail/smc-diode-solutions/1N4148WSTR/6022449" H 1700 7450 50  0001 C CNN "Purchasing Link"
+F 5 "SMC Diode" H 1400 7500 50  0001 C CNN "MFN"
+F 6 "1N4148WSTR" H 1700 7650 50  0001 C CNN "MPN"
+	1    1700 7250
+	1    0    0    -1  
+$EndComp
+$Comp
+L formula:CPC1117NTR U7
+U 1 1 6067B7A7
+P 2650 1850
+F 0 "U7" H 2650 2217 50  0000 C CNN
+F 1 "CPC1117NTR" H 2650 2126 50  0000 C CNN
+F 2 "footprints:SOIC254P610X218-4N" H 2650 1850 50  0001 L BNN
+F 3 "https://www.ixysic.com/home/pdfs.nsf/www/CPC1117N.pdf/$file/CPC1117N.pdf" H 2650 1850 50  0001 L BNN
+F 4 "IXYS" H 2650 1850 50  0001 L BNN "MANUFACTURER"
+F 5 "https://www.digikey.com/en/products/detail/ixys-integrated-circuits-division/CPC1117NTR/1277122" H 2650 1850 50  0001 C CNN "Purchasing"
+	1    2650 1850
+	1    0    0    -1  
+$EndComp
+$Comp
+L formula:FQD2N60CTM Q4
+U 1 1 6067C482
+P 4250 2000
+F 0 "Q4" H 4356 2096 50  0000 L CNN
+F 1 "FQD2N60CTM" H 4356 2005 50  0000 L CNN
+F 2 "footprints:DPAK229P990X239-4N" H 4210 2510 50  0001 C CNN
+F 3 "https://www.onsemi.com/pub/Collateral/FQU2N60C-D.PDF" H 4220 2050 50  0001 C CNN
+F 4 "ON Semiconductor" H 4220 2050 50  0001 C CNN "MFN"
+F 5 "FDB33N25TM" H 4220 2050 50  0001 C CNN "MPN"
+F 6 "https://www.digikey.com/en/products/detail/on-semiconductor/FQD2N60CTM/1053993" H 4220 2050 50  0001 C CNN "Purchasing Link"
+	1    4250 2000
+	1    0    0    -1  
+$EndComp
+$Comp
+L formula:CONN_01x02 J6
+U 1 1 6063246B
+P 1350 3100
+F 0 "J6" V 1550 3150 50  0000 R CNN
+F 1 "CONN_01x02" V 1450 3150 50  0000 R CNN
+F 2 "footprints:PinHeader_1x02_P2.54mm_Vertical" H 1250 3100 50  0001 C CNN
+F 3 "https://katalog.we-online.de/em/datasheet/6130xx11121.pdf" H 1350 3200 50  0001 C CNN
+F 4 "DK" H 1450 3300 50  0001 C CNN "MFN"
+F 5 "732-5315-ND" H 1550 3400 50  0001 C CNN "MPN"
+	1    1350 3100
+	0    -1   -1   0   
+$EndComp
 $EndSCHEMATC

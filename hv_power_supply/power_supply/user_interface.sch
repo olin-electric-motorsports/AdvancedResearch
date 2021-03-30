@@ -14,17 +14,6 @@ Comment3 ""
 Comment4 ""
 $EndDescr
 $Comp
-L formula:EMS22A50-B28-LS6 SW2
-U 1 1 5FA46AB9
-P 9900 6000
-F 0 "SW2" H 9900 6275 50  0000 C CNN
-F 1 "EMS22A50-B28-LS6" H 9900 6184 50  0000 C CNN
-F 2 "" H 9900 6300 50  0001 C CNN
-F 3 "https://www.bourns.com/docs/Product-Datasheets/EMS22A.pdf" H 9900 6300 50  0001 C CNN
-	1    9900 6000
-	1    0    0    -1  
-$EndComp
-$Comp
 L power:GND #PWR024
 U 1 1 5FA522F4
 P 4450 4750
@@ -138,90 +127,8 @@ Text Label 2350 5150 2    50   ~ 0
 PROGRAMMINGLED1
 Text Label 2350 5550 2    50   ~ 0
 PROGRAMMINGLED2
-$Comp
-L power:VCC #PWR044
-U 1 1 5FA6F6D3
-P 10300 6000
-F 0 "#PWR044" H 10300 5850 50  0001 C CNN
-F 1 "VCC" H 10315 6173 50  0000 C CNN
-F 2 "" H 10300 6000 50  0001 C CNN
-F 3 "" H 10300 6000 50  0001 C CNN
-	1    10300 6000
-	1    0    0    -1  
-$EndComp
-$Comp
-L power:GND #PWR045
-U 1 1 5FA70E3A
-P 10300 6150
-F 0 "#PWR045" H 10300 5900 50  0001 C CNN
-F 1 "GND" H 10305 5977 50  0000 C CNN
-F 2 "" H 10300 6150 50  0001 C CNN
-F 3 "" H 10300 6150 50  0001 C CNN
-	1    10300 6150
-	1    0    0    -1  
-$EndComp
-Text Label 9600 6250 2    50   ~ 0
-D_OUTPUT_V
-Text Label 9600 6150 2    50   ~ 0
-CLK
-Text Label 9600 6050 2    50   ~ 0
-CS
-$Comp
-L formula:EMS22A50-B28-LS6 SW1
-U 1 1 5FA61948
-P 9900 5000
-F 0 "SW1" H 9900 5275 50  0000 C CNN
-F 1 "EMS22A50-B28-LS6" H 9900 5184 50  0000 C CNN
-F 2 "" H 9900 5300 50  0001 C CNN
-F 3 "https://www.bourns.com/docs/Product-Datasheets/EMS22A.pdf" H 9900 5300 50  0001 C CNN
-	1    9900 5000
-	1    0    0    -1  
-$EndComp
-$Comp
-L power:VCC #PWR046
-U 1 1 5FA6194E
-P 10350 5000
-F 0 "#PWR046" H 10350 4850 50  0001 C CNN
-F 1 "VCC" H 10365 5173 50  0000 C CNN
-F 2 "" H 10350 5000 50  0001 C CNN
-F 3 "" H 10350 5000 50  0001 C CNN
-	1    10350 5000
-	1    0    0    -1  
-$EndComp
-$Comp
-L power:GND #PWR047
-U 1 1 5FA61954
-P 10350 5150
-F 0 "#PWR047" H 10350 4900 50  0001 C CNN
-F 1 "GND" H 10355 4977 50  0000 C CNN
-F 2 "" H 10350 5150 50  0001 C CNN
-F 3 "" H 10350 5150 50  0001 C CNN
-	1    10350 5150
-	1    0    0    -1  
-$EndComp
-Text Label 9600 5150 2    50   ~ 0
-CLK
-Text Label 9600 5050 2    50   ~ 0
-CS
-$Comp
-L power:GND #PWR043
-U 1 1 5FA6195F
-P 9350 4950
-F 0 "#PWR043" H 9350 4700 50  0001 C CNN
-F 1 "GND" H 9355 4777 50  0000 C CNN
-F 2 "" H 9350 4950 50  0001 C CNN
-F 3 "" H 9350 4950 50  0001 C CNN
-	1    9350 4950
-	1    0    0    -1  
-$EndComp
 Text Notes 2310 1060 0    50   ~ 0
 ATMEGA16M1\n
-Text Notes 9210 5620 0    50   ~ 0
-ROTARY ENCODER FOR VOLTAGE\n
-Text Notes 9300 4710 0    50   ~ 0
-ROTARY ENCODER FOR CURRENT\n\n
-Text Notes 8970 930  0    50   ~ 0
-7 SEGMENT DISPLAY FOR VOLTAGE\n
 $Comp
 L power:VCC #PWR027
 U 1 1 5FA56CA3
@@ -320,50 +227,6 @@ Text Notes 5020 6660 0    50   ~ 0
 ATMEGA16M1 PROGRAMMING HEADER
 Text Label 4100 2500 0    50   ~ 0
 FAULT_SIGNAL
-$Comp
-L formula:COM-11441 U4
-U 1 1 603B1F69
-P 9650 1750
-F 0 "U4" H 9650 2417 50  0000 C CNN
-F 1 "COM-11441" H 9650 2326 50  0000 C CNN
-F 2 "" H 9650 1150 50  0001 C CNN
-F 3 "https://github.com/sparkfun/Serial7SegmentDisplay/wiki/Serial-7-Segment-Display-Datasheet" H 9220 1780 50  0001 C CNN
-	1    9650 1750
-	1    0    0    -1  
-$EndComp
-$Comp
-L power:VCC #PWR039
-U 1 1 603B43F7
-P 8300 2050
-F 0 "#PWR039" H 8300 1900 50  0001 C CNN
-F 1 "VCC" H 8315 2223 50  0000 C CNN
-F 2 "" H 8300 2050 50  0001 C CNN
-F 3 "" H 8300 2050 50  0001 C CNN
-	1    8300 2050
-	1    0    0    -1  
-$EndComp
-$Comp
-L power:GND #PWR041
-U 1 1 603ADD9F
-P 8500 2200
-F 0 "#PWR041" H 8500 1950 50  0001 C CNN
-F 1 "GND" H 8505 2027 50  0000 C CNN
-F 2 "" H 8500 2200 50  0001 C CNN
-F 3 "" H 8500 2200 50  0001 C CNN
-	1    8500 2200
-	1    0    0    -1  
-$EndComp
-Text Label 8550 1550 2    50   ~ 0
-SS_V
-Text Label 8550 1650 2    50   ~ 0
-SDI
-Text Label 8550 1850 2    50   ~ 0
-SCK
-NoConn ~ 10750 1400
-NoConn ~ 10750 1500
-NoConn ~ 8550 1450
-NoConn ~ 8550 1750
-NoConn ~ 8550 1950
 Text Label 3700 1800 0    50   ~ 0
 CS
 $Comp
@@ -372,7 +235,7 @@ U 1 1 603D61B6
 P 7250 1900
 F 0 "J5" H 7358 2337 60  0000 C CNN
 F 1 "UF_5_VT" H 7358 2231 60  0000 C CNN
-F 2 "" H 7150 2150 60  0001 C CNN
+F 2 "formula:Ultrafit_5" H 7150 2150 60  0001 C CNN
 F 3 "http://www.literature.molex.com/SQLImages/kelmscott/Molex/PDF_Images/987651-1008.pdf" H 7250 2250 60  0001 C CNN
 F 4 "DK" H 7250 1900 60  0001 C CNN "MFN"
 F 5 "WM11667-ND" H 7250 1900 60  0001 C CNN "MPN"
@@ -435,48 +298,13 @@ F 3 "" H 6450 1400 50  0001 C CNN
 $EndComp
 Text Notes 5820 1020 0    50   ~ 0
 CONNECTOR FOR 7 SEGMENT DISPLAY VOLTAGE
-Text Notes 8960 2670 0    50   ~ 0
-7 SEGMENT DISPLAY FOR CURRENT\n
-$Comp
-L power:VCC #PWR040
-U 1 1 603E739B
-P 8350 3800
-F 0 "#PWR040" H 8350 3650 50  0001 C CNN
-F 1 "VCC" H 8365 3973 50  0000 C CNN
-F 2 "" H 8350 3800 50  0001 C CNN
-F 3 "" H 8350 3800 50  0001 C CNN
-	1    8350 3800
-	1    0    0    -1  
-$EndComp
-$Comp
-L power:GND #PWR042
-U 1 1 603E73A2
-P 8500 3900
-F 0 "#PWR042" H 8500 3650 50  0001 C CNN
-F 1 "GND" H 8505 3727 50  0000 C CNN
-F 2 "" H 8500 3900 50  0001 C CNN
-F 3 "" H 8500 3900 50  0001 C CNN
-	1    8500 3900
-	1    0    0    -1  
-$EndComp
-Text Label 8600 3300 2    50   ~ 0
-SS_I
-Text Label 8600 3400 2    50   ~ 0
-SDI
-Text Label 8600 3600 2    50   ~ 0
-SCK
-NoConn ~ 10800 3150
-NoConn ~ 10800 3250
-NoConn ~ 8600 3200
-NoConn ~ 8600 3500
-NoConn ~ 8600 3700
 $Comp
 L formula:UF_5_VT J3
 U 1 1 603EDB72
 P 7100 3450
 F 0 "J3" H 7208 3887 60  0000 C CNN
 F 1 "UF_5_VT" H 7208 3781 60  0000 C CNN
-F 2 "" H 7000 3700 60  0001 C CNN
+F 2 "formula:Ultrafit_5" H 7000 3700 60  0001 C CNN
 F 3 "http://www.literature.molex.com/SQLImages/kelmscott/Molex/PDF_Images/987651-1008.pdf" H 7100 3800 60  0001 C CNN
 F 4 "DK" H 7100 3450 60  0001 C CNN "MFN"
 F 5 "WM11667-ND" H 7100 3450 60  0001 C CNN "MPN"
@@ -566,7 +394,7 @@ U 1 1 60446245
 P 7150 5650
 F 0 "J4" H 7258 6087 60  0000 C CNN
 F 1 "UF_5_VT" H 7258 5981 60  0000 C CNN
-F 2 "" H 7050 5900 60  0001 C CNN
+F 2 "formula:Ultrafit_5" H 7050 5900 60  0001 C CNN
 F 3 "http://www.literature.molex.com/SQLImages/kelmscott/Molex/PDF_Images/987651-1008.pdf" H 7150 6000 60  0001 C CNN
 F 4 "DK" H 7150 5650 60  0001 C CNN "MFN"
 F 5 "WM11667-ND" H 7150 5650 60  0001 C CNN "MPN"
@@ -628,20 +456,6 @@ F 3 "" H 6250 5150 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L formula:Q8P7BXXG02E D5
-U 1 1 605503BA
-P 3850 6650
-F 0 "D5" H 3843 6866 50  0000 C CNN
-F 1 "Q8P7BXXG02E" H 3843 6775 50  0000 C CNN
-F 2 "" H 3750 6650 50  0001 C CNN
-F 3 "https://www.apem.com/us/index.php?controller=attachment&id_attachment=1780" H 3850 6750 50  0001 C CNN
-F 4 "DK" H 3850 6650 60  0001 C CNN "MFN"
-F 5 "Q8P7BXXG02E" H 3850 6650 60  0001 C CNN "MPN"
-F 6 "https://www.digikey.com/en/products/detail/apem-inc/Q8P7BXXG02E/3153099" H 4250 7150 60  0001 C CNN "PurchasingLink"
-	1    3850 6650
-	-1   0    0    1   
-$EndComp
-$Comp
 L formula:R_200 R23
 U 1 1 6055DE7E
 P 2000 6600
@@ -694,21 +508,7 @@ F 6 "https://www.digikey.com/product-detail/en/wurth-electronics-inc/61300411121
 	1    2550 6700
 	1    0    0    -1  
 $EndComp
-$Comp
-L formula:Q8P7BXXG02E D6
-U 1 1 60579F84
-P 3850 7050
-F 0 "D6" H 3843 7266 50  0000 C CNN
-F 1 "Q8P7BXXG02E" H 3843 7175 50  0000 C CNN
-F 2 "" H 3750 7050 50  0001 C CNN
-F 3 "https://www.apem.com/us/index.php?controller=attachment&id_attachment=1780" H 3850 7150 50  0001 C CNN
-F 4 "DK" H 3850 7050 60  0001 C CNN "MFN"
-F 5 "Q8P7BXXG02E" H 3850 7050 60  0001 C CNN "MPN"
-F 6 "https://www.digikey.com/en/products/detail/apem-inc/Q8P7BXXG02E/3153099" H 4250 7550 60  0001 C CNN "PurchasingLink"
-	1    3850 7050
-	-1   0    0    1   
-$EndComp
-Text Notes 7430 5410 0    50   ~ 0
+Text Notes 7180 5210 0    50   ~ 0
 How to wire:\n1. Connect DO & DI for rotary encoders. \n2. Connect VCC, CS, CLK, GND together.\n3. Connect DO for the second encoder\nto the connector.
 Text HLabel 750  1500 0    50   BiDi ~ 0
 +5V
@@ -967,36 +767,12 @@ Wire Wire Line
 Wire Wire Line
 	2150 6600 2350 6600
 Wire Wire Line
-	4200 7050 4000 7050
-Wire Wire Line
-	3500 7050 3700 7050
-Wire Wire Line
-	3500 6650 3700 6650
-Wire Wire Line
-	4000 6650 4200 6650
-Wire Wire Line
 	5850 5450 6250 5450
 Wire Wire Line
 	6250 5450 6800 5450
 Connection ~ 6250 5450
 Wire Wire Line
 	6250 5750 6800 5750
-Wire Wire Line
-	10200 6150 10300 6150
-Wire Wire Line
-	10200 6000 10300 6000
-Wire Wire Line
-	9500 5950 9500 5250
-Wire Wire Line
-	9500 5250 9600 5250
-Wire Wire Line
-	9500 5950 9600 5950
-Wire Wire Line
-	9350 4950 9600 4950
-Wire Wire Line
-	10200 5000 10350 5000
-Wire Wire Line
-	10200 5150 10350 5150
 Wire Wire Line
 	6050 1700 6450 1700
 Wire Wire Line
@@ -1014,27 +790,6 @@ Wire Wire Line
 	6500 3550 6500 3500
 Wire Wire Line
 	6500 3550 6750 3550
-$Comp
-L formula:COM-11441 U5
-U 1 1 603E7395
-P 9700 3500
-F 0 "U5" H 9700 4167 50  0000 C CNN
-F 1 "COM-11441" H 9700 4076 50  0000 C CNN
-F 2 "" H 9700 2900 50  0001 C CNN
-F 3 "https://github.com/sparkfun/Serial7SegmentDisplay/wiki/Serial-7-Segment-Display-Datasheet" H 9270 3530 50  0001 C CNN
-	1    9700 3500
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	8500 3900 8600 3900
-Wire Wire Line
-	8350 3800 8600 3800
-Wire Wire Line
-	8550 2150 8500 2150
-Wire Wire Line
-	8500 2150 8500 2200
-Wire Wire Line
-	8300 2050 8550 2050
 Text HLabel 3750 2700 2    50   Output ~ 0
 HV_5V_CTRL
 Wire Wire Line
@@ -1071,18 +826,6 @@ Wire Notes Line
 	8100 800  8100 4150
 Text Notes 9140 820  0    50   ~ 0
 OFF BOARD DISPLAYS\n\n
-NoConn ~ 3500 6650
-NoConn ~ 4200 6650
-NoConn ~ 4200 7050
-NoConn ~ 3500 7050
-Text Notes 3400 6600 0    50   ~ 0
-J1, Pin1\n\n
-Text Notes 4040 6520 0    50   ~ 0
-J1, Pin2\n
-Text Notes 3390 7020 0    50   ~ 0
-J1, Pin3\n\n
-Text Notes 4050 7000 0    50   ~ 0
-J1, Pin4\n\n
 Text HLabel 3750 1700 2    50   Output ~ 0
 ~MCU_OFFSET_SHDN
 Wire Wire Line
@@ -1109,4 +852,16 @@ Text HLabel 3750 4000 2    50   Output ~ 0
 ~-5V_SHDN
 Wire Wire Line
 	3700 4000 3750 4000
+Wire Notes Line
+	8850 6400 10750 6400
+Wire Notes Line
+	10750 6400 10750 4450
+Wire Notes Line
+	10750 4450 8850 4450
+Wire Notes Line
+	8850 4450 8850 6400
+Text Notes 9390 4470 0    50   ~ 0
+OFF BOARD ROTARY ENCODERS\n\n
+Text Notes 8970 930  0    50   ~ 0
+7 SEGMENT DISPLAY FOR VOLTAGE\n
 $EndSCHEMATC

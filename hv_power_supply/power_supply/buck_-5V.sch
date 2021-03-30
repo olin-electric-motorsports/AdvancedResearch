@@ -14,17 +14,6 @@ Comment3 ""
 Comment4 ""
 $EndDescr
 $Comp
-L formula:LTC1983ES6-5#TRMPBF U6
-U 1 1 6057CB8B
-P 5200 3000
-F 0 "U6" H 5200 3465 50  0000 C CNN
-F 1 "LTC1983ES6-5#TRMPBF" H 5200 3374 50  0000 C CNN
-F 2 "" H 5200 3400 50  0001 C CNN
-F 3 "" H 5200 3400 50  0001 C CNN
-	1    5200 3000
-	1    0    0    -1  
-$EndComp
-$Comp
 L formula:C_10uF C_IN2
 U 1 1 60587A61
 P 4350 3000
@@ -125,4 +114,18 @@ Wire Wire Line
 	4750 3450 4050 3450
 Text HLabel 4050 3450 0    50   Input ~ 0
 ~-5V_SHDN
+$Comp
+L formula:LTC1983ES6-5#TRMPBF U6
+U 1 1 6063998C
+P 5200 3000
+F 0 "U6" H 5200 3465 50  0000 C CNN
+F 1 "LTC1983ES6-5#TRMPBF" H 5200 3374 50  0000 C CNN
+F 2 "footprints:LTC1983ES6-5#TRMPBF" H 5200 3400 50  0001 C CNN
+F 3 "https://www.analog.com/media/en/technical-documentation/data-sheets/1983fc.pdf" H 5200 3400 50  0001 C CNN
+F 4 "https://www.digikey.com/en/products/detail/analog-devices-inc/LTC1983ES6-5-TRMPBF/1115931" H 5200 3000 50  0001 C CNN "Purchasing Link"
+F 5 "Analog Devices Inc." H 5200 3000 50  0001 C CNN "Manufacturer"
+F 6 "LTC1983ES6-5#TRMPBF" H 5200 3000 50  0001 C CNN "Manufacturer Product Number"
+	1    5200 3000
+	1    0    0    -1  
+$EndComp
 $EndSCHEMATC
