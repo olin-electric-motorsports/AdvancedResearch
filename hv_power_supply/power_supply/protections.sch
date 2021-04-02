@@ -236,22 +236,22 @@ Wire Wire Line
 	1800 3950 1800 3800
 Wire Wire Line
 	1800 3800 2100 3800
-Text HLabel 3300 3200 2    50   BiDi ~ 0
+Text HLabel 3300 4000 2    50   BiDi ~ 0
 HV+
-Text HLabel 5000 4000 2    50   Output ~ 0
+Text HLabel 5200 3200 2    50   Output ~ 0
 HVOut
-Text Notes 2700 4200 0    50   ~ 0
+Text Notes 2650 3650 0    50   ~ 0
 Normally Open SSR
 $Comp
 L formula:F_1A_600V F1
 U 1 1 60398FFC
-P 3600 4000
-F 0 "F1" H 3600 4225 50  0000 C CNN
-F 1 "F_1A_600V" H 3600 4134 50  0000 C CNN
-F 2 "footprints:Fuse_1A_600V" H 3600 3700 50  0001 C CNN
-F 3 "https://media.digikey.com/pdf/Data%20Sheets/Bel%20Fuse%20PDFs/0ADAC_0ADAP_Series.pdf" H 3550 4000 50  0001 C CNN
-F 4 "https://www.digikey.com/product-detail/en/bel-fuse-inc/0ADAP1000-RE/507-2220-ND/8028479" H 3800 4350 50  0001 C CNN "PurchasingLink"
-	1    3600 4000
+P 3600 3200
+F 0 "F1" H 3600 3425 50  0000 C CNN
+F 1 "F_1A_600V" H 3600 3334 50  0000 C CNN
+F 2 "footprints:Fuse_1A_600V" H 3600 2900 50  0001 C CNN
+F 3 "https://media.digikey.com/pdf/Data%20Sheets/Bel%20Fuse%20PDFs/0ADAC_0ADAP_Series.pdf" H 3550 3200 50  0001 C CNN
+F 4 "https://www.digikey.com/product-detail/en/bel-fuse-inc/0ADAP1000-RE/507-2220-ND/8028479" H 3800 3550 50  0001 C CNN "PurchasingLink"
+	1    3600 3200
 	1    0    0    -1  
 $EndComp
 Text Notes 1650 3600 0    20   ~ 0
@@ -725,7 +725,7 @@ F 4 "Broadcom" H 2600 6200 50  0001 C CNN "MFN"
 F 5 "ACPL-C79B-500E" H 2600 6450 50  0001 C CNN "MPN"
 F 6 "https://www.digikey.com/en/products/detail/broadcom-limited/ACPL-C79B-500E/2347208" H 2650 6300 50  0001 C CNN "Purchasing Link"
 	1    2650 5500
-	1    0    0    -1  
+	-1   0    0    -1  
 $EndComp
 Wire Wire Line
 	3350 7450 3500 7450
@@ -815,20 +815,18 @@ F 6 "https://www.digikey.com/product-detail/en/samsung-electro-mechanics/CL10B10
 	1    3500 6200
 	1    0    0    -1  
 $EndComp
-Wire Wire Line
-	4700 5100 5200 5100
 $Comp
 L formula:C_100nF C27
 U 1 1 60FD25AC
-P 4700 5250
-F 0 "C27" H 4815 5296 50  0000 L CNN
-F 1 "C_100nF" H 4815 5205 50  0000 L CNN
-F 2 "footprints:C_0603_1608Metric" H 4738 5100 50  0001 C CNN
-F 3 "http://www.samsungsem.com/kr/support/product-search/mlcc/CL10A475KQ8NNNC.jsp" H 4725 5350 50  0001 C CNN
-F 4 "DK" H 4700 5250 60  0001 C CNN "MFN"
-F 5 "1276-6717-1-ND" H 4700 5250 60  0001 C CNN "MPN"
-F 6 "https://www.digikey.com/product-detail/en/samsung-electro-mechanics/CL10B104KA8WPNC/1276-6717-1-ND/5961576" H 5125 5750 60  0001 C CNN "PurchasingLink"
-	1    4700 5250
+P 4900 5250
+F 0 "C27" H 5015 5296 50  0000 L CNN
+F 1 "C_100nF" H 5015 5205 50  0000 L CNN
+F 2 "footprints:C_0603_1608Metric" H 4938 5100 50  0001 C CNN
+F 3 "http://www.samsungsem.com/kr/support/product-search/mlcc/CL10A475KQ8NNNC.jsp" H 4925 5350 50  0001 C CNN
+F 4 "DK" H 4900 5250 60  0001 C CNN "MFN"
+F 5 "1276-6717-1-ND" H 4900 5250 60  0001 C CNN "MPN"
+F 6 "https://www.digikey.com/product-detail/en/samsung-electro-mechanics/CL10B104KA8WPNC/1276-6717-1-ND/5961576" H 5325 5750 60  0001 C CNN "PurchasingLink"
+	1    4900 5250
 	1    0    0    -1  
 $EndComp
 Text Label 5200 5100 0    50   ~ 0
@@ -1049,29 +1047,29 @@ Connection ~ 7900 5100
 $Comp
 L formula:R_10 R40
 U 1 1 60FD2651
-P 4450 4200
-F 0 "R40" H 4250 4250 50  0000 L CNN
-F 1 "R_10" H 4200 4150 50  0000 L CNN
-F 2 "footprints:R_0805_OEM" H 4380 4200 50  0001 C CNN
-F 3 "" H 4530 4200 50  0001 C CNN
-F 4 "Panasonic Electronic Components" H 4450 4200 60  0001 C CNN "MFN"
-F 5 "ERJ-P06F10R0V" H 4450 4200 60  0001 C CNN "MPN"
-F 6 "https://www.digikey.com/en/products/detail/panasonic-electronic-components/ERJ-P06F10R0V/5722444" H 4930 4600 60  0001 C CNN "PurchasingLink"
-	1    4450 4200
+P 4650 3400
+F 0 "R40" H 4450 3450 50  0000 L CNN
+F 1 "R_10" H 4400 3350 50  0000 L CNN
+F 2 "footprints:R_0805_OEM" H 4580 3400 50  0001 C CNN
+F 3 "" H 4730 3400 50  0001 C CNN
+F 4 "Panasonic Electronic Components" H 4650 3400 60  0001 C CNN "MFN"
+F 5 "ERJ-P06F10R0V" H 4650 3400 60  0001 C CNN "MPN"
+F 6 "https://www.digikey.com/en/products/detail/panasonic-electronic-components/ERJ-P06F10R0V/5722444" H 5130 3800 60  0001 C CNN "PurchasingLink"
+	1    4650 3400
 	-1   0    0    1   
 $EndComp
 $Comp
 L formula:R_10 R37
 U 1 1 60FD265A
-P 4050 4200
-F 0 "R37" H 4150 4200 50  0000 L CNN
-F 1 "R_10" H 4150 4300 50  0000 L CNN
-F 2 "footprints:R_0805_OEM" H 3980 4200 50  0001 C CNN
-F 3 "" H 4130 4200 50  0001 C CNN
-F 4 "Panasonic Electronic Components" H 4050 4200 60  0001 C CNN "MFN"
-F 5 "ERJ-P06F10R0V" H 4050 4200 60  0001 C CNN "MPN"
-F 6 "https://www.digikey.com/en/products/detail/panasonic-electronic-components/ERJ-P06F10R0V/5722444" H 4530 4600 60  0001 C CNN "PurchasingLink"
-	1    4050 4200
+P 4250 3400
+F 0 "R37" H 4350 3400 50  0000 L CNN
+F 1 "R_10" H 4350 3500 50  0000 L CNN
+F 2 "footprints:R_0805_OEM" H 4180 3400 50  0001 C CNN
+F 3 "" H 4330 3400 50  0001 C CNN
+F 4 "Panasonic Electronic Components" H 4250 3400 60  0001 C CNN "MFN"
+F 5 "ERJ-P06F10R0V" H 4250 3400 60  0001 C CNN "MPN"
+F 6 "https://www.digikey.com/en/products/detail/panasonic-electronic-components/ERJ-P06F10R0V/5722444" H 4730 3800 60  0001 C CNN "PurchasingLink"
+	1    4250 3400
 	-1   0    0    1   
 $EndComp
 Wire Wire Line
@@ -1116,11 +1114,10 @@ HV-
 Wire Wire Line
 	3500 6400 3500 6350
 Connection ~ 3500 6350
-Text HLabel 4700 5450 3    50   BiDi ~ 0
+Text HLabel 4900 5450 3    50   BiDi ~ 0
 HV-
 Wire Wire Line
-	4700 5450 4700 5400
-Connection ~ 4700 5400
+	4900 5450 4900 5400
 Text HLabel 7700 4100 2    50   BiDi ~ 0
 +5V
 Wire Wire Line
@@ -1173,41 +1170,36 @@ Text HLabel 1100 3300 0    50   BiDi ~ 0
 $Comp
 L formula:C_22nF C26
 U 1 1 6075A2B6
-P 4250 4500
-F 0 "C26" V 4400 4450 50  0000 L CNN
-F 1 "C_22nF" V 4100 4400 50  0000 L CNN
-F 2 "footprints:C_0805_OEM" H 4288 4350 50  0001 C CNN
-F 3 "https://content.kemet.com/datasheets/KEM_C1091_C0G_ESD.pdf" H 4275 4600 50  0001 C CNN
-F 4 "KEMET" H 4250 4500 60  0001 C CNN "MFN"
-F 5 "C0805C223G3GEC7800" H 4250 4500 60  0001 C CNN "MPN"
-F 6 "https://www.digikey.com/en/products/detail/kemet/C0805C223G3GEC7800/8644469" H 4675 5000 60  0001 C CNN "PurchasingLink"
-	1    4250 4500
+P 4450 3750
+F 0 "C26" V 4600 3700 50  0000 L CNN
+F 1 "C_22nF" V 4300 3650 50  0000 L CNN
+F 2 "footprints:C_0805_OEM" H 4488 3600 50  0001 C CNN
+F 3 "https://content.kemet.com/datasheets/KEM_C1091_C0G_ESD.pdf" H 4475 3850 50  0001 C CNN
+F 4 "KEMET" H 4450 3750 60  0001 C CNN "MFN"
+F 5 "C0805C223G3GEC7800" H 4450 3750 60  0001 C CNN "MPN"
+F 6 "https://www.digikey.com/en/products/detail/kemet/C0805C223G3GEC7800/8644469" H 4875 4250 60  0001 C CNN "PurchasingLink"
+	1    4450 3750
 	0    -1   -1   0   
 $EndComp
 Wire Wire Line
-	4100 4500 4050 4500
+	4300 3750 4250 3750
 Wire Wire Line
-	4400 4500 4450 4500
+	4600 3750 4650 3750
 $Comp
 L formula:R_1_1W R39
 U 1 1 610B8730
-P 4250 4000
-F 0 "R39" H 4250 4225 50  0000 C CNN
-F 1 "R_1_1W" H 4250 4134 50  0000 C CNN
-F 2 "formula:R_2512_LARGE" H 4150 3800 50  0001 C CNN
-F 3 "https://www.vishay.com/docs/20035/dcrcwe3.pdf" V 4250 4000 50  0001 C CNN
-F 4 "https://www.digikey.com/en/products/detail/vishay-dale/CRCW25121R00FNEG/1173515" H 4250 3750 50  0001 C CNN "Link"
-	1    4250 4000
+P 4450 3200
+F 0 "R39" H 4450 3425 50  0000 C CNN
+F 1 "R_1_1W" H 4450 3334 50  0000 C CNN
+F 2 "formula:R_2512_LARGE" H 4350 3000 50  0001 C CNN
+F 3 "https://www.vishay.com/docs/20035/dcrcwe3.pdf" V 4450 3200 50  0001 C CNN
+F 4 "https://www.digikey.com/en/products/detail/vishay-dale/CRCW25121R00FNEG/1173515" H 4450 2950 50  0001 C CNN "Link"
+	1    4450 3200
 	1    0    0    -1  
 $EndComp
 Connection ~ 1900 6050
 Wire Wire Line
 	1900 6050 2150 6050
-Wire Wire Line
-	3150 5400 4700 5400
-Wire Wire Line
-	3150 5100 4700 5100
-Connection ~ 4700 5100
 Wire Wire Line
 	9950 2900 10550 2900
 Connection ~ 9950 2900
@@ -1215,31 +1207,23 @@ Wire Wire Line
 	9950 2750 10550 2750
 Connection ~ 9950 2750
 Wire Wire Line
-	3900 4000 4050 4000
+	4600 3200 4650 3200
 Wire Wire Line
-	4400 4000 4450 4000
+	4250 3200 4250 3250
+Connection ~ 4250 3200
 Wire Wire Line
-	4050 4000 4050 4050
-Connection ~ 4050 4000
+	4250 3200 4300 3200
 Wire Wire Line
-	4050 4000 4100 4000
+	4650 3250 4650 3200
+Connection ~ 4650 3200
 Wire Wire Line
-	4450 4050 4450 4000
-Connection ~ 4450 4000
-Wire Wire Line
-	4450 4000 5000 4000
-Wire Wire Line
-	4050 4500 4050 4350
-Wire Wire Line
-	4450 4500 4450 4350
+	4650 3200 5200 3200
 Wire Wire Line
 	1100 7250 1150 7250
 Wire Notes Line
 	550  750  5500 750 
 Wire Notes Line
 	950  2700 5050 2700
-Wire Notes Line
-	800  4700 5100 4700
 Wire Wire Line
 	3300 5950 3350 5950
 Text HLabel 3350 5950 2    50   Input ~ 0
@@ -1252,16 +1236,7 @@ Wire Notes Line
 	750  6650 5050 6650
 Text Notes 750  4850 0    50   ~ 0
 HV to LV Current Sensing
-Wire Wire Line
-	4050 5200 4050 4500
-Wire Wire Line
-	3150 5200 4050 5200
-Connection ~ 4050 4500
-Wire Wire Line
-	4450 4500 4450 5300
-Wire Wire Line
-	3150 5300 4450 5300
-Connection ~ 4450 4500
+Connection ~ 4250 3750
 Text Notes 750  5850 0    50   ~ 0
 HV to LV Voltage Sensing
 Text Notes 700  6800 0    50   ~ 0
@@ -1401,4 +1376,31 @@ F 5 "732-5315-ND" H 1550 3400 50  0001 C CNN "MPN"
 	1    1350 3100
 	0    -1   -1   0   
 $EndComp
+Wire Wire Line
+	4250 3550 4250 3750
+Wire Wire Line
+	4650 3550 4650 3750
+Wire Wire Line
+	4250 3750 4250 5200
+Connection ~ 4650 3750
+Wire Wire Line
+	4650 3750 4650 5300
+Wire Notes Line
+	800  4750 3950 4750
+Wire Notes Line
+	3950 4750 3950 2800
+Connection ~ 4900 5100
+Wire Wire Line
+	4900 5100 5200 5100
+Wire Wire Line
+	3150 5100 4900 5100
+Wire Wire Line
+	3150 5400 4900 5400
+Connection ~ 4900 5400
+Wire Wire Line
+	3150 5300 4650 5300
+Wire Wire Line
+	3150 5200 4250 5200
+Wire Wire Line
+	3900 3200 4250 3200
 $EndSCHEMATC
