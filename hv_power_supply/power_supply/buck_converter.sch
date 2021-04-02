@@ -3,7 +3,7 @@ EELAYER 30 0
 EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
-Sheet 3 5
+Sheet 3 6
 Title ""
 Date ""
 Rev ""
@@ -13,17 +13,6 @@ Comment2 ""
 Comment3 ""
 Comment4 ""
 $EndDescr
-$Comp
-L formula:MAXM15464 U2
-U 1 1 602D1F9A
-P 4800 3300
-F 0 "U2" H 4800 3865 50  0000 C CNN
-F 1 "MAXM15464" H 4800 3774 50  0000 C CNN
-F 2 "" H 4800 3900 50  0001 C CNN
-F 3 "" H 4800 3900 50  0001 C CNN
-	1    4800 3300
-	1    0    0    -1  
-$EndComp
 $Comp
 L formula:C_1uF C_IN1
 U 1 1 60344498
@@ -177,4 +166,18 @@ Connection ~ 3450 3050
 Text HLabel 2600 3050 0    50   BiDi ~ 0
 +24V
 NoConn ~ 5250 3500
+$Comp
+L formula:MAXM15464 U2
+U 1 1 6063BABC
+P 4800 3300
+F 0 "U2" H 4800 3865 50  0000 C CNN
+F 1 "MAXM15464" H 4800 3774 50  0000 C CNN
+F 2 "footprints:MAXM15464" H 4800 3900 50  0001 C CNN
+F 3 "https://media.digikey.com/pdf/Data%20Sheets/Maxim%20PDFs/MAXM15462-64_Rev4_10-26-18.pdf" H 4800 3900 50  0001 C CNN
+F 4 "https://www.digikey.com/en/products/detail/maxim-integrated/MAXM15464AMB/10209895" H 4800 3300 50  0001 C CNN "Purchasing Link"
+F 5 "Maxim Integrated" H 4800 3300 50  0001 C CNN "Manufacturer"
+F 6 "MAXM15464AMB+" H 4800 3300 50  0001 C CNN "MPN"
+	1    4800 3300
+	1    0    0    -1  
+$EndComp
 $EndSCHEMATC
