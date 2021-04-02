@@ -14,9 +14,17 @@ Author: Isabel Serrato
 #include <avr/interrupt.h>
 #include <util/delay.h>
 
+/* Interfece with Flyback */
 #define FAULT_SIG PC1
 #define DONE_SIG PC0
- 
+#define CHARGE_SIG PC6
+#define DAC PC7
+/* Interface with LV system */
+#define HV_5V_CTRL PC3
+#define LV_V_FB PD5
+#define LV_I_SENSE PD6
+
+
 
 Inputs = {
 	Rotaary_pos = (int) num;
