@@ -15,45 +15,109 @@ Author: Isabel Serrato
 #include <util/delay.h>
 
 /* Interfece with Flyback */
+
 #define FAULT_SIG PC1
 #define DONE_SIG PC0
+#define FAULT_SIG_PIN PINC
+#define DONE_SIG_PIN PINC
+
+//
 #define CHARGE_SIG PC6
 #define DAC PC7
 /* Interface with LV system */
 #define HV_5V_CTRL PC3
 #define LV_V_FB PD5
 #define LV_I_SENSE PD6
+/* Interface with Screen */
+#define SS_I PB0
+#define SD_I PB1
+#define SS_V PC0
+
+/* Interface with Encoders */
+#define CS PB3
+#define CLK PB4
+
+/* Interface with FB */
+#define FB_SHDN PB2
+
+#define UPDATE_STATUS                      0
 
 
+volatile uint8_t gFlag = 0x00;  // Global Flag
 
-Inputs = {
-	Rotaary_pos = (int) num;
-	Voltage =
-	Current =
+ISR(TIMER0_COMPA_vect) {
+	// Only send CAN msgs every 20 cycles
+	// Timer Counter0 compare match A
+ gTimerFlag |= _BV(UPDATE_STATUS);
+ }
+
+ void initTimer(void) {
+ 	TCCR0A = _BV(WGM01);    // Set up 8-bit timer in CTC mode
+ 	TCCR0B = 0x05;          // clkio/1024 prescaler
+ 	TIMSK0 |= _BV(OCIE0A);
+ 	OCR0A = 0x27;           //Makes timer run at ~100Hz
+ }
+
+
+void setup() {
+	initTimer();
+
 }
-get_inputs():
-	# Get inputs from system and save in local struct
-	# i.e read rot encoder and save pos to inputs struct
 
-Outputs = {
-	LCD = value to display
-	Feedback PIn control sig
+
+
+struct Input {
+	int rotary_pos;
+	uint8_t voltage;
+	uint8_t current;
+    uint8_t done_signal;
+    uint8_t fault_signal;
+} input;
+
+get_inputs(Input inputs) {
+	// Get inputs from system and save in local struct
+	// i.e read rot encoder and save pos to inputs struct
+    inputs.done_signal = bit_is_clear(DONE_SIG_PIN, DONE_SIG);
+    inputs.fault_signal = bit_is_clear(FAULT_SIG_PIN, FAULT_SIG);
+
 }
-send_outputs():
-	Communicate with LCD - Uart?
-	Analog write feedback pin value
 
 
-process_inputs():
-	#take inputs
-	Process - do logic
-	Write to outputs struct
+struct Output  {
+	int lcd_display_value;
+	int FB_pin_control;
+    uint8_t txdata;
+} output;
 
 
 
-Main():
-	setup()
-	While True:
-		get_inputs()
-		process_inputs()
-		send_ouputs()
+uint8_t rxdata;
+
+void send_outputs(Output output){
+	// Communicate with LCD - Uart?
+	// Analog write feedback pin value
+    SPI_transfer(output.txdata, &rxdata);
+}
+
+void process_inputs(Input input, Output ouput){
+	// take inputs
+	// Process - do logic
+	// Write to outputs struct
+}
+
+
+int main() {
+	setup();
+    struct Input inputs;
+    struct Output ouputs;
+	while(1) {
+		if(bit_is_set(gFlag, UPDATE_STATUS)) {
+			gFlag &= ~_BV(UPDATE_STATUS);  // Clear Flag
+
+			get_inputs(inputs);
+			process_inputs(inputs, outputs);
+			send_ouputs(outputs);
+		}
+	}
+
+}
