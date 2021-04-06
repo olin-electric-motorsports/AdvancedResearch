@@ -235,22 +235,31 @@ X A 2 150 0 100 L 50 50 1 1 P
 ENDDRAW
 ENDDEF
 #
-# formula_L_6.8uH
+# formula_L_10uH
 #
-DEF formula_L_6.8uH L 0 40 N N 1 F N
-F0 "L" 0 -50 50 H V C CNN
-F1 "formula_L_6.8uH" 0 100 50 H V C CNN
-F2 "footprints:L_100uH_OEM" -100 -200 50 H I C CNN
-F3 "" -100 -150 50 H I C CNN
-F4 "Digikey" 100 -200 50 H I C CNN "MFN"
-F5 "445-1539-1-ND" 0 250 50 H I C CNN "MPN"
+DEF formula_L_10uH L 0 65 N N 1 F N
+F0 "L" 275 200 60 H V C CNN
+F1 "formula_L_10uH" 275 -225 60 H V C CNN
+F2 "footprints:BournsInductor" 275 -285 60 H I C CNN
+F3 "" 0 0 60 H I C CNN
+F4 "https://www.digikey.com/en/products/detail/bourns-inc/SDE0805A-100M/5030885" 0 0 50 H I C CNN "Purchasing"
+F5 "SDE0805A-100M" 0 0 50 H I C CNN "MPN"
+F6 "Bourns Inc." 0 0 50 H I C CNN "MFN"
+$FPLIST
+ IND_805A-221K_BRN
+$ENDFPLIST
 DRAW
-A -60 0 20 1 1799 1 1 0 N -40 0 -80 0
-A -20 0 20 1 1799 1 1 0 N 0 0 -40 0
-A 20 0 20 1 1799 1 1 0 N 40 0 0 0
-A 60 0 20 1 1799 1 1 0 N 80 0 40 0
-X ~ 1 -100 0 20 R 50 50 1 1 P
-X ~ 2 100 0 20 L 50 50 1 1 P
+A 150 50 50 0 1800 1 1 8 N 100 50 200 50
+A 250 50 50 0 1800 1 1 8 N 200 50 300 50
+A 350 50 50 0 1800 1 1 8 N 300 50 400 50
+A 450 50 50 0 1800 1 1 8 N 400 50 500 50
+P 2 1 1 8 100 0 100 50 N
+P 2 1 1 8 200 0 200 50 N
+P 2 1 1 8 300 0 300 50 N
+P 2 1 1 8 400 0 400 50 N
+P 2 1 1 8 500 0 500 50 N
+X 1 1 600 0 100 L 59 59 1 1 U
+X 2 2 0 0 100 R 59 59 1 1 U
 ENDDRAW
 ENDDEF
 #
@@ -307,6 +316,27 @@ DRAW
 S -250 150 250 -200 0 1 0 f
 X 1 1 -450 50 200 R 50 50 1 1 I
 X 2 2 -450 -100 200 R 50 50 1 1 I
+ENDDRAW
+ENDDEF
+#
+# formula_R_1.54K
+#
+DEF formula_R_1.54K R 0 0 N Y 1 F N
+F0 "R" 80 0 50 V V C CNN
+F1 "formula_R_1.54K" -100 0 50 V V C CNN
+F2 "footprints:R_0805_OEM" -70 0 50 H I C CNN
+F3 "" 80 0 50 H I C CNN
+F4 "Panasonic" 0 0 50 H I C CNN "MFN"
+F5 "ERJ-6ENF1541V" 0 0 50 H I C CNN "MPN"
+F6 "https://www.digikey.com/en/products/detail/panasonic-electronic-components/ERJ-6ENF1541V/111317" 0 0 50 H I C CNN "Purchasing Link"
+$FPLIST
+ R_*
+ Resistor_*
+$ENDFPLIST
+DRAW
+S -40 -100 40 100 0 1 10 N
+X ~ 1 0 150 50 D 50 50 1 1 P
+X ~ 2 0 -150 50 U 50 50 1 1 P
 ENDDRAW
 ENDDEF
 #
@@ -491,6 +521,27 @@ X ~ 2 0 -150 50 U 50 50 1 1 P
 ENDDRAW
 ENDDEF
 #
+# formula_R_69.8K
+#
+DEF formula_R_69.8K R 0 0 N Y 1 F N
+F0 "R" 80 0 50 V V C CNN
+F1 "formula_R_69.8K" -100 0 50 V V C CNN
+F2 "footprints:R_0805_OEM" -70 0 50 H I C CNN
+F3 "" 80 0 50 H I C CNN
+F4 "ERJ-6ENF6982V" 0 0 50 H I C CNN "MPN"
+F5 "Panasonic Electronic Components" 0 0 50 H I C CNN "MFN"
+F6 "https://www.digikey.com/en/products/detail/panasonic-electronic-components/ERJ-6ENF6982V/111648" 0 0 50 H I C CNN "Purchasing"
+$FPLIST
+ R_*
+ Resistor_*
+$ENDFPLIST
+DRAW
+S -40 -100 40 100 0 1 10 N
+X ~ 1 0 150 50 D 50 50 1 1 P
+X ~ 2 0 -150 50 U 50 50 1 1 P
+ENDDRAW
+ENDDEF
+#
 # formula_R_75k
 #
 DEF formula_R_75k R 0 0 N Y 1 F N
@@ -498,9 +549,6 @@ F0 "R" 80 0 50 V V C CNN
 F1 "formula_R_75k" -100 0 50 V V C CNN
 F2 "footprints:R_0805_OEM" -70 0 50 H I C CNN
 F3 "" 80 0 50 H I C CNN
-F4 "DK" 0 0 50 H I C CNN "MFN"
-F5 "RK73H2ATTD7502F" 0 0 50 H I C CNN "MPN"
-F6 "https://www.digikey.com/en/products/detail/koa-speer-electronics-inc/RK73H2ATTD7502F/10234600" 0 0 50 H I C CNN "PurchasingLink"
 $FPLIST
  R_*
  Resistor_*
