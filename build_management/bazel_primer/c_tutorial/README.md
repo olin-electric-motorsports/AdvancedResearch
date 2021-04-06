@@ -1,4 +1,4 @@
-# Examples to build C++ code
+# Examples to build C code
 
 This package will showcase how to build C++ code in stages.
 
