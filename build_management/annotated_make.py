@@ -119,16 +119,16 @@ def get_input(board_list): #this function handles going through our listed board
 
     return board, flash #return the local 'board' and 'flash' variables to be used later
 
-def rebuild_flags():
-    global CFLAGS
-    global LDFLAG
-    global AVRFLAGS
+def rebuild_flags(): #this function updates the flags that will be used to push the C code to the microprocessor
+    global CFLAGS #we will be using and manipulating the global CFLAGS variable
+    global LDFLAG #we will be using and manipulating the global LDFLAG variable
+    global AVRFLAGS #we will be using and manipulating the global AVRFLAGS variable
 
-    CFLAGS = '-Os -g -mmcu=' + MCU + ' -std=' + COMPILER + ' -Wall -Werror '
-    LDFLAG = '-mmcu=' + MCU + ' -lm -std=' + COMPILER + ' -DF_CPU=' + F_CPU
-    AVRFLAGS = '-B5 -v -c' + PROGRAMMER + ' -p ' + MCU + ' -P ' + PORT
+    CFLAGS = '-Os -g -mmcu=' + MCU + ' -std=' + COMPILER + ' -Wall -Werror ' #we update the build flags to be based on the current microprocessor and compiler
+    LDFLAG = '-mmcu=' + MCU + ' -lm -std=' + COMPILER + ' -DF_CPU=' + F_CPU  #we update the linker flags to be based on the current microprocessor and compiler
+    AVRFLAGS = '-B5 -v -c' + PROGRAMMER + ' -p ' + MCU + ' -P ' + PORT  #we update the microcontroller points of contact to be based on the current microprocessor and compiler
 
-def build_boards_list(boards, head):
+def build_boards_list(boards, head): #momentarily changes the directory /boards to create a list of all the present boards, then changes the directory back to the head
     '''
     Goes through the /boards directory and adds each board to a list
     '''
@@ -142,7 +142,7 @@ def build_boards_list(boards, head):
     return boards
 
 
-def list_libs(head):
+def list_libs(head): #momentarily changes the directory /lib to create a list of all the present boards, then changes the directory back to the head
     print('\n/******* CREATING LIB FILES LIST *******/')
     change_directory('./lib/')
     libs = glob.glob('*')
@@ -150,7 +150,7 @@ def list_libs(head):
     return libs
 
 
-def create_outs(board, dir, head):
+def create_outs(board, dir, head): #checks to see if there is an /outs directory and creates one if it is absent
     t = os.listdir(dir)
     if 'outs' not in t:
         print('\n/******* CREATING OUTS DIRECTORY *******/')
@@ -159,17 +159,17 @@ def create_outs(board, dir, head):
         change_directory(head)
 
 
-def make_elf(board, dir, head):
+def make_elf(board, dir, head): #this function creates the .elf files
     print('\n/******* CREATING .ELF FILE *******/')
     change_directory(dir)
     c_files = glob.glob('*.c')
     h_files = glob.glob('*.h')
     write_command('ls')
-    out = CC + ' '
+    out = CC + ' ' #'CC' is the linux C Compiler command
     includes = ''
-    for item in c_files:
+    for item in c_files: #this loop creates a string with all the names of the .c files in the directory
         includes = includes + str(item) + (' ')
-    out = out + includes + CFLAGS + LDFLAG + ' -o ' + board + '.elf'
+    out = out + includes + CFLAGS + LDFLAG + ' -o ' + board + '.elf' #the out string is the command that we would type to compile the necessary c files into a .elf file had it been done manually
     if write_command(out) != 0:
         change_directory(head)
         return -1
@@ -179,7 +179,7 @@ def make_elf(board, dir, head):
     return 0
 
 
-def make_hex(board, dir, head):
+def make_hex(board, dir, head): #change to the /outs directory, acquire all the .elf files, convert the .elf to .hex
     '''
     Takes the elf output files and turns them into hex output
     '''
@@ -192,7 +192,7 @@ def make_hex(board, dir, head):
 
 
 
-def flash_board(board, dir, head):
+def flash_board(board, dir, head): #flash .hex file to board (this is the code that the board will run)
     '''
     Takes hex files and uses ARVDUDE w/ ARVFLAGS to flash code onto board
     '''
@@ -203,7 +203,7 @@ def flash_board(board, dir, head):
     write_command(out)      #Write command to systems
 
 
-def set_fuse():
+def set_fuse(): #set fuse pins on the board
     '''
     Uses ARVDUDE w/ ARVFLAGS to set the fuse
     '''
@@ -211,7 +211,7 @@ def set_fuse():
     out = 'sudo ' + AVRDUDE + ' ' + AVRFLAGS + ' -U lfuse:w:' + FUSE + ':m'
     write_command(out)            #Write command to system
 
-def empty_outs(board, dir, head):
+def empty_outs(board, dir, head): #this function cleans out the /outs directory so that there are no conflicts for the next time
     '''
     Goes into given directory and deletes all output files for a clean build
     '''
@@ -222,7 +222,7 @@ def empty_outs(board, dir, head):
         remove(f)
     change_directory(head)
 
-def check_build_date(board, dir, head):
+def check_build_date(board, dir, head): #confirms that the .c and .h files are concurrent with the .elf and .hex files to prevent outdated flashes to the MCU
     # TODO
     '''
     Checks to see whether or not the .c or .h files have been modified since the time
@@ -267,7 +267,7 @@ def make_all(head, boards):
     pass
 
 
-def copy_libs(head, board):
+def copy_libs(head, board): #copy /lib folder contents into /board
     '''
     This function gathers all the header files from the lib folder for building
     '''
@@ -275,7 +275,7 @@ def copy_libs(head, board):
     out  = 'cp lib/* %s'%board
     write_command(out)
 
-def clean_wkdr(head, board, libs):
+def clean_wkdr(head, board, libs): #clears /board in order to prepare for the next build
     '''
     This function cleans the working directory for building
     '''
@@ -294,22 +294,22 @@ if __name__ == "__main__":
     '''
     -Make argc input when file called and setup logic flow for flashing, clean, and board building
     '''
-    cwd = os.getcwd()
-    boards = './boards/'
+    cwd = os.getcwd() #cwd is set to be the current working dirctory
+    boards = './boards/' #boards is set to be the relative boards dirctory
     possible_boards = build_boards_list(boards, cwd)    # Get a list of all boards
 
-    board, flash = get_input(possible_boards)
+    board, flash = get_input(possible_boards) #board and flash are the list of the input choices for each of the possible flashable boards
 
-    while(board == 'all'):
+    while(board == 'all'): #make all needs a revamp
         #make_all(cwd, possible_boards)
         print("Make all deprecated. Please choose a specific board.")
         board, flash = get_input(possible_boards)
 
-    if(flash == 'fuses'):
+    if(flash == 'fuses'): #if we are just setting fuses and no code needs to be flashed, assign fuses and exit
         set_fuse()
         exit()
 
-    if board in possible_boards:
+    if board in possible_boards: #if the board is eligible and we are flashing, we used the functions from above to take .c and .h files and flash them to the given board
         dir = './boards/%s/'%board
 
         # check_build_date(board, dir, cwd)
