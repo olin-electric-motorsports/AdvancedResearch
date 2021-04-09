@@ -134,7 +134,7 @@ Wire Wire Line
 Wire Wire Line
 	1750 2900 1750 3000
 Text Label 1550 2750 0    50   ~ 0
-16KThermistor
+10KThermistor
 Text Label 2300 3950 0    50   ~ 0
 Battery+
 Text Notes 1050 3550 0    79   ~ 0
@@ -217,19 +217,6 @@ F 8 "VQFN-16 Texas Instruments" H 7600 2350 50  0001 L BNN "Field8"
 F 9 "Texas Instruments" H 7650 2350 50  0001 L BNN "Field9"
 F 10 "https://www.digikey.com/product-detail/en/texas-instruments/TPS61090RSAR/296-15259-1-ND/566899" H 8500 2400 50  0001 C CNN "Purchasing Link"
 	1    7900 1800
-	1    0    0    -1  
-$EndComp
-$Comp
-L formula:L_6.8uH L1
-U 1 1 5F93B925
-P 6850 1500
-F 0 "L1" H 6850 1685 50  0000 C CNN
-F 1 "L_6.8uH" H 6850 1594 50  0000 C CNN
-F 2 "footprints:L_100uH_OEM" H 6750 1300 50  0001 C CNN
-F 3 "" H 6750 1350 50  0001 C CNN
-F 4 "Digikey" H 6950 1300 50  0001 C CNN "MFN"
-F 5 "445-1539-1-ND" H 6850 1750 50  0001 C CNN "MPN"
-	1    6850 1500
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
@@ -875,8 +862,8 @@ Wire Wire Line
 	5650 5250 6550 5250
 Wire Wire Line
 	5650 5050 5950 5050
-Text Label 5950 5050 0    50   ~ 0
-16KThermistor
+Text Label 7150 5150 3    50   ~ 0
+10KThermistor
 NoConn ~ 5650 4750
 Wire Wire Line
 	6800 4550 5650 4550
@@ -921,39 +908,8 @@ F 6 "https://www.digikey.com/product-detail/en/microchip-technology/MCP73871T-2C
 $EndComp
 Text Notes 8100 4650 0    177  ~ 0
 Power Bank Project
-$Comp
-L formula:USB-A-S-X-X-SM2 J4
-U 1 1 5FB17265
-P 1900 1750
-F 0 "J4" H 1793 2307 50  0000 C CNN
-F 1 "USB-A-S-X-X-SM2" H 1793 2216 50  0000 C CNN
-F 2 "footprints:SAMTEC_USB-A-S-X-X-SM2" H 1900 1750 50  0001 L BNN
-F 3 "http://suddendocs.samtec.com/catalog_english/usb_a.pdf" H 1900 1750 50  0001 L BNN
-F 4 "Samtec" H 1900 1750 50  0001 L BNN "Field4"
-F 5 "Manufacturer Recommendations" H 1900 1750 50  0001 L BNN "Field5"
-F 6 "7.8 mm" H 1900 1750 50  0001 L BNN "Field6"
-F 7 "SAM14899CT-ND" H 1793 2125 50  0000 C CNN "MPN"
-	1    1900 1750
-	-1   0    0    -1  
-$EndComp
 Wire Wire Line
 	1500 5750 1650 5750
-$Comp
-L formula:USB-Micro-1981568-1 J2
-U 1 1 5FB0DC42
-P 1200 5450
-F 0 "J2" H 1257 6017 50  0000 C CNN
-F 1 "USB-Micro-1981568-1" H 1257 5926 50  0000 C CNN
-F 2 "footprints:TE_1981568-1" H 1000 6000 50  0001 L BNN
-F 3 "https://www.te.com/commerce/DocumentDelivery/DDEController?Action=srchrtrv&DocNm=1981568&DocType=Customer+Drawing&DocLang=English" H 1200 5450 50  0001 L BNN
-F 4 ".65 mm[.025 in]" H 1150 6000 50  0001 L BNN "Field4"
-F 5 "Connector" H 600 5800 50  0001 L BNN "Field5"
-F 6 "1981568-1" H 1100 6000 50  0001 L BNN "Field6"
-F 7 "1981568-1" H 1350 5900 50  0001 C CNN "MPN"
-F 8 "https://www.digikey.com/en/products/detail/te-connectivity-amp-connectors/1981568-1/1786248?s=N4IgTCBcDaIIwE4AccCsA2JBaOIC6AvkA" H 1000 6000 50  0001 C CNN "Purchasing Link"
-	1    1200 5450
-	1    0    0    -1  
-$EndComp
 Wire Wire Line
 	1500 5550 1650 5550
 Wire Wire Line
@@ -1052,8 +1008,6 @@ Wire Wire Line
 	4050 4000 4050 4250
 Wire Wire Line
 	5650 4000 5650 4250
-Wire Wire Line
-	2300 1850 2300 1950
 Wire Wire Line
 	5700 1800 6050 1800
 Wire Wire Line
@@ -1233,9 +1187,6 @@ Wire Wire Line
 Connection ~ 6300 1800
 Wire Wire Line
 	6300 1800 7200 1800
-Connection ~ 6000 1500
-Wire Wire Line
-	6000 1500 6750 1500
 Connection ~ 9700 1550
 Wire Wire Line
 	9700 1550 10000 1550
@@ -1269,12 +1220,6 @@ Wire Wire Line
 Connection ~ 7200 2350
 Wire Wire Line
 	7200 2350 7200 2450
-Connection ~ 2300 2050
-Wire Wire Line
-	2300 2050 2300 2200
-Connection ~ 2300 1950
-Wire Wire Line
-	2300 1950 2300 2050
 Connection ~ 5650 5600
 Wire Wire Line
 	5650 5600 5650 5700
@@ -1339,4 +1284,108 @@ F 6 "https://www.digikey.com/products/en/connectors-interconnects/rectangular-co
 	1    1700 6550
 	-1   0    0    1   
 $EndComp
+$Comp
+L formula:USB-A-S-X-X-SM2 J4
+U 1 1 606F9F4E
+P 1900 1750
+F 0 "J4" H 1793 1093 50  0000 C CNN
+F 1 "USB-A-S-X-X-SM2" H 1793 1184 50  0000 C CNN
+F 2 "footprints:SAMTEC_USB-A-S-X-X-SM2" H 1900 1750 50  0001 L BNN
+F 3 "" H 1900 1750 50  0001 L BNN
+F 4 "Samtec" H 1900 1750 50  0001 L BNN "Field4"
+F 5 "Manufacturer Recommendations" H 1900 1750 50  0001 L BNN "Field5"
+F 6 "7.8 mm" H 1900 1750 50  0001 L BNN "Field6"
+F 7 "SAM14899CT-ND" H 1793 1275 50  0000 C CNN "MPN"
+	1    1900 1750
+	-1   0    0    -1  
+$EndComp
+Wire Wire Line
+	2300 1850 2300 1950
+Wire Wire Line
+	2300 2050 2300 2200
+$Comp
+L formula:USB-Micro-1981568-1 J2
+U 1 1 60708014
+P 1200 5450
+F 0 "J2" H 1257 6017 50  0000 C CNN
+F 1 "USB-Micro-1981568-1" H 1257 5926 50  0000 C CNN
+F 2 "footprints:TE_1981568-1" H 1000 6000 50  0001 L BNN
+F 3 "" H 1200 5450 50  0001 L BNN
+F 4 ".65 mm[.025 in]" H 1150 6000 50  0001 L BNN "Field4"
+F 5 "Connector" H 600 5800 50  0001 L BNN "Field5"
+F 6 "1981568-1" H 1100 6000 50  0001 L BNN "Field6"
+F 7 "1981568-1" H 1350 5900 50  0001 C CNN "MPN"
+F 8 "https://www.digikey.com/en/products/detail/te-connectivity-amp-connectors/1981568-1/1786248?s=N4IgTCBcDaIIwE4AccCsA2JBaOIC6AvkA" H 1000 6000 50  0001 C CNN "Purchasing Link"
+	1    1200 5450
+	1    0    0    -1  
+$EndComp
+$Comp
+L formula:L_10uH L1
+U 1 1 6071EE73
+P 6350 1500
+F 0 "L1" H 6650 1738 60  0000 C CNN
+F 1 "L_10uH" H 6650 1632 60  0000 C CNN
+F 2 "footprints:BournsInductor" H 6625 1215 60  0001 C CNN
+F 3 "https://www.bourns.com/docs/Product-Datasheets/SDE0805A.pdf" H 6350 1500 60  0001 C CNN
+F 4 "https://www.digikey.com/en/products/detail/bourns-inc/SDE0805A-100M/5030885" H 6350 1500 50  0001 C CNN "Purchasing"
+F 5 "SDE0805A-100M" H 6350 1500 50  0001 C CNN "MPN"
+F 6 "Bourns Inc." H 6350 1500 50  0001 C CNN "MFN"
+	1    6350 1500
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	6350 1500 6000 1500
+Connection ~ 6000 1500
+$Comp
+L formula:R_1.54K R19
+U 1 1 6072D45A
+P 6100 5050
+F 0 "R19" V 5893 5050 50  0000 C CNN
+F 1 "R_1.54K" V 5984 5050 50  0000 C CNN
+F 2 "footprints:R_0805_OEM" H 6030 5050 50  0001 C CNN
+F 3 "https://industrial.panasonic.com/cdbs/www-data/pdf/RDA0000/AOA0000C304.pdf" H 6180 5050 50  0001 C CNN
+F 4 "Panasonic" H 6100 5050 50  0001 C CNN "MFN"
+F 5 "ERJ-6ENF1541V" H 6100 5050 50  0001 C CNN "MPN"
+F 6 "https://www.digikey.com/en/products/detail/panasonic-electronic-components/ERJ-6ENF1541V/111317" H 6100 5050 50  0001 C CNN "Purchasing Link"
+	1    6100 5050
+	0    1    1    0   
+$EndComp
+$Comp
+L formula:R_69.8K R20
+U 1 1 6072E92F
+P 7400 5300
+F 0 "R20" H 7470 5346 50  0000 L CNN
+F 1 "R_69.8K" H 7470 5255 50  0000 L CNN
+F 2 "footprints:R_0805_OEM" H 7330 5300 50  0001 C CNN
+F 3 "https://industrial.panasonic.com/cdbs/www-data/pdf/RDA0000/AOA0000C304.pdf" H 7480 5300 50  0001 C CNN
+F 4 "ERJ-6ENF6982V" H 7400 5300 50  0001 C CNN "MPN"
+F 5 "Panasonic Electronic Components" H 7400 5300 50  0001 C CNN "MFN"
+F 6 "https://www.digikey.com/en/products/detail/panasonic-electronic-components/ERJ-6ENF6982V/111648" H 7400 5300 50  0001 C CNN "Purchasing"
+	1    7400 5300
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	6250 5050 7150 5050
+Wire Wire Line
+	7400 5050 7400 5150
+Wire Wire Line
+	7150 5150 7150 5050
+Connection ~ 7150 5050
+Wire Wire Line
+	7150 5050 7400 5050
+$Comp
+L power:GND #PWR0117
+U 1 1 607413C5
+P 7400 5450
+F 0 "#PWR0117" H 7400 5200 50  0001 C CNN
+F 1 "GND" H 7405 5277 50  0000 C CNN
+F 2 "" H 7400 5450 50  0001 C CNN
+F 3 "" H 7400 5450 50  0001 C CNN
+	1    7400 5450
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2300 2050 2300 1950
+Connection ~ 2300 2050
+Connection ~ 2300 1950
 $EndSCHEMATC
