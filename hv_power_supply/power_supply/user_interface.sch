@@ -41,7 +41,7 @@ $EndComp
 Text Label 5500 7000 2    50   ~ 0
 MISO
 Text Label 5500 7100 2    50   ~ 0
-SCK
+SCK_PROG
 Text Label 5500 7200 2    50   ~ 0
 RESET
 Text Label 6000 7100 0    50   ~ 0
@@ -159,7 +159,7 @@ MISO
 Text Label 3700 3500 0    50   ~ 0
 MOSI
 Text Label 3700 3700 0    50   ~ 0
-SCK
+SCK_PROG
 Text Label 3700 2000 0    50   ~ 0
 D_OUTPUT_V
 Text Label 3700 1900 0    50   ~ 0
