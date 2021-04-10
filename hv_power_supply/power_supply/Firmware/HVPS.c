@@ -14,7 +14,7 @@ Author: Isabel Serrato
 #include <avr/interrupt.h>
 #include <util/delay.h>
 
-/* Interfece with Flyback */
+/* Interface with Flyback */
 
 #define FAULT_SIG PC1
 #define DONE_SIG PC0
@@ -24,14 +24,27 @@ Author: Isabel Serrato
 //
 #define CHARGE_SIG PC6
 #define DAC PC7
+#define PORT_CHARGE PORTB
+#define PORT_DAC PORTC
+
 /* Interface with LV system */
-#define HV_5V_CTRL PC3
+#define HV_5V_CTRL PC3 //control isolated 5V 5V converter
 #define LV_V_FB PD5
 #define LV_I_SENSE PD6
+#define PORT_HV_5V_CTRL PORTC
+#define PORT_LV_V_FB PORTD
+#define PORT_LV_I_SENSE PORTD
+
+
 /* Interface with Screen */
 #define SS_I PB0
-#define SD_I PB1
 #define SS_V PC0
+#define SD_I PB1 //MOSI for screens
+#define SCK_SCREEN PB4
+#define PORT_SS_I PORTB
+#define PORT_SS_V PORTB
+#define PORT_SD_I PORTB
+#define PORT_SCK_SCREEN PORTB
 
 /* Interface with Encoders */
 #define CS PB3
