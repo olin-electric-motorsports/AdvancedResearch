@@ -99,37 +99,33 @@ X 2 2 300 0 100 L 59 59 1 1 U
 ENDDRAW
 ENDDEF
 #
-# formula_Conn_01x11
+# formula_Conn_01x09
 #
-DEF formula_Conn_01x11 J 0 40 Y Y 1 F N
-F0 "J" 0 800 50 H V C CNN
-F1 "formula_Conn_01x11" 0 700 50 H V C CNN
-F2 "footprints:PinHeader_1x11_P2.54mm_Vertical" -100 700 50 H I C CNN
-F3 "" 0 0 50 H I C CNN
+DEF formula_Conn_01x09 J 0 40 Y Y 1 F N
+F0 "J" 0 -500 50 H V C CNN
+F1 "formula_Conn_01x09" 0 500 50 H V C CNN
+F2 "footprints:PinHeader_1x9_P2.54mm_Vertical" 0 -550 50 H I C CNN
+F3 "" 0 -500 50 H I C CNN
 DRAW
-S -50 -445 0 -455 1 1 6 N
-S -50 -345 0 -355 1 1 6 N
-S -50 -245 0 -255 1 1 6 N
-S -50 -145 0 -155 1 1 6 N
-S -50 -45 0 -55 1 1 6 N
-S -50 55 0 45 1 1 6 N
-S -50 155 0 145 1 1 6 N
-S -50 255 0 245 1 1 6 N
-S -50 355 0 345 1 1 6 N
-S -50 455 0 445 1 1 6 N
-S -50 555 0 545 1 1 6 N
-S -50 600 50 -500 1 1 10 f
-X ~ 1 -200 550 150 R 50 50 1 1 P
-X ~ 10 -200 -350 150 R 50 50 1 1 P
-X ~ 11 -200 -450 150 R 50 50 1 1 P
-X ~ 2 -200 450 150 R 50 50 1 1 P
-X ~ 3 -200 350 150 R 50 50 1 1 P
-X ~ 4 -200 250 150 R 50 50 1 1 P
-X ~ 5 -200 150 150 R 50 50 1 1 P
-X ~ 6 -200 50 150 R 50 50 1 1 P
-X ~ 7 -200 -50 150 R 50 50 1 1 P
-X ~ 8 -200 -150 150 R 50 50 1 1 P
-X ~ 9 -200 -250 150 R 50 50 1 1 P
+S -50 -395 0 -405 1 1 6 N
+S -50 -295 0 -305 1 1 6 N
+S -50 -195 0 -205 1 1 6 N
+S -50 -95 0 -105 1 1 6 N
+S -50 5 0 -5 1 1 6 N
+S -50 105 0 95 1 1 6 N
+S -50 205 0 195 1 1 6 N
+S -50 305 0 295 1 1 6 N
+S -50 405 0 395 1 1 6 N
+S -50 450 50 -450 1 1 10 f
+X ~ 1 -200 400 150 R 50 50 1 1 P
+X ~ 2 -200 300 150 R 50 50 1 1 P
+X ~ 3 -200 200 150 R 50 50 1 1 P
+X ~ 4 -200 100 150 R 50 50 1 1 P
+X ~ 5 -200 0 150 R 50 50 1 1 P
+X ~ 6 -200 -100 150 R 50 50 1 1 P
+X ~ 7 -200 -200 150 R 50 50 1 1 P
+X ~ 8 -200 -300 150 R 50 50 1 1 P
+X ~ 9 -200 -400 150 R 50 50 1 1 P
 ENDDRAW
 ENDDEF
 #
@@ -236,6 +232,27 @@ F3 "https://www.seielect.com/Catalog/SEI-rncp.pdf" 80 0 50 H I C CNN
 F4 "DK" 0 0 60 H I C CNN "MFN"
 F5 "RNCP0805FTD1K00CT-ND" 0 0 60 H I C CNN "MPN"
 F6 "https://www.digikey.com/products/en?keywords=RNCP0805FTD1K00CT-ND" 480 400 60 H I C CNN "PurchasingLink"
+$FPLIST
+ R_*
+ Resistor_*
+$ENDFPLIST
+DRAW
+S -40 -100 40 100 0 1 10 N
+X ~ 1 0 150 50 D 50 50 1 1 P
+X ~ 2 0 -150 50 U 50 50 1 1 P
+ENDDRAW
+ENDDEF
+#
+# formula_R_2.2K
+#
+DEF formula_R_2.2K R 0 0 N Y 1 F N
+F0 "R" 80 0 50 V V C CNN
+F1 "formula_R_2.2K" -100 0 50 V V C CNN
+F2 "footprints:R_0805_OEM" -70 0 50 H I C CNN
+F3 "https://www.seielect.com/Catalog/SEI-RMCF_RMCP.pdf" 80 0 50 H I C CNN
+F4 "DK" 0 0 60 H I C CNN "MFN"
+F5 "RMCF0805FT2K20CT-ND" 0 0 60 H I C CNN "MPN"
+F6 "https://www.digikey.com/product-detail/en/stackpole-electronics-inc/RMCF0805FT2K20/RMCF0805FT2K20CT-ND/1942387" 480 400 60 H I C CNN "PurchasingLink"
 $FPLIST
  R_*
  Resistor_*

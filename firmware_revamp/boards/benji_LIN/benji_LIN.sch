@@ -1250,4 +1250,51 @@ F 3 "" H 3300 6500 50  0001 C CNN
 	1    3300 7000
 	1    0    0    -1  
 $EndComp
+$Comp
+L formula:R_2.2K R10
+U 1 1 60713089
+P 10650 5950
+F 0 "R10" H 10720 5996 50  0000 L CNN
+F 1 "R_2.2K" H 10720 5905 50  0000 L CNN
+F 2 "footprints:R_0805_OEM" H 10580 5950 50  0001 C CNN
+F 3 "https://www.seielect.com/Catalog/SEI-RMCF_RMCP.pdf" H 10730 5950 50  0001 C CNN
+F 4 "DK" H 10650 5950 60  0001 C CNN "MFN"
+F 5 "RMCF0805FT2K20CT-ND" H 10650 5950 60  0001 C CNN "MPN"
+F 6 "https://www.digikey.com/product-detail/en/stackpole-electronics-inc/RMCF0805FT2K20/RMCF0805FT2K20CT-ND/1942387" H 11130 6350 60  0001 C CNN "PurchasingLink"
+	1    10650 5950
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR0103
+U 1 1 60715E33
+P 10650 6200
+F 0 "#PWR0103" H 10650 5950 50  0001 C CNN
+F 1 "GND" H 10655 6027 50  0000 C CNN
+F 2 "" H 10650 6200 50  0001 C CNN
+F 3 "" H 10650 6200 50  0001 C CNN
+	1    10650 6200
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	10650 6100 10650 6200
+Wire Wire Line
+	10650 5700 10650 5800
+$Comp
+L formula:LED_0805_Amber D1
+U 1 1 6072AB92
+P 10650 5550
+F 0 "D1" V 10689 5432 50  0000 R CNN
+F 1 "LED_0805_Amber" V 10598 5432 50  0000 R CNN
+F 2 "footprints:LED_0805_OEM" H 10550 5550 50  0001 C CNN
+F 3 "https://media.digikey.com/pdf/Data%20Sheets/Chicago%20Miniature%20Lamps%20PDFs/CMDA5_Series_Rev_Aug_2014.pdf" H 10650 5650 50  0001 C CNN
+F 4 "DK" H 10650 5550 60  0001 C CNN "MFN"
+F 5 "L71517CT-ND" H 10650 5550 60  0001 C CNN "MPN"
+F 6 "https://www.digikey.com/product-detail/en/visual-communications-company-vcc/CMDA5DY7D1S/L71517CT-ND/614867" H 11050 6050 60  0001 C CNN "PurchasingLink"
+	1    10650 5550
+	0    -1   -1   0   
+$EndComp
+Text Label 10650 5250 0    50   ~ 0
+12V
+Wire Wire Line
+	10650 5250 10650 5400
 $EndSCHEMATC
