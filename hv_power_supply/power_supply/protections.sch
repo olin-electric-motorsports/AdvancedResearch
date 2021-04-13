@@ -1200,11 +1200,7 @@ $EndComp
 Connection ~ 1900 6050
 Wire Wire Line
 	1900 6050 2150 6050
-Wire Wire Line
-	9950 2900 10550 2900
 Connection ~ 9950 2900
-Wire Wire Line
-	9950 2750 10550 2750
 Connection ~ 9950 2750
 Wire Wire Line
 	4600 3200 4650 3200
@@ -1403,4 +1399,20 @@ Wire Wire Line
 	3150 5200 4250 5200
 Wire Wire Line
 	3900 3200 4250 3200
+Text Label 4650 3750 0    50   ~ 0
+I_HV-
+Text Label 4250 3750 2    50   ~ 0
+I_HV+
+Text Label 7100 2250 2    50   ~ 0
+V_FB_LV+
+Text Label 7100 2100 2    50   ~ 0
+V_FB_LV-
+Text Label 10250 2750 0    50   ~ 0
+I_LV_N
+Text Label 10250 2900 0    50   ~ 0
+I_LV_P
+Wire Wire Line
+	9950 2900 10550 2900
+Wire Wire Line
+	9950 2750 10550 2750
 $EndSCHEMATC
