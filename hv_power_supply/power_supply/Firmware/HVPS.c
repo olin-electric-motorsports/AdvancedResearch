@@ -17,7 +17,7 @@ Author: Isabel Serrato
 /* Interface with Flyback */
 
 #define FAULT_SIG PC1
-#define DONE_SIG PC0
+#define DONE_SIG PC2
 #define FAULT_SIG_PIN PINC
 #define DONE_SIG_PIN PINC
 
@@ -31,24 +31,41 @@ Author: Isabel Serrato
 #define HV_5V_CTRL PC3 //control isolated 5V 5V converter
 #define LV_V_FB PD5
 #define LV_I_SENSE PD6
-#define PORT_HV_5V_CTRL PORTC
-#define PORT_LV_V_FB PORTD
-#define PORT_LV_I_SENSE PORTD
+#define PIN_HV_5V_CTRL PINC
+#define PIN_LV_V_FB PIND
+#define PIN_LV_I_SENSE PIND
 
+#define OUTNDIS PB6
+#define PORT_OUTNDIS PORTB
+#define NEG_5_SHDN PD7
+#define PORT_N_SHDN PORTD 
+
+#define PROG_LED1 PC4
+#define PROG_LED2 PC5
+#define DEBUG_LED1 PD0
+#define DEBUG_LED2 PD1
+#define PORT_PROG_LED1 PORTC
+#define PORT_PROG_LED2 PORTC
+#define PORT_D_LED1 PORTD
+#define PORT_D_LED2 PORTD
 
 /* Interface with Screen */
 #define SS_I PB0
 #define SS_V PC0
 #define SD_I PB1 //MOSI for screens
-#define SCK_SCREEN PB4
+#define SCK_SCREEN PB7
 #define PORT_SS_I PORTB
 #define PORT_SS_V PORTB
 #define PORT_SD_I PORTB
 #define PORT_SCK_SCREEN PORTB
 
-/* Interface with Encoders */
-#define CS PB3
-#define CLK PB4
+/* Interface with Rotary Encoders (R for rotary)*/
+#define RCS PB3
+#define RCLK PB4
+#define ROUTPUT PB5 //rotary input
+#define PIN_RCS PINB
+#define PIN_RCLK PINB
+#define PIN_ROUTPUT PINB
 
 /* Interface with FB */
 #define FB_SHDN PB2
