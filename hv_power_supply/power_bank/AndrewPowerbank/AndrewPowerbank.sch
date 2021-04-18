@@ -1001,8 +1001,6 @@ F 3 "" H 6200 3450 50  0001 C CNN
 $EndComp
 Wire Wire Line
 	6500 3500 6200 3500
-Text Notes 7100 3800 2    50   ~ 0
-connect gndpwr to gnd @ fb pin gnd
 Connection ~ 1850 7200
 Connection ~ 7050 3350
 Wire Wire Line
@@ -1463,4 +1461,6 @@ F 3 "" H 5600 4550 50  0001 C CNN
 	1    5600 4550
 	1    0    0    -1  
 $EndComp
+Text Notes 7100 3800 2    50   ~ 0
+connect gndpwr to gnd @ fb pin gnd
 $EndSCHEMATC

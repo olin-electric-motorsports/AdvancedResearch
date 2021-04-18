@@ -1,4 +1,4 @@
-19390506354598614
+19418009738424030
 Battery
 BatteryHolder_Bulgin_BX0036_1xC
 Bulgin Battery Holder, BX0036, Battery Type C (https://www.bulgin.com/products/pub/media/bulgin/data/Battery_holders.pdf)
@@ -83076,6 +83076,13 @@ footprints
 2
 2
 footprints
+1722861105
+
+
+0
+5
+5
+footprints
 ABM3-8_5.0x3.2mm_P3.7mm
 
 
@@ -83173,6 +83180,13 @@ Bolt_connect_4-40_round
 0
 1
 1
+footprints
+BournsInductor
+
+
+0
+2
+2
 footprints
 Byron-Face-2
 
@@ -83299,6 +83313,13 @@ https://www.diodes.com/assets/Package-Files/DO-214AC.pdf
 0
 2
 2
+footprints
+DPAK229P990X239-4N
+
+
+0
+3
+3
 footprints
 DTO25
 
@@ -83433,12 +83454,26 @@ GA3460-BL
 12
 12
 footprints
+H2
+DCDC Converter
+
+0
+7
+7
+footprints
 HO_60_250-p0100
 
 
 0
 9
 9
+footprints
+HY1602E
+http://www.icbank.com/data/ICBShop/board/HY1602E.pdf
+LCD 16x2 Alphanumeric 16pin
+0
+20
+16
 footprints
 IHLP2020BZER4R7M11
 
@@ -83517,6 +83552,13 @@ QFP 0.5
 208
 208
 footprints
+LTC1983ES6-5#TRMPBF
+
+
+0
+6
+6
+footprints
 LTC6820_OEM
 
 
@@ -83544,6 +83586,13 @@ Logo_Large
 0
 0
 0
+footprints
+MAXM15464
+
+
+0
+10
+10
 footprints
 MCP73871T
 
@@ -83573,12 +83622,26 @@ MLX90621ESF-BAB-000-TU
 4
 4
 footprints
+MSOP-8
+
+
+0
+8
+8
+footprints
 Meder-LI12
 
 
 0
 4
 4
+footprints
+MegaFit_06_RA
+
+
+0
+6
+6
 footprints
 MicroFit_RA_2
 
@@ -83698,6 +83761,13 @@ connector molex nano-fit 105313-xx04
 0
 2
 2
+footprints
+MountingHole_2.2mm_M2
+Mounting Hole 2.2mm, no annular, M2
+mounting hole 2.2mm no annular m2
+0
+0
+0
 footprints
 Mounting_Hole_4-40
 
@@ -83866,6 +83936,13 @@ PWR163
 0
 3
 3
+footprints
+PinHeader_1x02_P2.54mm_Vertical
+Through hole straight pin header, 1x02, 2.54mm pitch, single row
+Through hole pin header THT 1x02 2.54mm single row
+0
+2
+2
 footprints
 PinHeader_1x10_P2.54mm_Vertical
 Through hole straight pin header, 1x10, 2.54mm pitch, single row
@@ -84098,6 +84175,13 @@ SM_5
 2
 2
 footprints
+SOD-323
+
+
+0
+2
+2
+footprints
 SOIC-8_3.9x4.9mm_Pitch1.27mm_OEM
 8-Lead Plastic Small Outline (SN) - Narrow, 3.90 mm Body [SOIC] (see Microchip Packaging Specification 00000049BS.pdf)
 SOIC 1.27
@@ -84112,12 +84196,26 @@ Integrated Circuit
 8
 8
 footprints
+SOIC254P610X218-4N
+
+
+0
+4
+4
+footprints
 SOP28
 
 
 0
 28
 28
+footprints
+SOP65P490X110-8N
+
+
+0
+8
+8
 footprints
 SOT-23-3_OEM
 5-pin SOT23 package
@@ -84238,9 +84336,23 @@ TE_1981568-1
 11
 11
 footprints
+TLF50211ELXUMA2
+
+
+0
+14
+14
+footprints
 TO-92-3_Inline_Narrow_Oval
 TO-92 leads in-line, narrow, oval pads, drill 0.6mm (see NXP sot054_po.pdf)
 to-92 sc-43 sc-43a sot54 PA33 transistor
+0
+3
+3
+footprints
+TO-220FN
+
+
 0
 3
 3
@@ -84265,6 +84377,13 @@ D2PAK DDPAK TO-263 D2PAK-3 TO-263-3 SOT-404
 0
 5
 2
+footprints
+TO381P2016X515X2916-4
+Footprint for relay CPC1979J
+
+0
+4
+4
 footprints
 TPS61090RSAR
 
