@@ -1,0 +1,153 @@
+/*
+High Voltage Power Supply firmware for the ATMEGA16M1 on the board. Code is used to
+read target voltage and current limit from rotary encoders, program the LCD screen
+to display correct voltage and current limit, tune the feedback loop, allow power out and discharge
+
+Author: Isabel Serrato
+*/
+
+#include "spi.h"
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+#include <avr/io.h>
+#include <avr/interrupt.h>
+#include <util/delay.h>
+
+/* Interface with Flyback */
+
+#define FAULT_SIG PC1
+#define DONE_SIG PC2
+#define FAULT_SIG_PIN PINC
+#define DONE_SIG_PIN PINC
+
+//
+#define CHARGE_SIG PC6
+#define DAC PC7
+#define PORT_CHARGE PORTB
+#define PORT_DAC PORTC
+
+/* Interface with LV system */
+#define HV_5V_CTRL PC3 //control isolated 5V 5V converter
+#define LV_V_FB PD5
+#define LV_I_SENSE PD6
+#define PIN_HV_5V_CTRL PINC
+#define PIN_LV_V_FB PIND
+#define PIN_LV_I_SENSE PIND
+
+#define OUTNDIS PB6
+#define PORT_OUTNDIS PORTB
+#define NEG_5_SHDN PD7
+#define PORT_N_SHDN PORTD 
+
+#define PROG_LED1 PC4
+#define PROG_LED2 PC5
+#define DEBUG_LED1 PD0
+#define DEBUG_LED2 PD1
+#define PORT_PROG_LED1 PORTC
+#define PORT_PROG_LED2 PORTC
+#define PORT_D_LED1 PORTD
+#define PORT_D_LED2 PORTD
+
+/* Interface with Screen */
+#define SS_I PB0
+#define SS_V PC0
+#define SD_I PB1 //MOSI for screens
+#define SCK_SCREEN PB7
+#define PORT_SS_I PORTB
+#define PORT_SS_V PORTB
+#define PORT_SD_I PORTB
+#define PORT_SCK_SCREEN PORTB
+
+/* Interface with Rotary Encoders (R for rotary)*/
+#define RCS PB3
+#define RCLK PB4
+#define ROUTPUT PB5 //rotary input
+#define PIN_RCS PINB
+#define PIN_RCLK PINB
+#define PIN_ROUTPUT PINB
+
+/* Interface with FB */
+#define FB_SHDN PB2
+
+#define UPDATE_STATUS                      0
+
+
+volatile uint8_t gFlag = 0x00;  // Global Flag
+
+ISR(TIMER0_COMPA_vect) {
+	// Only send CAN msgs every 20 cycles
+	// Timer Counter0 compare match A
+ gTimerFlag |= _BV(UPDATE_STATUS);
+ }
+
+ void initTimer(void) {
+ 	TCCR0A = _BV(WGM01);    // Set up 8-bit timer in CTC mode
+ 	TCCR0B = 0x05;          // clkio/1024 prescaler
+ 	TIMSK0 |= _BV(OCIE0A);
+ 	OCR0A = 0x27;           //Makes timer run at ~100Hz
+ }
+
+
+void setup() {
+	initTimer();
+
+}
+
+
+
+struct Input {
+	int rotary_pos;
+	uint8_t voltage;
+	uint8_t current;
+    uint8_t done_signal;
+    uint8_t fault_signal;
+} input;
+
+get_inputs(Input inputs) {
+	// Get inputs from system and save in local struct
+	// i.e read rot encoder and save pos to inputs struct
+    inputs.done_signal = bit_is_clear(DONE_SIG_PIN, DONE_SIG);
+    inputs.fault_signal = bit_is_clear(FAULT_SIG_PIN, FAULT_SIG);
+
+}
+
+
+struct Output  {
+	int lcd_display_value;
+	int FB_pin_control;
+    uint8_t txdata;
+} output;
+
+
+
+uint8_t rxdata;
+
+void send_outputs(Output output){
+	// Communicate with LCD - Uart?
+	// Analog write feedback pin value
+    SPI_transfer(output.txdata, &rxdata);
+}
+
+void process_inputs(Input input, Output ouput){
+	// take inputs
+	// Process - do logic
+	// Write to outputs struct
+}
+
+
+int main() {
+	setup();
+    struct Input inputs;
+    struct Output ouputs;
+	while(1) {
+		if(bit_is_set(gFlag, UPDATE_STATUS)) {
+			gFlag &= ~_BV(UPDATE_STATUS);  // Clear Flag
+
+			get_inputs(inputs);
+			process_inputs(inputs, outputs);
+			send_ouputs(outputs);
+		}
+	}
+
+}

@@ -54,8 +54,11 @@ ENDDEF
 DEF formula_MAXM15464 U 0 40 Y Y 1 F N
 F0 "U" 0 500 50 H V C CNN
 F1 "formula_MAXM15464" 0 600 50 H V C CNN
-F2 "" 0 600 50 H I C CNN
+F2 "footprints:MAXM15464" 0 600 50 H I C CNN
 F3 "" 0 600 50 H I C CNN
+F4 "https://www.digikey.com/en/products/detail/maxim-integrated/MAXM15464AMB/10209895" 0 0 50 H I C CNN "Purchasing Link"
+F5 "Maxim Integrated" 0 0 50 H I C CNN "Manufacturer"
+F6 "MAXM15464AMB+" 0 0 50 H I C CNN "MPN"
 DRAW
 S -350 400 350 -450 0 1 0 f
 X LX 1 450 -200 100 L 50 50 1 1 I
@@ -70,16 +73,16 @@ X V_IN 9 -450 250 100 R 50 50 1 1 I
 ENDDRAW
 ENDDEF
 #
-# formula_R_10K
+# formula_R_0
 #
-DEF formula_R_10K R 0 0 N Y 1 F N
+DEF formula_R_0 R 0 0 N Y 1 F N
 F0 "R" 80 0 50 V V C CNN
-F1 "formula_R_10K" -100 0 50 V V C CNN
-F2 "footprints:R_0805_OEM" -70 0 50 H I C CNN
-F3 "http://www.bourns.com/data/global/pdfs/CRS.pdf" 80 0 50 H I C CNN
+F1 "formula_R_0" -100 0 50 V V C CNN
+F2 "footprints:R_0603_1608Metric" -70 0 50 H I C CNN
+F3 "http://industrial.panasonic.com/www-cgi/jvcr13pz.cgi?E+PZ+3+AOA0001+ERJ3GEY0R00V+7+WW" 80 0 50 H I C CNN
 F4 "DK" 0 0 60 H I C CNN "MFN"
-F5 "CRS0805-FX-1002ELFCT-ND" 0 0 60 H I C CNN "MPN"
-F6 "https://www.digikey.com/products/en?keywords=CRS0805-FX-1002ELFCT-ND" 480 400 60 H I C CNN "PurchasingLink"
+F5 "P0.0GCT-ND" 0 0 60 H I C CNN "MPN"
+F6 "https://www.digikey.com/product-detail/en/panasonic-electronic-components/ERJ-3GEY0R00V/P0.0GCT-ND/134711" 480 400 60 H I C CNN "PurchasingLink"
 $FPLIST
  R_*
  Resistor_*
