@@ -587,7 +587,7 @@ $EndComp
 Wire Wire Line
 	7950 2950 8250 2950
 Text Notes 7800 2800 0    50   ~ 0
-connect gndpwr to gnd\nvia gnd at fb pin
+connect gndpwr to gnd\nvia gnd at pin 13
 Text Notes 6700 850  0    98   ~ 0
 Boost Converter
 Text Notes 9550 2950 1    50   ~ 0
@@ -1388,4 +1388,6 @@ Wire Wire Line
 	2300 2050 2300 1950
 Connection ~ 2300 2050
 Connection ~ 2300 1950
+Text Notes 800  1500 0    50   ~ 0
+put C1 close to pin 1 \non output USB
 $EndSCHEMATC

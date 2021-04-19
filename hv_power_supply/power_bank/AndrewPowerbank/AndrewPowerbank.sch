@@ -1001,8 +1001,6 @@ F 3 "" H 6200 3450 50  0001 C CNN
 $EndComp
 Wire Wire Line
 	6500 3500 6200 3500
-Text Notes 7100 3800 2    50   ~ 0
-connect gndpwr to gnd @ fb pin gnd
 Connection ~ 1850 7200
 Connection ~ 7050 3350
 Wire Wire Line
@@ -1440,10 +1438,10 @@ Wire Wire Line
 Wire Wire Line
 	5600 4550 5850 4550
 $Comp
-L power:GND #PWR?
+L power:GND #PWR0102
 U 1 1 607436CF
 P 5850 4850
-F 0 "#PWR?" H 5850 4600 50  0001 C CNN
+F 0 "#PWR0102" H 5850 4600 50  0001 C CNN
 F 1 "GND" H 5855 4677 50  0000 C CNN
 F 2 "" H 5850 4850 50  0001 C CNN
 F 3 "" H 5850 4850 50  0001 C CNN
@@ -1452,4 +1450,17 @@ F 3 "" H 5850 4850 50  0001 C CNN
 $EndComp
 Wire Wire Line
 	5600 4550 5600 4900
+$Comp
+L formula:VBATT #PWR0103
+U 1 1 60755991
+P 5600 4550
+F 0 "#PWR0103" H 5600 4400 50  0001 C CNN
+F 1 "VBATT" H 5615 4723 50  0000 C CNN
+F 2 "" H 5600 4550 50  0001 C CNN
+F 3 "" H 5600 4550 50  0001 C CNN
+	1    5600 4550
+	1    0    0    -1  
+$EndComp
+Text Notes 7100 3800 2    50   ~ 0
+connect gndpwr to gnd @ fb pin gnd
 $EndSCHEMATC
