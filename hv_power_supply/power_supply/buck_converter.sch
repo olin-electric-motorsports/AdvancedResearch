@@ -3,7 +3,7 @@ EELAYER 30 0
 EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
-Sheet 1 1
+Sheet 3 6
 Title ""
 Date ""
 Rev ""
@@ -14,21 +14,10 @@ Comment3 ""
 Comment4 ""
 $EndDescr
 $Comp
-L formula:MAXM15464 U2
-U 1 1 602D1F9A
-P 4800 3300
-F 0 "U2" H 4800 3865 50  0000 C CNN
-F 1 "MAXM15464" H 4800 3774 50  0000 C CNN
-F 2 "" H 4800 3900 50  0001 C CNN
-F 3 "" H 4800 3900 50  0001 C CNN
-	1    4800 3300
-	1    0    0    -1  
-$EndComp
-$Comp
-L formula:C_1uF C_IN
+L formula:C_1uF C_IN1
 U 1 1 60344498
 P 3450 3300
-F 0 "C_IN" H 3565 3396 50  0000 L CNN
+F 0 "C_IN1" H 3565 3396 50  0000 L CNN
 F 1 "C_1uF" H 3565 3305 50  0000 L CNN
 F 2 "footprints:C_0805_OEM" H 3488 3900 50  0001 C CNN
 F 3 "https://www.yageo.com/upload/media/product/productsearch/datasheet/mlcc/UPY-GPHC_Y5V_6.3V-to-50V_9.pdf" H 3475 4150 50  0001 C CNN
@@ -37,10 +26,10 @@ F 4 "https://www.digikey.com/product-detail/en/yageo/CC0805ZKY5V9BB105/311-1909-
 	1    0    0    -1  
 $EndComp
 $Comp
-L formula:C_1uF C1
+L formula:C_1uF C15
 U 1 1 60347394
 P 4000 3950
-F 0 "C1" H 4115 4046 50  0000 L CNN
+F 0 "C15" H 4115 4046 50  0000 L CNN
 F 1 "C_1uF" H 4115 3955 50  0000 L CNN
 F 2 "footprints:C_0805_OEM" H 4038 4550 50  0001 C CNN
 F 3 "https://www.yageo.com/upload/media/product/productsearch/datasheet/mlcc/UPY-GPHC_Y5V_6.3V-to-50V_9.pdf" H 4025 4800 50  0001 C CNN
@@ -49,10 +38,10 @@ F 4 "https://www.digikey.com/product-detail/en/yageo/CC0805ZKY5V9BB105/311-1909-
 	1    0    0    -1  
 $EndComp
 $Comp
-L power:GND #PWR?
+L power:GND #PWR013
 U 1 1 6034E7B2
 P 4000 4050
-F 0 "#PWR?" H 4000 3800 50  0001 C CNN
+F 0 "#PWR013" H 4000 3800 50  0001 C CNN
 F 1 "GND" H 4005 3877 50  0000 C CNN
 F 2 "" H 4000 4050 50  0001 C CNN
 F 3 "" H 4000 4050 50  0001 C CNN
@@ -60,10 +49,10 @@ F 3 "" H 4000 4050 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L power:GND #PWR?
+L power:GND #PWR012
 U 1 1 60350117
 P 3450 3400
-F 0 "#PWR?" H 3450 3150 50  0001 C CNN
+F 0 "#PWR012" H 3450 3150 50  0001 C CNN
 F 1 "GND" H 3455 3227 50  0000 C CNN
 F 2 "" H 3450 3400 50  0001 C CNN
 F 3 "" H 3450 3400 50  0001 C CNN
@@ -71,10 +60,10 @@ F 3 "" H 3450 3400 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L power:GND #PWR?
+L power:GND #PWR015
 U 1 1 6034F654
 P 5850 3400
-F 0 "#PWR?" H 5850 3150 50  0001 C CNN
+F 0 "#PWR015" H 5850 3150 50  0001 C CNN
 F 1 "GND" H 5855 3227 50  0000 C CNN
 F 2 "" H 5850 3400 50  0001 C CNN
 F 3 "" H 5850 3400 50  0001 C CNN
@@ -82,10 +71,10 @@ F 3 "" H 5850 3400 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L formula:C_10uF C_OUT
+L formula:C_10uF C_OUT1
 U 1 1 60345C25
 P 5850 3250
-F 0 "C_OUT" H 5965 3346 50  0000 L CNN
+F 0 "C_OUT1" H 5965 3346 50  0000 L CNN
 F 1 "C_10uF" H 5965 3255 50  0000 L CNN
 F 2 "footprints:C_0805_OEM" H 5888 3850 50  0001 C CNN
 F 3 "http://www.samsungsem.com/kr/support/product-search/mlcc/__icsFiles/afieldfile/2018/06/20/CL21A106KPFNNNE.pdf" H 5875 4100 50  0001 C CNN
@@ -106,15 +95,13 @@ Wire Wire Line
 	5600 3350 5600 3650
 Wire Wire Line
 	6250 3650 6250 3050
-Text Label 6500 3050 0    50   ~ 0
-V_OUT(5V)
 Wire Wire Line
 	3450 3050 3450 3100
 $Comp
-L power:GND #PWR?
+L power:GND #PWR014
 U 1 1 6037D3E3
 P 5250 3650
-F 0 "#PWR?" H 5250 3400 50  0001 C CNN
+F 0 "#PWR014" H 5250 3400 50  0001 C CNN
 F 1 "GND" H 5255 3477 50  0000 C CNN
 F 2 "" H 5250 3650 50  0001 C CNN
 F 3 "" H 5250 3650 50  0001 C CNN
@@ -141,13 +128,11 @@ Wire Wire Line
 	5250 3200 5700 3200
 Wire Wire Line
 	5600 3650 6250 3650
-Text Label 3850 3050 2    50   ~ 0
-V_IN(24V)
 $Comp
-L formula:R_0 DNP
+L formula:R_0 DNP1
 U 1 1 6040106D
 P 4000 3250
-F 0 "DNP" H 4070 3296 50  0000 L CNN
+F 0 "DNP1" H 4070 3296 50  0000 L CNN
 F 1 "R_0" H 4070 3205 50  0000 L CNN
 F 2 "footprints:R_0603_1608Metric" H 3930 3250 50  0001 C CNN
 F 3 "http://industrial.panasonic.com/www-cgi/jvcr13pz.cgi?E+PZ+3+AOA0001+ERJ3GEY0R00V+7+WW" H 4080 3250 50  0001 C CNN
@@ -173,4 +158,26 @@ Wire Wire Line
 Connection ~ 4000 3050
 Wire Wire Line
 	4000 3050 4250 3050
+Text HLabel 6500 3050 2    50   BiDi ~ 0
++5V
+Wire Wire Line
+	3450 3050 2600 3050
+Connection ~ 3450 3050
+Text HLabel 2600 3050 0    50   BiDi ~ 0
++24V
+NoConn ~ 5250 3500
+$Comp
+L formula:MAXM15464 U2
+U 1 1 6063BABC
+P 4800 3300
+F 0 "U2" H 4800 3865 50  0000 C CNN
+F 1 "MAXM15464" H 4800 3774 50  0000 C CNN
+F 2 "footprints:MAXM15464" H 4800 3900 50  0001 C CNN
+F 3 "https://media.digikey.com/pdf/Data%20Sheets/Maxim%20PDFs/MAXM15462-64_Rev4_10-26-18.pdf" H 4800 3900 50  0001 C CNN
+F 4 "https://www.digikey.com/en/products/detail/maxim-integrated/MAXM15464AMB/10209895" H 4800 3300 50  0001 C CNN "Purchasing Link"
+F 5 "Maxim Integrated" H 4800 3300 50  0001 C CNN "Manufacturer"
+F 6 "MAXM15464AMB+" H 4800 3300 50  0001 C CNN "MPN"
+	1    4800 3300
+	1    0    0    -1  
+$EndComp
 $EndSCHEMATC
