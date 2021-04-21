@@ -14,65 +14,23 @@
     adi ramachandran
     aramachandran@olin.edu
     6307969467
-
-General notes: 
-- Both sides need LUT with: UART_id: {data len (bytes), send frequency (Hz)} 
-- UART Data sends acheived with set of queues 
-- 
-
-General questions: 
-- need a state machine for CAN inputs? 
-
-
-CAN quesitons: 
-    how to implement 28 CAN addr reads successfully? 
-
-        mobnb0 with can mailboxes
-        can multiple can messages share the same mailbox? do we prioritize the msg priority when figuring out which mailboxes to use? 
-
-        msg's we care about lol 
-        0xB
-        0xC
-        0xE
-        0x40-0x57
-        0x58-0x63
-        0xc0
-        0x10
-
-        do i create a custom mask that fits my needs? 
-
-        what operating mode are the MOb's currently in? 
-        What should they be set to be continually set to look for different ID's? 
-
-        Should we write a custom wait on recieve to support multiple ID's 
-            - is MOb ID connected to the canmsg id
-    
+        
  */
 
 
 /*----- Includes -----*/
 #include <stdio.h>
 #include <stdlib.h>
-#include <string.h>
-#include <avr/io.h>
-#include <avr/interrupt.h>
-#include <util/delay.h>
 #include "can_api.h"
-#include "spi.h"
 #include "queue.h"
 
 /*----- Macro Definitions -----*/
-
-// general 
-#define FCLK                            160000000
-
 
 
 /* Defining queue structures
 - lengths are sort of arbitrary 
 */ 
-#define UART_QUEUE_SIZE                 256
-#define CAN_QUEUE_SIZE                  256
+#define UART_QUEUE_SIZE                 512 // 512 bytes too long? 
 
 
 // gFlag positions
@@ -81,11 +39,14 @@ CAN quesitons:
 
 
 // CAN Mailboxes
-#define BRAKE_LIGHT_MBOX                   0
-#define BMS_CORE_MBOX                      1
-#define AIR_CONTROL_CRITICAL_MBOX          2
+#define THROTTLE_CMD_MBOX                  0
+#define THROTTLE_BRD_MBOX                  1
+#define BRAKE_MBOX                         2
 #define AIR_CONTROL_SENSE_MBOX             3
-#define THROTTLE_MBOX                      4
+#define BMS_CORE_MBOX                      4
+#define CELL_VOLT_TEMP_MBOX                5
+
+#define CAN_MSK_6                           0b11000000 // custom mask for cell temps & voltages
 // handle another 15 mailboxes lol 
 
 
@@ -117,98 +78,195 @@ CAN quesitons:
 
 /*----- Global Variables -----*/
 
-volatile uint8_t gFlag = 0x00; // global flag
+volatile uint8_t global_flag = 0x00; // global flag
 
 volatile uint16_t shutdown_error_flag = 0x00; // system failure error code flag - default 0x00. 
 
-// CAN DATA to store & send out over UART 
-uint8_t accumulator_voltages[192] = {0}; // 192 wholeass bytes wtf
-uint8_t accumulator_temperatures[80] = {0}; 
-uint16_t throttle = 0x00;
-uint8_t state_of_charge = 0x00; 
+volatile uint8_t can_recv_msg[8] = {0}; // CAN msg recieved
 
-
-uint8_t can_recv_msg[8] = {0}; // CAN msg recieved
-
-
-
-uint8_t data_byte = 0x00; // for UART 
-
-
-
-typedef struct {
-    uint8_t ID; 
-    short data_length; 
-    uint8_t data[8]; 
-} CAN_MSG; 
-
-// QUEUES
 
 QUEUE(UART, uint8_t, UART_QUEUE_SIZE); 
-QUEUE(CAN, CAN_MSG *, CAN_QUEUE_SIZE); 
-
-voltatile struct queue_CAN CAN_queue; 
-voltatile struct queue_UART UART_queue; 
+voltatile struct queue_UART UART_queue; // creating a UART_queue of type queue_UART 
 
 
 
-// Define CAN struct --> to be created and set with ID & data 
 
 
 /*----- Interrupt(s) -----*/
 
 
-ISR(CAN_INT_vect){ // TODO: Write state machine for mailbox address switching
-/*----- Brake light mailbox -----*/
-    CANPAGE = (BRAKE_LIGHT_MBOX<<MOBNB0); // what does this do? 
+ISR(CAN_INT_vect){ 
+
+    CANPAGE = (THROTTLE_BRD_MBOX<<MOBNB0); 
     if (bit_is_set(CANSTMOB, RXOK)) {
-		can_recv_msg[0] = CANMSG;   // PANIC PANIC
-		can_recv_msg[1] = CANMSG;   // brake analog voltage MSB       // subjectlines of the letter, have to read the letters in order
-		can_recv_msg[2] = CANMSG;   // brake analog voltage LSB
-		can_recv_msg[3] = CANMSG;   // is brake pressed? CF
-		can_recv_msg[4] = CANMSG;   // BSPD sense
 
-        // HUH ? wtf? below
+		can_recv_msg[0] = CANMSG;   
+		can_recv_msg[1] = CANMSG;   
+        can_recv_msg[2] = CANMSG; // BOTS Sense
+		can_recv_msg[3] = CANMSG; // Inertia Switch
+		can_recv_msg[4] = CANMSG; // Cockpit E stop 
+		// can_recv_msg[5] = CANMSG;   
+		// can_recv_msg[6] = CANMSG;   
+		// can_recv_msg[7] = CANMSG; 
 
-		can_recv_msg[5] = CANMSG;   // TSMS sense
-		can_recv_msg[6] = CANMSG;   // left e-stop sense
-		can_recv_msg[7] = CANMSG;   // GLVMS sense
-
-        /* For ALL CAN DATA, GENERATE CAN_MSG STRUCT AND PASS INTO CAN_QUEUE*/ 
-
-        CAN_MSG * msg = malloc(sizeof(CAN_MSG));  
-        (*msg) = { custom_ID, 8, can_recv_msg}; // TODO: To confirm, this copies over can_recv_mesg during asisgnment?
-
-        if (queue_CAN_push(&CAN_queue, msg) == 0) {
-            //push successful, no action required
-        } else {
-            //not enough room in queue, handle appropriately here
-        }
         
-        // TODO: what do we do about sending the shutdown error flag? It's not a CAN struct? Should we check for it on every send and if it's ! 0 we send it? 
-
-
-
-		if(can_recv_msg[4] == 0xFF) { //if the specific letter says something
-			shutdown_error_flag |= _BV(BSPD_FAIL);           //trip flag // scribbling on your hand
-		} else {
-			shutdown_error_flag &= ~_BV(BSPD_FAIL);
+        if (can_recv_msg[2] == 0xFF){
+			shutdown_error_flag |= _BV(BOTS_FAIL);
+        }
+        if (can_recv_msg[3] == 0xFF){
+			shutdown_error_flag |= _BV(INERTIA_SWITCH_FAIL);
+        }
+        if(can_recv_msg[4] == 0xFF) { 
+			shutdown_error_flag |= _BV(COCKPIT_ESTOP_FAIL);
 		}
+
 		//Setup to Receive Again for future
 		CANSTMOB = 0x00;
-		CAN_wait_on_receive(BRAKE_LIGHT_MBOX, CAN_ID_BRAKE_LIGHT, CAN_LEN_BRAKE_LIGHT, CAN_MSK_SINGLE);
+	    CAN_wait_on_receive(THROTTLE_BRD_MBOX, CAN_ID_THROTTLE, CAN_LEN_THROTTLE, CAN_MSK_SINGLE);
 	}
 
+    CANPAGE = (THROTTLE_CMD_MBOX<<MOBNB0); 
+    if (bit_is_set(CANSTMOB, RXOK)) {
+        
+        can_recv_msg[0] = CANMSG; // torque command LSB
+		can_recv_msg[1] = CANMSG; // torque command MSB
+        can_recv_msg[2] = CANMSG;   
+		can_recv_msg[3] = CANMSG; 
+		can_recv_msg[4] = CANMSG; 
+		can_recv_msg[5] = CANMSG; // motor enabled 
+		can_recv_msg[6] = CANMSG;   
+		can_recv_msg[7] = CANMSG;   
+
+        uint8_t msg_ID = (uint8_t) CAN_ID_MC_COMMAND;         
+        queue_UART_push(UART_queue, &(msg_ID));
+        queue_UART_push(UART_queue, &(can_recv_msg[3]));
+
+
+        //Setup to Receive Again for future
+		CANSTMOB = 0x00;
+	    CAN_wait_on_receive(THROTTLE_CMD_MBOX, CAN_ID_MC_COMMAND, CAN_LEN_MC_COMMAND, CAN_MSK_SINGLE);
+    }
+
+    CANPAGE = (BRAKE_MBOX<<MOBNB0); 
+    if (bit_is_set(CANSTMOB, RXOK)) {
+
+        can_recv_msg[0] = CANMSG;   
+		can_recv_msg[1] = CANMSG;   
+        can_recv_msg[2] = CANMSG;   
+		can_recv_msg[3] = CANMSG;   
+		can_recv_msg[4] = CANMSG; // BSPD 
+		// can_recv_msg[5] = CANMSG;   
+		// can_recv_msg[6] = CANMSG;   
+		// can_recv_msg[7] = CANMSG;   
+
+        if(can_recv_msg[4] == 0xFF) { 
+			shutdown_error_flag |= _BV(BSPD_FAIL);
+        }
+
+        //Setup to Receive Again for future
+        CANSTMOB = 0x00;
+	    CAN_wait_on_receive(BRAKE_MBOX, CAN_ID_BRAKE_LIGHT, CAN_LEN_BRAKE_LIGHT, CAN_MSK_SINGLE);
+    }
+
+    CANPAGE = (AIR_CONTROL_SENSE_MBOX<<MOBNB0); 
+    if (bit_is_set(CANSTMOB, RXOK)) {
+        
+        // TODO: air.c can transmit doesn't match with CAN address space spreadsheet?!?!
+        // Check back on these error trips! Based on air.c code 4.20.2021
+
+        can_recv_msg[0] = CANMSG; // TSMS Conn 
+		can_recv_msg[1] = CANMSG; // HVD
+        can_recv_msg[2] = CANMSG; // IMD
+		can_recv_msg[3] = CANMSG; // BMS status
+		can_recv_msg[4] = CANMSG; // IMD status
+		can_recv_msg[5] = CANMSG; // TSMS 
+		can_recv_msg[6] = CANMSG; // 
+		can_recv_msg[7] = CANMSG;   
+
+
+        if(can_recv_msg[0] == 0xFF) { 
+			shutdown_error_flag |= _BV(TSMS_FAIL);
+        }
+        if(can_recv_msg[1] == 0xFF) { 
+			shutdown_error_flag |= _BV(HVD_CONN_FAIL);
+        }
+        if(can_recv_msg[2] == 0xFF) { 
+			shutdown_error_flag |= _BV(IMD_FAIL);
+        }
+        if(can_recv_msg[3] == 0xFF) { 
+			shutdown_error_flag |= _BV(BMS_FAIL);
+        }
+        if(can_recv_msg[4] == 0xFF) { 
+			shutdown_error_flag |= _BV(IMD_FAIL);
+        }
+        if(can_recv_msg[5] == 0xFF) { 
+			shutdown_error_flag |= _BV(TSMS_FAIL);
+        }
+
+        //Setup to Receive Again for future
+		CANSTMOB = 0x00;
+	    CAN_wait_on_receive(AIR_CONTROL_SENSE_MBOX, CAN_ID_AIR_CONTROL_SENSE, CAN_LEN_AIR_CONTROL_SENSE, CAN_MSK_SINGLE);
+    }
+
+    CANPAGE = (BMS_CORE_MBOX<<MOBNB0); 
+    if (bit_is_set(CANSTMOB, RXOK)) {
+
+        can_recv_msg[0] = CANMSG;   
+		can_recv_msg[1] = CANMSG;   
+        can_recv_msg[2] = CANMSG;   
+		can_recv_msg[3] = CANMSG; // SOC estimate 
+		can_recv_msg[4] = CANMSG; 
+		can_recv_msg[5] = CANMSG;   
+		can_recv_msg[6] = CANMSG;   
+		can_recv_msg[7] = CANMSG;   
+
+        // TODO: Transmit SOC ID, then 1 byte SOC estimate 
+        uint8_t msg_ID = (uint8_t) CAN_ID_BMS_CORE; 
+        
+        queue_UART_push(UART_queue, &(msg_ID)); 
+        queue_UART_push(UART_queue, &(can_recv_msg[3]));
+
+        //Setup to Receive Again for future
+		CANSTMOB = 0x00;
+	    CAN_wait_on_receive(BMS_CORE_MBOX, CAN_ID_BMS_CORE, CAN_LEN_BMS_CORE, CAN_MSK_SINGLE);
+    }
+
+    CANPAGE = (CELL_VOLT_TEMP_MBOX<<MOBNB0); 
+    if (bit_is_set(CANSTMOB, RXOK)) {
+
+        can_recv_msg[0] = CANMSG;   
+		can_recv_msg[1] = CANMSG;   
+        can_recv_msg[2] = CANMSG;   
+		can_recv_msg[3] = CANMSG; 
+		can_recv_msg[4] = CANMSG; 
+		can_recv_msg[5] = CANMSG;   
+		can_recv_msg[6] = CANMSG;   
+		can_recv_msg[7] = CANMSG;   
+
+        // grab ID from CANIDT reg
+        uint8_t msg_ID = CANIDT4>>3 + CANIDT3<<5; // pg 169
+
+        // TODO: transmit ID, then 8 bytes or 4 bytes 
+        queue_UART_push(UART_queue, &(msg_ID)); 
+        queue_UART_push(UART_queue, &(can_recv_msg[0]));
+        queue_UART_push(UART_queue, &(can_recv_msg[1])); 
+        queue_UART_push(UART_queue, &(can_recv_msg[2]));
+        queue_UART_push(UART_queue, &(can_recv_msg[3]));
+        queue_UART_push(UART_queue, &(can_recv_msg[4]));
+        queue_UART_push(UART_queue, &(can_recv_msg[5]));
+        queue_UART_push(UART_queue, &(can_recv_msg[6])); 
+        queue_UART_push(UART_queue, &(can_recv_msg[7])); 
+
+        //Setup to Receive Again for future
+		CANSTMOB = 0x00;
+	    CAN_wait_on_receive(CELL_VOLT_TEMP_MBOX, CAN_ID_BMS_TEMP_12, CAN_LEN_BMS_TEMP_12, CAN_MSK_6);
+    }
 }
 
 ISR(USART_TX_vect){
     gFlag |= _BV(UART_SEND_READY); // set flag and get back to it 
 }
 
-// ISR(USART_RX_vect){
-//     // flip flag, move on with life
-//     gFlag |= _BV(UART_RECIEVED); 
-// }
 
 
 /*----- Functions -----*/
@@ -228,65 +286,23 @@ void initUART(void){
 }
 
 
-/*
-// serializes and sends UART data from stored data 
-Should this be done in a seperate thread (@rtos), as it will be called so often (~960 Hz?)
-
-checks which byte/255 it is on in the serialization 
-writes appropriate byte to UART data buffer 
-decides which byte to write based on a mega switch statement
-flips TXOK flag ? 
-increments serialization variable 
-*/
-
-
-void send_UART(void){ // called on ISR
-
+void send_UART(void){ // called from flag check in superloop 
     if (queue_UART_count(&UART_queue)>0){
         // pop byte off UART_queue and write to data register 
         uint8_t data_byte; 
         if (queue_UART_pop(&UART_queue, &data_byte)==0){
             LINDAT = data_byte;                 
             gFlag &= ~_BV(UART_SEND_READY); 
-        } 
+        } else {
+            // unsuccessful data dequeue from UART_queue
+        }
     }
 }
-
-
 
 /*
 Let's handle data pass back from RF module 
 */
 void handle_UART_recieved(void){
-}
-
-
-void transfer_CAN_to_UART(){ // transfers single CAN struct into UART
-    // peek check if enough space in UART queue for CAN data 
-    CAN_MSG * temporary_msg; 
-    if(queue_CAN_peek(&CAN_queue, &temporary_msg)) == 0){
-        if ((queue_UART_count(&UART_queue) + (*temporary_msg)->data_length)) < UART_QUEUE_SIZE){
-            // we are clear to transfer ID, then 8 data bytes
-
-            queue_UART_push(&UART_queue, (*temporary_msg)->ID);
-            for (int i =0; i < (*temporary_msg)->data_length; i++ ){
-                queue_UART_push(&UART_queue, &(((*temporary_msg)->data)[i]));
-            } 
-
-            // TODO: Confirm that freeing the CAN Struct from heap works and that it makes sense to do here
-            // TODO: We should wrap free() in a conditional to error handle and trigger debug LED's?
-
-
-            // we can free the data pointed to by temporary msg, as all bytes have been assigned & copied into the UART queue
-            free(temporary_msg); 
-
-        } else{
-            // handle UART queue overflowing
-        }
-    }
-    
-    
-
 }
 
 /*----- MAIN -----*/
@@ -295,22 +311,43 @@ int main(void){
 
     // inits 
     initUART(); 
+
+	CAN_init(CAN_ENABLED);
+
+    // setup mbox recieve
+	CAN_wait_on_receive(THROTTLE_CMD_MBOX, CAN_ID_MC_COMMAND, CAN_LEN_MC_COMMAND, CAN_MSK_SINGLE);
+	CAN_wait_on_receive(THROTTLE_BRD_MBOX, CAN_ID_THROTTLE, CAN_LEN_THROTTLE, CAN_MSK_SINGLE);
+	CAN_wait_on_receive(BRAKE_MBOX, CAN_ID_BRAKE_LIGHT, CAN_LEN_BRAKE_LIGHT, CAN_MSK_SINGLE);
+	CAN_wait_on_receive(AIR_CONTROL_SENSE_MBOX, CAN_ID_AIR_CONTROL_SENSE, CAN_LEN_AIR_CONTROL_SENSE, CAN_MSK_SINGLE);
+	CAN_wait_on_receive(BMS_CORE_MBOX, CAN_ID_BMS_CORE, CAN_LEN_BMS_CORE, CAN_MSK_SINGLE);
+
+	CAN_wait_on_receive(CELL_VOLT_TEMP_MBOX, CAN_ID_BMS_TEMP_12, CAN_LEN_BMS_TEMP_12, CAN_MSK_6);
+
+
     queue_CAN_init(&CAN_queue); 
     queue_UART_init(&UART_queue); 
+
+
 
     // super loop 
     while (1) {
         if (bit_is_set(gFlag, UART_SEND_READY)){
             send_UART(); 
         }
-
-        // TODO: Do we want to send multiple CAN structs to the UART Queue, or attempt to clear the CAN Queue in every superloop?
-        if (queue_CAN_count(&CAN_queue)>0) {  
-            // peek item in CAN, check it's length, and  add to UART 
-            transfer_CAN_to_UART(); 
-        }
         if (bit_is_set(gFlag, UART_RECIEVED)){
             handle_UART_recieved();
+        }
+        if (shutdown_error_flag){
+            // TODO: need a clean way to handle this HIGH PRIORITY message & send immediately, without enqueueing? 
+            // want to ensure we don't get interrupted by CAN message either...
+            uint8_t high_priority_ID = 0x01; 
+            uint8_t error_MSB = (shutdown_error_flag>>8) & 0xFF; 
+            uint8_t error_LSB = shutdown_error_flag & 0xFF; // mask with 8 bits to get LSB
+
+            queue_UART_push(UART_queue, &(high_priority_ID)); 
+            queue_UART_push(UART_queue, &(error_MSB)); 
+            queue_UART_push(UART_queue, &(error_LSB)); 
+            
         }
     }
 }
