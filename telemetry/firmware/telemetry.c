@@ -39,12 +39,12 @@
 
 
 // CAN Mailboxes
-#define THROTTLE_CMD_MBOX                  0
-#define THROTTLE_BRD_MBOX                  1
-#define BRAKE_MBOX                         2
-#define AIR_CONTROL_SENSE_MBOX             3
-#define BMS_CORE_MBOX                      4
-#define CELL_VOLT_TEMP_MBOX                5
+#define THROTTLE_CMD_MOB                  0
+#define THROTTLE_BRD_MOB                  1
+#define BRAKE_MOB                         2
+#define AIR_CONTROL_SENSE_MOB             3
+#define BMS_CORE_MOB                      4
+#define CELL_VOLT_TEMP_MOB                5
 
 #define CAN_MSK_6                           0b11000000 // custom mask for cell temps & voltages
 // handle another 15 mailboxes lol 
@@ -97,8 +97,14 @@ voltatile struct queue_UART UART_queue; // creating a UART_queue of type queue_U
 
 ISR(CAN_INT_vect){ 
 
-    CANPAGE = (THROTTLE_BRD_MBOX<<MOBNB0); 
-    if (bit_is_set(CANSTMOB, RXOK)) {
+    // previuosly checked for MOB full by setting CANPAGE and checking RXOK bit of CANSTMOB, with:  
+    // CANPAGE = (THROTTLE_CMD_MOB<<MOBNB0); 
+    // if (bit_is_set(CANSTMOB, RXOK)) {
+
+
+    if (bit_is_set(CANSIT2, THROTTLE_BRD_MOB)) {
+
+        CANPAGE = (THROTTLE_BRD_MOB<<MOBNB0); 
 
 		can_recv_msg[0] = CANMSG;   
 		can_recv_msg[1] = CANMSG;   
@@ -122,11 +128,14 @@ ISR(CAN_INT_vect){
 
 		//Setup to Receive Again for future
 		CANSTMOB = 0x00;
-	    CAN_wait_on_receive(THROTTLE_BRD_MBOX, CAN_ID_THROTTLE, CAN_LEN_THROTTLE, CAN_MSK_SINGLE);
+	    CAN_wait_on_receive(THROTTLE_BRD_MOB, CAN_ID_THROTTLE, CAN_LEN_THROTTLE, CAN_MSK_SINGLE);
 	}
 
-    CANPAGE = (THROTTLE_CMD_MBOX<<MOBNB0); 
-    if (bit_is_set(CANSTMOB, RXOK)) {
+    // if (bit_is_set(CANSTMOB, RXOK)) {
+    
+    if(bit_is_set(CANSIT2, THROTTLE_CMD_MOB){
+        
+        CANPAGE = (THROTTLE_CMD_MOB<<MOBNB0); 
         
         can_recv_msg[0] = CANMSG; // torque command LSB
 		can_recv_msg[1] = CANMSG; // torque command MSB
@@ -144,11 +153,12 @@ ISR(CAN_INT_vect){
 
         //Setup to Receive Again for future
 		CANSTMOB = 0x00;
-	    CAN_wait_on_receive(THROTTLE_CMD_MBOX, CAN_ID_MC_COMMAND, CAN_LEN_MC_COMMAND, CAN_MSK_SINGLE);
+	    CAN_wait_on_receive(THROTTLE_CMD_MOB, CAN_ID_MC_COMMAND, CAN_LEN_MC_COMMAND, CAN_MSK_SINGLE);
     }
 
-    CANPAGE = (BRAKE_MBOX<<MOBNB0); 
-    if (bit_is_set(CANSTMOB, RXOK)) {
+    if (bit_is_set(CANSIT2, BRAKE_MOB)) {
+        
+        CANPAGE = (BRAKE_MOB<<MOBNB0); 
 
         can_recv_msg[0] = CANMSG;   
 		can_recv_msg[1] = CANMSG;   
@@ -165,11 +175,12 @@ ISR(CAN_INT_vect){
 
         //Setup to Receive Again for future
         CANSTMOB = 0x00;
-	    CAN_wait_on_receive(BRAKE_MBOX, CAN_ID_BRAKE_LIGHT, CAN_LEN_BRAKE_LIGHT, CAN_MSK_SINGLE);
+	    CAN_wait_on_receive(BRAKE_MOB, CAN_ID_BRAKE_LIGHT, CAN_LEN_BRAKE_LIGHT, CAN_MSK_SINGLE);
     }
 
-    CANPAGE = (AIR_CONTROL_SENSE_MBOX<<MOBNB0); 
-    if (bit_is_set(CANSTMOB, RXOK)) {
+    if (bit_is_set(CANSIT2, AIR_CONTROL_SENSE_MOB)) {
+        
+        CANPAGE = (AIR_CONTROL_SENSE_MOB<<MOBNB0); 
         
         // TODO: air.c can transmit doesn't match with CAN address space spreadsheet?!?!
         // Check back on these error trips! Based on air.c code 4.20.2021
@@ -205,11 +216,12 @@ ISR(CAN_INT_vect){
 
         //Setup to Receive Again for future
 		CANSTMOB = 0x00;
-	    CAN_wait_on_receive(AIR_CONTROL_SENSE_MBOX, CAN_ID_AIR_CONTROL_SENSE, CAN_LEN_AIR_CONTROL_SENSE, CAN_MSK_SINGLE);
+	    CAN_wait_on_receive(AIR_CONTROL_SENSE_MOB, CAN_ID_AIR_CONTROL_SENSE, CAN_LEN_AIR_CONTROL_SENSE, CAN_MSK_SINGLE);
     }
 
-    CANPAGE = (BMS_CORE_MBOX<<MOBNB0); 
-    if (bit_is_set(CANSTMOB, RXOK)) {
+    if (bit_is_set(CANSIT2, BMS_CORE_MOB)) {
+        
+        CANPAGE = (BMS_CORE_MOB<<MOBNB0); 
 
         can_recv_msg[0] = CANMSG;   
 		can_recv_msg[1] = CANMSG;   
@@ -220,7 +232,7 @@ ISR(CAN_INT_vect){
 		can_recv_msg[6] = CANMSG;   
 		can_recv_msg[7] = CANMSG;   
 
-        // TODO: Transmit SOC ID, then 1 byte SOC estimate 
+        // Transmit SOC ID, then 1 byte SOC estimate 
         uint8_t msg_ID = (uint8_t) CAN_ID_BMS_CORE; 
         
         queue_UART_push(UART_queue, &(msg_ID)); 
@@ -228,12 +240,13 @@ ISR(CAN_INT_vect){
 
         //Setup to Receive Again for future
 		CANSTMOB = 0x00;
-	    CAN_wait_on_receive(BMS_CORE_MBOX, CAN_ID_BMS_CORE, CAN_LEN_BMS_CORE, CAN_MSK_SINGLE);
+	    CAN_wait_on_receive(BMS_CORE_MOB, CAN_ID_BMS_CORE, CAN_LEN_BMS_CORE, CAN_MSK_SINGLE);
     }
 
-    CANPAGE = (CELL_VOLT_TEMP_MBOX<<MOBNB0); 
-    if (bit_is_set(CANSTMOB, RXOK)) {
+    if (bit_is_set(CANSIT2, CELL_VOLT_TEMP_MOB)) {
 
+        CANPAGE = (CELL_VOLT_TEMP_MOB<<MOBNB0); 
+        
         can_recv_msg[0] = CANMSG;   
 		can_recv_msg[1] = CANMSG;   
         can_recv_msg[2] = CANMSG;   
@@ -246,7 +259,7 @@ ISR(CAN_INT_vect){
         // grab ID from CANIDT reg
         uint8_t msg_ID = CANIDT4>>3 + CANIDT3<<5; // pg 169
 
-        // TODO: transmit ID, then 8 bytes or 4 bytes 
+        // transmit ID, then 8 bytes or 4 bytes 
         queue_UART_push(UART_queue, &(msg_ID)); 
         queue_UART_push(UART_queue, &(can_recv_msg[0]));
         queue_UART_push(UART_queue, &(can_recv_msg[1])); 
@@ -259,7 +272,7 @@ ISR(CAN_INT_vect){
 
         //Setup to Receive Again for future
 		CANSTMOB = 0x00;
-	    CAN_wait_on_receive(CELL_VOLT_TEMP_MBOX, CAN_ID_BMS_TEMP_12, CAN_LEN_BMS_TEMP_12, CAN_MSK_6);
+	    CAN_wait_on_receive(CELL_VOLT_TEMP_MOB, CAN_ID_BMS_TEMP_12, CAN_LEN_BMS_TEMP_12, CAN_MSK_6);
     }
 }
 
@@ -314,32 +327,28 @@ int main(void){
 
 	CAN_init(CAN_ENABLED);
 
-    // setup mbox recieve
-	CAN_wait_on_receive(THROTTLE_CMD_MBOX, CAN_ID_MC_COMMAND, CAN_LEN_MC_COMMAND, CAN_MSK_SINGLE);
-	CAN_wait_on_receive(THROTTLE_BRD_MBOX, CAN_ID_THROTTLE, CAN_LEN_THROTTLE, CAN_MSK_SINGLE);
-	CAN_wait_on_receive(BRAKE_MBOX, CAN_ID_BRAKE_LIGHT, CAN_LEN_BRAKE_LIGHT, CAN_MSK_SINGLE);
-	CAN_wait_on_receive(AIR_CONTROL_SENSE_MBOX, CAN_ID_AIR_CONTROL_SENSE, CAN_LEN_AIR_CONTROL_SENSE, CAN_MSK_SINGLE);
-	CAN_wait_on_receive(BMS_CORE_MBOX, CAN_ID_BMS_CORE, CAN_LEN_BMS_CORE, CAN_MSK_SINGLE);
+    // setup MOB recieve
+	CAN_wait_on_receive(THROTTLE_CMD_MOB, CAN_ID_MC_COMMAND, CAN_LEN_MC_COMMAND, CAN_MSK_SINGLE);
+	CAN_wait_on_receive(THROTTLE_BRD_MOB, CAN_ID_THROTTLE, CAN_LEN_THROTTLE, CAN_MSK_SINGLE);
+	CAN_wait_on_receive(BRAKE_MOB, CAN_ID_BRAKE_LIGHT, CAN_LEN_BRAKE_LIGHT, CAN_MSK_SINGLE);
+	CAN_wait_on_receive(AIR_CONTROL_SENSE_MOB, CAN_ID_AIR_CONTROL_SENSE, CAN_LEN_AIR_CONTROL_SENSE, CAN_MSK_SINGLE);
+	CAN_wait_on_receive(BMS_CORE_MOB, CAN_ID_BMS_CORE, CAN_LEN_BMS_CORE, CAN_MSK_SINGLE);
 
-	CAN_wait_on_receive(CELL_VOLT_TEMP_MBOX, CAN_ID_BMS_TEMP_12, CAN_LEN_BMS_TEMP_12, CAN_MSK_6);
+	CAN_wait_on_receive(CELL_VOLT_TEMP_MOB, CAN_ID_BMS_TEMP_12, CAN_LEN_BMS_TEMP_12, CAN_MSK_6);
 
 
     queue_CAN_init(&CAN_queue); 
     queue_UART_init(&UART_queue); 
 
-
-
-    // super loop 
     while (1) {
         if (bit_is_set(gFlag, UART_SEND_READY)){
             send_UART(); 
         }
-        if (bit_is_set(gFlag, UART_RECIEVED)){
-            handle_UART_recieved();
-        }
+        // Implement UART RX down the line 
+        // if (bit_is_set(gFlag, UART_RECIEVED)){
+        //     handle_UART_recieved();
+        // }
         if (shutdown_error_flag){
-            // TODO: need a clean way to handle this HIGH PRIORITY message & send immediately, without enqueueing? 
-            // want to ensure we don't get interrupted by CAN message either...
             uint8_t high_priority_ID = 0x01; 
             uint8_t error_MSB = (shutdown_error_flag>>8) & 0xFF; 
             uint8_t error_LSB = shutdown_error_flag & 0xFF; // mask with 8 bits to get LSB
