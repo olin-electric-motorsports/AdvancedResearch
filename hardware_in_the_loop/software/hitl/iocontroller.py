@@ -55,6 +55,10 @@ class IOController:
             Bytes 2-3:
                 * Bits 0-15: 16 bit precision value to set, with 0% = 0x0000 and  100% = 0xFFFF
         """
+        # Raise an exception if the signal is read only
+        if self.pin[pin]["set_get"] == "GET":
+            raise Exception(f"{pin} is a read-only signal, you cannot set it!")
+
         # If no hardware, log an error
         if not self.serial:
             self.log.error("Could not set state; no hardware connection")
@@ -101,6 +105,10 @@ class IOController:
             Byte 1:
                 * Bits 0-7: Pin number of the signal we want to get
         """
+        # Raise an exception if the signal is write only
+        if self.pin[pin]["set_get"] == "SET":
+            raise Exception(f"{pin} is a write-only signal, you cannot get it!")
+            
         # If no hardware, log an error
         if not self.serial:
             raise Exception("Could not get state, no hardware connection")
@@ -155,8 +163,9 @@ class IOController:
                 sim = data[3].strip()
                 sig = data[4].strip()
                 sig_type = data[5].strip()
-                sig_min = data[6].strip()
-                sig_max = data[7].strip()
+                set_get = data[6].strip()
+                sig_min = data[7].strip()
+                sig_max = data[8].strip()
 
                 # add data to dictionary
                 sig_dict = {}
@@ -165,6 +174,7 @@ class IOController:
                 sig_dict["pin"] = int(add)
                 sig_dict["simulator"] = sim
                 sig_dict["type"] = sig_type
+                sig_dict["set_get"] = set_get
                 sig_dict["min"] = float(sig_min)
                 sig_dict["max"] = float(sig_max)
                 out[sig] = sig_dict
