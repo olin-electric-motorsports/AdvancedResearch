@@ -87,3 +87,4 @@ if __name__ == "__main__":
     output += generate_footer()
 
     write_to_file(OUTPUT_PATH, output)
+    
