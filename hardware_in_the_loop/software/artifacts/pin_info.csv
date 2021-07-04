@@ -36,3 +36,4 @@ Address ,Board ,Pin Number ,System      ,Name                 ,Type    ,Set/Get 
 34      ,0     ,0          ,SENSING     ,SUSPENSION_TRAVEL_2  ,ANALOG  ,        ,0   ,5      ,
 35      ,0     ,0          ,SENSING     ,SUSPENSION_TRAVEL_3  ,ANALOG  ,        ,0   ,5      ,
 36      ,0     ,0          ,SENSING     ,SUSPENSION_TRAVEL_4  ,ANALOG  ,        ,0   ,5      ,
+
