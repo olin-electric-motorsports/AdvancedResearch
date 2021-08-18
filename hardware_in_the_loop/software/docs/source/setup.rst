@@ -15,19 +15,21 @@ Installation
 
     $ git clone https://github.com/olin-electric-motorsports/AdvancedResearch.git
 
-2. To perform software installation and setup, navigate to the software directory::
+2. Install drivers for the FTDI chip from `here <https://ftdichip.com/drivers/d2xx-drivers/>`_ and follow the instructions in the ``ReadMe.rtf`` file.
+
+3. To perform software installation and setup, navigate to the software directory::
     
     $ cd AdvancedResearch/hardware_in_the_loop/software
 
-3. (Optional) If you want to setup a virtual environment for this project (I recommend it), now is the time. If you don't know how to do this, read `here <https://realpython.com/intro-to-pyenv/>`_
+4. (Optional) If you want to setup a virtual environment for this project (I recommend it), now is the time. If you don't know how to do this, read `here <https://realpython.com/intro-to-pyenv/>`_
 
-4. Use pip to install the project and its dependencies on your computer. If you usually use ``pip3`` to invoke ``pip``, use that instead; as long as the actual version of ``pip`` is >3.6.0, you should be fine.::
+5. Use pip to install the project and its dependencies on your computer. If you usually use ``pip3`` to invoke ``pip``, use that instead; as long as the actual version of ``pip`` is >3.6.0, you should be fine.::
 
     $ pip install -e .
 
-5. Now that the software is installed, it's time to configure hardware. For now, the only hardware we can connect to is an arduino. Go ahead and plug that in now. If you don't have an arduino, thats fine; you just won't be able to run all unit tests.
+6. Now that the software is installed, it's time to configure hardware. For now, the only hardware we can connect to is an arduino. Go ahead and plug that in now. If you don't have an arduino, thats fine; you just won't be able to run all unit tests.
 
-6. Now that your arduino is plugged in, verify that your computer recognizes it with::
+7. Now that your arduino is plugged in, verify that your computer recognizes it with::
 
     `$ lsusb`
     
