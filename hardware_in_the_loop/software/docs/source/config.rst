@@ -32,9 +32,6 @@ PATHS
 ^^^^^
 This section should be pretty self explanatory; these are the paths the project uses to look for files and devices. These paths should be consumed by the top-level testing object (for example, a ``RoadkillHarness``), and passed from there to the objects that need them (for example, an ``IOController``).
 
-serial_path:
-    The path a serial device. If you've run ``hardware_setup.py`` (and rebooted), there should be a symbolic link from your arduino to ``/dev/arduino``.
-
 pin_config:
     The path the pin config file (relative to the ``artifacts`` directory). This file is documented in more detail on the ``IOController`` page. For example, if your pin config file is at ``artifacts/pin_info.csv``, use ``pin_info.csv`` (NOT ``~/AdvancedResearch/hardware_in_the_loop/software/artifacts/pin_info.csv``)
 

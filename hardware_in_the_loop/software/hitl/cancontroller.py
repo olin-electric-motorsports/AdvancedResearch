@@ -32,7 +32,9 @@ class CANController:
     :param int bitrate: The bitrate of the can bus. Defaults to 500K If using a virtual bus, you can ignore this.
     """
 
-    def __init__(self, ecus: dict, can_spec_path: str, channel: str, bitrate: int = 500000):
+    def __init__(
+        self, ecus: dict, can_spec_path: str, channel: str, bitrate: int = 500000
+    ):
         # Create logger (all config should already be set by RoadkillHarness)
         self.log = logging.getLogger(name=__name__)
 
@@ -44,9 +46,13 @@ class CANController:
                 os.system(f"sudo ip link add dev {channel} type vcan")
                 os.system(f"sudo ip link set {channel} up")  # virtual hardware
             else:
-                os.system(f"sudo ip link set {channel} up type can bitrate {bitrate} restart-ms 100")  # real hardware
+                os.system(
+                    f"sudo ip link set {channel} up type can bitrate {bitrate} restart-ms 100"
+                )  # real hardware
         else:
-            self.log.error("Cannot bring up real or fake can hardware; must be on linux.")
+            self.log.error(
+                "Cannot bring up real or fake can hardware; must be on linux."
+            )
 
         self.ecus = ecus
         self.read_dict = {}  # Dictionary to help translate raw can to useful signals
@@ -55,12 +61,18 @@ class CANController:
         # Start listening
         bus_type = "socketcan"
         if "linux" in sys.platform:
-            can_bus = can.interface.Bus(channel=channel, bus_type=bus_type, bitrate=bitrate)
+            can_bus = can.interface.Bus(
+                channel=channel, bus_type=bus_type, bitrate=bitrate
+            )
             self.kill_threads = threading.Event()
             listener = threading.Thread(
                 target=self._listen,
                 name="listener",
-                kwargs={"can_bus": can_bus, "callback": self._update_ecu, "kill_threads": self.kill_threads},
+                kwargs={
+                    "can_bus": can_bus,
+                    "callback": self._update_ecu,
+                    "kill_threads": self.kill_threads,
+                },
             )
             listener.start()
         else:
@@ -91,10 +103,14 @@ class CANController:
             for signal in msg.signals:
                 for sender in msg.senders:
                     try:
-                        self.ecus[sender].states[signal.name] = None  # TODO Idk what to use for default values...
+                        self.ecus[sender].states[
+                            signal.name
+                        ] = None  # TODO Idk what to use for default values...
                     except Exception as e:
                         self.log.error(e)
-                        self.log.error(f"Could not add signal {signal} to sender {sender}")
+                        self.log.error(
+                            f"Could not add signal {signal} to sender {sender}"
+                        )
 
     def __del__(self):
         """Destructor (called when the program ends)
@@ -104,7 +120,9 @@ class CANController:
         if hasattr(self, "kill_threads"):
             self.kill_threads.set()
 
-    def _listen(self, can_bus: can.Bus, callback: Callable, kill_threads: threading.Event) -> None:
+    def _listen(
+        self, can_bus: can.Bus, callback: Callable, kill_threads: threading.Event
+    ) -> None:
         """Thread that runs all the time to listen to CAN messages
 
         References:

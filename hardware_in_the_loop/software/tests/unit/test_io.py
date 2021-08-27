@@ -16,10 +16,7 @@ config.read(os.path.join(artifacts_path, "config.ini"))
 @pytest.fixture
 def io():
     path = os.path.abspath(os.path.dirname(__file__) + "/sample_io_addresses.csv")
-    out = IOController(
-        pin_info_path=path,
-        serial_path=config.get("PATHS", "serial_path", fallback="/dev/arduino"),
-    )
+    out = IOController(pin_info_path=path)
     time.sleep(2)  # Was seeing weird errors without this
     return out
 

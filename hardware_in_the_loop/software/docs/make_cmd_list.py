@@ -34,27 +34,31 @@ OUTPUT_PATH = os.path.join(artifacts_path, "cmd_list.md")
 def generate_header() -> str:
     return HEADER
 
+
 def generate_footer() -> str:
     return FOOTER
+
 
 def generate_io_command(signal: str, kind: str) -> str:
     out = ""
 
-    if (kind == "SET") or (kind == "BOTH") :
+    if (kind == "SET") or (kind == "BOTH"):
         out += f"To set {signal} to `value`, you can run `harness.io.set_state({signal}, value)`\n\n"
 
-    if (kind == "GET") or (kind == "BOTH") :
+    if (kind == "GET") or (kind == "BOTH"):
         out += f"To get {signal}, you can run `harness.io.get_state({signal})`\n\n"
 
     return out
 
+
 def generate_can_command(signal: str) -> str:
     return f"To get {signal}, you can run `harness.can.set_state({signal})`\n\n"
+
 
 def generate_all_io_commands(filepath: str) -> str:
     out = ""
 
-    with open(filepath, 'r') as f:
+    with open(filepath, "r") as f:
         line = f.readline()  # clear the header line
         line = f.readline()  # get the first data line ready
         while line != "":  # keep reading until we hit the end
@@ -68,14 +72,17 @@ def generate_all_io_commands(filepath: str) -> str:
 
     return out
 
+
 def generate_all_can_commands(filepath: str) -> str:
     # TODO
     return ""
 
+
 def write_to_file(filepath: str, data: str) -> None:
     """Write a string to a file"""
-    with open(filepath, 'w') as f:
+    with open(filepath, "w") as f:
         f.write(data)
+
 
 # Main function
 if __name__ == "__main__":
@@ -87,4 +94,3 @@ if __name__ == "__main__":
     output += generate_footer()
 
     write_to_file(OUTPUT_PATH, output)
-    

@@ -9,7 +9,9 @@ from typing import Tuple, Optional
 
 
 # Constant definitions
-root_path = os.path.abspath(os.path.join(os.path.dirname(__file__), os.pardir))  # to software
+root_path = os.path.abspath(
+    os.path.join(os.path.dirname(__file__), os.pardir)
+)  # to software
 artifacts_path = os.path.join(root_path, "artifacts")
 
 
@@ -34,11 +36,17 @@ def get_logging_config() -> None:
         log_path = None
 
     if log_path:
-        log_path = log_path.replace("$DATETIME", datetime.datetime.now().strftime("%Y_%m_%d_%H_%M_%S"))
+        log_path = log_path.replace(
+            "$DATETIME", datetime.datetime.now().strftime("%Y_%m_%d_%H_%M_%S")
+        )
         log_path = log_path.replace("$LOGS", os.path.join(artifacts_path, "logs"))
 
     logging.basicConfig(
-        format=config.get("LOGGING", "log_format", fallback="%(asctime)s - %(name)s - %(levelname)s - %(message)s"),
+        format=config.get(
+            "LOGGING",
+            "log_format",
+            fallback="%(asctime)s - %(name)s - %(levelname)s - %(message)s",
+        ),
         level=config.get("LOGGING", "log_level", fallback="INFO"),
         filename=log_path,
     )

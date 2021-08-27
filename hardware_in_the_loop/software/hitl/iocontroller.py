@@ -16,9 +16,7 @@ ADC_PREFIX = 0b10110000
 ADC_RETURN_SIZE_BYTES = 3
 
 # DAC parameters
-DAC_CHANNEL_TO_ADD_BITS = {
-    i: i for i in range(8)
-}
+DAC_CHANNEL_TO_ADD_BITS = {i: i for i in range(8)}
 DAC_COMMANDS = {
     "output now": 0b00110000,
     "load but don't output": 0b00010000,
@@ -26,12 +24,8 @@ DAC_COMMANDS = {
 }
 
 # GPIO parameters
-GPIO_CHANNEL_TO_ADD_BITS = {
-    i: i for i in range(4, 32)
-}
-GPIO_COMMANDS = {
-    "single port": 0b00100000
-}
+GPIO_CHANNEL_TO_ADD_BITS = {i: i for i in range(4, 32)}
+GPIO_COMMANDS = {"single port": 0b00100000}
 GPIO_RETURN_SIZE_BYTES = 1
 
 
@@ -60,7 +54,6 @@ class IOController:
             self.log.error(e)
             self.dev = None
 
-
     def set_state(self, name: str, value) -> None:
         """Set the value of an IO pin in the HitL system
 
@@ -71,7 +64,7 @@ class IOController:
         :returns: None
 
         DAC command message format (3 bytes):
-            
+
             * bits 0-3: Operation type (see datasheet)
             * bits 4-7: DAC number
             * bits 8-23: Value to write
@@ -90,29 +83,34 @@ class IOController:
             raise Exception(f"{name} is a read-only signal, you cannot set it!")
 
         # If no hardware, log an error
-        if not self.serial:
+        if not self.dev:
             self.log.error("Could not set state; no hardware connection")
             return
 
         address = self.pin_info[name]["address"]
 
         if self.pin_info[name]["type"] == "ANALOG":
-            byte1 = DAC_COMMANDS["output_now"] & DAC_CHANNEL_TO_ADD_BITS[self.pin_info[name]["pin"]]
+            byte1 = (
+                DAC_COMMANDS["output_now"]
+                & DAC_CHANNEL_TO_ADD_BITS[self.pin_info[name]["pin"]]
+            )
             byte2, byte3 = self._map_to_machine(
                 value=value,
                 low=self.pin_info[name]["min"],
-                high=self.pin_info[name]["max"]
+                high=self.pin_info[name]["max"],
             )
             data = bytes([byte1, byte2, byte3])
         else:
-            byte1 = GPIO_COMMANDS["single port"] & GPIO_CHANNEL_TO_ADD_BITS[self.pin.pin_info[name]["pin"]]
+            byte1 = (
+                GPIO_COMMANDS["single port"]
+                & GPIO_CHANNEL_TO_ADD_BITS[self.pin.pin_info[name]["pin"]]
+            )
             byte2 = 1 if value else 0
             data = bytes([byte1, byte2])
 
         self.dev.i2cMaster_Write(address, data)
 
         self.log.info(f"Set state of {name} to {value}")
-
 
     def get_state(self, name: str) -> Union[int, float]:
         """Request a hardware state from the HitL system.
@@ -143,25 +141,22 @@ class IOController:
             * bit 1: 1 if reading was out of bounds
             * bits 2-7: 0
             * bits 8-23: 16 bit voltage reading
-            
+
 
         ADC datasheet: https://www.analog.com/media/en/technical-documentation/data-sheets/2489fb.pdf
         """
         # Raise an exception if the signal is write only
         if self.pin[name]["read_write"] == "WRITE":
             raise Exception(f"{name} is a write-only signal, you cannot read it!")
-            
-        # If no hardware, log an error
-        if not self.serial:
-            raise Exception("Could not get state, no hardware connection.")
 
-        # Flush the serial buffer, in case anything has come in
-        self.serial.flush()
+        # If no hardware, log an error
+        if not self.dev:
+            raise Exception("Could not get state, no hardware connection.")
 
         # Create and send request
         out = 0
         address = self.pin_info[name]["address"]
-        
+
         if self.pin_info[name]["type"] == "ANALOG":
             # Request data
             data = ADC_PREFIX & ADC_CHANNEL_TO_ADD_BITS[self.pin_info[name]["pin"]]
@@ -170,10 +165,15 @@ class IOController:
             # Wait for response
             response = self.dev.i2cMaster_Read(address, ADC_RETURN_SIZE_BYTES)
             self.log.debug(f"Received {response}")
-            out = self._map_to_human(response, self.pin_info[name]["min"], self.pin_info[name]["max"])
+            out = self._map_to_human(
+                response, self.pin_info[name]["min"], self.pin_info[name]["max"]
+            )
         else:
             # Request data
-            data = GPIO_COMMANDS["single port"] & GPIO_CHANNEL_TO_ADD_BITS[self.pin.pin_info[name]["pin"]]
+            data = (
+                GPIO_COMMANDS["single port"]
+                & GPIO_CHANNEL_TO_ADD_BITS[self.pin.pin_info[name]["pin"]]
+            )
             self.dev.i2cMaster_Write(address, data)
 
             # Wait for response
@@ -183,7 +183,6 @@ class IOController:
 
         self.log.info(f"Got state of {name}: {out}")
         return out
-
 
     def _read_pin_info(self, path: str) -> dict:
         """Read in the pin address information, given a path to a .csv file
@@ -203,31 +202,37 @@ class IOController:
                 data = line.split(",")
 
                 # Parse a line of data
-                address    = data[0].strip()  # i2c address
-                pin        = data[1].strip()  # channel/pin number on chip
-                name       = data[2].strip()  # human-readable name of signal
-                type       = data[3].strip()  # analog or digital
+                address = data[0].strip()  # i2c address
+                pin = data[1].strip()  # channel/pin number on chip
+                name = data[2].strip()  # human-readable name of signal
+                type = data[3].strip()  # analog or digital
                 read_write = data[4].strip()  # readable, writeable, or both
-                sig_min    = data[5].strip()  # min value of signal
-                sig_max    = data[6].strip()  # max value of signal
+                sig_min = data[5].strip()  # min value of signal
+                sig_max = data[6].strip()  # max value of signal
 
                 # Check for typos
-                if (int(address) > 127 or int(address) < 0): 
-                    raise Exception(f"I2C address of {address} for signal {name} is invalid!")
-                if type not in ["ANALOG", "DIGITAL"]: 
-                    raise Exception(f"Type {type} of signal {name} is invalid! Please use ANALOG or DIGITAL")
+                if int(address) > 127 or int(address) < 0:
+                    raise Exception(
+                        f"I2C address of {address} for signal {name} is invalid!"
+                    )
+                if type not in ["ANALOG", "DIGITAL"]:
+                    raise Exception(
+                        f"Type {type} of signal {name} is invalid! Please use ANALOG or DIGITAL"
+                    )
                 if read_write not in ["READ", "WRITE", "BOTH"]:
-                    raise Exception(f"Read/write value {read_write} of signal {name} is invalid! Please use READ, WRITE, or BOTH")
+                    raise Exception(
+                        f"Read/write value {read_write} of signal {name} is invalid! Please use READ, WRITE, or BOTH"
+                    )
 
                 # Add data to dictionary
                 sig_dict = {}
 
-                sig_dict["address"]    = int(address)
-                sig_dict["pin"]        = int(pin)
-                sig_dict["type"]       = type
+                sig_dict["address"] = int(address)
+                sig_dict["pin"] = int(pin)
+                sig_dict["type"] = type
                 sig_dict["read_write"] = read_write
-                sig_dict["min"]        = float(sig_min)
-                sig_dict["max"]        = float(sig_max)
+                sig_dict["min"] = float(sig_min)
+                sig_dict["max"] = float(sig_max)
 
                 out[name] = sig_dict
 
@@ -235,7 +240,6 @@ class IOController:
                 line = f.readline()
 
         return out
-
 
     def _map_to_machine(self, value: float, low: float, high: float) -> Tuple[int, int]:
         """Map from a floating point value to a 16 bit precision value, from min to max
@@ -250,12 +254,13 @@ class IOController:
             Tuple[int, int]: the two int values (0-255) that represent the scaled value
         """
         if not (low < value < high):
-            raise Exception(f"Value {value} not in range [{low}-{high}]! Cannot set value.")
+            raise Exception(
+                f"Value {value} not in range [{low}-{high}]! Cannot set value."
+            )
         mapped = int((value - low) * (0xFFFF - 0x0000) / (high - low))
         byte0 = mapped >> 8
         byte1 = mapped & 0x00FF
         return byte0, byte1
-
 
     def _map_to_human(self, value: bytes, low: float, high: float) -> float:
         """Convert from 2 bytes returned from an ADC to a float (voltage)
@@ -274,14 +279,19 @@ class IOController:
         mapped = (response - 0x0000) * (high - low) / (0xFFFF - 0x0000)
 
         if not (low < mapped < high):
-            raise Exception(f"Value {value} not in range [{low}-{high}]! Invalid response received.")
+            raise Exception(
+                f"Value {value} not in range [{low}-{high}]! Invalid response received."
+            )
         if (response[0] & 0b10000000 == 0) and low > 0:
-            raise Exception(f"Return value from ADC of {value} indicates the voltage was negative. See https://www.analog.com/media/en/technical-documentation/data-sheets/2489fb.pdf for details.")
-        if response[0] & 0b01000000 == 1: 
-            raise Exception(f"Return value from ADC of {value} indicates the voltage measurement was clipped. See https://www.analog.com/media/en/technical-documentation/data-sheets/2489fb.pdf for details.")
+            raise Exception(
+                f"Return value from ADC of {value} indicates the voltage was negative. See https://www.analog.com/media/en/technical-documentation/data-sheets/2489fb.pdf for details."
+            )
+        if response[0] & 0b01000000 == 1:
+            raise Exception(
+                f"Return value from ADC of {value} indicates the voltage measurement was clipped. See https://www.analog.com/media/en/technical-documentation/data-sheets/2489fb.pdf for details."
+            )
 
         return mapped
-
 
     def __enter__(self) -> None:
         """Enter and exit functions allow signals to be set simultaneously with hardware
@@ -311,14 +321,12 @@ class IOController:
         """
         raise Exception("Not implemented")
 
-
     def __exit__(self) -> None:
         """See docstring for __enter__ above
 
         Send 0xFF byte to system interface
         """
         raise Exception("Not implemented")
-
 
     def __del__(self) -> None:
         """Destructor (called when the program ends)
