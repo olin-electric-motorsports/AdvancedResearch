@@ -62,7 +62,7 @@ class CANController:
         bus_type = "socketcan"
         if "linux" in sys.platform:
             can_bus = can.interface.Bus(
-                channel=channel, bus_type=bus_type, bitrate=bitrate
+                channel=channel, bustype=bus_type, bitrate=bitrate
             )
             self.kill_threads = threading.Event()
             listener = threading.Thread(
@@ -130,6 +130,6 @@ class CANController:
           - https://python-can.readthedocs.io/en/master/
         """
         while not kill_threads.isSet():
-            msg = can_bus.recv()  # No timeout (wait indefinitely)
-            callback(message)
+            msg = can_bus.recv(1)  # 1 second receive timeout
+            if msg: callback(msg)
         can_bus.shutdown()

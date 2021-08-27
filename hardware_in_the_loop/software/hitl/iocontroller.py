@@ -276,17 +276,17 @@ class IOController:
         """
         response = int.from_bytes(value[1:], "big")  # first byte is special
 
-        mapped = (response - 0x0000) * (high - low) / (0xFFFF - 0x0000)
+        mapped = (response - 0x0000) * (high - low) / (0xFFFF - 0x0000) + low
 
         if not (low < mapped < high):
             raise Exception(
-                f"Value {value} not in range [{low}-{high}]! Invalid response received."
+                f"Value {mapped} not in range [{low}-{high}]! Invalid response received."
             )
-        if (response[0] & 0b10000000 == 0) and low > 0:
+        if (value[0] & 0b10000000 == 0) and low > 0:
             raise Exception(
                 f"Return value from ADC of {value} indicates the voltage was negative. See https://www.analog.com/media/en/technical-documentation/data-sheets/2489fb.pdf for details."
             )
-        if response[0] & 0b01000000 == 1:
+        if value[0] & 0b01000000 == 1:
             raise Exception(
                 f"Return value from ADC of {value} indicates the voltage measurement was clipped. See https://www.analog.com/media/en/technical-documentation/data-sheets/2489fb.pdf for details."
             )
