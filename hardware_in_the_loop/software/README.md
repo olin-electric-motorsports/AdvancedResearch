@@ -52,6 +52,8 @@ This is a work in progress! It is not at all functional yet, but the current goa
 
 * [pyenv](https://realpython.com/intro-to-pyenv/)
 
+* [ft4222 python library](https://msrelectronics.gitlab.io/python-ft4222/)
+
 
 If you go to Olin, the fastest way to get help is probably to hit up our Slack channel, `#hardware_in_the_loop`. Otherwise, you can email awenstrup@olin.edu
 

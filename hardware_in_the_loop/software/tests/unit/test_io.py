@@ -13,13 +13,10 @@ config = ConfigParser(interpolation=None)
 config.read(os.path.join(artifacts_path, "config.ini"))
 
 
-@pytest.fixture
+@pytest.fixture(scope="session")
 def io():
     path = os.path.abspath(os.path.dirname(__file__) + "/sample_io_addresses.csv")
-    out = IOController(
-        pin_info_path=path,
-        serial_path=config.get("PATHS", "serial_path", fallback="/dev/arduino"),
-    )
+    out = IOController(pin_info_path=path)
     time.sleep(2)  # Was seeing weird errors without this
     return out
 
@@ -36,7 +33,7 @@ def logger():
 def test_connected(io, logger):
     # Create an IOController to make sure it can connect to hardware!
     logger.info("Testing hardware connection...")
-    assert io.serial
+    assert io.dev
 
 
 @pytest.mark.soft
@@ -50,24 +47,7 @@ def test_read_io_file(io, logger):
 
     digital = io.pin_info["EXAMPLE_DIGITAL_SIGNAL"]
     assert digital["min"] == 0
-    assert digital["simulator"] == "EXAMPLE1"
-
-
-@pytest.mark.hard
-@pytest.mark.unit
-def test_get_set(io, logger):
-    # Assumes plugged into arduino running `firmware/arduino/hitl_interface_mock.ino`
-    logger.info("Testing send/receive functionality...")
-
-    io.set_state("ARDUINO_STATE", 1)
-    time.sleep(1)
-    assert 0.99 < io.get_state("ARDUINO_STATE") < 1.01
-
-    time.sleep(1)
-
-    io.set_state("ARDUINO_STATE", 2)
-    time.sleep(1)
-    assert 1.99 < io.get_state("ARDUINO_STATE") < 2.01
+    assert digital["pin"] == 0
 
 
 @pytest.mark.soft
@@ -87,4 +67,10 @@ def test_encoder(io, logger):
 @pytest.mark.soft
 @pytest.mark.unit
 def test_decoder(io, logger):
-    assert True
+    logger.info("Testing decoder (_map_to_human())...")
+
+    v1 = io._map_to_human(bytes([0x80, 0x33, 0x33]), 2.5, 5)
+    assert v1 == pytest.approx(3.0, abs=0.01)
+
+    v2 = io._map_to_human(bytes([0x80, 0x7F, 0xFF]), 0, 5)
+    assert v2 == pytest.approx(2.5, abs=0.01)

@@ -29,7 +29,7 @@ def can():
     out = CANController(
         ecus=ecus,
         can_spec_path=path,
-        channel=config.get("HARDWARE", "can_channel", fallback="can0"),
+        channel=config.get("HARDWARE", "can_channel", fallback="vcan0"),
         bitrate=config.get("HARDWARE", "can_bitrate", fallback="500000"),
     )
 

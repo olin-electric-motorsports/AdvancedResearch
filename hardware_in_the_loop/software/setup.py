@@ -14,6 +14,7 @@ setup(
     version="0.1.0",
     packages=find_packages(include=["hitl", "hitl.*"]),
     install_requires=[
+        "ft4222=1.2.2",
         "python-can>=3.3.4",
         "pyserial>=3.4",
         "pytest>=6.1.1",

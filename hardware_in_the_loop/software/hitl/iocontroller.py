@@ -1,7 +1,32 @@
-# Imports
-import serial
+# IMPORTS
 import logging
 from typing import Tuple, Union
+
+import ft4222
+
+# CONSTANTS
+# ADC parameters
+ADC_CHANNEL_TO_ADD_BITS = {
+    0: 0b00000000,
+    1: 0b00001000,
+    2: 0b00000001,
+    3: 0b00001001,
+}
+ADC_PREFIX = 0b10110000
+ADC_RETURN_SIZE_BYTES = 3
+
+# DAC parameters
+DAC_CHANNEL_TO_ADD_BITS = {i: i for i in range(8)}
+DAC_COMMANDS = {
+    "output now": 0b00110000,
+    "load but don't output": 0b00010000,
+    "output loaded values": 0b10110000,
+}
+
+# GPIO parameters
+GPIO_CHANNEL_TO_ADD_BITS = {i: i for i in range(4, 32)}
+GPIO_COMMANDS = {"single port": 0b00100000}
+GPIO_RETURN_SIZE_BYTES = 1
 
 
 class IOController:
@@ -11,28 +36,25 @@ class IOController:
     is configured using a ``.csv`` file, documented below. It allows a user to interact
     with our custom hardware by getting and setting digital and analog states.
 
-    `Confluence <https://docs.olinelectricmotorsports.com/display/AE/IO+Controller>`_
-
     :param str pin_info_path: The path to the pin_info file (should be stored in ``artifacts``).
-    :param str serial_path: The path to the serial device you are connecting to. If you are using
-        an arduino and have run ``scripts/hardware_setup.py``, then you should be able to use
-        ``/dev/arduino``. Otherwise, you might have to look for your device with ``$ ls /dev/*``
+    :param str device_description: The description of the device; used to connect.
     """
 
-    def __init__(self, pin_info_path: str, serial_path: str):
+    def __init__(self, pin_info_path: str, device_description: str = "FT4222 A"):
         # Create logger (all config should already be set by RoadkillHarness)
         self.log = logging.getLogger(name=__name__)
 
         self.pin_info = self._read_pin_info(path=pin_info_path)
         try:
-            self.serial = serial.Serial(port=serial_path, baudrate=115200, timeout=5)
-        except serial.serialutil.SerialException as e:
+            self.dev = ft4222.openByDescription(device_description)
+            self.dev.i2cMaster_Init(400_000)
+        except ft4222.FT2XXDeviceError as e:
             # Couldn't open the specified port; initialize w/o hardware for testing
-            self.log.error(f"Failed to connect to hardware at {serial_path}")
+            self.log.error(f"Failed to connect to device {device_description}")
             self.log.error(e)
-            self.serial = None
+            self.dev = None
 
-    def set_state(self, pin: str, value) -> None:
+    def set_state(self, name: str, value) -> None:
         """Set the value of an IO pin in the HitL system
 
         :param str pin: The name of the pin to update (e.x. THROTTLE_PEDAL_1)
@@ -41,100 +63,125 @@ class IOController:
 
         :returns: None
 
-        Message format:
-            4 bytes (all big endian)
+        DAC command message format (3 bytes):
 
-            Byte 0:
-                * Bit 0: 0 (reserved bit)
-                * Bit 1: 1 (indicates a set request)
-                * Bits 2-7: Board number of the signal we want to get (0-63)
+            * bits 0-3: Operation type (see datasheet)
+            * bits 4-7: DAC number
+            * bits 8-23: Value to write
 
-            Byte 1:
-                * Bits 0-7: Pin number of the signal we want to set
+        GPIO command message format (2 bytes):
+            * bits 0-2: Command type (see datasheet)
+            * bits 3-7: Pin number
+            * bits 8-14: Ignored
+            * bit 15: Value to write
 
-            Bytes 2-3:
-                * Bits 0-15: 16 bit precision value to set, with 0% = 0x0000 and  100% = 0xFFFF
+        DAC Datasheet: https://www.analog.com/media/en/technical-documentation/data-sheets/AD5675.pdf
+        GPIO Datasheet: https://datasheets.maximintegrated.com/en/ds/MAX7300.pdf
         """
         # Raise an exception if the signal is read only
-        if self.pin[pin]["set_get"] == "GET":
-            raise Exception(f"{pin} is a read-only signal, you cannot set it!")
+        if self.pin[name]["read_write"] == "READ":
+            raise Exception(f"{name} is a read-only signal, you cannot set it!")
 
         # If no hardware, log an error
-        if not self.serial:
+        if not self.dev:
             self.log.error("Could not set state; no hardware connection")
             return
 
-        # Byte 1
-        board = self.pin_info[pin]["board"] | (1 << 6)  # set the leftmost bit to 1 to designate message as setter
+        address = self.pin_info[name]["address"]
 
-        # Byte 2
-        pin_num = self.pin_info[pin]["pin"]
-
-        # Bytes 3-4
-        byte2 = 0  # most significant byte
-        byte3 = 0  # least significant byte
-
-        if self.pin_info[pin]["type"] == "DIGITAL":
-            if value == 1:
-                byte2 = byte3 = 0xFF  # oh yea, this syntax works :)
-        elif self.pin_info[pin]["type"] == "ANALOG":
-            byte2, byte3 = self._map_to_machine(value, self.pin_info[pin]["min"], self.pin_info[pin]["max"])
+        if self.pin_info[name]["type"] == "ANALOG":
+            byte1 = (
+                DAC_COMMANDS["output_now"]
+                & DAC_CHANNEL_TO_ADD_BITS[self.pin_info[name]["pin"]]
+            )
+            byte2, byte3 = self._map_to_machine(
+                value=value,
+                low=self.pin_info[name]["min"],
+                high=self.pin_info[name]["max"],
+            )
+            data = bytes([byte1, byte2, byte3])
         else:
-            raise Exception(f"Unsupported signal type: {self.pin_info[pin]['type']}")
+            byte1 = (
+                GPIO_COMMANDS["single port"]
+                & GPIO_CHANNEL_TO_ADD_BITS[self.pin.pin_info[name]["pin"]]
+            )
+            byte2 = 1 if value else 0
+            data = bytes([byte1, byte2])
 
-        request = bytes([board, pin_num, byte2, byte3])
-        self._send_request(request)
-        self.log.info(f"Set state of {pin} to {value}")
+        self.dev.i2cMaster_Write(address, data)
 
-    def get_state(self, pin: str) -> Union[int, float]:
+        self.log.info(f"Set state of {name} to {value}")
+
+    def get_state(self, name: str) -> Union[int, float]:
         """Request a hardware state from the HitL system.
 
-        :param str pin: The name of the state we want to get (e.x. "THROTTLE_POT_1", NOT 11)
+        :param str name: The name of the state we want to get (e.x. "THROTTLE_POT_1", NOT 11)
 
         :rtype:  Union[int, float]
         :returns: The value of the requested state. If the signal is analog, returns a ``float``, otherwise an ``int``.
 
-        Message format:
-            2 bytes (all big endian):
+        Getting an analog state is a 2 step process: we first write a command to the ADC to
+        start a conversion, then read the converted voltage back.
 
-            Byte 0:
-                * Bit 0: 0 (reserved bit)
-                * Bit 1: 0 (indicates a get request)
-                * Bits 2-7: Board number of the signal we want to get (0-63)
+        ADC command message format (1 byte):
 
-            Byte 1:
-                * Bits 0-7: Pin number of the signal we want to get
+            * bits 0-2
+                * 101 (enable setting a new input channel, we always do this)
+            * bit 3:
+                * 1 (single-ended comparison, not differential)
+            * bits 4-7
+                * 0000 for channel 0
+                * 1000 for channel 1
+                * 0001 for channel 2
+                * 1001 for channel 3
+
+        ADC data returned message format (3 bytes):
+
+            * bit 0: 1 if voltage was positive (relative to ground)
+            * bit 1: 1 if reading was out of bounds
+            * bits 2-7: 0
+            * bits 8-23: 16 bit voltage reading
+
+
+        ADC datasheet: https://www.analog.com/media/en/technical-documentation/data-sheets/2489fb.pdf
         """
         # Raise an exception if the signal is write only
-        if self.pin[pin]["set_get"] == "SET":
-            raise Exception(f"{pin} is a write-only signal, you cannot get it!")
-            
-        # If no hardware, log an error
-        if not self.serial:
-            raise Exception("Could not get state, no hardware connection")
+        if self.pin[name]["read_write"] == "WRITE":
+            raise Exception(f"{name} is a write-only signal, you cannot read it!")
 
-        # Flush the serial buffer, in case anything has come in
-        self.serial.flush()
+        # If no hardware, log an error
+        if not self.dev:
+            raise Exception("Could not get state, no hardware connection.")
 
         # Create and send request
-        board = self.pin_info[pin]["board"]
-        pin_num = self.pin_info[pin]["pin"]
-        request = bytes([board, pin_num])
-        self._send_request(request)
+        out = 0
+        address = self.pin_info[name]["address"]
 
-        # Wait for response. We want this to block (which it does)
-        response = self.serial.read(size=2)  # Read 2 bytes
-        self.log.debug(f"Received {response}")
+        if self.pin_info[name]["type"] == "ANALOG":
+            # Request data
+            data = ADC_PREFIX & ADC_CHANNEL_TO_ADD_BITS[self.pin_info[name]["pin"]]
+            self.dev.i2cMaster_Write(address, data)
 
-        out = 0  # Type float or int
-        if self.pin_info[pin]["type"] == "DIGITAL":
-            out = 0 if int.from_bytes(response, "big") == 0 else 1
-        elif self.pin_info[pin]["type"] == "ANALOG":
-            out = self._map_to_human(response, self.pin_info[pin]["min"], self.pin_info[pin]["max"])
+            # Wait for response
+            response = self.dev.i2cMaster_Read(address, ADC_RETURN_SIZE_BYTES)
+            self.log.debug(f"Received {response}")
+            out = self._map_to_human(
+                response, self.pin_info[name]["min"], self.pin_info[name]["max"]
+            )
         else:
-            raise Exception(f"Unsupported signal type: {self.pin_info[pin]['type']}")
+            # Request data
+            data = (
+                GPIO_COMMANDS["single port"]
+                & GPIO_CHANNEL_TO_ADD_BITS[self.pin.pin_info[name]["pin"]]
+            )
+            self.dev.i2cMaster_Write(address, data)
 
-        self.log.info(f"Got state of {pin}: {out}")
+            # Wait for response
+            response = self.dev.i2cMaster_Read(address, GPIO_RETURN_SIZE_BYTES)
+            self.log.debug(f"Received {response}")
+            out = 1 if response else 0
+
+        self.log.info(f"Got state of {name}: {out}")
         return out
 
     def _read_pin_info(self, path: str) -> dict:
@@ -143,9 +190,6 @@ class IOController:
         Args:
             path (str): The path to the .csv file containing pin information (see
             `software readme <https://github.com/olin-electric-motorsports/AdvancedResearch/tree/main/hardware_in_the_loop/software>`_
-            or
-            `google docs <https://docs.google.com/spreadsheets/d/15hpe0DXfQto9N2hawawvfeHTE1sq-UT7sgDl__hCTZ4/edit?usp=sharing>`_
-            for details)
 
         Returns:
             dict: A dictionary of (str: dict) pairs
@@ -155,29 +199,42 @@ class IOController:
             line = f.readline()  # clear the header line
             line = f.readline()  # get the first data line ready
             while line != "":  # keep reading until we hit the end
-                # parse line
                 data = line.split(",")
-                add = data[0].strip()
-                board = data[1].strip()
-                pin = data[2].strip()
-                sim = data[3].strip()
-                sig = data[4].strip()
-                sig_type = data[5].strip()
-                set_get = data[6].strip()
-                sig_min = data[7].strip()
-                sig_max = data[8].strip()
 
-                # add data to dictionary
+                # Parse a line of data
+                address = data[0].strip()  # i2c address
+                pin = data[1].strip()  # channel/pin number on chip
+                name = data[2].strip()  # human-readable name of signal
+                type = data[3].strip()  # analog or digital
+                read_write = data[4].strip()  # readable, writeable, or both
+                sig_min = data[5].strip()  # min value of signal
+                sig_max = data[6].strip()  # max value of signal
+
+                # Check for typos
+                if int(address) > 127 or int(address) < 0:
+                    raise Exception(
+                        f"I2C address of {address} for signal {name} is invalid!"
+                    )
+                if type not in ["ANALOG", "DIGITAL"]:
+                    raise Exception(
+                        f"Type {type} of signal {name} is invalid! Please use ANALOG or DIGITAL"
+                    )
+                if read_write not in ["READ", "WRITE", "BOTH"]:
+                    raise Exception(
+                        f"Read/write value {read_write} of signal {name} is invalid! Please use READ, WRITE, or BOTH"
+                    )
+
+                # Add data to dictionary
                 sig_dict = {}
-                sig_dict["address"] = int(add)
-                sig_dict["board"] = int(add)
-                sig_dict["pin"] = int(add)
-                sig_dict["simulator"] = sim
-                sig_dict["type"] = sig_type
-                sig_dict["set_get"] = set_get
+
+                sig_dict["address"] = int(address)
+                sig_dict["pin"] = int(pin)
+                sig_dict["type"] = type
+                sig_dict["read_write"] = read_write
                 sig_dict["min"] = float(sig_min)
                 sig_dict["max"] = float(sig_max)
-                out[sig] = sig_dict
+
+                out[name] = sig_dict
 
                 # read new line
                 line = f.readline()
@@ -197,41 +254,44 @@ class IOController:
             Tuple[int, int]: the two int values (0-255) that represent the scaled value
         """
         if not (low < value < high):
-            raise Exception(f"Value {value} not in range [{low}-{high}]! Cannot set value.")
+            raise Exception(
+                f"Value {value} not in range [{low}-{high}]! Cannot set value."
+            )
         mapped = int((value - low) * (0xFFFF - 0x0000) / (high - low))
         byte0 = mapped >> 8
         byte1 = mapped & 0x00FF
         return byte0, byte1
 
     def _map_to_human(self, value: bytes, low: float, high: float) -> float:
-        """Inverse of map to machine; convert from 2 bytes to a float
+        """Convert from 2 bytes returned from an ADC to a float (voltage)
 
         Args:
             value (float): The bytes received
-            low, high (floats): The min and max acceptable voltages
+            low, high (floats): The voltages of the high and low rails of the ADC
 
             Example: _map_to_human(b'\x00\xff', 0, 5) -> 2.5
 
         Returns:
             float: The voltage of the pin
         """
-        response = int.from_bytes(value, "big")
+        response = int.from_bytes(value[1:], "big")  # first byte is special
 
-        mapped = (response - 0x0000) * (high - low) / (0xFFFF - 0x0000)
+        mapped = (response - 0x0000) * (high - low) / (0xFFFF - 0x0000) + low
 
         if not (low < mapped < high):
-            raise Exception(f"Value {value} not in range [{low}-{high}]! Invalid response received")
+            raise Exception(
+                f"Value {mapped} not in range [{low}-{high}]! Invalid response received."
+            )
+        if (value[0] & 0b10000000 == 0) and low > 0:
+            raise Exception(
+                f"Return value from ADC of {value} indicates the voltage was negative. See https://www.analog.com/media/en/technical-documentation/data-sheets/2489fb.pdf for details."
+            )
+        if value[0] & 0b01000000 == 1:
+            raise Exception(
+                f"Return value from ADC of {value} indicates the voltage measurement was clipped. See https://www.analog.com/media/en/technical-documentation/data-sheets/2489fb.pdf for details."
+            )
 
         return mapped
-
-    def _send_request(self, request: bytes) -> None:
-        """Send a request over serial to set a pin's value
-
-        Args:
-            request (bytes): The bytes to send
-        """
-        self.log.debug(f"Sent {request}")
-        self.serial.write(request)
 
     def __enter__(self) -> None:
         """Enter and exit functions allow signals to be set simultaneously with hardware
@@ -259,19 +319,19 @@ class IOController:
         minimizing any delay introduced by the serial communication/sequential
         function calls.
         """
-        self._send_request(bytes([0xFF]))
+        raise Exception("Not implemented")
 
     def __exit__(self) -> None:
         """See docstring for __enter__ above
 
         Send 0xFF byte to system interface
         """
-        self._send_request(bytes([0xFF]))
+        raise Exception("Not implemented")
 
     def __del__(self) -> None:
         """Destructor (called when the program ends)
 
         Close the serial port for a clean teardown
         """
-        if self.serial:
-            self.serial.close()
+        if self.dev:
+            self.dev.close()
